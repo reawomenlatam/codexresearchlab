@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalog — Codex Research</title>
+  <meta name="description" content="Full catalog of research peptides, batch-verified and ready to ship.">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-nav="productos">
+
+  <div data-header></div>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="mono-tag">Product catalog</span>
+      <h1>Verified compounds</h1>
+      <p>All orders ship within 24–48 h from our warehouse. Every batch includes its certificate of analysis.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container catalog-layout">
+      <aside class="catalog-sidebar">
+        <h4>Search</h4>
+        <input type="search" id="catSearch" class="cat-search" placeholder="Name or CAS #…" aria-label="Search products">
+        <h4 style="margin-top:1.6rem;">Categories</h4>
+        <ul class="cat-list" id="catList"></ul>
+      </aside>
+      <div>
+        <div class="catalog-toolbar">
+          <span id="catCount" class="mono-tag"></span>
+          <select id="catSort" class="cat-sort" aria-label="Sort">
+            <option value="name">Name (A–Z)</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </div>
+        <div class="products-grid catalog-grid" id="catGrid"></div>
+        <p class="cat-empty" id="catEmpty" hidden>No products match your search.</p>
+      </div>
+    </div>
+  </section>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="catalog.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
