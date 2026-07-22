@@ -426,8 +426,8 @@
       if (msg) msg.hidden = true;
       const params = {
         order_id: id, customer_name: clean(buyer.name), customer_email: clean(buyer.email),
-        customer_phone: clean(buyer.phone), shipping_address: addressText, notes: clean(buyer.notes) || '—',
-        order_items: itemsText, subtotal: money(s.subtotal),
+        customer_phone: clean(buyer.phone), shipping_address: addressText.replace(/\n/g, '<br>'), notes: clean(buyer.notes) || '—',
+        order_items: itemsText.replace(/\n/g, '<br>'), subtotal: money(s.subtotal),
         discount: s.discount > 0 ? '-' + money(s.discount) + (coupon ? ' (' + clean(coupon) + ')' : '') : '—',
         shipping: s.shipping === 0 ? 'Free' : money(s.shipping), total: money(s.total),
         country: cfg.label, payment: 'Zelle', eta: cfg.eta,
