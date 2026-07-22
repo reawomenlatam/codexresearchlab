@@ -3,129 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Codex Research | Under maintenance</title>
-  <meta name="description" content="Codex Research is undergoing scheduled maintenance. We'll be back shortly.">
-  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net; connect-src 'self' https://www.facebook.com https://connect.facebook.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <title>Codex Research — Laboratory-grade research peptides</title>
+  <meta name="description" content="Laboratory-grade research peptides, batch-verified with third-party COA and 99% HPLC purity. Discreet shipping to the US and Panama with WhatsApp support.">
+  <link rel="canonical" href="https://codexresearchlab.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codexresearchlab.com/">
+  <meta property="og:title" content="Codex Research — Laboratory-grade research peptides">
+  <meta property="og:description" content="Batch-verified research peptides with third-party COA and 99% HPLC purity. Discreet US &amp; Panama shipping.">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="trustpilot-one-time-domain-verification-id" content="b15995b0-95c4-42af-8714-cc53ddff9824"/>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20641.02%20558.18%22%20fill%3D%22currentColor%22%20role%3D%22img%22%20aria-label%3D%22Codex%20Research%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M214.96%20187.97%20L162.94%2097.99%20L215.43%208.00%20L423.52%208.00%20L528.50%20188.44%20L476.46%20279.41%20L424.46%20370.29%20L371.96%20280.30%20L423.52%20188.44%20L372.43%2098.46%20L267.45%2098.46%20Z%20M579.59%20279.76%20L633.02%20369.51%20L528.27%20549.71%20L319.47%20549.95%20L215.19%20369.74%20L319.94%20369.51%20L371.73%20460.43%20L476.24%20460.66%20L528.97%20369.98%20L476.46%20279.41%20Z%20M320.14%20189.07%20L268.35%20278.47%20L161.72%20278.23%20L109.94%20369.86%20L161.61%20460.31%20L266.59%20460.78%20L214.33%20549.83%20L111.58%20550.18%20L8.00%20369.51%20L111.69%20189.07%20Z%22/%3E%3C/svg%3E" type="image/svg+xml">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Codex Research","url":"https://codexresearchlab.com/","logo":"https://codexresearchlab.com/assets/logo-horizontal-dark.png","sameAs":[]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Codex Research","url":"https://codexresearchlab.com/"}
+  </script>
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg0: #15171c; --bg1: #1d2026; --line: rgba(255,255,255,.10);
-      --ink: #f4f5f7; --muted: #9ea3ad; --amber: #e6b25e;
-      --font: 'DM Sans', -apple-system, sans-serif; --mono: 'Fragment Mono', monospace;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      font-family: var(--font); color: var(--ink);
-      background: var(--bg1); overflow: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    /* Fondo animado (canvas red molecular) */
-    #bg { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
-    /* Brillo radial + viñeta sobre el canvas */
-    .glow {
-      position: fixed; inset: 0; z-index: 1; pointer-events: none;
-      background:
-        radial-gradient(60% 55% at 50% 42%, rgba(120,130,150,.16), transparent 70%),
-        radial-gradient(120% 120% at 50% 120%, rgba(0,0,0,.55), transparent 60%);
-    }
-    /* Marca gigante muy tenue de fondo, girando lento */
-    .watermark {
-      position: fixed; z-index: 1; top: 50%; left: 50%;
-      width: min(70vmin, 620px); aspect-ratio: 1;
-      transform: translate(-50%, -54%);
-      opacity: .035; pointer-events: none;
-      -webkit-mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20641.02%20558.18%22%20fill%3D%22currentColor%22%20role%3D%22img%22%20aria-label%3D%22Codex%20Research%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M214.96%20187.97%20L162.94%2097.99%20L215.43%208.00%20L423.52%208.00%20L528.50%20188.44%20L476.46%20279.41%20L424.46%20370.29%20L371.96%20280.30%20L423.52%20188.44%20L372.43%2098.46%20L267.45%2098.46%20Z%20M579.59%20279.76%20L633.02%20369.51%20L528.27%20549.71%20L319.47%20549.95%20L215.19%20369.74%20L319.94%20369.51%20L371.73%20460.43%20L476.24%20460.66%20L528.97%20369.98%20L476.46%20279.41%20Z%20M320.14%20189.07%20L268.35%20278.47%20L161.72%20278.23%20L109.94%20369.86%20L161.61%20460.31%20L266.59%20460.78%20L214.33%20549.83%20L111.58%20550.18%20L8.00%20369.51%20L111.69%20189.07%20Z%22/%3E%3C/svg%3E) center/contain no-repeat;
-      mask: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20641.02%20558.18%22%20fill%3D%22currentColor%22%20role%3D%22img%22%20aria-label%3D%22Codex%20Research%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M214.96%20187.97%20L162.94%2097.99%20L215.43%208.00%20L423.52%208.00%20L528.50%20188.44%20L476.46%20279.41%20L424.46%20370.29%20L371.96%20280.30%20L423.52%20188.44%20L372.43%2098.46%20L267.45%2098.46%20Z%20M579.59%20279.76%20L633.02%20369.51%20L528.27%20549.71%20L319.47%20549.95%20L215.19%20369.74%20L319.94%20369.51%20L371.73%20460.43%20L476.24%20460.66%20L528.97%20369.98%20L476.46%20279.41%20Z%20M320.14%20189.07%20L268.35%20278.47%20L161.72%20278.23%20L109.94%20369.86%20L161.61%20460.31%20L266.59%20460.78%20L214.33%20549.83%20L111.58%20550.18%20L8.00%20369.51%20L111.69%20189.07%20Z%22/%3E%3C/svg%3E) center/contain no-repeat;
-      background: #fff;
-      animation: spin 60s linear infinite;
-    }
-    @keyframes spin { to { transform: translate(-50%, -54%) rotate(360deg); } }
-
-    .wrap {
-      position: relative; z-index: 2;
-      min-height: 100%; display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center; padding: 2rem 1.5rem;
-      gap: 0;
-    }
-    .logo { height: 34px; width: auto; margin-bottom: 2.4rem; opacity: 0; animation: rise .8s .05s ease forwards; }
-
-    .status {
-      display: inline-flex; align-items: center; gap: .55rem;
-      font-family: var(--mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--line); border-radius: 999px;
-      padding: .5rem 1rem; margin-bottom: 2rem;
-      background: rgba(255,255,255,.02); backdrop-filter: blur(4px);
-      opacity: 0; animation: rise .8s .15s ease forwards;
-    }
-    .status .dot {
-      width: 8px; height: 8px; border-radius: 50%; background: var(--amber);
-      box-shadow: 0 0 0 0 rgba(230,178,94,.55); animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(230,178,94,.5); }
-      70% { box-shadow: 0 0 0 9px rgba(230,178,94,0); }
-      100% { box-shadow: 0 0 0 0 rgba(230,178,94,0); }
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.03; letter-spacing: -.04em;
-      font-weight: 700; max-width: 16ch;
-      opacity: 0; animation: rise .8s .25s ease forwards;
-    }
-    h1 em { font-style: normal; color: var(--muted); }
-    .sub {
-      color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); line-height: 1.6;
-      max-width: 52ch; margin-top: 1.4rem;
-      opacity: 0; animation: rise .8s .35s ease forwards;
-    }
-
-    /* Barra de progreso indeterminada */
-    .bar {
-      width: min(320px, 80vw); height: 4px; border-radius: 999px;
-      background: rgba(255,255,255,.08); overflow: hidden; margin-top: 2.4rem;
-      opacity: 0; animation: rise .8s .45s ease forwards;
-    }
-    .bar i {
-      display: block; height: 100%; width: 38%; border-radius: 999px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.85), transparent);
-      animation: slide 1.8s cubic-bezier(.65,0,.35,1) infinite;
-    }
-    @keyframes slide { 0% { transform: translateX(-120%); } 100% { transform: translateX(360%); } }
-
-    .cta-row {
-      display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; justify-content: center;
-      margin-top: 2.6rem;
-      opacity: 0; animation: rise .8s .55s ease forwards;
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: .55rem;
-      background: #fff; color: #16181c; font-weight: 600; font-size: .95rem;
-      padding: .85rem 1.6rem; border-radius: 999px; text-decoration: none;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
-    .link { color: var(--muted); font-size: .92rem; text-decoration: none; transition: color .15s; }
-    .link:hover { color: var(--ink); }
-
-    .foot {
-      position: fixed; bottom: 1.4rem; left: 0; right: 0; z-index: 2;
-      text-align: center; color: rgba(255,255,255,.28);
-      font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
-    }
-
-    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-    @media (prefers-reduced-motion: reduce) {
-      .watermark, .bar i, .status .dot { animation: none; }
-      .logo, .status, h1, .sub, .bar, .cta-row { animation: none; opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -144,98 +43,181 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 </head>
-<body>
-  <canvas id="bg"></canvas>
-  <div class="watermark" aria-hidden="true"></div>
-  <div class="glow" aria-hidden="true"></div>
+<body data-nav="inicio">
 
-  <main class="wrap">
-    <img class="logo" src="data:image/png;base64,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" alt="Codex Research">
-    <span class="status"><span class="dot"></span> Scheduled maintenance</span>
-    <h1>We’ll be back <em>shortly.</em></h1>
-    <p class="sub">
-      Codex Research is undergoing scheduled maintenance to improve your experience.
-      Our catalog is temporarily offline.
-    </p>
+  <div data-header></div>
 
-    <div class="bar" aria-hidden="true"><i></i></div>
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-eyebrow">● Batch-verified</span>
+        <h1>Lab-grade <em>peptides</em>,<br>no guesswork.</h1>
+        <p class="hero-sub">
+          A curated catalog with a certificate of analysis per batch, discreet shipping
+          and human support on WhatsApp at every step.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="catalog.html">Browse catalog</a>
+          <a class="btn btn-ghost" href="#proceso">How we work</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong class="count-up">100%</strong><span>batches with COA</span></div>
+          <div><strong>24–48 h</strong><span>order dispatch</span></div>
+          <div><strong>1-to-1</strong><span>WhatsApp support</span></div>
+        </div>
+      </div>
 
-    <p class="sub" style="margin-top:2.2rem;font-size:.9rem;animation-delay:.55s;">
-      Thank you for your patience. We’ll be online again soon.
-    </p>
-  </main>
+      <div class="hero-visual">
+        <figure class="vial-card">
+          <a href="product.html?slug=bpc-157"><img class="hero-photo product-photo" src="assets/products/bpc-157.jpg" alt="BPC-157 vial"></a>
+          <figcaption>
+            <b>BPC-157 · 10 mg</b>
+            <span class="mono-tag">Batch #A-2419 · COA available</span>
+          </figcaption>
+        </figure>
+        <div class="badge-float badge-a"><span class="dot"></span> HPLC-verified purity</div>
+        <div class="badge-float badge-b">📦 Discreet shipping</div>
+      </div>
+    </div>
+  </section>
 
-  <p class="foot">Codex Research · For research use only</p>
+  <!-- ============ Tarjetas de confianza ============ -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container trust-grid">
+      <div class="trust-card">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Verified <em>by batch</em></h3>
+        <p>Every batch arrives with its certificate of analysis. You know exactly what you get, every time.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3><em>Human</em> support</h3>
+        <p>No sales bots. A real specialist guides you on WhatsApp before and after your order.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3><em>Curated</em> catalog</h3>
+        <p>A selection of well-backed compounds, clear presentations and real, in-stock availability.</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    (function () {
-      const canvas = document.getElementById('bg');
-      const ctx = canvas.getContext('2d');
-      let w, h, dpr, particles = [], mouse = { x: -9999, y: -9999 };
+  <!-- ============ Banda disclaimer ============ -->
+  <section class="disclaimer-band">
+    <div class="container inner">
+      <span class="icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </span>
+      <div>
+        <h4>Usage notice</h4>
+        <p>
+          The products in this catalog are sold solely for research and development purposes.
+          They are not intended for human or animal consumption, nor to diagnose, treat, cure or prevent any disease.
+          By purchasing, you agree to use them in compliance with applicable law.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      function size() {
-        dpr = Math.min(window.devicePixelRatio || 1, 2);
-        w = canvas.width = innerWidth * dpr;
-        h = canvas.height = innerHeight * dpr;
-        canvas.style.width = innerWidth + 'px';
-        canvas.style.height = innerHeight + 'px';
-        const count = Math.min(110, Math.floor((innerWidth * innerHeight) / 14000));
-        particles = [];
-        for (let i = 0; i < count; i++) {
-          particles.push({
-            x: Math.random() * w, y: Math.random() * h,
-            vx: (Math.random() - 0.5) * 0.28 * dpr,
-            vy: (Math.random() - 0.5) * 0.28 * dpr,
-            r: (Math.random() * 1.6 + 0.6) * dpr,
-          });
-        }
-      }
+  <!-- ============ Grid de productos ============ -->
+  <section class="section" id="productos">
+    <div class="container">
+      <div class="section-head" style="max-width:none;">
+        <div class="row">
+          <div>
+            <h2>Browse the catalog</h2>
+            <p>Verified compounds, ready to ship.</p>
+          </div>
+          <a class="btn btn-dark" href="catalog.html">View full catalog</a>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
 
-      const LINK = 130; // distancia de enlace (px CSS)
-      function render() {
-        ctx.clearRect(0, 0, w, h);
-        const link = LINK * dpr;
-        for (let i = 0; i < particles.length; i++) {
-          const p = particles[i];
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
-          if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+  <!-- ============ Proceso ============ -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="process">
+        <div class="section-head" style="margin-bottom:0;">
+          <h2>Our process</h2>
+          <p>End-to-end transparency, from batch to your door.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="step-num">STEP 01</span>
+            <h3>Verified selection</h3>
+            <p>We only work with batches that have a third-party certificate of analysis (HPLC and mass spectrometry).</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 02</span>
+            <h3>Guided order</h3>
+            <p>You confirm your order on WhatsApp with a specialist who answers your questions before you pay.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">STEP 03</span>
+            <h3>Fast, discreet dispatch</h3>
+            <p>Neutral packaging, careful handling and tracking all the way to delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          // enlaces entre partículas
-          for (let j = i + 1; j < particles.length; j++) {
-            const q = particles[j];
-            const dx = p.x - q.x, dy = p.y - q.y;
-            const d = Math.hypot(dx, dy);
-            if (d < link) {
-              const a = (1 - d / link) * 0.16;
-              ctx.strokeStyle = 'rgba(200,208,222,' + a + ')';
-              ctx.lineWidth = dpr * 0.6;
-              ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-            }
-          }
-          // enlace al cursor
-          const mdx = p.x - mouse.x, mdy = p.y - mouse.y;
-          const md = Math.hypot(mdx, mdy);
-          if (md < link * 1.4) {
-            const a = (1 - md / (link * 1.4)) * 0.28;
-            ctx.strokeStyle = 'rgba(230,178,94,' + a + ')';
-            ctx.lineWidth = dpr * 0.7;
-            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-          }
-          // punto
-          ctx.fillStyle = 'rgba(226,231,240,.7)';
-          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
-        }
-      }
-      function frame() { render(); requestAnimationFrame(frame); }
+  <!-- ============ CTA WhatsApp ============ -->
+  <section class="section cta-band">
+    <div class="container">
+      <h2>Questions? Message us.</h2>
+      <p>Our team replies on WhatsApp in minutes, not days.</p>
+      <a class="btn btn-primary pulse-cta" href="https://wa.me/50763454619" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Chat with a specialist
+      </a>
+    </div>
+  </section>
 
-      addEventListener('resize', size);
-      addEventListener('mousemove', (e) => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; });
-      addEventListener('mouseleave', () => { mouse.x = mouse.y = -9999; });
-      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      size();
-      if (reduce) render(); else frame();  // reduced-motion: un solo frame estático
-    })();
-  </script>
+  <!-- ============ Testimonios ============ -->
+  <section class="section" id="testimonios" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <h2>What our customers say</h2>
+        <p>Researchers and labs that trust our traceability.</p>
+      </div>
+      <div class="tsm-grid" id="testimonialsGrid"></div>
+      <div class="tsm-proof">
+        <div><strong class="count-up">4.9/5</strong><span>average rating</span></div>
+        <div><strong class="count-up">1,200+</strong><span>orders shipped</span></div>
+        <div><strong class="count-up">100%</strong><span>batches with COA</span></div>
+        <div><strong>24–48 h</strong><span>dispatch</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+        <p>Everything you need to know about our products and processes.</p>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="motion.js"></script>
 </body>
 </html>

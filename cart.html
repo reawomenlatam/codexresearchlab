@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net; connect-src 'self' https://www.facebook.com https://connect.facebook.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
-  <title>Page not found — Codex Research</title>
-  <meta name="description" content="The page you’re looking for doesn’t exist or was moved.">
-  <meta name="robots" content="noindex">
-  <link rel="icon" href="/assets/logo-mark.svg" type="image/svg+xml">
+  <title>Your Cart — Codex Research</title>
+  <meta name="description" content="Your shopping cart. Verified compounds, batch COA, discreet shipping.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://codexresearchlab.com/cart.html">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -34,27 +35,25 @@
 
   <div data-header></div>
 
-  <section class="section" style="text-align:center; padding:6rem 0;">
+  <section class="page-head">
     <div class="container">
-      <span class="mono-tag">404</span>
-      <h1 style="margin:.4rem 0 .6rem;">Page not found</h1>
-      <p style="color:var(--muted); max-width:44ch; margin:0 auto 1.8rem;">
-        The page you’re looking for doesn’t exist or was moved. Let’s get you back on track.
-      </p>
-      <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="/index.html">Back to home</a>
-        <a class="btn btn-ghost" href="/catalog.html">Browse catalog</a>
-      </div>
+      <span class="mono-tag">Checkout</span>
+      <h1>Your cart</h1>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:1.6rem;">
+    <div class="container" id="cartPageRoot"></div>
   </section>
 
   <div data-footer></div>
 
-  <script src="/data.js"></script>
-  <script src="/country.js"></script>
-  <script src="/cart.js"></script>
-  <script src="/layout.js"></script>
-  <script src="/app.js"></script>
-  <script src="/motion.js"></script>
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="cart-page.js"></script>
+  <script src="motion.js"></script>
 </body>
 </html>
