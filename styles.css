@@ -999,3 +999,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 @media (max-width: 540px) {
   .co-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Documento legal (privacidad / términos) ---------- */
+.legal-doc { max-width: 760px; color: var(--ink); }
+.legal-doc p { line-height: 1.7; margin: 0 0 1rem; color: var(--muted); }
+.legal-doc p b { color: var(--ink); }
+.legal-doc h2 { font-size: 1.15rem; margin: 2rem 0 .7rem; }
+.legal-doc ul { margin: 0 0 1.2rem 1.1rem; padding: 0; }
+.legal-doc li { line-height: 1.7; margin-bottom: .35rem; color: var(--muted); }
+.legal-doc a { color: var(--accent); text-decoration: underline; }

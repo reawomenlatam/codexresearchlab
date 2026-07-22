@@ -85,7 +85,7 @@
           </div>
           <div class="footer-col">
             <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
             <a href="#">Terms of Service</a>
             <a href="#">Usage notice</a>
           </div>
