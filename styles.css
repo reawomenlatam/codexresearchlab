@@ -977,3 +977,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .order-success p { color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
 .order-success-sub { font-size: .85rem; }
 .order-success .btn { margin-top: .8rem; }
+
+/* ---------- Formulario de checkout (contacto + dirección, US y PA) ---------- */
+.checkout-form { display: grid; gap: 1.2rem; margin-top: .3rem; }
+.co-section { display: grid; gap: .55rem; }
+.co-title { font-size: .8rem; font-weight: 700; letter-spacing: .01em; color: var(--ink); }
+.co-field { display: grid; gap: .28rem; }
+.co-field > span { font-size: .78rem; font-weight: 600; color: var(--ink); }
+.co-field > span em { font-style: normal; font-weight: 400; color: var(--muted); }
+.co-field input, .co-field textarea {
+  width: 100%; padding: .62rem .75rem; border: 1px solid var(--border); border-radius: 10px;
+  font: inherit; font-size: .92rem; color: var(--ink); background: var(--card); resize: vertical;
+}
+.co-field input:focus, .co-field textarea:focus { outline: none; border-color: var(--accent); }
+.co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
+.co-msg { font-size: .85rem; line-height: 1.5; margin: 0; color: var(--muted); }
+.co-msg.err { color: var(--danger); }
+.co-msg a { color: inherit; text-decoration: underline; font-weight: 600; }
+.checkout-form .pay-methods { margin: 0; }
+.checkout-form .sum-checkout { width: 100%; margin-top: .1rem; }
+@media (max-width: 540px) {
+  .co-grid { grid-template-columns: 1fr; }
+}
