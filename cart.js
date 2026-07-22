@@ -179,6 +179,10 @@
       <div class="cart-total-row"><span>Subtotal</span><b>${money(total())}</b></div>
       <a class="btn btn-primary cart-checkout" href="cart.html">Checkout</a>
       <button class="cart-continue-link" data-cart-continue>Continue shopping</button>`;
+
+    // Las imágenes recién inyectadas necesitan la clase .loaded o el fade-in
+    // (opacity:0) las deja invisibles en el drawer tras cada re-render.
+    if (window.REAmotion && window.REAmotion.images) window.REAmotion.images();
   }
 
   function vialMini(name) {
