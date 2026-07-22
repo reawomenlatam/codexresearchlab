@@ -3,7 +3,7 @@
    order"), discount codes, trust badges + guarantee, scarcity, social proof,
    sticky order summary with a single prominent checkout CTA. */
 (function () {
-  const { PRODUCTS, COUPONS, WHATSAPP } = window.REA;
+  const { PRODUCTS, COUPONS, WHATSAPP, EMAILJS = {} } = window.REA;
   const cart = window.REACart;
   const ui = window.REAui;
   const root = document.getElementById('cartPageRoot');
@@ -19,6 +19,17 @@
   const COUPON_KEY = 'rea-coupon-v1';
   const PAY_KEY = 'rea-payment-v1';
   let coupon = localStorage.getItem(COUPON_KEY) || '';
+
+  // ---------- Pago por correo (US · Zelle) ----------
+  const emailReady = () => !!(EMAILJS.publicKey && EMAILJS.serviceId && EMAILJS.templateMerchant && EMAILJS.templateCustomer);
+  // El flujo por correo sólo aplica a US + Zelle, y sólo si EmailJS está configurado.
+  const isEmailFlow = (cfg, payId) => cfg.code === 'US' && payId === 'zelle' && emailReady();
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const buyer = { name: '', email: '', phone: '', notes: '' }; // se conserva entre re-renders
+  let placing = false;      // evita doble envío
+  let confirmation = null;  // { id, email } tras una orden aceptada
+  const orderId = () => 'CR-' + Date.now().toString(36).toUpperCase().slice(-6);
+  const WA_ICON = `<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>`;
 
   const country = () => window.REACountry.config();
   // Método de pago elegido; si no es válido para el país actual, usa el primero
@@ -95,6 +106,53 @@
       </div>`;
   }
 
+  // Bloque de checkout: formulario por correo (US · Zelle) o botón de WhatsApp.
+  function checkoutBlock(s, cfg, payId, waText) {
+    if (isEmailFlow(cfg, payId)) {
+      return `
+        <form class="eco-form" id="ecoForm" novalidate>
+          <label class="eco-field">
+            <span>Full name</span>
+            <input type="text" id="ecoName" required maxlength="80" autocomplete="name" value="${esc(buyer.name)}" placeholder="Your name">
+          </label>
+          <label class="eco-field">
+            <span>Email</span>
+            <input type="email" id="ecoEmail" required maxlength="120" autocomplete="email" value="${esc(buyer.email)}" placeholder="you@email.com">
+          </label>
+          <label class="eco-field">
+            <span>Phone <em>(optional)</em></span>
+            <input type="tel" id="ecoPhone" maxlength="40" autocomplete="tel" value="${esc(buyer.phone)}" placeholder="For faster coordination">
+          </label>
+          <label class="eco-field">
+            <span>Notes <em>(optional)</em></span>
+            <textarea id="ecoNotes" maxlength="500" rows="2" placeholder="Anything we should know?">${esc(buyer.notes)}</textarea>
+          </label>
+          <p class="eco-msg" id="ecoMsg" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary sum-checkout" id="ecoSubmit">Place order</button>
+        </form>
+        <p class="sum-note">We’ll email you a confirmation and contact you to arrange your Zelle payment. No charge happens here.</p>`;
+    }
+    return `
+      <a class="btn btn-primary sum-checkout" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">
+        ${WA_ICON}
+        Checkout on WhatsApp
+      </a>
+      <p class="sum-note">You confirm your order with a specialist before paying. No charge happens here.</p>`;
+  }
+
+  // Pantalla de éxito tras una orden aceptada por correo.
+  function confirmationView(c) {
+    return `
+      <div class="order-success">
+        <div class="order-success-mark" aria-hidden="true">✓</div>
+        <h2>Order received</h2>
+        <p>Thanks! Your order <b>${esc(c.id)}</b> has been accepted. We’ve emailed a confirmation to
+        <b>${esc(c.email)}</b>, and our team will contact you shortly to arrange your Zelle payment and shipping.</p>
+        <p class="order-success-sub">Didn’t get the email? Check your spam folder, or write to us at ${esc(EMAILJS.merchantEmail || '')}.</p>
+        <a class="btn btn-primary" href="catalog.html">Continue shopping</a>
+      </div>`;
+  }
+
   function summary(s) {
     const cfg = country();
     const payId = currentPayment();
@@ -143,11 +201,7 @@
               </label>`).join('')}
           </div>
 
-          <a class="btn btn-primary sum-checkout" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-            Checkout on WhatsApp
-          </a>
-          <p class="sum-note">You confirm your order with a specialist before paying. No charge happens here.</p>
+          ${checkoutBlock(s, cfg, payId, waText)}
 
           <ul class="sum-trust">
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Secure & private</li>
@@ -210,6 +264,8 @@
 
   // ---------- Render principal ----------
   function render() {
+    // Tras una orden aceptada, mostramos la confirmación (el carrito ya se vació).
+    if (confirmation) { root.innerHTML = confirmationView(confirmation); return; }
     const s = compute();
     if (!s.lines.length) {
       root.innerHTML = emptyState();
@@ -264,10 +320,22 @@
     const rm = root.querySelector('[data-coupon-remove]');
     if (rm) rm.addEventListener('click', () => { coupon = ''; localStorage.removeItem(COUPON_KEY); render(); });
 
-    // Método de pago: se guarda y re-arma el mensaje de WhatsApp
+    // Método de pago: se guarda y re-arma el bloque de checkout (WhatsApp / correo)
     root.querySelectorAll('input[name="payMethod"]').forEach((r) => {
       r.addEventListener('change', () => { localStorage.setItem(PAY_KEY, r.value); render(); });
     });
+
+    // Checkout por correo (US · Zelle): conserva lo escrito y envía la orden.
+    const ecoForm = document.getElementById('ecoForm');
+    if (ecoForm) {
+      const bind = (id, key) => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('input', () => { buyer[key] = el.value; });
+      };
+      bind('ecoName', 'name'); bind('ecoEmail', 'email');
+      bind('ecoPhone', 'phone'); bind('ecoNotes', 'notes');
+      ecoForm.addEventListener('submit', (e) => { e.preventDefault(); placeEmailOrder(); });
+    }
 
     // Cross-sell quick-add (sin abrir el drawer; la página se re-renderiza sola)
     const grid = document.getElementById('crossSellGrid');
@@ -278,6 +346,91 @@
         const p = PRODUCTS.find((x) => x.slug === btn.getAttribute('data-add'));
         if (p) cart.add(p.slug, p.sizes[0].label, 1, { silent: true });
       });
+    }
+  }
+
+  // ---------- Envío de la orden por correo (US · Zelle) ----------
+  function sendEmail(templateId, params) {
+    return fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        service_id: EMAILJS.serviceId,
+        template_id: templateId,
+        user_id: EMAILJS.publicKey,
+        template_params: params,
+      }),
+    }).then((r) => { if (!r.ok) throw new Error('EmailJS ' + r.status); return r; });
+  }
+
+  async function placeEmailOrder() {
+    if (placing) return;
+    const msg = document.getElementById('ecoMsg');
+    const btn = document.getElementById('ecoSubmit');
+    const showErr = (node) => { if (!msg) return; msg.className = 'eco-msg err'; msg.hidden = false; msg.textContent = ''; msg.append(node); };
+
+    const s = compute();
+    if (!s.lines.length) { showErr('Your cart is empty.'); return; }
+    const name = buyer.name.trim();
+    const email = buyer.email.trim();
+    if (name.length < 2) { showErr('Please enter your name.'); return; }
+    if (email.length > 120 || !EMAIL_RE.test(email)) { showErr('Please enter a valid email address.'); return; }
+
+    placing = true;
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    if (msg) { msg.hidden = true; msg.textContent = ''; }
+
+    const cfg = country();
+    const id = orderId();
+    // Limpia entradas para el correo (evita inyección de markup y limita longitud).
+    const clean = (v) => String(v == null ? '' : v).replace(/[<>]/g, '').slice(0, 500);
+    const itemsText = s.lines.map((l) => `${l.name} (${l.size}) x${l.qty} — ${money(l.subtotal)}`).join('\n');
+    const params = {
+      order_id: id,
+      customer_name: clean(name),
+      customer_email: clean(email),
+      customer_phone: clean(buyer.phone) || '—',
+      notes: clean(buyer.notes) || '—',
+      order_items: itemsText,
+      subtotal: money(s.subtotal),
+      discount: s.discount > 0 ? '-' + money(s.discount) + (coupon ? ' (' + clean(coupon) + ')' : '') : '—',
+      shipping: s.shipping === 0 ? 'Free' : money(s.shipping),
+      total: money(s.total),
+      country: cfg.label,
+      payment: 'Zelle',
+      eta: cfg.eta,
+      merchant_email: EMAILJS.merchantEmail || '',
+      reply_to: clean(email),
+    };
+
+    try {
+      // 1) La orden llega a TI (crítico). El destinatario de la plantilla usa {{to_email}}.
+      await sendEmail(EMAILJS.templateMerchant, Object.assign({ to_email: EMAILJS.merchantEmail || '' }, params));
+      // 2) Confirmación al CLIENTE (secundario: si falla, la orden ya te llegó a ti).
+      try { await sendEmail(EMAILJS.templateCustomer, Object.assign({ to_email: clean(email) }, params)); }
+      catch (e) { /* no bloquea: el comercio ya recibió la orden */ }
+
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { value: s.total, currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
+      }
+      confirmation = { id, email: clean(email) };
+      buyer.name = buyer.email = buyer.phone = buyer.notes = '';
+      placing = false;
+      cart.detailed().forEach((l) => cart.remove(l.id)); // vacía el carrito → rea-cart-change → render()
+      render(); // garantiza la vista de confirmación
+    } catch (err) {
+      placing = false;
+      if (btn) { btn.disabled = false; btn.textContent = 'Place order'; }
+      // Respaldo: si el correo falla, ofrecemos WhatsApp para que la orden no se pierda.
+      const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+        'Hi Codex Research, I tried to place order ' + id + ' online but it failed:\n' + itemsText + '\nTotal: ' + money(s.total)
+      )}`;
+      const link = document.createElement('a');
+      link.href = wa; link.target = '_blank'; link.rel = 'noopener';
+      link.textContent = 'send it on WhatsApp';
+      const frag = document.createDocumentFragment();
+      frag.append('We couldn’t send your order right now. Please try again, or ', link, '.');
+      showErr(frag);
     }
   }
 
@@ -298,8 +451,11 @@
     }
   }
   // Lead: al pulsar "Checkout on WhatsApp" (handoff real hacia la venta).
+  // Sólo el enlace de WhatsApp (una <a>) dispara Lead aquí; el botón "Place order"
+  // del flujo por correo dispara Lead únicamente cuando la orden se envía con éxito.
   root.addEventListener('click', (e) => {
-    if (!e.target.closest('.sum-checkout') || typeof fbq !== 'function') return;
+    const el = e.target.closest('.sum-checkout');
+    if (!el || el.tagName !== 'A' || typeof fbq !== 'function') return;
     const s = compute();
     fbq('track', 'Lead', {
       value: s.total, currency: 'USD', content_ids: s.lines.map((l) => l.slug),

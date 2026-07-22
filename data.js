@@ -187,4 +187,14 @@ const COUPONS = {
   FREESHIP: { type: 'freeship', label: 'Free shipping' },
 };
 
-window.REA = { PRODUCTS, ARTICLES, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, WHATSAPP: '50763454619' };
+// Pago por correo (US · Zelle). Rellena estos valores desde tu cuenta de EmailJS
+// para activar el envío de correos. Vacío = Zelle usa el flujo de WhatsApp (fallback).
+const EMAILJS = {
+  publicKey: '',        // EmailJS · Account · Public Key
+  serviceId: '',        // EmailJS · Email Services · Service ID
+  templateMerchant: '', // plantilla que te envía la orden a TI
+  templateCustomer: '', // plantilla de confirmación al CLIENTE
+  merchantEmail: 'sales@codexresearchlab.com',
+};
+
+window.REA = { PRODUCTS, ARTICLES, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, WHATSAPP: '50763454619', EMAILJS };

@@ -952,3 +952,28 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   /* Objetivo táctil más cómodo para el pulgar en el quick-add. */
   .add-btn { width: 40px; height: 40px; }
 }
+
+/* ---------- Checkout por correo (US · Zelle) ---------- */
+.eco-form { display: grid; gap: .7rem; margin-top: .5rem; }
+.eco-field { display: grid; gap: .3rem; }
+.eco-field > span { font-size: .82rem; font-weight: 600; color: var(--ink); }
+.eco-field > span em { font-style: normal; font-weight: 400; color: var(--muted); }
+.eco-field input, .eco-field textarea {
+  width: 100%; padding: .7rem .8rem; border: 1px solid var(--border); border-radius: 10px;
+  font: inherit; color: var(--ink); background: var(--card); resize: vertical;
+}
+.eco-field input:focus, .eco-field textarea:focus { outline: none; border-color: var(--accent); }
+.eco-msg { font-size: .85rem; line-height: 1.5; margin: .1rem 0 0; }
+.eco-msg.err { color: var(--danger); }
+.eco-msg a { color: inherit; text-decoration: underline; font-weight: 600; }
+.eco-form .sum-checkout { margin-top: .2rem; }
+
+.order-success { text-align: center; max-width: 520px; margin: 3rem auto; padding: 0 1rem; }
+.order-success-mark {
+  width: 58px; height: 58px; border-radius: 50%; margin: 0 auto 1.2rem;
+  display: grid; place-items: center; font-size: 1.7rem; color: #fff; background: #1f9d6b;
+}
+.order-success h2 { margin-bottom: .6rem; }
+.order-success p { color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+.order-success-sub { font-size: .85rem; }
+.order-success .btn { margin-top: .8rem; }
