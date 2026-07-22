@@ -61,11 +61,11 @@ const PRODUCTS = [
   },
   {
     slug: 'ghk-cu', name: 'GHK-Cu', cas: '89030-95-5', tag: 'CAS # 89030-95-5',
-    mg: '100 mg', from: 90, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: '—',
+    mg: '100 mg', from: 95, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: '—',
     photo: 'assets/products/ghk-cu.jpg',
     sizes: [
-      { label: 'Single vial', price: 90 },
-      { label: 'Kit · 10 vials', price: 801, save: '11%' },
+      { label: 'Single vial', price: 95 },
+      { label: 'Kit · 10 vials', price: 845.50, save: '11%' },
     ],
     overview: 'GHK-Cu (copper tripeptide-1, Gly-His-Lys–copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.',
     research: ['Tissue remodeling', 'Collagen synthesis', 'Wound repair', 'Skin biology'],
@@ -94,11 +94,11 @@ const PRODUCTS = [
   },
   {
     slug: 'ahk-cu', name: 'AHK-Cu', cas: '682809-81-0', tag: 'CAS # 682809-81-0',
-    mg: '50 mg', from: 95, formula: '—', weight: '—', pubchem: '—',
+    mg: '50 mg', from: 120, formula: '—', weight: '—', pubchem: '—',
     photo: 'assets/products/ahk-cu.jpg',
     sizes: [
-      { label: 'Single vial', price: 95 },
-      { label: 'Kit · 10 vials', price: 845.50, save: '11%' },
+      { label: 'Single vial', price: 120 },
+      { label: 'Kit · 10 vials', price: 1068, save: '11%' },
     ],
     overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys–copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
