@@ -11,6 +11,14 @@
   const oos = !!p.outOfStock;
   const related = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 4);
 
+  // Meta Pixel: evento ViewContent al ver la ficha de producto
+  if (typeof fbq === 'function') {
+    fbq('track', 'ViewContent', {
+      content_ids: [p.slug], content_name: p.name, content_type: 'product',
+      value: p.sizes[0].price, currency: 'USD',
+    });
+  }
+
   // ---------- SEO meta (per-product; article.js pattern) ----------
   const SITE = 'https://codexresearchlab.com';
   const url = `${SITE}/product.html?slug=${p.slug}`;

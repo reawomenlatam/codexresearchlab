@@ -284,4 +284,25 @@
   // Re-render cuando cambia el carrito (drawer, otra pestaña, quick-add)
   window.addEventListener('rea-cart-change', render);
   render();
+
+  // ---------- Meta Pixel: eventos de conversión ----------
+  // InitiateCheckout: al llegar a la página de carrito con productos (una vez).
+  if (typeof fbq === 'function') {
+    const s0 = compute();
+    if (s0.lines.length) {
+      fbq('track', 'InitiateCheckout', {
+        value: s0.total, currency: 'USD',
+        num_items: s0.lines.reduce((n, l) => n + l.qty, 0),
+        content_ids: s0.lines.map((l) => l.slug),
+      });
+    }
+  }
+  // Lead: al pulsar "Checkout on WhatsApp" (handoff real hacia la venta).
+  root.addEventListener('click', (e) => {
+    if (!e.target.closest('.sum-checkout') || typeof fbq !== 'function') return;
+    const s = compute();
+    fbq('track', 'Lead', {
+      value: s.total, currency: 'USD', content_ids: s.lines.map((l) => l.slug),
+    });
+  });
 })();

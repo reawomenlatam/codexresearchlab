@@ -61,6 +61,13 @@
     if (existing) existing.qty += qty;
     else items.push({ slug, size, qty });
     save(items);
+    // Meta Pixel: evento de conversión AddToCart
+    if (typeof fbq === 'function' && prod) {
+      fbq('track', 'AddToCart', {
+        content_ids: [slug], content_name: prod.name, content_type: 'product',
+        value: priceFor(slug, size) * qty, currency: 'USD',
+      });
+    }
     if (!opts.silent) open();
   }
   function setQty(id, qty) {
