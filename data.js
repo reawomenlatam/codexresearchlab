@@ -185,6 +185,8 @@ const COUNTRIES = {
 const COUPONS = {
   WELCOME10: { type: 'percent', value: 10, label: '10% off' },
   FREESHIP: { type: 'freeship', label: 'Free shipping' },
+  // Códigos de influencer (se rastrea su uso vía track.php). Agrega más aquí.
+  MORA10: { type: 'percent', value: 10, label: '10% off', influencer: 'andres mora' },
 };
 
 // Pago por correo (US · Zelle). Rellena estos valores desde tu cuenta de EmailJS

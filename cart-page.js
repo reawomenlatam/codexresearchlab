@@ -382,6 +382,21 @@
     if (typeof fbq === 'function') fbq('track', 'Lead', { value: s.total, currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
   };
 
+  // Registra el uso de un código (para el panel de influencers). Fire-and-forget:
+  // no bloquea ni afecta al cliente aunque el contador esté caído.
+  const TRACK_URL = 'https://hooks.codexresearchlab.com/track.php';
+  function trackCoupon(s, id, cfg, methodLabel) {
+    if (!(coupon && validCoupon(coupon))) return; // sólo códigos válidos
+    try {
+      const data = new URLSearchParams({
+        code: coupon, order_id: id, total: s.total.toFixed(2),
+        currency: 'USD', country: cfg.label, method: methodLabel || '',
+      });
+      if (navigator.sendBeacon) navigator.sendBeacon(TRACK_URL, data);
+      else fetch(TRACK_URL, { method: 'POST', body: data, keepalive: true, mode: 'no-cors' });
+    } catch (e) { /* nunca romper el checkout por el contador */ }
+  }
+
   async function placeOrder() {
     if (placing) return;
     const s = compute();
@@ -439,6 +454,7 @@
         try { await sendEmail(EMAILJS.templateCustomer, Object.assign({ to_email: clean(buyer.email) }, params)); }
         catch (e) { /* la orden ya te llegó a ti */ }
         fireLead(s);
+        trackCoupon(s, id, cfg, 'Zelle');
         confirmation = { id, email: clean(buyer.email) };
         resetBuyer();
         placing = false;
@@ -473,6 +489,7 @@
     );
     placing = true; // evita doble apertura / doble Lead por doble clic
     fireLead(s);
+    trackCoupon(s, id, cfg, clean(payLabel));
     window.open(`https://wa.me/${WHATSAPP}?text=${waText}`, '_blank', 'noopener');
     if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Opening WhatsApp… send the message to complete your order.'; }
     setTimeout(() => { placing = false; }, 1500);
