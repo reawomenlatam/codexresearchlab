@@ -9,10 +9,7 @@
     `<a href="${href}" class="${nav === key ? 'active' : ''}">${label}</a>`;
 
   const headerHTML = `
-    <div class="announce">
-      Need help? Message us on WhatsApp and we’ll reply in minutes ·
-      <a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6345-4619</a>
-    </div>
+    <div class="announce" id="announceContact"></div>
     <header class="header">
       <div class="container header-inner">
         <a href="index.html" class="logo" aria-label="Codex Research">
@@ -71,10 +68,7 @@
           <div class="footer-brand">
             <a href="index.html" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research"></a>
             <p>Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.</p>
-            <div class="footer-contact">
-              <a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6345-4619</a>
-              <a href="mailto:sales@codexresearchlab.com">sales@codexresearchlab.com</a>
-            </div>
+            <div class="footer-contact" id="footerContact"></div>
           </div>
           <div class="footer-col">
             <h4>Shop</h4>
@@ -180,6 +174,24 @@
   document.addEventListener('click', (e) => { if (!e.target.closest('.country-wrap')) closeMenu2(); });
   window.addEventListener('rea-country-change', updateChip);
   updateChip();
+
+  // ---------- Contacto por país: Panamá → WhatsApp · EE.UU. → correo ----------
+  const EMAIL = 'sales@codexresearchlab.com';
+  function updateContact() {
+    const isPA = window.REACountry.code() === 'PA';
+    const waLink = `<a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6345-4619</a>`;
+    const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
+    const ann = document.getElementById('announceContact');
+    if (ann) {
+      ann.innerHTML = isPA
+        ? `Need help? Message us on WhatsApp and we’ll reply in minutes · ${waLink}`
+        : `Need help? Email us and we’ll get back to you fast · ${mailLink}`;
+    }
+    const foot = document.getElementById('footerContact');
+    if (foot) foot.innerHTML = isPA ? waLink : mailLink;
+  }
+  window.addEventListener('rea-country-change', updateContact);
+  updateContact();
 
   // ---------- Menú móvil ----------
   const mnav = document.getElementById('mobileNav');
