@@ -82,11 +82,11 @@
   function itemRow(l) {
     return `
       <div class="ci-row">
-        <a class="ci-thumb" href="product.html?slug=${l.slug}">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" loading="lazy">` : ui.vial(l.name, l.size)}</a>
+        <a class="ci-thumb" href="product/${l.slug}.html">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" loading="lazy">` : ui.vial(l.name, l.size)}</a>
         <div class="ci-body">
           <div class="ci-head">
             <div>
-              <a class="ci-name" href="product.html?slug=${l.slug}">${l.name}</a>
+              <a class="ci-name" href="product/${l.slug}.html">${l.name}</a>
               <div class="ci-meta"><span class="mono-tag">${l.size}</span> · ${stockNote(l.stock)}</div>
             </div>
             <button class="ci-rm" data-act="rm" data-id="${l.id}" aria-label="Remove ${l.name}">

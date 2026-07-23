@@ -22,16 +22,16 @@
 
   window.REAui.productCard = (p) => `
     <article class="product-card${p.outOfStock ? ' out' : ''}">
-      <a class="product-media" href="product.html?slug=${p.slug}" aria-label="${p.name}">
+      <a class="product-media" href="product/${p.slug}.html" aria-label="${p.name}">
         ${window.REAui.media(p, 'lyophilized')}
         ${p.outOfStock ? '<span class="oos-badge">Out of stock</span>' : ''}
       </a>
       <div class="product-info">
         <span class="mono-tag">${p.tag}</span>
-        <h3><a href="product.html?slug=${p.slug}">${p.name}</a></h3>
+        <h3><a href="product/${p.slug}.html">${p.name}</a></h3>
         <span class="product-price">${p.mg} · ${p.outOfStock ? '<b>Out of stock</b>' : `from <b>$${p.from}</b>`}</span>
         <div class="product-cta">
-          <a class="link" href="product.html?slug=${p.slug}">View product →</a>
+          <a class="link" href="product/${p.slug}.html">View product →</a>
           ${p.outOfStock ? '' : `<button class="add-btn" data-add="${p.slug}" aria-label="Add ${p.name} to cart">+</button>`}
         </div>
       </div>

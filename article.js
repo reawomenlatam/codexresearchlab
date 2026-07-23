@@ -7,7 +7,7 @@
   const main = document.getElementById('articleMain');
   const SITE = 'https://codexresearchlab.com';
 
-  const slug = new URLSearchParams(location.search).get('slug');
+  const slug = document.body.getAttribute('data-slug') || new URLSearchParams(location.search).get('slug');
   const p = POSTS.find((x) => x.slug === slug);
 
   if (!p) {
@@ -27,7 +27,7 @@
     if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
     el.setAttribute('content', val);
   };
-  const url = `${SITE}/article.html?slug=${p.slug}`;
+  const url = `${SITE}/article/${p.slug}.html`;
   setMeta('description', p.metaDescription);
   setMeta('og:title', p.metaTitle, 'property');
   setMeta('og:description', p.metaDescription, 'property');
@@ -66,12 +66,15 @@
       { '@type': 'ListItem', position: 3, name: p.title, item: url },
     ],
   };
-  [articleSchema, faqSchema, breadcrumbSchema].forEach((s) => {
-    const el = document.createElement('script');
-    el.type = 'application/ld+json';
-    el.textContent = jsonLd(s);
-    document.head.appendChild(el);
-  });
+  // En páginas estáticas el JSON-LD ya viene horneado; solo inyectarlo en el fallback.
+  if (!document.body.dataset.slug) {
+    [articleSchema, faqSchema, breadcrumbSchema].forEach((s) => {
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.textContent = jsonLd(s);
+      document.head.appendChild(el);
+    });
+  }
 
   // ---------- Featured image (infographic, shown uncropped) ----------
   // Convention: assets/blog/<slug>.jpg — override with post.image if needed.
@@ -90,7 +93,7 @@
     .map((s) => POSTS.find((x) => x.slug === s))
     .filter(Boolean)
     .map((r) => `
-      <a class="blog-card" href="article.html?slug=${r.slug}">
+      <a class="blog-card" href="article/${r.slug}.html">
         <div class="blog-card-body">
           <span class="blog-tag">${r.category} · ${r.date}</span>
           <h3>${r.title}</h3>

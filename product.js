@@ -3,7 +3,8 @@
   const { PRODUCTS, FAQS } = window.REA;
   const ui = window.REAui;
 
-  const slug = new URLSearchParams(location.search).get('slug');
+  // Slug: página estática (data-slug) o fallback product.html?slug=
+  const slug = document.body.getAttribute('data-slug') || new URLSearchParams(location.search).get('slug');
   const p = PRODUCTS.find((x) => x.slug === slug) || PRODUCTS[0];
   const main = document.getElementById('productMain');
 
@@ -21,7 +22,7 @@
 
   // ---------- SEO meta (per-product; article.js pattern) ----------
   const SITE = 'https://codexresearchlab.com';
-  const url = `${SITE}/product.html?slug=${p.slug}`;
+  const url = `${SITE}/product/${p.slug}.html`;
   const img = `${SITE}/${p.photo || 'assets/og-default.png'}`;
   const metaTitle = `${p.name} for research — ${p.mg}/vial | Codex Research`;
   const metaDesc = p.overview;
@@ -71,12 +72,15 @@
       { '@type': 'ListItem', position: 3, name: p.name, item: url },
     ],
   };
-  [productSchema, breadcrumbSchema].forEach((s) => {
-    const el = document.createElement('script');
-    el.type = 'application/ld+json';
-    el.textContent = jsonLd(s);
-    document.head.appendChild(el);
-  });
+  // En páginas estáticas el JSON-LD ya viene horneado; solo inyectarlo en el fallback.
+  if (!document.body.dataset.slug) {
+    [productSchema, breadcrumbSchema].forEach((s) => {
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.textContent = jsonLd(s);
+      document.head.appendChild(el);
+    });
+  }
 
   main.innerHTML = `
     <div class="container">

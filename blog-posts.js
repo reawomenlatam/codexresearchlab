@@ -33,7 +33,7 @@
         <p>Mass spectrometry works by converting compounds into charged particles and separating them in an analyzer based on their mass-to-charge ratio. This allows researchers to determine molecular weights, identify unknown compounds, and analyze complex mixtures with high sensitivity.${cite('Reference: Aebersold &amp; Mann, 2003', 'https://doi.org/10.1038/nature01511')}</p>
 
         <h2>Why use mass spectrometry in peptide research?</h2>
-        <p>Peptides are short chains of amino acids that can vary in sequence, modifications, and purity. If you want the fundamentals, see our guide on <a href="article.html?slug=amino-acids-peptides-proteins-difference">amino acids, peptides, and proteins</a>. Mass spectrometry is essential for studying them because it provides precise molecular information. Researchers use MS to:</p>
+        <p>Peptides are short chains of amino acids that can vary in sequence, modifications, and purity. If you want the fundamentals, see our guide on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>. Mass spectrometry is essential for studying them because it provides precise molecular information. Researchers use MS to:</p>
         <ul>
           <li>Confirm peptide identity by measuring exact molecular weight.</li>
           <li>Detect post-translational or synthetic modifications.</li>
@@ -49,12 +49,12 @@
           <li><b>ESI</b> (Electrospray Ionization): allows analysis of peptides in solution, suitable for coupling with liquid chromatography.</li>
           <li><b>LC-MS/MS</b> (Liquid Chromatography, Tandem Mass Spectrometry): combines separation with fragmentation for detailed sequencing and structural analysis.</li>
         </ul>
-        <p>MS is frequently paired with <a href="article.html?slug=high-performance-liquid-chromatography-hplc">high performance liquid chromatography (HPLC)</a> for purity verification.${cite('Reference: Domon &amp; Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
+        <p>MS is frequently paired with <a href="article/high-performance-liquid-chromatography-hplc.html">high performance liquid chromatography (HPLC)</a> for purity verification.${cite('Reference: Domon &amp; Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
 
         <h2>Research applications</h2>
         <p>Mass spectrometry is widely used in peptide science, including:</p>
         <ul>
-          <li>Verifying synthetic peptide batches for identity and purity, a routine step after <a href="article.html?slug=peptide-synthesis">peptide synthesis</a>.</li>
+          <li>Verifying synthetic peptide batches for identity and purity, a routine step after <a href="article/peptide-synthesis.html">peptide synthesis</a>.</li>
           <li>Mapping peptide and protein interactions.</li>
           <li>Profiling endogenous peptides in biological samples.</li>
           <li>Supporting structural studies by pinpointing amino acid modifications.</li>
@@ -96,10 +96,10 @@
         <h2>How is HPLC used in research?</h2>
         <p>HPLC is applied across many scientific fields. In peptide and pharmaceutical research it is commonly used to:</p>
         <ul>
-          <li>Verify purity of synthesized compounds, a key quality step after <a href="article.html?slug=peptide-synthesis">peptide synthesis</a>.</li>
+          <li>Verify purity of synthesized compounds, a key quality step after <a href="article/peptide-synthesis.html">peptide synthesis</a>.</li>
           <li>Separate peptide fragments or analogs.</li>
           <li>Detect small concentrations of impurities.</li>
-          <li>Prepare samples for further structural or biological testing, often paired with <a href="article.html?slug=mass-spectrometry-peptide-research">mass spectrometry</a>.</li>
+          <li>Prepare samples for further structural or biological testing, often paired with <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>.</li>
         </ul>
         <p>${cite('Reference: Kazakevich &amp; LoBrutto, 2007', 'https://doi.org/10.1016/B978-0-12-370540-2.X5000-2').trim()}</p>
 
@@ -114,7 +114,7 @@
         <p>${cite('Reference: Swartz &amp; Krull, 2012', 'https://doi.org/10.1002/9781118152547').trim()}</p>
 
         <h2>What researchers have observed</h2>
-        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article.html?slug=lyophilization-freeze-drying">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
+        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article/lyophilization-freeze-drying.html">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
       `,
       faq: [
         { q: 'What is HPLC used for?', a: 'HPLC is used to separate, identify, and quantify the components of a mixture. In peptide research it verifies purity and detects impurities.' },
@@ -149,7 +149,7 @@
         <p>Amino acids are the building blocks of peptides and proteins. Each amino acid has a central carbon atom bonded to an amino group, a carboxyl group, a hydrogen atom, and a unique side chain, called the R-group. These side chains give each amino acid distinct chemical properties, from polar to nonpolar and acidic to basic.${cite('Reference: Nelson &amp; Cox, 2017', 'https://doi.org/10.1007/978-3-319-56512-5')}</p>
 
         <h2>What are peptides?</h2>
-        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article.html?slug=peptide-synthesis">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article.html?slug=what-is-mots-c">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article/peptide-synthesis.html">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article/what-is-mots-c.html">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
 
         <h2>What are proteins?</h2>
         <p>Proteins are larger, more complex chains of amino acids, often containing hundreds of residues. Unlike short peptides, proteins fold into intricate three-dimensional structures that determine their function. They can act as enzymes, structural scaffolds, transporters, or receptors. Research into protein folding and misfolding has provided key insights into diseases such as Alzheimer's and Parkinson's.${cite('Reference: Dobson, 2003', 'https://doi.org/10.1038/nature02261')}</p>
@@ -160,7 +160,7 @@
           <li><b>Structure:</b> proteins fold into stable 3D structures, while peptides often remain linear or only partially folded.</li>
           <li><b>Function:</b> amino acids serve as building blocks, peptides often act as signaling molecules, and proteins carry out complex biological functions.</li>
         </ul>
-        <p>Analytical tools such as <a href="article.html?slug=mass-spectrometry-peptide-research">mass spectrometry</a> are used to confirm the identity of peptides and proteins.${cite('Reference: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
+        <p>Analytical tools such as <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> are used to confirm the identity of peptides and proteins.${cite('Reference: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
       `,
       faq: [
         { q: 'What is the difference between a peptide and a protein?', a: 'Peptides are short chains of roughly 2 to 50 amino acids, while proteins are much longer chains that fold into complex three-dimensional structures with specialized functions.' },
@@ -173,7 +173,7 @@
         { text: 'Dobson, C.M. (2003). Protein folding and misfolding. Nature, 426, 884–890.', url: 'https://doi.org/10.1038/nature02261' },
         { text: 'Berg, J.M., Tymoczko, J.L., &amp; Stryer, L. (2002). Biochemistry. 5th edition. W.H. Freeman.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK21154/' },
       ],
-      cta: 'Ready to go deeper? Browse our <a href="catalog.html">research peptides</a> or learn how they are made in our <a href="article.html?slug=peptide-synthesis">peptide synthesis</a> guide.',
+      cta: 'Ready to go deeper? Browse our <a href="catalog.html">research peptides</a> or learn how they are made in our <a href="article/peptide-synthesis.html">peptide synthesis</a> guide.',
       related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-mots-c'],
     },
 
@@ -204,13 +204,13 @@
         <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S1359-0294(98)00017-6').trim()}</p>
 
         <h2>Why do researchers use lyophilization?</h2>
-        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article.html?slug=excipients-in-peptides">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229')}</p>
+        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article/excipients-in-peptides.html">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229')}</p>
 
         <h2>Key applications in laboratory research</h2>
         <ul>
           <li>Preserving peptide and protein samples for extended shelf life.</li>
           <li>Stabilizing vaccines and biologics during production and distribution.</li>
-          <li>Preparing reference standards for analytical methods such as <a href="article.html?slug=high-performance-liquid-chromatography-hplc">HPLC</a>.</li>
+          <li>Preparing reference standards for analytical methods such as <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>.</li>
           <li>Enabling controlled reconstitution for in vitro or in vivo research models.</li>
         </ul>
         <p>${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1208/ps060610').trim()}</p>
@@ -252,7 +252,7 @@
           <li>Prevent peptide aggregation or oxidation.</li>
           <li>Adjust pH for stability.</li>
           <li>Enhance solubility for laboratory use.</li>
-          <li>Serve as bulking agents during <a href="article.html?slug=lyophilization-freeze-drying">lyophilization</a>.</li>
+          <li>Serve as bulking agents during <a href="article/lyophilization-freeze-drying.html">lyophilization</a>.</li>
         </ul>
         <p>${cite('Reference: Maa &amp; Hsu, 1996', 'https://doi.org/10.1021/js950316u').trim()}</p>
 
@@ -267,7 +267,7 @@
         <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229').trim()}</p>
 
         <h2>Research applications</h2>
-        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article.html?slug=high-performance-liquid-chromatography-hplc">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
+        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
       `,
       faq: [
         { q: 'What is an excipient in a peptide formulation?', a: 'An excipient is an inactive substance added alongside the peptide to stabilize, protect, or deliver it. It has no biological activity of its own.' },
@@ -299,7 +299,7 @@
         <p class="lead">Peptide synthesis is the laboratory process of building short chains of amino acids linked by peptide bonds. Most modern synthesis uses solid-phase peptide synthesis (SPPS), where amino acids are added one at a time to a resin bead through repeated cycles of coupling and deprotection.</p>
 
         <h2>What is peptide synthesis?</h2>
-        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article.html?slug=amino-acids-peptides-proteins-difference">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
 
         <h2>How is peptide synthesis performed in the lab?</h2>
         <p>Most modern peptide synthesis uses solid-phase peptide synthesis (SPPS). The first amino acid is attached to a solid resin bead, and additional amino acids are added step by step. Each cycle involves:</p>
@@ -316,7 +316,7 @@
           <li><b>Precision:</b> the ability to design exact amino acid sequences.</li>
           <li><b>Flexibility:</b> incorporation of modifications such as non-natural amino acids or labels.</li>
           <li><b>Scalability:</b> production from small milligram amounts for experiments to larger quantities for assays.</li>
-          <li><b>Purity control:</b> products are analyzed by <a href="article.html?slug=high-performance-liquid-chromatography-hplc">HPLC</a> and <a href="article.html?slug=mass-spectrometry-peptide-research">mass spectrometry</a> to confirm identity and purity.</li>
+          <li><b>Purity control:</b> products are analyzed by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> to confirm identity and purity.</li>
         </ul>
         <p>${cite('Reference: Coin, 2010', 'https://doi.org/10.1038/nmeth.1403').trim()}</p>
 
@@ -353,7 +353,7 @@
         <p class="lead">MOTS-c is a small peptide encoded within the mitochondrial genome, unlike most peptides that come from nuclear DNA. It is studied as a mitochondrial-derived signaling molecule involved in metabolism, cellular stress responses, aging, and exercise.</p>
 
         <h2>What is MOTS-c?</h2>
-        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. This highlights the organelle's role not only in energy metabolism but also in signaling. The discovery has expanded interest in mitochondrial-derived peptides as potential regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article.html?slug=amino-acids-peptides-proteins-difference">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
+        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. This highlights the organelle's role not only in energy metabolism but also in signaling. The discovery has expanded interest in mitochondrial-derived peptides as potential regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
 
         <h2>How has MOTS-c been studied?</h2>
         <p>Research on MOTS-c spans in vitro, animal, and human models:</p>
@@ -382,7 +382,7 @@
           <li>Explore mitochondrial contributions to age-related cellular changes.</li>
           <li>Develop models of exercise-induced signaling molecules.</li>
         </ul>
-        <p>Peptides like MOTS-c used in research are produced by <a href="article.html?slug=peptide-synthesis">peptide synthesis</a> and verified for purity.${cite('Reference: Kim et al., 2018', 'https://doi.org/10.1016/j.cmet.2018.02.001')}</p>
+        <p>Peptides like MOTS-c used in research are produced by <a href="article/peptide-synthesis.html">peptide synthesis</a> and verified for purity.${cite('Reference: Kim et al., 2018', 'https://doi.org/10.1016/j.cmet.2018.02.001')}</p>
       `,
       faq: [
         { q: 'What is MOTS-c?', a: 'MOTS-c is a small mitochondrial-derived peptide encoded in mitochondrial DNA. It is studied as a signaling molecule involved in metabolism, stress response, aging, and exercise.' },

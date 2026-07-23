@@ -11,7 +11,7 @@
   const feature = POSTS[0];
   if (feature) {
     document.getElementById('blogFeature').innerHTML = `
-      <a class="blog-feature-link" href="article.html?slug=${feature.slug}">
+      <a class="blog-feature-link" href="article/${feature.slug}.html">
         ${cover(feature)}
         <div class="blog-feature-body">
           <span class="blog-tag">${feature.category} · ${feature.date}</span>
@@ -23,7 +23,7 @@
   }
 
   document.getElementById('blogGrid').innerHTML = POSTS.slice(1).map((a) => `
-    <a class="blog-card" href="article.html?slug=${a.slug}">
+    <a class="blog-card" href="article/${a.slug}.html">
       ${cover(a)}
       <div class="blog-card-body">
         <span class="blog-tag">${a.category} · ${a.date}</span>
