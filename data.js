@@ -1,6 +1,6 @@
 /* Codex Research — shared data (catalog, articles, FAQ, testimonials).
    Catalog = current available inventory with real prices.
-   Each product: `mg` = strength, `sizes` = purchase options (single vial / 10-vial kit).
+   Each product: `mg` = strength, `sizes` = purchase options (single vial / 3-vial pack).
    Exposed on window.REA for every page to use. */
 
 const PRODUCTS = [
@@ -10,7 +10,7 @@ const PRODUCTS = [
     photo: 'assets/products/tirzepatide.jpg',
     sizes: [
       { label: 'Single vial', price: 190 },
-      { label: 'Kit · 10 vials', price: 1691, save: '11%' },
+      { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
     ],
     overview: 'Tirzepatide is a dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
@@ -21,7 +21,7 @@ const PRODUCTS = [
     photo: 'assets/products/retatrutide.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
-      { label: 'Kit · 10 vials', price: 1335, save: '11%' },
+      { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
     ],
     overview: 'Retatrutide is a triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
@@ -32,7 +32,7 @@ const PRODUCTS = [
     photo: 'assets/products/bpc-157.jpg',
     sizes: [
       { label: 'Single vial', price: 79 },
-      { label: 'Kit · 10 vials', price: 703.10, save: '11%' },
+      { label: 'Pack · 3 vials', price: 218.04, save: '8%' },
     ],
     overview: 'BPC-157 is a pentadecapeptide derived from a protective protein found in gastric juice. In research settings it has been studied for its interaction with signaling pathways associated with tissue repair and angiogenesis.',
     research: ['Tissue repair', 'Angiogenesis', 'Nitric oxide signaling', 'Gastrointestinal integrity'],
@@ -54,7 +54,7 @@ const PRODUCTS = [
     photo: 'assets/products/ipamorelin.jpg',
     sizes: [
       { label: 'Single vial', price: 75 },
-      { label: 'Kit · 10 vials', price: 615, save: '18%' },
+      { label: 'Pack · 3 vials', price: 207.00, save: '8%' },
     ],
     overview: 'Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation.',
     research: ['GH secretagogues', 'Ghrelin receptor', 'Endocrine regulation'],
@@ -65,7 +65,7 @@ const PRODUCTS = [
     photo: 'assets/products/ghk-cu.jpg',
     sizes: [
       { label: 'Single vial', price: 95 },
-      { label: 'Kit · 10 vials', price: 845.50, save: '11%' },
+      { label: 'Pack · 3 vials', price: 262.20, save: '8%' },
     ],
     overview: 'GHK-Cu (copper tripeptide-1, Gly-His-Lys–copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.',
     research: ['Tissue remodeling', 'Collagen synthesis', 'Wound repair', 'Skin biology'],
@@ -87,7 +87,7 @@ const PRODUCTS = [
     photo: 'assets/products/nad-plus.jpg',
     sizes: [
       { label: 'Single vial', price: 130 },
-      { label: 'Kit · 10 vials', price: 1157, save: '11%' },
+      { label: 'Pack · 3 vials', price: 358.80, save: '8%' },
     ],
     overview: 'NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme studied in models of cellular metabolism, mitochondrial function and sirtuin signaling.',
     research: ['Cellular metabolism', 'Mitochondrial function', 'Sirtuin signaling'],
@@ -98,7 +98,7 @@ const PRODUCTS = [
     photo: 'assets/products/ahk-cu.jpg',
     sizes: [
       { label: 'Single vial', price: 120 },
-      { label: 'Kit · 10 vials', price: 1068, save: '11%' },
+      { label: 'Pack · 3 vials', price: 331.20, save: '8%' },
     ],
     overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys–copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
@@ -109,7 +109,7 @@ const PRODUCTS = [
     photo: 'assets/products/bac-water.jpg',
     sizes: [
       { label: 'Single vial', price: 10 },
-      { label: 'Kit · 10 vials', price: 95, save: '5%' },
+      { label: 'Pack · 3 vials', price: 27.60, save: '8%' },
     ],
     overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique.',
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
@@ -120,7 +120,7 @@ const PRODUCTS = [
     photo: 'assets/products/bac-water-10ml.jpg', outOfStock: true,
     sizes: [
       { label: 'Single vial', price: 17 },
-      { label: 'Kit · 10 vials', price: 161.50, save: '5%' },
+      { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
     ],
     overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. This 10 ml presentation is a larger multi-dose bottle.',
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
