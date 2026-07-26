@@ -39,11 +39,11 @@ const PRODUCTS = [
   },
   {
     slug: 'mots-c', name: 'MOTS-c', cas: '1627580-64-6', tag: 'CAS # 1627580-64-6',
-    mg: '10 mg', from: 49, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
+    mg: '10 mg', from: 65, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
     photo: 'assets/products/mots-c.jpg',
     sizes: [
-      { label: 'Single vial', price: 49 },
-      { label: 'Kit · 10 vials', price: 450.80, save: '8%' },
+      { label: 'Single vial', price: 65 },
+      { label: 'Pack · 3 vials', price: 179.40, save: '8%' },
     ],
     overview: 'MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeostasis and cell signaling.',
     research: ['Metabolic homeostasis', 'Mitochondrial function', 'Cell signaling'],
@@ -72,11 +72,11 @@ const PRODUCTS = [
   },
   {
     slug: 'pt-141', name: 'PT-141', cas: '189691-06-3', tag: 'CAS # 189691-06-3',
-    mg: '10 mg', from: 49, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
+    mg: '10 mg', from: 65, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
     photo: 'assets/products/pt-141.jpg',
     sizes: [
-      { label: 'Single vial', price: 49 },
-      { label: 'Kit · 10 vials', price: 450.80, save: '8%' },
+      { label: 'Single vial', price: 65 },
+      { label: 'Pack · 3 vials', price: 179.40, save: '8%' },
     ],
     overview: 'PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of receptor signaling and neurobehavioral pathways.',
     research: ['Melanocortin signaling', 'Receptor binding', 'Neurobehavioral models'],
