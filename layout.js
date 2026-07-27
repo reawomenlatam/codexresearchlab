@@ -110,8 +110,7 @@
         </div>
         <p class="gate-confirm">
           By selecting your country and entering, you confirm you are of legal age in your
-          jurisdiction and agree to our <a href="terms.html">Terms of Service</a>. All products
-          are sold strictly for laboratory research use.
+          jurisdiction and agree to our <a href="terms.html">Terms of Service</a>.
         </p>
         <button class="gate-under" id="gateNo">I'm not of legal age</button>
       </div>
