@@ -421,6 +421,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .gate-country .flag { font-size: 1.5rem; }
 .gate-country b { display: block; font-size: .95rem; }
 .gate-country small { display: block; color: var(--muted); font-size: .74rem; margin-top: 2px; }
+.gate-card p.gate-confirm { color: var(--muted); font-size: .78rem; line-height: 1.55; margin: 1.4rem 0 0; }
+.gate-confirm a { color: var(--ink); text-decoration: underline; }
 .gate-under { display: block; margin: 1.2rem auto 0; font-size: .82rem; color: var(--muted); text-decoration: underline; }
 .gate-under:hover { color: var(--ink); }
 

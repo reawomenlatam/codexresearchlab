@@ -100,13 +100,7 @@
   const gateHTML = `
     <div class="gate-overlay" id="gateOverlay" hidden>
       <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
-        <h2 id="gateTitle">Confirm you are 21 or older</h2>
-        <p>
-          By entering, you confirm you are at least 21 and acting for research purposes.
-          All products are sold strictly for research use, not for human, animal, clinical
-          or therapeutic use. You take responsibility for lawful, compliant handling.
-        </p>
-        <p class="gate-q">Where are you shopping from?</p>
+        <p class="gate-q" id="gateTitle">Where are you shopping from?</p>
         <div class="gate-countries">
           ${Object.values(window.REA.COUNTRIES).map((c) => `
             <button class="gate-country" data-country="${c.code}">
@@ -114,7 +108,12 @@
               <span><b>${c.label}</b><small>$${c.shipping.flat} shipping · ${c.etaShort}</small></span>
             </button>`).join('')}
         </div>
-        <button class="gate-under" id="gateNo">I'm under 21</button>
+        <p class="gate-confirm">
+          By selecting your country and entering, you confirm you are of legal age in your
+          jurisdiction and agree to our <a href="terms.html">Terms of Service</a>. All products
+          are sold strictly for laboratory research use.
+        </p>
+        <button class="gate-under" id="gateNo">I'm not of legal age</button>
       </div>
     </div>`;
 
@@ -145,10 +144,11 @@
     // Salida cordial en lugar de redirigir de golpe
     gate.querySelector('.gate-card').innerHTML = `
       <h2>Thanks for visiting</h2>
-      <p>This catalog is for research only and requires you to be 21 or older.
-      If you reached this page by mistake, you can close this tab. Changed your mind?</p>
+      <p>This catalog is for laboratory research only and requires you to be of legal age in
+      your jurisdiction. If you reached this page by mistake, you can close this tab.
+      Changed your mind?</p>
       <div class="gate-actions">
-        <button class="btn btn-primary" id="gateBack">Yes, I'm 21 or older</button>
+        <button class="btn btn-primary" id="gateBack">Yes, I'm of legal age</button>
         <a class="btn btn-ghost" href="https://www.google.com">Leave site</a>
       </div>`;
     document.getElementById('gateBack').addEventListener('click', () => location.reload());
