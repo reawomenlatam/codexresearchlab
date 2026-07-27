@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="footer-legal">
-          <p class="copy">© Codex Research 2026. All rights reserved.</p>
+          <p class="copy">© Codex Research 2023. All rights reserved.</p>
           <p>
             All products on this site are sold solely for research and development use,
             and are not intended for human consumption of any kind. The statements on this site have not
