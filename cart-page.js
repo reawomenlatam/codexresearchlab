@@ -82,7 +82,7 @@
   function itemRow(l) {
     return `
       <div class="ci-row">
-        <a class="ci-thumb" href="product/${l.slug}.html">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" loading="lazy">` : ui.vial(l.name, l.size)}</a>
+        <a class="ci-thumb" href="product/${l.slug}.html">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" width="1400" height="933" loading="lazy">` : ui.vial(l.name, l.size)}</a>
         <div class="ci-body">
           <div class="ci-head">
             <div>
@@ -152,9 +152,12 @@
         <div class="co-section pay-methods">
           <span class="co-title">Payment method · ${cfg.flag} ${esc(cfg.label)}</span>
           ${cfg.payments.map((p) => `
-            <label class="pay-opt">
+            <label class="pay-opt${p.id === 'cash' ? ' pay-featured' : ''}">
               <input type="radio" name="payMethod" value="${esc(p.id)}" ${p.id === payId ? 'checked' : ''}>
-              <span>${esc(p.label)}</span>
+              <span class="pay-opt-main">
+                ${p.id === 'yappy' ? `<span class="pay-mark yappy">${esc(p.label)}</span>` : esc(p.label)}
+                ${p.id === 'cash' ? '<small class="pay-note">Pay when you receive · no prepayment</small>' : ''}
+              </span>
             </label>`).join('')}
         </div>
 
@@ -218,6 +221,7 @@
           ${checkoutForm(s, cfg, payId)}
 
           <ul class="sum-trust">
+            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>Pay on delivery available</b> — pay when you receive</li>` : ''}
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Secure & private</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Discreet packaging</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Batch-verified with COA</li>
@@ -294,7 +298,11 @@
           ${summary(s)}
         </div>
         ${crossSell()}
-        ${socialProof}`;
+        ${socialProof}
+        <div class="cart-sticky" id="cartSticky" hidden>
+          <div class="cart-sticky-total"><span>Total</span><b>${money(s.total)}</b></div>
+          <button class="btn btn-primary" id="cartStickyGo">Checkout</button>
+        </div>`;
     }
     wire();
     // Las imágenes recién inyectadas necesitan la clase .loaded o el fade-in
@@ -352,6 +360,23 @@
       checkoutForm.addEventListener('submit', (e) => { e.preventDefault(); placeOrder(); });
     }
 
+    // Barra sticky (móvil): lleva al formulario; se oculta cuando el botón real ya se ve.
+    const stickyGo = document.getElementById('cartStickyGo');
+    if (stickyGo) stickyGo.addEventListener('click', () => {
+      const f = document.getElementById('checkoutForm');
+      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const first = document.getElementById('coName');
+      if (first) setTimeout(() => first.focus({ preventScroll: true }), 350);
+    });
+    const sticky = document.getElementById('cartSticky');
+    const submit = document.getElementById('coSubmit');
+    if (sticky && submit && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((en) => { sticky.hidden = en[0].isIntersecting; }, { threshold: 0 });
+      io.observe(submit);
+    } else if (sticky) {
+      sticky.hidden = false;
+    }
+
     // Cross-sell quick-add (sin abrir el drawer; la página se re-renderiza sola)
     const grid = document.getElementById('crossSellGrid');
     if (grid) {
@@ -380,6 +405,10 @@
 
   const fireLead = (s) => {
     if (typeof fbq === 'function') fbq('track', 'Lead', { value: s.total, currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', {
+      currency: 'USD', value: s.total,
+      items: s.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),
+    });
   };
 
   // Registra el uso de un código (para el panel de influencers). Fire-and-forget:
@@ -503,13 +532,17 @@
 
   // ---------- Meta Pixel: eventos de conversión ----------
   // InitiateCheckout: al llegar a la página de carrito con productos (una vez).
-  if (typeof fbq === 'function') {
+  {
     const s0 = compute();
     if (s0.lines.length) {
-      fbq('track', 'InitiateCheckout', {
+      if (typeof fbq === 'function') fbq('track', 'InitiateCheckout', {
         value: s0.total, currency: 'USD',
         num_items: s0.lines.reduce((n, l) => n + l.qty, 0),
         content_ids: s0.lines.map((l) => l.slug),
+      });
+      if (typeof gtag === 'function') gtag('event', 'begin_checkout', {
+        currency: 'USD', value: s0.total,
+        items: s0.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),
       });
     }
   }

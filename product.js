@@ -19,6 +19,13 @@
       value: p.sizes[0].price, currency: 'USD',
     });
   }
+  // GA4: view_item (mismo momento que ViewContent)
+  if (typeof gtag === 'function') {
+    gtag('event', 'view_item', {
+      currency: 'USD', value: p.sizes[0].price,
+      items: [{ item_id: p.slug, item_name: p.name, price: p.sizes[0].price }],
+    });
+  }
 
   // ---------- SEO meta (per-product; article.js pattern) ----------
   const SITE = 'https://codexresearchlab.com';

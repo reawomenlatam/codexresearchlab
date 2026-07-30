@@ -17,7 +17,7 @@
 
   // Foto real si el producto la tiene; si no, el vial dibujado en CSS.
   window.REAui.media = (p, sub) => (p && p.photo)
-    ? `<img class="product-photo" src="${p.photo}" alt="${p.name}" loading="lazy">`
+    ? `<img class="product-photo" src="${p.photo}" alt="${p.name}" width="1400" height="933" loading="lazy">`
     : window.REAui.vial(p ? p.name : '', sub);
 
   window.REAui.productCard = (p) => `
@@ -91,4 +91,16 @@
 
   const faqList = document.getElementById('faqList');
   if (faqList) window.REAui.faqAccordion(faqList, FAQS);
+
+  // Gancho de entrega en el hero (country-aware; no cambia el título).
+  const heroDeliver = document.getElementById('heroDeliver');
+  function updateHeroDeliver() {
+    if (!heroDeliver || !window.REACountry) return;
+    const isPA = window.REACountry.code() === 'PA';
+    heroDeliver.innerHTML = isPA
+      ? '<span class="hd-dot"></span> <b>Same-day delivery in Panama City</b> — in your hands in 1–2 h'
+      : '<span class="hd-dot"></span> <b>Fast, discreet delivery across the US</b>';
+  }
+  window.addEventListener('rea-country-change', updateHeroDeliver);
+  updateHeroDeliver();
 })();

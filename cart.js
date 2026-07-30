@@ -68,6 +68,13 @@
         value: priceFor(slug, size) * qty, currency: 'USD',
       });
     }
+    // GA4: add_to_cart
+    if (typeof gtag === 'function' && prod) {
+      gtag('event', 'add_to_cart', {
+        currency: 'USD', value: priceFor(slug, size) * qty,
+        items: [{ item_id: slug, item_name: prod.name, price: priceFor(slug, size), quantity: qty }],
+      });
+    }
     if (!opts.silent) open();
   }
   function setQty(id, qty) {
