@@ -1,4 +1,4 @@
-/* Codex Research — shared micro-interactions.
+/* Codex Research - shared micro-interactions.
    Scroll reveal, count-up stats, add-to-cart feedback (fly-to-cart + button),
    cart icon bounce, count pop, and image fade-in (skeleton). Respects reduced-motion. */
 (function () {

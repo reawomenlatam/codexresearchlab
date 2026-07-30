@@ -1,4 +1,4 @@
-/* Codex Research — selección de país (US / PA).
+/* Codex Research - selección de país (US / PA).
    Persiste en localStorage; al cambiar, notifica para que carrito y vistas
    recalculen envío, umbrales y métodos de pago.
    API: window.REACountry.get() | .code() | .config() | .set(code) */

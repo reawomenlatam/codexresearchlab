@@ -1,4 +1,4 @@
-/* REA Store — catálogo: búsqueda, categorías, orden. */
+/* REA Store - catálogo: búsqueda, categorías, orden. */
 (function () {
   const { PRODUCTS } = window.REA;
   const ui = window.REAui;

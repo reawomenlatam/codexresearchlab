@@ -1,4 +1,4 @@
-/* REA Store — home. Usa window.REA (data.js) y window.REACart (cart.js). */
+/* REA Store - home. Usa window.REA (data.js) y window.REACart (cart.js). */
 (function () {
   const { PRODUCTS, FAQS, TESTIMONIALS } = window.REA;
 
@@ -98,8 +98,8 @@
     if (!heroDeliver || !window.REACountry) return;
     const isPA = window.REACountry.code() === 'PA';
     heroDeliver.innerHTML = isPA
-      ? '<span class="hd-dot"></span> <b>Same-day delivery in Panama City</b> — in your hands in 1–2 h'
-      : '<span class="hd-dot"></span> <b>Fast, discreet delivery across the US</b>';
+      ? '<span class="hd-dot"></span><span><b>Same-day delivery in Panama City</b>, in your hands in 1-2 h</span>'
+      : '<span class="hd-dot"></span><span><b>Fast, discreet delivery across the US</b></span>';
   }
   window.addEventListener('rea-country-change', updateHeroDeliver);
   updateHeroDeliver();

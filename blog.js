@@ -1,4 +1,4 @@
-/* Codex Research — blog: featured article + grid. Uses window.REA.POSTS. */
+/* Codex Research - blog: featured article + grid. Uses window.REA.POSTS. */
 (function () {
   const POSTS = window.REA.POSTS || [];
 

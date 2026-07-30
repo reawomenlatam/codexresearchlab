@@ -1,10 +1,10 @@
-/* REA Store — carrito compartido
+/* REA Store - carrito compartido
    Estado persistente en localStorage, drawer inyectado, contador en header.
    Funciona en cualquier página que cargue data.js y cart.js.
 
    API pública (window.REACart):
-     add(slug, sizeLabel, qty)  — agrega o suma
-     setQty(lineId, qty)        — cambia cantidad (0 = eliminar)
+     add(slug, sizeLabel, qty)  - agrega o suma
+     setQty(lineId, qty)        - cambia cantidad (0 = eliminar)
      remove(lineId)
      open() / close()
      items(), count(), total()

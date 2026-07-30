@@ -1,4 +1,4 @@
-/* REA Store — layout compartido: header, footer y age gate.
+/* REA Store - layout compartido: header, footer y age gate.
    Cada página monta esto con <div data-header></div> / <div data-footer></div>.
    `active` se marca con <body data-nav="productos"> etc. */
 (function () {

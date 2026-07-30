@@ -1,4 +1,4 @@
-/* Codex Research — blog article renderer.
+/* Codex Research - blog article renderer.
    Reads ?slug=…, renders the post, sets SEO meta, injects Article + FAQPage
    JSON-LD (with < escaped), and builds the related-articles cluster. */
 (function () {
@@ -77,7 +77,7 @@
   }
 
   // ---------- Featured image (infographic, shown uncropped) ----------
-  // Convention: assets/blog/<slug>.jpg — override with post.image if needed.
+  // Convention: assets/blog/<slug>.jpg - override with post.image if needed.
   const imgSrc = p.image || `assets/blog/${p.slug}.jpg`;
   const cover = `
     <figure class="article-figure">

@@ -1,4 +1,4 @@
-/* REA Store — detalle de producto. Lee ?slug= y arma la ficha. */
+/* REA Store - detalle de producto. Lee ?slug= y arma la ficha. */
 (function () {
   const { PRODUCTS, FAQS } = window.REA;
   const ui = window.REAui;
@@ -31,7 +31,7 @@
   const SITE = 'https://codexresearchlab.com';
   const url = `${SITE}/product/${p.slug}.html`;
   const img = `${SITE}/${p.photo || 'assets/og-default.png'}`;
-  const metaTitle = `${p.name} for research — ${p.mg}/vial | Codex Research`;
+  const metaTitle = `${p.name} for research, ${p.mg}/vial | Codex Research`;
   const metaDesc = p.overview;
   document.title = metaTitle;
 

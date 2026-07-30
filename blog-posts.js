@@ -1,4 +1,4 @@
-/* Codex Research — blog content (7 SEO posts, topic cluster).
+/* Codex Research - blog content (7 SEO posts, topic cluster).
    Adapted from the Direct Peptides SEO package: brand → Codex Research,
    internal links → article.html?slug=…, /shop → catalog.html.
    Exposed on window.REA.POSTS (array, ordered for the blog listing).
@@ -67,10 +67,10 @@
         { q: 'Why is mass spectrometry important after peptide synthesis?', a: 'It confirms that the synthesized peptide has the correct sequence and molecular weight and helps detect by-products before the peptide is used in research.' },
       ],
       references: [
-        { text: 'Aebersold, R., &amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198–207.', url: 'https://doi.org/10.1038/nature01511' },
-        { text: 'Yates, J.R., et al. (2009). Proteomics by mass spectrometry: approaches, advances, and applications. Annual Review of Biochemistry, 78, 243–272.', url: 'https://doi.org/10.1146/annurev.biochem.78.081307.110406' },
-        { text: 'Domon, B., &amp; Aebersold, R. (2006). Mass spectrometry and protein analysis. Science, 312(5771), 212–217.', url: 'https://doi.org/10.1126/science.1111443' },
-        { text: 'Aebersold, R., &amp; Mann, M. (2016). Mass-spectrometric exploration of proteome structure and function. Nature, 537, 347–355.', url: 'https://doi.org/10.1038/nature19949' },
+        { text: 'Aebersold, R., &amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198-207.', url: 'https://doi.org/10.1038/nature01511' },
+        { text: 'Yates, J.R., et al. (2009). Proteomics by mass spectrometry: approaches, advances, and applications. Annual Review of Biochemistry, 78, 243-272.', url: 'https://doi.org/10.1146/annurev.biochem.78.081307.110406' },
+        { text: 'Domon, B., &amp; Aebersold, R. (2006). Mass spectrometry and protein analysis. Science, 312(5771), 212-217.', url: 'https://doi.org/10.1126/science.1111443' },
+        { text: 'Aebersold, R., &amp; Mann, M. (2016). Mass-spectrometric exploration of proteome structure and function. Nature, 537, 347-355.', url: 'https://doi.org/10.1038/nature19949' },
       ],
       cta: 'Explore our range of <a href="catalog.html">research peptides</a> analyzed by mass spectrometry and HPLC for verified purity.',
       related: ['high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'amino-acids-peptides-proteins-difference'],
@@ -169,8 +169,8 @@
       ],
       references: [
         { text: 'Nelson, D.L., &amp; Cox, M.M. (2017). Lehninger Principles of Biochemistry. Springer.', url: 'https://doi.org/10.1007/978-3-319-56512-5' },
-        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis: The Synthesis of a Tetrapeptide. Science, 138(3549), 1059–1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
-        { text: 'Dobson, C.M. (2003). Protein folding and misfolding. Nature, 426, 884–890.', url: 'https://doi.org/10.1038/nature02261' },
+        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis: The Synthesis of a Tetrapeptide. Science, 138(3549), 1059-1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
+        { text: 'Dobson, C.M. (2003). Protein folding and misfolding. Nature, 426, 884-890.', url: 'https://doi.org/10.1038/nature02261' },
         { text: 'Berg, J.M., Tymoczko, J.L., &amp; Stryer, L. (2002). Biochemistry. 5th edition. W.H. Freeman.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK21154/' },
       ],
       cta: 'Ready to go deeper? Browse our <a href="catalog.html">research peptides</a> or learn how they are made in our <a href="article/peptide-synthesis.html">peptide synthesis</a> guide.',
@@ -221,9 +221,9 @@
         { q: 'Why are peptides freeze-dried?', a: 'Freeze-drying minimizes peptide degradation, makes storage and transport easier, and allows precise reconstitution before experiments.' },
       ],
       references: [
-        { text: 'Franks, F. (1998). Freeze-drying of bioproducts: putting principles into practice. European Journal of Pharmaceutics and Biopharmaceutics, 45(3), 221–229.', url: 'https://doi.org/10.1016/S1359-0294(98)00017-6' },
-        { text: 'Tang, X., &amp; Pikal, M.J. (2004). Design of freeze-drying processes for pharmaceuticals: practical advice. Pharmaceutical Research, 21(2), 191–200.', url: 'https://doi.org/10.1208/ps060610' },
-        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1–2), 1–60.', url: 'https://doi.org/10.1208/ps020229' },
+        { text: 'Franks, F. (1998). Freeze-drying of bioproducts: putting principles into practice. European Journal of Pharmaceutics and Biopharmaceutics, 45(3), 221-229.', url: 'https://doi.org/10.1016/S1359-0294(98)00017-6' },
+        { text: 'Tang, X., &amp; Pikal, M.J. (2004). Design of freeze-drying processes for pharmaceuticals: practical advice. Pharmaceutical Research, 21(2), 191-200.', url: 'https://doi.org/10.1208/ps060610' },
+        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
       ],
       cta: 'Our <a href="catalog.html">research peptides</a> are supplied lyophilized for maximum stability and shelf life.',
       related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis'],
@@ -276,9 +276,9 @@
       ],
       references: [
         { text: 'Rowe, R.C., et al. (2006). Handbook of Pharmaceutical Excipients. Pharmaceutical Press.', url: 'https://doi.org/10.1201/9781420006306' },
-        { text: 'Maa, Y.F., &amp; Hsu, C.C. (1996). Protein denaturation by freeze-drying: stabilization by excipients. Journal of Pharmaceutical Sciences, 85(10), 1050–1056.', url: 'https://doi.org/10.1021/js950316u' },
-        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1–2), 1–60.', url: 'https://doi.org/10.1208/ps020229' },
-        { text: 'Carpenter, J.F., et al. (2002). Rational design of stable protein formulations: theory and practice. Journal of Controlled Release, 78(1–3), 1–9.', url: 'https://doi.org/10.1016/S0168-3659(02)00092-3' },
+        { text: 'Maa, Y.F., &amp; Hsu, C.C. (1996). Protein denaturation by freeze-drying: stabilization by excipients. Journal of Pharmaceutical Sciences, 85(10), 1050-1056.', url: 'https://doi.org/10.1021/js950316u' },
+        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
+        { text: 'Carpenter, J.F., et al. (2002). Rational design of stable protein formulations: theory and practice. Journal of Controlled Release, 78(1-3), 1-9.', url: 'https://doi.org/10.1016/S0168-3659(02)00092-3' },
       ],
       cta: 'Browse our <a href="catalog.html">research peptides</a> formulated for stability and reproducible results.',
       related: ['lyophilization-freeze-drying', 'peptide-synthesis', 'high-performance-liquid-chromatography-hplc'],
@@ -329,10 +329,10 @@
         { q: 'How is peptide purity confirmed after synthesis?', a: 'Purity is confirmed with HPLC and mass spectrometry, which verify the correct sequence, molecular weight, and absence of significant by-products.' },
       ],
       references: [
-        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Science, 138(3549), 1059–1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
+        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Science, 138(3549), 1059-1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
         { text: 'Chan, W.C., &amp; White, P.D. (2000). Fmoc Solid Phase Peptide Synthesis: A Practical Approach. Oxford University Press.', url: 'https://doi.org/10.1385/1-59259-087-7:1' },
-        { text: 'Coin, I. (2010). High-throughput peptide synthesis and screening. Nature Methods, 7, 431–433.', url: 'https://doi.org/10.1038/nmeth.1403' },
-        { text: 'Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869–878.', url: 'https://doi.org/10.1002/anie.198606031' },
+        { text: 'Coin, I. (2010). High-throughput peptide synthesis and screening. Nature Methods, 7, 431-433.', url: 'https://doi.org/10.1038/nmeth.1403' },
+        { text: 'Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869-878.', url: 'https://doi.org/10.1002/anie.198606031' },
       ],
       cta: 'Explore our catalog of lab-synthesized <a href="catalog.html">research peptides</a>, verified by HPLC and mass spectrometry.',
       related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
@@ -390,10 +390,10 @@
         { q: 'What does MOTS-c do in research studies?', a: 'Studies associate MOTS-c with AMPK signaling and folate metabolism, changes under cellular stress, declines with age in some tissues, and increases after exercise.' },
       ],
       references: [
-        { text: 'Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. Cell Metabolism, 21(3), 443–454.', url: 'https://doi.org/10.1016/j.cmet.2015.09.001' },
-        { text: 'Kim, K.H., et al. (2018). Mitochondrial peptides as regulators of metabolism. Cell Metabolism, 28(3), 330–341.', url: 'https://doi.org/10.1016/j.cmet.2018.02.001' },
+        { text: 'Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. Cell Metabolism, 21(3), 443-454.', url: 'https://doi.org/10.1016/j.cmet.2015.09.001' },
+        { text: 'Kim, K.H., et al. (2018). Mitochondrial peptides as regulators of metabolism. Cell Metabolism, 28(3), 330-341.', url: 'https://doi.org/10.1016/j.cmet.2018.02.001' },
         { text: 'Reynolds, J.C., et al. (2021). MOTS-c: a mitochondrial signal regulating metabolism and aging. Frontiers in Endocrinology, 12, 678778.', url: 'https://doi.org/10.3389/fendo.2021.678778' },
-        { text: 'Zempo, H., et al. (2021). Exercise increases MOTS-c levels in circulation. European Journal of Applied Physiology, 121(12), 3285–3293.', url: 'https://doi.org/10.1007/s00421-021-04643-8' },
+        { text: 'Zempo, H., et al. (2021). Exercise increases MOTS-c levels in circulation. European Journal of Applied Physiology, 121(12), 3285-3293.', url: 'https://doi.org/10.1007/s00421-021-04643-8' },
       ],
       cta: 'Explore our <a href="catalog.html?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
       related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis'],

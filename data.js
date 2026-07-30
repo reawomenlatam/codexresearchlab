@@ -1,4 +1,4 @@
-/* Codex Research — shared data (catalog, articles, FAQ, testimonials).
+/* Codex Research - shared data (catalog, articles, FAQ, testimonials).
    Catalog = current available inventory with real prices.
    Each product: `mg` = strength, `sizes` = purchase options (single vial / 3-vial pack).
    Exposed on window.REA for every page to use. */
@@ -17,7 +17,7 @@ const PRODUCTS = [
   },
   {
     slug: 'retatrutide', name: 'Retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
-    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: '—',
+    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
@@ -61,13 +61,13 @@ const PRODUCTS = [
   },
   {
     slug: 'ghk-cu', name: 'GHK-Cu', cas: '89030-95-5', tag: 'CAS # 89030-95-5',
-    mg: '100 mg', from: 95, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: '—',
+    mg: '100 mg', from: 95, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ghk-cu.jpg',
     sizes: [
       { label: 'Single vial', price: 95 },
       { label: 'Pack · 3 vials', price: 262.20, save: '8%' },
     ],
-    overview: 'GHK-Cu (copper tripeptide-1, Gly-His-Lys–copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.',
+    overview: 'GHK-Cu (copper tripeptide-1, Gly-His-Lys-copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.',
     research: ['Tissue remodeling', 'Collagen synthesis', 'Wound repair', 'Skin biology'],
   },
   {
@@ -94,18 +94,18 @@ const PRODUCTS = [
   },
   {
     slug: 'ahk-cu', name: 'AHK-Cu', cas: '682809-81-0', tag: 'CAS # 682809-81-0',
-    mg: '50 mg', from: 120, formula: '—', weight: '—', pubchem: '—',
+    mg: '50 mg', from: 120, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/ahk-cu.jpg',
     sizes: [
       { label: 'Single vial', price: 120 },
       { label: 'Pack · 3 vials', price: 331.20, save: '8%' },
     ],
-    overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys–copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
+    overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
   },
   {
-    slug: 'bac-water', name: 'Bacteriostatic Water', cas: '—', tag: 'Reconstitution supply · 3 ml',
-    mg: '3 ml', from: 10, formula: 'Water + 0.9% benzyl alcohol', weight: '—', pubchem: '—',
+    slug: 'bac-water', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Reconstitution supply · 3 ml',
+    mg: '3 ml', from: 10, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water.jpg',
     sizes: [
       { label: 'Single vial', price: 10 },
@@ -115,8 +115,8 @@ const PRODUCTS = [
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
   },
   {
-    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: '—', tag: 'Reconstitution supply · 10 ml',
-    mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: '—', pubchem: '—',
+    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Reconstitution supply · 10 ml',
+    mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water-10ml.jpg', outOfStock: true,
     sizes: [
       { label: 'Single vial', price: 17 },
@@ -141,11 +141,11 @@ const ARTICLES = [
 
 const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.' },
-  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1–2 hours in Panama City (interior —David, Chitré, Colón and more— next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in up to 5 days. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.' },
+  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in up to 5 days. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
   { q: 'What payment methods do you accept?', a: 'Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay.' },
-  { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2–8 °C) after reconstitution. Every vial label shows its storage conditions.' },
+  { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions.' },
 ];
 
 const TESTIMONIALS = [
@@ -173,7 +173,7 @@ const COUNTRIES = {
   PA: {
     code: 'PA', label: 'Panamá', flag: '🇵🇦',
     shipping: { flat: 4, freeThreshold: 100 },
-    eta: 'Panama City: 1–2 h · Interior: next-day', etaShort: '1–2 h in Panama City',
+    eta: 'Panama City: 1-2 h · Interior: next-day', etaShort: '1-2 h in Panama City',
     payments: [
       { id: 'yappy', label: 'Yappy' },
       { id: 'ach', label: 'ACH transfer' },

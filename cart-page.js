@@ -1,4 +1,4 @@
-/* Codex Research — cart page.
+/* Codex Research - cart page.
    Conversion strategies: free-shipping progress bar, cross-sell ("complete your
    order"), discount codes, trust badges + guarantee, scarcity, social proof,
    sticky order summary with a single prominent checkout CTA. */
@@ -209,7 +209,7 @@
             <button type="submit" class="btn btn-ghost">Apply</button>
           </form>
           ${couponMsg}
-          ${!(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> — 10% off</button>` : ''}
+          ${!(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> for 10% off</button>` : ''}
 
           <div class="sum-rows">
             <div class="sum-row"><span>Subtotal</span><span>${money(s.subtotal)}</span></div>
@@ -222,7 +222,7 @@
           ${checkoutForm(s, cfg, payId)}
 
           <ul class="sum-trust">
-            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>Pay on delivery available</b> — pay when you receive</li>` : ''}
+            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>Pay on delivery available</b>, pay when you receive</li>` : ''}
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Secure & private</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Discreet packaging</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Batch-verified with COA</li>
@@ -260,7 +260,7 @@
       <div><strong class="count-up">4.9/5</strong><span>average rating</span></div>
       <div><strong class="count-up">1,200+</strong><span>orders shipped</span></div>
       <div><strong class="count-up">100%</strong><span>batches with COA</span></div>
-      <div><strong>24–48 h</strong><span>dispatch</span></div>
+      <div><strong>24-48 h</strong><span>dispatch</span></div>
     </div>`;
 
   function emptyState() {
@@ -464,7 +464,7 @@
     const cityLine = [buyer.city, buyer.state].map((x) => x.trim()).filter(Boolean).join(', ');
     const addressText = [buyer.address1, buyer.address2, cityLine, buyer.postal, cfg.label]
       .map((x) => clean(x)).filter(Boolean).join('\n');
-    const itemsText = s.lines.map((l) => `${l.name} (${l.size}) x${l.qty} — ${money(l.subtotal)}`).join('\n');
+    const itemsText = s.lines.map((l) => `${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n');
 
     // ---- Ruta Zelle (US): envía la orden por correo ----
     if (isEmailFlow(cfg, payId)) {
@@ -473,9 +473,9 @@
       if (msg) msg.hidden = true;
       const params = {
         order_id: id, customer_name: clean(buyer.name), customer_email: clean(buyer.email),
-        customer_phone: clean(buyer.phone), shipping_address: addressText.replace(/\n/g, '<br>'), notes: clean(buyer.notes) || '—',
+        customer_phone: clean(buyer.phone), shipping_address: addressText.replace(/\n/g, '<br>'), notes: clean(buyer.notes) || 'N/A',
         order_items: itemsText.replace(/\n/g, '<br>'), subtotal: money(s.subtotal),
-        discount: s.discount > 0 ? '-' + money(s.discount) + (coupon ? ' (' + clean(coupon) + ')' : '') : '—',
+        discount: s.discount > 0 ? '-' + money(s.discount) + (coupon ? ' (' + clean(coupon) + ')' : '') : 'N/A',
         shipping: s.shipping === 0 ? 'Free' : money(s.shipping), total: money(s.total),
         country: cfg.label, payment: 'Zelle', eta: cfg.eta,
         merchant_email: EMAILJS.merchantEmail || '', reply_to: clean(buyer.email),
@@ -506,7 +506,7 @@
     // ---- Demás métodos (US Crypto · Panamá): continúa en WhatsApp con toda la info ----
     const waText = encodeURIComponent(
       'Hi Codex Research, I’d like to place this order:\n' +
-      s.lines.map((l) => `• ${l.name} (${l.size}) x${l.qty} — ${money(l.subtotal)}`).join('\n') +
+      s.lines.map((l) => `• ${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n') +
       `\n\nOrder: ${id}` +
       `\nName: ${clean(buyer.name)}` +
       `\nEmail: ${clean(buyer.email)}` +
