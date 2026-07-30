@@ -756,6 +756,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .coupon-msg.ok { color: #1f9d6b; }
 .coupon-msg.err { color: var(--danger); }
 .coupon-msg button { color: inherit; font-weight: 700; margin-left: auto; }
+.coupon-hint { display: block; width: 100%; text-align: left; font-size: .82rem; color: var(--ink); background: var(--accent-soft); border: 1px dashed var(--border); border-radius: 10px; padding: .55rem .75rem; margin-bottom: .6rem; cursor: pointer; transition: border-color .15s; }
+.coupon-hint:hover { border-color: var(--cta); }
+.coupon-hint b { font-weight: 800; }
 .sum-rows { margin: 1rem 0; padding-top: 1rem; border-top: 1px solid var(--border); }
 .sum-row { display: flex; justify-content: space-between; align-items: center; font-size: .92rem; padding: .38rem 0; color: var(--ink); }
 .sum-row.disc { color: #1f9d6b; }

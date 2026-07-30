@@ -209,6 +209,7 @@
             <button type="submit" class="btn btn-ghost">Apply</button>
           </form>
           ${couponMsg}
+          ${!(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> — 10% off</button>` : ''}
 
           <div class="sum-rows">
             <div class="sum-row"><span>Subtotal</span><span>${money(s.subtotal)}</span></div>
@@ -341,6 +342,8 @@
     }
     const rm = root.querySelector('[data-coupon-remove]');
     if (rm) rm.addEventListener('click', () => { coupon = ''; localStorage.removeItem(COUPON_KEY); render(); });
+    const applyWelcome = root.querySelector('[data-apply-welcome]');
+    if (applyWelcome) applyWelcome.addEventListener('click', () => { coupon = 'WELCOME10'; localStorage.setItem(COUPON_KEY, coupon); render(); });
 
     // Método de pago: se guarda y sólo actualiza el botón/nota (conserva el formulario).
     root.querySelectorAll('input[name="payMethod"]').forEach((r) => {

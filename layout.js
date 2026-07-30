@@ -182,9 +182,10 @@
     const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
     const ann = document.getElementById('announceContact');
     if (ann) {
+      const promo = `🎁 <b>10% off your first order</b> · code <b>WELCOME10</b>`;
       ann.innerHTML = isPA
-        ? `Need help? Message us on WhatsApp and we’ll reply in minutes · ${waLink}`
-        : `Need help? Email us and we’ll get back to you fast · ${mailLink}`;
+        ? `${promo} · ${waLink}`
+        : `${promo} · ${mailLink}`;
     }
     const foot = document.getElementById('footerContact');
     if (foot) foot.innerHTML = isPA ? waLink : mailLink;
