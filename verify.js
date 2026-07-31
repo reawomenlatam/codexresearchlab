@@ -54,13 +54,20 @@
       </div>`;
   }
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const code = norm(input.value);
+  function run(rawValue, scroll) {
+    const code = norm(rawValue);
     if (!code) { out.hidden = true; return; }
     const found = Object.prototype.hasOwnProperty.call(map, code);
     out.innerHTML = found ? verifiedCard(code, map[code]) : notFoundCard(code);
     out.hidden = false;
-    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  });
+    if (scroll) out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(input.value, true); });
+
+  // Auto-verifica si llega ?batch=CODE (por ejemplo, desde el buscador de la home).
+  try {
+    const q = new URLSearchParams(location.search).get('batch');
+    if (q) { input.value = q; run(q, true); }
+  } catch (e) { /* sin params, nada que hacer */ }
 })();

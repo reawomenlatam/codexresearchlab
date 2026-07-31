@@ -19,6 +19,7 @@
         <nav class="nav">
           ${link('index.html', 'Home', 'inicio')}
           ${link('catalog.html', 'Products', 'productos')}
+          ${link('verify.html', 'Verify batch', 'verify')}
           ${link('blog.html', 'Blog', 'blog')}
           ${link('index.html#proceso', 'Process', 'proceso')}
           ${link('index.html#faq', 'FAQ', 'faq')}
@@ -55,6 +56,7 @@
       </div>
       ${link('index.html', 'Home', 'inicio')}
       ${link('catalog.html', 'Products', 'productos')}
+      ${link('verify.html', 'Verify batch', 'verify')}
       ${link('blog.html', 'Blog', 'blog')}
       ${link('index.html#proceso', 'Process', 'proceso')}
       ${link('index.html#faq', 'FAQ', 'faq')}

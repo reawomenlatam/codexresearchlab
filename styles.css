@@ -1,5 +1,5 @@
 /* ============================================================
-   Codex Research — plantilla ecommerce
+   Codex Research - plantilla ecommerce
    Sistema de diseño monocromático (gris/grafito), marca Codex Research
    Acento gris #525863, tinta grafito #23262d
    ============================================================ */
@@ -789,6 +789,30 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .verify-trust { list-style: none; margin: 1.6rem 0 0; padding: 0; display: grid; gap: .7rem; }
 .verify-trust li { display: flex; align-items: center; gap: .6rem; font-size: .85rem; color: var(--muted); }
 .verify-trust svg { flex: none; color: var(--ink); }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Banda de verificación de lote (home) */
+.verify-band-sec { padding-top: 1rem; padding-bottom: 1rem; }
+.verify-band {
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+  background: var(--ink); color: #fff; border-radius: var(--radius);
+  padding: 2rem 2.2rem;
+}
+.verify-band-copy { flex: 1 1 320px; }
+.verify-band-copy .mono-tag { color: rgba(255,255,255,.6); }
+.verify-band-copy h2 { color: #fff; font-size: 1.5rem; letter-spacing: -.02em; margin: .5rem 0 .5rem; }
+.verify-band-copy p { color: rgba(255,255,255,.72); font-size: .95rem; max-width: 460px; }
+.verify-band-form { flex: 1 1 300px; display: flex; gap: .6rem; max-width: 440px; }
+.verify-band-form input {
+  flex: 1; min-width: 0; padding: .9rem 1rem; font: inherit; font-size: 1rem;
+  border: 1px solid rgba(255,255,255,.18); border-radius: 10px;
+  background: rgba(255,255,255,.08); color: #fff; text-transform: uppercase;
+}
+.verify-band-form input::placeholder { color: rgba(255,255,255,.5); text-transform: none; }
+.verify-band-form input:focus { outline: none; border-color: #fff; background: rgba(255,255,255,.14); }
+.verify-band-form .btn { white-space: nowrap; }
+@media (max-width: 600px) { .verify-band-form { flex-direction: column; max-width: none; } .verify-band-form .btn { justify-content: center; } }
 .sum-rows { margin: 1rem 0; padding-top: 1rem; border-top: 1px solid var(--border); }
 .sum-row { display: flex; justify-content: space-between; align-items: center; font-size: .92rem; padding: .38rem 0; color: var(--ink); }
 .sum-row.disc { color: #1f9d6b; }
