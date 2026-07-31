@@ -252,7 +252,7 @@
           <div><dt>Endotoxins</dt><dd>&lt; 0.5 EU/mg</dd></div>
           <div><dt>Analysis date</dt><dd>Jul 10, 2026</dd></div>
         </dl>
-        <p class="coa-note">Sample document. Your batch’s real COA is shared on WhatsApp when you confirm your order.</p>
+        <p class="coa-note">Sample document. Your batch’s real COA is shared on WhatsApp when you confirm your order. Already have a vial? <a href="verify.html">Verify its batch number</a>.</p>
         <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent('Hi, I’d like the COA for ' + p.name)}" target="_blank" rel="noopener">Request my batch COA</a>
       </div>
     </div>

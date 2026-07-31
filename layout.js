@@ -73,6 +73,7 @@
           <div class="footer-col">
             <h4>Shop</h4>
             <a href="catalog.html">Catalog</a>
+            <a href="verify.html">Verify a batch</a>
             <a href="index.html#proceso">Our process</a>
             <a href="index.html#faq">FAQ</a>
             <a href="blog.html">Blog</a>
