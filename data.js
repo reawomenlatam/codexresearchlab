@@ -203,7 +203,7 @@ const EMAILJS = {
 // (o null para un lote genérico/universal). Agrega o actualiza aquí.
 const BATCHES = {
   'CDX-8612972':  null, // lote universal (stock actual, todos los productos)
-  'CDX-207-001':  { product: 'Retatrutide', slug: 'retatrutide', mg: '10 mg' },
+  'CDX-2607-001': { product: 'Retatrutide', slug: 'retatrutide', mg: '10 mg' },
   'CDX-2607-002': { product: 'BPC-157',     slug: 'bpc-157',     mg: '10 mg' },
   'CDX-2607-003': { product: 'GHK-Cu',      slug: 'ghk-cu',      mg: '100 mg' },
   'CDX-2607-004': { product: 'AHK-Cu',      slug: 'ahk-cu',      mg: '50 mg' },
