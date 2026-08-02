@@ -16,6 +16,100 @@
 
   const POSTS = [
     {
+      slug: 'buy-research-peptides-panama',
+      title: 'How to Buy Research Peptides in Panama',
+      metaTitle: 'How to Buy Research Peptides in Panama: Shipping, Payments & COA',
+      metaDescription: 'A practical guide to buying laboratory research peptides in Panama: same-day delivery in Panama City, interior shipping, Yappy, ACH and cash-on-delivery payments, and batch COA verification.',
+      focusKeyword: 'buy research peptides Panama',
+      category: 'Buying Guide',
+      tags: ['Panama', 'research peptides', 'buying guide', 'shipping', 'COA'],
+      date: 'Aug 02, 2026', dateISO: '2026-08-02',
+      excerpt: 'Same-day delivery in Panama City, local payment methods, and how to verify every batch before you pay.',
+      imageAlt: 'Research peptide vial delivered in Panama with its certificate of analysis',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Buying research peptides in Panama is straightforward when you know how ordering, delivery, and verification work locally. This guide covers same-day delivery in Panama City, shipping to the interior, the payment methods available in Panama, and how to confirm that every vial is genuine before you pay. All products are for laboratory research use only.</p>
+
+        <h2>How ordering works in Panama</h2>
+        <p>At Codex Research you add products to your cart on the website and confirm the order with a specialist on WhatsApp (+507 6345-4619). No payment is charged on the website itself: your order details, delivery, and payment are arranged directly in the chat, so you can ask questions before you pay. Prices are shown in U.S. dollars, which is the currency used in Panama.</p>
+
+        <h2>Delivery in Panama City and the interior</h2>
+        <ul>
+          <li><b>Panama City:</b> $4 flat shipping, delivered in <b>1-2 hours</b> from local stock.</li>
+          <li><b>Interior cities</b> such as David, Chitré, and Colón: next business day via Fergunson transport.</li>
+          <li><b>Free shipping</b> on orders over $100.</li>
+          <li>Every order ships in <b>neutral, discreet packaging</b> with no reference to the contents.</li>
+        </ul>
+        <p>Because stock is held locally, you are not waiting weeks for an international parcel or dealing with customs.</p>
+
+        <h2>Payment methods in Panama</h2>
+        <p>Codex Research accepts the payment methods Panamanian buyers already use:</p>
+        <ul>
+          <li><b>Yappy</b> for instant transfers.</li>
+          <li><b>ACH transfer</b> between local bank accounts.</li>
+          <li><b>Cash on delivery</b>, so you can pay when you receive your order with no advance payment.</li>
+        </ul>
+        <p>Your specialist confirms the payment details on WhatsApp before anything is charged.</p>
+
+        <h2>How to verify authenticity before you pay</h2>
+        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify.html">batch verification page</a>. For the exact math of reconstitution, the <a href="calculator.html">reconstitution calculator</a> converts vial strength and diluent into concentration.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
+        { q: 'What payment methods can I use in Panama?', a: 'In Panama you can pay with Yappy, ACH transfer, or cash on delivery. Cash on delivery means you pay when you receive your order, with no advance payment. A specialist confirms the details on WhatsApp before you pay.' },
+        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify.html.' },
+      ],
+      references: [],
+      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a> or <a href="verify.html">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
+      related: ['verify-research-peptide-batch-coa-panama', 'high-performance-liquid-chromatography-hplc'],
+    },
+    {
+      slug: 'verify-research-peptide-batch-coa-panama',
+      title: 'How to Verify a Research Peptide Batch and COA',
+      metaTitle: 'How to Verify a Research Peptide Batch and COA',
+      metaDescription: 'How to check that a research peptide is genuine: what a certificate of analysis (COA) shows, how HPLC and mass spectrometry confirm purity and identity, and how to verify your batch number.',
+      focusKeyword: 'verify research peptide batch COA',
+      category: 'Buying Guide',
+      tags: ['COA', 'batch verification', 'quality', 'Panama', 'research peptides'],
+      date: 'Aug 01, 2026', dateISO: '2026-08-01',
+      excerpt: 'What a certificate of analysis shows, and how to confirm your vial is genuine before you pay.',
+      imageAlt: 'Certificate of analysis and batch number verification for research peptides',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">A certificate of analysis (COA) is how you confirm that a research peptide is what the label says. This guide explains what a COA shows, how HPLC and mass spectrometry are used to test each batch, and how to verify your specific vial by its batch number. All products are for laboratory research use only.</p>
+
+        <h2>What is a certificate of analysis?</h2>
+        <p>A COA is a document produced by an analytical laboratory that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides, a credible COA is based on independent testing rather than a supplier's own claim, and it is tied to the batch number printed on the vial.</p>
+
+        <h2>What a COA shows</h2>
+        <ul>
+          <li><b>Identity:</b> confirmation that the compound matches the expected peptide, typically by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>.</li>
+          <li><b>Purity:</b> the percentage of the target peptide, measured by <a href="article/high-performance-liquid-chromatography-hplc.html">high-performance liquid chromatography (HPLC)</a>.</li>
+          <li><b>Batch reference:</b> the batch or lot number, an analysis date, and the testing methods used.</li>
+        </ul>
+
+        <h2>How to verify your batch number</h2>
+        <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify.html">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
+
+        <h2>Buying in Panama</h2>
+        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama.html">buying research peptides in Panama</a> for shipping and payment details.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is a certificate of analysis (COA)?', a: 'A COA is a laboratory document that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides it is based on independent HPLC and mass spectrometry testing and is tied to the batch number on the vial.' },
+        { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify.html. A valid number confirms the product and that it is on record. The full COA is also shared on WhatsApp before you pay.' },
+        { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
+      ],
+      references: [],
+      cta: '<a href="verify.html">Verify a batch number</a> or browse the <a href="catalog.html">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
+      related: ['buy-research-peptides-panama', 'mass-spectrometry-peptide-research'],
+    },
+    {
       slug: 'mass-spectrometry-peptide-research',
       title: 'Mass Spectrometry in Peptide Research',
       metaTitle: 'Mass Spectrometry in Peptide Research: Uses and Methods',

@@ -130,10 +130,11 @@
             <div class="faq-list" id="articleFaq"></div>
           </section>
 
+          ${p.references && p.references.length ? `
           <section class="article-refs">
             <h2>References</h2>
             <ul>${refsHtml}</ul>
-          </section>
+          </section>` : ''}
 
           <div class="article-cta">${p.cta}</div>
 
