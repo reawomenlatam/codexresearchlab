@@ -433,6 +433,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .gate-confirm a { color: var(--ink); text-decoration: underline; }
 .gate-under { display: block; margin: 1.2rem auto 0; font-size: .82rem; color: var(--muted); text-decoration: underline; }
 .gate-under:hover { color: var(--ink); }
+@media (max-width: 560px) {
+  .gate-card { padding: 1.8rem 1.4rem; }
+  .gate-countries { grid-template-columns: 1fr; }
+  .gate-country { padding: .9rem 1rem; }
+  .gate-country b { display: inline; }
+  .gate-country small { margin-top: 3px; }
+}
 
 /* Selector de país en el header */
 .country-wrap { position: relative; }
