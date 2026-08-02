@@ -16,6 +16,51 @@
 
   const POSTS = [
     {
+      slug: 'what-is-ghk-cu',
+      title: 'What Is GHK-Cu?',
+      metaTitle: 'What Is GHK-Cu? The Copper Peptide Explained',
+      metaDescription: 'What is GHK-Cu? A clear look at this naturally occurring copper-binding tripeptide, its structure, and how it is studied in laboratory research on skin and tissue.',
+      focusKeyword: 'what is GHK-Cu',
+      category: 'Peptide Research',
+      tags: ['GHK-Cu', 'copper peptide', 'tripeptide', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A tiny copper-binding tripeptide found naturally in the body, and the research built around it.',
+      imageAlt: 'GHK-Cu copper peptide research vial with certificate of analysis',
+      image: 'assets/products/ghk-cu.jpg',
+      body: `
+        <p class="lead">Most of the peptides in this series are large, engineered molecules. GHK-Cu is the opposite. It is one of the smallest peptides you will come across, just three amino acids bound to a copper ion, and it occurs naturally in the body. That combination of a short sequence and a bound metal is what makes it interesting to study.</p>
+
+        <h2>What is GHK-Cu?</h2>
+        <p>GHK-Cu is a copper complex of the tripeptide glycyl-L-histidyl-L-lysine, which is where the letters G, H, and K come from. The "Cu" is the chemical symbol for copper. Its CAS number is 89030-95-5 and its molecular formula is C14H24CuN6O4. The peptide portion binds a copper ion with high affinity, and much of the research interest comes from that metal-binding behavior rather than the peptide alone. For context on how a short peptide differs from a full protein, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.</p>
+
+        <h2>Where does it come from?</h2>
+        <p>Unlike synthetic agonists, GHK is a sequence that appears naturally in human plasma and other tissues, and levels of it change with age in some studies. The research-grade material is produced synthetically and complexed with copper so that the exact ratio and purity are controlled. This is a case where the natural origin is part of the story, but the vial you receive is a defined, tested compound.</p>
+
+        <h2>How is GHK-Cu studied?</h2>
+        <p>Published laboratory work on GHK-Cu tends to cluster around a few themes:</p>
+        <ul>
+          <li><b>Copper transport:</b> how the peptide binds and moves copper, a trace element involved in many enzymes.</li>
+          <li><b>Tissue and skin biology:</b> models looking at collagen and connective tissue signaling.</li>
+          <li><b>Gene expression:</b> research on how the compound relates to patterns of cellular activity in culture.</li>
+        </ul>
+        <p>These are laboratory findings, not conclusions about people or animals. GHK-Cu is supplied strictly as a research compound.</p>
+
+        <h2>Handling and verification</h2>
+        <p>Because GHK-Cu carries a copper ion, its identity and purity are worth confirming rather than assuming from the label. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including GHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does GHK-Cu stand for?', a: 'GHK are the single-letter codes for the three amino acids in the tripeptide glycyl-L-histidyl-L-lysine, and Cu is the chemical symbol for copper. GHK-Cu is the copper complex of that tripeptide, used strictly for laboratory research.' },
+        { q: 'Is GHK-Cu natural or synthetic?', a: 'The GHK sequence occurs naturally in the body, but the research-grade material is made synthetically and complexed with copper so the ratio and purity are controlled and verifiable.' },
+        { q: 'Why is the copper important?', a: 'GHK binds a copper ion with high affinity, and a lot of the research interest centers on that metal-binding behavior, including how the peptide interacts with copper transport in model systems.' },
+      ],
+      references: [],
+      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['amino-acids-peptides-proteins-difference', 'what-is-bpc-157'],
+    },
+    {
       slug: 'what-is-retatrutide',
       title: 'What Is Retatrutide?',
       metaTitle: 'What Is Retatrutide? The Triple Receptor Agonist Explained',
