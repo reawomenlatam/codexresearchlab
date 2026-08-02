@@ -16,6 +16,53 @@
 
   const POSTS = [
     {
+      slug: 'what-is-ipamorelin',
+      title: 'What Is Ipamorelin?',
+      metaTitle: 'What Is Ipamorelin? The Ghrelin Receptor Peptide Explained',
+      metaDescription: 'What is ipamorelin? A clear look at this synthetic pentapeptide, a selective growth hormone secretagogue and ghrelin receptor agonist studied in laboratory research.',
+      focusKeyword: 'what is ipamorelin',
+      category: 'Peptide Research',
+      tags: ['ipamorelin', 'ghrelin receptor', 'growth hormone secretagogue', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A short synthetic peptide known for its selectivity at the ghrelin receptor, and the research around it.',
+      imageAlt: 'Ipamorelin research peptide vial with certificate of analysis',
+      image: 'assets/products/ipamorelin.jpg',
+      body: `
+        <p class="lead">Ipamorelin comes up a lot in discussions of growth hormone secretagogues, and the word researchers keep attaching to it is "selective." It is a small synthetic peptide designed to act at one receptor with limited activity elsewhere. That focus is the main reason it is used as a research tool rather than a blunt instrument.</p>
+
+        <h2>What is ipamorelin?</h2>
+        <p>Ipamorelin is a synthetic pentapeptide, meaning it is built from five amino acids. It is classed as a growth hormone secretagogue and acts as an agonist at the ghrelin receptor, also called the growth hormone secretagogue receptor. Its CAS number is 170851-70-4 and its molecular formula is C38H49N9O5. It is made by <a href="article/peptide-synthesis.html">solid-phase peptide synthesis</a> and characterized by its certificate of analysis.</p>
+
+        <h2>What does "selective" mean here?</h2>
+        <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. Some secretagogues activate that pathway but also touch other hormone systems. Ipamorelin is studied precisely because it shows a more selective profile in laboratory models, which makes it easier to attribute an observed effect to one receptor rather than several. For a research tool, that cleanliness is the point.</p>
+
+        <h2>How is ipamorelin studied?</h2>
+        <p>Laboratory research involving ipamorelin tends to focus on:</p>
+        <ul>
+          <li><b>Ghrelin receptor pharmacology:</b> how the peptide binds and activates its target receptor.</li>
+          <li><b>Growth hormone signaling:</b> models of the secretagogue pathway and its regulation.</li>
+          <li><b>Selectivity comparisons:</b> contrasting ipamorelin with less selective secretagogues.</li>
+        </ul>
+        <p>These are preclinical, model-based observations. Ipamorelin is supplied strictly as a research compound, and this article does not describe use in people or animals.</p>
+
+        <h2>Handling and verification</h2>
+        <p>As with any short peptide, what matters in practice is the purity of the batch in front of you. Ipamorelin is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> covers the concentration math once it is dissolved.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including ipamorelin, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What kind of peptide is ipamorelin?', a: 'Ipamorelin is a synthetic pentapeptide (five amino acids) classed as a growth hormone secretagogue. It acts as an agonist at the ghrelin receptor and is used strictly for laboratory research.' },
+        { q: 'Why is ipamorelin called selective?', a: 'In laboratory models it shows a more focused activity at the ghrelin receptor with limited activity at other hormone systems, which makes it useful for attributing an observed effect to a single receptor.' },
+        { q: 'How is ipamorelin verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+      ],
+      references: [
+        { text: 'Ipamorelin compound summary. PubChem, National Library of Medicine (CID 9831659).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9831659' },
+      ],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['peptide-synthesis', 'what-is-mots-c'],
+    },
+    {
       slug: 'what-is-ghk-cu',
       title: 'What Is GHK-Cu?',
       metaTitle: 'What Is GHK-Cu? The Copper Peptide Explained',
