@@ -16,6 +16,53 @@
 
   const POSTS = [
     {
+      slug: 'what-is-pt-141',
+      title: 'What Is PT-141 (Bremelanotide)?',
+      metaTitle: 'What Is PT-141? The Melanocortin Peptide Bremelanotide',
+      metaDescription: 'What is PT-141? A clear look at bremelanotide, a synthetic melanocortin receptor agonist, its structure, and how it is studied in laboratory receptor research.',
+      focusKeyword: 'what is PT-141',
+      category: 'Peptide Research',
+      tags: ['PT-141', 'bremelanotide', 'melanocortin', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A synthetic melanocortin receptor agonist, and the receptor research that surrounds it.',
+      imageAlt: 'PT-141 bremelanotide research peptide vial with certificate of analysis',
+      image: 'assets/products/pt-141.jpg',
+      body: `
+        <p class="lead">PT-141 goes by two names, which trips people up. PT-141 is the research shorthand, and bremelanotide is the same molecule. It belongs to a different family than the metabolic peptides in this series: instead of incretin receptors, it works on the melanocortin system. That is where all of its research interest sits.</p>
+
+        <h2>What is PT-141?</h2>
+        <p>PT-141, also called bremelanotide, is a synthetic peptide that acts as an agonist at melanocortin receptors. It is a cyclic peptide, and it is structurally related to an earlier melanocortin compound from which it was derived. Its CAS number is 189691-06-3 and its molecular formula is C50H68N14O10. Like the other compounds we cover, it is made by <a href="article/peptide-synthesis.html">solid-phase synthesis</a> and defined by its certificate of analysis rather than by its name.</p>
+
+        <h2>The melanocortin system</h2>
+        <p>Melanocortin receptors are a family of receptors involved in a range of signaling processes, from pigmentation to neurobehavioral pathways. PT-141 is studied as a tool for probing these receptors, particularly the subtypes tied to central signaling. Because the melanocortin family has several members, a recurring research question is how selectively a given agonist acts across them.</p>
+
+        <h2>How is PT-141 studied?</h2>
+        <p>In the laboratory, PT-141 appears in work on:</p>
+        <ul>
+          <li><b>Receptor binding:</b> how the peptide interacts with melanocortin receptor subtypes.</li>
+          <li><b>Signaling pathways:</b> models of the downstream activity these receptors trigger.</li>
+          <li><b>Neurobehavioral models:</b> research on central melanocortin signaling in animal systems.</li>
+        </ul>
+        <p>These are preclinical, model-based studies. PT-141 is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
+
+        <h2>Handling and verification</h2>
+        <p>PT-141 is a cyclic peptide, so confirming its identity matters as much as its purity. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including PT-141, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'Are PT-141 and bremelanotide the same thing?', a: 'Yes. PT-141 is the research shorthand and bremelanotide is the same synthetic peptide. It is a melanocortin receptor agonist used strictly for laboratory research.' },
+        { q: 'What receptor does PT-141 act on?', a: 'PT-141 acts as an agonist at melanocortin receptors, a family involved in signaling processes including pigmentation and central neurobehavioral pathways. Research often focuses on how selectively it acts across the receptor subtypes.' },
+        { q: 'How is PT-141 verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+      ],
+      references: [
+        { text: 'Bremelanotide (PT-141) compound summary. PubChem, National Library of Medicine (CID 9941379).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941379' },
+      ],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['peptide-synthesis', 'what-is-bpc-157'],
+    },
+    {
       slug: 'what-is-ipamorelin',
       title: 'What Is Ipamorelin?',
       metaTitle: 'What Is Ipamorelin? The Ghrelin Receptor Peptide Explained',
