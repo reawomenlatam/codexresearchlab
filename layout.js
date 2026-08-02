@@ -57,6 +57,7 @@
       ${link('index.html', 'Home', 'inicio')}
       ${link('catalog.html', 'Products', 'productos')}
       ${link('verify.html', 'Verify batch', 'verify')}
+      ${link('calculator.html', 'Calculator', 'calculator')}
       ${link('blog.html', 'Blog', 'blog')}
       ${link('index.html#proceso', 'Process', 'proceso')}
       ${link('index.html#faq', 'FAQ', 'faq')}
@@ -76,6 +77,7 @@
             <h4>Shop</h4>
             <a href="catalog.html">Catalog</a>
             <a href="verify.html">Verify a batch</a>
+            <a href="calculator.html">Reconstitution calculator</a>
             <a href="index.html#proceso">Our process</a>
             <a href="index.html#faq">FAQ</a>
             <a href="blog.html">Blog</a>

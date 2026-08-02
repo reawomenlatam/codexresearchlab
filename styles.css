@@ -813,6 +813,41 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .verify-band-form input:focus { outline: none; border-color: #fff; background: rgba(255,255,255,.14); }
 .verify-band-form .btn { white-space: nowrap; }
 @media (max-width: 600px) { .verify-band-form { flex-direction: column; max-width: none; } .verify-band-form .btn { justify-content: center; } }
+
+/* Calculadora de reconstitución + gate de registro */
+.calc-wrap { max-width: 760px; }
+.tool-gate-card { max-width: 460px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-card); }
+.tool-gate-card h2 { font-size: 1.35rem; letter-spacing: -.02em; margin: .5rem 0 .5rem; }
+.tool-gate-card > p { color: var(--muted); font-size: .95rem; margin-bottom: 1.4rem; }
+.lead-form { display: grid; gap: .9rem; }
+.lead-form .btn { justify-content: center; width: 100%; margin-top: .3rem; }
+.lead-msg { font-size: .85rem; margin: 0; }
+.lead-msg.err { color: var(--danger); }
+.lead-msg.ok { color: #16a34a; }
+.lead-msg a { color: inherit; text-decoration: underline; font-weight: 700; }
+.lead-fine { font-size: .74rem; color: var(--muted); margin: .2rem 0 0; }
+.lead-fine a { color: var(--ink); text-decoration: underline; }
+
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; align-items: start; }
+.calc-inputs { display: grid; gap: 1rem; }
+.calc-inputs input, .calc-dose input, .calc-dose select {
+  width: 100%; padding: .8rem .9rem; font: inherit; font-size: 1rem;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--bg); color: var(--ink);
+}
+.calc-inputs input:focus, .calc-dose input:focus, .calc-dose select:focus { outline: none; border-color: var(--cta); }
+.calc-dose { display: flex; gap: .5rem; }
+.calc-dose input { flex: 1; min-width: 0; }
+.calc-dose select { flex: 0 0 90px; }
+.calc-result { background: var(--accent-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; min-height: 120px; }
+.calc-hint { color: var(--muted); font-size: .88rem; margin: 0; }
+.calc-rows div { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--border); font-size: .92rem; }
+.calc-rows div:last-child { border-bottom: 0; }
+.calc-rows dt { color: var(--muted); }
+.calc-rows dd { font-weight: 700; text-align: right; }
+.calc-rows .hl { margin-top: .4rem; padding-top: .9rem; border-top: 2px solid var(--cta); }
+.calc-rows .hl dd b { font-size: 1.05rem; }
+.calc-disclaimer { margin-top: 1.6rem; font-size: .8rem; color: var(--muted); line-height: 1.55; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
 .sum-rows { margin: 1rem 0; padding-top: 1rem; border-top: 1px solid var(--border); }
 .sum-row { display: flex; justify-content: space-between; align-items: center; font-size: .92rem; padding: .38rem 0; color: var(--ink); }
 .sum-row.disc { color: #1f9d6b; }
