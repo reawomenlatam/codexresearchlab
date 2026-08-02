@@ -16,6 +16,51 @@
 
   const POSTS = [
     {
+      slug: 'what-is-retatrutide',
+      title: 'What Is Retatrutide?',
+      metaTitle: 'What Is Retatrutide? The Triple Receptor Agonist Explained',
+      metaDescription: 'What is retatrutide? A clear look at this synthetic triple GIP, GLP-1, and glucagon receptor agonist, its structure, and how it is studied in metabolic research.',
+      focusKeyword: 'what is retatrutide',
+      category: 'Peptide Research',
+      tags: ['retatrutide', 'GLP-1', 'glucagon', 'research peptides', 'metabolism'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A synthetic peptide that engages three metabolic receptors at once, and the research questions it raises.',
+      imageAlt: 'Retatrutide research peptide vial with certificate of analysis',
+      image: 'assets/products/retatrutide.jpg',
+      body: `
+        <p class="lead">If a dual agonist like <a href="article/what-is-tirzepatide.html">tirzepatide</a> engages two receptors, retatrutide takes the same idea one step further. It is a single synthetic peptide built to act on three metabolic receptors at once. That extra target is the whole reason it has become a focal point in current incretin research.</p>
+
+        <h2>What is retatrutide?</h2>
+        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its CAS number is 2381089-83-2 and its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis.html">solid-phase synthesis</a> rather than isolated from a natural source.</p>
+
+        <h2>Why a third receptor?</h2>
+        <p>GIP and GLP-1 are incretins, but glucagon sits on the other side of glucose regulation. Adding a glucagon receptor component changes the balance of signals a single molecule can send. For researchers, that raises a specific and testable question: what happens to metabolic pathways when all three receptors are engaged together instead of one or two? Retatrutide exists to study exactly that comparison.</p>
+
+        <h2>How is retatrutide studied?</h2>
+        <p>In the laboratory, retatrutide appears in research on:</p>
+        <ul>
+          <li><b>Glucose regulation:</b> how combined incretin and glucagon signaling relates to blood sugar handling in model systems.</li>
+          <li><b>Energy metabolism:</b> pathways connected to energy expenditure and metabolic balance.</li>
+          <li><b>Receptor pharmacology:</b> mapping the effect of triple activation against single and dual agonists.</li>
+        </ul>
+        <p>These are preclinical observations. Retatrutide is a research compound, and this article does not describe use in people or animals.</p>
+
+        <h2>Structure and verification</h2>
+        <p>Retatrutide is a large, modified peptide, so its identity and purity have to be confirmed rather than assumed. Purity is measured by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and identity by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and each batch ships lyophilized with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including retatrutide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What makes retatrutide a triple agonist?', a: 'Retatrutide is a single synthetic peptide that acts on three receptors at once: GIP, GLP-1, and glucagon. That combination is what separates it from dual agonists like tirzepatide. It is used strictly for laboratory research.' },
+        { q: 'How is retatrutide different from tirzepatide?', a: 'Tirzepatide targets two receptors (GIP and GLP-1). Retatrutide adds a third, the glucagon receptor, so research with it looks at what triple activation does compared with single or dual activation.' },
+        { q: 'How is retatrutide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-tirzepatide', 'what-is-mots-c'],
+    },
+    {
       slug: 'what-is-tirzepatide',
       title: 'What Is Tirzepatide?',
       metaTitle: 'What Is Tirzepatide? The Dual GIP/GLP-1 Peptide Explained',
