@@ -104,6 +104,7 @@
 
   const gateHTML = `
     <div class="gate-overlay" id="gateOverlay" hidden>
+      <canvas class="gate-bg" id="gateBg" aria-hidden="true"></canvas>
       <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
         <p class="gate-q" id="gateTitle">Where are you shopping from?</p>
         <div class="gate-countries">
@@ -130,11 +131,87 @@
   mount('[data-footer]', footerHTML);
   document.body.insertAdjacentHTML('beforeend', gateHTML);
 
+  // Fondo animado del pop-up: red molecular (partículas + enlaces), estilo mantenimiento.
+  // Devuelve una función para detenerlo. Solo corre mientras el gate está visible.
+  function startGateBg() {
+    const canvas = document.getElementById('gateBg');
+    if (!canvas) return function () {};
+    const ctx = canvas.getContext('2d');
+    let w, h, dpr, particles = [], raf = 0;
+    const mouse = { x: -9999, y: -9999 };
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.width = innerWidth * dpr;
+      h = canvas.height = innerHeight * dpr;
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      const count = Math.min(90, Math.floor((innerWidth * innerHeight) / 16000));
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w, y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.26 * dpr,
+          vy: (Math.random() - 0.5) * 0.26 * dpr,
+          r: (Math.random() * 1.5 + 0.6) * dpr,
+        });
+      }
+    }
+    const LINK = 130;
+    function render() {
+      ctx.clearRect(0, 0, w, h);
+      const link = LINK * dpr;
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j];
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const d = Math.hypot(dx, dy);
+          if (d < link) {
+            const a = (1 - d / link) * 0.16;
+            ctx.strokeStyle = 'rgba(200,208,222,' + a + ')';
+            ctx.lineWidth = dpr * 0.6;
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+          }
+        }
+        const mdx = p.x - mouse.x, mdy = p.y - mouse.y;
+        const md = Math.hypot(mdx, mdy);
+        if (md < link * 1.4) {
+          const a = (1 - md / (link * 1.4)) * 0.28;
+          ctx.strokeStyle = 'rgba(230,178,94,' + a + ')';
+          ctx.lineWidth = dpr * 0.7;
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        }
+        ctx.fillStyle = 'rgba(226,231,240,.7)';
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    function frame() { render(); raf = requestAnimationFrame(frame); }
+    const onMove = (e) => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; };
+    const onLeave = () => { mouse.x = mouse.y = -9999; };
+    addEventListener('resize', size);
+    addEventListener('mousemove', onMove);
+    addEventListener('mouseleave', onLeave);
+    size();
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) render(); else frame();
+    return function stop() {
+      if (raf) cancelAnimationFrame(raf);
+      removeEventListener('resize', size);
+      removeEventListener('mousemove', onMove);
+      removeEventListener('mouseleave', onLeave);
+    };
+  }
+
   // Age gate + selección de país (una vez por sesión; elegir país confirma la edad)
   const gate = document.getElementById('gateOverlay');
+  let stopGateBg = function () {};
   if (!sessionStorage.getItem('rea-gate-ok')) {
     gate.hidden = false;
     document.body.style.overflow = 'hidden';
+    stopGateBg = startGateBg();
   }
   gate.querySelectorAll('.gate-country').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -142,6 +219,7 @@
       sessionStorage.setItem('rea-gate-ok', '1');
       gate.hidden = true;
       document.body.style.overflow = '';
+      stopGateBg();
     });
   });
   document.getElementById('gateNo').addEventListener('click', () => {
