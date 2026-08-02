@@ -16,6 +16,53 @@
 
   const POSTS = [
     {
+      slug: 'what-is-tirzepatide',
+      title: 'What Is Tirzepatide?',
+      metaTitle: 'What Is Tirzepatide? The Dual GIP/GLP-1 Peptide Explained',
+      metaDescription: 'What is tirzepatide? A clear look at this synthetic dual GIP and GLP-1 receptor agonist, its structure, and how it is studied in laboratory metabolic research.',
+      focusKeyword: 'what is tirzepatide',
+      category: 'Peptide Research',
+      tags: ['tirzepatide', 'GIP', 'GLP-1', 'research peptides', 'metabolism'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A synthetic peptide that acts on two incretin receptors at once, and the metabolic research built around it.',
+      imageAlt: 'Tirzepatide research peptide vial with certificate of analysis',
+      image: 'assets/products/tirzepatide.jpg',
+      body: `
+        <p class="lead">Tirzepatide is often described in short as a "dual agonist," which is accurate but hides what makes it interesting. It is a single synthetic peptide engineered to act on two different receptors involved in metabolism at the same time. That design is the reason it shows up so often in current laboratory research on glucose handling and energy balance.</p>
+
+        <h2>What is tirzepatide?</h2>
+        <p>Tirzepatide is a synthetic peptide that behaves as an agonist at two incretin receptors: the glucose-dependent insulinotropic polypeptide (GIP) receptor and the glucagon-like peptide-1 (GLP-1) receptor. Most earlier research peptides in this space targeted GLP-1 alone. Tirzepatide combines both activities in one molecule. Its CAS number is 2023788-19-2 and its molecular formula is C225H348N48O68, which reflects a fairly large peptide with a fatty acid chain that extends how long it stays intact.</p>
+
+        <h2>Why two receptors?</h2>
+        <p>GIP and GLP-1 are both incretins, signaling molecules the gut releases in response to nutrients. Each one interacts with pathways tied to insulin signaling and glucose regulation, but through different receptors. The idea behind a dual agonist is to study what happens when both are engaged together rather than separately. That is the central research question tirzepatide is used to explore.</p>
+
+        <h2>How is tirzepatide studied?</h2>
+        <p>In laboratory settings, tirzepatide appears in work on:</p>
+        <ul>
+          <li><b>Glucose regulation:</b> models of how incretin signaling relates to blood sugar handling.</li>
+          <li><b>Energy balance:</b> research on appetite and metabolic signaling pathways.</li>
+          <li><b>Receptor pharmacology:</b> comparing single-receptor and dual-receptor activation.</li>
+        </ul>
+        <p>These are laboratory and preclinical contexts. Tirzepatide is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
+
+        <h2>Structure and quality</h2>
+        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including tirzepatide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does tirzepatide do at the molecular level?', a: 'Tirzepatide is a synthetic peptide that acts as an agonist at two incretin receptors at once: the GIP receptor and the GLP-1 receptor. This dual activity is what distinguishes it from peptides that target GLP-1 alone. It is used strictly for laboratory research.' },
+        { q: 'Is tirzepatide a GLP-1 peptide?', a: 'It acts on the GLP-1 receptor, but it is not GLP-1 only. Tirzepatide is a dual GIP and GLP-1 receptor agonist, meaning it engages both incretin pathways in the same molecule.' },
+        { q: 'How is tirzepatide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+      ],
+      references: [
+        { text: 'Tirzepatide compound summary. PubChem, National Library of Medicine (CID 156588324).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/156588324' },
+      ],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-bpc-157', 'what-is-mots-c'],
+    },
+    {
       slug: 'what-is-bpc-157',
       title: 'What Is BPC-157?',
       metaTitle: 'What Is BPC-157? The Pentadecapeptide Explained',
