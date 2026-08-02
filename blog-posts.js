@@ -16,6 +16,53 @@
 
   const POSTS = [
     {
+      slug: 'what-is-bpc-157',
+      title: 'What Is BPC-157?',
+      metaTitle: 'What Is BPC-157? The Pentadecapeptide Explained',
+      metaDescription: 'What is BPC-157? A clear look at this synthetic pentadecapeptide, where its sequence comes from, and how it is studied in laboratory research on tissue repair and signaling.',
+      focusKeyword: 'what is BPC-157',
+      category: 'Peptide Research',
+      tags: ['BPC-157', 'research peptides', 'pentadecapeptide', 'peptide research'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A synthetic 15-amino-acid peptide with a sequence drawn from a gastric protein, and the research around it.',
+      imageAlt: 'BPC-157 pentadecapeptide research peptide vial with certificate of analysis',
+      image: 'assets/products/bpc-157.jpg',
+      body: `
+        <p class="lead">BPC-157 is one of the most talked-about research peptides, and also one of the most misunderstood. It is a short synthetic peptide whose amino acid sequence is taken from a protein found in gastric juice. In the lab it is studied for the way it interacts with signaling pathways tied to tissue repair and blood vessel formation. Here is a plain look at what it actually is.</p>
+
+        <h2>What is BPC-157?</h2>
+        <p>BPC-157 is a pentadecapeptide, which simply means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis.html">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a> covers it.</p>
+
+        <h2>Where does the sequence come from?</h2>
+        <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis rather than by its source.</p>
+
+        <h2>How is BPC-157 studied?</h2>
+        <p>Published research on BPC-157 has mostly used cell culture and animal models. Recurring themes in that work include:</p>
+        <ul>
+          <li><b>Angiogenesis:</b> how the peptide relates to the formation of new blood vessels in model systems.</li>
+          <li><b>Nitric oxide signaling:</b> its interaction with a pathway involved in vascular tone and tissue response.</li>
+          <li><b>Tissue and connective structures:</b> models looking at tendon, muscle, and gastrointestinal tissue.</li>
+        </ul>
+        <p>It is worth being precise here. These are observations from laboratory models, not conclusions about people or animals. BPC-157 is a research compound, and the honest summary is that it remains an active area of preclinical study rather than a settled one.</p>
+
+        <h2>Quality, purity, and handling</h2>
+        <p>Because a short peptide is only as reliable as the batch you actually receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including BPC-157, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does BPC-157 stand for?', a: 'BPC stands for "Body Protection Compound." BPC-157 is a synthetic pentadecapeptide (15 amino acids) whose sequence is derived from a protein found in gastric juice. It is used strictly for laboratory research.' },
+        { q: 'Is BPC-157 a natural or synthetic peptide?', a: 'The sequence originates from a naturally occurring gastric protein, but the BPC-157 used in research is made synthetically by solid-phase peptide synthesis and verified by HPLC and mass spectrometry.' },
+        { q: 'How is BPC-157 studied in the lab?', a: 'Most published work uses cell culture and animal models, looking at pathways associated with angiogenesis, nitric oxide signaling, and connective tissue. These are preclinical observations, not conclusions about use in people or animals.' },
+      ],
+      references: [
+        { text: 'BPC-157 (Bepecin) compound summary. PubChem, National Library of Medicine (CID 9941957).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941957' },
+      ],
+      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['peptide-synthesis', 'amino-acids-peptides-proteins-difference'],
+    },
+    {
       slug: 'buy-research-peptides-panama',
       title: 'How to Buy Research Peptides in Panama',
       metaTitle: 'How to Buy Research Peptides in Panama: Shipping, Payments & COA',
