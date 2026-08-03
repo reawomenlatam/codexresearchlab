@@ -16,6 +16,50 @@
 
   const POSTS = [
     {
+      slug: 'what-are-copper-peptides',
+      title: 'What Are Copper Peptides?',
+      metaTitle: 'What Are Copper Peptides? GHK-Cu, AHK-Cu and Copper Binding',
+      metaDescription: 'What are copper peptides? A clear look at short peptides that bind a copper ion, how GHK-Cu and AHK-Cu fit the group, and how they are studied in the laboratory.',
+      focusKeyword: 'what are copper peptides',
+      category: 'Peptide Research',
+      tags: ['copper peptides', 'GHK-Cu', 'AHK-Cu', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'The small family of peptides defined by a bound copper ion, and why that metal is the point.',
+      imageAlt: 'Copper peptides research vials with certificates of analysis',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Copper peptides are a small, tidy category, and the name tells you most of what defines them. They are short peptides that hold onto a copper ion. That single feature, a peptide bound to a metal, is what sets them apart from the rest of the research peptides you will come across.</p>
+
+        <h2>What makes a peptide a copper peptide?</h2>
+        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are really talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.</p>
+
+        <h2>The two you will see most</h2>
+        <p>Two copper tripeptides come up again and again:</p>
+        <ul>
+          <li><b><a href="article/what-is-ghk-cu.html">GHK-Cu</a>:</b> the copper complex of glycyl-histidyl-lysine, and the most studied of the group.</li>
+          <li><b><a href="article/what-is-ahk-cu.html">AHK-Cu</a>:</b> a close relative where the first amino acid is alanine instead of glycine.</li>
+        </ul>
+        <p>The fact that these two differ by a single amino acid is exactly why they get compared. Small changes in sequence can change how a peptide binds copper, and that is a useful thing to study.</p>
+
+        <h2>Why the copper matters</h2>
+        <p>Most of the research interest in these compounds comes from the metal, not the peptide alone. Copper binding is central to how these molecules behave in model systems, and laboratory work often looks at copper transport, connective tissue and collagen signaling, and skin or hair follicle cell activity. These are model-based observations, and copper peptides are supplied strictly as research compounds.</p>
+
+        <h2>Handling and verification</h2>
+        <p>Because a copper ion is part of the molecule, identity and purity are worth confirming rather than assuming. Copper peptides are checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ship lyophilized, and come with a certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including copper peptides such as GHK-Cu and AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is a copper peptide?', a: 'A copper peptide is a short peptide that binds a copper ion with high affinity. The peptide-plus-copper unit is what defines the category, and it is studied strictly for laboratory research.' },
+        { q: 'What are examples of copper peptides?', a: 'The two most common are GHK-Cu (copper complex of glycyl-histidyl-lysine) and AHK-Cu (with alanine in place of glycine). They differ by a single amino acid, which is why they are often compared.' },
+        { q: 'Why is copper important in these peptides?', a: 'Most of the research interest comes from the metal binding rather than the peptide alone. Laboratory work looks at copper transport and pathways related to connective tissue and skin cell activity in model systems.' },
+      ],
+      references: [],
+      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-ghk-cu', 'what-is-ahk-cu'],
+    },
+    {
       slug: 'what-is-ahk-cu',
       title: 'What Is AHK-Cu?',
       metaTitle: 'What Is AHK-Cu? The Copper Tripeptide Explained',
