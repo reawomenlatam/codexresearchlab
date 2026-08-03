@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'bacteriostatic-water-for-peptide-reconstitution',
+      title: 'Bacteriostatic Water for Peptide Reconstitution',
+      metaTitle: 'Bacteriostatic Water for Peptide Reconstitution Explained',
+      metaDescription: 'What bacteriostatic water is, how it differs from sterile water for injection, and why it is the common diluent for reconstituting lyophilized research peptides.',
+      focusKeyword: 'bacteriostatic water for peptides',
+      category: 'Peptide Research',
+      tags: ['bacteriostatic water', 'reconstitution', 'diluent', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'What sets bacteriostatic water apart from plain sterile water, and why labs reach for it first.',
+      imageAlt: 'Bacteriostatic water vial used to reconstitute research peptides',
+      image: 'assets/products/bac-water.jpg',
+      body: `
+        <p class="lead">When a lyophilized peptide needs a liquid to dissolve into, the default answer in most research settings is bacteriostatic water. It is not the only option, but it is the one people reach for first, and there is a specific reason why. The short version is that it lets a vial be used more than once.</p>
+
+        <h2>What is bacteriostatic water?</h2>
+        <p>Bacteriostatic water is sterile water that contains a small amount of benzyl alcohol, usually around 0.9 percent, added as a preservative. The word "bacteriostatic" describes what that preservative does: it slows or stops the growth of bacteria rather than killing everything outright. That single ingredient is the whole difference between it and plain water for injection.</p>
+
+        <h2>How it differs from sterile water</h2>
+        <p>Sterile water for injection is exactly that, water with nothing added, and it is intended for single use. Once opened it has no preservative to hold back contamination. Bacteriostatic water, because of the benzyl alcohol, can tolerate being entered more than once over a period of time, which is why it suits a multi-dose research vial that gets drawn from repeatedly. For peptides that are studied over days or weeks, that reusability is the practical advantage.</p>
+
+        <h2>Why labs use it for peptides</h2>
+        <p>Reconstituting a peptide is a slow, careful step, covered in our guide on <a href="article/how-to-reconstitute-a-peptide.html">how to reconstitute a lyophilized peptide</a>. Bacteriostatic water fits that workflow well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides.html">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
+
+        <h2>Handling and storage</h2>
+        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> works out concentration once the two are combined.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This article describes laboratory use only.</p>
+      `,
+      faq: [
+        { q: 'What is bacteriostatic water?', a: 'Bacteriostatic water is sterile water with a small amount of benzyl alcohol (around 0.9 percent) added as a preservative. The preservative slows bacterial growth, which is what makes it suitable for a vial that will be entered more than once.' },
+        { q: 'What is the difference between bacteriostatic and sterile water?', a: 'Sterile water for injection has nothing added and is meant for single use. Bacteriostatic water contains benzyl alcohol as a preservative, so it can tolerate being drawn from multiple times, which suits a multi-dose research vial.' },
+        { q: 'Why is bacteriostatic water used to reconstitute peptides?', a: 'It dissolves most peptides cleanly and its preservative supports multiple draws from a single vial over the days or weeks a peptide might be studied. That reusability is the main practical reason labs choose it.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides and supplies</a> at Codex Research, use the <a href="calculator.html">reconstitution calculator</a>, or <a href="verify.html">check a batch number</a>.',
+      related: ['how-to-reconstitute-a-peptide', 'excipients-in-peptides'],
+    },
+    {
       slug: 'how-to-reconstitute-a-peptide',
       title: 'How to Reconstitute a Lyophilized Peptide',
       metaTitle: 'How to Reconstitute a Lyophilized Peptide (Research Guide)',
