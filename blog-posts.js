@@ -16,6 +16,53 @@
 
   const POSTS = [
     {
+      slug: 'what-is-nad-plus',
+      title: 'What Is NAD+?',
+      metaTitle: 'What Is NAD+? The Coenzyme Explained for Research',
+      metaDescription: 'What is NAD+? A clear look at nicotinamide adenine dinucleotide, an essential coenzyme, its structure, and how it is studied in laboratory metabolism and aging research.',
+      focusKeyword: 'what is NAD+',
+      category: 'Peptide Research',
+      tags: ['NAD+', 'coenzyme', 'metabolism', 'research compounds'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'An essential coenzyme found in every living cell, and the metabolism and aging research it appears in.',
+      imageAlt: 'NAD+ research compound vial with certificate of analysis',
+      image: 'assets/products/nad-plus.jpg',
+      body: `
+        <p class="lead">NAD+ is the odd one out in this series. It is not a peptide at all, it is a coenzyme, and it sits at the center of how cells manage energy. It shows up in research catalogs alongside peptides because it is a defined molecule that laboratories study in the same careful, batch-verified way. Here is what it actually is.</p>
+
+        <h2>What is NAD+?</h2>
+        <p>NAD+ stands for nicotinamide adenine dinucleotide. It is a coenzyme present in every living cell, built from two nucleotides joined together. Its CAS number is 53-84-9 and its molecular formula is C21H27N7O14P2. The "plus" refers to its oxidized form, which pairs with a reduced form called NADH. That pairing is the whole point of the molecule, since it lets NAD+ shuttle electrons during metabolism.</p>
+
+        <h2>What does NAD+ do?</h2>
+        <p>In basic biochemistry, NAD+ acts as an electron carrier. Cells constantly cycle it between its oxidized form (NAD+) and its reduced form (NADH) to move energy around during processes like glycolysis and cellular respiration. Beyond that classic role, NAD+ is also a substrate for a group of enzymes called sirtuins, which is a big part of why it draws interest in aging research.</p>
+
+        <h2>How is NAD+ studied?</h2>
+        <p>Laboratory research involving NAD+ commonly looks at:</p>
+        <ul>
+          <li><b>Cellular metabolism:</b> its role as an electron carrier in energy pathways.</li>
+          <li><b>Mitochondrial function:</b> how NAD+ availability relates to the machinery that produces cellular energy.</li>
+          <li><b>Sirtuin signaling:</b> NAD+ as a substrate for enzymes tied to aging and stress response in model systems.</li>
+        </ul>
+        <p>These are laboratory and preclinical contexts. NAD+ is supplied strictly as a research compound, and this article does not describe use in people or animals. If you are comparing it with the small peptide <a href="article/what-is-mots-c.html">MOTS-c</a>, both come up in mitochondrial research but they are very different molecules.</p>
+
+        <h2>Handling and verification</h2>
+        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including NAD+, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'Is NAD+ a peptide?', a: 'No. NAD+ (nicotinamide adenine dinucleotide) is a coenzyme built from two nucleotides, not a peptide. It appears in research catalogs alongside peptides because it is a defined, batch-verified compound studied in metabolism research.' },
+        { q: 'What is the difference between NAD+ and NADH?', a: 'They are two forms of the same coenzyme. NAD+ is the oxidized form and NADH is the reduced form. Cells cycle between them to carry electrons during energy metabolism.' },
+        { q: 'Why is NAD+ studied in aging research?', a: 'Beyond its role as an electron carrier, NAD+ is a substrate for enzymes called sirtuins that are associated with stress response and aging in laboratory models, which is a major reason it appears in that research.' },
+      ],
+      references: [
+        { text: 'NAD+ (NAD) compound summary. PubChem, National Library of Medicine (CID 5892).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/5892' },
+      ],
+      cta: 'Browse <a href="catalog.html">research compounds</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-mots-c', 'lyophilization-freeze-drying'],
+    },
+    {
       slug: 'what-is-pt-141',
       title: 'What Is PT-141 (Bremelanotide)?',
       metaTitle: 'What Is PT-141? The Melanocortin Peptide Bremelanotide',
