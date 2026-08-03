@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'cas-numbers-explained',
+      title: 'CAS Numbers Explained',
+      metaTitle: 'CAS Numbers Explained: What They Are and How to Read One',
+      metaDescription: 'What is a CAS number? A clear explanation of these unique chemical identifiers, how the digits are structured, and why they appear on research peptide listings.',
+      focusKeyword: 'CAS number',
+      category: 'Peptide Research',
+      tags: ['CAS number', 'chemical identifier', 'quality', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'The unique identifier next to every compound name, and how to actually read it.',
+      imageAlt: 'CAS registry number shown on a research compound label',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Next to almost every compound on a research listing sits a string of digits labeled CAS. It is easy to skip, but that little number is one of the most reliable ways to know exactly which chemical you are looking at. Names can be ambiguous. A CAS number is not.</p>
+
+        <h2>What is a CAS number?</h2>
+        <p>A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance gets its own number, and no two substances share one. That is the whole value: a compound might have several common names, an abbreviation, and a long systematic name, but it has exactly one CAS number. It cuts through the naming confusion.</p>
+
+        <h2>How the number is structured</h2>
+        <p>A CAS number is written as three groups of digits separated by hyphens, in the pattern of a longer group, then two digits, then a single digit, for example 137525-51-0. That final single digit is a check digit, calculated from the others, which lets software catch a typo. The digits themselves carry no hidden meaning about the structure. They are just a registry entry, like a catalog number.</p>
+
+        <h2>Why it appears on peptide listings</h2>
+        <p>Research peptides often have overlapping names and abbreviations, so a CAS number is a precise way to confirm which compound is being sold. On the Codex Research catalog you will see the CAS number listed with each product, for instance <a href="article/what-is-bpc-157.html">BPC-157</a> at 137525-51-0. It is a small detail that makes the listing verifiable rather than just descriptive.</p>
+
+        <h2>Using it to check a compound</h2>
+        <p>Because a CAS number is unique, you can use it to look a substance up in public chemical databases and confirm you are dealing with the compound you expect. Paired with a <a href="article/how-to-read-a-certificate-of-analysis.html">certificate of analysis</a> and a verifiable batch number, it is part of how a research supplier makes its material traceable rather than anonymous.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is a CAS number?', a: 'A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance has exactly one, which makes it a precise way to confirm which compound is meant, regardless of naming.' },
+        { q: 'How is a CAS number formatted?', a: 'It is written as three groups of digits separated by hyphens, such as 137525-51-0: a longer group, then two digits, then a single check digit calculated from the others to catch typos.' },
+        { q: 'Why do research peptides list a CAS number?', a: 'Peptides often have several names and abbreviations, so a CAS number is an unambiguous way to identify the exact compound. It also lets you look the substance up in public chemical databases to confirm it.' },
+      ],
+      references: [],
+      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a>, where each product lists its CAS number, or <a href="verify.html">check a batch number</a>.',
+      related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
+    },
+    {
       slug: 'how-to-read-a-certificate-of-analysis',
       title: 'How to Read a Peptide Certificate of Analysis',
       metaTitle: 'How to Read a Peptide Certificate of Analysis (COA)',
