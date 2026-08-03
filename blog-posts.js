@@ -16,6 +16,50 @@
 
   const POSTS = [
     {
+      slug: 'what-are-incretins',
+      title: 'What Are Incretins? GIP and GLP-1 Explained',
+      metaTitle: 'What Are Incretins? GIP and GLP-1 in Metabolic Research',
+      metaDescription: 'What are incretins? A clear explanation of GIP and GLP-1, the gut hormones behind the incretin effect, and why they anchor a lot of metabolic peptide research.',
+      focusKeyword: 'what are incretins',
+      category: 'Peptide Research',
+      tags: ['incretins', 'GIP', 'GLP-1', 'metabolism', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'The gut hormones behind the incretin effect, and the reason so many research peptides target them.',
+      imageAlt: 'Illustration of incretin signaling studied in metabolic peptide research',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">If you have read about peptides like <a href="article/what-is-tirzepatide.html">tirzepatide</a> or <a href="article/what-is-retatrutide.html">retatrutide</a>, you have run into the word incretin. It sounds technical, but the idea behind it is fairly simple, and understanding it makes the whole family of metabolic research peptides easier to follow.</p>
+
+        <h2>What are incretins?</h2>
+        <p>Incretins are hormones the gut releases when it detects nutrients, usually after eating. Their defining trick is the incretin effect: they help drive an insulin response that is stronger when glucose arrives through the gut than when the same amount is given another way. In other words, the body pays attention to how glucose shows up, and incretins are part of how it does that.</p>
+
+        <h2>The two main incretins</h2>
+        <p>Research centers on two of them:</p>
+        <ul>
+          <li><b>GIP</b> (glucose-dependent insulinotropic polypeptide): one of the two primary incretin hormones.</li>
+          <li><b>GLP-1</b> (glucagon-like peptide-1): the other, and the more widely studied of the pair.</li>
+        </ul>
+        <p>Each one acts through its own receptor, and each connects to pathways tied to insulin signaling and glucose handling. They are not interchangeable, which is exactly why comparing them is interesting.</p>
+
+        <h2>Why they matter in peptide research</h2>
+        <p>A lot of modern metabolic research peptides are built to act on incretin receptors. Some target GLP-1 alone. A dual agonist like tirzepatide engages both GIP and GLP-1, and a triple agonist like retatrutide adds the glucagon receptor on top. The common thread is the incretin system, so knowing what these hormones do makes those compounds far less mysterious. If you want to compare the two head to head, see our note on <a href="article/glp-1-vs-gip.html">GLP-1 vs GIP</a>.</p>
+
+        <h2>A note on scope</h2>
+        <p>Everything here is background biology and laboratory context. The research peptides that target these receptors are supplied strictly as research compounds, and nothing in this article describes use in people or animals.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What are incretins in simple terms?', a: 'Incretins are hormones the gut releases in response to nutrients. They help produce a stronger insulin response when glucose arrives through the gut, which is called the incretin effect.' },
+        { q: 'What is the difference between GIP and GLP-1?', a: 'They are the two main incretin hormones, each acting through its own receptor. GLP-1 is the more widely studied, while GIP is the other primary incretin. Both connect to insulin signaling and glucose handling.' },
+        { q: 'Why do research peptides target incretins?', a: 'Many metabolic research peptides are designed to act on incretin receptors. Single, dual, and triple agonists all build on this system, so understanding incretins makes those compounds easier to follow.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-tirzepatide', 'what-is-retatrutide'],
+    },
+    {
       slug: 'what-are-copper-peptides',
       title: 'What Are Copper Peptides?',
       metaTitle: 'What Are Copper Peptides? GHK-Cu, AHK-Cu and Copper Binding',
