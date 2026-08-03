@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'how-to-reconstitute-a-peptide',
+      title: 'How to Reconstitute a Lyophilized Peptide',
+      metaTitle: 'How to Reconstitute a Lyophilized Peptide (Research Guide)',
+      metaDescription: 'A practical laboratory guide to reconstituting a lyophilized research peptide: choosing a diluent, adding it gently, working out concentration, and storing the solution.',
+      focusKeyword: 'how to reconstitute a peptide',
+      category: 'Peptide Research',
+      tags: ['reconstitution', 'lyophilized', 'diluent', 'research peptides', 'lab technique'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A calm, step-by-step look at turning a freeze-dried research peptide back into a solution.',
+      imageAlt: 'Reconstituting a lyophilized research peptide vial with diluent in the lab',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Most research peptides arrive as a dry powder or a thin cake at the bottom of the vial. That form is <a href="article/lyophilization-freeze-drying.html">lyophilized</a>, or freeze-dried, because it keeps the peptide stable in transit. Before it can be used in the lab it has to be reconstituted, which just means dissolving it back into a liquid. Done carelessly this step can waste material, so it is worth doing slowly.</p>
+
+        <h2>Choose a diluent</h2>
+        <p>The most common choice for research reconstitution is <a href="article/excipients-in-peptides.html">bacteriostatic water</a>, which is sterile water with a small amount of benzyl alcohol as a preservative. Some peptides that resist dissolving may call for a different diluent, and the certificate of analysis or product notes are the place to check. The goal is a diluent that dissolves the peptide cleanly without degrading it.</p>
+
+        <h2>Add the liquid gently</h2>
+        <p>Two habits protect the material here. First, let a cold vial come closer to room temperature before opening, so moisture does not condense inside. Second, do not squirt the diluent straight onto the peptide. Aim the stream at the inside wall of the vial and let it run down. Then leave it to dissolve on its own, or swirl it slowly. Shaking is the classic mistake, since the shear and foaming can damage a delicate peptide.</p>
+
+        <h2>Work out the concentration</h2>
+        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL. Rather than doing this by hand, our <a href="calculator.html">reconstitution calculator</a> takes the vial strength and the water added and returns the concentration and the syringe math for you. It does not recommend any amount, it only converts the numbers you enter.</p>
+
+        <h2>Store the solution</h2>
+        <p>Once a peptide is in solution it is less stable than the dry powder, so it usually goes into refrigeration and away from light, with the exact conditions shown on the vial label. Label the vial with the date and concentration so nothing is guessed later. If you want to confirm the vial was genuine before you started, you can check its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This guide describes laboratory handling only.</p>
+      `,
+      faq: [
+        { q: 'What liquid is used to reconstitute a research peptide?', a: 'Bacteriostatic water, which is sterile water with a small amount of benzyl alcohol as a preservative, is the most common diluent for research reconstitution. Some peptides may need a different diluent noted on the certificate of analysis.' },
+        { q: 'Why should you not shake a peptide when reconstituting it?', a: 'Shaking creates shear and foaming that can damage a delicate peptide. Adding the diluent down the inside wall of the vial and letting it dissolve, or swirling gently, protects the material.' },
+        { q: 'How do you calculate peptide concentration after reconstitution?', a: 'Divide the amount of peptide in the vial by the volume of diluent you added. For example, 10 mg in 2 mL is 5 mg per mL. The reconstitution calculator at codexresearchlab.com/calculator.html does this and the syringe-unit math automatically.' },
+      ],
+      references: [],
+      cta: 'Try the <a href="calculator.html">reconstitution calculator</a>, browse <a href="catalog.html">research peptides</a>, or <a href="verify.html">check a batch number</a> at Codex Research.',
+      related: ['lyophilization-freeze-drying', 'excipients-in-peptides'],
+    },
+    {
       slug: 'what-is-nad-plus',
       title: 'What Is NAD+?',
       metaTitle: 'What Is NAD+? The Coenzyme Explained for Research',
