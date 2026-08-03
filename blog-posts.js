@@ -16,6 +16,48 @@
 
   const POSTS = [
     {
+      slug: 'how-to-read-a-certificate-of-analysis',
+      title: 'How to Read a Peptide Certificate of Analysis',
+      metaTitle: 'How to Read a Peptide Certificate of Analysis (COA)',
+      metaDescription: 'How to read a peptide certificate of analysis: what each field on a COA means, from batch number and purity to identity and analysis date, and how to use it.',
+      focusKeyword: 'read a peptide certificate of analysis',
+      category: 'Peptide Research',
+      tags: ['certificate of analysis', 'COA', 'quality', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A field-by-field look at what a COA actually reports, so the document stops being a mystery.',
+      imageAlt: 'Peptide certificate of analysis document with purity and identity results',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">A certificate of analysis, or COA, is the document that turns a claim on a label into something checkable. For research peptides it is the single most useful piece of paper you will handle, and yet most people glance at the purity number and move on. Here is how to read the rest of it.</p>
+
+        <h2>Batch or lot number</h2>
+        <p>Every COA is tied to a specific batch, and the batch number is the link between the paper and the vial in your hand. If the number on the document does not match the number on the label, the COA does not describe your material. This is also the number you would enter to <a href="verify.html">verify a batch</a> is genuine.</p>
+
+        <h2>Purity</h2>
+        <p>Purity is usually reported as a percentage from <a href="article/peptide-purity-hplc-explained.html">HPLC</a>, often near 99 percent. It tells you how much of the sample is the target peptide versus everything else the method detected. A high figure with a clean result is a good sign, but remember that purity alone does not confirm what the peptide is.</p>
+
+        <h2>Identity</h2>
+        <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, not just that it is pure.</p>
+
+        <h2>Analysis date and methods</h2>
+        <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced rather than asking you to take them on faith.</p>
+
+        <h2>Putting it together</h2>
+        <p>Read as a whole, a good COA answers three questions: which batch is this, how pure is it, and is it the right molecule. If a document only answers one of those, it is incomplete. At Codex Research the full COA is shared on WhatsApp before you pay, and any vial can be checked by its batch number.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is on a peptide certificate of analysis?', a: 'A COA reports the batch or lot number, the purity (usually from HPLC), the identity (usually from mass spectrometry), the analysis date, and the testing methods used. Together these say which batch it is, how pure it is, and whether it is the right molecule.' },
+        { q: 'Why does the batch number on a COA matter?', a: 'The batch number links the document to a specific vial. If the number on the COA does not match the number on the label, the certificate does not describe your material. It is also the number used to verify a batch is genuine.' },
+        { q: 'Is a purity percentage enough on its own?', a: 'No. Purity tells you how much of the sample is one main component, but not that the component is the correct peptide. A complete COA pairs HPLC purity with a mass spectrometry identity check.' },
+      ],
+      references: [],
+      cta: '<a href="verify.html">Verify a batch number</a> or browse the <a href="catalog.html">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
+      related: ['peptide-purity-hplc-explained', 'mass-spectrometry-peptide-research'],
+    },
+    {
       slug: 'peptide-purity-hplc-explained',
       title: 'Peptide Purity: What 99% by HPLC Means',
       metaTitle: 'Peptide Purity: What 99% by HPLC Actually Means',
