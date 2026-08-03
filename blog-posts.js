@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'peptide-purity-hplc-explained',
+      title: 'Peptide Purity: What 99% by HPLC Means',
+      metaTitle: 'Peptide Purity: What 99% by HPLC Actually Means',
+      metaDescription: 'What does 99% purity by HPLC mean for a research peptide? A clear explanation of how purity is measured, what the number does and does not tell you, and why it matters.',
+      focusKeyword: 'peptide purity HPLC',
+      category: 'Peptide Research',
+      tags: ['peptide purity', 'HPLC', 'quality', 'research peptides', 'COA'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'What a purity percentage really measures, and what it does not, when you read it on a COA.',
+      imageAlt: 'HPLC chromatogram used to measure research peptide purity',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Almost every research peptide listing mentions a purity figure, often 99 percent by HPLC. It is one of the most quoted numbers in the field and one of the least explained. So it is worth spelling out what that number is measuring, and just as importantly, what it is not.</p>
+
+        <h2>How purity is measured</h2>
+        <p>Purity is usually determined by <a href="article/high-performance-liquid-chromatography-hplc.html">high-performance liquid chromatography</a>, or HPLC. In simple terms, the sample is pushed through a column that separates its components, and each component shows up as a peak on a chart called a chromatogram. The target peptide is the main peak. Purity is the area of that main peak expressed as a percentage of all the peaks combined. So 99 percent means the target peptide accounts for about 99 percent of what the method detected.</p>
+
+        <h2>What the number tells you</h2>
+        <p>A high HPLC purity figure says that very little else showed up alongside the peptide. Small side peaks can come from related peptide fragments, incomplete sequences, or leftover material from synthesis. A clean chromatogram with one dominant peak is a good sign that the batch is mostly what it claims to be. That is genuinely useful information.</p>
+
+        <h2>What it does not tell you</h2>
+        <p>Purity is not identity. HPLC tells you how much of the sample is one main component, but it does not by itself prove that component is the right peptide. That is why identity is confirmed separately, usually by <a href="article/what-is-mots-c.html">mass spectrometry</a> comparing the measured mass with the expected one. A trustworthy certificate of analysis reports both: purity from HPLC and identity from mass spectrometry. One number without the other is only half the picture.</p>
+
+        <h2>Why it matters</h2>
+        <p>For research, consistency depends on knowing what is actually in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify.html">batch number</a>, and its full certificate of analysis is available on request.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does 99% purity by HPLC mean?', a: 'It means the target peptide accounts for about 99 percent of what HPLC detected in the sample. HPLC separates the components into peaks, and purity is the area of the main peak as a percentage of all peaks combined.' },
+        { q: 'Does HPLC purity confirm the peptide identity?', a: 'No. HPLC measures how much of the sample is one main component, but it does not prove that component is the correct peptide. Identity is confirmed separately, usually by mass spectrometry comparing the measured mass with the expected mass.' },
+        { q: 'Why does peptide purity matter in research?', a: 'Consistency depends on knowing what is in the vial. A purity figure backed by an identity check lets one batch be compared with another. A certificate of analysis should report both HPLC purity and mass spectrometry identity.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
+    },
+    {
       slug: 'what-are-melanocortin-receptors',
       title: 'What Are Melanocortin Receptors?',
       metaTitle: 'What Are Melanocortin Receptors? A Research Explainer',
