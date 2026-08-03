@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'agonist-vs-antagonist',
+      title: 'Agonist vs Antagonist: A Simple Explanation',
+      metaTitle: 'Agonist vs Antagonist: A Simple Explanation for Research',
+      metaDescription: 'Agonist vs antagonist explained simply: how these two words describe what a compound does at a receptor, and why the distinction matters in peptide research.',
+      focusKeyword: 'agonist vs antagonist',
+      category: 'Peptide Research',
+      tags: ['agonist', 'antagonist', 'receptor pharmacology', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'Two words that describe what a compound does at a receptor, and why the difference keeps coming up.',
+      imageAlt: 'Diagram concept of agonist and antagonist binding at a receptor',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Read a few peptide descriptions and two words show up constantly: agonist and antagonist. They sound like jargon, but they answer a very basic question about any compound that acts on a receptor. Does it switch the receptor on, or does it get in the way? That is the whole distinction.</p>
+
+        <h2>What a receptor does</h2>
+        <p>A receptor is a protein that receives a signal. When the right molecule binds to it, the receptor changes shape and triggers some activity inside the cell. Think of it as a lock waiting for a key. The interesting part is that not every key turns the lock, and some keys jam it.</p>
+
+        <h2>Agonist: it activates</h2>
+        <p>An agonist is a compound that binds a receptor and activates it, producing the response the receptor is built to give. Most of the peptides we describe are agonists. <a href="article/what-is-tirzepatide.html">Tirzepatide</a> is an agonist at incretin receptors, <a href="article/what-is-ipamorelin.html">ipamorelin</a> is an agonist at the ghrelin receptor, and <a href="article/what-is-pt-141.html">PT-141</a> is an agonist at melanocortin receptors. In each case the word means the same thing: it turns the receptor on.</p>
+
+        <h2>Antagonist: it blocks</h2>
+        <p>An antagonist binds a receptor but does not activate it. Instead it occupies the site and prevents an agonist from doing its job. It is the key that fits the lock but will not turn, and while it sits there the real key cannot get in. Antagonists are studied as tools for asking what happens when a pathway is blocked rather than switched on.</p>
+
+        <h2>Why the difference matters</h2>
+        <p>When a research peptide is labeled a "receptor agonist," that single word tells you it is meant to activate its target, not block it. That is why the term appears in almost every compound description, including throughout our own catalog. Knowing agonist from antagonist turns those descriptions from jargon into plain information.</p>
+
+        <h2>Research use only</h2>
+        <p>This article is background pharmacology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is the difference between an agonist and an antagonist?', a: 'An agonist binds a receptor and activates it, producing the receptor response. An antagonist binds the same receptor but does not activate it, blocking an agonist from acting. One switches the receptor on, the other gets in the way.' },
+        { q: 'Are most research peptides agonists or antagonists?', a: 'Most of the research peptides described in this catalog are agonists, meaning they are studied for how they activate a target receptor. The label "receptor agonist" in a product description signals exactly that.' },
+        { q: 'Why does the agonist vs antagonist distinction matter?', a: 'It tells you what a compound is meant to do at its receptor. When a peptide is called a receptor agonist, it activates the target; an antagonist would block it. The distinction turns technical descriptions into clear information.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-ipamorelin', 'what-is-pt-141'],
+    },
+    {
       slug: 'what-is-a-growth-hormone-secretagogue',
       title: 'What Is a Growth Hormone Secretagogue?',
       metaTitle: 'What Is a Growth Hormone Secretagogue? A Research Explainer',
