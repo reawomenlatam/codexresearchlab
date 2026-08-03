@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'endotoxins-in-research-peptides',
+      title: 'Endotoxins and Research Peptide Quality',
+      metaTitle: 'Endotoxins and Research Peptide Quality Explained',
+      metaDescription: 'What endotoxins are, why they matter for research peptide quality, how they are measured in EU/mg, and where they fit alongside purity and identity testing.',
+      focusKeyword: 'endotoxins research peptides',
+      category: 'Peptide Research',
+      tags: ['endotoxins', 'quality', 'COA', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A contaminant that purity testing alone will not catch, and how it is measured.',
+      imageAlt: 'Endotoxin testing as part of research peptide quality control',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Purity and identity get most of the attention on a certificate of analysis, and for good reason. But there is a third quality measure that sometimes appears next to them, endotoxin content, and it answers a different question entirely. Not "is this the right peptide," but "is it clean of a specific kind of contamination."</p>
+
+        <h2>What are endotoxins?</h2>
+        <p>Endotoxins are components of the outer membrane of certain bacteria, specifically a molecule called lipopolysaccharide. They can be left behind even after the bacteria themselves are gone, and they are notably tough, surviving conditions that would destroy the organism. In a research context they are treated as a contaminant to be measured and kept low, because they can interfere with sensitive biological assays.</p>
+
+        <h2>Why purity testing does not catch them</h2>
+        <p>This is the key point. A <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> purity result and a <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> identity check tell you about the peptide itself, how much of it there is and whether it is the right molecule. Neither is designed to detect endotoxin. A peptide can be highly pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.</p>
+
+        <h2>How endotoxins are measured</h2>
+        <p>Endotoxin content is usually reported in endotoxin units per milligram, written as EU/mg. A lower number is better. On a certificate of analysis you might see a limit expressed as less than a certain value, for example under 0.5 EU/mg, which states an upper bound rather than an exact count. The takeaway is not the specific method but the fact that it is a distinct measurement with its own units.</p>
+
+        <h2>Where it fits in quality</h2>
+        <p>Think of endotoxin as the third leg of a stool. Identity says the compound is correct, purity says little else is present, and endotoxin says a specific biological contaminant is controlled. Not every research use requires endotoxin testing, but when an assay is sensitive to it, the figure belongs on the <a href="article/how-to-read-a-certificate-of-analysis.html">certificate of analysis</a> alongside the others.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What are endotoxins?', a: 'Endotoxins are components of the outer membrane of certain bacteria, specifically lipopolysaccharide. They can remain even after the bacteria are gone and are treated as a contaminant to be measured and kept low, since they can interfere with sensitive biological assays.' },
+        { q: 'Does HPLC purity detect endotoxins?', a: 'No. HPLC purity and mass spectrometry identity describe the peptide itself. Neither detects endotoxin, so a peptide can be pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.' },
+        { q: 'How are endotoxins measured?', a: 'Endotoxin content is usually reported in endotoxin units per milligram (EU/mg), where lower is better. A certificate of analysis may state an upper bound, such as less than 0.5 EU/mg.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['how-to-read-a-certificate-of-analysis', 'peptide-purity-hplc-explained'],
+    },
+    {
       slug: 'peptide-length-terminology',
       title: 'Peptide Length: Di, Tri, Oligo, and Poly',
       metaTitle: 'Peptide Length Explained: Di, Tri, Oligo, and Polypeptides',
