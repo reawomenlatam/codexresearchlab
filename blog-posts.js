@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'molecular-weight-of-peptides',
+      title: 'Molecular Weight of Peptides, Explained',
+      metaTitle: 'Molecular Weight of Peptides, Explained for Research',
+      metaDescription: 'What molecular weight means for a peptide, how it is expressed in g/mol or daltons, and why it is central to identity checks and reconstitution math in the lab.',
+      focusKeyword: 'molecular weight of peptides',
+      category: 'Peptide Research',
+      tags: ['molecular weight', 'daltons', 'mass spectrometry', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'What the g/mol figure next to a peptide actually means, and where it quietly matters.',
+      imageAlt: 'Molecular weight of a research peptide shown with its molecular formula',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Every peptide listing carries a molecular weight, usually a number followed by g/mol. It looks like a spec you can safely ignore, but it turns out to sit at the center of two things that matter in the lab: confirming a peptide is the right one, and working out how to reconstitute it.</p>
+
+        <h2>What molecular weight means</h2>
+        <p>Molecular weight is the mass of one molecule, added up from the masses of all its atoms. For a peptide, that means summing the amino acids in the sequence, minus the water lost each time two of them join. The result is expressed in grams per mole (g/mol), or equivalently in daltons. A larger peptide with more amino acids has a higher molecular weight, which is why a compound like tirzepatide sits far above a small tripeptide.</p>
+
+        <h2>Where the number comes from</h2>
+        <p>The molecular weight follows directly from the molecular formula, the count of each type of atom in the molecule. If you know the formula, the weight is just arithmetic. That is why a good listing shows both, for example a formula like C62H98N16O22 alongside a weight near 1419 g/mol for <a href="article/what-is-bpc-157.html">BPC-157</a>. The two are tied together.</p>
+
+        <h2>Why it matters for identity</h2>
+        <p>Molecular weight is the anchor of an identity check. When a lab runs <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, it measures the mass of the molecule and compares it with the expected molecular weight. A match is strong evidence that the compound is the intended peptide. A mismatch is a red flag. This is the second half of the story that a purity figure alone cannot tell you.</p>
+
+        <h2>Why it matters for reconstitution</h2>
+        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, or plan how to <a href="article/how-to-reconstitute-a-peptide.html">reconstitute a vial</a>, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, and our <a href="calculator.html">reconstitution calculator</a> handles that, but the molecular weight is the value underneath any mole-based calculation.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does molecular weight mean for a peptide?', a: 'It is the mass of one molecule, summed from the masses of all its atoms. For a peptide it comes from adding up the amino acids in the sequence, minus the water lost as they join, and it is expressed in grams per mole or daltons.' },
+        { q: 'How is a peptide molecular weight calculated?', a: 'It follows from the molecular formula, the count of each atom in the molecule. If you know the formula, the weight is arithmetic. A good listing shows both the formula and the weight together.' },
+        { q: 'Why does molecular weight matter in the lab?', a: 'It anchors identity checks, since mass spectrometry compares the measured mass with the expected molecular weight, and it underlies any mole-based reconstitution or concentration calculation.' },
+      ],
+      references: [],
+      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a>, which lists the formula and molecular weight of each compound, or try the <a href="calculator.html">reconstitution calculator</a>.',
+      related: ['mass-spectrometry-peptide-research', 'how-to-reconstitute-a-peptide'],
+    },
+    {
       slug: 'cas-numbers-explained',
       title: 'CAS Numbers Explained',
       metaTitle: 'CAS Numbers Explained: What They Are and How to Read One',
