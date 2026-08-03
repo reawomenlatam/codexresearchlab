@@ -16,6 +16,51 @@
 
   const POSTS = [
     {
+      slug: 'peptide-length-terminology',
+      title: 'Peptide Length: Di, Tri, Oligo, and Poly',
+      metaTitle: 'Peptide Length Explained: Di, Tri, Oligo, and Polypeptides',
+      metaDescription: 'A clear guide to peptide length terminology: what dipeptide, tripeptide, oligopeptide, and polypeptide mean, and where the line to a protein sits.',
+      focusKeyword: 'peptide length terminology',
+      category: 'Peptide Research',
+      tags: ['peptide length', 'oligopeptide', 'polypeptide', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'The prefixes that describe how many amino acids a peptide has, and where peptide ends and protein begins.',
+      imageAlt: 'Chain of amino acids illustrating peptide length terminology',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Peptide descriptions are full of prefixes: di, tri, penta, oligo, poly. They are not decoration. Each one is just counting amino acids, and once you know the pattern, a term like pentapeptide tells you something concrete before you read another word.</p>
+
+        <h2>Counting by amino acids</h2>
+        <p>A peptide is a chain of <a href="article/amino-acids-peptides-proteins-difference.html">amino acids</a> linked together. The prefix in its name usually tells you how many links are in the chain. The most common ones you will run into are:</p>
+        <ul>
+          <li><b>Dipeptide:</b> two amino acids.</li>
+          <li><b>Tripeptide:</b> three amino acids, like the copper peptides <a href="article/what-is-ghk-cu.html">GHK-Cu</a> and AHK-Cu.</li>
+          <li><b>Pentapeptide:</b> five amino acids, like <a href="article/what-is-ipamorelin.html">ipamorelin</a>.</li>
+          <li><b>Pentadecapeptide:</b> fifteen amino acids, like <a href="article/what-is-bpc-157.html">BPC-157</a>.</li>
+        </ul>
+
+        <h2>Oligopeptides and polypeptides</h2>
+        <p>Not every peptide gets a specific numeric name. When a chain is short, roughly a handful up to around ten or so amino acids, it is often called an oligopeptide, where "oligo" just means "a few." When the chain gets long, it becomes a polypeptide, where "poly" means "many." These are loose, descriptive terms rather than strict counts, but they give a quick sense of scale.</p>
+
+        <h2>Where peptide ends and protein begins</h2>
+        <p>There is no hard, universally agreed number where a long peptide officially becomes a protein. As a rough convention, chains of up to around fifty amino acids are usually called peptides, and larger folded structures are called proteins. The line is fuzzy on purpose, because the more meaningful difference is often about folding and function, not just length.</p>
+
+        <h2>Why the terms are useful</h2>
+        <p>For anyone reading a catalog, the length prefix is a fast orientation. It hints at how large a molecule is, which relates to its <a href="article/molecular-weight-of-peptides.html">molecular weight</a> and, loosely, to how it is handled. A tripeptide and a pentadecapeptide are very different molecules, and their names say so up front.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What do dipeptide and tripeptide mean?', a: 'The prefix counts amino acids. A dipeptide has two amino acids and a tripeptide has three. For example, the copper peptides GHK-Cu and AHK-Cu are tripeptides.' },
+        { q: 'What is the difference between an oligopeptide and a polypeptide?', a: 'An oligopeptide is a short chain, roughly a few up to around ten amino acids ("oligo" means a few). A polypeptide is a long chain ("poly" means many). Both are loose descriptive terms rather than exact counts.' },
+        { q: 'At what length does a peptide become a protein?', a: 'There is no strict cutoff, but as a rough convention chains of up to around fifty amino acids are called peptides and larger folded structures are called proteins. The more meaningful difference is often folding and function.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['amino-acids-peptides-proteins-difference', 'molecular-weight-of-peptides'],
+    },
+    {
       slug: 'how-to-store-research-peptides',
       title: 'How to Store Research Peptides',
       metaTitle: 'How to Store Research Peptides (Lyophilized and Reconstituted)',
