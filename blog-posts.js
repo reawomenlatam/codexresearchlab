@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'what-is-a-growth-hormone-secretagogue',
+      title: 'What Is a Growth Hormone Secretagogue?',
+      metaTitle: 'What Is a Growth Hormone Secretagogue? A Research Explainer',
+      metaDescription: 'What is a growth hormone secretagogue? A clear look at this class of compounds, how they relate to the ghrelin receptor, and how they are studied in the laboratory.',
+      focusKeyword: 'growth hormone secretagogue',
+      category: 'Peptide Research',
+      tags: ['growth hormone secretagogue', 'ghrelin receptor', 'ipamorelin', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'The class of compounds that acts on the ghrelin receptor, and why selectivity is the whole game.',
+      imageAlt: 'Growth hormone secretagogue research peptide studied at the ghrelin receptor',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">The phrase "growth hormone secretagogue" is a mouthful, but it is really just a label for a category. When a research peptide like <a href="article/what-is-ipamorelin.html">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect. Here is what the label actually means.</p>
+
+        <h2>What the term means</h2>
+        <p>A secretagogue is anything that prompts a cell to release, or secrete, a substance. So a growth hormone secretagogue is a compound studied for how it engages the signaling that leads to growth hormone release. Many of the peptides in this class act as agonists at the ghrelin receptor, which is also called the growth hormone secretagogue receptor. The receptor name and the compound class are two sides of the same coin.</p>
+
+        <h2>The ghrelin receptor connection</h2>
+        <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. A secretagogue that activates it is being used, in a research setting, as a way to probe that pathway. Different compounds in the class engage the receptor with different profiles, and that variation is a big part of what researchers compare. An agonist, in this context, is simply a compound that activates a receptor rather than blocking it.</p>
+
+        <h2>Why selectivity matters</h2>
+        <p>Not every secretagogue is equally focused. Some activate the growth hormone pathway but also touch other hormone systems, which makes their effects harder to interpret. Others, like ipamorelin, are studied precisely because they show a more selective profile in laboratory models. For a research tool, that cleanliness is valuable: the more selective a compound, the easier it is to attribute an observed result to one receptor rather than several.</p>
+
+        <h2>How they are studied</h2>
+        <p>Laboratory work on growth hormone secretagogues typically looks at ghrelin receptor binding and activation, the secretagogue pathway itself, and comparisons between more and less selective compounds. These are preclinical, model-based studies. The peptides are supplied strictly as research compounds, and this article does not describe use in people or animals.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is a growth hormone secretagogue?', a: 'It is a class of compounds studied for how they engage the signaling that leads to growth hormone release. Many act as agonists at the ghrelin receptor, also called the growth hormone secretagogue receptor. They are used strictly for laboratory research.' },
+        { q: 'How does a secretagogue relate to the ghrelin receptor?', a: 'The ghrelin receptor sits upstream of growth hormone signaling pathways, and many secretagogues act as agonists there. That is why the receptor is also named the growth hormone secretagogue receptor.' },
+        { q: 'Why is selectivity important for these peptides?', a: 'A more selective secretagogue engages the growth hormone pathway with limited activity elsewhere, which makes laboratory results easier to attribute to a single receptor. Ipamorelin is often cited as an example of a more selective compound.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-ipamorelin', 'peptide-synthesis'],
+    },
+    {
       slug: 'glp-1-vs-gip',
       title: 'GLP-1 vs GIP: What Is the Difference?',
       metaTitle: 'GLP-1 vs GIP: What Is the Difference? A Research Explainer',
