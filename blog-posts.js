@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'cyclic-vs-linear-peptides',
+      title: 'Cyclic vs Linear Peptides',
+      metaTitle: 'Cyclic vs Linear Peptides: What Is the Difference?',
+      metaDescription: 'Cyclic vs linear peptides: how the two structural forms differ, why a ring shape changes a peptide behavior, and where each shows up in research.',
+      focusKeyword: 'cyclic vs linear peptides',
+      category: 'Peptide Research',
+      tags: ['cyclic peptides', 'linear peptides', 'peptide structure', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A ring or a chain, and why that single structural choice changes how a peptide behaves.',
+      imageAlt: 'Comparison of cyclic and linear peptide structures in research',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">Peptides come in two broad shapes, and the difference is easy to picture. A linear peptide is a chain with two loose ends. A cyclic peptide is a chain that has been joined into a ring. It sounds like a small detail, but that closed loop changes how the molecule behaves in ways researchers care about.</p>
+
+        <h2>Linear peptides</h2>
+        <p>A linear peptide is the default form: a sequence of <a href="article/amino-acids-peptides-proteins-difference.html">amino acids</a> linked end to end, with a distinct start and finish. Most short research peptides are linear. The two open ends make them straightforward to build by <a href="article/peptide-synthesis.html">solid-phase synthesis</a>, and their flexibility is part of what makes them useful, though it can also make them easier to break down.</p>
+
+        <h2>Cyclic peptides</h2>
+        <p>A cyclic peptide takes that chain and closes it into a loop, usually by forming a bond between two points on the sequence. The ring can be the full backbone or just a portion of it. Removing the loose ends and locking the shape tends to make a cyclic peptide more rigid and, in many cases, more resistant to the enzymes that would chew through a linear one.</p>
+
+        <h2>Why the shape matters</h2>
+        <p>Structure drives behavior. A locked ring holds its atoms in a more fixed arrangement, which can change how tightly and selectively a peptide fits a receptor. It can also affect stability. This is not a small effect. Some research peptides are cyclic by design precisely because the ring gives them properties a linear version would not have. <a href="article/what-is-pt-141.html">PT-141</a> is one example of a cyclic peptide in the research space.</p>
+
+        <h2>How it shows up in practice</h2>
+        <p>For someone handling these compounds, the practical takeaway is simple: the shape is part of the identity. Whether a peptide is cyclic or linear, its structure is confirmed the same way, by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> and purity testing, and reported on its certificate of analysis. The form is a feature of the molecule, not a variable in your workflow.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What is the difference between cyclic and linear peptides?', a: 'A linear peptide is a chain of amino acids with two open ends. A cyclic peptide is a chain joined into a ring. Closing the loop removes the loose ends and locks the shape, which changes rigidity and often stability.' },
+        { q: 'Why are some peptides made cyclic?', a: 'A ring holds the molecule in a more fixed arrangement, which can change how it fits a receptor and can make it more resistant to enzymes that break down linear peptides. Some research peptides are cyclic by design for those reasons.' },
+        { q: 'Is PT-141 a cyclic peptide?', a: 'Yes, PT-141 is an example of a cyclic peptide studied in research. Its structure, like any peptide, is confirmed by mass spectrometry and purity testing and reported on its certificate of analysis.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['peptide-synthesis', 'what-is-pt-141'],
+    },
+    {
       slug: 'molecular-weight-of-peptides',
       title: 'Molecular Weight of Peptides, Explained',
       metaTitle: 'Molecular Weight of Peptides, Explained for Research',
