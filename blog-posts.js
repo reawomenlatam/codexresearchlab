@@ -16,6 +16,47 @@
 
   const POSTS = [
     {
+      slug: 'glp-1-vs-gip',
+      title: 'GLP-1 vs GIP: What Is the Difference?',
+      metaTitle: 'GLP-1 vs GIP: What Is the Difference? A Research Explainer',
+      metaDescription: 'GLP-1 vs GIP: how the two main incretin hormones compare, why they act through different receptors, and what that means for metabolic peptide research.',
+      focusKeyword: 'GLP-1 vs GIP',
+      category: 'Peptide Research',
+      tags: ['GLP-1', 'GIP', 'incretins', 'metabolism', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'Two incretin hormones, two receptors, and the reason researchers keep comparing them.',
+      imageAlt: 'Comparison of GLP-1 and GIP incretin signaling in metabolic research',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">GLP-1 and GIP get mentioned in the same breath so often that it is easy to assume they are two names for the same thing. They are not. They are two different hormones from the same family, and the differences between them are exactly what makes modern metabolic peptides worth studying.</p>
+
+        <h2>What they have in common</h2>
+        <p>Both GLP-1 and GIP are <a href="article/what-are-incretins.html">incretins</a>, gut hormones released in response to nutrients. Both connect to pathways tied to insulin signaling and glucose handling, and both belong to the group of targets that metabolic research peptides are designed to engage. So the shared ground is real: same family, same general job of helping the body respond to incoming glucose.</p>
+
+        <h2>Where they differ</h2>
+        <p>The key difference is that each acts through its own receptor:</p>
+        <ul>
+          <li><b>GLP-1</b> (glucagon-like peptide-1) works through the GLP-1 receptor and is the more heavily studied of the two.</li>
+          <li><b>GIP</b> (glucose-dependent insulinotropic polypeptide) works through the GIP receptor.</li>
+        </ul>
+        <p>Because the receptors are distinct, activating one is not the same as activating the other, even though both feed into glucose regulation. That separation is the whole reason a research question like "what happens when you engage both at once" is even meaningful.</p>
+
+        <h2>Why the comparison matters for peptides</h2>
+        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide.html">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide.html">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are genuinely different receptors is what makes those distinctions make sense.</p>
+
+        <h2>Research use only</h2>
+        <p>This article is background biology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'Are GLP-1 and GIP the same thing?', a: 'No. They are two different incretin hormones from the same family. Each acts through its own receptor, GLP-1 through the GLP-1 receptor and GIP through the GIP receptor, so activating one is not the same as activating the other.' },
+        { q: 'Which is more studied, GLP-1 or GIP?', a: 'GLP-1 has historically been the more heavily studied of the two, though interest in GIP has grown as dual-receptor research peptides became a focus.' },
+        { q: 'Why does the GLP-1 vs GIP difference matter for peptides?', a: 'Research peptides are often described by how many of these receptors they engage. Single, dual, and triple agonists build on the fact that GLP-1 and GIP are distinct receptors that feed into glucose regulation.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-are-incretins', 'what-is-tirzepatide'],
+    },
+    {
       slug: 'what-are-incretins',
       title: 'What Are Incretins? GIP and GLP-1 Explained',
       metaTitle: 'What Are Incretins? GIP and GLP-1 in Metabolic Research',
