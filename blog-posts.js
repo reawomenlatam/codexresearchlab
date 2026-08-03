@@ -16,6 +16,51 @@
 
   const POSTS = [
     {
+      slug: 'what-is-ahk-cu',
+      title: 'What Is AHK-Cu?',
+      metaTitle: 'What Is AHK-Cu? The Copper Tripeptide Explained',
+      metaDescription: 'What is AHK-Cu? A clear look at this copper-binding tripeptide, how it relates to GHK-Cu, and how it is studied in laboratory research on skin and hair follicle biology.',
+      focusKeyword: 'what is AHK-Cu',
+      category: 'Peptide Research',
+      tags: ['AHK-Cu', 'copper peptide', 'tripeptide', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A copper-binding tripeptide that sits close to GHK-Cu, and the research that separates the two.',
+      imageAlt: 'AHK-Cu copper tripeptide research vial with certificate of analysis',
+      image: 'assets/products/ahk-cu.jpg',
+      body: `
+        <p class="lead">AHK-Cu is easy to confuse with its better-known cousin, and the confusion is understandable. It is another short copper-binding peptide, only three amino acids long, and it shows up in the same corners of skin and tissue research as <a href="article/what-is-ghk-cu.html">GHK-Cu</a>. The interesting part is where the two differ.</p>
+
+        <h2>What is AHK-Cu?</h2>
+        <p>AHK-Cu is the copper complex of the tripeptide alanyl-histidyl-lysine, which is where the letters A, H, and K come from. The "Cu" is copper. Its CAS number is 682809-81-0. Like other copper peptides, the sequence binds a copper ion, and much of the research attention sits on that metal-binding behavior rather than on the peptide by itself. If the idea of a three-amino-acid peptide is new, our note on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a> puts it in context.</p>
+
+        <h2>How is it different from GHK-Cu?</h2>
+        <p>GHK-Cu and AHK-Cu share the same basic idea, a tripeptide carrying copper, but the first amino acid is different: glycine in GHK, alanine in AHK. That single change matters to researchers because it can alter how the peptide binds copper and how it behaves in a model system. Comparing closely related sequences like these is a common way to study what a specific residue contributes.</p>
+
+        <h2>How is AHK-Cu studied?</h2>
+        <p>Laboratory work on AHK-Cu tends to focus on:</p>
+        <ul>
+          <li><b>Dermal cell activity:</b> models looking at skin cell proliferation.</li>
+          <li><b>Collagen and connective tissue:</b> research on tissue signaling pathways.</li>
+          <li><b>Hair follicle biology:</b> studies of follicle-related cell behavior in culture.</li>
+        </ul>
+        <p>These are laboratory observations, not conclusions about people or animals. AHK-Cu is supplied strictly as a research compound.</p>
+
+        <h2>Handling and verification</h2>
+        <p>Because AHK-Cu carries a copper ion, confirming its identity and purity is worthwhile. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What does AHK-Cu stand for?', a: 'AHK are the single-letter codes for the amino acids in the tripeptide alanyl-histidyl-lysine, and Cu is the chemical symbol for copper. AHK-Cu is the copper complex of that tripeptide, used strictly for laboratory research.' },
+        { q: 'How is AHK-Cu different from GHK-Cu?', a: 'Both are copper-binding tripeptides, but the first amino acid differs: glycine in GHK-Cu and alanine in AHK-Cu. That change can affect copper binding and behavior in model systems, which is why the two are studied and compared.' },
+        { q: 'How is AHK-Cu verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+      ],
+      references: [],
+      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference'],
+    },
+    {
       slug: 'bacteriostatic-water-for-peptide-reconstitution',
       title: 'Bacteriostatic Water for Peptide Reconstitution',
       metaTitle: 'Bacteriostatic Water for Peptide Reconstitution Explained',
