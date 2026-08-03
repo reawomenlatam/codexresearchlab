@@ -16,6 +16,50 @@
 
   const POSTS = [
     {
+      slug: 'how-to-store-research-peptides',
+      title: 'How to Store Research Peptides',
+      metaTitle: 'How to Store Research Peptides (Lyophilized and Reconstituted)',
+      metaDescription: 'A practical guide to storing research peptides: why lyophilized powder is stable, how a reconstituted solution differs, and the handling habits that protect a batch.',
+      focusKeyword: 'how to store research peptides',
+      category: 'Peptide Research',
+      tags: ['peptide storage', 'lyophilized', 'handling', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'Why the dry powder is forgiving, the solution is not, and the small habits that protect both.',
+      imageAlt: 'Research peptide vials stored cool and protected from light',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">A research peptide can be verified, pure, and correctly identified, and still be wasted by careless storage. The good news is that storage is not complicated. It mostly comes down to understanding that a dry peptide and a dissolved one are two different situations, and the label on the vial is the final word.</p>
+
+        <h2>Lyophilized powder is the stable form</h2>
+        <p>Peptides usually arrive <a href="article/lyophilization-freeze-drying.html">lyophilized</a>, meaning freeze-dried into a dry powder or thin cake. In that state they are relatively forgiving, because the water that drives most degradation has been removed. Kept cool, dry, and away from light, a lyophilized peptide holds up well. The main enemy is moisture, which is why a cold vial should be allowed to warm before it is opened, so condensation does not form inside.</p>
+
+        <h2>A reconstituted solution is less stable</h2>
+        <p>Once a peptide is <a href="article/how-to-reconstitute-a-peptide.html">reconstituted</a> into a liquid, the clock speeds up. A solution is more prone to degradation than the dry powder, so it usually goes into refrigeration and is protected from light. Using bacteriostatic water helps, since its preservative supports drawing from the vial more than once, but even then a solution is not something to leave sitting at room temperature.</p>
+
+        <h2>Small habits that protect a batch</h2>
+        <ul>
+          <li>Let a cold vial reach room temperature before opening to avoid condensation.</li>
+          <li>Keep vials away from direct light.</li>
+          <li>Label a reconstituted vial with the date and concentration so nothing is guessed later.</li>
+          <li>Minimize how long a solution spends warm or exposed.</li>
+        </ul>
+
+        <h2>The label is the final word</h2>
+        <p>General guidance is useful, but the exact storage conditions for a given compound belong on its vial label and its certificate of analysis. Some peptides have specific temperature requirements, and those instructions override any rule of thumb. If you want to confirm a vial is genuine before you rely on it, you can check its <a href="verify.html">batch number</a>.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This guide describes laboratory handling only.</p>
+      `,
+      faq: [
+        { q: 'How should lyophilized research peptides be stored?', a: 'Kept cool, dry, and away from light, a lyophilized (freeze-dried) peptide is relatively stable because the water that drives degradation has been removed. Moisture is the main risk, so let a cold vial warm before opening to avoid condensation.' },
+        { q: 'Does a reconstituted peptide need different storage?', a: 'Yes. Once dissolved, a peptide solution is less stable than the dry powder, so it is usually refrigerated and protected from light. Even with bacteriostatic water, a solution should not be left at room temperature.' },
+        { q: 'What is the most reliable storage guidance?', a: 'The exact conditions on the vial label and certificate of analysis, which override any general rule. Some peptides have specific temperature requirements that should be followed for that compound.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['lyophilization-freeze-drying', 'how-to-reconstitute-a-peptide'],
+    },
+    {
       slug: 'cyclic-vs-linear-peptides',
       title: 'Cyclic vs Linear Peptides',
       metaTitle: 'Cyclic vs Linear Peptides: What Is the Difference?',
