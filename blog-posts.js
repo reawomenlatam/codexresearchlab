@@ -16,6 +16,45 @@
 
   const POSTS = [
     {
+      slug: 'what-are-melanocortin-receptors',
+      title: 'What Are Melanocortin Receptors?',
+      metaTitle: 'What Are Melanocortin Receptors? A Research Explainer',
+      metaDescription: 'What are melanocortin receptors? A clear look at this receptor family, the subtypes researchers study, and how peptides like PT-141 are used to probe them.',
+      focusKeyword: 'melanocortin receptors',
+      category: 'Peptide Research',
+      tags: ['melanocortin receptors', 'PT-141', 'receptor pharmacology', 'research peptides'],
+      date: 'Aug 03, 2026', dateISO: '2026-08-03',
+      excerpt: 'A receptor family behind processes from pigmentation to central signaling, and the peptides used to study it.',
+      imageAlt: 'Concept of melanocortin receptor signaling studied in peptide research',
+      image: 'assets/og-default.png',
+      body: `
+        <p class="lead">When a peptide like <a href="article/what-is-pt-141.html">PT-141</a> is described as a melanocortin receptor agonist, the receptor name does a lot of quiet work. Melanocortin receptors are a whole family, not a single target, and knowing that makes the compounds that act on them much easier to understand.</p>
+
+        <h2>What are melanocortin receptors?</h2>
+        <p>Melanocortin receptors are a family of receptors that respond to a group of signaling molecules called melanocortins. There are several members in the family, usually labeled MC1R through MC5R, and they are spread across different tissues. The name hints at one of their better-known roles, since "melano" points to pigmentation, but the family reaches well beyond that.</p>
+
+        <h2>A family, not one target</h2>
+        <p>The reason researchers care about the distinction is that the subtypes do different things. Some are tied to pigmentation, others to central signaling in the nervous system, and others to processes like energy balance. A compound that acts on the family is not automatically acting on all of it, so a recurring research question is how selectively a given agonist engages one subtype over another. If the word agonist is unfamiliar, our note on <a href="article/agonist-vs-antagonist.html">agonists vs antagonists</a> covers it.</p>
+
+        <h2>Where peptides come in</h2>
+        <p>Peptides that bind these receptors are used as tools to probe the family. PT-141, also known as bremelanotide, is one example studied for its activity at melanocortin receptors, particularly subtypes tied to central signaling. In that setting the peptide is a way to ask what a specific receptor does, and how cleanly a compound can target it.</p>
+
+        <h2>How they are studied</h2>
+        <p>Laboratory work on melanocortin receptors typically looks at receptor binding across subtypes, the signaling pathways each one triggers, and neurobehavioral models tied to central melanocortin activity. These are preclinical, model-based studies. The peptides involved are supplied strictly as research compounds.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        { q: 'What are melanocortin receptors?', a: 'They are a family of receptors that respond to signaling molecules called melanocortins. There are several subtypes, commonly labeled MC1R through MC5R, spread across different tissues and involved in processes from pigmentation to central signaling.' },
+        { q: 'How many melanocortin receptors are there?', a: 'The family is usually described as having five members, MC1R through MC5R. They are found in different tissues and are associated with different processes, which is why selectivity across subtypes is a common research question.' },
+        { q: 'Which peptide acts on melanocortin receptors?', a: 'PT-141, also called bremelanotide, is a well-known example studied as a melanocortin receptor agonist, particularly at subtypes tied to central signaling. It is used strictly for laboratory research.' },
+      ],
+      references: [],
+      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      related: ['what-is-pt-141', 'agonist-vs-antagonist'],
+    },
+    {
       slug: 'agonist-vs-antagonist',
       title: 'Agonist vs Antagonist: A Simple Explanation',
       metaTitle: 'Agonist vs Antagonist: A Simple Explanation for Research',
