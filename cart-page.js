@@ -194,8 +194,31 @@
     if (note) note.textContent = c.note;
   }
 
-  // Pantalla de éxito tras una orden aceptada por correo.
+  // Pantalla de éxito tras una orden aceptada.
   function confirmationView(c) {
+    // Tras un pago crypto el dinero YA se cobró: el texto del flujo Zelle
+    // ("te contactaremos para coordinar el pago") sería falso aquí. Además se
+    // le da un canal directo para que no quede sin saber a quién escribir.
+    if (c.crypto) {
+      const waText = encodeURIComponent(
+        'Hi Codex Research, I just paid order ' + c.id + ' with ' + c.asset + '.' +
+        '\nAmount: $' + c.amount +
+        '\nTransaction: ' + c.tx
+      );
+      return `
+        <div class="order-success">
+          <div class="order-success-mark" aria-hidden="true">✓</div>
+          <h2>Payment received</h2>
+          <p>Thanks! We received your payment for order <b>${esc(c.id)}</b> and verified it on the blockchain.
+          We’re preparing your shipment${c.email ? ` and will email <b>${esc(c.email)}</b> with the tracking details` : ''}.</p>
+          <p class="order-success-sub">
+            Your receipt: <a href="https://etherscan.io/tx/${esc(c.tx)}" target="_blank" rel="noopener">view the transaction ↗</a>
+          </p>
+          <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">${WA_ICON}Message us on WhatsApp</a>
+          <p class="order-success-sub">Any question about your order, write to us and we’ll reply there.</p>
+          <a class="btn" href="catalog.html">Continue shopping</a>
+        </div>`;
+    }
     return `
       <div class="order-success">
         <div class="order-success-mark" aria-hidden="true">✓</div>
@@ -653,7 +676,10 @@
         });
         stageForCapi(s, conf.order_id, cfg);
         trackCoupon(s, conf.order_id, cfg, 'Crypto ' + conf.asset);
-        confirmation = { id: conf.order_id, email: clean(buyer.email) };
+        confirmation = {
+          id: conf.order_id, email: clean(buyer.email),
+          crypto: true, tx: txHash, asset: conf.asset, amount: conf.amount,
+        };
         resetBuyer();
         placing = false;
         cart.detailed().forEach((l) => cart.remove(l.id)); // vacía el carrito → render()
