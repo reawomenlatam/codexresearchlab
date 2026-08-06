@@ -1113,11 +1113,21 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .co-field { display: grid; gap: .28rem; }
 .co-field > span { font-size: .78rem; font-weight: 600; color: var(--ink); }
 .co-field > span em { font-style: normal; font-weight: 400; color: var(--muted); }
-.co-field input, .co-field textarea {
+.co-field input, .co-field textarea, .co-field select {
   width: 100%; padding: .62rem .75rem; border: 1px solid var(--border); border-radius: 10px;
   font: inherit; font-size: .92rem; color: var(--ink); background: var(--card); resize: vertical;
 }
-.co-field input:focus, .co-field textarea:focus { outline: none; border-color: var(--accent); }
+.co-field input:focus, .co-field textarea:focus, .co-field select:focus { outline: none; border-color: var(--accent); }
+/* El desplegable nativo trae su propio look (esquinas duras, fuente del
+   sistema): se apaga y se dibuja la flecha a mano para que combine. */
+.co-field select {
+  -webkit-appearance: none; appearance: none; resize: none; cursor: pointer;
+  padding-right: 2.1rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%236b7078' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right .8rem center;
+}
+.pay-asset { margin-top: .55rem; }
+.pay-asset .pay-note { margin-top: .1rem; }
 .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
 .co-msg { font-size: .85rem; line-height: 1.5; margin: 0; color: var(--muted); }
 .co-msg.err { color: var(--danger); }
