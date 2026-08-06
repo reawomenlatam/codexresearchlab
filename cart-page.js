@@ -494,7 +494,9 @@
     if (loadPaySdk._p) return loadPaySdk._p;
     loadPaySdk._p = new Promise((resolve, reject) => {
       const sc = document.createElement('script');
-      sc.src = 'assets/reown-pay.js';
+      // Se sirve desde nuestro backend, no desde GitHub Pages: sus 4 MB hacían
+      // que el build de Pages tardara ~25 min y fallara la mitad de las veces.
+      sc.src = 'https://hooks.codexresearchlab.com/reown-pay.js';
       sc.async = true;
       sc.onload = () => (window.REAPay ? resolve() : reject(new Error('sdk_unavailable')));
       sc.onerror = () => { loadPaySdk._p = null; reject(new Error('sdk_load_failed')); };
