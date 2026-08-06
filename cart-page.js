@@ -417,6 +417,38 @@
   // Registra el uso de un código (para el panel de influencers). Fire-and-forget:
   // no bloquea ni afecta al cliente aunque el contador esté caído.
   const TRACK_URL = 'https://hooks.codexresearchlab.com/track.php';
+
+  // --- Meta CAPI: guarda el pedido + cookies de atribucion para el Purchase
+  // server-side que se dispara cuando el pedido se confirma por WhatsApp.
+  const CAPI_URL = 'https://hooks.codexresearchlab.com/capi.php';
+  function cookie(name) {
+    const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return m ? m.pop() : '';
+  }
+  function fbcValue() {
+    const c = cookie('_fbc');
+    if (c) return c;
+    const id = new URLSearchParams(location.search).get('fbclid');
+    return id ? 'fb.1.' + Date.now() + '.' + id : '';
+  }
+  function stageForCapi(s, id, cfg) {
+    try {
+      const data = new URLSearchParams({
+        action: 'stage', order_id: id,
+        email: buyer.email || '', phone: buyer.phone || '',
+        first_name: (buyer.name || '').split(' ')[0] || '',
+        city: buyer.city || '', region: buyer.state || '', postal: buyer.postal || '',
+        country: (cfg && cfg.code === 'US') ? 'us' : 'pa',
+        total: s.total.toFixed(2), currency: 'USD',
+        skus: s.lines.map((l) => l.slug).join(','),
+        num_items: String(s.lines.reduce((n, l) => n + l.qty, 0)),
+        fbp: cookie('_fbp'), fbc: fbcValue(),
+        source_url: location.href,
+      });
+      if (navigator.sendBeacon) navigator.sendBeacon(CAPI_URL, data);
+      else fetch(CAPI_URL, { method: 'POST', body: data, keepalive: true, mode: 'no-cors' });
+    } catch (e) { /* nunca romper el checkout por el tracking */ }
+  }
   function trackCoupon(s, id, cfg, methodLabel) {
     if (!(coupon && validCoupon(coupon))) return; // sólo códigos válidos
     try {
@@ -487,6 +519,7 @@
         catch (e) { /* la orden ya te llegó a ti */ }
         fireLead(s);
         trackCoupon(s, id, cfg, 'Zelle');
+        stageForCapi(s, id, cfg);
         confirmation = { id, email: clean(buyer.email) };
         resetBuyer();
         placing = false;
@@ -522,6 +555,7 @@
     placing = true; // evita doble apertura / doble Lead por doble clic
     fireLead(s);
     trackCoupon(s, id, cfg, clean(payLabel));
+    stageForCapi(s, id, cfg);
     window.open(`https://wa.me/${WHATSAPP}?text=${waText}`, '_blank', 'noopener');
     if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Opening WhatsApp… send the message to complete your order.'; }
     setTimeout(() => { placing = false; }, 1500);
