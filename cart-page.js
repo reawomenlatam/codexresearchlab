@@ -159,6 +159,15 @@
                 ${p.id === 'cash' ? '<small class="pay-note">Pay when you receive · no prepayment</small>' : ''}
               </span>
             </label>`).join('')}
+          ${cfg.payments.some((p) => p.id === 'crypto') ? `
+            <div class="co-field pay-asset" id="coAssetRow" ${payId === 'crypto' ? '' : 'hidden'}>
+              <span>Stablecoin</span>
+              <select id="coAsset">
+                <option value="USDC">USDC</option>
+                <option value="USDT">USDT</option>
+              </select>
+              <small class="pay-note">You'll pay from your own wallet on Ethereum. Network fees are paid by you.</small>
+            </div>` : ''}
         </div>
 
         <p class="co-msg" id="coMsg" role="alert" hidden></p>
@@ -347,7 +356,12 @@
 
     // Método de pago: se guarda y sólo actualiza el botón/nota (conserva el formulario).
     root.querySelectorAll('input[name="payMethod"]').forEach((r) => {
-      r.addEventListener('change', () => { localStorage.setItem(PAY_KEY, r.value); updateCheckoutButton(); });
+      r.addEventListener('change', () => {
+        localStorage.setItem(PAY_KEY, r.value);
+        const row = document.getElementById('coAssetRow');
+        if (row) row.hidden = r.value !== 'crypto';
+        updateCheckoutButton();
+      });
     });
 
     // Checkout unificado: conserva lo escrito y coloca la orden (correo o WhatsApp).
@@ -461,6 +475,60 @@
     } catch (e) { /* nunca romper el checkout por el contador */ }
   }
 
+  // ---------- Pago crypto (stablecoins ERC-20 en Ethereum) ----------
+  // El servidor cotiza y verifica en la cadena; aquí sólo se abre la wallet.
+  const CRYPTO_API = 'https://hooks.codexresearchlab.com/crypto-pay.php';
+
+  // El SDK pesa varios MB: se carga SÓLO cuando alguien va a pagar con crypto,
+  // así el resto de los clientes no descargan nada de esto.
+  function loadPaySdk() {
+    if (window.REAPay) return Promise.resolve();
+    if (loadPaySdk._p) return loadPaySdk._p;
+    loadPaySdk._p = new Promise((resolve, reject) => {
+      const sc = document.createElement('script');
+      sc.src = 'assets/reown-pay.js';
+      sc.async = true;
+      sc.onload = () => (window.REAPay ? resolve() : reject(new Error('sdk_unavailable')));
+      sc.onerror = () => { loadPaySdk._p = null; reject(new Error('sdk_load_failed')); };
+      document.head.appendChild(sc);
+    });
+    return loadPaySdk._p;
+  }
+
+  async function cryptoApi(payload) {
+    const r = await fetch(CRYPTO_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    let body = {};
+    try { body = await r.json(); } catch (e) { /* respuesta no-JSON */ }
+    return body;
+  }
+
+  // Tras pagar hay que esperar confirmaciones de la red (~12 s por bloque).
+  async function cryptoConfirm(intentId, txHash, asset, onWait) {
+    for (let i = 0; i < 15; i++) {
+      const b = await cryptoApi({ action: 'confirm', intent_id: intentId, tx_hash: txHash, asset, buyer });
+      if (b.ok) return b;
+      if (!b.pending) throw new Error(b.error || 'not_verified');
+      if (onWait) onWait(b.confirmations || 0);
+      await new Promise((r) => setTimeout(r, 8000));
+    }
+    throw new Error('confirmation_timeout');
+  }
+
+  const CRYPTO_ERRORS = {
+    sdk_load_failed: 'We couldn’t load the payment module. Check your connection and try again.',
+    sdk_unavailable: 'The payment module didn’t start correctly. Please reload the page.',
+    price_mismatch: 'The order total changed. Please review your cart and try again.',
+    monto_insuficiente: 'The amount received was lower than the order total.',
+    hash_ya_usado: 'That transaction was already used for another order.',
+    cotizacion_expirada: 'The quote expired. Please place the order again.',
+    confirmation_timeout: 'Your payment is still confirming on the network.',
+    producto_agotado: 'One of the items just went out of stock.',
+  };
+
   async function placeOrder() {
     if (placing) return;
     const s = compute();
@@ -536,7 +604,79 @@
       return;
     }
 
-    // ---- Demás métodos (US Crypto · Panamá): continúa en WhatsApp con toda la info ----
+    // ---- Ruta Crypto: cobro on-chain, verificado por el servidor ----
+    if (payId === 'crypto') {
+      placing = true;
+      if (msg) msg.hidden = true;
+      const assetEl = document.getElementById('coAsset');
+      const asset = (assetEl && assetEl.value) || 'USDC';
+      const setBtn = (t) => { if (btn) { btn.disabled = true; btn.textContent = t; } };
+      const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = 'Place order'; } };
+      let txHash = null;
+
+      try {
+        setBtn('Preparing payment…');
+        const q = await cryptoApi({
+          action: 'quote', country: cfg.code, coupon: coupon || '',
+          items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
+        });
+        if (!q.ok) throw new Error(q.error || 'quote_failed');
+        // El servidor manda sobre el precio; si no coincide con lo que ve el
+        // cliente, se detiene en vez de cobrar un importe distinto al mostrado.
+        if (Math.abs(Number(q.amount) - s.total) > 0.01) throw new Error('price_mismatch');
+
+        setBtn('Opening wallet…');
+        await loadPaySdk();
+
+        setBtn('Confirm in your wallet…');
+        const res = await window.REAPay.pay({ asset, amount: Number(q.amount), recipient: q.recipient });
+        if (!res.success) throw new Error(res.error || 'cancelled');
+        txHash = res.txHash;
+
+        setBtn('Verifying payment…');
+        const conf = await cryptoConfirm(q.intent_id, txHash, res.asset, (c) => setBtn('Confirming… ' + c + '/3'));
+
+        if (typeof fbq === 'function') fbq('track', 'Purchase', { value: Number(conf.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
+        if (typeof gtag === 'function') gtag('event', 'purchase', {
+          transaction_id: conf.order_id, value: Number(conf.amount), currency: 'USD',
+          items: s.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),
+        });
+        stageForCapi(s, conf.order_id, cfg);
+        trackCoupon(s, conf.order_id, cfg, 'Crypto ' + conf.asset);
+        confirmation = { id: conf.order_id, email: clean(buyer.email) };
+        resetBuyer();
+        placing = false;
+        cart.detailed().forEach((l) => cart.remove(l.id)); // vacía el carrito → render()
+        render();
+      } catch (err) {
+        restore();
+        const code = String(err && err.message ? err.message : err);
+        if (code === 'cancelled' || /reject|denied|cancel/i.test(code)) {
+          if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Payment cancelled. Your cart is untouched.'; }
+          return;
+        }
+        // Caso delicado: el dinero YA salió pero no pudimos cerrar la orden.
+        // Nunca dejar al cliente sin comprobante: se le muestra el hash y un
+        // canal directo para que no pierda ni el pago ni el pedido.
+        if (txHash) {
+          const waMsg = 'Hi Codex Research, I paid order ' + id + ' with ' + asset +
+            ' but the site could not confirm it.\nTransaction: ' + txHash + '\nTotal: ' + money(s.total);
+          const link = document.createElement('a');
+          link.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(waMsg);
+          link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'send us the receipt on WhatsApp';
+          if (msg) {
+            msg.className = 'co-msg err'; msg.hidden = false; msg.textContent = '';
+            msg.append('Your payment went through, but we couldn’t confirm it automatically (' +
+              (CRYPTO_ERRORS[code] || code) + ') Transaction ' + txHash + '. Please ', link, ' and we’ll release your order.');
+          }
+          return;
+        }
+        setErr(CRYPTO_ERRORS[code] || 'We couldn’t start the payment. Please try again or contact us.');
+      }
+      return;
+    }
+
+    // ---- Demás métodos (Panamá): continúa en WhatsApp con toda la info ----
     const waText = encodeURIComponent(
       'Hi Codex Research, I’d like to place this order:\n' +
       s.lines.map((l) => `• ${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n') +

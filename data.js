@@ -167,7 +167,7 @@ const COUNTRIES = {
     eta: 'Delivery in up to 5 days', etaShort: 'up to 5 days',
     payments: [
       { id: 'zelle', label: 'Zelle' },
-      { id: 'crypto', label: 'Crypto (USDT · USDC · BTC)' },
+      { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
     ],
   },
   PA: {
