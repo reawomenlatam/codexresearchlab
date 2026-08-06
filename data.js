@@ -177,6 +177,7 @@ const COUNTRIES = {
     payments: [
       { id: 'yappy', label: 'Yappy' },
       { id: 'ach', label: 'ACH transfer' },
+      { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
       { id: 'cash', label: 'Cash on delivery' },
     ],
   },
