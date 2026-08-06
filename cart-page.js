@@ -109,9 +109,17 @@
   }
 
   // Texto del botón / nota según el método (Zelle envía correo; el resto, WhatsApp).
-  const checkoutLabel = (cfg, payId) => (isEmailFlow(cfg, payId)
-    ? { btn: 'Place order', icon: '', note: 'We’ll email you a confirmation and contact you to arrange your Zelle payment. No charge happens here.' }
-    : { btn: 'Continue on WhatsApp', icon: WA_ICON, note: 'We’ll confirm your order and payment details on WhatsApp. No charge happens here.' });
+  const checkoutLabel = (cfg, payId) => {
+    // Crypto es el único método que cobra de verdad en este paso: el botón y la
+    // nota tienen que decirlo, no prometer "no charge happens here".
+    if (payId === 'crypto') {
+      return { btn: 'Pay with crypto', icon: '',
+        note: 'You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm — network fees are paid by you.' };
+    }
+    return isEmailFlow(cfg, payId)
+      ? { btn: 'Place order', icon: '', note: 'We’ll email you a confirmation and contact you to arrange your Zelle payment. No charge happens here.' }
+      : { btn: 'Continue on WhatsApp', icon: WA_ICON, note: 'We’ll confirm your order and payment details on WhatsApp. No charge happens here.' };
+  };
 
   // Formulario único de checkout (US y Panamá, todos los métodos):
   // contacto + dirección obligatorios → método de pago → pagar.
@@ -611,7 +619,7 @@
       const assetEl = document.getElementById('coAsset');
       const asset = (assetEl && assetEl.value) || 'USDC';
       const setBtn = (t) => { if (btn) { btn.disabled = true; btn.textContent = t; } };
-      const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = 'Place order'; } };
+      const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = 'Pay with crypto'; } };
       let txHash = null;
 
       try {
