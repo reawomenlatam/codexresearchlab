@@ -39,22 +39,22 @@ const PRODUCTS = [
   },
   {
     slug: 'mots-c', name: 'MOTS-c', cas: '1627580-64-6', tag: 'CAS # 1627580-64-6',
-    mg: '10 mg', from: 65, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
+    mg: '10 mg', from: 85, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
     photo: 'assets/products/mots-c.jpg',
     sizes: [
-      { label: 'Single vial', price: 65 },
-      { label: 'Pack · 3 vials', price: 179.40, save: '8%' },
+      { label: 'Single vial', price: 85 },
+      { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
     ],
     overview: 'MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeostasis and cell signaling.',
     research: ['Metabolic homeostasis', 'Mitochondrial function', 'Cell signaling'],
   },
   {
     slug: 'ipamorelin', name: 'Ipamorelin', cas: '170851-70-4', tag: 'CAS # 170851-70-4',
-    mg: '10 mg', from: 75, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
+    mg: '10 mg', from: 89, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
     photo: 'assets/products/ipamorelin.jpg',
     sizes: [
-      { label: 'Single vial', price: 75 },
-      { label: 'Pack · 3 vials', price: 207.00, save: '8%' },
+      { label: 'Single vial', price: 89 },
+      { label: 'Pack · 3 vials', price: 245.64, save: '8%' },
     ],
     overview: 'Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation.',
     research: ['GH secretagogues', 'Ghrelin receptor', 'Endocrine regulation'],
@@ -72,11 +72,11 @@ const PRODUCTS = [
   },
   {
     slug: 'pt-141', name: 'PT-141', cas: '189691-06-3', tag: 'CAS # 189691-06-3',
-    mg: '10 mg', from: 65, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
+    mg: '10 mg', from: 85, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
     photo: 'assets/products/pt-141.jpg',
     sizes: [
-      { label: 'Single vial', price: 65 },
-      { label: 'Pack · 3 vials', price: 179.40, save: '8%' },
+      { label: 'Single vial', price: 85 },
+      { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
     ],
     overview: 'PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of receptor signaling and neurobehavioral pathways.',
     research: ['Melanocortin signaling', 'Receptor binding', 'Neurobehavioral models'],
