@@ -144,7 +144,7 @@
         <div class="cart-empty">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           <p>Your cart is empty.</p>
-          <a class="btn btn-primary" href="catalog.html">View catalog</a>
+          <a class="btn btn-primary" href="catalog/">View catalog</a>
         </div>`;
       footEl.innerHTML = '';
       return;
@@ -191,7 +191,7 @@
     footEl.innerHTML = `
       ${shipHint}
       <div class="cart-total-row"><span>Subtotal</span><b>${money(total())}</b></div>
-      <a class="btn btn-primary cart-checkout" href="cart.html">Checkout</a>
+      <a class="btn btn-primary cart-checkout" href="cart/">Checkout</a>
       <button class="cart-continue-link" data-cart-continue>Continue shopping</button>`;
 
     // Las imágenes recién inyectadas necesitan la clase .loaded o el fade-in

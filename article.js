@@ -15,7 +15,7 @@
       <section class="section"><div class="container" style="text-align:center;">
         <h1>Article not found</h1>
         <p style="color:var(--muted);margin:.6rem 0 1.4rem;">This article doesn’t exist or was moved.</p>
-        <a class="btn btn-primary" href="blog.html">Back to the blog</a>
+        <a class="btn btn-primary" href="blog/">Back to the blog</a>
       </div></section>`;
     return;
   }
@@ -27,7 +27,7 @@
     if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
     el.setAttribute('content', val);
   };
-  const url = `${SITE}/article/${p.slug}.html`;
+  const url = `${SITE}/article/${p.slug}/`;
   setMeta('description', p.metaDescription);
   setMeta('og:title', p.metaTitle, 'property');
   setMeta('og:description', p.metaDescription, 'property');
@@ -62,7 +62,7 @@
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog.html` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
       { '@type': 'ListItem', position: 3, name: p.title, item: url },
     ],
   };
@@ -93,7 +93,7 @@
     .map((s) => POSTS.find((x) => x.slug === s))
     .filter(Boolean)
     .map((r) => `
-      <a class="blog-card" href="article/${r.slug}.html">
+      <a class="blog-card" href="article/${r.slug}/">
         <div class="blog-card-body">
           <span class="blog-tag">${r.category} · ${r.date}</span>
           <h3>${r.title}</h3>
@@ -109,8 +109,8 @@
     <article>
       <div class="container">
         <nav class="breadcrumb">
-          <a href="index.html">Home</a> <span>/</span>
-          <a href="blog.html">Blog</a> <span>/</span>
+          <a href="/">Home</a> <span>/</span>
+          <a href="blog/">Blog</a> <span>/</span>
           <span>${p.title}</span>
         </nav>
         <header class="article-head">

@@ -82,11 +82,11 @@
   function itemRow(l) {
     return `
       <div class="ci-row">
-        <a class="ci-thumb" href="product/${l.slug}.html">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" width="1400" height="933" loading="lazy">` : ui.vial(l.name, l.size)}</a>
+        <a class="ci-thumb" href="product/${l.slug}/">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" width="1400" height="933" loading="lazy">` : ui.vial(l.name, l.size)}</a>
         <div class="ci-body">
           <div class="ci-head">
             <div>
-              <a class="ci-name" href="product/${l.slug}.html">${l.name}</a>
+              <a class="ci-name" href="product/${l.slug}/">${l.name}</a>
               <div class="ci-meta"><span class="mono-tag">${l.size}</span> · ${stockNote(l.stock)}</div>
             </div>
             <button class="ci-rm" data-act="rm" data-id="${l.id}" aria-label="Remove ${l.name}">
@@ -216,7 +216,7 @@
           </p>
           <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">${WA_ICON}Message us on WhatsApp</a>
           <p class="order-success-sub">Any question about your order, write to us and we’ll reply there.</p>
-          <a class="btn" href="catalog.html">Continue shopping</a>
+          <a class="btn" href="catalog/">Continue shopping</a>
         </div>`;
     }
     return `
@@ -226,7 +226,7 @@
         <p>Thanks! Your order <b>${esc(c.id)}</b> has been accepted. We’ve emailed a confirmation to
         <b>${esc(c.email)}</b>, and our team will contact you shortly to arrange your Zelle payment and shipping.</p>
         <p class="order-success-sub">Didn’t get the email? Check your spam folder, or write to us at ${esc(EMAILJS.merchantEmail || '')}.</p>
-        <a class="btn btn-primary" href="catalog.html">Continue shopping</a>
+        <a class="btn btn-primary" href="catalog/">Continue shopping</a>
       </div>`;
   }
 
@@ -310,7 +310,7 @@
         <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <h2>Your cart is empty</h2>
         <p>Browse our verified compounds. Every batch ships with its certificate of analysis.</p>
-        <a class="btn btn-primary" href="catalog.html">Browse catalog</a>
+        <a class="btn btn-primary" href="catalog/">Browse catalog</a>
       </div>
       <section class="cross-sell">
         <div class="section-head" style="margin-bottom:1.4rem;"><h2>Popular right now</h2></div>
@@ -334,7 +334,7 @@
           <div class="cartpage-main">
             ${shipProgress(s.subtotal)}
             <div class="cartpage-items">${s.lines.map(itemRow).join('')}</div>
-            <a class="cartpage-continue" href="catalog.html">← Continue shopping</a>
+            <a class="cartpage-continue" href="catalog/">← Continue shopping</a>
           </div>
           ${summary(s)}
         </div>

@@ -200,7 +200,7 @@ const EMAILJS = {
   merchantEmail: 'sales@codexresearchlab.com',
 };
 
-// Lotes válidos (verify.html). Clave = número de lote. Valor = datos del producto
+// Lotes válidos (/verify/). Clave = número de lote. Valor = datos del producto
 // (o null para un lote genérico/universal). Agrega o actualiza aquí.
 const BATCHES = {
   'CDX-2607-001': { product: 'Retatrutide', slug: 'retatrutide', mg: '10 mg' },

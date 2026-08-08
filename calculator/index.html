@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Reconstitution calculator | Codex Research</title>
+  <meta name="description" content="Free reconstitution and concentration calculator for research peptides. Register to unlock: enter vial strength and bacteriostatic water to get concentration and syringe units.">
+  <link rel="canonical" href="https://codexresearchlab.com/calculator/">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1874303056875425');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1874303056875425&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body data-nav="calculator">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="mono-tag">Research tools</span>
+      <h1>Reconstitution calculator</h1>
+      <p>Work out the concentration of your reconstituted vial and how many insulin-syringe units a given amount equals. Register once to unlock it.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1.4rem;">
+    <div class="container calc-wrap">
+
+      <!-- Gate de registro -->
+      <div class="tool-gate" id="toolGate">
+        <div class="tool-gate-card">
+          <span class="mono-tag">Free access</span>
+          <h2>Register to unlock the calculator</h2>
+          <p>Enter your details once and get instant access. We’ll only use them to help you with your research orders.</p>
+          <form class="lead-form" id="leadForm" novalidate>
+            <label class="co-field"><span>Full name</span>
+              <input type="text" id="leadName" maxlength="80" autocomplete="name" placeholder="First and last name" required></label>
+            <label class="co-field"><span>Email</span>
+              <input type="email" id="leadEmail" maxlength="120" autocomplete="email" placeholder="you@email.com" required></label>
+            <label class="co-field"><span>WhatsApp</span>
+              <input type="tel" id="leadPhone" maxlength="30" autocomplete="tel" placeholder="Incl. country code" required></label>
+            <p class="lead-msg" id="leadMsg" role="alert" hidden></p>
+            <button type="submit" class="btn btn-primary" id="leadSubmit">Unlock the calculator</button>
+            <p class="lead-fine">By registering you agree to our <a href="terms/">Terms</a> and <a href="privacy/">Privacy Policy</a>. Research use only.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Calculadora (oculta hasta registrarse) -->
+      <div class="tool-calc" id="toolCalc" hidden>
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label class="co-field"><span>Peptide in vial (mg)</span>
+              <input type="number" id="inVial" min="0" step="any" inputmode="decimal" placeholder="e.g. 10"></label>
+            <label class="co-field"><span>Bacteriostatic water added (mL)</span>
+              <input type="number" id="inWater" min="0" step="any" inputmode="decimal" placeholder="e.g. 2"></label>
+            <div class="co-field">
+              <span>Target amount per draw <em>(optional)</em></span>
+              <div class="calc-dose">
+                <input type="number" id="inDose" min="0" step="any" inputmode="decimal" placeholder="e.g. 250">
+                <select id="inDoseUnit" aria-label="Unit">
+                  <option value="mcg">mcg</option>
+                  <option value="mg">mg</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-out" id="calcOut" hidden></div>
+            <p class="calc-hint" id="calcHint">Enter the vial strength and the water you added to see the concentration.</p>
+          </div>
+        </div>
+        <p class="calc-disclaimer">
+          <b>Research and laboratory measurement only.</b> This tool performs unit math with the values
+          you enter. It does not recommend any dose and is not medical, veterinary, or health advice.
+          All products are sold strictly for laboratory research and are not for human or animal consumption.
+          Always confirm measurements independently.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="calculator.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
