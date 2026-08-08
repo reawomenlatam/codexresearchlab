@@ -1,6 +1,6 @@
 /* Codex Research - blog content (7 SEO posts, topic cluster).
    Adapted from the Direct Peptides SEO package: brand → Codex Research,
-   internal links → article.html?slug=…, /shop → catalog.html.
+   internal links → article/<slug>/, /shop → catalog/.
    Exposed on window.REA.POSTS (array, ordered for the blog listing).
    Each post: slug, title, metaTitle, metaDescription, category, tags,
    date (display), dateISO, excerpt, imageAlt, body(HTML), faq[], references[],
@@ -34,13 +34,13 @@
         <p>Endotoxins are components of the outer membrane of certain bacteria, specifically a molecule called lipopolysaccharide. They can be left behind even after the bacteria themselves are gone, and they are notably tough, surviving conditions that would destroy the organism. In a research context they are treated as a contaminant to be measured and kept low, because they can interfere with sensitive biological assays.</p>
 
         <h2>Why purity testing does not catch them</h2>
-        <p>This is the key point. A <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> purity result and a <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> identity check tell you about the peptide itself, how much of it there is and whether it is the right molecule. Neither is designed to detect endotoxin. A peptide can be highly pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.</p>
+        <p>This is the key point. A <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> purity result and a <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> identity check tell you about the peptide itself, how much of it there is and whether it is the right molecule. Neither is designed to detect endotoxin. A peptide can be highly pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.</p>
 
         <h2>How endotoxins are measured</h2>
         <p>Endotoxin content is usually reported in endotoxin units per milligram, written as EU/mg. A lower number is better. On a certificate of analysis you might see a limit expressed as less than a certain value, for example under 0.5 EU/mg, which states an upper bound rather than an exact count. The takeaway is not the specific method but the fact that it is a distinct measurement with its own units.</p>
 
         <h2>Where it fits in quality</h2>
-        <p>Think of endotoxin as the third leg of a stool. Identity says the compound is correct, purity says little else is present, and endotoxin says a specific biological contaminant is controlled. Not every research use requires endotoxin testing, but when an assay is sensitive to it, the figure belongs on the <a href="article/how-to-read-a-certificate-of-analysis.html">certificate of analysis</a> alongside the others.</p>
+        <p>Think of endotoxin as the third leg of a stool. Identity says the compound is correct, purity says little else is present, and endotoxin says a specific biological contaminant is controlled. Not every research use requires endotoxin testing, but when an assay is sensitive to it, the figure belongs on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> alongside the others.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -51,7 +51,7 @@
         { q: 'How are endotoxins measured?', a: 'Endotoxin content is usually reported in endotoxin units per milligram (EU/mg), where lower is better. A certificate of analysis may state an upper bound, such as less than 0.5 EU/mg.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-read-a-certificate-of-analysis', 'peptide-purity-hplc-explained'],
     },
     {
@@ -70,12 +70,12 @@
         <p class="lead">Peptide descriptions are full of prefixes: di, tri, penta, oligo, poly. They are not decoration. Each one is just counting amino acids, and once you know the pattern, a term like pentapeptide tells you something concrete before you read another word.</p>
 
         <h2>Counting by amino acids</h2>
-        <p>A peptide is a chain of <a href="article/amino-acids-peptides-proteins-difference.html">amino acids</a> linked together. The prefix in its name usually tells you how many links are in the chain. The most common ones you will run into are:</p>
+        <p>A peptide is a chain of <a href="article/amino-acids-peptides-proteins-difference/">amino acids</a> linked together. The prefix in its name usually tells you how many links are in the chain. The most common ones you will run into are:</p>
         <ul>
           <li><b>Dipeptide:</b> two amino acids.</li>
-          <li><b>Tripeptide:</b> three amino acids, like the copper peptides <a href="article/what-is-ghk-cu.html">GHK-Cu</a> and AHK-Cu.</li>
-          <li><b>Pentapeptide:</b> five amino acids, like <a href="article/what-is-ipamorelin.html">ipamorelin</a>.</li>
-          <li><b>Pentadecapeptide:</b> fifteen amino acids, like <a href="article/what-is-bpc-157.html">BPC-157</a>.</li>
+          <li><b>Tripeptide:</b> three amino acids, like the copper peptides <a href="article/what-is-ghk-cu/">GHK-Cu</a> and AHK-Cu.</li>
+          <li><b>Pentapeptide:</b> five amino acids, like <a href="article/what-is-ipamorelin/">ipamorelin</a>.</li>
+          <li><b>Pentadecapeptide:</b> fifteen amino acids, like <a href="article/what-is-bpc-157/">BPC-157</a>.</li>
         </ul>
 
         <h2>Oligopeptides and polypeptides</h2>
@@ -85,7 +85,7 @@
         <p>There is no hard, universally agreed number where a long peptide officially becomes a protein. As a rough convention, chains of up to around fifty amino acids are usually called peptides, and larger folded structures are called proteins. The line is fuzzy on purpose, because the more meaningful difference is often about folding and function, not just length.</p>
 
         <h2>Why the terms are useful</h2>
-        <p>For anyone reading a catalog, the length prefix is a fast orientation. It hints at how large a molecule is, which relates to its <a href="article/molecular-weight-of-peptides.html">molecular weight</a> and, loosely, to how it is handled. A tripeptide and a pentadecapeptide are very different molecules, and their names say so up front.</p>
+        <p>For anyone reading a catalog, the length prefix is a fast orientation. It hints at how large a molecule is, which relates to its <a href="article/molecular-weight-of-peptides/">molecular weight</a> and, loosely, to how it is handled. A tripeptide and a pentadecapeptide are very different molecules, and their names say so up front.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -96,7 +96,7 @@
         { q: 'At what length does a peptide become a protein?', a: 'There is no strict cutoff, but as a rough convention chains of up to around fifty amino acids are called peptides and larger folded structures are called proteins. The more meaningful difference is often folding and function.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['amino-acids-peptides-proteins-difference', 'molecular-weight-of-peptides'],
     },
     {
@@ -115,10 +115,10 @@
         <p class="lead">A research peptide can be verified, pure, and correctly identified, and still be wasted by careless storage. The good news is that storage is not complicated. It mostly comes down to understanding that a dry peptide and a dissolved one are two different situations, and the label on the vial is the final word.</p>
 
         <h2>Lyophilized powder is the stable form</h2>
-        <p>Peptides usually arrive <a href="article/lyophilization-freeze-drying.html">lyophilized</a>, meaning freeze-dried into a dry powder or thin cake. In that state they are relatively forgiving, because the water that drives most degradation has been removed. Kept cool, dry, and away from light, a lyophilized peptide holds up well. The main enemy is moisture, which is why a cold vial should be allowed to warm before it is opened, so condensation does not form inside.</p>
+        <p>Peptides usually arrive <a href="article/lyophilization-freeze-drying/">lyophilized</a>, meaning freeze-dried into a dry powder or thin cake. In that state they are relatively forgiving, because the water that drives most degradation has been removed. Kept cool, dry, and away from light, a lyophilized peptide holds up well. The main enemy is moisture, which is why a cold vial should be allowed to warm before it is opened, so condensation does not form inside.</p>
 
         <h2>A reconstituted solution is less stable</h2>
-        <p>Once a peptide is <a href="article/how-to-reconstitute-a-peptide.html">reconstituted</a> into a liquid, the clock speeds up. A solution is more prone to degradation than the dry powder, so it usually goes into refrigeration and is protected from light. Using bacteriostatic water helps, since its preservative supports drawing from the vial more than once, but even then a solution is not something to leave sitting at room temperature.</p>
+        <p>Once a peptide is <a href="article/how-to-reconstitute-a-peptide/">reconstituted</a> into a liquid, the clock speeds up. A solution is more prone to degradation than the dry powder, so it usually goes into refrigeration and is protected from light. Using bacteriostatic water helps, since its preservative supports drawing from the vial more than once, but even then a solution is not something to leave sitting at room temperature.</p>
 
         <h2>Small habits that protect a batch</h2>
         <ul>
@@ -129,7 +129,7 @@
         </ul>
 
         <h2>The label is the final word</h2>
-        <p>General guidance is useful, but the exact storage conditions for a given compound belong on its vial label and its certificate of analysis. Some peptides have specific temperature requirements, and those instructions override any rule of thumb. If you want to confirm a vial is genuine before you rely on it, you can check its <a href="verify.html">batch number</a>.</p>
+        <p>General guidance is useful, but the exact storage conditions for a given compound belong on its vial label and its certificate of analysis. Some peptides have specific temperature requirements, and those instructions override any rule of thumb. If you want to confirm a vial is genuine before you rely on it, you can check its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This guide describes laboratory handling only.</p>
@@ -140,7 +140,7 @@
         { q: 'What is the most reliable storage guidance?', a: 'The exact conditions on the vial label and certificate of analysis, which override any general rule. Some peptides have specific temperature requirements that should be followed for that compound.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['lyophilization-freeze-drying', 'how-to-reconstitute-a-peptide'],
     },
     {
@@ -159,16 +159,16 @@
         <p class="lead">Peptides come in two broad shapes, and the difference is easy to picture. A linear peptide is a chain with two loose ends. A cyclic peptide is a chain that has been joined into a ring. It sounds like a small detail, but that closed loop changes how the molecule behaves in ways researchers care about.</p>
 
         <h2>Linear peptides</h2>
-        <p>A linear peptide is the default form: a sequence of <a href="article/amino-acids-peptides-proteins-difference.html">amino acids</a> linked end to end, with a distinct start and finish. Most short research peptides are linear. The two open ends make them straightforward to build by <a href="article/peptide-synthesis.html">solid-phase synthesis</a>, and their flexibility is part of what makes them useful, though it can also make them easier to break down.</p>
+        <p>A linear peptide is the default form: a sequence of <a href="article/amino-acids-peptides-proteins-difference/">amino acids</a> linked end to end, with a distinct start and finish. Most short research peptides are linear. The two open ends make them straightforward to build by <a href="article/peptide-synthesis/">solid-phase synthesis</a>, and their flexibility is part of what makes them useful, though it can also make them easier to break down.</p>
 
         <h2>Cyclic peptides</h2>
         <p>A cyclic peptide takes that chain and closes it into a loop, usually by forming a bond between two points on the sequence. The ring can be the full backbone or just a portion of it. Removing the loose ends and locking the shape tends to make a cyclic peptide more rigid and, in many cases, more resistant to the enzymes that would chew through a linear one.</p>
 
         <h2>Why the shape matters</h2>
-        <p>Structure drives behavior. A locked ring holds its atoms in a more fixed arrangement, which can change how tightly and selectively a peptide fits a receptor. It can also affect stability. This is not a small effect. Some research peptides are cyclic by design precisely because the ring gives them properties a linear version would not have. <a href="article/what-is-pt-141.html">PT-141</a> is one example of a cyclic peptide in the research space.</p>
+        <p>Structure drives behavior. A locked ring holds its atoms in a more fixed arrangement, which can change how tightly and selectively a peptide fits a receptor. It can also affect stability. This is not a small effect. Some research peptides are cyclic by design precisely because the ring gives them properties a linear version would not have. <a href="article/what-is-pt-141/">PT-141</a> is one example of a cyclic peptide in the research space.</p>
 
         <h2>How it shows up in practice</h2>
-        <p>For someone handling these compounds, the practical takeaway is simple: the shape is part of the identity. Whether a peptide is cyclic or linear, its structure is confirmed the same way, by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> and purity testing, and reported on its certificate of analysis. The form is a feature of the molecule, not a variable in your workflow.</p>
+        <p>For someone handling these compounds, the practical takeaway is simple: the shape is part of the identity. Whether a peptide is cyclic or linear, its structure is confirmed the same way, by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> and purity testing, and reported on its certificate of analysis. The form is a feature of the molecule, not a variable in your workflow.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -179,7 +179,7 @@
         { q: 'Is PT-141 a cyclic peptide?', a: 'Yes, PT-141 is an example of a cyclic peptide studied in research. Its structure, like any peptide, is confirmed by mass spectrometry and purity testing and reported on its certificate of analysis.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['peptide-synthesis', 'what-is-pt-141'],
     },
     {
@@ -201,13 +201,13 @@
         <p>Molecular weight is the mass of one molecule, added up from the masses of all its atoms. For a peptide, that means summing the amino acids in the sequence, minus the water lost each time two of them join. The result is expressed in grams per mole (g/mol), or equivalently in daltons. A larger peptide with more amino acids has a higher molecular weight, which is why a compound like tirzepatide sits far above a small tripeptide.</p>
 
         <h2>Where the number comes from</h2>
-        <p>The molecular weight follows directly from the molecular formula, the count of each type of atom in the molecule. If you know the formula, the weight is just arithmetic. That is why a good listing shows both, for example a formula like C62H98N16O22 alongside a weight near 1419 g/mol for <a href="article/what-is-bpc-157.html">BPC-157</a>. The two are tied together.</p>
+        <p>The molecular weight follows directly from the molecular formula, the count of each type of atom in the molecule. If you know the formula, the weight is just arithmetic. That is why a good listing shows both, for example a formula like C62H98N16O22 alongside a weight near 1419 g/mol for <a href="article/what-is-bpc-157/">BPC-157</a>. The two are tied together.</p>
 
         <h2>Why it matters for identity</h2>
-        <p>Molecular weight is the anchor of an identity check. When a lab runs <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, it measures the mass of the molecule and compares it with the expected molecular weight. A match is strong evidence that the compound is the intended peptide. A mismatch is a red flag. This is the second half of the story that a purity figure alone cannot tell you.</p>
+        <p>Molecular weight is the anchor of an identity check. When a lab runs <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, it measures the mass of the molecule and compares it with the expected molecular weight. A match is strong evidence that the compound is the intended peptide. A mismatch is a red flag. This is the second half of the story that a purity figure alone cannot tell you.</p>
 
         <h2>Why it matters for reconstitution</h2>
-        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, or plan how to <a href="article/how-to-reconstitute-a-peptide.html">reconstitute a vial</a>, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, and our <a href="calculator.html">reconstitution calculator</a> handles that, but the molecular weight is the value underneath any mole-based calculation.</p>
+        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, or plan how to <a href="article/how-to-reconstitute-a-peptide/">reconstitute a vial</a>, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, and our <a href="calculator/">reconstitution calculator</a> handles that, but the molecular weight is the value underneath any mole-based calculation.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -218,7 +218,7 @@
         { q: 'Why does molecular weight matter in the lab?', a: 'It anchors identity checks, since mass spectrometry compares the measured mass with the expected molecular weight, and it underlies any mole-based reconstitution or concentration calculation.' },
       ],
       references: [],
-      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a>, which lists the formula and molecular weight of each compound, or try the <a href="calculator.html">reconstitution calculator</a>.',
+      cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, which lists the formula and molecular weight of each compound, or try the <a href="calculator/">reconstitution calculator</a>.',
       related: ['mass-spectrometry-peptide-research', 'how-to-reconstitute-a-peptide'],
     },
     {
@@ -243,10 +243,10 @@
         <p>A CAS number is written as three groups of digits separated by hyphens, in the pattern of a longer group, then two digits, then a single digit, for example 137525-51-0. That final single digit is a check digit, calculated from the others, which lets software catch a typo. The digits themselves carry no hidden meaning about the structure. They are just a registry entry, like a catalog number.</p>
 
         <h2>Why it appears on peptide listings</h2>
-        <p>Research peptides often have overlapping names and abbreviations, so a CAS number is a precise way to confirm which compound is being sold. On the Codex Research catalog you will see the CAS number listed with each product, for instance <a href="article/what-is-bpc-157.html">BPC-157</a> at 137525-51-0. It is a small detail that makes the listing verifiable rather than just descriptive.</p>
+        <p>Research peptides often have overlapping names and abbreviations, so a CAS number is a precise way to confirm which compound is being sold. On the Codex Research catalog you will see the CAS number listed with each product, for instance <a href="article/what-is-bpc-157/">BPC-157</a> at 137525-51-0. It is a small detail that makes the listing verifiable rather than just descriptive.</p>
 
         <h2>Using it to check a compound</h2>
-        <p>Because a CAS number is unique, you can use it to look a substance up in public chemical databases and confirm you are dealing with the compound you expect. Paired with a <a href="article/how-to-read-a-certificate-of-analysis.html">certificate of analysis</a> and a verifiable batch number, it is part of how a research supplier makes its material traceable rather than anonymous.</p>
+        <p>Because a CAS number is unique, you can use it to look a substance up in public chemical databases and confirm you are dealing with the compound you expect. Paired with a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> and a verifiable batch number, it is part of how a research supplier makes its material traceable rather than anonymous.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -257,7 +257,7 @@
         { q: 'Why do research peptides list a CAS number?', a: 'Peptides often have several names and abbreviations, so a CAS number is an unambiguous way to identify the exact compound. It also lets you look the substance up in public chemical databases to confirm it.' },
       ],
       references: [],
-      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a>, where each product lists its CAS number, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, where each product lists its CAS number, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
     },
     {
@@ -276,13 +276,13 @@
         <p class="lead">A certificate of analysis, or COA, is the document that turns a claim on a label into something checkable. For research peptides it is the single most useful piece of paper you will handle, and yet most people glance at the purity number and move on. Here is how to read the rest of it.</p>
 
         <h2>Batch or lot number</h2>
-        <p>Every COA is tied to a specific batch, and the batch number is the link between the paper and the vial in your hand. If the number on the document does not match the number on the label, the COA does not describe your material. This is also the number you would enter to <a href="verify.html">verify a batch</a> is genuine.</p>
+        <p>Every COA is tied to a specific batch, and the batch number is the link between the paper and the vial in your hand. If the number on the document does not match the number on the label, the COA does not describe your material. This is also the number you would enter to <a href="verify/">verify a batch</a> is genuine.</p>
 
         <h2>Purity</h2>
-        <p>Purity is usually reported as a percentage from <a href="article/peptide-purity-hplc-explained.html">HPLC</a>, often near 99 percent. It tells you how much of the sample is the target peptide versus everything else the method detected. A high figure with a clean result is a good sign, but remember that purity alone does not confirm what the peptide is.</p>
+        <p>Purity is usually reported as a percentage from <a href="article/peptide-purity-hplc-explained/">HPLC</a>, often near 99 percent. It tells you how much of the sample is the target peptide versus everything else the method detected. A high figure with a clean result is a good sign, but remember that purity alone does not confirm what the peptide is.</p>
 
         <h2>Identity</h2>
-        <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, not just that it is pure.</p>
+        <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, not just that it is pure.</p>
 
         <h2>Analysis date and methods</h2>
         <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced rather than asking you to take them on faith.</p>
@@ -299,7 +299,7 @@
         { q: 'Is a purity percentage enough on its own?', a: 'No. Purity tells you how much of the sample is one main component, but not that the component is the correct peptide. A complete COA pairs HPLC purity with a mass spectrometry identity check.' },
       ],
       references: [],
-      cta: '<a href="verify.html">Verify a batch number</a> or browse the <a href="catalog.html">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
+      cta: '<a href="verify/">Verify a batch number</a> or browse the <a href="catalog/">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
       related: ['peptide-purity-hplc-explained', 'mass-spectrometry-peptide-research'],
     },
     {
@@ -318,16 +318,16 @@
         <p class="lead">Almost every research peptide listing mentions a purity figure, often 99 percent by HPLC. It is one of the most quoted numbers in the field and one of the least explained. So it is worth spelling out what that number is measuring, and just as importantly, what it is not.</p>
 
         <h2>How purity is measured</h2>
-        <p>Purity is usually determined by <a href="article/high-performance-liquid-chromatography-hplc.html">high-performance liquid chromatography</a>, or HPLC. In simple terms, the sample is pushed through a column that separates its components, and each component shows up as a peak on a chart called a chromatogram. The target peptide is the main peak. Purity is the area of that main peak expressed as a percentage of all the peaks combined. So 99 percent means the target peptide accounts for about 99 percent of what the method detected.</p>
+        <p>Purity is usually determined by <a href="article/high-performance-liquid-chromatography-hplc/">high-performance liquid chromatography</a>, or HPLC. In simple terms, the sample is pushed through a column that separates its components, and each component shows up as a peak on a chart called a chromatogram. The target peptide is the main peak. Purity is the area of that main peak expressed as a percentage of all the peaks combined. So 99 percent means the target peptide accounts for about 99 percent of what the method detected.</p>
 
         <h2>What the number tells you</h2>
         <p>A high HPLC purity figure says that very little else showed up alongside the peptide. Small side peaks can come from related peptide fragments, incomplete sequences, or leftover material from synthesis. A clean chromatogram with one dominant peak is a good sign that the batch is mostly what it claims to be. That is genuinely useful information.</p>
 
         <h2>What it does not tell you</h2>
-        <p>Purity is not identity. HPLC tells you how much of the sample is one main component, but it does not by itself prove that component is the right peptide. That is why identity is confirmed separately, usually by <a href="article/what-is-mots-c.html">mass spectrometry</a> comparing the measured mass with the expected one. A trustworthy certificate of analysis reports both: purity from HPLC and identity from mass spectrometry. One number without the other is only half the picture.</p>
+        <p>Purity is not identity. HPLC tells you how much of the sample is one main component, but it does not by itself prove that component is the right peptide. That is why identity is confirmed separately, usually by <a href="article/what-is-mots-c/">mass spectrometry</a> comparing the measured mass with the expected one. A trustworthy certificate of analysis reports both: purity from HPLC and identity from mass spectrometry. One number without the other is only half the picture.</p>
 
         <h2>Why it matters</h2>
-        <p>For research, consistency depends on knowing what is actually in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify.html">batch number</a>, and its full certificate of analysis is available on request.</p>
+        <p>For research, consistency depends on knowing what is actually in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify/">batch number</a>, and its full certificate of analysis is available on request.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -338,7 +338,7 @@
         { q: 'Why does peptide purity matter in research?', a: 'Consistency depends on knowing what is in the vial. A purity figure backed by an identity check lets one batch be compared with another. A certificate of analysis should report both HPLC purity and mass spectrometry identity.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
     },
     {
@@ -354,13 +354,13 @@
       imageAlt: 'Concept of melanocortin receptor signaling studied in peptide research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">When a peptide like <a href="article/what-is-pt-141.html">PT-141</a> is described as a melanocortin receptor agonist, the receptor name does a lot of quiet work. Melanocortin receptors are a whole family, not a single target, and knowing that makes the compounds that act on them much easier to understand.</p>
+        <p class="lead">When a peptide like <a href="article/what-is-pt-141/">PT-141</a> is described as a melanocortin receptor agonist, the receptor name does a lot of quiet work. Melanocortin receptors are a whole family, not a single target, and knowing that makes the compounds that act on them much easier to understand.</p>
 
         <h2>What are melanocortin receptors?</h2>
         <p>Melanocortin receptors are a family of receptors that respond to a group of signaling molecules called melanocortins. There are several members in the family, usually labeled MC1R through MC5R, and they are spread across different tissues. The name hints at one of their better-known roles, since "melano" points to pigmentation, but the family reaches well beyond that.</p>
 
         <h2>A family, not one target</h2>
-        <p>The reason researchers care about the distinction is that the subtypes do different things. Some are tied to pigmentation, others to central signaling in the nervous system, and others to processes like energy balance. A compound that acts on the family is not automatically acting on all of it, so a recurring research question is how selectively a given agonist engages one subtype over another. If the word agonist is unfamiliar, our note on <a href="article/agonist-vs-antagonist.html">agonists vs antagonists</a> covers it.</p>
+        <p>The reason researchers care about the distinction is that the subtypes do different things. Some are tied to pigmentation, others to central signaling in the nervous system, and others to processes like energy balance. A compound that acts on the family is not automatically acting on all of it, so a recurring research question is how selectively a given agonist engages one subtype over another. If the word agonist is unfamiliar, our note on <a href="article/agonist-vs-antagonist/">agonists vs antagonists</a> covers it.</p>
 
         <h2>Where peptides come in</h2>
         <p>Peptides that bind these receptors are used as tools to probe the family. PT-141, also known as bremelanotide, is one example studied for its activity at melanocortin receptors, particularly subtypes tied to central signaling. In that setting the peptide is a way to ask what a specific receptor does, and how cleanly a compound can target it.</p>
@@ -377,7 +377,7 @@
         { q: 'Which peptide acts on melanocortin receptors?', a: 'PT-141, also called bremelanotide, is a well-known example studied as a melanocortin receptor agonist, particularly at subtypes tied to central signaling. It is used strictly for laboratory research.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-pt-141', 'agonist-vs-antagonist'],
     },
     {
@@ -399,7 +399,7 @@
         <p>A receptor is a protein that receives a signal. When the right molecule binds to it, the receptor changes shape and triggers some activity inside the cell. Think of it as a lock waiting for a key. The interesting part is that not every key turns the lock, and some keys jam it.</p>
 
         <h2>Agonist: it activates</h2>
-        <p>An agonist is a compound that binds a receptor and activates it, producing the response the receptor is built to give. Most of the peptides we describe are agonists. <a href="article/what-is-tirzepatide.html">Tirzepatide</a> is an agonist at incretin receptors, <a href="article/what-is-ipamorelin.html">ipamorelin</a> is an agonist at the ghrelin receptor, and <a href="article/what-is-pt-141.html">PT-141</a> is an agonist at melanocortin receptors. In each case the word means the same thing: it turns the receptor on.</p>
+        <p>An agonist is a compound that binds a receptor and activates it, producing the response the receptor is built to give. Most of the peptides we describe are agonists. <a href="article/what-is-tirzepatide/">Tirzepatide</a> is an agonist at incretin receptors, <a href="article/what-is-ipamorelin/">ipamorelin</a> is an agonist at the ghrelin receptor, and <a href="article/what-is-pt-141/">PT-141</a> is an agonist at melanocortin receptors. In each case the word means the same thing: it turns the receptor on.</p>
 
         <h2>Antagonist: it blocks</h2>
         <p>An antagonist binds a receptor but does not activate it. Instead it occupies the site and prevents an agonist from doing its job. It is the key that fits the lock but will not turn, and while it sits there the real key cannot get in. Antagonists are studied as tools for asking what happens when a pathway is blocked rather than switched on.</p>
@@ -416,7 +416,7 @@
         { q: 'Why does the agonist vs antagonist distinction matter?', a: 'It tells you what a compound is meant to do at its receptor. When a peptide is called a receptor agonist, it activates the target; an antagonist would block it. The distinction turns technical descriptions into clear information.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ipamorelin', 'what-is-pt-141'],
     },
     {
@@ -432,7 +432,7 @@
       imageAlt: 'Growth hormone secretagogue research peptide studied at the ghrelin receptor',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">The phrase "growth hormone secretagogue" is a mouthful, but it is really just a label for a category. When a research peptide like <a href="article/what-is-ipamorelin.html">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect. Here is what the label actually means.</p>
+        <p class="lead">The phrase "growth hormone secretagogue" is a mouthful, but it is really just a label for a category. When a research peptide like <a href="article/what-is-ipamorelin/">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect. Here is what the label actually means.</p>
 
         <h2>What the term means</h2>
         <p>A secretagogue is anything that prompts a cell to release, or secrete, a substance. So a growth hormone secretagogue is a compound studied for how it engages the signaling that leads to growth hormone release. Many of the peptides in this class act as agonists at the ghrelin receptor, which is also called the growth hormone secretagogue receptor. The receptor name and the compound class are two sides of the same coin.</p>
@@ -455,7 +455,7 @@
         { q: 'Why is selectivity important for these peptides?', a: 'A more selective secretagogue engages the growth hormone pathway with limited activity elsewhere, which makes laboratory results easier to attribute to a single receptor. Ipamorelin is often cited as an example of a more selective compound.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ipamorelin', 'peptide-synthesis'],
     },
     {
@@ -474,7 +474,7 @@
         <p class="lead">GLP-1 and GIP get mentioned in the same breath so often that it is easy to assume they are two names for the same thing. They are not. They are two different hormones from the same family, and the differences between them are exactly what makes modern metabolic peptides worth studying.</p>
 
         <h2>What they have in common</h2>
-        <p>Both GLP-1 and GIP are <a href="article/what-are-incretins.html">incretins</a>, gut hormones released in response to nutrients. Both connect to pathways tied to insulin signaling and glucose handling, and both belong to the group of targets that metabolic research peptides are designed to engage. So the shared ground is real: same family, same general job of helping the body respond to incoming glucose.</p>
+        <p>Both GLP-1 and GIP are <a href="article/what-are-incretins/">incretins</a>, gut hormones released in response to nutrients. Both connect to pathways tied to insulin signaling and glucose handling, and both belong to the group of targets that metabolic research peptides are designed to engage. So the shared ground is real: same family, same general job of helping the body respond to incoming glucose.</p>
 
         <h2>Where they differ</h2>
         <p>The key difference is that each acts through its own receptor:</p>
@@ -485,7 +485,7 @@
         <p>Because the receptors are distinct, activating one is not the same as activating the other, even though both feed into glucose regulation. That separation is the whole reason a research question like "what happens when you engage both at once" is even meaningful.</p>
 
         <h2>Why the comparison matters for peptides</h2>
-        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide.html">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide.html">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are genuinely different receptors is what makes those distinctions make sense.</p>
+        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide/">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are genuinely different receptors is what makes those distinctions make sense.</p>
 
         <h2>Research use only</h2>
         <p>This article is background biology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -496,7 +496,7 @@
         { q: 'Why does the GLP-1 vs GIP difference matter for peptides?', a: 'Research peptides are often described by how many of these receptors they engage. Single, dual, and triple agonists build on the fact that GLP-1 and GIP are distinct receptors that feed into glucose regulation.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-are-incretins', 'what-is-tirzepatide'],
     },
     {
@@ -512,7 +512,7 @@
       imageAlt: 'Illustration of incretin signaling studied in metabolic peptide research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">If you have read about peptides like <a href="article/what-is-tirzepatide.html">tirzepatide</a> or <a href="article/what-is-retatrutide.html">retatrutide</a>, you have run into the word incretin. It sounds technical, but the idea behind it is fairly simple, and understanding it makes the whole family of metabolic research peptides easier to follow.</p>
+        <p class="lead">If you have read about peptides like <a href="article/what-is-tirzepatide/">tirzepatide</a> or <a href="article/what-is-retatrutide/">retatrutide</a>, you have run into the word incretin. It sounds technical, but the idea behind it is fairly simple, and understanding it makes the whole family of metabolic research peptides easier to follow.</p>
 
         <h2>What are incretins?</h2>
         <p>Incretins are hormones the gut releases when it detects nutrients, usually after eating. Their defining trick is the incretin effect: they help drive an insulin response that is stronger when glucose arrives through the gut than when the same amount is given another way. In other words, the body pays attention to how glucose shows up, and incretins are part of how it does that.</p>
@@ -526,7 +526,7 @@
         <p>Each one acts through its own receptor, and each connects to pathways tied to insulin signaling and glucose handling. They are not interchangeable, which is exactly why comparing them is interesting.</p>
 
         <h2>Why they matter in peptide research</h2>
-        <p>A lot of modern metabolic research peptides are built to act on incretin receptors. Some target GLP-1 alone. A dual agonist like tirzepatide engages both GIP and GLP-1, and a triple agonist like retatrutide adds the glucagon receptor on top. The common thread is the incretin system, so knowing what these hormones do makes those compounds far less mysterious. If you want to compare the two head to head, see our note on <a href="article/glp-1-vs-gip.html">GLP-1 vs GIP</a>.</p>
+        <p>A lot of modern metabolic research peptides are built to act on incretin receptors. Some target GLP-1 alone. A dual agonist like tirzepatide engages both GIP and GLP-1, and a triple agonist like retatrutide adds the glucagon receptor on top. The common thread is the incretin system, so knowing what these hormones do makes those compounds far less mysterious. If you want to compare the two head to head, see our note on <a href="article/glp-1-vs-gip/">GLP-1 vs GIP</a>.</p>
 
         <h2>A note on scope</h2>
         <p>Everything here is background biology and laboratory context. The research peptides that target these receptors are supplied strictly as research compounds, and nothing in this article describes use in people or animals.</p>
@@ -540,7 +540,7 @@
         { q: 'Why do research peptides target incretins?', a: 'Many metabolic research peptides are designed to act on incretin receptors. Single, dual, and triple agonists all build on this system, so understanding incretins makes those compounds easier to follow.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-tirzepatide', 'what-is-retatrutide'],
     },
     {
@@ -559,13 +559,13 @@
         <p class="lead">Copper peptides are a small, tidy category, and the name tells you most of what defines them. They are short peptides that hold onto a copper ion. That single feature, a peptide bound to a metal, is what sets them apart from the rest of the research peptides you will come across.</p>
 
         <h2>What makes a peptide a copper peptide?</h2>
-        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are really talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.</p>
+        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are really talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.</p>
 
         <h2>The two you will see most</h2>
         <p>Two copper tripeptides come up again and again:</p>
         <ul>
-          <li><b><a href="article/what-is-ghk-cu.html">GHK-Cu</a>:</b> the copper complex of glycyl-histidyl-lysine, and the most studied of the group.</li>
-          <li><b><a href="article/what-is-ahk-cu.html">AHK-Cu</a>:</b> a close relative where the first amino acid is alanine instead of glycine.</li>
+          <li><b><a href="article/what-is-ghk-cu/">GHK-Cu</a>:</b> the copper complex of glycyl-histidyl-lysine, and the most studied of the group.</li>
+          <li><b><a href="article/what-is-ahk-cu/">AHK-Cu</a>:</b> a close relative where the first amino acid is alanine instead of glycine.</li>
         </ul>
         <p>The fact that these two differ by a single amino acid is exactly why they get compared. Small changes in sequence can change how a peptide binds copper, and that is a useful thing to study.</p>
 
@@ -573,7 +573,7 @@
         <p>Most of the research interest in these compounds comes from the metal, not the peptide alone. Copper binding is central to how these molecules behave in model systems, and laboratory work often looks at copper transport, connective tissue and collagen signaling, and skin or hair follicle cell activity. These are model-based observations, and copper peptides are supplied strictly as research compounds.</p>
 
         <h2>Handling and verification</h2>
-        <p>Because a copper ion is part of the molecule, identity and purity are worth confirming rather than assuming. Copper peptides are checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ship lyophilized, and come with a certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+        <p>Because a copper ion is part of the molecule, identity and purity are worth confirming rather than assuming. Copper peptides are checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ship lyophilized, and come with a certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including copper peptides such as GHK-Cu and AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -584,7 +584,7 @@
         { q: 'Why is copper important in these peptides?', a: 'Most of the research interest comes from the metal binding rather than the peptide alone. Laboratory work looks at copper transport and pathways related to connective tissue and skin cell activity in model systems.' },
       ],
       references: [],
-      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ghk-cu', 'what-is-ahk-cu'],
     },
     {
@@ -600,10 +600,10 @@
       imageAlt: 'AHK-Cu copper tripeptide research vial with certificate of analysis',
       image: 'assets/products/ahk-cu.jpg',
       body: `
-        <p class="lead">AHK-Cu is easy to confuse with its better-known cousin, and the confusion is understandable. It is another short copper-binding peptide, only three amino acids long, and it shows up in the same corners of skin and tissue research as <a href="article/what-is-ghk-cu.html">GHK-Cu</a>. The interesting part is where the two differ.</p>
+        <p class="lead">AHK-Cu is easy to confuse with its better-known cousin, and the confusion is understandable. It is another short copper-binding peptide, only three amino acids long, and it shows up in the same corners of skin and tissue research as <a href="article/what-is-ghk-cu/">GHK-Cu</a>. The interesting part is where the two differ.</p>
 
         <h2>What is AHK-Cu?</h2>
-        <p>AHK-Cu is the copper complex of the tripeptide alanyl-histidyl-lysine, which is where the letters A, H, and K come from. The "Cu" is copper. Its CAS number is 682809-81-0. Like other copper peptides, the sequence binds a copper ion, and much of the research attention sits on that metal-binding behavior rather than on the peptide by itself. If the idea of a three-amino-acid peptide is new, our note on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a> puts it in context.</p>
+        <p>AHK-Cu is the copper complex of the tripeptide alanyl-histidyl-lysine, which is where the letters A, H, and K come from. The "Cu" is copper. Its CAS number is 682809-81-0. Like other copper peptides, the sequence binds a copper ion, and much of the research attention sits on that metal-binding behavior rather than on the peptide by itself. If the idea of a three-amino-acid peptide is new, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> puts it in context.</p>
 
         <h2>How is it different from GHK-Cu?</h2>
         <p>GHK-Cu and AHK-Cu share the same basic idea, a tripeptide carrying copper, but the first amino acid is different: glycine in GHK, alanine in AHK. That single change matters to researchers because it can alter how the peptide binds copper and how it behaves in a model system. Comparing closely related sequences like these is a common way to study what a specific residue contributes.</p>
@@ -618,7 +618,7 @@
         <p>These are laboratory observations, not conclusions about people or animals. AHK-Cu is supplied strictly as a research compound.</p>
 
         <h2>Handling and verification</h2>
-        <p>Because AHK-Cu carries a copper ion, confirming its identity and purity is worthwhile. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+        <p>Because AHK-Cu carries a copper ion, confirming its identity and purity is worthwhile. It is checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -626,10 +626,10 @@
       faq: [
         { q: 'What does AHK-Cu stand for?', a: 'AHK are the single-letter codes for the amino acids in the tripeptide alanyl-histidyl-lysine, and Cu is the chemical symbol for copper. AHK-Cu is the copper complex of that tripeptide, used strictly for laboratory research.' },
         { q: 'How is AHK-Cu different from GHK-Cu?', a: 'Both are copper-binding tripeptides, but the first amino acid differs: glycine in GHK-Cu and alanine in AHK-Cu. That change can affect copper binding and behavior in model systems, which is why the two are studied and compared.' },
-        { q: 'How is AHK-Cu verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+        { q: 'How is AHK-Cu verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
       ],
       references: [],
-      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference'],
     },
     {
@@ -654,10 +654,10 @@
         <p>Sterile water for injection is exactly that, water with nothing added, and it is intended for single use. Once opened it has no preservative to hold back contamination. Bacteriostatic water, because of the benzyl alcohol, can tolerate being entered more than once over a period of time, which is why it suits a multi-dose research vial that gets drawn from repeatedly. For peptides that are studied over days or weeks, that reusability is the practical advantage.</p>
 
         <h2>Why labs use it for peptides</h2>
-        <p>Reconstituting a peptide is a slow, careful step, covered in our guide on <a href="article/how-to-reconstitute-a-peptide.html">how to reconstitute a lyophilized peptide</a>. Bacteriostatic water fits that workflow well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides.html">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
+        <p>Reconstituting a peptide is a slow, careful step, covered in our guide on <a href="article/how-to-reconstitute-a-peptide/">how to reconstitute a lyophilized peptide</a>. Bacteriostatic water fits that workflow well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides/">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
 
         <h2>Handling and storage</h2>
-        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> works out concentration once the two are combined.</p>
+        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> works out concentration once the two are combined.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This article describes laboratory use only.</p>
@@ -668,7 +668,7 @@
         { q: 'Why is bacteriostatic water used to reconstitute peptides?', a: 'It dissolves most peptides cleanly and its preservative supports multiple draws from a single vial over the days or weeks a peptide might be studied. That reusability is the main practical reason labs choose it.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides and supplies</a> at Codex Research, use the <a href="calculator.html">reconstitution calculator</a>, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides and supplies</a> at Codex Research, use the <a href="calculator/">reconstitution calculator</a>, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-reconstitute-a-peptide', 'excipients-in-peptides'],
     },
     {
@@ -684,19 +684,19 @@
       imageAlt: 'Reconstituting a lyophilized research peptide vial with diluent in the lab',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Most research peptides arrive as a dry powder or a thin cake at the bottom of the vial. That form is <a href="article/lyophilization-freeze-drying.html">lyophilized</a>, or freeze-dried, because it keeps the peptide stable in transit. Before it can be used in the lab it has to be reconstituted, which just means dissolving it back into a liquid. Done carelessly this step can waste material, so it is worth doing slowly.</p>
+        <p class="lead">Most research peptides arrive as a dry powder or a thin cake at the bottom of the vial. That form is <a href="article/lyophilization-freeze-drying/">lyophilized</a>, or freeze-dried, because it keeps the peptide stable in transit. Before it can be used in the lab it has to be reconstituted, which just means dissolving it back into a liquid. Done carelessly this step can waste material, so it is worth doing slowly.</p>
 
         <h2>Choose a diluent</h2>
-        <p>The most common choice for research reconstitution is <a href="article/excipients-in-peptides.html">bacteriostatic water</a>, which is sterile water with a small amount of benzyl alcohol as a preservative. Some peptides that resist dissolving may call for a different diluent, and the certificate of analysis or product notes are the place to check. The goal is a diluent that dissolves the peptide cleanly without degrading it.</p>
+        <p>The most common choice for research reconstitution is <a href="article/excipients-in-peptides/">bacteriostatic water</a>, which is sterile water with a small amount of benzyl alcohol as a preservative. Some peptides that resist dissolving may call for a different diluent, and the certificate of analysis or product notes are the place to check. The goal is a diluent that dissolves the peptide cleanly without degrading it.</p>
 
         <h2>Add the liquid gently</h2>
         <p>Two habits protect the material here. First, let a cold vial come closer to room temperature before opening, so moisture does not condense inside. Second, do not squirt the diluent straight onto the peptide. Aim the stream at the inside wall of the vial and let it run down. Then leave it to dissolve on its own, or swirl it slowly. Shaking is the classic mistake, since the shear and foaming can damage a delicate peptide.</p>
 
         <h2>Work out the concentration</h2>
-        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL. Rather than doing this by hand, our <a href="calculator.html">reconstitution calculator</a> takes the vial strength and the water added and returns the concentration and the syringe math for you. It does not recommend any amount, it only converts the numbers you enter.</p>
+        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL. Rather than doing this by hand, our <a href="calculator/">reconstitution calculator</a> takes the vial strength and the water added and returns the concentration and the syringe math for you. It does not recommend any amount, it only converts the numbers you enter.</p>
 
         <h2>Store the solution</h2>
-        <p>Once a peptide is in solution it is less stable than the dry powder, so it usually goes into refrigeration and away from light, with the exact conditions shown on the vial label. Label the vial with the date and concentration so nothing is guessed later. If you want to confirm the vial was genuine before you started, you can check its <a href="verify.html">batch number</a>.</p>
+        <p>Once a peptide is in solution it is less stable than the dry powder, so it usually goes into refrigeration and away from light, with the exact conditions shown on the vial label. Label the vial with the date and concentration so nothing is guessed later. If you want to confirm the vial was genuine before you started, you can check its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This guide describes laboratory handling only.</p>
@@ -704,10 +704,10 @@
       faq: [
         { q: 'What liquid is used to reconstitute a research peptide?', a: 'Bacteriostatic water, which is sterile water with a small amount of benzyl alcohol as a preservative, is the most common diluent for research reconstitution. Some peptides may need a different diluent noted on the certificate of analysis.' },
         { q: 'Why should you not shake a peptide when reconstituting it?', a: 'Shaking creates shear and foaming that can damage a delicate peptide. Adding the diluent down the inside wall of the vial and letting it dissolve, or swirling gently, protects the material.' },
-        { q: 'How do you calculate peptide concentration after reconstitution?', a: 'Divide the amount of peptide in the vial by the volume of diluent you added. For example, 10 mg in 2 mL is 5 mg per mL. The reconstitution calculator at codexresearchlab.com/calculator.html does this and the syringe-unit math automatically.' },
+        { q: 'How do you calculate peptide concentration after reconstitution?', a: 'Divide the amount of peptide in the vial by the volume of diluent you added. For example, 10 mg in 2 mL is 5 mg per mL. The reconstitution calculator at codexresearchlab.com/calculator/ does this and the syringe-unit math automatically.' },
       ],
       references: [],
-      cta: 'Try the <a href="calculator.html">reconstitution calculator</a>, browse <a href="catalog.html">research peptides</a>, or <a href="verify.html">check a batch number</a> at Codex Research.',
+      cta: 'Try the <a href="calculator/">reconstitution calculator</a>, browse <a href="catalog/">research peptides</a>, or <a href="verify/">check a batch number</a> at Codex Research.',
       related: ['lyophilization-freeze-drying', 'excipients-in-peptides'],
     },
     {
@@ -738,10 +738,10 @@
           <li><b>Mitochondrial function:</b> how NAD+ availability relates to the machinery that produces cellular energy.</li>
           <li><b>Sirtuin signaling:</b> NAD+ as a substrate for enzymes tied to aging and stress response in model systems.</li>
         </ul>
-        <p>These are laboratory and preclinical contexts. NAD+ is supplied strictly as a research compound, and this article does not describe use in people or animals. If you are comparing it with the small peptide <a href="article/what-is-mots-c.html">MOTS-c</a>, both come up in mitochondrial research but they are very different molecules.</p>
+        <p>These are laboratory and preclinical contexts. NAD+ is supplied strictly as a research compound, and this article does not describe use in people or animals. If you are comparing it with the small peptide <a href="article/what-is-mots-c/">MOTS-c</a>, both come up in mitochondrial research but they are very different molecules.</p>
 
         <h2>Handling and verification</h2>
-        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including NAD+, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -754,7 +754,7 @@
       references: [
         { text: 'NAD+ (NAD) compound summary. PubChem, National Library of Medicine (CID 5892).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/5892' },
       ],
-      cta: 'Browse <a href="catalog.html">research compounds</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research compounds</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-mots-c', 'lyophilization-freeze-drying'],
     },
     {
@@ -773,7 +773,7 @@
         <p class="lead">PT-141 goes by two names, which trips people up. PT-141 is the research shorthand, and bremelanotide is the same molecule. It belongs to a different family than the metabolic peptides in this series: instead of incretin receptors, it works on the melanocortin system. That is where all of its research interest sits.</p>
 
         <h2>What is PT-141?</h2>
-        <p>PT-141, also called bremelanotide, is a synthetic peptide that acts as an agonist at melanocortin receptors. It is a cyclic peptide, and it is structurally related to an earlier melanocortin compound from which it was derived. Its CAS number is 189691-06-3 and its molecular formula is C50H68N14O10. Like the other compounds we cover, it is made by <a href="article/peptide-synthesis.html">solid-phase synthesis</a> and defined by its certificate of analysis rather than by its name.</p>
+        <p>PT-141, also called bremelanotide, is a synthetic peptide that acts as an agonist at melanocortin receptors. It is a cyclic peptide, and it is structurally related to an earlier melanocortin compound from which it was derived. Its CAS number is 189691-06-3 and its molecular formula is C50H68N14O10. Like the other compounds we cover, it is made by <a href="article/peptide-synthesis/">solid-phase synthesis</a> and defined by its certificate of analysis rather than by its name.</p>
 
         <h2>The melanocortin system</h2>
         <p>Melanocortin receptors are a family of receptors involved in a range of signaling processes, from pigmentation to neurobehavioral pathways. PT-141 is studied as a tool for probing these receptors, particularly the subtypes tied to central signaling. Because the melanocortin family has several members, a recurring research question is how selectively a given agonist acts across them.</p>
@@ -788,7 +788,7 @@
         <p>These are preclinical, model-based studies. PT-141 is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
 
         <h2>Handling and verification</h2>
-        <p>PT-141 is a cyclic peptide, so confirming its identity matters as much as its purity. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+        <p>PT-141 is a cyclic peptide, so confirming its identity matters as much as its purity. It is checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including PT-141, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -796,12 +796,12 @@
       faq: [
         { q: 'Are PT-141 and bremelanotide the same thing?', a: 'Yes. PT-141 is the research shorthand and bremelanotide is the same synthetic peptide. It is a melanocortin receptor agonist used strictly for laboratory research.' },
         { q: 'What receptor does PT-141 act on?', a: 'PT-141 acts as an agonist at melanocortin receptors, a family involved in signaling processes including pigmentation and central neurobehavioral pathways. Research often focuses on how selectively it acts across the receptor subtypes.' },
-        { q: 'How is PT-141 verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+        { q: 'How is PT-141 verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
       ],
       references: [
         { text: 'Bremelanotide (PT-141) compound summary. PubChem, National Library of Medicine (CID 9941379).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941379' },
       ],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['peptide-synthesis', 'what-is-bpc-157'],
     },
     {
@@ -820,7 +820,7 @@
         <p class="lead">Ipamorelin comes up a lot in discussions of growth hormone secretagogues, and the word researchers keep attaching to it is "selective." It is a small synthetic peptide designed to act at one receptor with limited activity elsewhere. That focus is the main reason it is used as a research tool rather than a blunt instrument.</p>
 
         <h2>What is ipamorelin?</h2>
-        <p>Ipamorelin is a synthetic pentapeptide, meaning it is built from five amino acids. It is classed as a growth hormone secretagogue and acts as an agonist at the ghrelin receptor, also called the growth hormone secretagogue receptor. Its CAS number is 170851-70-4 and its molecular formula is C38H49N9O5. It is made by <a href="article/peptide-synthesis.html">solid-phase peptide synthesis</a> and characterized by its certificate of analysis.</p>
+        <p>Ipamorelin is a synthetic pentapeptide, meaning it is built from five amino acids. It is classed as a growth hormone secretagogue and acts as an agonist at the ghrelin receptor, also called the growth hormone secretagogue receptor. Its CAS number is 170851-70-4 and its molecular formula is C38H49N9O5. It is made by <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a> and characterized by its certificate of analysis.</p>
 
         <h2>What does "selective" mean here?</h2>
         <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. Some secretagogues activate that pathway but also touch other hormone systems. Ipamorelin is studied precisely because it shows a more selective profile in laboratory models, which makes it easier to attribute an observed effect to one receptor rather than several. For a research tool, that cleanliness is the point.</p>
@@ -835,7 +835,7 @@
         <p>These are preclinical, model-based observations. Ipamorelin is supplied strictly as a research compound, and this article does not describe use in people or animals.</p>
 
         <h2>Handling and verification</h2>
-        <p>As with any short peptide, what matters in practice is the purity of the batch in front of you. Ipamorelin is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> covers the concentration math once it is dissolved.</p>
+        <p>As with any short peptide, what matters in practice is the purity of the batch in front of you. Ipamorelin is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> covers the concentration math once it is dissolved.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including ipamorelin, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -843,12 +843,12 @@
       faq: [
         { q: 'What kind of peptide is ipamorelin?', a: 'Ipamorelin is a synthetic pentapeptide (five amino acids) classed as a growth hormone secretagogue. It acts as an agonist at the ghrelin receptor and is used strictly for laboratory research.' },
         { q: 'Why is ipamorelin called selective?', a: 'In laboratory models it shows a more focused activity at the ghrelin receptor with limited activity at other hormone systems, which makes it useful for attributing an observed effect to a single receptor.' },
-        { q: 'How is ipamorelin verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+        { q: 'How is ipamorelin verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
       ],
       references: [
         { text: 'Ipamorelin compound summary. PubChem, National Library of Medicine (CID 9831659).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9831659' },
       ],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['peptide-synthesis', 'what-is-mots-c'],
     },
     {
@@ -867,7 +867,7 @@
         <p class="lead">Most of the peptides in this series are large, engineered molecules. GHK-Cu is the opposite. It is one of the smallest peptides you will come across, just three amino acids bound to a copper ion, and it occurs naturally in the body. That combination of a short sequence and a bound metal is what makes it interesting to study.</p>
 
         <h2>What is GHK-Cu?</h2>
-        <p>GHK-Cu is a copper complex of the tripeptide glycyl-L-histidyl-L-lysine, which is where the letters G, H, and K come from. The "Cu" is the chemical symbol for copper. Its CAS number is 89030-95-5 and its molecular formula is C14H24CuN6O4. The peptide portion binds a copper ion with high affinity, and much of the research interest comes from that metal-binding behavior rather than the peptide alone. For context on how a short peptide differs from a full protein, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.</p>
+        <p>GHK-Cu is a copper complex of the tripeptide glycyl-L-histidyl-L-lysine, which is where the letters G, H, and K come from. The "Cu" is the chemical symbol for copper. Its CAS number is 89030-95-5 and its molecular formula is C14H24CuN6O4. The peptide portion binds a copper ion with high affinity, and much of the research interest comes from that metal-binding behavior rather than the peptide alone. For context on how a short peptide differs from a full protein, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.</p>
 
         <h2>Where does it come from?</h2>
         <p>Unlike synthetic agonists, GHK is a sequence that appears naturally in human plasma and other tissues, and levels of it change with age in some studies. The research-grade material is produced synthetically and complexed with copper so that the exact ratio and purity are controlled. This is a case where the natural origin is part of the story, but the vial you receive is a defined, tested compound.</p>
@@ -882,7 +882,7 @@
         <p>These are laboratory findings, not conclusions about people or animals. GHK-Cu is supplied strictly as a research compound.</p>
 
         <h2>Handling and verification</h2>
-        <p>Because GHK-Cu carries a copper ion, its identity and purity are worth confirming rather than assuming from the label. It is checked by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify.html">batch number</a>.</p>
+        <p>Because GHK-Cu carries a copper ion, its identity and purity are worth confirming rather than assuming from the label. It is checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including GHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -893,7 +893,7 @@
         { q: 'Why is the copper important?', a: 'GHK binds a copper ion with high affinity, and a lot of the research interest centers on that metal-binding behavior, including how the peptide interacts with copper transport in model systems.' },
       ],
       references: [],
-      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['amino-acids-peptides-proteins-difference', 'what-is-bpc-157'],
     },
     {
@@ -909,10 +909,10 @@
       imageAlt: 'Retatrutide research peptide vial with certificate of analysis',
       image: 'assets/products/retatrutide.jpg',
       body: `
-        <p class="lead">If a dual agonist like <a href="article/what-is-tirzepatide.html">tirzepatide</a> engages two receptors, retatrutide takes the same idea one step further. It is a single synthetic peptide built to act on three metabolic receptors at once. That extra target is the whole reason it has become a focal point in current incretin research.</p>
+        <p class="lead">If a dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages two receptors, retatrutide takes the same idea one step further. It is a single synthetic peptide built to act on three metabolic receptors at once. That extra target is the whole reason it has become a focal point in current incretin research.</p>
 
         <h2>What is retatrutide?</h2>
-        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its CAS number is 2381089-83-2 and its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis.html">solid-phase synthesis</a> rather than isolated from a natural source.</p>
+        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its CAS number is 2381089-83-2 and its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis/">solid-phase synthesis</a> rather than isolated from a natural source.</p>
 
         <h2>Why a third receptor?</h2>
         <p>GIP and GLP-1 are incretins, but glucagon sits on the other side of glucose regulation. Adding a glucagon receptor component changes the balance of signals a single molecule can send. For researchers, that raises a specific and testable question: what happens to metabolic pathways when all three receptors are engaged together instead of one or two? Retatrutide exists to study exactly that comparison.</p>
@@ -927,7 +927,7 @@
         <p>These are preclinical observations. Retatrutide is a research compound, and this article does not describe use in people or animals.</p>
 
         <h2>Structure and verification</h2>
-        <p>Retatrutide is a large, modified peptide, so its identity and purity have to be confirmed rather than assumed. Purity is measured by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and identity by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and each batch ships lyophilized with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify.html">batch number</a>.</p>
+        <p>Retatrutide is a large, modified peptide, so its identity and purity have to be confirmed rather than assumed. Purity is measured by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and each batch ships lyophilized with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including retatrutide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -935,10 +935,10 @@
       faq: [
         { q: 'What makes retatrutide a triple agonist?', a: 'Retatrutide is a single synthetic peptide that acts on three receptors at once: GIP, GLP-1, and glucagon. That combination is what separates it from dual agonists like tirzepatide. It is used strictly for laboratory research.' },
         { q: 'How is retatrutide different from tirzepatide?', a: 'Tirzepatide targets two receptors (GIP and GLP-1). Retatrutide adds a third, the glucagon receptor, so research with it looks at what triple activation does compared with single or dual activation.' },
-        { q: 'How is retatrutide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+        { q: 'How is retatrutide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-tirzepatide', 'what-is-mots-c'],
     },
     {
@@ -972,7 +972,7 @@
         <p>These are laboratory and preclinical contexts. Tirzepatide is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
 
         <h2>Structure and quality</h2>
-        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify.html">batch number</a>, and the <a href="calculator.html">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including tirzepatide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -980,12 +980,12 @@
       faq: [
         { q: 'What does tirzepatide do at the molecular level?', a: 'Tirzepatide is a synthetic peptide that acts as an agonist at two incretin receptors at once: the GIP receptor and the GLP-1 receptor. This dual activity is what distinguishes it from peptides that target GLP-1 alone. It is used strictly for laboratory research.' },
         { q: 'Is tirzepatide a GLP-1 peptide?', a: 'It acts on the GLP-1 receptor, but it is not GLP-1 only. Tirzepatide is a dual GIP and GLP-1 receptor agonist, meaning it engages both incretin pathways in the same molecule.' },
-        { q: 'How is tirzepatide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify.html.' },
+        { q: 'How is tirzepatide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
       ],
       references: [
         { text: 'Tirzepatide compound summary. PubChem, National Library of Medicine (CID 156588324).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/156588324' },
       ],
-      cta: 'Browse <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-bpc-157', 'what-is-mots-c'],
     },
     {
@@ -1004,7 +1004,7 @@
         <p class="lead">BPC-157 is one of the most talked-about research peptides, and also one of the most misunderstood. It is a short synthetic peptide whose amino acid sequence is taken from a protein found in gastric juice. In the lab it is studied for the way it interacts with signaling pathways tied to tissue repair and blood vessel formation. Here is a plain look at what it actually is.</p>
 
         <h2>What is BPC-157?</h2>
-        <p>BPC-157 is a pentadecapeptide, which simply means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis.html">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a> covers it.</p>
+        <p>BPC-157 is a pentadecapeptide, which simply means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> covers it.</p>
 
         <h2>Where does the sequence come from?</h2>
         <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis rather than by its source.</p>
@@ -1019,7 +1019,7 @@
         <p>It is worth being precise here. These are observations from laboratory models, not conclusions about people or animals. BPC-157 is a research compound, and the honest summary is that it remains an active area of preclinical study rather than a settled one.</p>
 
         <h2>Quality, purity, and handling</h2>
-        <p>Because a short peptide is only as reliable as the batch you actually receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify.html">batch number</a>.</p>
+        <p>Because a short peptide is only as reliable as the batch you actually receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including BPC-157, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1032,7 +1032,7 @@
       references: [
         { text: 'BPC-157 (Bepecin) compound summary. PubChem, National Library of Medicine (CID 9941957).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941957' },
       ],
-      cta: 'Explore <a href="catalog.html">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify.html">check a batch number</a>.',
+      cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['peptide-synthesis', 'amino-acids-peptides-proteins-difference'],
     },
     {
@@ -1072,7 +1072,7 @@
         <p>Your specialist confirms the payment details on WhatsApp before anything is charged.</p>
 
         <h2>How to verify authenticity before you pay</h2>
-        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify.html">batch verification page</a>. For the exact math of reconstitution, the <a href="calculator.html">reconstitution calculator</a> converts vial strength and diluent into concentration.</p>
+        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>. For the exact math of reconstitution, the <a href="calculator/">reconstitution calculator</a> converts vial strength and diluent into concentration.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1080,10 +1080,10 @@
       faq: [
         { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
         { q: 'What payment methods can I use in Panama?', a: 'In Panama you can pay with Yappy, ACH transfer, or cash on delivery. Cash on delivery means you pay when you receive your order, with no advance payment. A specialist confirms the details on WhatsApp before you pay.' },
-        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify.html.' },
+        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
       ],
       references: [],
-      cta: 'Browse the <a href="catalog.html">Codex Research catalog</a> or <a href="verify.html">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
+      cta: 'Browse the <a href="catalog/">Codex Research catalog</a> or <a href="verify/">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
       related: ['verify-research-peptide-batch-coa-panama', 'high-performance-liquid-chromatography-hplc'],
     },
     {
@@ -1106,27 +1106,27 @@
 
         <h2>What a COA shows</h2>
         <ul>
-          <li><b>Identity:</b> confirmation that the compound matches the expected peptide, typically by <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>.</li>
-          <li><b>Purity:</b> the percentage of the target peptide, measured by <a href="article/high-performance-liquid-chromatography-hplc.html">high-performance liquid chromatography (HPLC)</a>.</li>
+          <li><b>Identity:</b> confirmation that the compound matches the expected peptide, typically by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>.</li>
+          <li><b>Purity:</b> the percentage of the target peptide, measured by <a href="article/high-performance-liquid-chromatography-hplc/">high-performance liquid chromatography (HPLC)</a>.</li>
           <li><b>Batch reference:</b> the batch or lot number, an analysis date, and the testing methods used.</li>
         </ul>
 
         <h2>How to verify your batch number</h2>
-        <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify.html">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
+        <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
 
         <h2>Buying in Panama</h2>
-        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama.html">buying research peptides in Panama</a> for shipping and payment details.</p>
+        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
         { q: 'What is a certificate of analysis (COA)?', a: 'A COA is a laboratory document that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides it is based on independent HPLC and mass spectrometry testing and is tied to the batch number on the vial.' },
-        { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify.html. A valid number confirms the product and that it is on record. The full COA is also shared on WhatsApp before you pay.' },
+        { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify/. A valid number confirms the product and that it is on record. The full COA is also shared on WhatsApp before you pay.' },
         { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
       ],
       references: [],
-      cta: '<a href="verify.html">Verify a batch number</a> or browse the <a href="catalog.html">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
+      cta: '<a href="verify/">Verify a batch number</a> or browse the <a href="catalog/">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
       related: ['buy-research-peptides-panama', 'mass-spectrometry-peptide-research'],
     },
     {
@@ -1147,7 +1147,7 @@
         <p>Mass spectrometry works by converting compounds into charged particles and separating them in an analyzer based on their mass-to-charge ratio. This allows researchers to determine molecular weights, identify unknown compounds, and analyze complex mixtures with high sensitivity.${cite('Reference: Aebersold &amp; Mann, 2003', 'https://doi.org/10.1038/nature01511')}</p>
 
         <h2>Why use mass spectrometry in peptide research?</h2>
-        <p>Peptides are short chains of amino acids that can vary in sequence, modifications, and purity. If you want the fundamentals, see our guide on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>. Mass spectrometry is essential for studying them because it provides precise molecular information. Researchers use MS to:</p>
+        <p>Peptides are short chains of amino acids that can vary in sequence, modifications, and purity. If you want the fundamentals, see our guide on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>. Mass spectrometry is essential for studying them because it provides precise molecular information. Researchers use MS to:</p>
         <ul>
           <li>Confirm peptide identity by measuring exact molecular weight.</li>
           <li>Detect post-translational or synthetic modifications.</li>
@@ -1163,12 +1163,12 @@
           <li><b>ESI</b> (Electrospray Ionization): allows analysis of peptides in solution, suitable for coupling with liquid chromatography.</li>
           <li><b>LC-MS/MS</b> (Liquid Chromatography, Tandem Mass Spectrometry): combines separation with fragmentation for detailed sequencing and structural analysis.</li>
         </ul>
-        <p>MS is frequently paired with <a href="article/high-performance-liquid-chromatography-hplc.html">high performance liquid chromatography (HPLC)</a> for purity verification.${cite('Reference: Domon &amp; Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
+        <p>MS is frequently paired with <a href="article/high-performance-liquid-chromatography-hplc/">high performance liquid chromatography (HPLC)</a> for purity verification.${cite('Reference: Domon &amp; Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
 
         <h2>Research applications</h2>
         <p>Mass spectrometry is widely used in peptide science, including:</p>
         <ul>
-          <li>Verifying synthetic peptide batches for identity and purity, a routine step after <a href="article/peptide-synthesis.html">peptide synthesis</a>.</li>
+          <li>Verifying synthetic peptide batches for identity and purity, a routine step after <a href="article/peptide-synthesis/">peptide synthesis</a>.</li>
           <li>Mapping peptide and protein interactions.</li>
           <li>Profiling endogenous peptides in biological samples.</li>
           <li>Supporting structural studies by pinpointing amino acid modifications.</li>
@@ -1186,7 +1186,7 @@
         { text: 'Domon, B., &amp; Aebersold, R. (2006). Mass spectrometry and protein analysis. Science, 312(5771), 212-217.', url: 'https://doi.org/10.1126/science.1111443' },
         { text: 'Aebersold, R., &amp; Mann, M. (2016). Mass-spectrometric exploration of proteome structure and function. Nature, 537, 347-355.', url: 'https://doi.org/10.1038/nature19949' },
       ],
-      cta: 'Explore our range of <a href="catalog.html">research peptides</a> analyzed by mass spectrometry and HPLC for verified purity.',
+      cta: 'Explore our range of <a href="catalog/">research peptides</a> analyzed by mass spectrometry and HPLC for verified purity.',
       related: ['high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'amino-acids-peptides-proteins-difference'],
     },
 
@@ -1210,10 +1210,10 @@
         <h2>How is HPLC used in research?</h2>
         <p>HPLC is applied across many scientific fields. In peptide and pharmaceutical research it is commonly used to:</p>
         <ul>
-          <li>Verify purity of synthesized compounds, a key quality step after <a href="article/peptide-synthesis.html">peptide synthesis</a>.</li>
+          <li>Verify purity of synthesized compounds, a key quality step after <a href="article/peptide-synthesis/">peptide synthesis</a>.</li>
           <li>Separate peptide fragments or analogs.</li>
           <li>Detect small concentrations of impurities.</li>
-          <li>Prepare samples for further structural or biological testing, often paired with <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a>.</li>
+          <li>Prepare samples for further structural or biological testing, often paired with <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>.</li>
         </ul>
         <p>${cite('Reference: Kazakevich &amp; LoBrutto, 2007', 'https://doi.org/10.1016/B978-0-12-370540-2.X5000-2').trim()}</p>
 
@@ -1228,7 +1228,7 @@
         <p>${cite('Reference: Swartz &amp; Krull, 2012', 'https://doi.org/10.1002/9781118152547').trim()}</p>
 
         <h2>What researchers have observed</h2>
-        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article/lyophilization-freeze-drying.html">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
+        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article/lyophilization-freeze-drying/">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
       `,
       faq: [
         { q: 'What is HPLC used for?', a: 'HPLC is used to separate, identify, and quantify the components of a mixture. In peptide research it verifies purity and detects impurities.' },
@@ -1240,7 +1240,7 @@
         { text: 'Kazakevich, Y.V., &amp; LoBrutto, R. (2007). HPLC for Pharmaceutical Scientists. Academic Press.', url: 'https://doi.org/10.1016/B978-0-12-370540-2.X5000-2' },
         { text: 'Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Techniques in HPLC. Wiley.', url: 'https://doi.org/10.1002/9781118152547' },
       ],
-      cta: 'Browse <a href="catalog.html">research peptides</a> verified by HPLC for purity above 98 percent.',
+      cta: 'Browse <a href="catalog/">research peptides</a> verified by HPLC for purity above 98 percent.',
       related: ['mass-spectrometry-peptide-research', 'peptide-synthesis', 'lyophilization-freeze-drying'],
     },
 
@@ -1263,7 +1263,7 @@
         <p>Amino acids are the building blocks of peptides and proteins. Each amino acid has a central carbon atom bonded to an amino group, a carboxyl group, a hydrogen atom, and a unique side chain, called the R-group. These side chains give each amino acid distinct chemical properties, from polar to nonpolar and acidic to basic.${cite('Reference: Nelson &amp; Cox, 2017', 'https://doi.org/10.1007/978-3-319-56512-5')}</p>
 
         <h2>What are peptides?</h2>
-        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article/peptide-synthesis.html">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article/what-is-mots-c.html">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article/peptide-synthesis/">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article/what-is-mots-c/">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
 
         <h2>What are proteins?</h2>
         <p>Proteins are larger, more complex chains of amino acids, often containing hundreds of residues. Unlike short peptides, proteins fold into intricate three-dimensional structures that determine their function. They can act as enzymes, structural scaffolds, transporters, or receptors. Research into protein folding and misfolding has provided key insights into diseases such as Alzheimer's and Parkinson's.${cite('Reference: Dobson, 2003', 'https://doi.org/10.1038/nature02261')}</p>
@@ -1274,7 +1274,7 @@
           <li><b>Structure:</b> proteins fold into stable 3D structures, while peptides often remain linear or only partially folded.</li>
           <li><b>Function:</b> amino acids serve as building blocks, peptides often act as signaling molecules, and proteins carry out complex biological functions.</li>
         </ul>
-        <p>Analytical tools such as <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> are used to confirm the identity of peptides and proteins.${cite('Reference: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
+        <p>Analytical tools such as <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> are used to confirm the identity of peptides and proteins.${cite('Reference: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
       `,
       faq: [
         { q: 'What is the difference between a peptide and a protein?', a: 'Peptides are short chains of roughly 2 to 50 amino acids, while proteins are much longer chains that fold into complex three-dimensional structures with specialized functions.' },
@@ -1287,7 +1287,7 @@
         { text: 'Dobson, C.M. (2003). Protein folding and misfolding. Nature, 426, 884-890.', url: 'https://doi.org/10.1038/nature02261' },
         { text: 'Berg, J.M., Tymoczko, J.L., &amp; Stryer, L. (2002). Biochemistry. 5th edition. W.H. Freeman.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK21154/' },
       ],
-      cta: 'Ready to go deeper? Browse our <a href="catalog.html">research peptides</a> or learn how they are made in our <a href="article/peptide-synthesis.html">peptide synthesis</a> guide.',
+      cta: 'Ready to go deeper? Browse our <a href="catalog/">research peptides</a> or learn how they are made in our <a href="article/peptide-synthesis/">peptide synthesis</a> guide.',
       related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-mots-c'],
     },
 
@@ -1318,13 +1318,13 @@
         <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S1359-0294(98)00017-6').trim()}</p>
 
         <h2>Why do researchers use lyophilization?</h2>
-        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article/excipients-in-peptides.html">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229')}</p>
+        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article/excipients-in-peptides/">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229')}</p>
 
         <h2>Key applications in laboratory research</h2>
         <ul>
           <li>Preserving peptide and protein samples for extended shelf life.</li>
           <li>Stabilizing vaccines and biologics during production and distribution.</li>
-          <li>Preparing reference standards for analytical methods such as <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>.</li>
+          <li>Preparing reference standards for analytical methods such as <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.</li>
           <li>Enabling controlled reconstitution for in vitro or in vivo research models.</li>
         </ul>
         <p>${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1208/ps060610').trim()}</p>
@@ -1339,7 +1339,7 @@
         { text: 'Tang, X., &amp; Pikal, M.J. (2004). Design of freeze-drying processes for pharmaceuticals: practical advice. Pharmaceutical Research, 21(2), 191-200.', url: 'https://doi.org/10.1208/ps060610' },
         { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
       ],
-      cta: 'Our <a href="catalog.html">research peptides</a> are supplied lyophilized for maximum stability and shelf life.',
+      cta: 'Our <a href="catalog/">research peptides</a> are supplied lyophilized for maximum stability and shelf life.',
       related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis'],
     },
 
@@ -1366,7 +1366,7 @@
           <li>Prevent peptide aggregation or oxidation.</li>
           <li>Adjust pH for stability.</li>
           <li>Enhance solubility for laboratory use.</li>
-          <li>Serve as bulking agents during <a href="article/lyophilization-freeze-drying.html">lyophilization</a>.</li>
+          <li>Serve as bulking agents during <a href="article/lyophilization-freeze-drying/">lyophilization</a>.</li>
         </ul>
         <p>${cite('Reference: Maa &amp; Hsu, 1996', 'https://doi.org/10.1021/js950316u').trim()}</p>
 
@@ -1381,7 +1381,7 @@
         <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229').trim()}</p>
 
         <h2>Research applications</h2>
-        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
+        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
       `,
       faq: [
         { q: 'What is an excipient in a peptide formulation?', a: 'An excipient is an inactive substance added alongside the peptide to stabilize, protect, or deliver it. It has no biological activity of its own.' },
@@ -1394,7 +1394,7 @@
         { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
         { text: 'Carpenter, J.F., et al. (2002). Rational design of stable protein formulations: theory and practice. Journal of Controlled Release, 78(1-3), 1-9.', url: 'https://doi.org/10.1016/S0168-3659(02)00092-3' },
       ],
-      cta: 'Browse our <a href="catalog.html">research peptides</a> formulated for stability and reproducible results.',
+      cta: 'Browse our <a href="catalog/">research peptides</a> formulated for stability and reproducible results.',
       related: ['lyophilization-freeze-drying', 'peptide-synthesis', 'high-performance-liquid-chromatography-hplc'],
     },
 
@@ -1413,7 +1413,7 @@
         <p class="lead">Peptide synthesis is the laboratory process of building short chains of amino acids linked by peptide bonds. Most modern synthesis uses solid-phase peptide synthesis (SPPS), where amino acids are added one at a time to a resin bead through repeated cycles of coupling and deprotection.</p>
 
         <h2>What is peptide synthesis?</h2>
-        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
 
         <h2>How is peptide synthesis performed in the lab?</h2>
         <p>Most modern peptide synthesis uses solid-phase peptide synthesis (SPPS). The first amino acid is attached to a solid resin bead, and additional amino acids are added step by step. Each cycle involves:</p>
@@ -1430,7 +1430,7 @@
           <li><b>Precision:</b> the ability to design exact amino acid sequences.</li>
           <li><b>Flexibility:</b> incorporation of modifications such as non-natural amino acids or labels.</li>
           <li><b>Scalability:</b> production from small milligram amounts for experiments to larger quantities for assays.</li>
-          <li><b>Purity control:</b> products are analyzed by <a href="article/high-performance-liquid-chromatography-hplc.html">HPLC</a> and <a href="article/mass-spectrometry-peptide-research.html">mass spectrometry</a> to confirm identity and purity.</li>
+          <li><b>Purity control:</b> products are analyzed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> to confirm identity and purity.</li>
         </ul>
         <p>${cite('Reference: Coin, 2010', 'https://doi.org/10.1038/nmeth.1403').trim()}</p>
 
@@ -1448,7 +1448,7 @@
         { text: 'Coin, I. (2010). High-throughput peptide synthesis and screening. Nature Methods, 7, 431-433.', url: 'https://doi.org/10.1038/nmeth.1403' },
         { text: 'Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869-878.', url: 'https://doi.org/10.1002/anie.198606031' },
       ],
-      cta: 'Explore our catalog of lab-synthesized <a href="catalog.html">research peptides</a>, verified by HPLC and mass spectrometry.',
+      cta: 'Explore our catalog of lab-synthesized <a href="catalog/">research peptides</a>, verified by HPLC and mass spectrometry.',
       related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
     },
 
@@ -1467,7 +1467,7 @@
         <p class="lead">MOTS-c is a small peptide encoded within the mitochondrial genome, unlike most peptides that come from nuclear DNA. It is studied as a mitochondrial-derived signaling molecule involved in metabolism, cellular stress responses, aging, and exercise.</p>
 
         <h2>What is MOTS-c?</h2>
-        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. This highlights the organelle's role not only in energy metabolism but also in signaling. The discovery has expanded interest in mitochondrial-derived peptides as potential regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference.html">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
+        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. This highlights the organelle's role not only in energy metabolism but also in signaling. The discovery has expanded interest in mitochondrial-derived peptides as potential regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
 
         <h2>How has MOTS-c been studied?</h2>
         <p>Research on MOTS-c spans in vitro, animal, and human models:</p>
@@ -1496,7 +1496,7 @@
           <li>Explore mitochondrial contributions to age-related cellular changes.</li>
           <li>Develop models of exercise-induced signaling molecules.</li>
         </ul>
-        <p>Peptides like MOTS-c used in research are produced by <a href="article/peptide-synthesis.html">peptide synthesis</a> and verified for purity.${cite('Reference: Kim et al., 2018', 'https://doi.org/10.1016/j.cmet.2018.02.001')}</p>
+        <p>Peptides like MOTS-c used in research are produced by <a href="article/peptide-synthesis/">peptide synthesis</a> and verified for purity.${cite('Reference: Kim et al., 2018', 'https://doi.org/10.1016/j.cmet.2018.02.001')}</p>
       `,
       faq: [
         { q: 'What is MOTS-c?', a: 'MOTS-c is a small mitochondrial-derived peptide encoded in mitochondrial DNA. It is studied as a signaling molecule involved in metabolism, stress response, aging, and exercise.' },
@@ -1509,7 +1509,7 @@
         { text: 'Reynolds, J.C., et al. (2021). MOTS-c: a mitochondrial signal regulating metabolism and aging. Frontiers in Endocrinology, 12, 678778.', url: 'https://doi.org/10.3389/fendo.2021.678778' },
         { text: 'Zempo, H., et al. (2021). Exercise increases MOTS-c levels in circulation. European Journal of Applied Physiology, 121(12), 3285-3293.', url: 'https://doi.org/10.1007/s00421-021-04643-8' },
       ],
-      cta: 'Explore our <a href="catalog.html?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
+      cta: 'Explore our <a href="catalog/?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
       related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis'],
     },
   ];

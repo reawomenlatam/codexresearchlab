@@ -12,20 +12,20 @@
     <div class="announce" id="announceContact"></div>
     <header class="header">
       <div class="container header-inner">
-        <a href="index.html" class="logo" aria-label="Codex Research">
+        <a href="/" class="logo" aria-label="Codex Research">
           <img class="logo-full" src="assets/logo-horizontal-dark.png" alt="Codex Research">
           <img class="logo-icon" src="assets/logo-mark.svg" alt="">
         </a>
         <nav class="nav">
-          ${link('index.html', 'Home', 'inicio')}
-          ${link('catalog.html', 'Products', 'productos')}
-          ${link('verify.html', 'Verify batch', 'verify')}
-          ${link('blog.html', 'Blog', 'blog')}
-          ${link('index.html#proceso', 'Process', 'proceso')}
-          ${link('index.html#faq', 'FAQ', 'faq')}
+          ${link('/', 'Home', 'inicio')}
+          ${link('catalog/', 'Products', 'productos')}
+          ${link('verify/', 'Verify batch', 'verify')}
+          ${link('blog/', 'Blog', 'blog')}
+          ${link('/#proceso', 'Process', 'proceso')}
+          ${link('/#faq', 'FAQ', 'faq')}
         </nav>
         <div class="header-actions">
-          <a class="btn btn-primary hide-sm" href="catalog.html" style="padding:.6rem 1.2rem; font-size:.88rem;">Shop products</a>
+          <a class="btn btn-primary hide-sm" href="catalog/" style="padding:.6rem 1.2rem; font-size:.88rem;">Shop products</a>
           <div class="country-wrap">
             <button class="country-chip" id="countryChip" aria-haspopup="true" aria-expanded="false" aria-label="Change country"></button>
             <div class="country-menu" id="countryMenu" hidden>
@@ -54,14 +54,14 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      ${link('index.html', 'Home', 'inicio')}
-      ${link('catalog.html', 'Products', 'productos')}
-      ${link('verify.html', 'Verify batch', 'verify')}
-      ${link('calculator.html', 'Calculator', 'calculator')}
-      ${link('blog.html', 'Blog', 'blog')}
-      ${link('index.html#proceso', 'Process', 'proceso')}
-      ${link('index.html#faq', 'FAQ', 'faq')}
-      <a class="btn btn-primary mobile-nav-cta" href="catalog.html">Shop products</a>
+      ${link('/', 'Home', 'inicio')}
+      ${link('catalog/', 'Products', 'productos')}
+      ${link('verify/', 'Verify batch', 'verify')}
+      ${link('calculator/', 'Calculator', 'calculator')}
+      ${link('blog/', 'Blog', 'blog')}
+      ${link('/#proceso', 'Process', 'proceso')}
+      ${link('/#faq', 'FAQ', 'faq')}
+      <a class="btn btn-primary mobile-nav-cta" href="catalog/">Shop products</a>
     </nav>`;
 
   const footerHTML = `
@@ -69,25 +69,25 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research"></a>
+            <a href="/" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research"></a>
             <p>Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.</p>
             <div class="footer-contact" id="footerContact"></div>
           </div>
           <div class="footer-col">
             <h4>Shop</h4>
-            <a href="catalog.html">Catalog</a>
-            <a href="verify.html">Verify a batch</a>
-            <a href="calculator.html">Reconstitution calculator</a>
-            <a href="index.html#proceso">Our process</a>
-            <a href="index.html#faq">FAQ</a>
-            <a href="blog.html">Blog</a>
+            <a href="catalog/">Catalog</a>
+            <a href="verify/">Verify a batch</a>
+            <a href="calculator/">Reconstitution calculator</a>
+            <a href="/#proceso">Our process</a>
+            <a href="/#faq">FAQ</a>
+            <a href="blog/">Blog</a>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="usage.html">Usage notice</a>
-            <a href="shipping.html">Shipping &amp; refunds</a>
+            <a href="privacy/">Privacy Policy</a>
+            <a href="terms/">Terms of Service</a>
+            <a href="usage/">Usage notice</a>
+            <a href="shipping/">Shipping &amp; refunds</a>
           </div>
         </div>
         <div class="footer-legal">
@@ -116,7 +116,7 @@
         </div>
         <p class="gate-confirm">
           By selecting your country and entering, you confirm you are of legal age in your
-          jurisdiction and agree to our <a href="terms.html">Terms of Service</a>.
+          jurisdiction and agree to our <a href="terms/">Terms of Service</a>.
         </p>
         <button class="gate-under" id="gateNo">I'm not of legal age</button>
       </div>

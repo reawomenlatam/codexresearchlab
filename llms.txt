@@ -27,17 +27,17 @@ batch ships with its certificate of analysis (HPLC and mass spectrometry).
 
 ## Trust and verification
 
-- Batch authenticity: verify any vial's batch number at https://codexresearchlab.com/verify.html
+- Batch authenticity: verify any vial's batch number at https://codexresearchlab.com/verify/
 - Certificate of analysis (COA) is shared on WhatsApp before you pay.
 - Neutral, discreet packaging on every order.
 
 ## Key pages
 
-- Catalog: https://codexresearchlab.com/catalog.html
-- Verify a batch: https://codexresearchlab.com/verify.html
-- Reconstitution calculator: https://codexresearchlab.com/calculator.html
-- Shipping and refund policy: https://codexresearchlab.com/shipping.html
-- Blog (peptide research topics): https://codexresearchlab.com/blog.html
+- Catalog: https://codexresearchlab.com/catalog/
+- Verify a batch: https://codexresearchlab.com/verify/
+- Reconstitution calculator: https://codexresearchlab.com/calculator/
+- Shipping and refund policy: https://codexresearchlab.com/shipping/
+- Blog (peptide research topics): https://codexresearchlab.com/blog/
 
 ## Contact
 

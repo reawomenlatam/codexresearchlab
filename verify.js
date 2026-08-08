@@ -1,4 +1,4 @@
-/* Codex Research - verificador de lote (verify.html).
+/* Codex Research - verificador de lote (/verify/).
    Comprueba el número de lote contra window.REA.BATCHES.
    BATCHES puede ser un objeto {codigo: datos|null} o un array de códigos. */
 (function () {
@@ -25,7 +25,7 @@
     const waText = encodeURIComponent('Hi Codex Research, I’d like the full COA for batch ' + code +
       (withProduct ? ' (' + b.product + ' ' + (b.mg || '') + ')' : '') + '.');
     const rows = withProduct
-      ? `<div><dt>Product</dt><dd><a href="product/${esc(b.slug)}.html">${esc(b.product)}</a></dd></div>
+      ? `<div><dt>Product</dt><dd><a href="product/${esc(b.slug)}/">${esc(b.product)}</a></dd></div>
          <div><dt>Strength</dt><dd>${esc(b.mg)}</dd></div>
          <div><dt>Status</dt><dd>Genuine, on record</dd></div>
          <div><dt>Testing</dt><dd>HPLC + mass spectrometry</dd></div>`
