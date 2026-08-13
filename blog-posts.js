@@ -1051,7 +1051,7 @@
         <p class="lead">Buying research peptides in Panama is straightforward when you know how ordering, delivery, and verification work locally. This guide covers same-day delivery in Panama City, shipping to the interior, the payment methods available in Panama, and how to confirm that every vial is genuine before you pay. All products are for laboratory research use only.</p>
 
         <h2>How ordering works in Panama</h2>
-        <p>At Codex Research you add products to your cart on the website and confirm the order with a specialist on WhatsApp (+507 6345-4619). No payment is charged on the website itself: your order details, delivery, and payment are arranged directly in the chat, so you can ask questions before you pay. Prices are shown in U.S. dollars, which is the currency used in Panama.</p>
+        <p>At Codex Research you add products to your cart on the website and confirm the order with a specialist on WhatsApp (+507 6335-4625). No payment is charged on the website itself: your order details, delivery, and payment are arranged directly in the chat, so you can ask questions before you pay. Prices are shown in U.S. dollars, which is the currency used in Panama.</p>
 
         <h2>Delivery in Panama City and the interior</h2>
         <ul>

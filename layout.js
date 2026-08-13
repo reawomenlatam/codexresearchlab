@@ -261,7 +261,7 @@
   const EMAIL = 'sales@codexresearchlab.com';
   function updateContact() {
     const isPA = window.REACountry.code() === 'PA';
-    const waLink = `<a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6345-4619</a>`;
+    const waLink = `<a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6335-4625</a>`;
     const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
     const ann = document.getElementById('announceContact');
     if (ann) {
