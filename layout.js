@@ -265,7 +265,12 @@
     const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
     const ann = document.getElementById('announceContact');
     if (ann) {
-      const promo = `🎁 <b>10% off your first order</b> · code <b>WELCOME10</b>`;
+      // Con la rebaja general activa, la barra anuncia la oferta. Al apagarla
+      // (SALE.active = false en data.js) vuelve sola al código de bienvenida.
+      const SALE = window.REA.SALE || {};
+      const promo = SALE.active
+        ? `🔥 <b>${SALE.percent}% OFF</b> on everything · limited time`
+        : `🎁 <b>10% off your first order</b> · code <b>WELCOME10</b>`;
       ann.innerHTML = isPA
         ? `${promo} · ${waLink}`
         : `${promo} · ${mailLink}`;

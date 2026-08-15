@@ -121,7 +121,7 @@
             <div class="pd-options pd-packs" id="pdSizes">
               ${p.sizes.map((s, i) => `<button class="pd-opt ${i === 0 ? 'active' : ''}" data-size="${s.label}" data-price="${s.price}">
                 <span class="pd-opt-label">${s.label}</span>
-                <span class="pd-opt-price">${money(s.price)}</span>
+                <span class="pd-opt-price">${money(s.price)}${s.list ? ` <s class="was">${money(s.list)}</s>` : ''}</span>
                 ${s.save ? `<span class="pd-opt-save">Save ${s.save}</span>` : ''}
               </button>`).join('')}
             </div>
@@ -139,6 +139,7 @@
           <div class="pd-price-row">
             <div>
               <span class="pd-price" id="pdPrice">${money(p.sizes[0].price)}</span>
+              <span class="pd-price-was" id="pdPriceWas">${p.sizes[0].list ? money(p.sizes[0].list) : ''}</span>
               <span class="pd-price-note">One-time · ships today</span>
             </div>
           </div>
@@ -265,17 +266,23 @@
   const qtyValEl = document.getElementById('pdQtyVal');
 
   const stickyPriceEl = document.getElementById('pdStickyPrice');
+  const priceWasEl = document.getElementById('pdPriceWas');
   function refreshPrice() {
     const total = money(selectedSize.price * qty);
     priceEl.textContent = total;
     stickyPriceEl.textContent = total;
+    // Precio de lista tachado: también se multiplica por la cantidad.
+    if (priceWasEl) priceWasEl.textContent = selectedSize.list ? money(selectedSize.list * qty) : '';
     priceEl.classList.remove('bump'); void priceEl.offsetWidth; priceEl.classList.add('bump');
   }
 
   document.getElementById('pdSizes').addEventListener('click', (e) => {
     const btn = e.target.closest('[data-size]');
     if (!btn) return;
-    selectedSize = { label: btn.getAttribute('data-size'), price: +btn.getAttribute('data-price') };
+    // Tomar la presentación real del catálogo, no reconstruirla desde el DOM:
+    // así conserva `list` (precio antes de la rebaja) y no se pierde el tachado.
+    const label = btn.getAttribute('data-size');
+    selectedSize = p.sizes.find((s) => s.label === label) || selectedSize;
     document.querySelectorAll('#pdSizes .pd-opt').forEach((b) => b.classList.toggle('active', b === btn));
     refreshPrice();
   });
@@ -283,7 +290,9 @@
   document.getElementById('pdQty').addEventListener('click', (e) => {
     const btn = e.target.closest('[data-q]');
     if (!btn) return;
-    qty = Math.max(1, qty + (btn.getAttribute('data-q') === 'inc' ? 1 : -1));
+    // Tope en las existencias: no ofrecer más unidades de las que hay.
+    const max = p.stock != null ? p.stock : Infinity;
+    qty = Math.min(max, Math.max(1, qty + (btn.getAttribute('data-q') === 'inc' ? 1 : -1)));
     qtyValEl.textContent = qty;
     refreshPrice();
   });

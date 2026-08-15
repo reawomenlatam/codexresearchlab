@@ -20,6 +20,10 @@
     ? `<img class="product-photo" src="${p.photo}" alt="${p.name}" width="1400" height="933" loading="lazy">`
     : window.REAui.vial(p ? p.name : '', sub);
 
+  // Con la rebaja, algunos precios dejan de ser enteros: $63.2 se ve mal.
+  // Enteros sin decimales, el resto con dos.
+  const amt = (n) => (n % 1 === 0 ? String(n) : n.toFixed(2));
+
   window.REAui.productCard = (p) => `
     <article class="product-card${p.outOfStock ? ' out' : ''}">
       <a class="product-media" href="product/${p.slug}/" aria-label="${p.name}">
@@ -29,7 +33,8 @@
       <div class="product-info">
         <span class="mono-tag">${p.tag}</span>
         <h3><a href="product/${p.slug}/">${p.name}</a></h3>
-        <span class="product-price">${p.mg} · ${p.outOfStock ? '<b>Out of stock</b>' : `from <b>$${p.from}</b>`}</span>
+        <span class="product-price">${p.mg} · ${p.outOfStock ? '<b>Out of stock</b>'
+          : `from <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
         <div class="product-cta">
           <a class="link" href="product/${p.slug}/">View product →</a>
           ${p.outOfStock ? '' : `<button class="add-btn" data-add="${p.slug}" aria-label="Add ${p.name} to cart">+</button>`}
