@@ -268,8 +268,14 @@
       // Con la rebaja general activa, la barra anuncia la oferta. Al apagarla
       // (SALE.active = false en data.js) vuelve sola al código de bienvenida.
       const SALE = window.REA.SALE || {};
+      // Fecha de fin en formato legible ("August 20"). Se parsea a mediodía UTC
+      // para que la zona horaria del visitante no la corra un día.
+      const saleEnds = SALE.until
+        ? new Date(SALE.until + 'T12:00:00Z').toLocaleDateString('en-US',
+            { month: 'long', day: 'numeric', timeZone: 'UTC' })
+        : '';
       const promo = SALE.active
-        ? `🔥 <b>${SALE.percent}% OFF</b> on everything · limited time`
+        ? `🔥 <b>${SALE.percent}% OFF</b> on everything${saleEnds ? ` · through ${saleEnds}` : ' · limited time'}`
         : `🎁 <b>10% off your first order</b> · code <b>WELCOME10</b>`;
       ann.innerHTML = isPA
         ? `${promo} · ${waLink}`

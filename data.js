@@ -172,7 +172,10 @@ PRODUCTS.forEach((p) => { p.stock = STOCK[p.slug] != null ? STOCK[p.slug] : 25; 
 // enterarse de que hay oferta. Es importante que sea así: si el navegador y el
 // servidor calcularan el descuento por separado, un centavo de diferencia
 // tumbaría el pago en cripto.
-const SALE = { active: true, percent: 20, label: '20% OFF everything' };
+// `until` es la fecha en que termina (inclusive). Solo se usa para el texto
+// que ve el cliente: la oferta NO se apaga sola, hay que poner active en
+// false, re-generar prices.json y volver a subirlo a Hostinger.
+const SALE = { active: true, percent: 20, until: '2026-08-20', label: '20% OFF everything' };
 
 const salePrice = (list) => Math.round(list * (100 - SALE.percent)) / 100;
 

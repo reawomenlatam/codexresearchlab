@@ -1041,6 +1041,15 @@ s.was, .pd-price-was {
   padding: .32rem .65rem; border-radius: 999px;
 }
 .product-card.out .product-photo, .product-card.out .vial { opacity: .5; filter: grayscale(.25); }
+
+/* Distintivo de rebaja: misma posición y forma que el sello de agotado, en rojo
+   para que se lea como oferta y no se confunda con una etiqueta informativa. */
+.sale-badge {
+  position: absolute; top: 12px; left: 12px; z-index: 2;
+  background: #c62828; color: #fff;
+  font-size: .72rem; font-weight: 800; letter-spacing: .02em;
+  padding: .32rem .6rem; border-radius: 999px;
+}
 .product-card.out:hover { transform: none; box-shadow: var(--shadow-card); }
 .product-card.out:hover .product-photo { transform: none; }
 .pd-badge.oos { background: #fdecec; color: var(--danger); border-color: #f6c9c9; font-weight: 700; }
