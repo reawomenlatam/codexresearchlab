@@ -58,8 +58,11 @@
     if (prod && prod.outOfStock) return; // no se agregan productos agotados
     const id = lineId(slug, size);
     const existing = items.find((i) => lineId(i.slug, i.size) === id);
-    if (existing) existing.qty += qty;
-    else items.push({ slug, size, qty });
+    // Nunca dejar en el carrito más unidades de las que hay: con 1 en existencia
+    // el cliente no puede terminar pidiendo 3.
+    const max = prod && prod.stock != null ? prod.stock : Infinity;
+    if (existing) existing.qty = Math.min(max, existing.qty + qty);
+    else items.push({ slug, size, qty: Math.min(max, qty) });
     save(items);
     // Meta Pixel: evento de conversión AddToCart
     if (typeof fbq === 'function' && prod) {

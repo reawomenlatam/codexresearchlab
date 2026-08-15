@@ -3,7 +3,7 @@
    order"), discount codes, trust badges + guarantee, scarcity, social proof,
    sticky order summary with a single prominent checkout CTA. */
 (function () {
-  const { PRODUCTS, COUPONS, WHATSAPP, EMAILJS = {} } = window.REA;
+  const { PRODUCTS, COUPONS, WHATSAPP, EMAILJS = {}, SALE = {} } = window.REA;
   const cart = window.REACart;
   const ui = window.REAui;
   const root = document.getElementById('cartPageRoot');
@@ -48,7 +48,10 @@
     const subtotal = lines.reduce((n, l) => n + l.subtotal, 0);
     const c = coupon && validCoupon(coupon) ? COUPONS[coupon] : null;
     let discount = 0;
-    if (c && c.type === 'percent') discount = subtotal * (c.value / 100);
+    // Los descuentos NO se combinan: mientras la rebaja general esté activa,
+    // los precios ya vienen rebajados y un código no aplica nada encima.
+    // El código sigue siendo válido para atribuir la venta al influencer.
+    if (c && c.type === 'percent' && !SALE.active) discount = subtotal * (c.value / 100);
     const freeByThreshold = subtotal >= ship.freeThreshold;
     const freeByCoupon = !!(c && c.type === 'freeship');
     const freeShip = subtotal > 0 && (freeByThreshold || freeByCoupon);
@@ -235,7 +238,9 @@
     const payId = currentPayment();
     const couponMsg = coupon
       ? (validCoupon(coupon)
-          ? `<div class="coupon-msg ok">✓ Code <b>${esc(coupon)}</b> applied · ${esc(COUPONS[coupon].label)} <button data-coupon-remove aria-label="Remove code">✕</button></div>`
+          ? (SALE.active && COUPONS[coupon].type === 'percent'
+              ? `<div class="coupon-msg ok">✓ Code <b>${esc(coupon)}</b> registered · the <b>${SALE.percent}% OFF</b> already applied is a better deal, and discounts don’t stack <button data-coupon-remove aria-label="Remove code">✕</button></div>`
+              : `<div class="coupon-msg ok">✓ Code <b>${esc(coupon)}</b> applied · ${esc(COUPONS[coupon].label)} <button data-coupon-remove aria-label="Remove code">✕</button></div>`)
           : `<div class="coupon-msg err">Code “${esc(coupon)}” is not valid.</div>`)
       : '';
 
@@ -249,7 +254,7 @@
             <button type="submit" class="btn btn-ghost">Apply</button>
           </form>
           ${couponMsg}
-          ${!(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> for 10% off</button>` : ''}
+          ${!SALE.active && !(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> for 10% off</button>` : ''}
 
           <div class="sum-rows">
             <div class="sum-row"><span>Subtotal</span><span>${money(s.subtotal)}</span></div>

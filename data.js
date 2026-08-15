@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     slug: 'tirzepatide', name: 'Tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 190, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
-    photo: 'assets/products/tirzepatide.jpg',
+    photo: 'assets/products/tirzepatide.jpg', outOfStock: true,
     sizes: [
       { label: 'Single vial', price: 190 },
       { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
@@ -18,7 +18,7 @@ const PRODUCTS = [
   {
     slug: 'retatrutide', name: 'Retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide.jpg',
+    photo: 'assets/products/retatrutide.jpg', outOfStock: true,
     sizes: [
       { label: 'Single vial', price: 150 },
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
@@ -98,7 +98,6 @@ const PRODUCTS = [
     photo: 'assets/products/ahk-cu.jpg',
     sizes: [
       { label: 'Single vial', price: 120 },
-      { label: 'Pack · 3 vials', price: 331.20, save: '8%' },
     ],
     overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
@@ -154,9 +153,36 @@ const TESTIMONIALS = [
   { name: 'A. Ríos', role: 'Lab technician', rating: 5, quote: 'I’ve worked with other suppliers and the difference here is traceability: every vial with its batch and its certificate. No guesswork.' },
 ];
 
-// Sample stock (drives scarcity messaging). Low stock (< 10) shows "Only N left".
-const STOCK = { 'retatrutide': 6, 'pt-141': 4 };
+// Existencias reales. Con menos de 10 se muestra "Only N left" y la
+// cantidad no puede pasar de ahí. Los que no aparecen aquí van con 25.
+// Los agotados se marcan con outOfStock en el producto, no aquí.
+const STOCK = { 'ahk-cu': 1 };
 PRODUCTS.forEach((p) => { p.stock = STOCK[p.slug] != null ? STOCK[p.slug] : 25; });
+
+// ---------------------------------------------------------------------------
+// REBAJA GENERAL DE LA TIENDA
+// ---------------------------------------------------------------------------
+// Para APAGAR la oferta: `active: false`. Los precios vuelven solos a los de
+// lista, sin tener que tocar ningún producto.
+//
+// El descuento se aplica UNA sola vez, aquí: cada presentación guarda su precio
+// de lista en `list` y `price` pasa a ser el precio rebajado. Todo lo demás
+// (tarjetas, página de producto, carrito, checkout y el prices.json que usa el
+// servidor para cotizar los pagos en cripto) sigue leyendo `price` sin
+// enterarse de que hay oferta. Es importante que sea así: si el navegador y el
+// servidor calcularan el descuento por separado, un centavo de diferencia
+// tumbaría el pago en cripto.
+const SALE = { active: true, percent: 20, label: '20% OFF everything' };
+
+const salePrice = (list) => Math.round(list * (100 - SALE.percent)) / 100;
+
+if (SALE.active) {
+  PRODUCTS.forEach((p) => {
+    p.listFrom = p.from;
+    p.from = salePrice(p.from);
+    p.sizes.forEach((s) => { s.list = s.price; s.price = salePrice(s.price); });
+  });
+}
 
 // Per-country config: shipping, delivery promise and payment methods.
 // Both countries use USD, product prices are identical.
@@ -214,4 +240,4 @@ const BATCHES = {
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
 };
 
-window.REA = { PRODUCTS, ARTICLES, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, WHATSAPP: '50763354625', EMAILJS };
+window.REA = { PRODUCTS, ARTICLES, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS };
