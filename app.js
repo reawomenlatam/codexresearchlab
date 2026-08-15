@@ -24,11 +24,17 @@
   // Enteros sin decimales, el resto con dos.
   const amt = (n) => (n % 1 === 0 ? String(n) : n.toFixed(2));
 
+  // Distintivo de rebaja sobre la foto. No se pone en los agotados: ahí manda
+  // el sello de "Out of stock" y dos etiquetas encimadas se ven mal.
+  const SALE = window.REA.SALE || {};
+  const saleBadge = (p) => (SALE.active && !p.outOfStock && p.listFrom)
+    ? `<span class="sale-badge">−${SALE.percent}%</span>` : '';
+
   window.REAui.productCard = (p) => `
     <article class="product-card${p.outOfStock ? ' out' : ''}">
       <a class="product-media" href="product/${p.slug}/" aria-label="${p.name}">
         ${window.REAui.media(p, 'lyophilized')}
-        ${p.outOfStock ? '<span class="oos-badge">Out of stock</span>' : ''}
+        ${p.outOfStock ? '<span class="oos-badge">Out of stock</span>' : saleBadge(p)}
       </a>
       <div class="product-info">
         <span class="mono-tag">${p.tag}</span>
