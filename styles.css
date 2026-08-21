@@ -82,7 +82,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .section { padding: 5.5rem 0; }
 .section-head { max-width: 640px; margin-bottom: 3rem; }
-.section-head h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); letter-spacing: -.03em; line-height: 1.1; }
+.section-head h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.14; text-wrap: balance; }
 .section-head p { color: var(--muted); margin-top: .75rem; font-size: 1.05rem; }
 .section-head .row { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
@@ -372,6 +372,56 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .add-btn:hover { background: var(--accent); color: #fff; }
 
 /* ---------- Proceso ---------- */
+/* ===================== Cinta de texto en movimiento =====================
+   Dos listas idénticas corriendo en paralelo: cuando la primera termina de
+   salir, la segunda ya ocupa su lugar, así el bucle no tiene costura.
+   El texto real va en un aria-label del contenedor; las listas son
+   aria-hidden para que un lector de pantalla no lo lea dos veces. */
+.marquee {
+  --gap: 3.5rem;
+  display: flex; gap: var(--gap);
+  overflow: hidden; user-select: none;
+  padding: 2.4rem 0;
+  border-block: 1px solid var(--border);
+  background: var(--card);
+}
+.marquee ul {
+  flex: none; display: flex; align-items: center; gap: var(--gap);
+  list-style: none; margin: 0; padding: 0;
+  animation: marquee-slide 34s linear infinite;
+}
+.marquee li {
+  display: flex; align-items: center; gap: var(--gap);
+  font-size: clamp(1.45rem, 3.2vw, 2.5rem); font-weight: 500;
+  letter-spacing: -.03em; white-space: nowrap;
+}
+.marquee li::after {
+  content: ''; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent); opacity: .5;
+}
+.marquee .dim { color: var(--muted); }
+@keyframes marquee-slide { to { transform: translateX(calc(-100% - var(--gap))); } }
+@media (prefers-reduced-motion: reduce) { .marquee ul { animation: none; } }
+
+/* ===================== Franja de cifras ===================== */
+.figures { padding: 5.5rem 0 5rem; }
+.figures-head { max-width: 46rem; margin-bottom: 3.4rem; }
+.figures-head h2 {
+  margin-top: .9rem;
+  font-size: clamp(1.75rem, 3.8vw, 2.9rem); font-weight: 400;
+  letter-spacing: -.035em; line-height: 1.16; text-wrap: balance;
+}
+.figures-head h2 em { font-style: normal; color: var(--muted); }
+.figures-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.2rem; }
+.figure { padding-top: 1.3rem; border-top: 1px solid var(--border); }
+.figure b {
+  display: block; line-height: 1;
+  font-size: clamp(2.4rem, 5.4vw, 4.1rem); font-weight: 300; letter-spacing: -.05em;
+  font-variant-numeric: tabular-nums;
+}
+.figure span { display: block; margin-top: .65rem; color: var(--muted); font-size: .85rem; line-height: 1.4; }
+@media (max-width: 900px) { .figures-grid { grid-template-columns: repeat(2, 1fr); } }
+
 .process { background: var(--ink); color: #fff; border-radius: 28px; padding: 4.5rem 4rem; }
 .process .section-head h2 { color: #fff; }
 .process .section-head p { color: rgba(255,255,255,.55); }
@@ -389,7 +439,26 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   letter-spacing: .08em;
 }
 .process-step h3 { font-size: 1.1rem; margin-top: .8rem; }
-.process-step p { color: rgba(255,255,255,.55); font-size: .9rem; margin-top: .4rem; }
+.process-step p { color: rgba(255,255,255,.55); font-size: .9rem; margin-top: .4rem; max-width: 32ch; padding-bottom: 1.6rem; }
+
+/* El numeral no decora: el proceso SÍ es una secuencia (primero se verifica el
+   lote, luego se confirma el pedido, luego se despacha), así que el orden es
+   información. Va detrás del texto, muy tenue. */
+.process-step { position: relative; overflow: hidden; }
+.process-step .step-fig {
+  position: absolute; right: .2rem; bottom: -1rem;
+  font-size: 5.4rem; font-weight: 300; letter-spacing: -.06em; line-height: 1;
+  color: #fff; opacity: .07; pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+.process-step .step-go {
+  position: absolute; top: 1.4rem; right: 1.4rem;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.1); color: #fff;
+  transition: background .5s var(--ease-spring), transform .5s var(--ease-spring);
+}
+.process-step:hover .step-go { background: rgba(255,255,255,.22); transform: translate(2px,-2px); }
 
 /* ---------- CTA WhatsApp ---------- */
 .cta-band { text-align: center; }
