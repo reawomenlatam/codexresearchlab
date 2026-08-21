@@ -23,6 +23,17 @@
   --font-mono: 'Fragment Mono', 'SF Mono', monospace;
   --shadow-card: 0 1px 2px rgba(41, 46, 76, .04), 0 8px 24px rgba(41, 46, 76, .06);
   --shadow-pop: 0 12px 40px rgba(41, 46, 76, .16);
+
+  /* --- Vidrio (glassmorphism) ---
+     Un solo juego de tokens para que todas las superficies translúcidas hablen
+     el mismo idioma. El saturate() es lo que evita que lo de atrás se vea
+     lavado: el desenfoque solo apaga el color, saturarlo lo devuelve.
+     REGLA: sólo en elementos fijos, pegajosos o flotantes. Sobre el fondo plano
+     de #fafafa el desenfoque no se ve y sólo cuesta GPU. */
+  --glass-bg: rgba(255, 255, 255, .62);
+  --glass-bg-strong: rgba(252, 252, 253, .82);
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-edge: inset 0 1px 0 rgba(255, 255, 255, .75), 0 0 0 1px rgba(20, 22, 28, .07);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -90,9 +101,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 250, 250, .85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  /* Ya era translúcido, pero sin saturate lo que pasaba por debajo se veía
+     lavado. Ahora usa el mismo lenguaje que el resto del vidrio del sitio. */
+  background: rgba(250, 250, 250, .72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(20, 22, 28, .07);
 }
 .header-inner {
   display: flex;
@@ -157,7 +171,38 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .mobile-nav .mobile-nav-cta { margin-top: 1.2rem; justify-content: center; border-bottom: none; color: #fff; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 5rem 0 3.5rem; overflow: hidden; }
+.hero { padding: 5rem 0 3.5rem; overflow: hidden; position: relative; }
+
+/* --- Fondo de fluido del hero -------------------------------------------
+   El simulador es aditivo (tinta clara sobre base oscura), así que aquí se da
+   vuelta: invert(1) convierte su casi-negro en casi-blanco y su tinta clara en
+   oscura; multiply hace que ese casi-blanco no altere la página y sólo quede la
+   tinta. Resultado: veteado gris pizarra sobre el fondo claro de siempre.
+   Va detrás de todo (z-index 0) y no captura el ratón. */
+.hero-fluid {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;
+  display: block;
+  filter: invert(1);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  /* Se desvanece en los bordes para que no corte en seco contra la sección
+     siguiente ni compita con el texto de la izquierda. */
+  -webkit-mask-image: radial-gradient(78% 82% at 70% 38%, #000 0%, #000 30%, transparent 72%);
+          mask-image: radial-gradient(78% 82% at 70% 38%, #000 0%, #000 30%, transparent 72%);
+}
+.hero-fluid.is-on { opacity: .42; }
+
+/* En móvil el hero ya va apretado y el canvas queda como una tira alta y
+   estrecha donde el veteado no se lee: no vale el gasto de GPU. */
+@media (max-width: 720px) { .hero-fluid { display: none; } }
+/* El contenido del hero va por encima del fluido. */
+.hero-grid { position: relative; z-index: 1; }
+
+@media (prefers-reduced-motion: reduce) { .hero-fluid { display: none; } }
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -242,10 +287,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .badge-float {
   position: absolute;
-  background: var(--card);
-  border: 1px solid var(--border);
+  /* Flotan sobre la foto del producto y sobre el veteado del fluido: el vidrio
+     deja que se note lo que pasa por detrás en vez de taparlo con blanco. */
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 12px;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--glass-edge), var(--shadow-card);
   padding: .6rem .9rem;
   font-size: .78rem; font-weight: 600;
   display: flex; align-items: center; gap: .45rem;
@@ -401,42 +449,134 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .gate-overlay[hidden] { display: none; }
 .gate-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
-.gate-card {
-  position: relative; z-index: 1;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: var(--shadow-pop);
-  max-width: 520px;
-  padding: 2.4rem;
-}
-.gate-card h2 { font-size: 1.4rem; letter-spacing: -.02em; }
-.gate-card > p { color: var(--muted); font-size: .92rem; margin: 1rem 0 1.6rem; }
-.gate-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
-.gate-actions .btn { justify-content: center; }
-.btn-danger { background: #fdecec; color: var(--danger); }
-.btn-danger:hover { background: var(--danger); color: #fff; }
+/* ===================== Selección de país (gate) =====================
+   Arquitectura de doble bisel: una bandeja translúcida (.gate-shell) que
+   sostiene un núcleo opaco (.gate-card), con radios CONCÉNTRICOS — el radio
+   interior es el exterior menos el padding, que es lo que hace que las curvas
+   se vean paralelas en vez de encajadas a la fuerza.
+   Sólo se rediseñó esta tarjeta; el velo de fondo y el resto del sitio no cambian. */
 
-/* Gate: selección de país */
-.gate-q { font-weight: 700; color: var(--ink) !important; font-size: .95rem !important; margin-bottom: .9rem !important; }
-.gate-countries { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
-.gate-country {
-  display: flex; align-items: center; gap: .8rem; text-align: left;
-  border: 1px solid var(--border); border-radius: 14px; background: var(--bg);
-  padding: 1rem 1.1rem; transition: border-color .15s, transform .15s;
+/* Curva de resorte: sale rápido y asienta despacio, sin rebote. */
+:root { --ease-spring: cubic-bezier(0.32, 0.72, 0, 1); }
+
+.gate-shell {
+  position: relative; z-index: 1;
+  width: min(31rem, 100%);
+  padding: 8px;                                  /* el "marco" del bisel */
+  border-radius: 30px;
+  background: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  /* Hairlines en vez de bordes grises: un filo claro arriba y una sombra
+     ambiental muy difusa, nunca una caja dura. */
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .55),
+    0 0 0 1px rgba(20, 22, 28, .05),
+    0 2px 6px rgba(20, 22, 28, .04),
+    0 18px 40px -12px rgba(20, 22, 28, .16),
+    0 48px 80px -32px rgba(20, 22, 28, .28);
+  animation: gate-in .62s var(--ease-spring) both;
 }
-.gate-country:hover { border-color: var(--ink); transform: translateY(-1px); }
-.gate-country .flag { font-size: 1.5rem; }
-.gate-country b { display: block; font-size: .95rem; }
-.gate-country small { display: block; color: var(--muted); font-size: .74rem; margin-top: 2px; }
-.gate-card p.gate-confirm { color: var(--muted); font-size: .78rem; line-height: 1.55; margin: 1.4rem 0 0; }
-.gate-confirm a { color: var(--ink); text-decoration: underline; }
-.gate-under { display: block; margin: 1.2rem auto 0; font-size: .82rem; color: var(--muted); text-decoration: underline; }
+
+.gate-card {
+  border-radius: 22px;                           /* 30 - 8 = concéntrico */
+  background: linear-gradient(180deg, #fff 0%, #fcfcfd 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 0 0 1px rgba(20, 22, 28, .055);
+  padding: 2.1rem 2.1rem 1.5rem;
+  text-align: left;
+}
+
+.gate-card h2.gate-q {
+  margin: 0;
+  font-size: 1.5rem; font-weight: 600;
+  letter-spacing: -.032em; line-height: 1.18;
+  color: var(--ink);
+}
+.gate-lede { margin: .5rem 0 1.4rem; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+
+.gate-countries { display: grid; gap: .6rem; }
+
+.gate-country {
+  display: flex; align-items: center; gap: .95rem;
+  width: 100%; text-align: left;
+  padding: .95rem 1rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 0 0 1px rgba(20, 22, 28, .07),
+    0 1px 2px rgba(20, 22, 28, .04);
+  /* Sólo transform y opacidad se animan: nada que dispare reflow. */
+  transition: box-shadow .35s var(--ease-spring), transform .35s var(--ease-spring);
+  animation: gate-row-in .55s var(--ease-spring) both;
+  animation-delay: calc(.16s + var(--i, 0) * .07s);
+}
+.gate-country:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 0 0 1px rgba(20, 22, 28, .12),
+    0 6px 16px -4px rgba(20, 22, 28, .14);
+}
+.gate-country:active { transform: scale(.985); }        /* respuesta física al pulsar */
+.gate-country:focus-visible { outline: none; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+
+.gc-flag { font-size: 1.45rem; line-height: 1; flex: none; }
+.gc-text { flex: 1; min-width: 0; }
+.gc-text b { display: block; font-size: .95rem; font-weight: 600; letter-spacing: -.012em; color: var(--ink); }
+.gc-text small { display: block; margin-top: 1px; color: var(--muted); font-size: .76rem; }
+
+/* Flecha anidada en su propio círculo, nunca suelta junto al texto. */
+.gc-go {
+  flex: none; width: 26px; height: 26px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: rgba(20, 22, 28, .05);
+  color: var(--muted);
+  transition: background .35s var(--ease-spring), color .35s var(--ease-spring), transform .35s var(--ease-spring);
+}
+.gc-go svg { width: 14px; height: 14px; }
+.gate-country:hover .gc-go { background: var(--ink); color: #fff; transform: translateX(2px); }
+
+.gate-card p.gate-confirm {
+  margin: 1.3rem 0 0;
+  color: var(--muted); font-size: .74rem; line-height: 1.6;
+}
+.gate-confirm a { color: var(--ink); text-decoration: none; box-shadow: 0 1px 0 rgba(20,22,28,.25); }
+.gate-confirm a:hover { box-shadow: 0 1px 0 var(--ink); }
+
+.gate-under {
+  display: block; margin: 1.05rem auto 0;
+  padding: .3rem .1rem;
+  font-size: .8rem; color: var(--muted);
+  transition: color .3s var(--ease-spring);
+}
 .gate-under:hover { color: var(--ink); }
+
+/* Rama "no tengo la edad": el JS reemplaza el innerHTML de .gate-card, así que
+   se estiliza por etiqueta para que herede el mismo lenguaje. */
+.gate-card h2 { font-size: 1.4rem; font-weight: 600; letter-spacing: -.03em; color: var(--ink); }
+.gate-card > p { color: var(--muted); font-size: .92rem; line-height: 1.55; margin: .8rem 0 1.5rem; }
+.gate-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.gate-actions .btn { justify-content: center; }
+
+@keyframes gate-in {
+  from { opacity: 0; transform: translateY(14px) scale(.965); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+@keyframes gate-row-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gate-shell, .gate-country { animation: none; }
+}
 @media (max-width: 560px) {
-  .gate-card { padding: 1.8rem 1.4rem; }
-  .gate-countries { grid-template-columns: 1fr; }
-  .gate-country { padding: .9rem 1rem; }
+  .gate-shell { padding: 6px; border-radius: 24px; }
+  .gate-card { padding: 1.6rem 1.35rem 1.25rem; border-radius: 18px; }
+  .gate-card h2.gate-q { font-size: 1.3rem; }
+  .gate-country { padding: .85rem .9rem; }
   .gate-country b { display: inline; }
   .gate-country small { margin-top: 3px; }
 }
@@ -453,8 +593,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .country-chip .flag { font-size: 1rem; }
 .country-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 65;
-  min-width: 230px; background: var(--card); border: 1px solid var(--border);
-  border-radius: 14px; box-shadow: var(--shadow-pop); padding: .45rem;
+  min-width: 230px;
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 14px;
+  box-shadow: var(--glass-edge), var(--shadow-pop);
+  padding: .45rem;
 }
 .country-menu[hidden] { display: none; }
 .country-menu button {
@@ -672,8 +817,12 @@ s.was, .pd-price-was {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   display: none; align-items: center; justify-content: space-between; gap: 1rem;
   padding: .8rem 1.1rem; padding-bottom: max(.8rem, env(safe-area-inset-bottom));
-  background: var(--card); border-top: 1px solid var(--border);
-  box-shadow: 0 -6px 24px rgba(29,32,38,.1);
+  /* Barra fija sobre el contenido que se desplaza: es exactamente donde el
+     vidrio se gana el costo, porque siempre hay algo pasando por detrás. */
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 -1px 0 rgba(20,22,28,.07), 0 -6px 24px rgba(29,32,38,.1);
   transform: translateY(100%); transition: transform .25s ease;
 }
 .pd-sticky.show { transform: translateY(0); }
@@ -901,8 +1050,12 @@ s.was, .pd-price-was {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   display: none; align-items: center; justify-content: space-between; gap: 1rem;
   padding: .7rem 1.1rem; padding-bottom: max(.7rem, env(safe-area-inset-bottom));
-  background: var(--card); border-top: 1px solid var(--border);
-  box-shadow: 0 -6px 24px rgba(29,32,38,.1);
+  /* Barra fija sobre el contenido que se desplaza: es exactamente donde el
+     vidrio se gana el costo, porque siempre hay algo pasando por detrás. */
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 -1px 0 rgba(20,22,28,.07), 0 -6px 24px rgba(29,32,38,.1);
 }
 .cart-sticky-total { display: flex; flex-direction: column; line-height: 1.15; }
 .cart-sticky-total span { font-size: .72rem; color: var(--muted); }
