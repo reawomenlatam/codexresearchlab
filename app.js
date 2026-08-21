@@ -109,7 +109,7 @@
     if (!heroDeliver || !window.REACountry) return;
     const isPA = window.REACountry.code() === 'PA';
     heroDeliver.innerHTML = isPA
-      ? '<span class="hd-dot"></span><span><b>Same-day delivery in Panama City</b>, in your hands in 1-2 h</span>'
+      ? '<span class="hd-dot"></span><span><b>Same-day delivery in Panama City</b>, in your hands in 2-3 h</span>'
       : '<span class="hd-dot"></span><span><b>Fast, discreet delivery across the US</b></span>';
   }
   window.addEventListener('rea-country-change', updateHeroDeliver);
