@@ -102,23 +102,35 @@
       </div>
     </footer>`;
 
+  // El bisel exterior (.gate-shell) envuelve a .gate-card a propósito: el JS de
+  // "no tengo la edad" reemplaza el innerHTML de .gate-card, así que cualquier
+  // envoltorio que viviera dentro se perdería en ese momento.
   const gateHTML = `
     <div class="gate-overlay" id="gateOverlay" hidden>
       <canvas class="gate-bg" id="gateBg" aria-hidden="true"></canvas>
-      <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
-        <p class="gate-q" id="gateTitle">Where are you shopping from?</p>
-        <div class="gate-countries">
-          ${Object.values(window.REA.COUNTRIES).map((c) => `
-            <button class="gate-country" data-country="${c.code}">
-              <span class="flag">${c.flag}</span>
-              <span><b>${c.label}</b><small>$${c.shipping.flat} shipping · ${c.etaShort}</small></span>
-            </button>`).join('')}
+      <div class="gate-shell">
+        <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+          <h2 class="gate-q" id="gateTitle">Where are you shopping from?</h2>
+          <p class="gate-lede">Shipping cost and delivery time depend on where we send it.</p>
+          <div class="gate-countries">
+            ${Object.values(window.REA.COUNTRIES).map((c, i) => `
+              <button class="gate-country" data-country="${c.code}" style="--i:${i}">
+                <span class="gc-flag">${c.flag}</span>
+                <span class="gc-text">
+                  <b>${c.label}</b>
+                  <small>$${c.shipping.flat} shipping · ${c.etaShort}</small>
+                </span>
+                <span class="gc-go" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="M6 3.5 10.5 8 6 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </button>`).join('')}
+          </div>
+          <p class="gate-confirm">
+            By selecting your country and entering, you confirm you are of legal age in your
+            jurisdiction and agree to our <a href="terms/">Terms of Service</a>.
+          </p>
+          <button class="gate-under" id="gateNo">I'm not of legal age</button>
         </div>
-        <p class="gate-confirm">
-          By selecting your country and entering, you confirm you are of legal age in your
-          jurisdiction and agree to our <a href="terms/">Terms of Service</a>.
-        </p>
-        <button class="gate-under" id="gateNo">I'm not of legal age</button>
       </div>
     </div>`;
 

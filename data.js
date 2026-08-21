@@ -18,7 +18,7 @@ const PRODUCTS = [
   {
     slug: 'retatrutide', name: 'Retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide.jpg', outOfStock: true,
+    photo: 'assets/products/retatrutide.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
@@ -116,7 +116,7 @@ const PRODUCTS = [
   {
     slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Reconstitution supply · 10 ml',
     mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
-    photo: 'assets/products/bac-water-10ml.jpg', outOfStock: true,
+    photo: 'assets/products/bac-water-10ml.jpg',
     sizes: [
       { label: 'Single vial', price: 17 },
       { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
@@ -175,7 +175,7 @@ PRODUCTS.forEach((p) => { p.stock = STOCK[p.slug] != null ? STOCK[p.slug] : 25; 
 // `until` es la fecha en que termina (inclusive). Solo se usa para el texto
 // que ve el cliente: la oferta NO se apaga sola, hay que poner active en
 // false, re-generar prices.json y volver a subirlo a Hostinger.
-const SALE = { active: true, percent: 20, until: '2026-08-20', label: '20% OFF everything' };
+const SALE = { active: false, percent: 20, until: '2026-08-20', label: '20% OFF everything' };
 
 const salePrice = (list) => Math.round(list * (100 - SALE.percent)) / 100;
 
