@@ -114,4 +114,23 @@
   }
   window.addEventListener('rea-country-change', updateHeroDeliver);
   updateHeroDeliver();
+
+  // Tiempo de entrega en la cinta, siguiendo al país elegido.
+  // El texto sale de COUNTRIES en data.js, no escrito a mano aquí: si mañana
+  // cambia el tiempo de entrega, se cambia en un solo sitio.
+  // Las dos listas de la cinta reciben el MISMO texto; si difirieran, el bucle
+  // dejaría de ser continuo porque cada una mediría distinto.
+  const marquee = document.getElementById('heroMarquee');
+  function updateMarqueeEta() {
+    if (!marquee || !window.REACountry) return;
+    const c = window.REA.COUNTRIES[window.REACountry.code()];
+    if (!c) return;
+    const texto = c.code === 'PA' ? c.etaShort : `Delivered in ${c.etaShort}`;
+    marquee.querySelectorAll('.mq-eta').forEach((el) => { el.textContent = texto; });
+    // Las listas son aria-hidden, así que el texto accesible vive en el
+    // contenedor y también tiene que actualizarse.
+    marquee.setAttribute('aria-label', `HPLC verified · COA per batch · ${texto} · Batch traceable`);
+  }
+  window.addEventListener('rea-country-change', updateMarqueeEta);
+  updateMarqueeEta();
 })();
