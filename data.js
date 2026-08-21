@@ -140,7 +140,7 @@ const ARTICLES = [
 
 const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.' },
-  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 2-3 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in up to 5 days. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.' },
+  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in up to 5 days. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
   { q: 'What payment methods do you accept?', a: 'Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay.' },
@@ -202,7 +202,7 @@ const COUNTRIES = {
   PA: {
     code: 'PA', label: 'Panamá', flag: '🇵🇦',
     shipping: { flat: 4, freeThreshold: 100 },
-    eta: 'Panama City: 2-3 h · Interior: next-day', etaShort: '2-3 h in Panama City',
+    eta: 'Panama City: 1-2 h · Interior: next-day', etaShort: '1-2 h in Panama City',
     payments: [
       { id: 'yappy', label: 'Yappy' },
       { id: 'ach', label: 'ACH transfer' },
