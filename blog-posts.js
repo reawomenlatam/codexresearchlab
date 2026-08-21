@@ -1055,7 +1055,7 @@
 
         <h2>Delivery in Panama City and the interior</h2>
         <ul>
-          <li><b>Panama City:</b> $4 flat shipping, delivered in <b>2-3 hours</b> from local stock.</li>
+          <li><b>Panama City:</b> $4 flat shipping, delivered in <b>1-2 hours</b> from local stock.</li>
           <li><b>Interior cities</b> such as David, Chitré, and Colón: next business day via Fergunson transport.</li>
           <li><b>Free shipping</b> on orders over $100.</li>
           <li>Every order ships in <b>neutral, discreet packaging</b> with no reference to the contents.</li>
@@ -1078,7 +1078,7 @@
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 2-3 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
+        { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
         { q: 'What payment methods can I use in Panama?', a: 'In Panama you can pay with Yappy, ACH transfer, or cash on delivery. Cash on delivery means you pay when you receive your order, with no advance payment. A specialist confirms the details on WhatsApp before you pay.' },
         { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
       ],
@@ -1115,7 +1115,7 @@
         <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
 
         <h2>Buying in Panama</h2>
-        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 2-3 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
+        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
