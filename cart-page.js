@@ -499,6 +499,37 @@
       else fetch(CAPI_URL, { method: 'POST', body: data, keepalive: true, mode: 'no-cors' });
     } catch (e) { /* nunca romper el checkout por el tracking */ }
   }
+  // --- Registro del pedido en nuestro servidor.
+  // El checkout termina abriendo WhatsApp con el mensaje ya escrito, pero es el
+  // cliente quien tiene que darle a "enviar". Si no lo hace, el pedido no
+  // existía en ningún lado: nombre, correo, telefono, direccion y carrito se
+  // perdian. Esto lo guarda ANTES del salto, asi queda el registro y se le
+  // puede escribir aunque nunca haya mandado el mensaje.
+  //
+  // Fire-and-forget igual que el resto del tracking: pase lo que pase con el
+  // servidor, el cliente completa su compra.
+  const ORDER_URL = 'https://hooks.codexresearchlab.com/order.php';
+  function saveOrder(s, id, cfg, payLabel, status, extraNote) {
+    try {
+      const notes = [buyer.notes || '', extraNote || ''].filter(Boolean).join(' · ');
+      const data = new URLSearchParams({
+        order_id: id, status: status || 'pending',
+        name: buyer.name || '', email: buyer.email || '', phone: buyer.phone || '',
+        address1: buyer.address1 || '', address2: buyer.address2 || '',
+        city: buyer.city || '', state: buyer.state || '', postal: buyer.postal || '',
+        notes: notes, country: (cfg && cfg.label) || '', payment: payLabel || '',
+        items: JSON.stringify(s.lines.map((l) => ({
+          slug: l.slug, name: l.name, size: l.size, qty: l.qty, subtotal: l.subtotal,
+        }))),
+        subtotal: s.subtotal.toFixed(2), discount: s.discount.toFixed(2), coupon: coupon || '',
+        shipping: s.shipping.toFixed(2), total: s.total.toFixed(2),
+        source_url: location.href,
+      });
+      if (navigator.sendBeacon) navigator.sendBeacon(ORDER_URL, data);
+      else fetch(ORDER_URL, { method: 'POST', body: data, keepalive: true, mode: 'no-cors' });
+    } catch (e) { /* nunca romper el checkout por el registro */ }
+  }
+
   function trackCoupon(s, id, cfg, methodLabel) {
     if (!(coupon && validCoupon(coupon))) return; // sólo códigos válidos
     try {
@@ -626,6 +657,7 @@
         fireLead(s);
         trackCoupon(s, id, cfg, 'Zelle');
         stageForCapi(s, id, cfg);
+        saveOrder(s, id, cfg, 'Zelle', 'emailed');
         confirmation = { id, email: clean(buyer.email) };
         resetBuyer();
         placing = false;
@@ -651,6 +683,10 @@
       const setBtn = (t) => { if (btn) { btn.disabled = true; btn.textContent = t; } };
       const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = 'Pay with crypto'; } };
       let txHash = null;
+
+      // Se guarda antes de abrir la wallet: si abandona en ese paso, el pedido
+      // igual queda registrado y se le puede dar seguimiento.
+      saveOrder(s, id, cfg, 'Crypto ' + asset, 'pending');
 
       try {
         setBtn('Preparing payment…');
@@ -681,6 +717,8 @@
         });
         stageForCapi(s, conf.order_id, cfg);
         trackCoupon(s, conf.order_id, cfg, 'Crypto ' + conf.asset);
+        // Mismo order_id que el guardado de arriba: actualiza la fila, no la duplica.
+        saveOrder(s, id, cfg, 'Crypto ' + conf.asset, 'paid', 'cobro ' + conf.order_id + ' tx ' + txHash);
         confirmation = {
           id: conf.order_id, email: clean(buyer.email),
           crypto: true, tx: txHash, asset: conf.asset, amount: conf.amount,
@@ -737,6 +775,7 @@
     fireLead(s);
     trackCoupon(s, id, cfg, clean(payLabel));
     stageForCapi(s, id, cfg);
+    saveOrder(s, id, cfg, clean(payLabel), 'pending');
     window.open(`https://wa.me/${WHATSAPP}?text=${waText}`, '_blank', 'noopener');
     if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Opening WhatsApp… send the message to complete your order.'; }
     setTimeout(() => { placing = false; }, 1500);
