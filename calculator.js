@@ -46,7 +46,11 @@
         const res = await fetch(ENDPOINT, { method: 'POST', body });
         if (!res.ok) throw new Error('status ' + res.status);
         // Eventos de conversión.
-        if (typeof gtag === 'function') gtag('event', 'generate_lead', { source: 'reconstitution-calculator' });
+        // OJO: no usar `source` como parámetro. En GA4 es un nombre reservado y
+        // pisa la atribución de tráfico de la sesión: 18 visitas quedaron
+        // registradas como si vinieran de un sitio llamado
+        // "reconstitution-calculator" en vez de su origen real.
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_source: 'reconstitution-calculator' });
         if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'reconstitution-calculator' });
         unlock();
       } catch (err) {
