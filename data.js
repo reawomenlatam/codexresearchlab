@@ -50,11 +50,11 @@ const PRODUCTS = [
   },
   {
     slug: 'ipamorelin', name: 'Ipamorelin', cas: '170851-70-4', tag: 'CAS # 170851-70-4',
-    mg: '10 mg', from: 89, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
+    mg: '10 mg', from: 135, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
     photo: 'assets/products/ipamorelin.jpg',
     sizes: [
-      { label: 'Single vial', price: 89 },
-      { label: 'Pack · 3 vials', price: 245.64, save: '8%' },
+      { label: 'Single vial', price: 135 },
+      { label: 'Pack · 3 vials', price: 372.60, save: '8%' },
     ],
     overview: 'Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation.',
     research: ['GH secretagogues', 'Ghrelin receptor', 'Endocrine regulation'],
