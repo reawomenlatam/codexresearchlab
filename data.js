@@ -7,7 +7,7 @@ const PRODUCTS = [
   {
     slug: 'tirzepatide', name: 'Tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 190, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
-    photo: 'assets/products/tirzepatide.jpg', outOfStock: true,
+    photo: 'assets/products/tirzepatide.jpg',
     sizes: [
       { label: 'Single vial', price: 190 },
       { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
