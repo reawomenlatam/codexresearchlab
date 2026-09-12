@@ -5,25 +5,25 @@
 
 const PRODUCTS = [
   {
-    slug: 'tirzepatide', name: 'Tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
+    slug: 'tirzepatide', name: 'GLP-2', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 190, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
     sizes: [
       { label: 'Single vial', price: 190 },
       { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
     ],
-    overview: 'Tirzepatide is a dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
   },
   {
-    slug: 'retatrutide', name: 'Retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
+    slug: 'retatrutide', name: 'GLP-3', alias: 'retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
     ],
-    overview: 'Retatrutide is a triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {

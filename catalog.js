@@ -29,7 +29,12 @@
     let rows = PRODUCTS.filter(cat.test);
     if (state.q) {
       const q = state.q.toLowerCase();
-      rows = rows.filter((p) => p.name.toLowerCase().includes(q) || p.cas.toLowerCase().includes(q));
+      // `alias` guarda el nombre científico de los productos que se venden con
+      // nombre comercial: quien llega buscando ese término lo sigue encontrando,
+      // sin que aparezca en ninguna parte de la página.
+      rows = rows.filter((p) => p.name.toLowerCase().includes(q)
+        || p.cas.toLowerCase().includes(q)
+        || (p.alias || '').toLowerCase().includes(q));
     }
     rows.sort((a, b) => {
       if (state.sort === 'price-asc') return a.from - b.from;
