@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,10 +41,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"Codex Research","url":"https://codexresearchlab.com/","inLanguage":"en"}
   </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are your products verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch's COA on WhatsApp, or verify your batch number at codexresearchlab.com/verify/."}},{"@type":"Question","name":"Do you deliver peptides in Panama and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"Yes. Codex Research ships from local stock in Panama. Panama City: $4 shipping, delivered in 1-2 hours. Interior cities like David, Chitré and Colón: next business day via Fergunson transport. Free shipping on orders over $100. Always in neutral, discreet packaging."}},{"@type":"Question","name":"What payment methods do you accept in Panama?","acceptedAnswer":{"@type":"Answer","text":"In Panama we accept Yappy, ACH transfer, or cash on delivery. In the United States: Zelle or crypto (USDT, USDC, BTC). Your specialist confirms the details on WhatsApp before you pay."}},{"@type":"Question","name":"Are these products for human consumption?","acceptedAnswer":{"@type":"Answer","text":"No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption."}},{"@type":"Question","name":"How should I store the products?","acceptedAnswer":{"@type":"Answer","text":"Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions."}}]}
-  </script>
+  <!-- FAQ-LD:START -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are your products verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp."}},{"@type":"Question","name":"Where do you ship from and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging."}},{"@type":"Question","name":"Are these products for human consumption?","acceptedAnswer":{"@type":"Answer","text":"No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption."}},{"@type":"Question","name":"Do you ship internationally?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay."}},{"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay."}},{"@type":"Question","name":"How should I store the products?","acceptedAnswer":{"@type":"Answer","text":"Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions."}}]}</script>
+  <!-- FAQ-LD:END -->
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/products/bpc-157.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
@@ -95,7 +96,7 @@
 
       <div class="hero-visual">
         <figure class="vial-card">
-          <a href="product/bpc-157/"><img class="hero-photo product-photo" src="assets/products/bpc-157.jpg" alt="BPC-157 vial" width="1400" height="933"></a>
+          <a href="product/bpc-157/"><img class="hero-photo product-photo" src="assets/products/bpc-157.jpg" alt="BPC-157 vial" width="1400" height="933" fetchpriority="high" decoding="async"></a>
           <figcaption>
             <b>BPC-157 · 10 mg</b>
             <span class="mono-tag">Batch #A-2419 · COA available</span>
@@ -108,7 +109,7 @@
   </section>
 
   <!-- ============ Cinta ============ -->
-  <div class="marquee" id="heroMarquee" aria-label="HPLC verified · COA per batch · Batch traceable">
+  <div class="marquee" role="img" id="heroMarquee" aria-label="HPLC verified · COA per batch · Batch traceable">
     <ul aria-hidden="true">
       <li>HPLC verified</li><li class="dim">COA per batch</li><li class="mq-eta">1-2 h in Panama City</li><li class="dim">Batch traceable</li>
     </ul>

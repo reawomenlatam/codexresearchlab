@@ -79,10 +79,17 @@
   // ---------- Featured image (infographic, shown uncropped) ----------
   // Convention: assets/blog/<slug>.jpg - override with post.image if needed.
   const imgSrc = p.image || `assets/blog/${p.slug}.jpg`;
+  // Las dimensiones reales las hornea build-seo.js en el <img> de la página
+  // estática; se reutilizan al hidratar. Antes iban fijas a 1575x1800, que era
+  // falso en 32 de 33 portadas y provocaba un salto de maquetación.
+  const baked = document.querySelector('.article-figure img[width]');
+  const dimAttr = baked
+    ? ` width="${baked.getAttribute('width')}" height="${baked.getAttribute('height')}"`
+    : '';
   const cover = `
     <figure class="article-figure">
       <a href="${imgSrc}" target="_blank" rel="noopener" aria-label="Open full-size image">
-        <img src="${imgSrc}" alt="${p.imageAlt}" width="1575" height="1800">
+        <img src="${imgSrc}" alt="${p.imageAlt}"${dimAttr}>
       </a>
       <figcaption>${p.imageAlt} · <span>Click to view full size</span></figcaption>
     </figure>`;

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,11 +24,15 @@
   <title>Research Peptides Catalog | Codex Research</title>
   <meta name="description" content="Browse the full Codex Research catalog: tirzepatide, retatrutide, BPC-157, GHK-Cu and more. Batch-verified with third-party COA and 99% HPLC purity.">
   <link rel="canonical" href="https://codexresearchlab.com/catalog/">
+  <meta name="twitter:title" content="Research Peptides Catalog | Codex Research">
+  <meta name="twitter:description" content="Browse the full Codex Research catalog: tirzepatide, retatrutide, BPC-157, GHK-Cu and more. Batch-verified with third-party COA and 99% HPLC purity.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://codexresearchlab.com/catalog/">
   <meta property="og:title" content="Research Peptides Catalog | Codex Research">
   <meta property="og:description" content="Batch-verified research peptides with third-party COA and 99% HPLC purity. Ready to ship.">
   <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,9 +76,9 @@
   <section class="section" style="padding-top:1rem;">
     <div class="container catalog-layout">
       <aside class="catalog-sidebar">
-        <h4>Search</h4>
+        <h2 class="sidebar-title">Search</h2>
         <input type="search" id="catSearch" class="cat-search" placeholder="Name or CAS #…" aria-label="Search products">
-        <h4 style="margin-top:1.6rem;">Categories</h4>
+        <h2 class="sidebar-title" style="margin-top:1.6rem;">Categories</h2>
         <ul class="cat-list" id="catList"></ul>
       </aside>
       <div>

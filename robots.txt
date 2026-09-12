@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Sin Disallow a propósito: /cart/, /product.html y /article.html ya llevan
+# <meta name="robots" content="noindex">, y para obedecerlo Google necesita
+# poder rastrearlas. Bloquearlas aquí produciría el caso contrario: una URL
+# indexada sin contenido, que es justo lo que reportó Search Console con
+# www.codexresearchlab.com.
+
 Sitemap: https://codexresearchlab.com/sitemap.xml

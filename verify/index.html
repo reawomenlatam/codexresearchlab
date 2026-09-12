@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,6 +24,16 @@
   <title>Verify a batch | Codex Research</title>
   <meta name="description" content="Check that your Codex Research vial is genuine. Enter your batch number to confirm its product, purity and certificate of analysis.">
   <link rel="canonical" href="https://codexresearchlab.com/verify/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Verify a batch | Codex Research">
+  <meta property="og:description" content="Check that your Codex Research vial is genuine. Enter your batch number to confirm its product, purity and certificate of analysis.">
+  <meta property="og:url" content="https://codexresearchlab.com/verify/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Verify a batch | Codex Research">
+  <meta name="twitter:description" content="Check that your Codex Research vial is genuine. Enter your batch number to confirm its product, purity and certificate of analysis.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +78,7 @@
       <form class="verify-form" id="verifyForm" novalidate>
         <label class="verify-label" for="verifyInput">Batch number</label>
         <div class="verify-row">
-          <input type="text" id="verifyInput" maxlength="40" autocomplete="off" spellcheck="false" placeholder="e.g. CDX-2607-001" aria-label="Batch number">
+          <input type="text" id="verifyInput" maxlength="40" autocomplete="off" spellcheck="false" placeholder="e.g. CDX-2607-001">
           <button type="submit" class="btn btn-primary">Verify</button>
         </div>
         <p class="verify-help">You’ll find the batch number on your vial label (for example, <b>Batch #CDX-2607-001</b>).</p>

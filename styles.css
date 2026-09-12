@@ -11,7 +11,7 @@
   --cta: #1d2026;
   --cta-hover: #0d0f12;
   --ink: #23262d;
-  --muted: #6b7078;
+  --muted: #666b73; /* #6b7078 quedaba en 4.46:1 sobre --bg-soft, justo por debajo de AA */
   --bg: #fafafa;
   --bg-soft: #f2f2f4;
   --card: #ffffff;
@@ -502,7 +502,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .footer-contact { margin-top: 1.2rem; }
 .footer-contact a { color: #c9ccd2; font-weight: 600; font-size: .95rem; display: block; padding: .15rem 0; }
 .footer-legal { padding-top: 1.6rem; }
-.footer-legal p { color: rgba(255,255,255,.4); font-size: .76rem; margin-top: .6rem; line-height: 1.6; }
+.footer-legal p { color: rgba(255,255,255,.55); /* .4 daba 3.67:1 sobre --ink; .55 = 5.58:1 (WCAG AA) */ font-size: .76rem; margin-top: .6rem; line-height: 1.6; }
 .footer-legal .copy { color: rgba(255,255,255,.6); font-size: .82rem; }
 
 /* ---------- Age gate ---------- */
@@ -844,7 +844,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .pd-opt-label { font-weight: 600; font-size: .88rem; color: var(--ink); }
 .pd-opt.active .pd-opt-label { color: var(--accent); }
 .pd-opt-price { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
-.pd-opt-save { font-size: .66rem; font-weight: 700; color: #1f9d6b; background: #e7f7f0; padding: .1rem .45rem; border-radius: 999px; margin-top: .2rem; }
+.pd-opt-save { font-size: .66rem; font-weight: 700; color: #157048; /* #1f9d6b daba 3.11:1 sobre #e7f7f0; #157048 = 5.51:1 */ background: #e7f7f0; padding: .1rem .45rem; border-radius: 999px; margin-top: .2rem; }
 .pd-price-row { display: flex; align-items: center; margin: 1.6rem 0 1.2rem; }
 .pd-price { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; }
 .pd-price-note { display: block; color: var(--muted); font-size: .82rem; }
@@ -1186,6 +1186,10 @@ s.was, .pd-price-was {
 .product-media, .pd-media-main { position: relative; }
 .js-motion .product-photo { opacity: 0; transition: opacity .5s ease; }
 .js-motion .product-photo.loaded { opacity: 1; }
+/* La imagen del héroe es el elemento LCP de la portada: si arranca invisible y
+   espera a que motion.js (penúltimo script) le ponga .loaded más medio segundo
+   de transición, el LCP se retrasa por decoración. Se pinta de inmediato. */
+.js-motion .hero-photo.product-photo { opacity: 1; transition: none; }
 .js-motion .product-media:has(.product-photo:not(.loaded))::after,
 .js-motion .pd-media-main:has(.product-photo:not(.loaded))::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
@@ -1387,3 +1391,68 @@ s.was, .pd-price-was {
 .legal-doc ul { margin: 0 0 1.2rem 1.1rem; padding: 0; }
 .legal-doc li { line-height: 1.7; margin-bottom: .35rem; color: var(--muted); }
 .legal-doc a { color: var(--accent); text-decoration: underline; }
+
+
+/* ---------- Foco de teclado visible (WCAG 2.4.11) ----------
+   Varias reglas :focus de arriba quitan el outline y solo cambian el borde, que
+   no garantiza el contraste 3:1 del indicador. Esto lo restituye solo para la
+   navegación por teclado, sin afectar al clic con ratón (:focus-visible). */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--cta);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Sobre fondos oscuros el outline de marca no contrasta: se usa blanco. */
+.footer :focus-visible,
+.verify-band :focus-visible,
+.verify-band-form input:focus-visible,
+.gate :focus-visible {
+  outline-color: #fff;
+}
+
+/* Salto al contenido: primer tabulador de la página, oculto hasta enfocarlo. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: #fff;
+  padding: .7rem 1.1rem;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Los títulos de la barra lateral del catálogo eran <h4> tras un <h1>, lo que
+   saltaba dos niveles de encabezado. Ahora son <h2> con el mismo aspecto. */
+.catalog-sidebar .sidebar-title {
+  font-size: .95rem;
+  font-weight: 700;
+  margin: 0 0 .5rem;
+  letter-spacing: -.01em;
+}
+
+/* Los métodos de pago pasaron de <div> a <fieldset>+<legend> para que los
+   radios tengan nombre de grupo accesible. El navegador le pone borde y un
+   min-inline-size propios: se anulan para que se vea igual que antes. */
+fieldset.co-section {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-inline-size: auto;
+}
+fieldset.co-section > legend {
+  padding: 0;
+  display: block;
+  width: 100%;
+}

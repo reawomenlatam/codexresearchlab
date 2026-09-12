@@ -126,17 +126,6 @@ const PRODUCTS = [
   },
 ];
 
-const ARTICLES = [
-  { slug: 'mass-spectrometry', date: 'Oct 11, 2025', title: 'Mass spectrometry in peptide research', excerpt: 'How this technique confirms the identity and molecular mass of each compound.', tag: 'Methods' },
-  { slug: 'what-is-hplc', date: 'Aug 29, 2025', title: 'What is high-performance liquid chromatography (HPLC)?', excerpt: 'The standard for verifying a batch’s purity before it ships.', tag: 'Quality' },
-  { slug: 'amino-acids-peptides-proteins', date: 'Aug 16, 2025', title: 'Amino acids, peptides and proteins: what’s the difference?', excerpt: 'A short guide to the hierarchy of biological molecules.', tag: 'Basics' },
-  { slug: 'lyophilization', date: 'Aug 03, 2025', title: 'Lyophilization: how it works', excerpt: 'Why peptides are freeze-dried to preserve their stability.', tag: 'Processes' },
-  { slug: 'excipients-in-peptides', date: 'Sep 06, 2025', title: 'Excipients in peptides: what they are and how they’re used', excerpt: 'The role of bulking agents in a lyophilized vial.', tag: 'Basics' },
-  { slug: 'peptide-synthesis', date: 'Jul 22, 2025', title: 'Peptide synthesis: how they’re made in the lab', excerpt: 'From the peptide bond to final purification, step by step.', tag: 'Processes' },
-  { slug: 'what-is-mots-c', date: 'May 02, 2025', title: 'What is MOTS-c?', excerpt: 'A mitochondrial-derived peptide and its current areas of study.', tag: 'Compounds' },
-  { slug: 'investigating-nad', date: 'Jan 07, 2025', title: 'Investigating NAD+: what studies have revealed', excerpt: 'An overview of the research around this key coenzyme.', tag: 'Compounds' },
-  { slug: 'in-vitro-vs-in-vivo', date: 'Mar 13, 2024', title: 'In vitro vs. in vivo', excerpt: 'The difference between these two experimental contexts.', tag: 'Basics' },
-];
 
 const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.' },
@@ -243,4 +232,4 @@ const BATCHES = {
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
 };
 
-window.REA = { PRODUCTS, ARTICLES, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS };
+window.REA = { PRODUCTS, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS };

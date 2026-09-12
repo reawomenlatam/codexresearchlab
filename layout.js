@@ -9,12 +9,13 @@
     `<a href="${href}" class="${nav === key ? 'active' : ''}">${label}</a>`;
 
   const headerHTML = `
+    <a class="skip-link" href="#mainContent">Skip to content</a>
     <div class="announce" id="announceContact"></div>
     <header class="header">
       <div class="container header-inner">
         <a href="/" class="logo" aria-label="Codex Research">
-          <img class="logo-full" src="assets/logo-horizontal-dark.png" alt="Codex Research">
-          <img class="logo-icon" src="assets/logo-mark.svg" alt="">
+          <img class="logo-full" src="assets/logo-horizontal-dark.png" alt="Codex Research" width="914" height="108">
+          <img class="logo-icon" src="assets/logo-mark.svg" alt="" width="641" height="558">
         </a>
         <nav class="nav">
           ${link('/', 'Home', 'inicio')}
@@ -69,7 +70,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="/" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research"></a>
+            <a href="/" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research" width="914" height="108"></a>
             <p>Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.</p>
             <div class="footer-contact" id="footerContact"></div>
           </div>
@@ -140,6 +141,28 @@
   }
 
   mount('[data-header]', headerHTML);
+  // Destino del enlace de salto. Las páginas generadas tienen <main> con un id
+  // propio (productMain, articleMain); las demás no tienen <main>, así que el
+  // ancla se coloca justo detrás de la cabecera.
+  if (!document.getElementById('mainContent')) {
+    const mainEl = document.querySelector('main');
+    if (mainEl) {
+      // Fuera del <main>, no dentro: product.js y article.js reescriben su
+      // innerHTML al hidratar y se llevarían el ancla por delante.
+      const anchor = document.createElement('span');
+      anchor.id = 'mainContent';
+      anchor.tabIndex = -1;
+      mainEl.insertAdjacentElement('beforebegin', anchor);
+    } else {
+      const header = document.querySelector('[data-header]');
+      if (header) {
+        const anchor = document.createElement('span');
+        anchor.id = 'mainContent';
+        anchor.tabIndex = -1;
+        header.insertAdjacentElement('afterend', anchor);
+      }
+    }
+  }
   mount('[data-footer]', footerHTML);
   document.body.insertAdjacentHTML('beforeend', gateHTML);
 
@@ -220,10 +243,25 @@
   // Age gate + selección de país (una vez por sesión; elegir país confirma la edad)
   const gate = document.getElementById('gateOverlay');
   let stopGateBg = function () {};
+  // Mientras el overlay está abierto el foco debe quedarse dentro: sin esto se
+  // tabula al contenido de fondo, que está tapado y no se puede usar.
+  function trapFocus(e) {
+    if (gate.hidden || e.key !== 'Tab') return;
+    const f = [...gate.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')]
+      .filter((el) => !el.disabled && el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
   if (!sessionStorage.getItem('rea-gate-ok')) {
     gate.hidden = false;
     document.body.style.overflow = 'hidden';
     stopGateBg = startGateBg();
+    document.addEventListener('keydown', trapFocus);
+    // El foco arranca en el diálogo, no en el <body> detrás del overlay.
+    const firstBtn = gate.querySelector('.gate-country');
+    if (firstBtn) setTimeout(() => firstBtn.focus(), 60);
   }
   gate.querySelectorAll('.gate-country').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -231,6 +269,7 @@
       sessionStorage.setItem('rea-gate-ok', '1');
       gate.hidden = true;
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', trapFocus);
       stopGateBg();
     });
   });

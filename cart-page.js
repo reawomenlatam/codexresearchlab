@@ -160,8 +160,8 @@
             <textarea id="coNotes" maxlength="500" rows="2" placeholder="Anything we should know?">${esc(buyer.notes)}</textarea></label>
         </div>
 
-        <div class="co-section pay-methods">
-          <span class="co-title">Payment method · ${cfg.flag} ${esc(cfg.label)}</span>
+        <fieldset class="co-section pay-methods">
+          <legend class="co-title">Payment method · ${cfg.flag} ${esc(cfg.label)}</legend>
           ${cfg.payments.map((p) => `
             <label class="pay-opt${p.id === 'cash' ? ' pay-featured' : ''}">
               <input type="radio" name="payMethod" value="${esc(p.id)}" ${p.id === payId ? 'checked' : ''}>
@@ -172,14 +172,14 @@
             </label>`).join('')}
           ${cfg.payments.some((p) => p.id === 'crypto') ? `
             <div class="co-field pay-asset" id="coAssetRow" ${payId === 'crypto' ? '' : 'hidden'}>
-              <span>Stablecoin</span>
+              <label for="coAsset">Stablecoin</label>
               <select id="coAsset">
                 <option value="USDC">USDC</option>
                 <option value="USDT">USDT</option>
               </select>
               <small class="pay-note">You'll pay from your own wallet on Ethereum. Network fees are paid by you.</small>
             </div>` : ''}
-        </div>
+        </fieldset>
 
         <p class="co-msg" id="coMsg" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary sum-checkout" id="coSubmit">${c.icon}${c.btn}</button>
