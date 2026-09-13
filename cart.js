@@ -95,10 +95,10 @@
     root.id = 'reaCartRoot';
     root.innerHTML = `
       <div class="cart-backdrop" id="cartBackdrop" hidden></div>
-      <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" hidden>
+      <aside class="cart-drawer" id="cartDrawer" aria-label="${window.T('Shopping cart')}" hidden>
         <header class="cart-drawer-head">
-          <h3>Your cart</h3>
-          <button class="cart-close" id="cartClose" aria-label="Close cart">
+          <h3>${window.T('Your cart')}</h3>
+          <button class="cart-close" id="cartClose" aria-label="${window.T('Close cart')}">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </header>
@@ -146,8 +146,8 @@
       linesEl.innerHTML = `
         <div class="cart-empty">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <p>Your cart is empty.</p>
-          <a class="btn btn-primary" href="catalog/">View catalog</a>
+          <p>${window.T('Your cart is empty.')}</p>
+          <a class="btn btn-primary" href="${window.U('catalog/')}">${window.T('View catalog')}</a>
         </div>`;
       footEl.innerHTML = '';
       return;
@@ -164,17 +164,17 @@
             <div class="cart-line-top">
               <div>
                 <b>${p ? p.name : i.slug}</b>
-                <span class="cart-line-size">${i.size}</span>
+                <span class="cart-line-size">${window.T(i.size)}</span>
               </div>
-              <button class="cart-line-rm" data-act="rm" data-id="${id}" aria-label="Remove">
+              <button class="cart-line-rm" data-act="rm" data-id="${id}" aria-label="${window.T('Remove')}">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
               </button>
             </div>
             <div class="cart-line-bottom">
               <div class="qty-stepper">
-                <button data-act="dec" data-id="${id}" aria-label="Decrease">−</button>
+                <button data-act="dec" data-id="${id}" aria-label="${window.T('Decrease')}">−</button>
                 <span>${i.qty}</span>
-                <button data-act="inc" data-id="${id}" aria-label="Increase">+</button>
+                <button data-act="inc" data-id="${id}" aria-label="${window.T('Increase')}">+</button>
               </div>
               <b class="cart-line-price">${money(unit * i.qty)}</b>
             </div>
@@ -186,16 +186,16 @@
     const ship = window.REACountry.config().shipping;
     const remaining = ship.freeThreshold - total();
     const shipHint = remaining > 0
-      ? `<div class="cart-ship-hint">Add <b>${money(remaining)}</b> more for <b>free shipping</b>
+      ? `<div class="cart-ship-hint">${window.T('Add <b>{n}</b> more for <b>free shipping</b>', { n: money(remaining) })}
            <span class="cart-ship-track"><i style="width:${Math.min(100, (total() / ship.freeThreshold) * 100)}%"></i></span></div>`
-      : `<div class="cart-ship-hint ok">✓ You’ve unlocked <b>free shipping</b>
+      : `<div class="cart-ship-hint ok">✓ ${window.T('You’ve unlocked <b>free shipping</b>')}
            <span class="cart-ship-track"><i style="width:100%"></i></span></div>`;
 
     footEl.innerHTML = `
       ${shipHint}
-      <div class="cart-total-row"><span>Subtotal</span><b>${money(total())}</b></div>
-      <a class="btn btn-primary cart-checkout" href="cart/">Checkout</a>
-      <button class="cart-continue-link" data-cart-continue>Continue shopping</button>`;
+      <div class="cart-total-row"><span>${window.T('Subtotal')}</span><b>${money(total())}</b></div>
+      <a class="btn btn-primary cart-checkout" href="${window.U('cart/')}">${window.T('Checkout')}</a>
+      <button class="cart-continue-link" data-cart-continue>${window.T('Continue shopping')}</button>`;
 
     // Las imágenes recién inyectadas necesitan la clase .loaded o el fade-in
     // (opacity:0) las deja invisibles en el drawer tras cada re-render.

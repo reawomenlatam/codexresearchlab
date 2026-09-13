@@ -2,6 +2,8 @@
 (function () {
   const { PRODUCTS } = window.REA;
   const ui = window.REAui;
+  const T = window.T;
+  const U = window.REAi18n.url;
 
   // Slug: página estática (data-slug) o fallback /product.html?slug= (shim)
   const slug = document.body.getAttribute('data-slug') || new URLSearchParams(location.search).get('slug');
@@ -15,7 +17,8 @@
   const packUnits = (label) => { const m = /(\d+)\s*vial/i.exec(label); return m ? parseInt(m[1], 10) : 1; };
   const unitPrice = p.sizes[0].price;
   const refList = (s) => (s.list != null ? s.list : (packUnits(s.label) > 1 ? unitPrice * packUnits(s.label) : null));
-  const perVial = (s) => (packUnits(s.label) > 1 ? money(s.price / packUnits(s.label)) + ' per vial' : '');
+  const perVial = (s) => (packUnits(s.label) > 1
+    ? window.T('{n} per vial', { n: money(s.price / packUnits(s.label)) }) : '');
   const related = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 4);
 
   // Meta Pixel: evento ViewContent al ver la ficha de producto
@@ -37,15 +40,22 @@
   const SITE = 'https://codexresearchlab.com';
   const url = `${SITE}/product/${p.slug}/`;
   const img = `${SITE}/${p.photo || 'assets/og-default.png'}`;
-  const metaTitle = `${p.name} for research, ${p.mg}/vial | Codex Research`;
-  const metaDesc = p.overview;
-  document.title = metaTitle;
+  const esPage = window.REAi18n.lang === 'es';
+  const metaTitle = esPage
+    ? `${p.name} para investigación, ${p.mg}/vial | Codex Research`
+    : `${p.name} for research, ${p.mg}/vial | Codex Research`;
+  const metaDesc = window.REA.overview(p);
+  // Las fichas generadas ya traen su title/description/canonical horneados por
+  // build-seo.js; sólo el fallback product.html?slug= necesita que se escriban.
+  const baked = !!document.body.dataset.slug;
+  if (!baked) document.title = metaTitle;
 
   const setMeta = (name, val, attr = 'name') => {
     let el = document.querySelector(`meta[${attr}="${name}"]`);
     if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
     el.setAttribute('content', val);
   };
+  if (!baked) {
   setMeta('description', metaDesc);
   setMeta('og:title', metaTitle, 'property');
   setMeta('og:description', metaDesc, 'property');
@@ -56,6 +66,7 @@
   let canon = document.querySelector('link[rel="canonical"]');
   if (!canon) { canon = document.createElement('link'); canon.rel = 'canonical'; document.head.appendChild(canon); }
   canon.href = url;
+  }
 
   // ---------- JSON-LD: Product + AggregateOffer + Breadcrumbs (escape < ) ----------
   const jsonLd = (obj) => JSON.stringify(obj).replace(/</g, '\\u003c');
@@ -98,8 +109,8 @@
   main.innerHTML = `
     <div class="container">
       <nav class="breadcrumb">
-        <a href="/">Home</a> <span>/</span>
-        <a href="catalog/">Catalog</a> <span>/</span>
+        <a href="${window.REAi18n.lang === 'es' ? '/es/' : '/'}">${T('Home')}</a> <span>/</span>
+        <a href="${U('catalog/')}">${T('Catalog')}</a> <span>/</span>
         <span>${p.name}</span>
       </nav>
     </div>
@@ -110,9 +121,9 @@
         <div class="pd-media">
           <div class="pd-media-main">${ui.media(p, p.sizes[0].label)}</div>
           <div class="pd-badges">
-            ${oos ? '<span class="pd-badge oos">Out of stock</span>' : ''}
-            <span class="pd-badge"><span class="dot"></span> 99% purity (HPLC)</span>
-            <button type="button" class="pd-badge pd-badge-btn" data-coa>📄 COA per batch</button>
+            ${oos ? `<span class="pd-badge oos">${T('Out of stock')}</span>` : ''}
+            <span class="pd-badge"><span class="dot"></span> ${T('99% purity (HPLC)')}</span>
+            <button type="button" class="pd-badge pd-badge-btn" data-coa>📄 ${T('COA per batch')}</button>
           </div>
         </div>
 
@@ -120,26 +131,26 @@
         <div class="pd-buy">
           <span class="mono-tag">${p.tag}</span>
           <h1>${p.name}</h1>
-          <p class="pd-strength">${p.mg} per vial</p>
+          <p class="pd-strength">${p.mg} ${T('per vial')}</p>
 
           <div class="pd-field">
-            <label>Pack</label>
+            <label>${T('Pack')}</label>
             <div class="pd-options pd-packs" id="pdSizes">
               ${p.sizes.map((s, i) => `<button class="pd-opt ${i === 0 ? 'active' : ''}" data-size="${s.label}" data-price="${s.price}">
-                <span class="pd-opt-label">${s.label}</span>
+                <span class="pd-opt-label">${T(s.label)}</span>
                 <span class="pd-opt-price">${money(s.price)}${refList(s) ? ` <s class="was">${money(refList(s))}</s>` : ''}</span>
                 ${perVial(s) ? `<span class="pd-opt-unit">${perVial(s)}</span>` : ''}
-                ${s.save ? `<span class="pd-opt-save">Save ${s.save}</span>` : ''}
+                ${s.save ? `<span class="pd-opt-save">${T('Save {n}', { n: s.save })}</span>` : ''}
               </button>`).join('')}
             </div>
           </div>
 
           <div class="pd-field">
-            <label>Quantity</label>
+            <label>${T('Quantity')}</label>
             <div class="qty-stepper qty-lg" id="pdQty">
-              <button data-q="dec" aria-label="Decrease">−</button>
+              <button data-q="dec" aria-label="${T('Decrease')}">−</button>
               <span id="pdQtyVal">1</span>
-              <button data-q="inc" aria-label="Increase">+</button>
+              <button data-q="inc" aria-label="${T('Increase')}">+</button>
             </div>
           </div>
 
@@ -147,11 +158,11 @@
             <div>
               <span class="pd-price" id="pdPrice">${money(p.sizes[0].price)}</span>
               <span class="pd-price-was" id="pdPriceWas">${refList(p.sizes[0]) ? money(refList(p.sizes[0])) : ''}</span>
-              <span class="pd-price-note"><span id="pdPriceUnit">${perVial(p.sizes[0])}</span>One-time · ships today</span>
+              <span class="pd-price-note"><span id="pdPriceUnit">${perVial(p.sizes[0])}</span>${T('One-time · ships today')}</span>
             </div>
           </div>
 
-          <button class="btn btn-primary pd-add" id="pdAdd"${oos ? ' disabled' : ''}>${oos ? 'Out of stock' : 'Add to cart'}</button>
+          <button class="btn btn-primary pd-add" id="pdAdd"${oos ? ' disabled' : ''}>${oos ? T('Out of stock') : T('Add to cart')}</button>
 
           <ul class="pd-trust">
             <li>
@@ -160,27 +171,25 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Secure payment · confirm on WhatsApp before paying
+              ${T('Secure payment · confirm on WhatsApp before paying')}
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>Batch-verified with third-party COA \u00b7
-                <button type="button" class="pd-trust-link" data-coa>see an example</button></span>
+              <span>${T('Batch-verified with third-party COA')} \u00b7
+                <button type="button" class="pd-trust-link" data-coa>${T('see an example')}</button></span>
             </li>
           </ul>
 
           <div class="pd-note">
-            <b>For research use only.</b> All products are intended solely for laboratory
-            research and not for human or animal consumption. By purchasing, you agree to
-            use them in compliance with applicable law.
+            <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')}
           </div>
 
           <div class="pd-coa">
             <div>
-              <span class="mono-tag">Certificate of analysis</span>
-              <b>Third-party verified: purity, identity and quantity.</b>
+              <span class="mono-tag">${T('Certificate of analysis')}</span>
+              <b>${T('Third-party verified: purity, identity and quantity.')}</b>
             </div>
-            <button class="btn btn-ghost" id="pdCoa">View COA</button>
+            <button class="btn btn-ghost" id="pdCoa">${T('View COA')}</button>
           </div>
         </div>
       </div>
@@ -190,20 +199,20 @@
     <section class="section" style="padding-top:0;">
       <div class="container pd-info-grid">
         <div class="pd-info-main">
-          <h2>Description</h2>
-          <p>${p.overview}</p>
+          <h2>${T('Description')}</h2>
+          <p>${window.REA.overview(p)}</p>
 
-          <h3>Research areas</h3>
+          <h3>${T('Research areas')}</h3>
           <ul class="pd-research">
-            ${p.research.map((r) => `<li>${r}</li>`).join('')}
+            ${p.research.map((r) => `<li>${T(r)}</li>`).join('')}
           </ul>
         </div>
         <aside class="pd-info-side">
-          <h4>Structure</h4>
+          <h4>${T('Structure')}</h4>
           <dl class="pd-specs">
             <div><dt>CAS #</dt><dd>${p.cas}</dd></div>
-            <div><dt>Molecular formula</dt><dd>${p.formula}</dd></div>
-            <div><dt>Molecular weight</dt><dd>${p.weight}</dd></div>
+            <div><dt>${T('Molecular formula')}</dt><dd>${p.formula}</dd></div>
+            <div><dt>${T('Molecular weight')}</dt><dd>${p.weight}</dd></div>
             <div><dt>PubChem ID</dt><dd>${p.pubchem}</dd></div>
           </dl>
         </aside>
@@ -213,7 +222,7 @@
     <!-- FAQ -->
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="section-head"><h2>Frequently asked questions</h2></div>
+        <div class="section-head"><h2>${T('Frequently asked questions')}</h2></div>
         <div class="faq-list" id="pdFaq"></div>
       </div>
     </section>
@@ -221,7 +230,7 @@
     <!-- Related -->
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="section-head" style="margin-bottom:1.6rem;"><h2>You may also like</h2></div>
+        <div class="section-head" style="margin-bottom:1.6rem;"><h2>${T('You may also like')}</h2></div>
         <div class="products-grid" id="pdRelated">
           ${related.map(ui.productCard).join('')}
         </div>
@@ -234,15 +243,15 @@
         <b>${p.name}</b>
         <span id="pdStickyPrice">${money(p.sizes[0].price)}</span>
       </div>
-      <button class="btn btn-primary" id="pdStickyAdd"${oos ? ' disabled' : ''}>${oos ? 'Out of stock' : 'Add'}</button>
+      <button class="btn btn-primary" id="pdStickyAdd"${oos ? ' disabled' : ''}>${oos ? T('Out of stock') : T('Add')}</button>
     </div>
 
     <!-- COA modal -->
     <div class="coa-backdrop" id="coaBackdrop" hidden></div>
     <div class="coa-modal" id="coaModal" role="dialog" aria-modal="true" aria-labelledby="coaTitle" hidden>
       <div class="coa-modal-head">
-        <h3 id="coaTitle">Certificate of analysis</h3>
-        <button class="cart-close" id="coaClose" aria-label="Close">
+        <h3 id="coaTitle">${T('Certificate of analysis')}</h3>
+        <button class="cart-close" id="coaClose" aria-label="${T('Close')}">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
@@ -255,14 +264,14 @@
           </div>
         </div>
         <dl class="coa-rows">
-          <div><dt>Method</dt><dd>HPLC + mass spectrometry</dd></div>
-          <div><dt>Purity</dt><dd>99.1%</dd></div>
-          <div><dt>Identity</dt><dd>Confirmed</dd></div>
-          <div><dt>Endotoxins</dt><dd>&lt; 0.5 EU/mg</dd></div>
-          <div><dt>Analysis date</dt><dd>Jul 10, 2026</dd></div>
+          <div><dt>${T('Method')}</dt><dd>${T('HPLC + mass spectrometry')}</dd></div>
+          <div><dt>${T('Purity')}</dt><dd>99.1%</dd></div>
+          <div><dt>${T('Identity')}</dt><dd>${T('Confirmed')}</dd></div>
+          <div><dt>${T('Endotoxins')}</dt><dd>&lt; 0.5 EU/mg</dd></div>
+          <div><dt>${T('Analysis date')}</dt><dd>${T('Jul 10, 2026')}</dd></div>
         </dl>
-        <p class="coa-note">Sample document. Your batch’s real COA is shared on WhatsApp when you confirm your order. Already have a vial? <a href="verify/">Verify its batch number</a>.</p>
-        <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent('Hi, I’d like the COA for ' + p.name)}" target="_blank" rel="noopener">Request my batch COA</a>
+        <p class="coa-note">${T('Sample document. Your batch’s real COA is shared on WhatsApp when you confirm your order. Already have a vial?')} <a href="verify/">${T('Verify its batch number')}</a>.</p>
+        <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent(T('Hi, I’d like the COA for') + ' ' + p.name)}" target="_blank" rel="noopener">${T('Request my batch COA')}</a>
       </div>
     </div>
   `;
@@ -315,7 +324,7 @@
   // Entrega según el país seleccionado (se actualiza si cambia)
   function setEta() {
     const cfg = window.REACountry.config();
-    document.getElementById('pdEtaText').textContent = `${cfg.flag} ${cfg.eta} · discreet packaging`;
+    document.getElementById('pdEtaText').textContent = `${cfg.flag} ${T(cfg.eta)} · ${T('discreet packaging')}`;
   }
   setEta();
   window.addEventListener('rea-country-change', setEta);

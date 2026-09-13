@@ -1,6 +1,6 @@
 /* REA Store - home. Usa window.REA (data.js) y window.REACart (cart.js). */
 (function () {
-  const { PRODUCTS, FAQS, TESTIMONIALS } = window.REA;
+  const { PRODUCTS } = window.REA;
 
   // ---------- Componentes reutilizables ----------
   window.REAui = window.REAui || {};
@@ -32,17 +32,17 @@
 
   window.REAui.productCard = (p) => `
     <article class="product-card${p.outOfStock ? ' out' : ''}">
-      <a class="product-media" href="product/${p.slug}/" aria-label="${p.name}">
+      <a class="product-media" href="${window.U('product/' + p.slug + '/')}" aria-label="${p.name}">
         ${window.REAui.media(p, 'lyophilized')}
         ${p.outOfStock ? '<span class="oos-badge">Out of stock</span>' : saleBadge(p)}
       </a>
       <div class="product-info">
         <span class="mono-tag">${p.tag}</span>
-        <h3><a href="product/${p.slug}/">${p.name}</a></h3>
+        <h3><a href="${window.U('product/' + p.slug + '/')}">${p.name}</a></h3>
         <span class="product-price">${p.mg} · ${p.outOfStock ? '<b>Out of stock</b>'
           : `from <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
         <div class="product-cta">
-          <a class="link" href="product/${p.slug}/">View product →</a>
+          <a class="link" href="${window.U('product/' + p.slug + '/')}">${window.T('View product')} →</a>
           ${p.outOfStock ? '' : `<button class="add-btn" data-add="${p.slug}" aria-label="Add ${p.name} to cart">+</button>`}
         </div>
       </div>
@@ -80,16 +80,6 @@
     return `<span class="stars" aria-label="${n} out of 5">${star.repeat(n)}</span>`;
   };
 
-  window.REAui.testimonialCard = (t) => `
-    <figure class="tsm-card">
-      ${window.REAui.stars(t.rating)}
-      <blockquote>${t.quote}</blockquote>
-      <figcaption>
-        <span class="tsm-avatar" aria-hidden="true">${t.name.replace(/^Dr\.\s*/, '').trim().charAt(0)}</span>
-        <span><b>${t.name}</b><span class="tsm-role">${t.role}</span></span>
-      </figcaption>
-    </figure>`;
-
   // ---------- Render de la home ----------
   const grid = document.getElementById('productsGrid');
   if (grid) {
@@ -97,11 +87,8 @@
     window.REAui.wireAddButtons(grid);
   }
 
-  const tsm = document.getElementById('testimonialsGrid');
-  if (tsm && TESTIMONIALS) tsm.innerHTML = TESTIMONIALS.map(window.REAui.testimonialCard).join('');
-
   const faqList = document.getElementById('faqList');
-  if (faqList) window.REAui.faqAccordion(faqList, FAQS);
+  if (faqList) window.REAui.faqAccordion(faqList, window.REA.faqs());
 
   // Gancho de entrega en el hero (country-aware; no cambia el título).
   const heroDeliver = document.getElementById('heroDeliver');
@@ -109,8 +96,8 @@
     if (!heroDeliver || !window.REACountry) return;
     const isPA = window.REACountry.code() === 'PA';
     heroDeliver.innerHTML = isPA
-      ? '<span class="hd-dot"></span><span><b>Same-day delivery in Panama City</b>, in your hands in 1-2 h</span>'
-      : '<span class="hd-dot"></span><span><b>Fast, discreet delivery across the US</b></span>';
+      ? `<span class="hd-dot"></span><span>${window.T('<b>Same-day delivery in Panama City</b>, in your hands in 1-2 h')}</span>`
+      : `<span class="hd-dot"></span><span>${window.T('<b>Fast, discreet delivery across the US</b>')}</span>`;
   }
   window.addEventListener('rea-country-change', updateHeroDeliver);
   updateHeroDeliver();
@@ -125,7 +112,7 @@
     if (!marquee || !window.REACountry) return;
     const c = window.REA.COUNTRIES[window.REACountry.code()];
     if (!c) return;
-    const texto = c.code === 'PA' ? c.etaShort : `Delivered in ${c.etaShort}`;
+    const texto = c.code === 'PA' ? window.T(c.etaShort) : `${window.T('Delivered in')} ${c.etaShort}`;
     marquee.querySelectorAll('.mq-eta').forEach((el) => { el.textContent = texto; });
     // Las listas son aria-hidden, así que el texto accesible vive en el
     // contenedor y también tiene que actualizarse.

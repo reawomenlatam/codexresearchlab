@@ -6,6 +6,8 @@
   const { PRODUCTS, COUPONS, WHATSAPP, EMAILJS = {}, SALE = {} } = window.REA;
   const cart = window.REACart;
   const ui = window.REAui;
+  const T = window.T;
+  const U = window.REAi18n.url;
   const root = document.getElementById('cartPageRoot');
   if (!root) return;
 
@@ -65,46 +67,46 @@
     const ship = country().shipping;
     if (subtotal >= ship.freeThreshold) {
       return `<div class="ship-progress ok">
-        <div class="ship-progress-txt">✓ You’ve unlocked <b>free shipping</b></div>
+        <div class="ship-progress-txt">✓ ${T('You’ve unlocked <b>free shipping</b>')}</div>
         <div class="ship-track"><i style="width:100%"></i></div>
       </div>`;
     }
     const pct = Math.min(100, (subtotal / ship.freeThreshold) * 100);
     const left = ship.freeThreshold - subtotal;
     return `<div class="ship-progress">
-      <div class="ship-progress-txt">Add <b>${money(left)}</b> more to get <b>free shipping</b></div>
+      <div class="ship-progress-txt">${T('Add <b>{n}</b> more to get <b>free shipping</b>', { n: money(left) })}</div>
       <div class="ship-track"><i style="width:${pct}%"></i></div>
     </div>`;
   }
 
   function stockNote(stock) {
-    if (stock != null && stock < 10) return `<span class="stock-low">Only ${stock} left</span>`;
-    return `<span class="stock-ok">In stock</span>`;
+    if (stock != null && stock < 10) return `<span class="stock-low">${T('Only {n} left', { n: stock })}</span>`;
+    return `<span class="stock-ok">${T('In stock')}</span>`;
   }
 
   function itemRow(l) {
     return `
       <div class="ci-row">
-        <a class="ci-thumb" href="product/${l.slug}/">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" width="1400" height="933" loading="lazy">` : ui.vial(l.name, l.size)}</a>
+        <a class="ci-thumb" href="${U('product/' + l.slug + '/')}">${l.photo ? `<img class="product-photo" src="${l.photo}" alt="${l.name}" width="1400" height="933" loading="lazy">` : ui.vial(l.name, l.size)}</a>
         <div class="ci-body">
           <div class="ci-head">
             <div>
-              <a class="ci-name" href="product/${l.slug}/">${l.name}</a>
-              <div class="ci-meta"><span class="mono-tag">${l.size}</span> · ${stockNote(l.stock)}</div>
+              <a class="ci-name" href="${U('product/' + l.slug + '/')}">${l.name}</a>
+              <div class="ci-meta"><span class="mono-tag">${T(l.size)}</span> · ${stockNote(l.stock)}</div>
             </div>
-            <button class="ci-rm" data-act="rm" data-id="${l.id}" aria-label="Remove ${l.name}">
+            <button class="ci-rm" data-act="rm" data-id="${l.id}" aria-label="${T('Remove')} ${l.name}">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
             </button>
           </div>
           <div class="ci-foot">
             <div class="qty-stepper">
-              <button data-act="dec" data-id="${l.id}" aria-label="Decrease">−</button>
+              <button data-act="dec" data-id="${l.id}" aria-label="${T('Decrease')}">−</button>
               <span>${l.qty}</span>
-              <button data-act="inc" data-id="${l.id}" aria-label="Increase">+</button>
+              <button data-act="inc" data-id="${l.id}" aria-label="${T('Increase')}">+</button>
             </div>
             <div class="ci-price">
               <b>${money(l.subtotal)}</b>
-              ${l.qty > 1 ? `<span>${money(l.unit)} each</span>` : ''}
+              ${l.qty > 1 ? `<span>${money(l.unit)} ${T('each')}</span>` : ''}
             </div>
           </div>
         </div>
@@ -116,12 +118,12 @@
     // Crypto es el único método que cobra de verdad en este paso: el botón y la
     // nota tienen que decirlo, no prometer "no charge happens here".
     if (payId === 'crypto') {
-      return { btn: 'Pay with crypto', icon: '',
-        note: 'You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm — network fees are paid by you.' };
+      return { btn: T('Pay with crypto'), icon: '',
+        note: T('You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm — network fees are paid by you.') };
     }
     return isEmailFlow(cfg, payId)
-      ? { btn: 'Place order', icon: '', note: 'We’ll email you a confirmation and contact you to arrange your Zelle payment. No charge happens here.' }
-      : { btn: 'Continue on WhatsApp', icon: WA_ICON, note: 'We’ll confirm your order and payment details on WhatsApp. No charge happens here.' };
+      ? { btn: T('Place order'), icon: '', note: T('We’ll email you a confirmation and contact you to arrange your Zelle payment. No charge happens here.') }
+      : { btn: T('Continue on WhatsApp'), icon: WA_ICON, note: T('We’ll confirm your order and payment details on WhatsApp. No charge happens here.') };
   };
 
   // Formulario único de checkout (US y Panamá, todos los métodos):
@@ -129,55 +131,56 @@
   function checkoutForm(s, cfg, payId) {
     const postalReq = cfg.code === 'US';
     const region = cfg.code === 'US' ? 'State' : 'Province';
+    const regionLabel = T(region);
     const c = checkoutLabel(cfg, payId);
     return `
       <form class="checkout-form" id="checkoutForm" novalidate>
         <div class="co-section">
-          <span class="co-title">Your details</span>
-          <label class="co-field"><span>Full name</span>
-            <input type="text" id="coName" required maxlength="80" autocomplete="name" value="${esc(buyer.name)}" placeholder="First and last name"></label>
-          <label class="co-field"><span>Email</span>
-            <input type="email" id="coEmail" required maxlength="120" autocomplete="email" value="${esc(buyer.email)}" placeholder="you@email.com"></label>
-          <label class="co-field"><span>Phone</span>
-            <input type="tel" id="coPhone" required maxlength="40" autocomplete="tel" value="${esc(buyer.phone)}" placeholder="Incl. country code"></label>
+          <span class="co-title">${T('Your details')}</span>
+          <label class="co-field"><span>${T('Full name')}</span>
+            <input type="text" id="coName" required maxlength="80" autocomplete="name" value="${esc(buyer.name)}" placeholder="${T('First and last name')}"></label>
+          <label class="co-field"><span>${T('Email')}</span>
+            <input type="email" id="coEmail" required maxlength="120" autocomplete="email" value="${esc(buyer.email)}" placeholder="${T('you@email.com')}"></label>
+          <label class="co-field"><span>${T('Phone')}</span>
+            <input type="tel" id="coPhone" required maxlength="40" autocomplete="tel" value="${esc(buyer.phone)}" placeholder="${T('Incl. country code')}"></label>
         </div>
 
         <div class="co-section">
-          <span class="co-title">Shipping address</span>
-          <label class="co-field"><span>Address</span>
-            <input type="text" id="coAddr1" required maxlength="120" autocomplete="address-line1" value="${esc(buyer.address1)}" placeholder="Street and number"></label>
-          <label class="co-field"><span>Apt, suite, etc. <em>(optional)</em></span>
-            <input type="text" id="coAddr2" maxlength="80" autocomplete="address-line2" value="${esc(buyer.address2)}" placeholder="Optional"></label>
-          <label class="co-field"><span>City</span>
-            <input type="text" id="coCity" required maxlength="60" autocomplete="address-level2" value="${esc(buyer.city)}" placeholder="City"></label>
+          <span class="co-title">${T('Shipping address')}</span>
+          <label class="co-field"><span>${T('Address')}</span>
+            <input type="text" id="coAddr1" required maxlength="120" autocomplete="address-line1" value="${esc(buyer.address1)}" placeholder="${T('Street and number')}"></label>
+          <label class="co-field"><span>${T('Apt, suite, etc.')} <em>${T('(optional)')}</em></span>
+            <input type="text" id="coAddr2" maxlength="80" autocomplete="address-line2" value="${esc(buyer.address2)}" placeholder="${T('Optional')}"></label>
+          <label class="co-field"><span>${T('City')}</span>
+            <input type="text" id="coCity" required maxlength="60" autocomplete="address-level2" value="${esc(buyer.city)}" placeholder="${T('City')}"></label>
           <div class="co-grid">
-            <label class="co-field"><span>${region}</span>
-              <input type="text" id="coState" required maxlength="60" autocomplete="address-level1" value="${esc(buyer.state)}" placeholder="${region}"></label>
-            <label class="co-field"><span>ZIP / Postal${postalReq ? '' : ' <em>(optional)</em>'}</span>
-              <input type="text" id="coPostal" ${postalReq ? 'required' : ''} maxlength="20" autocomplete="postal-code" value="${esc(buyer.postal)}" placeholder="${postalReq ? 'ZIP code' : 'Optional'}"></label>
+            <label class="co-field"><span>${regionLabel}</span>
+              <input type="text" id="coState" required maxlength="60" autocomplete="address-level1" value="${esc(buyer.state)}" placeholder="${regionLabel}"></label>
+            <label class="co-field"><span>${T('ZIP / Postal')}${postalReq ? '' : ` <em>${T('(optional)')}</em>`}</span>
+              <input type="text" id="coPostal" ${postalReq ? 'required' : ''} maxlength="20" autocomplete="postal-code" value="${esc(buyer.postal)}" placeholder="${postalReq ? T('ZIP code') : T('Optional')}"></label>
           </div>
-          <label class="co-field"><span>Notes <em>(optional)</em></span>
-            <textarea id="coNotes" maxlength="500" rows="2" placeholder="Anything we should know?">${esc(buyer.notes)}</textarea></label>
+          <label class="co-field"><span>${T('Notes')} <em>${T('(optional)')}</em></span>
+            <textarea id="coNotes" maxlength="500" rows="2" placeholder="${T('Anything we should know?')}">${esc(buyer.notes)}</textarea></label>
         </div>
 
         <fieldset class="co-section pay-methods">
-          <legend class="co-title">Payment method · ${cfg.flag} ${esc(cfg.label)}</legend>
+          <legend class="co-title">${T('Payment method')} · ${cfg.flag} ${esc(cfg.label)}</legend>
           ${cfg.payments.map((p) => `
             <label class="pay-opt${p.id === 'cash' ? ' pay-featured' : ''}">
               <input type="radio" name="payMethod" value="${esc(p.id)}" ${p.id === payId ? 'checked' : ''}>
               <span class="pay-opt-main">
-                ${p.id === 'yappy' ? `<span class="pay-mark yappy">${esc(p.label)}</span>` : esc(p.label)}
-                ${p.id === 'cash' ? '<small class="pay-note">Pay when you receive · no prepayment</small>' : ''}
+                ${p.id === 'yappy' ? `<span class="pay-mark yappy">${esc(p.label)}</span>` : esc(T(p.label))}
+                ${p.id === 'cash' ? `<small class="pay-note">${T('Pay when you receive · no prepayment')}</small>` : ''}
               </span>
             </label>`).join('')}
           ${cfg.payments.some((p) => p.id === 'crypto') ? `
             <div class="co-field pay-asset" id="coAssetRow" ${payId === 'crypto' ? '' : 'hidden'}>
-              <label for="coAsset">Stablecoin</label>
+              <label for="coAsset">${T('Stablecoin')}</label>
               <select id="coAsset">
                 <option value="USDC">USDC</option>
                 <option value="USDT">USDT</option>
               </select>
-              <small class="pay-note">You'll pay from your own wallet on Ethereum. Network fees are paid by you.</small>
+              <small class="pay-note">${T('You\'ll pay from your own wallet on Ethereum. Network fees are paid by you.')}</small>
             </div>` : ''}
         </fieldset>
 
@@ -211,25 +214,24 @@
       return `
         <div class="order-success">
           <div class="order-success-mark" aria-hidden="true">✓</div>
-          <h2>Payment received</h2>
-          <p>Thanks! We received your payment for order <b>${esc(c.id)}</b> and verified it on the blockchain.
-          We’re preparing your shipment${c.email ? ` and will email <b>${esc(c.email)}</b> with the tracking details` : ''}.</p>
+          <h2>${T('Payment received')}</h2>
+          <p>${T('Thanks! We received your payment for order')} <b>${esc(c.id)}</b> ${T('and verified it on the blockchain. We’re preparing your shipment')}${c.email ? ` ${T('and will email')} <b>${esc(c.email)}</b> ${T('with the tracking details')}` : ''}.</p>
           <p class="order-success-sub">
-            Your receipt: <a href="https://etherscan.io/tx/${esc(c.tx)}" target="_blank" rel="noopener">view the transaction ↗</a>
+            ${T('Your receipt:')} <a href="https://etherscan.io/tx/${esc(c.tx)}" target="_blank" rel="noopener">${T('view the transaction')} ↗</a>
           </p>
-          <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">${WA_ICON}Message us on WhatsApp</a>
-          <p class="order-success-sub">Any question about your order, write to us and we’ll reply there.</p>
-          <a class="btn" href="catalog/">Continue shopping</a>
+          <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${waText}" target="_blank" rel="noopener">${WA_ICON}${T('Message us on WhatsApp')}</a>
+          <p class="order-success-sub">${T('Any question about your order, write to us and we’ll reply there.')}</p>
+          <a class="btn" href="${U('catalog/')}">${T('Continue shopping')}</a>
         </div>`;
     }
     return `
       <div class="order-success">
         <div class="order-success-mark" aria-hidden="true">✓</div>
-        <h2>Order received</h2>
-        <p>Thanks! Your order <b>${esc(c.id)}</b> has been accepted. We’ve emailed a confirmation to
-        <b>${esc(c.email)}</b>, and our team will contact you shortly to arrange your Zelle payment and shipping.</p>
-        <p class="order-success-sub">Didn’t get the email? Check your spam folder, or write to us at ${esc(EMAILJS.merchantEmail || '')}.</p>
-        <a class="btn btn-primary" href="catalog/">Continue shopping</a>
+        <h2>${T('Order received')}</h2>
+        <p>${T('Thanks! Your order')} <b>${esc(c.id)}</b> ${T('has been accepted. We’ve emailed a confirmation to')}
+        <b>${esc(c.email)}</b>${T(', and our team will contact you shortly to arrange your Zelle payment and shipping.')}</p>
+        <p class="order-success-sub">${T('Didn’t get the email? Check your spam folder, or write to us at')} ${esc(EMAILJS.merchantEmail || '')}.</p>
+        <a class="btn btn-primary" href="${U('catalog/')}">${T('Continue shopping')}</a>
       </div>`;
   }
 
@@ -239,46 +241,46 @@
     const couponMsg = coupon
       ? (validCoupon(coupon)
           ? (SALE.active && COUPONS[coupon].type === 'percent'
-              ? `<div class="coupon-msg ok">✓ Code <b>${esc(coupon)}</b> registered · the <b>${SALE.percent}% OFF</b> already applied is a better deal, and discounts don’t stack <button data-coupon-remove aria-label="Remove code">✕</button></div>`
-              : `<div class="coupon-msg ok">✓ Code <b>${esc(coupon)}</b> applied · ${esc(COUPONS[coupon].label)} <button data-coupon-remove aria-label="Remove code">✕</button></div>`)
-          : `<div class="coupon-msg err">Code “${esc(coupon)}” is not valid.</div>`)
+              ? `<div class="coupon-msg ok">✓ ${T('Code')} <b>${esc(coupon)}</b> ${T('registered · the')} <b>${SALE.percent}% OFF</b> ${T('already applied is a better deal, and discounts don’t stack')} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`
+              : `<div class="coupon-msg ok">✓ ${T('Code')} <b>${esc(coupon)}</b> ${T('applied')} · ${esc(T(COUPONS[coupon].label))} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`)
+          : `<div class="coupon-msg err">${T('Code')} “${esc(coupon)}” ${T('is not valid.')}</div>`)
       : '';
 
     return `
       <aside class="cartpage-aside">
         <div class="summary-card">
-          <h3>Order summary</h3>
+          <h3>${T('Order summary')}</h3>
 
           <form class="coupon-row" id="couponForm">
-            <input type="text" id="couponInput" placeholder="Discount code" aria-label="Discount code" value="${coupon && !validCoupon(coupon) ? esc(coupon) : ''}">
-            <button type="submit" class="btn btn-ghost">Apply</button>
+            <input type="text" id="couponInput" placeholder="${T('Discount code')}" aria-label="${T('Discount code')}" value="${coupon && !validCoupon(coupon) ? esc(coupon) : ''}">
+            <button type="submit" class="btn btn-ghost">${T('Apply')}</button>
           </form>
           ${couponMsg}
-          ${!SALE.active && !(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 First order? Tap to apply <b>WELCOME10</b> for 10% off</button>` : ''}
+          ${!SALE.active && !(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 ${T('First order? Tap to apply')} <b>WELCOME10</b> ${T('for 10% off')}</button>` : ''}
 
           <div class="sum-rows">
-            <div class="sum-row"><span>Subtotal</span><span>${money(s.subtotal)}</span></div>
-            ${s.discount > 0 ? `<div class="sum-row disc"><span>Discount</span><span>−${money(s.discount)}</span></div>` : ''}
-            <div class="sum-row"><span>Shipping</span><span>${s.shipping === 0 ? '<b class="free">Free</b>' : money(s.shipping)}</span></div>
-            <p class="sum-eta">${cfg.flag} ${cfg.eta}</p>
-            <div class="sum-row total"><span>Total</span><b>${money(s.total)}</b></div>
+            <div class="sum-row"><span>${T('Subtotal')}</span><span>${money(s.subtotal)}</span></div>
+            ${s.discount > 0 ? `<div class="sum-row disc"><span>${T('Discount')}</span><span>−${money(s.discount)}</span></div>` : ''}
+            <div class="sum-row"><span>${T('Shipping')}</span><span>${s.shipping === 0 ? `<b class="free">${T('Free')}</b>` : money(s.shipping)}</span></div>
+            <p class="sum-eta">${cfg.flag} ${T(cfg.eta)}</p>
+            <div class="sum-row total"><span>${T('Total')}</span><b>${money(s.total)}</b></div>
           </div>
 
           ${checkoutForm(s, cfg, payId)}
 
           <ul class="sum-trust">
-            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span><b>Pay on delivery available</b>, pay when you receive</span></li>` : ''}
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure & private</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>Discreet packaging</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>Batch-verified with COA</span></li>
+            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span><b>${T('Pay on delivery available')}</b>${T(', pay when you receive')}</span></li>` : ''}
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>${T('Secure & private')}</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>${T('Discreet packaging')}</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>${T('Batch-verified with COA')}</span></li>
           </ul>
         </div>
 
         <div class="guarantee-card">
           <span class="guarantee-mark" aria-hidden="true"></span>
           <div>
-            <b>Codex Guarantee</b>
-            <p>Every batch is third-party tested. If your COA doesn’t match, we make it right.</p>
+            <b>${T('Codex Guarantee')}</b>
+            <p>${T('Every batch is third-party tested. If your COA doesn’t match, we make it right.')}</p>
           </div>
         </div>
       </aside>`;
@@ -323,8 +325,8 @@
     const { recs, gap } = recommendations(s);
     if (!recs.length) return '';
     const head = gap > 0
-      ? `<h2>Add ${money(gap)} more, shipping is on us</h2><p>These complete your order and unlock free shipping.</p>`
-      : '<h2>Complete your order</h2><p>Frequently added together. Verified and ready to ship.</p>';
+      ? `<h2>${T('Add {n} more, shipping is on us', { n: money(gap) })}</h2><p>${T('These complete your order and unlock free shipping.')}</p>`
+      : `<h2>${T('Complete your order')}</h2><p>${T('Frequently added together. Verified and ready to ship.')}</p>`;
     return `
       <section class="cross-sell">
         <div class="section-head" style="margin-bottom:1.4rem;">
@@ -338,10 +340,9 @@
 
   const socialProof = `
     <div class="cart-social">
-      <div><strong class="count-up">4.9/5</strong><span>average rating</span></div>
-      <div><strong class="count-up">1,200+</strong><span>orders shipped</span></div>
-      <div><strong class="count-up">100%</strong><span>batches with COA</span></div>
-      <div><strong>24-48 h</strong><span>dispatch</span></div>
+      <div><strong class="count-up">1,200+</strong><span>${T('orders shipped')}</span></div>
+      <div><strong class="count-up" data-from="92">100%</strong><span>${T('batches with COA')}</span></div>
+      <div><strong>24-48 h</strong><span>${T('dispatch')}</span></div>
     </div>`;
 
   function emptyState() {
@@ -349,12 +350,12 @@
     return `
       <div class="cart-empty-page">
         <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        <h2>Your cart is empty</h2>
-        <p>Browse our verified compounds. Every batch ships with its certificate of analysis.</p>
-        <a class="btn btn-primary" href="catalog/">Browse catalog</a>
+        <h2>${T('Your cart is empty')}</h2>
+        <p>${T('Browse our verified compounds. Every batch ships with its certificate of analysis.')}</p>
+        <a class="btn btn-primary" href="${U('catalog/')}">${T('Browse catalog')}</a>
       </div>
       <section class="cross-sell">
-        <div class="section-head" style="margin-bottom:1.4rem;"><h2>Popular right now</h2></div>
+        <div class="section-head" style="margin-bottom:1.4rem;"><h2>${T('Popular right now')}</h2></div>
         <div class="products-grid" id="crossSellGrid">
           ${popular.map(ui.productCard).join('')}
         </div>
@@ -375,15 +376,15 @@
           <div class="cartpage-main">
             ${shipProgress(s.subtotal)}
             <div class="cartpage-items">${s.lines.map(itemRow).join('')}</div>
-            <a class="cartpage-continue" href="catalog/">← Continue shopping</a>
+            <a class="cartpage-continue" href="${U('catalog/')}">← ${T('Continue shopping')}</a>
           </div>
           ${summary(s)}
         </div>
         ${crossSell(s)}
         ${socialProof}
         <div class="cart-sticky" id="cartSticky" hidden>
-          <div class="cart-sticky-total"><span>Total</span><b>${money(s.total)}</b></div>
-          <button class="btn btn-primary" id="cartStickyGo">Checkout</button>
+          <div class="cart-sticky-total"><span>${T('Total')}</span><b>${money(s.total)}</b></div>
+          <button class="btn btn-primary" id="cartStickyGo">${T('Checkout')}</button>
         </div>`;
     }
     wire();
@@ -624,14 +625,14 @@
   }
 
   const CRYPTO_ERRORS = {
-    sdk_load_failed: 'We couldn’t load the payment module. Check your connection and try again.',
-    sdk_unavailable: 'The payment module didn’t start correctly. Please reload the page.',
-    price_mismatch: 'The order total changed. Please review your cart and try again.',
-    monto_insuficiente: 'The amount received was lower than the order total.',
-    hash_ya_usado: 'That transaction was already used for another order.',
-    cotizacion_expirada: 'The quote expired. Please place the order again.',
-    confirmation_timeout: 'Your payment is still confirming on the network.',
-    producto_agotado: 'One of the items just went out of stock.',
+    sdk_load_failed: T('We couldn’t load the payment module. Check your connection and try again.'),
+    sdk_unavailable: T('The payment module didn’t start correctly. Please reload the page.'),
+    price_mismatch: T('The order total changed. Please review your cart and try again.'),
+    monto_insuficiente: T('The amount received was lower than the order total.'),
+    hash_ya_usado: T('That transaction was already used for another order.'),
+    cotizacion_expirada: T('The quote expired. Please place the order again.'),
+    confirmation_timeout: T('Your payment is still confirming on the network.'),
+    producto_agotado: T('One of the items just went out of stock.'),
   };
 
   async function placeOrder() {
@@ -654,13 +655,13 @@
 
     // Validación: contacto + dirección obligatorios (dirección 2, notas y postal-fuera-de-US opcionales).
     if (!s.lines.length) return setErr('Your cart is empty.');
-    if (buyer.name.length < 2) return focusErr('coName', 'Please enter your full name.');
-    if (buyer.email.length > 120 || !EMAIL_RE.test(buyer.email)) return focusErr('coEmail', 'Please enter a valid email address.');
-    if (buyer.phone.replace(/\D/g, '').length < 6) return focusErr('coPhone', 'Please enter a valid phone number.');
-    if (buyer.address1.length < 4) return focusErr('coAddr1', 'Please enter your shipping address.');
-    if (buyer.city.length < 2) return focusErr('coCity', 'Please enter your city.');
-    if (buyer.state.length < 2) return focusErr('coState', 'Please enter your ' + region + '.');
-    if (postalReq && buyer.postal.length < 3) return focusErr('coPostal', 'Please enter your ZIP code.');
+    if (buyer.name.length < 2) return focusErr('coName', T('Please enter your full name.'));
+    if (buyer.email.length > 120 || !EMAIL_RE.test(buyer.email)) return focusErr('coEmail', T('Please enter a valid email address.'));
+    if (buyer.phone.replace(/\D/g, '').length < 6) return focusErr('coPhone', T('Please enter a valid phone number.'));
+    if (buyer.address1.length < 4) return focusErr('coAddr1', T('Please enter your shipping address.'));
+    if (buyer.city.length < 2) return focusErr('coCity', T('Please enter your city.'));
+    if (buyer.state.length < 2) return focusErr('coState', T('Please enter your {region}.', { region: T(region) }));
+    if (postalReq && buyer.postal.length < 3) return focusErr('coPostal', T('Please enter your ZIP code.'));
 
     const payId = currentPayment();
     const payLabel = (cfg.payments.find((p) => p.id === payId) || cfg.payments[0]).label;
@@ -786,26 +787,26 @@
           }
           return;
         }
-        setErr(CRYPTO_ERRORS[code] || 'We couldn’t start the payment. Please try again or contact us.');
+        setErr(CRYPTO_ERRORS[code] || T('We couldn’t start the payment. Please try again or contact us.'));
       }
       return;
     }
 
     // ---- Demás métodos (Panamá): continúa en WhatsApp con toda la info ----
     const waText = encodeURIComponent(
-      'Hi Codex Research, I’d like to place this order:\n' +
-      s.lines.map((l) => `• ${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n') +
-      `\n\nOrder: ${id}` +
-      `\nName: ${clean(buyer.name)}` +
-      `\nEmail: ${clean(buyer.email)}` +
-      `\nPhone: ${clean(buyer.phone)}` +
-      `\nShipping address:\n${addressText}` +
-      (buyer.notes ? `\nNotes: ${clean(buyer.notes)}` : '') +
-      `\n\nPayment: ${clean(payLabel)}` +
-      `\nSubtotal: ${money(s.subtotal)}` +
-      (s.discount > 0 ? `\nDiscount (${clean(coupon)}): -${money(s.discount)}` : '') +
-      `\nShipping: ${s.shipping === 0 ? 'Free' : money(s.shipping)} (${cfg.eta})` +
-      `\nTotal: ${money(s.total)}`
+      T('Hi Codex Research, I’d like to place this order:') + '\n' +
+      s.lines.map((l) => `• ${l.name} (${T(l.size)}) x${l.qty} - ${money(l.subtotal)}`).join('\n') +
+      `\n\n${T('Order')}: ${id}` +
+      `\n${T('Name')}: ${clean(buyer.name)}` +
+      `\n${T('Email')}: ${clean(buyer.email)}` +
+      `\n${T('Phone')}: ${clean(buyer.phone)}` +
+      `\n${T('Shipping address')}:\n${addressText}` +
+      (buyer.notes ? `\n${T('Notes')}: ${clean(buyer.notes)}` : '') +
+      `\n\n${T('Payment')}: ${clean(T(payLabel))}` +
+      `\n${T('Subtotal')}: ${money(s.subtotal)}` +
+      (s.discount > 0 ? `\n${T('Discount')} (${clean(coupon)}): -${money(s.discount)}` : '') +
+      `\n${T('Shipping')}: ${s.shipping === 0 ? T('Free') : money(s.shipping)} (${T(cfg.eta)})` +
+      `\n${T('Total')}: ${money(s.total)}`
     );
     placing = true; // evita doble apertura / doble Lead por doble clic
     fireLead(s);
@@ -813,7 +814,7 @@
     stageForCapi(s, id, cfg);
     saveOrder(s, id, cfg, clean(payLabel), 'pending');
     window.open(`https://wa.me/${WHATSAPP}?text=${waText}`, '_blank', 'noopener');
-    if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Opening WhatsApp… send the message to complete your order.'; }
+    if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = T('Opening WhatsApp… send the message to complete your order.'); }
     setTimeout(() => { placing = false; }, 1500);
   }
 

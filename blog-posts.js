@@ -207,7 +207,7 @@
         <p>Molecular weight is the anchor of an identity check. When a lab runs <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, it measures the mass of the molecule and compares it with the expected molecular weight. A match is strong evidence that the compound is the intended peptide. A mismatch is a red flag. This is the second half of the story that a purity figure alone cannot tell you.</p>
 
         <h2>Why it matters for reconstitution</h2>
-        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, or plan how to <a href="article/how-to-reconstitute-a-peptide/">reconstitute a vial</a>, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, and our <a href="calculator/">reconstitution calculator</a> handles that, but the molecular weight is the value underneath any mole-based calculation.</p>
+        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, or plan how to <a href="article/how-to-reconstitute-a-peptide/">reconstitute a vial</a>, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, but the molecular weight is the value underneath any mole-based calculation.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -218,7 +218,7 @@
         { q: 'Why does molecular weight matter in the lab?', a: 'It anchors identity checks, since mass spectrometry compares the measured mass with the expected molecular weight, and it underlies any mole-based reconstitution or concentration calculation.' },
       ],
       references: [],
-      cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, which lists the formula and molecular weight of each compound, or try the <a href="calculator/">reconstitution calculator</a>.',
+      cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, which lists the formula and molecular weight of each compound.',
       related: ['mass-spectrometry-peptide-research', 'how-to-reconstitute-a-peptide'],
     },
     {
@@ -657,7 +657,7 @@
         <p>Reconstituting a peptide is a slow, careful step, covered in our guide on <a href="article/how-to-reconstitute-a-peptide/">how to reconstitute a lyophilized peptide</a>. Bacteriostatic water fits that workflow well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides/">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
 
         <h2>Handling and storage</h2>
-        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> works out concentration once the two are combined.</p>
+        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This article describes laboratory use only.</p>
@@ -668,7 +668,7 @@
         { q: 'Why is bacteriostatic water used to reconstitute peptides?', a: 'It dissolves most peptides cleanly and its preservative supports multiple draws from a single vial over the days or weeks a peptide might be studied. That reusability is the main practical reason labs choose it.' },
       ],
       references: [],
-      cta: 'Browse <a href="catalog/">research peptides and supplies</a> at Codex Research, use the <a href="calculator/">reconstitution calculator</a>, or <a href="verify/">check a batch number</a>.',
+      cta: 'Browse <a href="catalog/">research peptides and supplies</a> at Codex Research, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-reconstitute-a-peptide', 'excipients-in-peptides'],
     },
     {
@@ -693,7 +693,7 @@
         <p>Two habits protect the material here. First, let a cold vial come closer to room temperature before opening, so moisture does not condense inside. Second, do not squirt the diluent straight onto the peptide. Aim the stream at the inside wall of the vial and let it run down. Then leave it to dissolve on its own, or swirl it slowly. Shaking is the classic mistake, since the shear and foaming can damage a delicate peptide.</p>
 
         <h2>Work out the concentration</h2>
-        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL. Rather than doing this by hand, our <a href="calculator/">reconstitution calculator</a> takes the vial strength and the water added and returns the concentration and the syringe math for you. It does not recommend any amount, it only converts the numbers you enter.</p>
+        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL.</p>
 
         <h2>Store the solution</h2>
         <p>Once a peptide is in solution it is less stable than the dry powder, so it usually goes into refrigeration and away from light, with the exact conditions shown on the vial label. Label the vial with the date and concentration so nothing is guessed later. If you want to confirm the vial was genuine before you started, you can check its <a href="verify/">batch number</a>.</p>
@@ -704,10 +704,10 @@
       faq: [
         { q: 'What liquid is used to reconstitute a research peptide?', a: 'Bacteriostatic water, which is sterile water with a small amount of benzyl alcohol as a preservative, is the most common diluent for research reconstitution. Some peptides may need a different diluent noted on the certificate of analysis.' },
         { q: 'Why should you not shake a peptide when reconstituting it?', a: 'Shaking creates shear and foaming that can damage a delicate peptide. Adding the diluent down the inside wall of the vial and letting it dissolve, or swirling gently, protects the material.' },
-        { q: 'How do you calculate peptide concentration after reconstitution?', a: 'Divide the amount of peptide in the vial by the volume of diluent you added. For example, 10 mg in 2 mL is 5 mg per mL. The reconstitution calculator at codexresearchlab.com/calculator/ does this and the syringe-unit math automatically.' },
+        { q: 'How do you calculate peptide concentration after reconstitution?', a: 'Divide the amount of peptide in the vial by the volume of diluent you added. For example, 10 mg in 2 mL is 5 mg per mL.' },
       ],
       references: [],
-      cta: 'Try the <a href="calculator/">reconstitution calculator</a>, browse <a href="catalog/">research peptides</a>, or <a href="verify/">check a batch number</a> at Codex Research.',
+      cta: 'Browse <a href="catalog/">research peptides</a> or <a href="verify/">check a batch number</a> at Codex Research.',
       related: ['lyophilization-freeze-drying', 'excipients-in-peptides'],
     },
     {
@@ -741,7 +741,7 @@
         <p>These are laboratory and preclinical contexts. NAD+ is supplied strictly as a research compound, and this article does not describe use in people or animals. If you are comparing it with the small peptide <a href="article/what-is-mots-c/">MOTS-c</a>, both come up in mitochondrial research but they are very different molecules.</p>
 
         <h2>Handling and verification</h2>
-        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including NAD+, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -835,7 +835,7 @@
         <p>These are preclinical, model-based observations. Ipamorelin is supplied strictly as a research compound, and this article does not describe use in people or animals.</p>
 
         <h2>Handling and verification</h2>
-        <p>As with any short peptide, what matters in practice is the purity of the batch in front of you. Ipamorelin is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> covers the concentration math once it is dissolved.</p>
+        <p>As with any short peptide, what matters in practice is the purity of the batch in front of you. Ipamorelin is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including ipamorelin, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -972,7 +972,7 @@
         <p>These are laboratory and preclinical contexts. Tirzepatide is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
 
         <h2>Structure and quality</h2>
-        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify/">batch number</a>, and the <a href="calculator/">reconstitution calculator</a> handles the concentration math once it is in solution.</p>
+        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including tirzepatide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1072,7 +1072,7 @@
         <p>Your specialist confirms the payment details on WhatsApp before anything is charged.</p>
 
         <h2>How to verify authenticity before you pay</h2>
-        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>. For the exact math of reconstitution, the <a href="calculator/">reconstitution calculator</a> converts vial strength and diluent into concentration.</p>
+        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>

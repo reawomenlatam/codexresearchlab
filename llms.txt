@@ -37,7 +37,6 @@ batch ships with its certificate of analysis (HPLC and mass spectrometry).
 - Full reference: https://codexresearchlab.com/llms-full.txt
 - Catalog: https://codexresearchlab.com/catalog/
 - Verify a batch: https://codexresearchlab.com/verify/
-- Reconstitution calculator: https://codexresearchlab.com/calculator/
 - Shipping and refund policy: https://codexresearchlab.com/shipping/
 - Blog (peptide research topics): https://codexresearchlab.com/blog/
 

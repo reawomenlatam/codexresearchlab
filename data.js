@@ -1,4 +1,4 @@
-/* Codex Research - shared data (catalog, articles, FAQ, testimonials).
+/* Codex Research - shared data (catalog, articles, FAQ).
    Catalog = current available inventory with real prices.
    Each product: `mg` = strength, `sizes` = purchase options (single vial / 3-vial pack).
    Exposed on window.REA for every page to use. */
@@ -13,6 +13,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
     ],
     overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
   },
   {
@@ -24,6 +25,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
     ],
     overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {
@@ -35,6 +37,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 218.04, save: '8%' },
     ],
     overview: 'BPC-157 is a pentadecapeptide derived from a protective protein found in gastric juice. In research settings it has been studied for its interaction with signaling pathways associated with tissue repair and angiogenesis.',
+    overviewEs: 'BPC-157 es un pentadecapéptido derivado de una proteína protectora presente en el jugo gástrico. En investigación se ha estudiado por su interacción con vías de señalización asociadas a la reparación de tejidos y a la angiogénesis.',
     research: ['Tissue repair', 'Angiogenesis', 'Nitric oxide signaling', 'Gastrointestinal integrity'],
   },
   {
@@ -46,6 +49,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
     ],
     overview: 'MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeostasis and cell signaling.',
+    overviewEs: 'MOTS-c es un péptido de origen mitocondrial estudiado en modelos de homeostasis metabólica y señalización celular.',
     research: ['Metabolic homeostasis', 'Mitochondrial function', 'Cell signaling'],
   },
   {
@@ -57,6 +61,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 372.60, save: '8%' },
     ],
     overview: 'Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation.',
+    overviewEs: 'Ipamorelina es un secretagogo selectivo de hormona de crecimiento y agonista del receptor de grelina, estudiado en modelos de regulación de la hormona de crecimiento.',
     research: ['GH secretagogues', 'Ghrelin receptor', 'Endocrine regulation'],
   },
   {
@@ -68,6 +73,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 262.20, save: '8%' },
     ],
     overview: 'GHK-Cu (copper tripeptide-1, Gly-His-Lys-copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.',
+    overviewEs: 'GHK-Cu (tripéptido de cobre-1, Gli-His-Lis-cobre) es un péptido natural con afinidad por el cobre, estudiado en modelos de remodelación de tejidos, síntesis de colágeno y reparación de heridas.',
     research: ['Tissue remodeling', 'Collagen synthesis', 'Wound repair', 'Skin biology'],
   },
   {
@@ -79,6 +85,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
     ],
     overview: 'PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of receptor signaling and neurobehavioral pathways.',
+    overviewEs: 'PT-141 (bremelanotida) es un agonista de los receptores de melanocortina, estudiado en modelos de señalización de receptores y vías neuroconductuales.',
     research: ['Melanocortin signaling', 'Receptor binding', 'Neurobehavioral models'],
   },
   {
@@ -90,6 +97,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 358.80, save: '8%' },
     ],
     overview: 'NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme studied in models of cellular metabolism, mitochondrial function and sirtuin signaling.',
+    overviewEs: 'NAD+ (nicotinamida adenina dinucleótido) es una coenzima esencial estudiada en modelos de metabolismo celular, función mitocondrial y señalización de sirtuinas.',
     research: ['Cellular metabolism', 'Mitochondrial function', 'Sirtuin signaling'],
   },
   {
@@ -100,6 +108,7 @@ const PRODUCTS = [
       { label: 'Single vial', price: 120 },
     ],
     overview: 'AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.',
+    overviewEs: 'AHK-Cu (tripéptido de cobre-3, Ala-His-Lis-cobre) es un péptido con afinidad por el cobre, estudiado en modelos de proliferación de células dérmicas, depósito de colágeno y biología del folículo piloso.',
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
   },
   {
@@ -111,6 +120,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 27.60, save: '8%' },
     ],
     overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique.',
+    overviewEs: 'El agua bacteriostática (agua estéril con alcohol bencílico al 0,9% como conservante) se usa para reconstituir péptidos liofilizados, permitiendo varias extracciones de un mismo vial a lo largo del tiempo con técnica aséptica.',
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
   },
   {
@@ -122,6 +132,7 @@ const PRODUCTS = [
       { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
     ],
     overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. This 10 ml presentation is a larger multi-dose bottle.',
+    overviewEs: 'El agua bacteriostática (agua estéril con alcohol bencílico al 0,9% como conservante) se usa para reconstituir péptidos liofilizados, permitiendo varias extracciones de un mismo vial a lo largo del tiempo con técnica aséptica. Esta presentación de 10 ml es un frasco multidosis más grande.',
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
   },
 ];
@@ -136,11 +147,17 @@ const FAQS = [
   { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions.' },
 ];
 
-const TESTIMONIALS = [
-  { name: 'Dr. M. Herrera', role: 'Researcher · private lab', rating: 5, quote: 'The batch-to-batch consistency is what made me stay. The COA arrives before I pay and the numbers match what I receive.' },
-  { name: 'L. Castillo', role: 'Graduate student', rating: 5, quote: 'I had a couple of questions before ordering and they replied on WhatsApp within minutes. Shipped next day, discreet packaging.' },
-  { name: 'A. Ríos', role: 'Lab technician', rating: 5, quote: 'I’ve worked with other suppliers and the difference here is traceability: every vial with its batch and its certificate. No guesswork.' },
+// Mismo FAQ en español. Las dos listas tienen que decir lo mismo: el JSON-LD
+// FAQPage de cada portada declara justo estas preguntas.
+const FAQS_ES = [
+  { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. Puedes pedir el COA de tu lote por WhatsApp.' },
+  { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque neutro.' },
+  { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
+  { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
+  { q: '¿Qué métodos de pago aceptan?', a: 'Panamá: Yappy, transferencia ACH o efectivo contra entrega. Estados Unidos: Zelle o cripto (USDT · USDC · BTC). Tu especialista confirma los detalles por WhatsApp antes de que pagues.' },
+  { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez reconstituidos. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
 ];
+
 
 // Existencias reales. Con menos de 10 se muestra "Only N left" y la
 // cantidad no puede pasar de ahí. Los que no aparecen aquí van con 25.
@@ -232,6 +249,11 @@ const BATCHES = {
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
 };
 
+const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en ' +
+  'Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). ' +
+  'Estados Unidos: $20 desde nuestro stock en EE.UU., 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). ' +
+  'Siempre en empaque neutro y discreto.';
+
 /* Envío y pagos: un solo origen para el FAQ de producto, pricing.md y llms-full.txt. */
 const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities ' +
   '(David, Chitre, Colon and more): next business day via Fergunson transport. United States: ' +
@@ -246,6 +268,7 @@ const PAYMENT_LINE = 'Panama: Yappy, ACH transfer or cash on delivery. United St
    muestra es justo lo que Google penaliza (ya pasó con el FAQ de la portada).
    Solo datos de tienda y de ficha: nada clínico ni de dosis. */
 function productFaq(p) {
+  if (esLang()) return productFaqEs(p);
   const list = p.sizes.map((z) => `${z.label}: $${z.price.toFixed(2)} USD`).join('. ');
   return [
     { q: `What is ${p.name}?`,
@@ -266,4 +289,43 @@ function productFaq(p) {
   ];
 }
 
-window.REA = { PRODUCTS, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS, productFaq, SHIPPING_LINE, PAYMENT_LINE };
+// El idioma se lee en el momento de usarlo: data.js carga antes que i18n.js.
+function esLang() {
+  // build-seo.js evalúa este archivo en Node con un document simulado: ahí no
+  // hay idioma de página y el generador llama a las versiones ES a propósito.
+  const el = typeof document !== 'undefined' && document.documentElement;
+  return !!el && (el.getAttribute('lang') || 'en').slice(0, 2) === 'es';
+}
+
+const SIZE_ES = { 'Single vial': 'Vial individual', 'Pack · 3 vials': 'Pack · 3 viales' };
+
+function productFaqEs(p) {
+  const list = p.sizes.map((z) => `${SIZE_ES[z.label] || z.label}: $${z.price.toFixed(2)} USD`).join('. ');
+  return [
+    { q: `¿Qué es ${p.name}?`,
+      a: `${p.overviewEs || p.overview} Se suministra como vial liofilizado de ${p.mg}, solo para uso en investigación de laboratorio.` },
+    { q: `¿Cuánto cuesta ${p.name}?`,
+      a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
+    { q: `¿${p.name} está analizado? ¿Entregan certificado de análisis?`,
+      a: 'Sí. Cada lote se analiza al 99% de pureza por HPLC y espectrometría de masas. El certificado de ' +
+         'análisis de tu lote se comparte por WhatsApp antes del pago, y el número de lote de cualquier vial ' +
+         'se puede comprobar en https://codexresearchlab.com/verify/.' },
+    { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
+    { q: `¿Cómo se debe almacenar ${p.name}?`,
+      a: 'Los viales liofilizados se mantienen frescos y protegidos de la luz. Una vez reconstituidos se ' +
+         'guardan refrigerados entre 2 y 8 grados Celsius. La etiqueta de cada vial indica sus condiciones ' +
+         'de almacenamiento.' },
+    { q: `¿${p.name} es para uso humano?`,
+      a: `No. ${p.name} se vende estrictamente para investigación y desarrollo de laboratorio. No es para ` +
+         'consumo humano ni animal, y no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.' },
+  ];
+}
+
+// Contenido según el idioma de la página. Las vistas llaman a estos, no a las
+// listas sueltas, para que /es/ y / no se desincronicen.
+const faqs = () => (esLang() ? FAQS_ES : FAQS);
+const overview = (p) => (esLang() && p.overviewEs ? p.overviewEs : p.overview);
+
+window.REA = { PRODUCTS, FAQS, FAQS_ES, COUNTRIES, COUPONS, BATCHES, SALE,
+  WHATSAPP: '50763354625', EMAILJS, productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
+  faqs, overview };

@@ -264,7 +264,6 @@ Lyophilized vials are stored cool and protected from light, and kept refrigerate
 - Catalog: https://codexresearchlab.com/catalog/
 - Pricing (plain text): https://codexresearchlab.com/pricing.md
 - Verify a batch: https://codexresearchlab.com/verify/
-- Reconstitution calculator: https://codexresearchlab.com/calculator/
 - Shipping and refund policy: https://codexresearchlab.com/shipping/
 - Blog: https://codexresearchlab.com/blog/
 

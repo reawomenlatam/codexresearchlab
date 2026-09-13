@@ -4,10 +4,11 @@
   const ui = window.REAui;
 
   // Deriva categorías simples desde el tag (Blend vs. CAS)
+  const T = window.T;
   const CATEGORIES = [
-    { key: 'all', label: 'All', test: () => true },
-    { key: 'single', label: 'Compounds', test: (p) => p.cas !== 'Blend' },
-    { key: 'blend', label: 'Blends', test: (p) => p.cas === 'Blend' },
+    { key: 'all', label: T('All'), test: () => true },
+    { key: 'single', label: T('Compounds'), test: (p) => p.cas !== 'Blend' },
+    { key: 'blend', label: T('Blends'), test: (p) => p.cas === 'Blend' },
   ];
 
   const grid = document.getElementById('catGrid');
@@ -43,7 +44,9 @@
     });
 
     grid.innerHTML = rows.map(ui.productCard).join('');
-    countEl.textContent = `${rows.length} product${rows.length === 1 ? '' : 's'}`;
+    countEl.textContent = rows.length === 1
+      ? T('{n} product', { n: rows.length })
+      : T('{n} products', { n: rows.length });
     emptyEl.hidden = rows.length > 0;
   }
 
