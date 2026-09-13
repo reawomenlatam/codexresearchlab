@@ -504,6 +504,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .footer-legal { padding-top: 1.6rem; }
 .footer-legal p { color: rgba(255,255,255,.55); /* .4 daba 3.67:1 sobre --ink; .55 = 5.58:1 (WCAG AA) */ font-size: .76rem; margin-top: .6rem; line-height: 1.6; }
 .footer-legal .copy { color: rgba(255,255,255,.6); font-size: .82rem; }
+.footer-biz { color: rgba(255,255,255,.55); font-size: .76rem; }
+.footer-biz a { color: inherit; text-decoration: underline; }
 
 /* ---------- Barra de aviso (país + uso) ---------- */
 /* Reemplaza al modal de edad: informa sin tapar la tienda. Se descarta con
@@ -843,15 +845,7 @@ s.was, .pd-price-was {
 .coa-cta { width: 100%; justify-content: center; }
 
 /* ---------- Testimonios ---------- */
-.tsm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.tsm-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
-.stars { color: #d9a919; display: inline-flex; gap: 1px; margin-bottom: 1rem; }
-.tsm-card blockquote { font-size: .98rem; line-height: 1.55; color: var(--ink); flex: 1; }
-.tsm-card figcaption { display: flex; align-items: center; gap: .7rem; margin-top: 1.3rem; padding-top: 1.1rem; border-top: 1px solid var(--border); }
-.tsm-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-soft); color: var(--ink); display: grid; place-items: center; font-weight: 700; flex-shrink: 0; }
-.tsm-card figcaption b { display: block; font-size: .92rem; }
-.tsm-role { color: var(--muted); font-size: .8rem; }
-.tsm-proof { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.tsm-proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .tsm-proof div { text-align: center; }
 .tsm-proof strong { display: block; font-size: 1.6rem; letter-spacing: -.02em; }
 .tsm-proof span { color: var(--muted); font-size: .82rem; }
@@ -1027,7 +1021,6 @@ s.was, .pd-price-was {
 .pay-opt:has(input:checked) { border-color: var(--cta); background: var(--accent-soft); }
 .pay-opt input { accent-color: var(--cta); }
 .pay-opt-main { display: flex; flex-direction: column; gap: 2px; }
-.pay-mark.yappy { align-self: flex-start; background: #6d2fb3; color: #fff; font-weight: 800; letter-spacing: -.01em; padding: .12rem .5rem; border-radius: 6px; }
 .pay-note { font-weight: 500; font-size: .74rem; color: var(--muted); }
 .pay-opt.pay-featured { border-color: #16a34a; }
 .pay-opt.pay-featured:has(input:checked) { border-color: #16a34a; }
@@ -1225,7 +1218,6 @@ s.was, .pd-price-was {
   .blog-feature .blog-cover { min-height: 200px; }
   .pd-grid, .pd-info-grid { grid-template-columns: 1fr; gap: 2rem; }
   .pd-media, .pd-info-side { position: static; }
-  .tsm-grid { grid-template-columns: 1fr; }
   .tsm-proof { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 1rem; }
   .pd-sticky { display: flex; }
   .cart-sticky:not([hidden]) { display: flex; }
@@ -1246,7 +1238,7 @@ s.was, .pd-price-was {
   .add-btn { width: 40px; height: 40px; }
 }
 
-/* ---------- Checkout por correo (US · Zelle) ---------- */
+/* ---------- Confirmación de pedido ---------- */
 .eco-form { display: grid; gap: .7rem; margin-top: .5rem; }
 .eco-field { display: grid; gap: .3rem; }
 .eco-field > span { font-size: .82rem; font-weight: 600; color: var(--ink); }
@@ -1294,6 +1286,11 @@ s.was, .pd-price-was {
 .pay-asset { margin-top: .55rem; }
 .pay-asset .pay-note { margin-top: .1rem; }
 .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
+.cart-notice { margin: 0 0 1.2rem; padding: .8rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
+.co-ack { display: flex; gap: .6rem; align-items: flex-start; font-size: .8rem; line-height: 1.5; color: var(--muted); }
+.co-ack input { margin-top: .18rem; flex: 0 0 auto; width: 1rem; height: 1rem; accent-color: var(--brand, currentColor); }
+.co-ack a { color: inherit; text-decoration: underline; font-weight: 600; }
+
 .co-msg { font-size: .85rem; line-height: 1.5; margin: 0; color: var(--muted); }
 .co-msg.err { color: var(--danger); }
 .co-msg a { color: inherit; text-decoration: underline; font-weight: 600; }

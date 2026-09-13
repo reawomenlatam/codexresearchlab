@@ -34,7 +34,7 @@
       // nombre comercial: quien llega buscando ese término lo sigue encontrando,
       // sin que aparezca en ninguna parte de la página.
       rows = rows.filter((p) => p.name.toLowerCase().includes(q)
-        || p.cas.toLowerCase().includes(q)
+        || (p.cas || '').toLowerCase().includes(q)
         || (p.alias || '').toLowerCase().includes(q));
     }
     rows.sort((a, b) => {

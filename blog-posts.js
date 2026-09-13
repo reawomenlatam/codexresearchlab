@@ -693,7 +693,7 @@
         <p>Two habits protect the material here. First, let a cold vial come closer to room temperature before opening, so moisture does not condense inside. Second, do not squirt the diluent straight onto the peptide. Aim the stream at the inside wall of the vial and let it run down. Then leave it to dissolve on its own, or swirl it slowly. Shaking is the classic mistake, since the shear and foaming can damage a delicate peptide.</p>
 
         <h2>Work out the concentration</h2>
-        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL. From there you can convert to units on an insulin syringe, where 100 units equal 1 mL.</p>
+        <p>Concentration is simple arithmetic once you know two numbers: the amount of peptide in the vial and the volume of diluent you added. A vial holding 10 mg reconstituted with 2 mL of water gives 5 mg per mL.</p>
 
         <h2>Store the solution</h2>
         <p>Once a peptide is in solution it is less stable than the dry powder, so it usually goes into refrigeration and away from light, with the exact conditions shown on the vial label. Label the vial with the date and concentration so nothing is guessed later. If you want to confirm the vial was genuine before you started, you can check its <a href="verify/">batch number</a>.</p>
@@ -912,7 +912,7 @@
         <p class="lead">If a dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages two receptors, retatrutide takes the same idea one step further. It is a single synthetic peptide built to act on three metabolic receptors at once. That extra target is the whole reason it has become a focal point in current incretin research.</p>
 
         <h2>What is retatrutide?</h2>
-        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its CAS number is 2381089-83-2 and its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis/">solid-phase synthesis</a> rather than isolated from a natural source.</p>
+        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis/">solid-phase synthesis</a> rather than isolated from a natural source.</p>
 
         <h2>Why a third receptor?</h2>
         <p>GIP and GLP-1 are incretins, but glucagon sits on the other side of glucose regulation. Adding a glucagon receptor component changes the balance of signals a single molecule can send. For researchers, that raises a specific and testable question: what happens to metabolic pathways when all three receptors are engaged together instead of one or two? Retatrutide exists to study exactly that comparison.</p>
@@ -1039,7 +1039,7 @@
       slug: 'buy-research-peptides-panama',
       title: 'How to Buy Research Peptides in Panama',
       metaTitle: 'How to Buy Research Peptides in Panama: Shipping, Payments & COA',
-      metaDescription: 'A practical guide to buying laboratory research peptides in Panama: same-day delivery in Panama City, interior shipping, Yappy, ACH and cash-on-delivery payments, and batch COA verification.',
+      metaDescription: 'A practical guide to buying laboratory research peptides in Panama: same-day delivery in Panama City, interior shipping, card and crypto payments, and batch COA verification.',
       focusKeyword: 'buy research peptides Panama',
       category: 'Buying Guide',
       tags: ['Panama', 'research peptides', 'buying guide', 'shipping', 'COA'],
@@ -1058,18 +1058,17 @@
           <li><b>Panama City:</b> $4 flat shipping, delivered in <b>1-2 hours</b> from local stock.</li>
           <li><b>Interior cities</b> such as David, Chitré, and Colón: next business day via Fergunson transport.</li>
           <li><b>Free shipping</b> on orders over $100.</li>
-          <li>Every order ships in <b>neutral, discreet packaging</b> with no reference to the contents.</li>
+          <li>Every order ships in <b>sealed, protective packaging</b>, with each vial labeled with its compound, strength and batch number.</li>
         </ul>
         <p>Because stock is held locally, you are not waiting weeks for an international parcel or dealing with customs.</p>
 
         <h2>Payment methods in Panama</h2>
-        <p>Codex Research accepts the payment methods Panamanian buyers already use:</p>
+        <p>Payment happens on the site itself, at checkout:</p>
         <ul>
-          <li><b>Yappy</b> for instant transfers.</li>
-          <li><b>ACH transfer</b> between local bank accounts.</li>
-          <li><b>Cash on delivery</b>, so you can pay when you receive your order with no advance payment.</li>
+          <li><b>Card</b> — Visa, Mastercard and American Express, processed by Stripe. You finish on Stripe's own secure checkout, so your card details never touch our site.</li>
+          <li><b>Crypto</b> — USDC or USDT on Ethereum, transferred from your own wallet and verified on-chain before the order is released.</li>
         </ul>
-        <p>Your specialist confirms the payment details on WhatsApp before anything is charged.</p>
+        <p>The amount charged is calculated by our server at the moment of payment, so it always matches what your cart shows. Any question before or after ordering is answered by a specialist on WhatsApp.</p>
 
         <h2>How to verify authenticity before you pay</h2>
         <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>.</p>
@@ -1079,7 +1078,7 @@
       `,
       faq: [
         { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
-        { q: 'What payment methods can I use in Panama?', a: 'In Panama you can pay with Yappy, ACH transfer, or cash on delivery. Cash on delivery means you pay when you receive your order, with no advance payment. A specialist confirms the details on WhatsApp before you pay.' },
+        { q: 'What payment methods can I use in Panama?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on the site at checkout, and the amount is calculated by the server so it always matches your cart.' },
         { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
       ],
       references: [],
@@ -1115,7 +1114,7 @@
         <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
 
         <h2>Buying in Panama</h2>
-        <p>In Panama, you can review the COA on WhatsApp before payment, pay with Yappy, ACH transfer, or cash on delivery, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
+        <p>In Panama, you can review the COA on WhatsApp before payment, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>

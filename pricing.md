@@ -6,11 +6,11 @@ human or animal consumption.
 
 ## Shipping
 
-Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in neutral, discreet packaging.
+Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
 ## Payment methods
 
-Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT, USDC, BTC). A specialist confirms the details on WhatsApp before you pay.
+Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the United States. Card details go straight to Stripe and never touch our site.
 
 ## Catalog
 
@@ -27,7 +27,6 @@ Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto 
 ### GLP-3 (retatrutide) — 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/retatrutide/
-- CAS number: 2381089-83-2
 - Purity: 99% (HPLC), certificate of analysis per batch
 - Availability: In stock
 - Single vial: $150.00 USD

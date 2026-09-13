@@ -17,7 +17,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
   },
   {
-    slug: 'retatrutide', name: 'GLP-3', alias: 'retatrutide', cas: '2381089-83-2', tag: 'CAS # 2381089-83-2',
+    slug: 'retatrutide', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     sizes: [
@@ -140,10 +140,10 @@ const PRODUCTS = [
 
 const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.' },
-  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.' },
+  { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
-  { q: 'What payment methods do you accept?', a: 'Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay.' },
+  { q: 'What payment methods do you accept?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site.' },
   { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions.' },
 ];
 
@@ -151,10 +151,10 @@ const FAQS = [
 // FAQPage de cada portada declara justo estas preguntas.
 const FAQS_ES = [
   { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. Puedes pedir el COA de tu lote por WhatsApp.' },
-  { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque neutro.' },
+  { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque sellado y protegido.' },
   { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
   { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
-  { q: '¿Qué métodos de pago aceptan?', a: 'Panamá: Yappy, transferencia ACH o efectivo contra entrega. Estados Unidos: Zelle o cripto (USDT · USDC · BTC). Tu especialista confirma los detalles por WhatsApp antes de que pagues.' },
+  { q: '¿Qué métodos de pago aceptan?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). Pagas en nuestro propio checkout, tanto en Panamá como en Estados Unidos. Los datos de la tarjeta van directo a Stripe y nunca pasan por nuestro sitio.' },
   { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez reconstituidos. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
 ];
 
@@ -201,7 +201,7 @@ const COUNTRIES = {
     shipping: { flat: 20, freeThreshold: 250 },
     eta: 'Delivery in 48-72 h', etaShort: '48-72 h',
     payments: [
-      { id: 'zelle', label: 'Zelle' },
+      { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
     ],
   },
@@ -210,10 +210,8 @@ const COUNTRIES = {
     shipping: { flat: 4, freeThreshold: 100 },
     eta: 'Panama City: 1-2 h · Interior: next-day', etaShort: '1-2 h in Panama City',
     payments: [
-      { id: 'yappy', label: 'Yappy' },
-      { id: 'ach', label: 'ACH transfer' },
+      { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
-      { id: 'cash', label: 'Cash on delivery' },
     ],
   },
 };
@@ -223,16 +221,6 @@ const COUPONS = {
   FREESHIP: { type: 'freeship', label: 'Free shipping' },
   // Códigos de influencer (se rastrea su uso vía track.php). Agrega más aquí.
   MORA10: { type: 'percent', value: 10, label: '10% off', influencer: 'andres mora' },
-};
-
-// Pago por correo (US · Zelle). Rellena estos valores desde tu cuenta de EmailJS
-// para activar el envío de correos. Vacío = Zelle usa el flujo de WhatsApp (fallback).
-const EMAILJS = {
-  publicKey: '',        // EmailJS · Account · Public Key
-  serviceId: '',        // EmailJS · Email Services · Service ID
-  templateMerchant: '', // plantilla que te envía la orden a TI
-  templateCustomer: '', // plantilla de confirmación al CLIENTE
-  merchantEmail: 'sales@codexresearchlab.com',
 };
 
 // Lotes válidos (/verify/). Clave = número de lote. Valor = datos del producto
@@ -252,15 +240,16 @@ const BATCHES = {
 const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en ' +
   'Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). ' +
   'Estados Unidos: $20 desde nuestro stock en EE.UU., 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). ' +
-  'Siempre en empaque neutro y discreto.';
+  'Siempre en empaque sellado y protegido, con cada vial etiquetado con su compuesto, concentración y número de lote.';
 
 /* Envío y pagos: un solo origen para el FAQ de producto, pricing.md y llms-full.txt. */
 const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities ' +
   '(David, Chitre, Colon and more): next business day via Fergunson transport. United States: ' +
   '$20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). ' +
-  'Always in neutral, discreet packaging.';
-const PAYMENT_LINE = 'Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or ' +
-  'crypto (USDT, USDC, BTC). A specialist confirms the details on WhatsApp before you pay.';
+  'Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.';
+const PAYMENT_LINE = 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto ' +
+  '(USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the ' +
+  'United States. Card details go straight to Stripe and never touch our site.';
 
 /* FAQ por producto, derivado del propio producto: build-seo.js lo hornea en el HTML
    y en el JSON-LD, y product.js lo pinta al hidratar. Vive aquí para que las dos
@@ -326,6 +315,17 @@ function productFaqEs(p) {
 const faqs = () => (esLang() ? FAQS_ES : FAQS);
 const overview = (p) => (esLang() && p.overviewEs ? p.overviewEs : p.overview);
 
-window.REA = { PRODUCTS, FAQS, FAQS_ES, COUNTRIES, COUPONS, BATCHES, SALE,
-  WHATSAPP: '50763354625', EMAILJS, productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
+/* Identidad legal del negocio. Va en el footer de todas las páginas: los
+   procesadores de pago (Stripe) la buscan y su ausencia se lee como opacidad.
+   RELLENAR legalName y address con los datos reales de la LLC; mientras estén
+   vacíos, el footer simplemente no pinta esa línea. */
+const BUSINESS = {
+  legalName: 'Codex Research LLC',
+  address: '30 N Gould St, Sheridan, WY 82801, United States',
+  email: 'sales@codexresearchlab.com',
+  phone: '+507 6335-4625',
+};
+
+window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, SALE,
+  WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

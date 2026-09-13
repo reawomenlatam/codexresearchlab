@@ -2,7 +2,7 @@
 
 > Codex Research (codexresearchlab.com) is a supplier of laboratory-grade research
 > peptides, batch-verified with a third-party certificate of analysis (COA) and 99%
-> HPLC purity. Same-day delivery in Panama City (1-2 hours) and discreet shipping
+> HPLC purity. Same-day delivery in Panama City (1-2 hours) and shipping
 > across Panama and the United States, with human support on WhatsApp.
 
 All products are sold strictly for laboratory research and development. They are not
@@ -14,8 +14,8 @@ prevent any disease.
 - Same-day delivery in Panama City: 1-2 hours, $4 flat shipping.
 - Interior cities (David, Chitré, Colón and more): next business day via Fergunson transport.
 - Free shipping on orders over $100.
-- Payment methods in Panama: Yappy, ACH transfer, or cash on delivery.
-- Orders are confirmed with a specialist on WhatsApp before payment: +507 6335-4625.
+- Payment methods: card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on the site's own checkout.
+- Questions before or after an order are answered by a specialist on WhatsApp: +507 6335-4625.
 - Prices are in USD.
 
 ## Products
@@ -29,7 +29,7 @@ batch ships with its certificate of analysis (HPLC and mass spectrometry).
 
 - Batch authenticity: verify any vial's batch number at https://codexresearchlab.com/verify/
 - Certificate of analysis (COA) is shared on WhatsApp before you pay.
-- Neutral, discreet packaging on every order.
+- Sealed, protective packaging on every order; each vial labeled with its compound, strength and batch number.
 
 ## Key pages
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -93,11 +93,13 @@
       product availability, and specifications may change without notice.</p>
 
       <h2>3. Pricing and payment</h2>
-      <p>Prices are shown in U.S. dollars and exclude shipping unless stated. No payment is charged on
-      the website. After you place an order, a specialist confirms the details and arranges payment
-      through the methods available in your country (for example, Panama: Yappy, ACH transfer, or cash
-      on delivery; United States: Zelle or crypto). You are responsible for any taxes or duties that
-      may apply.</p>
+      <p>Prices are shown in U.S. dollars and exclude shipping unless stated. Payment is taken at
+      checkout, by card (Visa, Mastercard, American Express) or by crypto (USDC or USDT on Ethereum).
+      Card payments are processed by <b>Stripe</b>: you complete them on Stripe's secure checkout and
+      your card details never reach our servers. Crypto payments are transferred from your own wallet
+      and verified on-chain before the order is released. The amount charged is always the one shown
+      in your cart, calculated by our server at the moment of payment. You are responsible for any
+      taxes or duties that may apply, and for any network fees on a crypto transfer.</p>
 
       <h2>4. Shipping and returns</h2>
       <p>Shipping timelines, costs, and our refund and return policy are described in our

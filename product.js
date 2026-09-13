@@ -77,7 +77,7 @@
     category: 'Research peptides',
     brand: { '@type': 'Brand', name: 'Codex Research' },
     additionalProperty: [
-      { '@type': 'PropertyValue', name: 'CAS number', value: p.cas },
+      ...(p.cas ? [{ '@type': 'PropertyValue', name: 'CAS number', value: p.cas }] : []),
       { '@type': 'PropertyValue', name: 'Molecular formula', value: p.formula },
       { '@type': 'PropertyValue', name: 'Molecular weight', value: p.weight },
     ],
@@ -210,7 +210,7 @@
         <aside class="pd-info-side">
           <h4>${T('Structure')}</h4>
           <dl class="pd-specs">
-            <div><dt>CAS #</dt><dd>${p.cas}</dd></div>
+            ${p.cas ? `<div><dt>CAS #</dt><dd>${p.cas}</dd></div>` : ''}
             <div><dt>${T('Molecular formula')}</dt><dd>${p.formula}</dd></div>
             <div><dt>${T('Molecular weight')}</dt><dd>${p.weight}</dd></div>
             <div><dt>PubChem ID</dt><dd>${p.pubchem}</dd></div>
@@ -324,7 +324,7 @@
   // Entrega según el país seleccionado (se actualiza si cambia)
   function setEta() {
     const cfg = window.REACountry.config();
-    document.getElementById('pdEtaText').textContent = `${cfg.flag} ${T(cfg.eta)} · ${T('discreet packaging')}`;
+    document.getElementById('pdEtaText').textContent = `${cfg.flag} ${T(cfg.eta)} · ${T('sealed packaging')}`;
   }
   setEta();
   window.addEventListener('rea-country-change', setEta);

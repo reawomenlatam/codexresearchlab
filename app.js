@@ -75,11 +75,6 @@
     });
   };
 
-  window.REAui.stars = (n) => {
-    const star = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
-    return `<span class="stars" aria-label="${n} out of 5">${star.repeat(n)}</span>`;
-  };
-
   // ---------- Render de la home ----------
   const grid = document.getElementById('productsGrid');
   if (grid) {
@@ -97,7 +92,7 @@
     const isPA = window.REACountry.code() === 'PA';
     heroDeliver.innerHTML = isPA
       ? `<span class="hd-dot"></span><span>${window.T('<b>Same-day delivery in Panama City</b>, in your hands in 1-2 h')}</span>`
-      : `<span class="hd-dot"></span><span>${window.T('<b>Fast, discreet delivery across the US</b>')}</span>`;
+      : `<span class="hd-dot"></span><span>${window.T('<b>Fast, sealed delivery across the US</b>')}</span>`;
   }
   window.addEventListener('rea-country-change', updateHeroDeliver);
   updateHeroDeliver();

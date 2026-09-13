@@ -2,7 +2,7 @@
 
 > Codex Research (codexresearchlab.com) supplies laboratory-grade research peptides,
 > batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
-> Same-day delivery in Panama City (1-2 hours) and discreet shipping across Panama and
+> Same-day delivery in Panama City (1-2 hours) and shipping across Panama and
 > the United States, with human support on WhatsApp.
 
 Last updated: 2026-09-13. Machine-readable pricing: https://codexresearchlab.com/pricing.md
@@ -13,9 +13,9 @@ disease. Dosage and clinical questions are outside what this catalog documents.
 
 # Shipping and payment
 
-Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in neutral, discreet packaging.
+Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
-Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT, USDC, BTC). A specialist confirms the details on WhatsApp before you pay.
+Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the United States. Card details go straight to Stripe and never touch our site.
 
 # Catalog
 
@@ -43,7 +43,6 @@ A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, 
 
 - URL: https://codexresearchlab.com/product/retatrutide/
 - Strength: 10 mg per vial
-- CAS number: 2381089-83-2
 - Molecular formula: C228H350N48O66
 - Molecular weight: 4894.58 g/mol
 - Research areas: GIP signaling, GLP-1 signaling, Glucagon signaling, Metabolism
@@ -241,7 +240,7 @@ Yes. Every batch comes with a certificate of analysis (COA) from an independent 
 
 ### Where do you ship from and how long does it take?
 
-Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.
+Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging.
 
 ### Are these products for human consumption?
 
@@ -253,7 +252,7 @@ Message us on WhatsApp with your destination country and we’ll confirm coverag
 
 ### What payment methods do you accept?
 
-Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay.
+Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site.
 
 ### How should I store the products?
 

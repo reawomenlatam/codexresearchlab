@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://api.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://hooks.codexresearchlab.com; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -83,6 +83,11 @@
       <p><b>Information you provide.</b> When you place an order, we collect your full name,
       email address, phone number, and shipping address, plus any notes you add. If you contact
       us by email or WhatsApp, we collect the contents of those messages.</p>
+      <p><b>Payment information.</b> We never see or store your card number. Card payments are
+      handled entirely by <b>Stripe</b>, which collects your card details on its own checkout and
+      tells us only whether the payment succeeded, along with the last digits and card brand for
+      our records. For crypto payments we record the wallet address and transaction hash, which
+      are public on the blockchain by design.</p>
       <p><b>Information collected automatically.</b> Like most websites, we automatically receive
       basic technical data (IP address, browser and device type, pages viewed) through cookies and
       similar technologies, including the Meta (Facebook) Pixel.</p>
@@ -106,10 +111,11 @@
 
       <h2>4. How we share information</h2>
       <p>We do <b>not</b> sell your personal information. We share it only with service providers
-      that help us operate, such as our email delivery provider (EmailJS), advertising and analytics
-      partner (Meta Platforms), our hosting/DNS provider, and WhatsApp for order communication,
-      each only to the extent needed to provide their service. We may also disclose information when
-      required by law.</p>
+      that help us operate: <b>Stripe</b> (payment processing, which receives your name, email and
+      shipping address to process and protect the transaction — see Stripe's own privacy policy),
+      our advertising and analytics partner (Meta Platforms), our hosting/DNS provider, and WhatsApp
+      for order communication, each only to the extent needed to provide their service. We may also
+      disclose information when required by law.</p>
 
       <h2>5. Data retention</h2>
       <p>We keep order and contact information for as long as needed to fulfill your order, provide

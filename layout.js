@@ -86,6 +86,17 @@
       <a class="btn btn-primary mobile-nav-cta" href="${U('catalog/')}">${T('Shop products')}</a>
     </nav>`;
 
+  // Identidad legal: sólo se pinta lo que exista en data.js (nada inventado).
+  const B = (window.REA && window.REA.BUSINESS) || {};
+  const bizBits = [B.legalName, B.address].filter(Boolean).join(' · ');
+  const bizContact = [
+    B.email ? `<a href="mailto:${B.email}">${B.email}</a>` : '',
+    B.phone ? `<a href="tel:${String(B.phone).replace(/[^+0-9]/g, '')}">${B.phone}</a>` : '',
+  ].filter(Boolean).join(' · ');
+  const BIZ = (bizBits || bizContact)
+    ? `<p class="footer-biz">${[bizBits, bizContact].filter(Boolean).join(' · ')}</p>`
+    : '';
+
   const footerHTML = `
     <footer class="footer">
       <div class="container">
@@ -114,6 +125,7 @@
         </div>
         <div class="footer-legal">
           <p class="copy">© Codex Research 2023. ${T('All rights reserved.')}</p>
+          ${BIZ}
           <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
         </div>
       </div>
