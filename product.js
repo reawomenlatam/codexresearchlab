@@ -123,7 +123,7 @@
           <div class="pd-badges">
             ${oos ? `<span class="pd-badge oos">${T('Out of stock')}</span>` : ''}
             <span class="pd-badge"><span class="dot"></span> ${T('99% purity (HPLC)')}</span>
-            <button type="button" class="pd-badge pd-badge-btn" data-coa>📄 ${T('COA per batch')}</button>
+            <button type="button" class="pd-badge pd-badge-btn" data-coa>${T('COA per batch')}</button>
           </div>
         </div>
 

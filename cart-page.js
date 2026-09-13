@@ -281,7 +281,7 @@
             <button type="submit" class="btn btn-ghost">${T('Apply')}</button>
           </form>
           ${couponMsg}
-          ${!SALE.active && !(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>🎁 ${T('First order? Tap to apply')} <b>WELCOME10</b> ${T('for 10% off')}</button>` : ''}
+          ${!SALE.active && !(coupon && validCoupon(coupon)) ? `<button type="button" class="coupon-hint" data-apply-welcome>${T('First order? Tap to apply')} <b>WELCOME10</b> ${T('for 10% off')}</button>` : ''}
 
           <div class="sum-rows">
             <div class="sum-row"><span>${T('Subtotal')}</span><span>${money(s.subtotal)}</span></div>

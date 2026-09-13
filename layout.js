@@ -271,8 +271,8 @@
             { month: 'long', day: 'numeric', timeZone: 'UTC' })
         : '';
       const promo = SALE.active
-        ? `🔥 <b>${SALE.percent}% ${T('OFF on everything')}</b>${saleEnds ? ` · ${T('through')} ${saleEnds}` : ` · ${T('limited time')}`}`
-        : `🎁 <b>10% ${T('off your first order')}</b> · ${T('code')} <b>WELCOME10</b>`;
+        ? `<b>${SALE.percent}% ${T('OFF on everything')}</b>${saleEnds ? ` · ${T('through')} ${saleEnds}` : ` · ${T('limited time')}`}`
+        : `<b>10% ${T('off your first order')}</b> · ${T('code')} <b>WELCOME10</b>`;
       ann.innerHTML = isPA
         ? `${promo} · ${waLink}`
         : `${promo} · ${mailLink}`;

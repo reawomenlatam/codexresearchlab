@@ -1395,3 +1395,82 @@ fieldset.co-section > legend {
   display: block;
   width: 100%;
 }
+
+/* ============================================================
+   ESTABILIDAD MÓVIL
+   El zoom es lo que hacía que la página se pudiera arrastrar de lado: una vez
+   acercada, el dedo la pasea a izquierda y derecha. Tres causas del zoom:
+   1) Safari (iOS) hace zoom automático al enfocar un campo con letra < 16px.
+   2) Las 45 reglas :hover se quedan pegadas al tocar: la tarjeta se levanta
+      y la foto crece un 6% y ahí se queda hasta que tocas otra cosa.
+   3) El doble toque rápido sobre un botón activa el zoom del sistema.
+   Nada de esto se nota con ratón; por eso pasó desapercibido.
+   ============================================================ */
+
+/* --- 1. Cero zoom al enfocar un campo ---------------------------------
+   Regla de iOS: si el campo mide menos de 16px, Safari acerca la página y
+   NO la devuelve al salir. Con 16px exactos no hay zoom y se ve casi igual. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+@media (max-width: 768px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  .co-field input, .co-field select, .co-field textarea,
+  .eco-field input, .eco-field textarea,
+  .coupon-row input,
+  .cat-search input, #catSearch, #catSort {
+    font-size: 16px;
+  }
+  /* Objetivo táctil cómodo: el desplegable de orden medía 40px. */
+  select, input:not([type="checkbox"]):not([type="radio"]) { min-height: 44px; }
+}
+
+/* --- 2. Sin doble toque para hacer zoom -------------------------------
+   `manipulation` deja el scroll y el pellizco intactos, pero desactiva el
+   doble-toque-zoom sobre controles (y de paso quita el retardo de 300 ms). */
+a, button, input, select, textarea, label, summary,
+[role="button"], .product-card, .blog-card, .add-btn {
+  touch-action: manipulation;
+}
+
+/* --- 3. El :hover no se queda pegado al tocar -------------------------
+   En pantalla táctil no existe "pasar por encima": el toque deja el estado
+   hover puesto. Se anula y en su lugar se usa :active, que sí es un gesto
+   real y dura lo que dura el dedo. */
+@media (hover: none) {
+  .product-card:hover,
+  .blog-card:hover { transform: none; box-shadow: var(--shadow-card); }
+  .product-card:hover .product-photo,
+  .product-card:hover .product-media .vial,
+  .product-card:hover .add-btn,
+  .blog-card:hover .blog-cover img,
+  .blog-feature-link:hover .blog-cover img { transform: none; }
+  .btn-primary:hover { transform: none; }
+  .process-step:hover .step-go { transform: none; }
+  .article-figure a:hover { box-shadow: none; }
+
+  /* Respuesta al toque: se hunde un pelo mientras el dedo está encima. */
+  .product-card:active, .blog-card:active { transform: scale(.985); }
+  .btn:active, .add-btn:active, .sn-ok:active { transform: scale(.97); }
+  .product-card, .blog-card, .btn, .add-btn { transition: transform .12s ease; }
+}
+
+/* --- 4. El desplazamiento no se contagia a la página de atrás ---------
+   Al llegar al final del carrito o del menú, el gesto seguía moviendo la
+   página de debajo (scroll chaining). */
+.cart-drawer, .mobile-nav, .acc-modal, .coa-modal { overscroll-behavior: contain; }
+
+/* --- 5. La barra fija de compra tapaba el pie -------------------------
+   En el último desplazamiento, los 73px de la barra de compra quedaban
+   encima de la línea legal del pie. Se le reserva el sitio.
+   (`:has` ya se usa arriba para el esqueleto de las fotos.) */
+@media (max-width: 960px) {
+  body:has(.pd-sticky) .footer,
+  body:has(.cart-sticky) .footer { padding-bottom: 6.5rem; }
+}
+
+/* --- 6. Objetivo táctil del botón de cuenta --------------------------
+   Medía 31×31 (el icono más .4rem de relleno) al lado del carrito y el menú,
+   que son de 40. Se iguala el área sin cambiar nada de lo que se ve. */
+.acc-btn { width: 40px; height: 40px; padding: 0; align-items: center; justify-content: center; }
