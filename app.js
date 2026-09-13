@@ -34,13 +34,13 @@
     <article class="product-card${p.outOfStock ? ' out' : ''}">
       <a class="product-media" href="${window.U('product/' + p.slug + '/')}" aria-label="${p.name}">
         ${window.REAui.media(p, 'lyophilized')}
-        ${p.outOfStock ? '<span class="oos-badge">Out of stock</span>' : saleBadge(p)}
+        ${p.outOfStock ? `<span class="oos-badge">${window.T('Out of stock')}</span>` : saleBadge(p)}
       </a>
       <div class="product-info">
-        <span class="mono-tag">${p.tag}</span>
+        <span class="mono-tag">${window.T(p.tag)}</span>
         <h3><a href="${window.U('product/' + p.slug + '/')}">${p.name}</a></h3>
-        <span class="product-price">${p.mg} · ${p.outOfStock ? '<b>Out of stock</b>'
-          : `from <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
+        <span class="product-price">${p.mg} · ${p.outOfStock ? `<b>${window.T('Out of stock')}</b>`
+          : `${window.T('from')} <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
         <div class="product-cta">
           <a class="link" href="${window.U('product/' + p.slug + '/')}">${window.T('View product')} →</a>
           ${p.outOfStock ? '' : `<button class="add-btn" data-add="${p.slug}" aria-label="Add ${p.name} to cart">+</button>`}

@@ -129,7 +129,7 @@
 
         <!-- Buy -->
         <div class="pd-buy">
-          <span class="mono-tag">${p.tag}</span>
+          <span class="mono-tag">${T(p.tag)}</span>
           <h1>${p.name}</h1>
           <p class="pd-strength">${p.mg} ${T('per vial')}</p>
 

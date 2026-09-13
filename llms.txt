@@ -36,6 +36,7 @@ batch ships with its certificate of analysis (HPLC and mass spectrometry).
 - Pricing, machine-readable: https://codexresearchlab.com/pricing.md
 - Full reference: https://codexresearchlab.com/llms-full.txt
 - Catalog: https://codexresearchlab.com/catalog/
+- Spanish store, same catalog and prices: https://codexresearchlab.com/es/
 - Verify a batch: https://codexresearchlab.com/verify/
 - Shipping and refund policy: https://codexresearchlab.com/shipping/
 - Blog (peptide research topics): https://codexresearchlab.com/blog/

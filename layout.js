@@ -113,7 +113,6 @@
             <a href="${HOME}#proceso">${T('Our process')}</a>
             <a href="${HOME}#faq">${T('FAQ')}</a>
             <a href="blog/">${T('Blog')}</a>
-            <a href="creators/">${T('Creator program')}</a>
           </div>
           <div class="footer-col">
             <h4>${T('Legal')}</h4>

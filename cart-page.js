@@ -655,7 +655,7 @@
     const postalReq = cfg.code === 'US';
 
     // Validación: contacto + dirección obligatorios (dirección 2, notas y postal-fuera-de-US opcionales).
-    if (!s.lines.length) return setErr('Your cart is empty.');
+    if (!s.lines.length) return setErr(T('Your cart is empty.'));
     if (buyer.name.length < 2) return focusErr('coName', T('Please enter your full name.'));
     if (buyer.email.length > 120 || !EMAIL_RE.test(buyer.email)) return focusErr('coEmail', T('Please enter a valid email address.'));
     if (buyer.phone.replace(/\D/g, '').length < 6) return focusErr('coPhone', T('Please enter a valid phone number.'));
@@ -725,7 +725,7 @@
       const assetEl = document.getElementById('coAsset');
       const asset = (assetEl && assetEl.value) || 'USDC';
       const setBtn = (t) => { if (btn) { btn.disabled = true; btn.textContent = t; } };
-      const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = 'Pay with crypto'; } };
+      const restore = () => { placing = false; if (btn) { btn.disabled = false; btn.textContent = T('Pay with crypto'); } };
       let txHash = null;
 
       // Se guarda antes de abrir la wallet: si abandona en ese paso, el pedido
@@ -733,7 +733,7 @@
       saveOrder(s, id, cfg, 'Crypto ' + asset, 'pending');
 
       try {
-        setBtn('Preparing payment…');
+        setBtn(T('Preparing payment…'));
         const q = await cryptoApi({
           action: 'quote', country: cfg.code, coupon: coupon || '',
           items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
@@ -743,16 +743,16 @@
         // cliente, se detiene en vez de cobrar un importe distinto al mostrado.
         if (Math.abs(Number(q.amount) - s.total) > 0.01) throw new Error('price_mismatch');
 
-        setBtn('Opening wallet…');
+        setBtn(T('Opening wallet…'));
         await loadPaySdk();
 
-        setBtn('Confirm in your wallet…');
+        setBtn(T('Confirm in your wallet…'));
         const res = await window.REAPay.pay({ asset, amount: Number(q.amount), recipient: q.recipient });
         if (!res.success) throw new Error(res.error || 'cancelled');
         txHash = res.txHash;
 
-        setBtn('Verifying payment…');
-        const conf = await cryptoConfirm(q.intent_id, txHash, res.asset, (c) => setBtn('Confirming… ' + c + '/3'));
+        setBtn(T('Verifying payment…'));
+        const conf = await cryptoConfirm(q.intent_id, txHash, res.asset, (c) => setBtn(T('Confirming… {n}/3', { n: c })));
 
         if (typeof fbq === 'function') fbq('track', 'Purchase', { value: Number(conf.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
         if (typeof gtag === 'function') gtag('event', 'purchase', {
@@ -775,22 +775,23 @@
         restore();
         const code = String(err && err.message ? err.message : err);
         if (code === 'cancelled' || /reject|denied|cancel/i.test(code)) {
-          if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = 'Payment cancelled. Your cart is untouched.'; }
+          if (msg) { msg.className = 'co-msg'; msg.hidden = false; msg.textContent = T('Payment cancelled. Your cart is untouched.'); }
           return;
         }
         // Caso delicado: el dinero YA salió pero no pudimos cerrar la orden.
         // Nunca dejar al cliente sin comprobante: se le muestra el hash y un
         // canal directo para que no pierda ni el pago ni el pedido.
         if (txHash) {
-          const waMsg = 'Hi Codex Research, I paid order ' + id + ' with ' + asset +
-            ' but the site could not confirm it.\nTransaction: ' + txHash + '\nTotal: ' + money(s.total);
+          const waMsg = T('Hi Codex Research, I paid order {id} with {asset} but the site could not confirm it.',
+            { id: id, asset: asset }) + '\n' + T('Transaction') + ': ' + txHash + '\n' + T('Total') + ': ' + money(s.total);
           const link = document.createElement('a');
           link.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(waMsg);
-          link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'send us the receipt on WhatsApp';
+          link.target = '_blank'; link.rel = 'noopener'; link.textContent = T('send us the receipt on WhatsApp');
           if (msg) {
             msg.className = 'co-msg err'; msg.hidden = false; msg.textContent = '';
-            msg.append('Your payment went through, but we couldn’t confirm it automatically (' +
-              (CRYPTO_ERRORS[code] || code) + ') Transaction ' + txHash + '. Please ', link, ' and we’ll release your order.');
+            msg.append(T('Your payment went through, but we couldn’t confirm it automatically') + ' (' +
+              (CRYPTO_ERRORS[code] || code) + ') ' + T('Transaction') + ' ' + txHash + '. ' + T('Please') + ' ',
+              link, ' ' + T('and we’ll release your order.'));
           }
           return;
         }
@@ -848,8 +849,8 @@
     if (!b.ok) {
       // El dinero puede estar cobrado aunque esta consulta falle: nunca se le
       // dice al cliente que no pagó, se le da un canal directo.
-      const waMsg = 'Hi Codex Research, I paid order ' + (b.order_id || pending.id || '') +
-        ' by card but the site could not confirm it.';
+      const waMsg = T('Hi Codex Research, I paid order {id} by card but the site could not confirm it.',
+        { id: (b.order_id || pending.id || '') });
       root.innerHTML = `
         <div class="order-success">
           <h2>${T('We’re still confirming your payment')}</h2>
