@@ -82,6 +82,7 @@
             <a href="/#proceso">Our process</a>
             <a href="/#faq">FAQ</a>
             <a href="blog/">Blog</a>
+            <a href="creators/">Creator program</a>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>

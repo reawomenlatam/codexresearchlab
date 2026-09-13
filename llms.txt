@@ -33,6 +33,8 @@ batch ships with its certificate of analysis (HPLC and mass spectrometry).
 
 ## Key pages
 
+- Pricing, machine-readable: https://codexresearchlab.com/pricing.md
+- Full reference: https://codexresearchlab.com/llms-full.txt
 - Catalog: https://codexresearchlab.com/catalog/
 - Verify a batch: https://codexresearchlab.com/verify/
 - Reconstitution calculator: https://codexresearchlab.com/calculator/

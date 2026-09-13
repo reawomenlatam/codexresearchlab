@@ -1,0 +1,274 @@
+# Codex Research — full reference
+
+> Codex Research (codexresearchlab.com) supplies laboratory-grade research peptides,
+> batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
+> Same-day delivery in Panama City (1-2 hours) and discreet shipping across Panama and
+> the United States, with human support on WhatsApp.
+
+Last updated: 2026-09-12. Machine-readable pricing: https://codexresearchlab.com/pricing.md
+
+All products are sold strictly for laboratory research and development. They are not for
+human or animal consumption and are not intended to diagnose, treat, cure or prevent any
+disease. Dosage and clinical questions are outside what this catalog documents.
+
+# Shipping and payment
+
+Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in neutral, discreet packaging.
+
+Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT, USDC, BTC). A specialist confirms the details on WhatsApp before you pay.
+
+# Catalog
+
+## GLP-2 (tirzepatide)
+
+- URL: https://codexresearchlab.com/product/tirzepatide/
+- Strength: 20 mg per vial
+- CAS number: 2023788-19-2
+- Molecular formula: C225H348N48O68
+- Molecular weight: 4813.45 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/156588324
+- Research areas: GIP signaling, GLP-1 signaling, Glucose regulation, Metabolism
+- Single vial: $190.00 USD
+- Pack · 3 vials: $524.40 USD
+
+A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
+
+**What is GLP-2?** A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
+
+**How much does GLP-2 cost?** Single vial: $190.00 USD. Pack · 3 vials: $524.40 USD. Prices are in USD.
+
+**Is GLP-2 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## GLP-3 (retatrutide)
+
+- URL: https://codexresearchlab.com/product/retatrutide/
+- Strength: 10 mg per vial
+- CAS number: 2381089-83-2
+- Molecular formula: C228H350N48O66
+- Molecular weight: 4894.58 g/mol
+- Research areas: GIP signaling, GLP-1 signaling, Glucagon signaling, Metabolism
+- Single vial: $150.00 USD
+- Pack · 3 vials: $414.00 USD
+
+A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
+
+**What is GLP-3?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+
+**How much does GLP-3 cost?** Single vial: $150.00 USD. Pack · 3 vials: $414.00 USD. Prices are in USD.
+
+**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## BPC-157
+
+- URL: https://codexresearchlab.com/product/bpc-157/
+- Strength: 10 mg per vial
+- CAS number: 137525-51-0
+- Molecular formula: C62H98N16O22
+- Molecular weight: 1419.53 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/9941957
+- Research areas: Tissue repair, Angiogenesis, Nitric oxide signaling, Gastrointestinal integrity
+- Single vial: $79.00 USD
+- Pack · 3 vials: $218.04 USD
+
+BPC-157 is a pentadecapeptide derived from a protective protein found in gastric juice. In research settings it has been studied for its interaction with signaling pathways associated with tissue repair and angiogenesis.
+
+**What is BPC-157?** BPC-157 is a pentadecapeptide derived from a protective protein found in gastric juice. In research settings it has been studied for its interaction with signaling pathways associated with tissue repair and angiogenesis. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+
+**How much does BPC-157 cost?** Single vial: $79.00 USD. Pack · 3 vials: $218.04 USD. Prices are in USD.
+
+**Is BPC-157 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## MOTS-c
+
+- URL: https://codexresearchlab.com/product/mots-c/
+- Strength: 10 mg per vial
+- CAS number: 1627580-64-6
+- Molecular formula: C101H152N28O22S2
+- Molecular weight: 2174.6 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/85718457
+- Research areas: Metabolic homeostasis, Mitochondrial function, Cell signaling
+- Single vial: $85.00 USD
+- Pack · 3 vials: $234.60 USD
+
+MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeostasis and cell signaling.
+
+**What is MOTS-c?** MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeostasis and cell signaling. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+
+**How much does MOTS-c cost?** Single vial: $85.00 USD. Pack · 3 vials: $234.60 USD. Prices are in USD.
+
+**Is MOTS-c tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## Ipamorelin
+
+- URL: https://codexresearchlab.com/product/ipamorelin/
+- Strength: 10 mg per vial
+- CAS number: 170851-70-4
+- Molecular formula: C38H49N9O5
+- Molecular weight: 711.86 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/9831659
+- Research areas: GH secretagogues, Ghrelin receptor, Endocrine regulation
+- Single vial: $135.00 USD
+- Pack · 3 vials: $372.60 USD
+
+Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation.
+
+**What is Ipamorelin?** Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist studied in models of growth hormone regulation. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+
+**How much does Ipamorelin cost?** Single vial: $135.00 USD. Pack · 3 vials: $372.60 USD. Prices are in USD.
+
+**Is Ipamorelin tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## GHK-Cu
+
+- URL: https://codexresearchlab.com/product/ghk-cu/
+- Strength: 100 mg per vial
+- CAS number: 89030-95-5
+- Molecular formula: C14H24CuN6O4
+- Molecular weight: 403.9 g/mol
+- Research areas: Tissue remodeling, Collagen synthesis, Wound repair, Skin biology
+- Single vial: $95.00 USD
+- Pack · 3 vials: $262.20 USD
+
+GHK-Cu (copper tripeptide-1, Gly-His-Lys-copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair.
+
+**What is GHK-Cu?** GHK-Cu (copper tripeptide-1, Gly-His-Lys-copper) is a naturally occurring copper-binding peptide studied in models of tissue remodeling, collagen synthesis and wound repair. It is supplied as a lyophilized 100 mg vial for laboratory research use only.
+
+**How much does GHK-Cu cost?** Single vial: $95.00 USD. Pack · 3 vials: $262.20 USD. Prices are in USD.
+
+**Is GHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## PT-141
+
+- URL: https://codexresearchlab.com/product/pt-141/
+- Strength: 10 mg per vial
+- CAS number: 189691-06-3
+- Molecular formula: C50H68N14O10
+- Molecular weight: 1025.16 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/9941379
+- Research areas: Melanocortin signaling, Receptor binding, Neurobehavioral models
+- Single vial: $85.00 USD
+- Pack · 3 vials: $234.60 USD
+
+PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of receptor signaling and neurobehavioral pathways.
+
+**What is PT-141?** PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of receptor signaling and neurobehavioral pathways. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+
+**How much does PT-141 cost?** Single vial: $85.00 USD. Pack · 3 vials: $234.60 USD. Prices are in USD.
+
+**Is PT-141 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## NAD+
+
+- URL: https://codexresearchlab.com/product/nad-plus/
+- Strength: 1000 mg per vial
+- CAS number: 53-84-9
+- Molecular formula: C21H27N7O14P2
+- Molecular weight: 663.43 g/mol
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/5892
+- Research areas: Cellular metabolism, Mitochondrial function, Sirtuin signaling
+- Single vial: $130.00 USD
+- Pack · 3 vials: $358.80 USD
+
+NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme studied in models of cellular metabolism, mitochondrial function and sirtuin signaling.
+
+**What is NAD+?** NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme studied in models of cellular metabolism, mitochondrial function and sirtuin signaling. It is supplied as a lyophilized 1000 mg vial for laboratory research use only.
+
+**How much does NAD+ cost?** Single vial: $130.00 USD. Pack · 3 vials: $358.80 USD. Prices are in USD.
+
+**Is NAD+ tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## AHK-Cu
+
+- URL: https://codexresearchlab.com/product/ahk-cu/
+- Strength: 50 mg per vial
+- CAS number: 682809-81-0
+- Molecular formula: N/A
+- Molecular weight: N/A
+- Research areas: Dermal proliferation, Collagen deposition, Hair follicle biology, Tissue repair
+- Single vial: $120.00 USD
+
+AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology.
+
+**What is AHK-Cu?** AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide studied in models of dermal cell proliferation, collagen deposition and hair follicle biology. It is supplied as a lyophilized 50 mg vial for laboratory research use only.
+
+**How much does AHK-Cu cost?** Single vial: $120.00 USD. Prices are in USD.
+
+**Is AHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## Bacteriostatic Water
+
+- URL: https://codexresearchlab.com/product/bac-water/
+- Strength: 3 ml per vial
+- CAS number: N/A
+- Molecular formula: Water + 0.9% benzyl alcohol
+- Molecular weight: N/A
+- Research areas: Sterile diluent, 0.9% benzyl alcohol, Multi-dose reconstitution
+- Single vial: $10.00 USD
+- Pack · 3 vials: $27.60 USD
+
+Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique.
+
+**What is Bacteriostatic Water?** Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. It is supplied as a lyophilized 3 ml vial for laboratory research use only.
+
+**How much does Bacteriostatic Water cost?** Single vial: $10.00 USD. Pack · 3 vials: $27.60 USD. Prices are in USD.
+
+**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+## Bacteriostatic Water
+
+- URL: https://codexresearchlab.com/product/bac-water-10ml/
+- Strength: 10 ml per vial
+- CAS number: N/A
+- Molecular formula: Water + 0.9% benzyl alcohol
+- Molecular weight: N/A
+- Research areas: Sterile diluent, 0.9% benzyl alcohol, Multi-dose reconstitution
+- Single vial: $17.00 USD
+- Pack · 3 vials: $46.92 USD
+
+Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. This 10 ml presentation is a larger multi-dose bottle.
+
+**What is Bacteriostatic Water?** Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. This 10 ml presentation is a larger multi-dose bottle. It is supplied as a lyophilized 10 ml vial for laboratory research use only.
+
+**How much does Bacteriostatic Water cost?** Single vial: $17.00 USD. Pack · 3 vials: $46.92 USD. Prices are in USD.
+
+**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+
+# General questions
+
+### Are your products verified?
+
+Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.
+
+### Where do you ship from and how long does it take?
+
+Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in neutral packaging.
+
+### Are these products for human consumption?
+
+No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.
+
+### Do you ship internationally?
+
+Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.
+
+### What payment methods do you accept?
+
+Panamá: Yappy, ACH transfer or cash on delivery. United States: Zelle or crypto (USDT · USDC · BTC). Your specialist confirms the details on WhatsApp before you pay.
+
+### How should I store the products?
+
+Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions.
+
+# Key pages
+
+- Catalog: https://codexresearchlab.com/catalog/
+- Pricing (plain text): https://codexresearchlab.com/pricing.md
+- Verify a batch: https://codexresearchlab.com/verify/
+- Reconstitution calculator: https://codexresearchlab.com/calculator/
+- Shipping and refund policy: https://codexresearchlab.com/shipping/
+- Blog: https://codexresearchlab.com/blog/
+
+# Contact
+
+- WhatsApp: +507 6335-4625
+- Email: sales@codexresearchlab.com

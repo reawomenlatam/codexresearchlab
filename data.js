@@ -232,4 +232,38 @@ const BATCHES = {
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
 };
 
-window.REA = { PRODUCTS, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS };
+/* Envío y pagos: un solo origen para el FAQ de producto, pricing.md y llms-full.txt. */
+const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities ' +
+  '(David, Chitre, Colon and more): next business day via Fergunson transport. United States: ' +
+  '$20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). ' +
+  'Always in neutral, discreet packaging.';
+const PAYMENT_LINE = 'Panama: Yappy, ACH transfer or cash on delivery. United States: Zelle or ' +
+  'crypto (USDT, USDC, BTC). A specialist confirms the details on WhatsApp before you pay.';
+
+/* FAQ por producto, derivado del propio producto: build-seo.js lo hornea en el HTML
+   y en el JSON-LD, y product.js lo pinta al hidratar. Vive aquí para que las dos
+   versiones digan lo mismo — un FAQPage que declara preguntas que la página no
+   muestra es justo lo que Google penaliza (ya pasó con el FAQ de la portada).
+   Solo datos de tienda y de ficha: nada clínico ni de dosis. */
+function productFaq(p) {
+  const list = p.sizes.map((z) => `${z.label}: $${z.price.toFixed(2)} USD`).join('. ');
+  return [
+    { q: `What is ${p.name}?`,
+      a: `${p.overview} It is supplied as a lyophilized ${p.mg} vial for laboratory research use only.` },
+    { q: `How much does ${p.name} cost?`,
+      a: `${list}. Prices are in USD${p.outOfStock ? '. This presentation is currently out of stock' : ''}.` },
+    { q: `Is ${p.name} tested, and do you provide a certificate of analysis?`,
+      a: 'Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of ' +
+         'analysis for your batch is shared on WhatsApp before payment, and any vial\'s batch number ' +
+         'can be checked at https://codexresearchlab.com/verify/.' },
+    { q: `How is ${p.name} shipped and how long does delivery take?`, a: SHIPPING_LINE },
+    { q: `How should ${p.name} be stored?`,
+      a: 'Lyophilized vials are kept cool and protected from light. Once reconstituted they are kept ' +
+         'refrigerated at 2-8 degrees Celsius. Every vial label shows its storage conditions.' },
+    { q: `Is ${p.name} intended for human use?`,
+      a: `No. ${p.name} is sold strictly for laboratory research and development. It is not for human ` +
+         'or animal consumption and is not intended to diagnose, treat, cure or prevent any disease.' },
+  ];
+}
+
+window.REA = { PRODUCTS, FAQS, TESTIMONIALS, COUNTRIES, COUPONS, BATCHES, SALE, WHATSAPP: '50763354625', EMAILJS, productFaq, SHIPPING_LINE, PAYMENT_LINE };

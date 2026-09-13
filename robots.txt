@@ -7,4 +7,31 @@ Allow: /
 # indexada sin contenido, que es justo lo que reportó Search Console con
 # www.codexresearchlab.com.
 
+# Rastreadores de IA: se permiten a propósito. Bloquearlos no evita que la
+# tienda aparezca en respuestas generadas, evita que puedan citarla. CCBot
+# (Common Crawl) es sólo entrenamiento, sin cita, y por eso queda fuera.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://codexresearchlab.com/sitemap.xml

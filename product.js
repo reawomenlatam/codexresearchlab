@@ -1,6 +1,6 @@
 /* REA Store - detalle de producto. Lee ?slug= y arma la ficha. */
 (function () {
-  const { PRODUCTS, FAQS } = window.REA;
+  const { PRODUCTS } = window.REA;
   const ui = window.REAui;
 
   // Slug: página estática (data-slug) o fallback /product.html?slug= (shim)
@@ -328,6 +328,8 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCoa(); });
 
   // FAQ + relacionados
-  ui.faqAccordion(document.getElementById('pdFaq'), FAQS.slice(0, 5));
+  // El mismo FAQ que build-seo.js hornea en el HTML y en el JSON-LD FAQPage:
+  // si aquí se pintara otro, el schema declararía preguntas que nadie ve.
+  ui.faqAccordion(document.getElementById('pdFaq'), window.REA.productFaq(p));
   ui.wireAddButtons(document.getElementById('pdRelated'));
 })();
