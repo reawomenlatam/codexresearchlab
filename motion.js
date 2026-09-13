@@ -52,9 +52,12 @@
           if (!e.isIntersecting) return;
           io.disconnect(); el.dataset.counted = 1;
           const dur = 950, t0 = performance.now();
+          // Arranca cerca del objetivo, no en cero: son cifras de confianza y
+          // durante la animación se leían solas ("2% batches with COA").
+          const from = el.dataset.from !== undefined ? parseFloat(el.dataset.from) : target * 0.6;
           function tick(t) {
             const p = Math.min(1, (t - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = fmt(target * eased);
+            el.textContent = fmt(from + (target - from) * eased);
             if (p < 1) requestAnimationFrame(tick);
           }
           requestAnimationFrame(tick);

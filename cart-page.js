@@ -267,10 +267,10 @@
           ${checkoutForm(s, cfg, payId)}
 
           <ul class="sum-trust">
-            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <b>Pay on delivery available</b>, pay when you receive</li>` : ''}
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Secure & private</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Discreet packaging</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Batch-verified with COA</li>
+            ${cfg.code === 'PA' ? `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span><b>Pay on delivery available</b>, pay when you receive</span></li>` : ''}
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Secure & private</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>Discreet packaging</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>Batch-verified with COA</span></li>
           </ul>
         </div>
 
@@ -284,15 +284,51 @@
       </aside>`;
   }
 
-  function crossSell() {
+  // Recomendaciones del carrito. Antes eran los primeros 4 del catálogo (péptidos
+  // de $150-190 junto a un carrito de $79). Ahora manda lo que de verdad completa
+  // el pedido: el agua para reconstituir y lo que cierra el envío gratis.
+  const isWater = (p) => p.slug.indexOf('bac-water') === 0;
+
+  function recommendations(s) {
     const inCart = new Set(cart.items().map((i) => i.slug));
-    const recs = PRODUCTS.filter((p) => !inCart.has(p.slug)).slice(0, 4);
+    const ship = country().shipping;
+    const gap = Math.max(0, ship.freeThreshold - s.subtotal);
+    const hasPeptide = [...inCart].some((sl) => sl.indexOf('bac-water') !== 0);
+    const hasWater = [...inCart].some((sl) => sl.indexOf('bac-water') === 0);
+    const pool = PRODUCTS.filter((p) => !inCart.has(p.slug) && !p.outOfStock);
+    const recs = [];
+    const push = (p) => { if (p && recs.indexOf(p) < 0 && recs.length < 4) recs.push(p); };
+
+    // 1. Sin agua no se puede reconstituir nada: va primero.
+    if (hasPeptide && !hasWater) {
+      const waters = pool.filter(isWater).sort((a, b) => a.from - b.from);
+      push(gap > 0 ? (waters.find((p) => p.from >= gap) || waters[waters.length - 1]) : waters[0]);
+    }
+    // 2. Lo que mejor cierra el envío gratis: lo más cercano al faltante, con
+    //    preferencia por lo que lo cubre entero (quedarse corto no lo desbloquea).
+    if (gap > 0) {
+      pool.slice()
+        .sort((a, b) => {
+          const d = (p) => (p.from >= gap ? p.from - gap : (gap - p.from) * 1.3);
+          return d(a) - d(b);
+        })
+        .slice(0, 2).forEach(push);
+    }
+    // 3. Se rellena con el resto del catálogo.
+    pool.forEach(push);
+    return { recs, gap };
+  }
+
+  function crossSell(s) {
+    const { recs, gap } = recommendations(s);
     if (!recs.length) return '';
+    const head = gap > 0
+      ? `<h2>Add ${money(gap)} more, shipping is on us</h2><p>These complete your order and unlock free shipping.</p>`
+      : '<h2>Complete your order</h2><p>Frequently added together. Verified and ready to ship.</p>';
     return `
       <section class="cross-sell">
         <div class="section-head" style="margin-bottom:1.4rem;">
-          <h2>Complete your order</h2>
-          <p>Frequently added together. Verified and ready to ship.</p>
+          ${head}
         </div>
         <div class="products-grid" id="crossSellGrid">
           ${recs.map(ui.productCard).join('')}
@@ -343,7 +379,7 @@
           </div>
           ${summary(s)}
         </div>
-        ${crossSell()}
+        ${crossSell(s)}
         ${socialProof}
         <div class="cart-sticky" id="cartSticky" hidden>
           <div class="cart-sticky-total"><span>Total</span><b>${money(s.total)}</b></div>

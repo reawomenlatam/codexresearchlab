@@ -1,4 +1,4 @@
-/* REA Store - layout compartido: header, footer y age gate.
+/* REA Store - layout compartido: header, footer y barra de aviso.
    Cada página monta esto con <div data-header></div> / <div data-footer></div>.
    `active` se marca con <body data-nav="productos"> etc. */
 (function () {
@@ -104,35 +104,20 @@
       </div>
     </footer>`;
 
-  // El bisel exterior (.gate-shell) envuelve a .gate-card a propósito: el JS de
-  // "no tengo la edad" reemplaza el innerHTML de .gate-card, así que cualquier
-  // envoltorio que viviera dentro se perdería en ese momento.
-  const gateHTML = `
-    <div class="gate-overlay" id="gateOverlay" hidden>
-      <canvas class="gate-bg" id="gateBg" aria-hidden="true"></canvas>
-      <div class="gate-shell">
-        <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
-          <h2 class="gate-q" id="gateTitle">Where are you shopping from?</h2>
-          <p class="gate-lede">Shipping cost and delivery time depend on where we send it.</p>
-          <div class="gate-countries">
-            ${Object.values(window.REA.COUNTRIES).map((c, i) => `
-              <button class="gate-country" data-country="${c.code}" style="--i:${i}">
-                <span class="gc-flag">${c.flag}</span>
-                <span class="gc-text">
-                  <b>${c.label}</b>
-                  <small>$${c.shipping.flat} shipping · ${c.etaShort}</small>
-                </span>
-                <span class="gc-go" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="none"><path d="M6 3.5 10.5 8 6 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-              </button>`).join('')}
-          </div>
-          <p class="gate-confirm">
-            By selecting your country and entering, you confirm you are of legal age in your
-            jurisdiction and agree to our <a href="terms/">Terms of Service</a>.
-          </p>
-          <button class="gate-under" id="gateNo">I'm not of legal age</button>
+  // Aviso de entrega + uso (no bloquea). Antes esto era un modal que tapaba la
+  // tienda hasta elegir país: el país ahora se detecta solo (country.js) y este
+  // aviso solo confirma a dónde enviamos y deja cambiarlo.
+  const noticeHTML = `
+    <div class="site-notice" id="siteNotice" hidden>
+      <div class="site-notice-card">
+        <div class="sn-row">
+          <p class="sn-ship" id="snShip"></p>
+          <button class="sn-ok" id="snOk">Got it</button>
         </div>
+        <p class="sn-legal">
+          Research use only \u00b7 by continuing you confirm you are of legal age \u00b7
+          <a href="terms/">Terms</a>
+        </p>
       </div>
     </div>`;
 
@@ -165,128 +150,58 @@
     }
   }
   mount('[data-footer]', footerHTML);
-  document.body.insertAdjacentHTML('beforeend', gateHTML);
+  document.body.insertAdjacentHTML('beforeend', noticeHTML);
 
-  // Fondo animado del pop-up: red molecular (partículas + enlaces), estilo mantenimiento.
-  // Devuelve una función para detenerlo. Solo corre mientras el gate está visible.
-  function startGateBg() {
-    const canvas = document.getElementById('gateBg');
-    if (!canvas) return function () {};
-    const ctx = canvas.getContext('2d');
-    let w, h, dpr, particles = [], raf = 0;
-    const mouse = { x: -9999, y: -9999 };
-    function size() {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.width = innerWidth * dpr;
-      h = canvas.height = innerHeight * dpr;
-      canvas.style.width = innerWidth + 'px';
-      canvas.style.height = innerHeight + 'px';
-      const count = Math.min(90, Math.floor((innerWidth * innerHeight) / 16000));
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * w, y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.26 * dpr,
-          vy: (Math.random() - 0.5) * 0.26 * dpr,
-          r: (Math.random() * 1.5 + 0.6) * dpr,
-        });
-      }
-    }
-    const LINK = 130;
-    function render() {
-      ctx.clearRect(0, 0, w, h);
-      const link = LINK * dpr;
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
-        for (let j = i + 1; j < particles.length; j++) {
-          const q = particles[j];
-          const dx = p.x - q.x, dy = p.y - q.y;
-          const d = Math.hypot(dx, dy);
-          if (d < link) {
-            const a = (1 - d / link) * 0.16;
-            ctx.strokeStyle = 'rgba(200,208,222,' + a + ')';
-            ctx.lineWidth = dpr * 0.6;
-            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-          }
-        }
-        const mdx = p.x - mouse.x, mdy = p.y - mouse.y;
-        const md = Math.hypot(mdx, mdy);
-        if (md < link * 1.4) {
-          const a = (1 - md / (link * 1.4)) * 0.28;
-          ctx.strokeStyle = 'rgba(230,178,94,' + a + ')';
-          ctx.lineWidth = dpr * 0.7;
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-        }
-        ctx.fillStyle = 'rgba(226,231,240,.7)';
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
-      }
-    }
-    function frame() { render(); raf = requestAnimationFrame(frame); }
-    const onMove = (e) => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; };
-    const onLeave = () => { mouse.x = mouse.y = -9999; };
-    addEventListener('resize', size);
-    addEventListener('mousemove', onMove);
-    addEventListener('mouseleave', onLeave);
-    size();
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) render(); else frame();
-    return function stop() {
-      if (raf) cancelAnimationFrame(raf);
-      removeEventListener('resize', size);
-      removeEventListener('mousemove', onMove);
-      removeEventListener('mouseleave', onLeave);
-    };
+  // ---------- Barra de aviso (una vez por visitante) ----------
+  const notice = document.getElementById('siteNotice');
+  const NOTICE_KEY = 'rea-notice-v1';
+  function noticeShipLine() {
+    const cfg = window.REACountry.config();
+    return `${cfg.flag} Shipping to <b>${cfg.label}</b> \u00b7 $${cfg.shipping.flat} \u00b7 ${cfg.etaShort}. ` +
+      `<button type="button" class="sn-change" id="snChange">Not your country?</button>`;
   }
+  function closeNotice() {
+    if (!notice || notice.hidden) return;
+    notice.classList.remove('show');
+    notice.hidden = true;
+    try { localStorage.setItem(NOTICE_KEY, '1'); } catch (e) { /* modo privado */ }
+    window.removeEventListener('scroll', onNoticeScroll);
+  }
+  // Un scroll largo ya es señal de que el visitante siguió adelante; además
+  // evita que la barra choque con las barras fijas de producto y carrito.
+  function onNoticeScroll() { if (window.scrollY > 400) closeNotice(); }
 
-  // Age gate + selección de país (una vez por sesión; elegir país confirma la edad)
-  const gate = document.getElementById('gateOverlay');
-  let stopGateBg = function () {};
-  // Mientras el overlay está abierto el foco debe quedarse dentro: sin esto se
-  // tabula al contenido de fondo, que está tapado y no se puede usar.
-  function trapFocus(e) {
-    if (gate.hidden || e.key !== 'Tab') return;
-    const f = [...gate.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')]
-      .filter((el) => !el.disabled && el.offsetParent !== null);
-    if (!f.length) return;
-    const first = f[0], last = f[f.length - 1];
-    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  if (notice) {
+    let seen = false;
+    try { seen = !!localStorage.getItem(NOTICE_KEY); } catch (e) { seen = false; }
+    if (!seen) {
+      const ship = document.getElementById('snShip');
+      const paint = () => { if (ship) ship.innerHTML = noticeShipLine(); };
+      paint();
+      window.addEventListener('rea-country-change', paint);
+      notice.hidden = false;
+      requestAnimationFrame(() => notice.classList.add('show'));
+      // En ficha y carrito hay una barra fija abajo con el botón de compra:
+      // el aviso se sube para no taparla. Esas barras las pintan product.js y
+      // cart-page.js después de este script, de ahí la espera.
+      setTimeout(() => {
+        if (!notice.hidden && document.querySelector('.pd-sticky, .cart-sticky')) {
+          notice.classList.add('sn-raised');
+        }
+      }, 400);
+      window.addEventListener('scroll', onNoticeScroll, { passive: true });
+      notice.addEventListener('click', (e) => {
+        if (e.target.closest('#snOk')) closeNotice();
+        if (e.target.closest('#snChange')) {
+          closeNotice();
+          const c = document.getElementById('countryChip');
+          // En el mismo tick, este click seguiría burbujeando hasta el document,
+          // cuyo handler cierra el menú que acabamos de abrir.
+          if (c) setTimeout(() => c.click(), 0);
+        }
+      });
+    }
   }
-  if (!sessionStorage.getItem('rea-gate-ok')) {
-    gate.hidden = false;
-    document.body.style.overflow = 'hidden';
-    stopGateBg = startGateBg();
-    document.addEventListener('keydown', trapFocus);
-    // El foco arranca en el diálogo, no en el <body> detrás del overlay.
-    const firstBtn = gate.querySelector('.gate-country');
-    if (firstBtn) setTimeout(() => firstBtn.focus(), 60);
-  }
-  gate.querySelectorAll('.gate-country').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      window.REACountry.set(btn.getAttribute('data-country'));
-      sessionStorage.setItem('rea-gate-ok', '1');
-      gate.hidden = true;
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', trapFocus);
-      stopGateBg();
-    });
-  });
-  document.getElementById('gateNo').addEventListener('click', () => {
-    // Salida cordial en lugar de redirigir de golpe
-    gate.querySelector('.gate-card').innerHTML = `
-      <h2>Thanks for visiting</h2>
-      <p>This catalog is for laboratory research only and requires you to be of legal age in
-      your jurisdiction. If you reached this page by mistake, you can close this tab.
-      Changed your mind?</p>
-      <div class="gate-actions">
-        <button class="btn btn-primary" id="gateBack">Yes, I'm of legal age</button>
-        <a class="btn btn-ghost" href="https://www.google.com">Leave site</a>
-      </div>`;
-    document.getElementById('gateBack').addEventListener('click', () => location.reload());
-  });
 
   // ---------- Selector de país (header) ----------
   const chip = document.getElementById('countryChip');

@@ -505,149 +505,51 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .footer-legal p { color: rgba(255,255,255,.55); /* .4 daba 3.67:1 sobre --ink; .55 = 5.58:1 (WCAG AA) */ font-size: .76rem; margin-top: .6rem; line-height: 1.6; }
 .footer-legal .copy { color: rgba(255,255,255,.6); font-size: .82rem; }
 
-/* ---------- Age gate ---------- */
-.gate-overlay {
-  position: fixed; inset: 0; z-index: 100;
-  background:
-    radial-gradient(60% 55% at 50% 42%, rgba(120, 130, 150, .16), transparent 70%),
-    rgba(16, 18, 24, .66);
-  backdrop-filter: blur(14px);
-  display: grid; place-items: center;
-  padding: 1.5rem;
-  overflow: hidden;
+/* ---------- Barra de aviso (país + uso) ---------- */
+/* Reemplaza al modal de edad: informa sin tapar la tienda. Se descarta con
+   "Got it" o con el primer scroll largo, y no vuelve (localStorage). */
+.site-notice {
+  position: fixed; z-index: 61;
+  left: 1rem; right: 1rem; bottom: 1rem;
+  display: flex; justify-content: center;
+  pointer-events: none;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity .28s ease, transform .28s ease;
 }
-.gate-overlay[hidden] { display: none; }
-.gate-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
-/* ===================== Selección de país (gate) =====================
-   Arquitectura de doble bisel: una bandeja translúcida (.gate-shell) que
-   sostiene un núcleo opaco (.gate-card), con radios CONCÉNTRICOS — el radio
-   interior es el exterior menos el padding, que es lo que hace que las curvas
-   se vean paralelas en vez de encajadas a la fuerza.
-   Sólo se rediseñó esta tarjeta; el velo de fondo y el resto del sitio no cambian. */
-
-/* Curva de resorte: sale rápido y asienta despacio, sin rebote. */
-:root { --ease-spring: cubic-bezier(0.32, 0.72, 0, 1); }
-
-.gate-shell {
-  position: relative; z-index: 1;
-  width: min(31rem, 100%);
-  padding: 8px;                                  /* el "marco" del bisel */
-  border-radius: 30px;
-  background: rgba(255, 255, 255, .5);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  /* Hairlines en vez de bordes grises: un filo claro arriba y una sombra
-     ambiental muy difusa, nunca una caja dura. */
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, .55),
-    0 0 0 1px rgba(20, 22, 28, .05),
-    0 2px 6px rgba(20, 22, 28, .04),
-    0 18px 40px -12px rgba(20, 22, 28, .16),
-    0 48px 80px -32px rgba(20, 22, 28, .28);
-  animation: gate-in .62s var(--ease-spring) both;
+.site-notice.show { opacity: 1; transform: translateY(0); }
+/* Ficha y carrito tienen barra fija de compra abajo: el aviso se sube. */
+.site-notice.sn-raised { bottom: 5.6rem; }
+.site-notice[hidden] { display: none; }
+.site-notice-card {
+  pointer-events: auto;
+  width: 100%; max-width: 560px;
+  display: grid; gap: .35rem;
+  padding: .8rem .9rem;
+  padding-bottom: max(.95rem, env(safe-area-inset-bottom));
+  border: 1px solid var(--border); border-radius: 16px;
+  /* Fondo sólido a propósito: el vidrio de las otras barras deja leer el
+     contenido de atrás y aquí se cruzaba con los botones del hero. */
+  background: var(--card);
+  box-shadow: 0 -1px 0 rgba(20,22,28,.05), 0 14px 40px rgba(29,32,38,.18);
 }
-
-.gate-card {
-  border-radius: 22px;                           /* 30 - 8 = concéntrico */
-  background: linear-gradient(180deg, #fff 0%, #fcfcfd 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .9),
-    0 0 0 1px rgba(20, 22, 28, .055);
-  padding: 2.1rem 2.1rem 1.5rem;
-  text-align: left;
+.sn-row { display: flex; align-items: center; gap: .9rem; justify-content: space-between; }
+.sn-ship { font-size: .88rem; color: var(--ink); line-height: 1.4; }
+.sn-legal { font-size: .72rem; color: var(--muted); line-height: 1.45; }
+.sn-legal a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+.sn-change {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: var(--muted); text-decoration: underline; text-underline-offset: 2px;
 }
-
-.gate-card h2.gate-q {
-  margin: 0;
-  font-size: 1.5rem; font-weight: 600;
-  letter-spacing: -.032em; line-height: 1.18;
-  color: var(--ink);
+.sn-change:hover { color: var(--ink); }
+.sn-ok {
+  flex: none; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--ink); color: #fff;
+  padding: .45rem 1.1rem; font: inherit; font-weight: 700; font-size: .82rem;
+  transition: opacity .15s;
 }
-.gate-lede { margin: .5rem 0 1.4rem; color: var(--muted); font-size: .92rem; line-height: 1.5; }
-
-.gate-countries { display: grid; gap: .6rem; }
-
-.gate-country {
-  display: flex; align-items: center; gap: .95rem;
-  width: 100%; text-align: left;
-  padding: .95rem 1rem;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .9),
-    0 0 0 1px rgba(20, 22, 28, .07),
-    0 1px 2px rgba(20, 22, 28, .04);
-  /* Sólo transform y opacidad se animan: nada que dispare reflow. */
-  transition: box-shadow .35s var(--ease-spring), transform .35s var(--ease-spring);
-  animation: gate-row-in .55s var(--ease-spring) both;
-  animation-delay: calc(.16s + var(--i, 0) * .07s);
-}
-.gate-country:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .9),
-    0 0 0 1px rgba(20, 22, 28, .12),
-    0 6px 16px -4px rgba(20, 22, 28, .14);
-}
-.gate-country:active { transform: scale(.985); }        /* respuesta física al pulsar */
-.gate-country:focus-visible { outline: none; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
-
-.gc-flag { font-size: 1.45rem; line-height: 1; flex: none; }
-.gc-text { flex: 1; min-width: 0; }
-.gc-text b { display: block; font-size: .95rem; font-weight: 600; letter-spacing: -.012em; color: var(--ink); }
-.gc-text small { display: block; margin-top: 1px; color: var(--muted); font-size: .76rem; }
-
-/* Flecha anidada en su propio círculo, nunca suelta junto al texto. */
-.gc-go {
-  flex: none; width: 26px; height: 26px; border-radius: 999px;
-  display: grid; place-items: center;
-  background: rgba(20, 22, 28, .05);
-  color: var(--muted);
-  transition: background .35s var(--ease-spring), color .35s var(--ease-spring), transform .35s var(--ease-spring);
-}
-.gc-go svg { width: 14px; height: 14px; }
-.gate-country:hover .gc-go { background: var(--ink); color: #fff; transform: translateX(2px); }
-
-.gate-card p.gate-confirm {
-  margin: 1.3rem 0 0;
-  color: var(--muted); font-size: .74rem; line-height: 1.6;
-}
-.gate-confirm a { color: var(--ink); text-decoration: none; box-shadow: 0 1px 0 rgba(20,22,28,.25); }
-.gate-confirm a:hover { box-shadow: 0 1px 0 var(--ink); }
-
-.gate-under {
-  display: block; margin: 1.05rem auto 0;
-  padding: .3rem .1rem;
-  font-size: .8rem; color: var(--muted);
-  transition: color .3s var(--ease-spring);
-}
-.gate-under:hover { color: var(--ink); }
-
-/* Rama "no tengo la edad": el JS reemplaza el innerHTML de .gate-card, así que
-   se estiliza por etiqueta para que herede el mismo lenguaje. */
-.gate-card h2 { font-size: 1.4rem; font-weight: 600; letter-spacing: -.03em; color: var(--ink); }
-.gate-card > p { color: var(--muted); font-size: .92rem; line-height: 1.55; margin: .8rem 0 1.5rem; }
-.gate-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
-.gate-actions .btn { justify-content: center; }
-
-@keyframes gate-in {
-  from { opacity: 0; transform: translateY(14px) scale(.965); }
-  to   { opacity: 1; transform: translateY(0)    scale(1); }
-}
-@keyframes gate-row-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+.sn-ok:hover { opacity: .88; }
 @media (prefers-reduced-motion: reduce) {
-  .gate-shell, .gate-country { animation: none; }
-}
-@media (max-width: 560px) {
-  .gate-shell { padding: 6px; border-radius: 24px; }
-  .gate-card { padding: 1.6rem 1.35rem 1.25rem; border-radius: 18px; }
-  .gate-card h2.gate-q { font-size: 1.3rem; }
-  .gate-country { padding: .85rem .9rem; }
-  .gate-country b { display: inline; }
-  .gate-country small { margin-top: 3px; }
+  .site-notice { transition: none; }
 }
 
 /* Selector de país en el header */
@@ -844,6 +746,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .pd-opt-label { font-weight: 600; font-size: .88rem; color: var(--ink); }
 .pd-opt.active .pd-opt-label { color: var(--accent); }
 .pd-opt-price { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+.pd-opt-unit { font-size: .72rem; color: var(--muted); margin-top: .1rem; }
+.pd-price-note #pdPriceUnit:not(:empty)::after { content: ' · '; }
 .pd-opt-save { font-size: .66rem; font-weight: 700; color: #157048; /* #1f9d6b daba 3.11:1 sobre #e7f7f0; #157048 = 5.51:1 */ background: #e7f7f0; padding: .1rem .45rem; border-radius: 999px; margin-top: .2rem; }
 .pd-price-row { display: flex; align-items: center; margin: 1.6rem 0 1.2rem; }
 .pd-price { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; }
@@ -879,6 +783,12 @@ s.was, .pd-price-was {
 /* Fila de confianza bajo el botón de compra */
 .pd-trust { list-style: none; margin-top: 1.2rem; display: grid; gap: .7rem; }
 .pd-trust li { display: flex; align-items: center; gap: .7rem; font-size: .88rem; color: var(--ink); }
+/* Abrir el COA desde la propia línea de confianza: es donde nace la duda. */
+.pd-trust-link { background: none; border: 0; padding: 0; font: inherit; color: var(--ink);
+  text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.pd-trust-link:hover { color: var(--accent); }
+.pd-badge-btn { cursor: pointer; font-family: inherit; }
+.pd-badge-btn:hover { border-color: var(--ink); }
 .pd-trust svg { color: var(--accent); flex-shrink: 0; }
 
 /* Barra fija de compra (móvil) */
@@ -1135,6 +1045,9 @@ s.was, .pd-price-was {
 .sum-note { font-size: .78rem; color: var(--muted); text-align: center; margin-top: .7rem; }
 .sum-trust { list-style: none; margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--border); display: grid; gap: .55rem; }
 .sum-trust li { display: flex; align-items: center; gap: .6rem; font-size: .84rem; color: var(--ink); }
+/* El texto de cada línea va en un <span>: como <li> es flex, un <b> suelto
+   se volvía item propio y partía la frase ("Pay on delivery available , pay when..."). */
+.sum-trust li > span { min-width: 0; }
 .sum-trust svg { color: var(--accent); flex-shrink: 0; }
 
 .guarantee-card { display: flex; gap: .9rem; align-items: flex-start; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
@@ -1313,7 +1226,6 @@ s.was, .pd-price-was {
 }
 @media (max-width: 540px) {
   .products-grid, .catalog-grid, .blog-grid { grid-template-columns: 1fr; }
-  .gate-actions { grid-template-columns: 1fr; }
   /* En móvil, el header usa solo el isotipo (marca) */
   .header .logo .logo-full { display: none; }
   .header .logo .logo-icon { display: block; }

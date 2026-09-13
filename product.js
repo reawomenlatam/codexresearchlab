@@ -10,6 +10,12 @@
 
   const money = (n) => '$' + n.toFixed(2);
   const oos = !!p.outOfStock;
+  // Anclaje del pack: la referencia honesta es lo que costaría comprar esos
+  // mismos vials sueltos. Si hay rebaja general, manda su `list` (precio previo).
+  const packUnits = (label) => { const m = /(\d+)\s*vial/i.exec(label); return m ? parseInt(m[1], 10) : 1; };
+  const unitPrice = p.sizes[0].price;
+  const refList = (s) => (s.list != null ? s.list : (packUnits(s.label) > 1 ? unitPrice * packUnits(s.label) : null));
+  const perVial = (s) => (packUnits(s.label) > 1 ? money(s.price / packUnits(s.label)) + ' per vial' : '');
   const related = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 4);
 
   // Meta Pixel: evento ViewContent al ver la ficha de producto
@@ -106,7 +112,7 @@
           <div class="pd-badges">
             ${oos ? '<span class="pd-badge oos">Out of stock</span>' : ''}
             <span class="pd-badge"><span class="dot"></span> 99% purity (HPLC)</span>
-            <span class="pd-badge">📄 COA per batch</span>
+            <button type="button" class="pd-badge pd-badge-btn" data-coa>📄 COA per batch</button>
           </div>
         </div>
 
@@ -121,7 +127,8 @@
             <div class="pd-options pd-packs" id="pdSizes">
               ${p.sizes.map((s, i) => `<button class="pd-opt ${i === 0 ? 'active' : ''}" data-size="${s.label}" data-price="${s.price}">
                 <span class="pd-opt-label">${s.label}</span>
-                <span class="pd-opt-price">${money(s.price)}${s.list ? ` <s class="was">${money(s.list)}</s>` : ''}</span>
+                <span class="pd-opt-price">${money(s.price)}${refList(s) ? ` <s class="was">${money(refList(s))}</s>` : ''}</span>
+                ${perVial(s) ? `<span class="pd-opt-unit">${perVial(s)}</span>` : ''}
                 ${s.save ? `<span class="pd-opt-save">Save ${s.save}</span>` : ''}
               </button>`).join('')}
             </div>
@@ -139,8 +146,8 @@
           <div class="pd-price-row">
             <div>
               <span class="pd-price" id="pdPrice">${money(p.sizes[0].price)}</span>
-              <span class="pd-price-was" id="pdPriceWas">${p.sizes[0].list ? money(p.sizes[0].list) : ''}</span>
-              <span class="pd-price-note">One-time · ships today</span>
+              <span class="pd-price-was" id="pdPriceWas">${refList(p.sizes[0]) ? money(refList(p.sizes[0])) : ''}</span>
+              <span class="pd-price-note"><span id="pdPriceUnit">${perVial(p.sizes[0])}</span>One-time · ships today</span>
             </div>
           </div>
 
@@ -157,7 +164,8 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Batch-verified with third-party COA
+              <span>Batch-verified with third-party COA \u00b7
+                <button type="button" class="pd-trust-link" data-coa>see an example</button></span>
             </li>
           </ul>
 
@@ -267,12 +275,15 @@
 
   const stickyPriceEl = document.getElementById('pdStickyPrice');
   const priceWasEl = document.getElementById('pdPriceWas');
+  const priceUnitEl = document.getElementById('pdPriceUnit');
   function refreshPrice() {
     const total = money(selectedSize.price * qty);
     priceEl.textContent = total;
     stickyPriceEl.textContent = total;
     // Precio de lista tachado: también se multiplica por la cantidad.
-    if (priceWasEl) priceWasEl.textContent = selectedSize.list ? money(selectedSize.list * qty) : '';
+    const ref = refList(selectedSize);
+    if (priceWasEl) priceWasEl.textContent = ref ? money(ref * qty) : '';
+    if (priceUnitEl) priceUnitEl.textContent = perVial(selectedSize);
     priceEl.classList.remove('bump'); void priceEl.offsetWidth; priceEl.classList.add('bump');
   }
 
@@ -323,6 +334,8 @@
   const openCoa = () => { coaModal.hidden = false; coaBackdrop.hidden = false; document.body.style.overflow = 'hidden'; };
   const closeCoa = () => { coaModal.hidden = true; coaBackdrop.hidden = true; document.body.style.overflow = ''; };
   document.getElementById('pdCoa').addEventListener('click', openCoa);
+  // Otros disparadores del mismo modal (badge de la galería, línea de confianza).
+  document.addEventListener('click', (e) => { if (e.target.closest('[data-coa]')) openCoa(); });
   document.getElementById('coaClose').addEventListener('click', closeCoa);
   coaBackdrop.addEventListener('click', closeCoa);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCoa(); });
