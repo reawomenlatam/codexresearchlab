@@ -598,7 +598,7 @@
     const r = await fetch(CRYPTO_API, {
       method: 'POST',
       headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
-      body: JSON.stringify(payload),
+      body: JSON.stringify(Object.assign({ account_token: window.REAAccount.token() }, payload)),
     });
     let body = {};
     try { body = await r.json(); } catch (e) { /* respuesta no-JSON */ }
@@ -705,6 +705,7 @@
           headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
           body: JSON.stringify({
             action: 'session', order_id: id, country: cfg.code, coupon: coupon || '',
+            account_token: window.REAAccount.token(),
             // Para que Stripe devuelva al carrito en el idioma en que se compró.
             lang: (window.REAi18n && window.REAi18n.lang) || 'en',
             research_use_ack: true,
