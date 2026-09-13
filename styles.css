@@ -1268,6 +1268,9 @@ s.was, .pd-price-was {
 .co-section { display: grid; gap: .55rem; }
 .co-title { font-size: .8rem; font-weight: 700; letter-spacing: .01em; color: var(--ink); }
 .co-field { display: grid; gap: .28rem; }
+/* Un `display` propio le gana al hidden del navegador: sin esto, el selector de
+   stablecoin se seguía viendo con la tarjeta elegida. */
+.co-field[hidden] { display: none; }
 .co-field > span { font-size: .78rem; font-weight: 600; color: var(--ink); }
 .co-field > span em { font-style: normal; font-weight: 400; color: var(--muted); }
 .co-field input, .co-field textarea, .co-field select {
