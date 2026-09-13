@@ -105,12 +105,16 @@
     }, 1000);
   }
 
-  // Delegación: solo feedback visual; la lógica del carrito vive en cart.js/handlers
+  // Delegación: solo feedback visual; la lógica del carrito vive en cart.js/handlers.
+  // Sin sesión no se añade nada (sale el gate de cuenta), así que tampoco se
+  // celebra: decir "✓ Added" con el carrito vacío es mentirle al cliente.
+  const seAnade = () => !window.REAAccount || window.REAAccount.isIn();
   document.addEventListener('click', (e) => {
     const add = e.target.closest('[data-add]');
     const pd = e.target.closest('.pd-add, #pdStickyAdd');
-    if (add) { flyToCart(add); addFeedback(add); bounceCart(); }
-    else if (pd) { flyToCart(pd); addFeedback(pd); bounceCart(); }
+    if (!(add || pd) || !seAnade()) return;
+    const btn = add || pd;
+    flyToCart(btn); addFeedback(btn); bounceCart();
   });
 
   window.addEventListener('rea-cart-change', () => {
