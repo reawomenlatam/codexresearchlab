@@ -26,13 +26,24 @@
   // Datos del comprador (contacto + envío); se conservan entre re-renders.
   const buyer = { name: '', email: '', phone: '', address1: '', address2: '', city: '', state: '', postal: '', notes: '' };
   // Datos que ya dio al crear la cuenta: no se piden dos veces.
-  (function prefillFromAccount() {
+  function prefillFromAccount() {
     const a = window.REAAccount && window.REAAccount.get();
-    if (!a) return;
-    buyer.name = buyer.name || a.name || '';
-    buyer.email = buyer.email || a.email || '';
-    buyer.phone = buyer.phone || a.phone || '';
-  })();
+    if (!a) return false;
+    let tocado = false;
+    if (!buyer.name && a.name) { buyer.name = a.name; tocado = true; }
+    if (!buyer.email && a.email) { buyer.email = a.email; tocado = true; }
+    if (!buyer.phone && a.phone) { buyer.phone = a.phone; tocado = true; }
+    return tocado;
+  }
+  prefillFromAccount();
+
+  // Quien se registra DESDE el carrito (el caso normal: intenta comprar, le sale
+  // el gate, se registra) tenía el formulario pintado antes de existir la sesión.
+  // Sin esto, acaba de escribir su nombre y correo y el checkout se los vuelve a
+  // pedir en blanco.
+  window.addEventListener('rea-account-change', () => {
+    if (prefillFromAccount()) render();
+  });
   const resetBuyer = () => Object.keys(buyer).forEach((k) => { buyer[k] = ''; });
   let placing = false;      // evita doble envío
   let confirmation = null;  // { id, email } tras una orden aceptada
