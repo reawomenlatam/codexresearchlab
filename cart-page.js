@@ -11,6 +11,13 @@
   const root = document.getElementById('cartPageRoot');
   if (!root) return;
 
+  // Si account.js no cargó (bloqueador, red), el carrito no puede reventar: se
+  // sigue adelante y el servidor decide, que para eso valida él.
+  const ACC = window.REAAccount || {
+    isIn: () => false, token: () => '', authHeaders: () => ({}), get: () => null,
+    open: () => {}, require: (fn) => { fn(); return true; },
+  };
+
   const money = (n) => '$' + n.toFixed(2);
   // Escapa HTML para que ninguna entrada del usuario (código de cupón) se
   // interprete como markup al inyectarla en innerHTML o en un atributo.
@@ -27,7 +34,7 @@
   const buyer = { name: '', email: '', phone: '', address1: '', address2: '', city: '', state: '', postal: '', notes: '' };
   // Datos que ya dio al crear la cuenta: no se piden dos veces.
   function prefillFromAccount() {
-    const a = window.REAAccount && window.REAAccount.get();
+    const a = ACC.get();
     if (!a) return false;
     let tocado = false;
     if (!buyer.name && a.name) { buyer.name = a.name; tocado = true; }
@@ -608,8 +615,8 @@
   async function cryptoApi(payload) {
     const r = await fetch(CRYPTO_API, {
       method: 'POST',
-      headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
-      body: JSON.stringify(Object.assign({ account_token: window.REAAccount.token() }, payload)),
+      headers: Object.assign({ 'Content-Type': 'application/json' }, ACC.authHeaders()),
+      body: JSON.stringify(Object.assign({ account_token: ACC.token() }, payload)),
     });
     let body = {};
     try { body = await r.json(); } catch (e) { /* respuesta no-JSON */ }
@@ -659,7 +666,7 @@
 
   async function placeOrder() {
     if (placing) return;
-    if (!window.REAAccount.isIn()) { window.REAAccount.require(() => placeOrder()); return; }
+    if (!ACC.isIn()) { ACC.require(() => placeOrder()); return; }
     const s = compute();
     const msg = document.getElementById('coMsg');
     const btn = document.getElementById('coSubmit');
@@ -713,10 +720,10 @@
         const r = await fetch(STRIPE_API, {
           method: 'POST',
           // El servidor no cotiza sin cuenta: el token va en cada llamada.
-          headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
+          headers: Object.assign({ 'Content-Type': 'application/json' }, ACC.authHeaders()),
           body: JSON.stringify({
             action: 'session', order_id: id, country: cfg.code, coupon: coupon || '',
-            account_token: window.REAAccount.token(),
+            account_token: ACC.token(),
             // Para que Stripe devuelva al carrito en el idioma en que se compró.
             lang: (window.REAi18n && window.REAi18n.lang) || 'en',
             research_use_ack: true,
@@ -729,6 +736,15 @@
         });
         let b = {};
         try { b = await r.json(); } catch (e) { /* respuesta no-JSON */ }
+        // La sesión caducó entre que llenó el formulario y le dio a pagar: se
+        // limpia y se le pide entrar, en vez de dejarlo con un error a secas.
+        if (r.status === 401 || b.error === 'cuenta_requerida') {
+          if (ACC.expire) ACC.expire();
+          placing = false;
+          if (btn) { btn.disabled = false; btn.textContent = T('Pay by card'); }
+          ACC.require(() => placeOrder());
+          return;
+        }
         if (!b.ok || !b.url) throw new Error(b.error || 'session_failed');
         // El servidor manda sobre el precio: si no coincide con lo que ve el
         // cliente, no se le manda a pagar un importe distinto al mostrado.
@@ -765,6 +781,13 @@
           action: 'quote', country: cfg.code, coupon: coupon || '',
           items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
         });
+        // Misma cortesía que en tarjeta: si la sesión murió, se pide entrar.
+        if (q.error === 'cuenta_requerida') {
+          if (ACC.expire) ACC.expire();
+          restore();
+          ACC.require(() => placeOrder());
+          return;
+        }
         if (!q.ok) throw new Error(q.error || 'quote_failed');
         // El servidor manda sobre el precio; si no coincide con lo que ve el
         // cliente, se detiene en vez de cobrar un importe distinto al mostrado.

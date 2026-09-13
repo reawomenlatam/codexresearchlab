@@ -25,10 +25,18 @@
   async function api(payload) {
     const headers = { 'Content-Type': 'application/json' };
     if (state && state.token) headers.Authorization = 'Bearer ' + state.token;
-    const r = await fetch(API, { method: 'POST', headers, body: JSON.stringify(payload) });
-    let b = {};
-    try { b = await r.json(); } catch (e) { /* respuesta no-JSON */ }
-    return b;
+    // El token va también en el cuerpo: la cabecera Authorization depende de un
+    // preflight CORS y eso ya tumbó el checkout una vez.
+    const body = Object.assign({ account_token: (state && state.token) || '' }, payload);
+    const ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    const reloj = ctrl ? setTimeout(() => ctrl.abort(), 15000) : null;
+    try {
+      const r = await fetch(API, { method: 'POST', headers, body: JSON.stringify(body),
+                                   signal: ctrl ? ctrl.signal : undefined });
+      let b = {};
+      try { b = await r.json(); } catch (e) { /* respuesta no-JSON */ }
+      return b;
+    } finally { if (reloj) clearTimeout(reloj); }
   }
 
   const ERRORS = {
@@ -102,7 +110,9 @@
     modal.querySelectorAll('[data-acc-mode]').forEach((el) =>
       el.addEventListener('click', () => open(el.getAttribute('data-acc-mode'))));
     document.addEventListener('keydown', onEsc);
-    const first = modal.querySelector('input');
+    const correo = modal.querySelector('#accEmail');
+    if (correo && ultimoCorreo) correo.value = ultimoCorreo;
+    const first = modal.querySelector(ultimoCorreo ? '#accPass' : 'input') || modal.querySelector('input');
     if (first) first.focus();
     modal.querySelector('#accForm').addEventListener('submit', (e) => { e.preventDefault(); submit(mode || 'register'); });
   }
@@ -136,6 +146,7 @@
     }
 
     save({ token: b.token, account: b.account });
+    ultimoCorreo = (b.account && b.account.email) || ultimoCorreo;
     const seguir = pending;
     close();
     if (seguir) seguir();
@@ -148,7 +159,8 @@
   function require(fn) {
     if (isIn()) { fn(); return true; }
     pending = fn;
-    open('register');
+    // Si ya había comprado aquí, lo suyo es entrar, no crear otra cuenta.
+    open(ultimoCorreo ? 'login' : 'register');
     return false;
   }
 
@@ -164,8 +176,20 @@
     save(null);
   }
 
+  // La sesión murió en el servidor (caducó, o la cuenta se desactivó). Se borra
+  // aquí sin preguntar: seguir mostrando "sesión iniciada" es mentira. Se
+  // recuerda el correo para no pedirle a un cliente de siempre que "cree una
+  // cuenta" cuando lo único que necesita es volver a entrar.
+  let ultimoCorreo = '';
+  try { ultimoCorreo = (JSON.parse(localStorage.getItem(KEY) || 'null') || {}).account?.email || ''; } catch (e) { /* nada */ }
+  function expire() {
+    if (state && state.account) ultimoCorreo = state.account.email || ultimoCorreo;
+    if (state) save(null);
+  }
+
   window.REAAccount = {
     isIn,
+    expire,
     require,
     open,
     close,

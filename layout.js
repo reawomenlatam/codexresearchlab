@@ -288,7 +288,7 @@
   const accBtn = document.getElementById('accBtn');
   function updateAccount() {
     if (!accBtn || !window.REAAccount) return;
-    const a = window.REAAccount.get();
+    const a = window.REAAccount && window.REAAccount.get();
     accBtn.title = a ? (a.name + ' · ' + T('Sign out')) : T('Sign in');
     accBtn.setAttribute('aria-label', accBtn.title);
     accBtn.classList.toggle('is-in', !!a);
