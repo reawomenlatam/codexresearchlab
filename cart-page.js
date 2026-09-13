@@ -25,6 +25,14 @@
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   // Datos del comprador (contacto + envío); se conservan entre re-renders.
   const buyer = { name: '', email: '', phone: '', address1: '', address2: '', city: '', state: '', postal: '', notes: '' };
+  // Datos que ya dio al crear la cuenta: no se piden dos veces.
+  (function prefillFromAccount() {
+    const a = window.REAAccount && window.REAAccount.get();
+    if (!a) return;
+    buyer.name = buyer.name || a.name || '';
+    buyer.email = buyer.email || a.email || '';
+    buyer.phone = buyer.phone || a.phone || '';
+  })();
   const resetBuyer = () => Object.keys(buyer).forEach((k) => { buyer[k] = ''; });
   let placing = false;      // evita doble envío
   let confirmation = null;  // { id, email } tras una orden aceptada
@@ -589,7 +597,7 @@
   async function cryptoApi(payload) {
     const r = await fetch(CRYPTO_API, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
       body: JSON.stringify(payload),
     });
     let body = {};
@@ -616,6 +624,7 @@
   const PENDING_KEY = 'rea-stripe-pending-v1';
 
   const STRIPE_ERRORS = {
+    cuenta_requerida: T('Please create an account or sign in to continue.'),
     stripe_no_configurado: T('Card payments are not available right now. You can pay with crypto, or write to us.'),
     stripe_no_disponible: T('The payment provider didn’t respond. Please try again in a moment.'),
     price_mismatch: T('The order total changed. Please review your cart and try again.'),
@@ -626,6 +635,7 @@
   };
 
   const CRYPTO_ERRORS = {
+    cuenta_requerida: T('Please create an account or sign in to continue.'),
     sdk_load_failed: T('We couldn’t load the payment module. Check your connection and try again.'),
     sdk_unavailable: T('The payment module didn’t start correctly. Please reload the page.'),
     price_mismatch: T('The order total changed. Please review your cart and try again.'),
@@ -638,6 +648,7 @@
 
   async function placeOrder() {
     if (placing) return;
+    if (!window.REAAccount.isIn()) { window.REAAccount.require(() => placeOrder()); return; }
     const s = compute();
     const msg = document.getElementById('coMsg');
     const btn = document.getElementById('coSubmit');
@@ -690,12 +701,16 @@
       try {
         const r = await fetch(STRIPE_API, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          // El servidor no cotiza sin cuenta: el token va en cada llamada.
+          headers: Object.assign({ 'Content-Type': 'application/json' }, window.REAAccount.authHeaders()),
           body: JSON.stringify({
             action: 'session', order_id: id, country: cfg.code, coupon: coupon || '',
             // Para que Stripe devuelva al carrito en el idioma en que se compró.
             lang: (window.REAi18n && window.REAi18n.lang) || 'en',
             research_use_ack: true,
+            // Cookies de atribución de Meta: sólo existen en el navegador y el
+            // Purchase de servidor las necesita para emparejar la compra.
+            fbp: cookie('_fbp'), fbc: fbcValue(), source_url: location.href,
             items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
             buyer,
           }),
@@ -754,7 +769,9 @@
         setBtn(T('Verifying payment…'));
         const conf = await cryptoConfirm(q.intent_id, txHash, res.asset, (c) => setBtn(T('Confirming… {n}/3', { n: c })));
 
-        if (typeof fbq === 'function') fbq('track', 'Purchase', { value: Number(conf.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
+        if (typeof fbq === 'function') fbq('track', 'Purchase',
+          { value: Number(conf.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) },
+          { eventID: conf.order_id });
         if (typeof gtag === 'function') gtag('event', 'purchase', {
           transaction_id: conf.order_id, value: Number(conf.amount), currency: 'USD',
           items: s.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),
@@ -862,7 +879,9 @@
 
     const orderId = b.order_id || pending.id || '';
     if (s.lines.length) {
-      if (typeof fbq === 'function') fbq('track', 'Purchase', { value: Number(b.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) });
+      if (typeof fbq === 'function') fbq('track', 'Purchase',
+        { value: Number(b.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) },
+        { eventID: orderId });
       if (typeof gtag === 'function') gtag('event', 'purchase', {
         transaction_id: orderId, value: Number(b.amount), currency: 'USD',
         items: s.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),

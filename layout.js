@@ -58,6 +58,9 @@
                 </button>`).join('')}
             </div>
           </div>
+          <button class="acc-btn" id="accBtn" aria-label="${T('Account')}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </button>
           <button class="cart-btn" aria-label="${T('Open cart')}" data-cart-open>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             <span class="cart-count" data-cart-count>0</span>
@@ -141,7 +144,7 @@
           <button class="sn-ok" id="snOk">${T('Got it')}</button>
         </div>
         <p class="sn-legal">
-          ${T('Research use only \u00b7 by continuing you confirm you are of legal age \u00b7')}
+          ${T('Research use only \u00b7 by continuing you confirm you are 21 or older \u00b7')}
           <a href="terms/">${T('Terms')}</a>
         </p>
       </div>
@@ -279,6 +282,29 @@
   }
   window.addEventListener('rea-country-change', updateContact);
   updateContact();
+
+  /* ---------- Cuenta ---------- */
+  // El botón cambia según haya sesión: entrar, o el nombre y salir.
+  const accBtn = document.getElementById('accBtn');
+  function updateAccount() {
+    if (!accBtn || !window.REAAccount) return;
+    const a = window.REAAccount.get();
+    accBtn.title = a ? (a.name + ' · ' + T('Sign out')) : T('Sign in');
+    accBtn.setAttribute('aria-label', accBtn.title);
+    accBtn.classList.toggle('is-in', !!a);
+  }
+  if (accBtn) {
+    accBtn.addEventListener('click', () => {
+      if (!window.REAAccount) return;
+      if (window.REAAccount.isIn()) {
+        if (confirm(T('Sign out of your account?'))) window.REAAccount.logout();
+      } else {
+        window.REAAccount.open('login');
+      }
+    });
+    window.addEventListener('rea-account-change', updateAccount);
+    updateAccount();
+  }
 
   // ---------- Menú móvil ----------
   const mnav = document.getElementById('mobileNav');

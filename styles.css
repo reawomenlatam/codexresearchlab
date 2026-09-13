@@ -1289,6 +1289,25 @@ s.was, .pd-price-was {
 .pay-asset { margin-top: .55rem; }
 .pay-asset .pay-note { margin-top: .1rem; }
 .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
+/* ---------- Cuenta de investigador ---------- */
+.acc-btn { background: none; border: 0; padding: .4rem; color: var(--ink); cursor: pointer; display: inline-flex; }
+.acc-btn.is-in { color: var(--brand, #0a7d4b); }
+.acc-wrap { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; padding: 1.2rem; }
+.acc-backdrop { position: absolute; inset: 0; background: rgba(15,15,17,.55); backdrop-filter: blur(2px); }
+.acc-modal { position: relative; width: min(440px, 100%); max-height: 92vh; overflow-y: auto;
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0,0,0,.28); padding: 2rem 1.8rem 1.6rem; display: grid; gap: .9rem; }
+.acc-modal h2 { font-size: 1.35rem; letter-spacing: -.02em; }
+.acc-sub { color: var(--muted); font-size: .88rem; line-height: 1.5; margin-top: -.5rem; }
+.acc-modal form { display: grid; gap: .8rem; }
+.acc-x { position: absolute; top: .7rem; right: .8rem; background: none; border: 0; font-size: 1rem;
+  color: var(--muted); cursor: pointer; line-height: 1; padding: .3rem; }
+.acc-submit { width: 100%; justify-content: center; margin-top: .2rem; }
+.acc-switch { font-size: .82rem; color: var(--muted); text-align: center; margin: 0; }
+.acc-switch button { background: none; border: 0; padding: 0; font: inherit; color: var(--ink);
+  font-weight: 600; text-decoration: underline; cursor: pointer; }
+.acc-nav { display: inline-flex; align-items: center; gap: .4rem; }
+
 .cart-notice { margin: 0 0 1.2rem; padding: .8rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
 .co-ack { display: flex; gap: .6rem; align-items: flex-start; font-size: .8rem; line-height: 1.5; color: var(--muted); }
 .co-ack input { margin-top: .18rem; flex: 0 0 auto; width: 1rem; height: 1rem; accent-color: var(--brand, currentColor); }
