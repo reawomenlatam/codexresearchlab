@@ -5,7 +5,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce) document.documentElement.classList.add('js-motion');
 
-  const REVEAL_SEL = '.trust-card,.product-card,.process-step,.blog-card,' +
+  const REVEAL_SEL = '.trust-card,.product-card,.process-step,.blog-card,.lab-media,.lab-copy,' +
     '.blog-feature,.faq-item,.section-head,.tsm-proof,.cart-social,.pd-info-main,' +
     '.pd-info-side,.guarantee-card,.summary-card,.ship-progress,.cartpage-items,.disclaimer-band';
 

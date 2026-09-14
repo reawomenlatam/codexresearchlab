@@ -1396,6 +1396,56 @@ fieldset.co-section > legend {
   width: 100%;
 }
 
+/* ---------- Grado analítico (foto de laboratorio + copia) ----------
+   Ocupa el sitio de las tres tarjetas de confianza. Es la única fotografía de
+   personas de la portada, así que carga sola el peso de que el sitio no
+   parezca una plantilla: nada de insignias flotantes encima. */
+.lab-sec { padding-top: 2rem; }
+.lab-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .86fr) minmax(0, 1fr);
+  gap: 3.4rem;
+  align-items: center;
+}
+.lab-media { margin: 0; }
+/* La relación se fija en CSS, no en el atributo del <img>: con dirección de
+   arte el recorte de móvil tiene otra forma que el de escritorio, y sin esto
+   el navegador reserva el alto equivocado y la página salta al cargar. */
+.lab-media img {
+  width: 100%; height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.lab-media figcaption {
+  margin-top: .7rem;
+  font-size: .74rem; line-height: 1.5;
+  color: var(--muted);
+}
+.lab-copy h2 {
+  margin-top: .9rem;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem); font-weight: 400;
+  letter-spacing: -.035em; line-height: 1.14; text-wrap: balance;
+}
+.lab-copy p {
+  margin-top: 1.1rem;
+  color: var(--muted); font-size: 1.05rem; line-height: 1.65;
+  max-width: 34rem;
+}
+.lab-cta { margin-top: 1.8rem; }
+
+@media (max-width: 900px) {
+  .lab-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .lab-copy p { font-size: 1rem; }
+}
+/* Mismo corte que el <source> del HTML: en cuanto la rejilla se apila se sirve
+   el recorte apaisado, así que la relación tiene que cambiar con él. */
+@media (max-width: 900px) {
+  .lab-media img { aspect-ratio: 3 / 2; }
+}
+
 /* ============================================================
    ESTABILIDAD MÓVIL
    El zoom es lo que hacía que la página se pudiera arrastrar de lado: una vez
