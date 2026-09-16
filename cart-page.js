@@ -311,9 +311,13 @@
       </aside>`;
   }
 
-  // Recomendaciones del carrito. Antes eran los primeros 4 del catálogo (péptidos
-  // de $150-190 junto a un carrito de $79). Ahora manda lo que de verdad completa
-  // el pedido: el agua para reconstituir y lo que cierra el envío gratis.
+  /* Recomendaciones del carrito.
+     El agua bacteriostática NO se ofrece junto a un péptido, a propósito. La
+     FDA, en su carta de aviso a Royal Peptides (24/08/2026), tomó justamente eso
+     —vender el diluyente junto al compuesto, con una guía de preparación— como
+     prueba de que los productos estaban destinados a uso humano, pese al
+     etiquetado de "research use only". El agua sigue en el catálogo; lo que se
+     quita es que el sitio empareje las dos cosas por su cuenta. */
   const isWater = (p) => p.slug.indexOf('bac-water') === 0;
 
   function recommendations(s) {
@@ -321,17 +325,13 @@
     const ship = country().shipping;
     const gap = Math.max(0, ship.freeThreshold - s.subtotal);
     const hasPeptide = [...inCart].some((sl) => sl.indexOf('bac-water') !== 0);
-    const hasWater = [...inCart].some((sl) => sl.indexOf('bac-water') === 0);
-    const pool = PRODUCTS.filter((p) => !inCart.has(p.slug) && !p.outOfStock);
+    // Con un péptido en el carrito, el agua queda fuera de las sugerencias.
+    const pool = PRODUCTS.filter((p) => !inCart.has(p.slug) && !p.outOfStock
+                                        && !(hasPeptide && isWater(p)));
     const recs = [];
     const push = (p) => { if (p && recs.indexOf(p) < 0 && recs.length < 4) recs.push(p); };
 
-    // 1. Sin agua no se puede reconstituir nada: va primero.
-    if (hasPeptide && !hasWater) {
-      const waters = pool.filter(isWater).sort((a, b) => a.from - b.from);
-      push(gap > 0 ? (waters.find((p) => p.from >= gap) || waters[waters.length - 1]) : waters[0]);
-    }
-    // 2. Lo que mejor cierra el envío gratis: lo más cercano al faltante, con
+    // 1. Lo que mejor cierra el envío gratis: lo más cercano al faltante, con
     //    preferencia por lo que lo cubre entero (quedarse corto no lo desbloquea).
     if (gap > 0) {
       pool.slice()
@@ -341,7 +341,7 @@
         })
         .slice(0, 2).forEach(push);
     }
-    // 3. Se rellena con el resto del catálogo.
+    // 2. Se rellena con el resto del catálogo.
     pool.forEach(push);
     return { recs, gap };
   }
