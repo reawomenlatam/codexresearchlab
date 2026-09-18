@@ -64,15 +64,17 @@
     if (existing) existing.qty = Math.min(max, existing.qty + qty);
     else items.push({ slug, size, qty: Math.min(max, qty) });
     save(items);
-    // Meta Pixel: evento de conversión AddToCart
-    if (typeof fbq === 'function' && prod) {
+    // Meta Pixel: evento de conversión AddToCart.
+    // opts.noPixel lo suprime cuando el gate de cuentas ya lo emitió en el
+    // momento del intento (account.js), para no contarlo dos veces.
+    if (typeof fbq === 'function' && prod && !opts.noPixel) {
       fbq('track', 'AddToCart', {
         content_ids: [slug], content_name: prod.name, content_type: 'product',
         value: priceFor(slug, size) * qty, currency: 'USD',
       });
     }
     // GA4: add_to_cart
-    if (typeof gtag === 'function' && prod) {
+    if (typeof gtag === 'function' && prod && !opts.noPixel) {
       gtag('event', 'add_to_cart', {
         currency: 'USD', value: priceFor(slug, size) * qty,
         items: [{ item_id: slug, item_name: prod.name, price: priceFor(slug, size), quantity: qty }],

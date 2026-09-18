@@ -146,6 +146,16 @@
     }
 
     save({ token: b.token, account: b.account });
+    // El alta es un paso real del embudo desde que el gate existe: sin este
+    // evento, Meta no distingue al visitante que se registró del que se fue.
+    if (alta) {
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'CompleteRegistration', { content_name: 'researcher_account', status: true });
+        }
+        if (typeof gtag === 'function') gtag('event', 'sign_up', { method: 'codex' });
+      } catch (e) { /* la medición nunca debe romper el alta */ }
+    }
     ultimoCorreo = (b.account && b.account.email) || ultimoCorreo;
     const seguir = pending;
     close();
@@ -200,13 +210,46 @@
     authHeaders: () => (isIn() ? { Authorization: 'Bearer ' + state.token } : {}),
   };
 
+  /* ---------- Medición del intento, antes del gate ---------- */
+  // El AddToCart del carrito vive dentro de REACart.add, y el gate envuelve esa
+  // función: para un visitante sin cuenta el evento no llegaba a emitirse nunca.
+  // Resultado medido: desde que el gate entró (13-sep-2026) el píxel dejó de
+  // registrar AddToCart pese a cientos de visitas pagadas, y Meta se quedó sin
+  // señal intermedia con la que optimizar. El intento de añadir al carrito es
+  // una conversión real del embudo, así que se emite aquí y se le pide al
+  // carrito que no lo repita luego (opts.noPixel).
+  function emitirIntento(slug, size, qty) {
+    try {
+      const prod = ((window.REA && window.REA.PRODUCTS) || []).find((p) => p.slug === slug);
+      if (!prod || prod.outOfStock) return;   // el carrito tampoco lo añadiría
+      const talla = prod.sizes && prod.sizes.find((x) => x.label === size);
+      const unidad = talla ? talla.price : 0;
+      const unidades = qty || 1;
+      if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', {
+          content_ids: [slug], content_name: prod.name, content_type: 'product',
+          value: unidad * unidades, currency: 'USD',
+        });
+      }
+      if (typeof gtag === 'function') {
+        gtag('event', 'add_to_cart', {
+          currency: 'USD', value: unidad * unidades,
+          items: [{ item_id: slug, item_name: prod.name, price: unidad, quantity: unidades }],
+        });
+      }
+    } catch (e) { /* la medición nunca debe romper la compra */ }
+  }
+
   /* ---------- El gate: añadir al carrito pide cuenta ---------- */
   // Se envuelve el único punto por el que pasa todo: REACart.add. Así da igual
   // desde qué botón, página o atajo se añada.
   if (window.REACart && typeof window.REACart.add === 'function') {
     const add = window.REACart.add.bind(window.REACart);
     window.REACart.add = function (slug, size, qty, opts) {
-      return require(() => add(slug, size, qty, opts));
+      if (isIn()) return require(() => add(slug, size, qty, opts));
+      emitirIntento(slug, size, qty);
+      const sinRepetir = Object.assign({}, opts, { noPixel: true });
+      return require(() => add(slug, size, qty, sinRepetir));
     };
   }
 
