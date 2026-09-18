@@ -21,8 +21,8 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - PubChem CID: 156588324
 - Purity: 99% (HPLC), certificate of analysis per batch
 - Availability: In stock
-- Single vial: $190.00 USD
-- Pack · 3 vials: $524.40 USD (8% off)
+- Single vial: $149.00 USD
+- Pack · 3 vials: $411.24 USD (8% off)
 
 ### GLP-3 (retatrutide) — 10 mg per vial
 

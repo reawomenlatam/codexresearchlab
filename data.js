@@ -6,11 +6,11 @@
 const PRODUCTS = [
   {
     slug: 'tirzepatide', name: 'GLP-2', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
-    mg: '20 mg', from: 190, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
+    mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
     sizes: [
-      { label: 'Single vial', price: 190 },
-      { label: 'Pack · 3 vials', price: 524.40, save: '8%' },
+      { label: 'Single vial', price: 149 },
+      { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
     ],
     overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
     overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',

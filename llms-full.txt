@@ -28,14 +28,14 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Molecular weight: 4813.45 g/mol
 - PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/156588324
 - Research areas: GIP signaling, GLP-1 signaling, Glucose regulation, Metabolism
-- Single vial: $190.00 USD
-- Pack · 3 vials: $524.40 USD
+- Single vial: $149.00 USD
+- Pack · 3 vials: $411.24 USD
 
 A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
 
 **What is GLP-2?** A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
 
-**How much does GLP-2 cost?** Single vial: $190.00 USD. Pack · 3 vials: $524.40 USD. Prices are in USD.
+**How much does GLP-2 cost?** Single vial: $149.00 USD. Pack · 3 vials: $411.24 USD. Prices are in USD.
 
 **Is GLP-2 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
