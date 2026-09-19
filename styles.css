@@ -758,6 +758,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .pd-opt-price { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
 .pd-opt-unit { font-size: .72rem; color: var(--muted); margin-top: .1rem; }
 .pd-price-note #pdPriceUnit:not(:empty)::after { content: ' · '; }
+.pd-opt-best { position: relative; }
+.pd-opt-flag { position: absolute; top: -.6rem; right: .6rem; font-size: .6rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: var(--accent); padding: .12rem .45rem; border-radius: 999px; }
 .pd-opt-save { font-size: .66rem; font-weight: 700; color: #157048; /* #1f9d6b daba 3.11:1 sobre #e7f7f0; #157048 = 5.51:1 */ background: #e7f7f0; padding: .1rem .45rem; border-radius: 999px; margin-top: .2rem; }
 .pd-price-row { display: flex; align-items: center; margin: 1.6rem 0 1.2rem; }
 .pd-price { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; }
@@ -1524,3 +1526,21 @@ a, button, input, select, textarea, label, summary,
    Medía 31×31 (el icono más .4rem de relleno) al lado del carrito y el menú,
    que son de 40. Se iguala el área sin cambiar nada de lo que se ve. */
 .acc-btn { width: 40px; height: 40px; padding: 0; align-items: center; justify-content: center; }
+
+/* --- Contraste con la alternativa real (home #compare) ---------------------
+   Dos columnas de hechos de proceso. La columna "mala" describe cómo se compra
+   material sin lote ni COA; no nombra a nadie y no habla de resultados. */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.compare-col { border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.5rem; background: var(--card); }
+.compare-col h3 { font-size: .95rem; letter-spacing: .01em; margin: 0 0 .9rem; }
+.compare-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+.compare-col li { position: relative; padding-left: 1.6rem; font-size: .92rem; line-height: 1.45; color: var(--muted); }
+.compare-col li::before { position: absolute; left: 0; top: -.05rem; font-weight: 700; }
+.compare-bad { opacity: .92; }
+.compare-bad li::before { content: '×'; color: #b4453c; font-size: 1.1rem; line-height: 1.2; }
+.compare-good { border-color: var(--accent); }
+.compare-good li::before { content: '✓'; color: #157048; }
+.compare-good li { color: var(--ink); }
+.compare-foot { margin-top: 1.1rem; font-size: .86rem; color: var(--muted); }
+@media (max-width: 720px) { .compare-grid { grid-template-columns: 1fr; } }
+.compare-foot a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }

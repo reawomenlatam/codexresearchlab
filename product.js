@@ -1,6 +1,6 @@
 /* REA Store - detalle de producto. Lee ?slug= y arma la ficha. */
 (function () {
-  const { PRODUCTS } = window.REA;
+  const { PRODUCTS, batchFor } = window.REA;
   const ui = window.REAui;
   const T = window.T;
   const U = window.REAi18n.url;
@@ -19,7 +19,24 @@
   const refList = (s) => (s.list != null ? s.list : (packUnits(s.label) > 1 ? unitPrice * packUnits(s.label) : null));
   const perVial = (s) => (packUnits(s.label) > 1
     ? window.T('{n} per vial', { n: money(s.price / packUnits(s.label)) }) : '');
+  // Regla de los 100: por encima de $100 el ahorro absoluto pesa más que el
+  // porcentaje ($35.76 se lee mayor que 8%), y por debajo pasa lo contrario
+  // ($2.40 se lee menor que 8%), así que el pack barato conserva el porcentaje.
+  // El absoluto sale del mismo ancla honesta que el precio tachado, de modo que
+  // no puede desviarse de él ni de `prices.json`.
+  const saveAmount = (s) => {
+    const r = refList(s);
+    if (!r || r <= s.price || s.price < 100) return null;
+    return money(r - s.price);
+  };
+  // La opción que más ahorra se marca como recomendada, pero NO se preselecciona:
+  // la entrada barata sigue siendo el vial suelto (compromiso pequeño primero).
+  const savedValue = (s) => (refList(s) ? Math.max(0, refList(s) - s.price) : 0);
+  const bestIdx = p.sizes.reduce((best, s, i) => (savedValue(s) > savedValue(p.sizes[best]) ? i : best), 0);
   const related = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 4);
+  // Lote real en registro: la prueba se enseña ANTES de pagar, no después.
+  // `purity`, `date` y `lab` son opcionales en data.js y solo se pintan si existen.
+  const batch = (typeof batchFor === 'function' && batchFor(p.slug, p.mg)) || null;
 
   // Meta Pixel: evento ViewContent al ver la ficha de producto
   if (typeof fbq === 'function') {
@@ -136,11 +153,12 @@
           <div class="pd-field">
             <label>${T('Pack')}</label>
             <div class="pd-options pd-packs" id="pdSizes">
-              ${p.sizes.map((s, i) => `<button class="pd-opt ${i === 0 ? 'active' : ''}" data-size="${s.label}" data-price="${s.price}">
+              ${p.sizes.map((s, i) => `<button class="pd-opt ${i === 0 ? 'active' : ''}${i === bestIdx && savedValue(s) > 0 ? ' pd-opt-best' : ''}" data-size="${s.label}" data-price="${s.price}">
+                ${i === bestIdx && savedValue(s) > 0 ? `<span class="pd-opt-flag">${T('Best value')}</span>` : ''}
                 <span class="pd-opt-label">${T(s.label)}</span>
                 <span class="pd-opt-price">${money(s.price)}${refList(s) ? ` <s class="was">${money(refList(s))}</s>` : ''}</span>
                 ${perVial(s) ? `<span class="pd-opt-unit">${perVial(s)}</span>` : ''}
-                ${s.save ? `<span class="pd-opt-save">${T('Save {n}', { n: s.save })}</span>` : ''}
+                ${saveAmount(s) || s.save ? `<span class="pd-opt-save">${T('Save {n}', { n: saveAmount(s) || s.save })}</span>` : ''}
               </button>`).join('')}
             </div>
           </div>
@@ -171,12 +189,12 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              ${T('Secure payment · confirm on WhatsApp before paying')}
+              ${T('Secure checkout · card or crypto, paid on this site')}
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>${T('Batch-verified with third-party COA')} \u00b7
-                <button type="button" class="pd-trust-link" data-coa>${T('see an example')}</button></span>
+              <span>${batch ? T('Batch {n} · third-party COA', { n: batch.code }) : T('Batch-verified with third-party COA')} \u00b7
+                <button type="button" class="pd-trust-link" data-coa>${T('see the certificate')}</button></span>
             </li>
           </ul>
 
@@ -260,18 +278,19 @@
           <span class="coa-mark" aria-hidden="true"></span>
           <div>
             <b>${p.name}</b>
-            <span class="mono-tag">Batch #A-2419 · ${p.tag}</span>
+            <span class="mono-tag">${batch ? T('Batch') + ' ' + batch.code : p.tag} · ${p.mg}</span>
           </div>
         </div>
         <dl class="coa-rows">
           <div><dt>${T('Method')}</dt><dd>${T('HPLC + mass spectrometry')}</dd></div>
-          <div><dt>${T('Purity')}</dt><dd>99.1%</dd></div>
-          <div><dt>${T('Identity')}</dt><dd>${T('Confirmed')}</dd></div>
-          <div><dt>${T('Endotoxins')}</dt><dd>&lt; 0.5 EU/mg</dd></div>
-          <div><dt>${T('Analysis date')}</dt><dd>${T('Jul 10, 2026')}</dd></div>
+          <div><dt>${T('Purity spec')}</dt><dd>${T('99% minimum')}</dd></div>
+          ${batch && batch.purity ? `<div><dt>${T('Purity, this batch')}</dt><dd>${batch.purity}</dd></div>` : ''}
+          ${batch && batch.date ? `<div><dt>${T('Analysis date')}</dt><dd>${batch.date}</dd></div>` : ''}
+          ${batch && batch.lab ? `<div><dt>${T('Laboratory')}</dt><dd>${batch.lab}</dd></div>` : ''}
+          <div><dt>${T('The certificate reports')}</dt><dd>${T('Purity, identity and quantity')}</dd></div>
         </dl>
-        <p class="coa-note">${T('Sample document. Your batch’s real COA is shared on WhatsApp when you confirm your order. Already have a vial?')} <a href="verify/">${T('Verify its batch number')}</a>.</p>
-        <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent(T('Hi, I’d like the COA for') + ' ' + p.name)}" target="_blank" rel="noopener">${T('Request my batch COA')}</a>
+        <p class="coa-note">${T('This is the batch currently in stock. Its full certificate is available on request — before you order, if you want to see it first.')} <a href="verify/${batch ? '?batch=' + encodeURIComponent(batch.code) : ''}">${T('Check this batch number')}</a>.</p>
+        <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent(T('Hi, I’d like the COA for') + ' ' + p.name + (batch ? ' (' + T('batch') + ' ' + batch.code + ')' : ''))}" target="_blank" rel="noopener">${T('Ask for this batch COA')}</a>
       </div>
     </div>
   `;

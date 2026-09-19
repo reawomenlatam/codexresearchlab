@@ -288,7 +288,7 @@
         <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced rather than asking you to take them on faith.</p>
 
         <h2>Putting it together</h2>
-        <p>Read as a whole, a good COA answers three questions: which batch is this, how pure is it, and is it the right molecule. If a document only answers one of those, it is incomplete. At Codex Research the full COA is shared on WhatsApp before you pay, and any vial can be checked by its batch number.</p>
+        <p>Read as a whole, a good COA answers three questions: which batch is this, how pure is it, and is it the right molecule. If a document only answers one of those, it is incomplete. At Codex Research the full COA is available on request before you pay, and any vial can be checked by its batch number.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1032,7 +1032,7 @@
         <p>The amount charged is calculated by our server at the moment of payment, so it always matches what your cart shows. Any question before or after ordering is answered by a specialist on WhatsApp.</p>
 
         <h2>How to verify authenticity before you pay</h2>
-        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is shared on WhatsApp before payment. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>.</p>
+        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is available on request, before you order if you want to see it first. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1040,7 +1040,7 @@
       faq: [
         { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
         { q: 'What payment methods can I use in Panama?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on the site at checkout, and the amount is calculated by the server so it always matches your cart.' },
-        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is shared on WhatsApp before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
+        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is available on request before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
       ],
       references: [],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a> or <a href="verify/">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
@@ -1072,17 +1072,17 @@
         </ul>
 
         <h2>How to verify your batch number</h2>
-        <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is shared on WhatsApp before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
+        <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is available on request before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
 
         <h2>Buying in Panama</h2>
-        <p>In Panama, you can review the COA on WhatsApp before payment, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
+        <p>In Panama, you can ask for the COA before you order, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
         { q: 'What is a certificate of analysis (COA)?', a: 'A COA is a laboratory document that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides it is based on independent HPLC and mass spectrometry testing and is tied to the batch number on the vial.' },
-        { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify/. A valid number confirms the product and that it is on record. The full COA is also shared on WhatsApp before you pay.' },
+        { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify/. A valid number confirms the product and that it is on record. The full COA is also available on request before you pay.' },
         { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
       ],
       references: [],

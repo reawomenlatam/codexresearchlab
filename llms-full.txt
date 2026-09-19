@@ -3,9 +3,10 @@
 > Codex Research (codexresearchlab.com) supplies laboratory-grade research peptides,
 > batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
 > Same-day delivery in Panama City (1-2 hours) and shipping across Panama and
-> the United States, with human support on WhatsApp.
+> the United States. Orders are placed and paid on the site, by card (Stripe) or
+> crypto (USDC/USDT); WhatsApp is support, not a required step to buy.
 
-Last updated: 2026-09-18. Machine-readable pricing: https://codexresearchlab.com/pricing.md
+Last updated: 2026-09-19. Machine-readable pricing: https://codexresearchlab.com/pricing.md
 
 All products are sold strictly for laboratory research and development. They are not for
 human or animal consumption and are not intended to diagnose, treat, cure or prevent any
@@ -37,7 +38,7 @@ A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, 
 
 **How much does GLP-2 cost?** Single vial: $149.00 USD. Pack · 3 vials: $411.24 USD. Prices are in USD.
 
-**Is GLP-2 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP-2 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## GLP-3 (retatrutide)
 
@@ -55,7 +56,7 @@ A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic 
 
 **How much does GLP-3 cost?** Single vial: $150.00 USD. Pack · 3 vials: $414.00 USD. Prices are in USD.
 
-**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## BPC-157
 
@@ -75,7 +76,7 @@ BPC-157 is a pentadecapeptide derived from a protective protein found in gastric
 
 **How much does BPC-157 cost?** Single vial: $79.00 USD. Pack · 3 vials: $218.04 USD. Prices are in USD.
 
-**Is BPC-157 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is BPC-157 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## MOTS-c
 
@@ -95,7 +96,7 @@ MOTS-c is a mitochondrial-derived peptide studied in models of metabolic homeost
 
 **How much does MOTS-c cost?** Single vial: $85.00 USD. Pack · 3 vials: $234.60 USD. Prices are in USD.
 
-**Is MOTS-c tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is MOTS-c tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## Ipamorelin
 
@@ -115,7 +116,7 @@ Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agoni
 
 **How much does Ipamorelin cost?** Single vial: $135.00 USD. Pack · 3 vials: $372.60 USD. Prices are in USD.
 
-**Is Ipamorelin tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is Ipamorelin tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## GHK-Cu
 
@@ -134,7 +135,7 @@ GHK-Cu (copper tripeptide-1, Gly-His-Lys-copper) is a naturally occurring copper
 
 **How much does GHK-Cu cost?** Single vial: $95.00 USD. Pack · 3 vials: $262.20 USD. Prices are in USD.
 
-**Is GHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## PT-141
 
@@ -154,7 +155,7 @@ PT-141 (bremelanotide) is a melanocortin receptor agonist studied in models of r
 
 **How much does PT-141 cost?** Single vial: $85.00 USD. Pack · 3 vials: $234.60 USD. Prices are in USD.
 
-**Is PT-141 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is PT-141 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## NAD+
 
@@ -174,7 +175,7 @@ NAD+ (nicotinamide adenine dinucleotide) is an essential coenzyme studied in mod
 
 **How much does NAD+ cost?** Single vial: $130.00 USD. Pack · 3 vials: $358.80 USD. Prices are in USD.
 
-**Is NAD+ tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is NAD+ tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## AHK-Cu
 
@@ -192,7 +193,7 @@ AHK-Cu (copper tripeptide-3, Ala-His-Lys-copper) is a copper-binding peptide stu
 
 **How much does AHK-Cu cost?** Single vial: $120.00 USD. Prices are in USD.
 
-**Is AHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is AHK-Cu tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## Bacteriostatic Water
 
@@ -211,7 +212,7 @@ Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) 
 
 **How much does Bacteriostatic Water cost?** Single vial: $10.00 USD. Pack · 3 vials: $27.60 USD. Prices are in USD.
 
-**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## Bacteriostatic Water
 
@@ -230,13 +231,13 @@ Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) 
 
 **How much does Bacteriostatic Water cost?** Single vial: $17.00 USD. Pack · 3 vials: $46.92 USD. Prices are in USD.
 
-**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis for your batch is shared on WhatsApp before payment, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 # General questions
 
 ### Are your products verified?
 
-Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.
+Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request — before you order if you want to see it first.
 
 ### Where do you ship from and how long does it take?
 

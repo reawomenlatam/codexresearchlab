@@ -139,7 +139,7 @@ const PRODUCTS = [
 
 
 const FAQS = [
-  { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp.' },
+  { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request — before you order if you want to see it first.' },
   { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
@@ -150,7 +150,7 @@ const FAQS = [
 // Mismo FAQ en español. Las dos listas tienen que decir lo mismo: el JSON-LD
 // FAQPage de cada portada declara justo estas preguntas.
 const FAQS_ES = [
-  { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. Puedes pedir el COA de tu lote por WhatsApp.' },
+  { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. El número de lote de tu vial se puede comprobar en codexresearchlab.com/verify/, y el COA completo está disponible si lo pides — también antes de comprar.' },
   { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque sellado y protegido.' },
   { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
   { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
@@ -225,6 +225,10 @@ const COUPONS = {
 
 // Lotes válidos (/verify/). Clave = número de lote. Valor = datos del producto
 // (o null para un lote genérico/universal). Agrega o actualiza aquí.
+/* Lotes reales en registro. Cada entrada admite además tres campos OPCIONALES
+   copiados del certificado real: `purity` ('99.1%'), `date` ('Jul 10, 2026') y
+   `lab` (nombre del laboratorio). La ficha los muestra solo si existen: sin
+   ellos enseña la especificación de compra, nunca un resultado inventado. */
 const BATCHES = {
   'CDX-2607-001': { product: 'Retatrutide', slug: 'retatrutide', mg: '10 mg' },
   'CDX-2607-002': { product: 'BPC-157',     slug: 'bpc-157',     mg: '10 mg' },
@@ -236,6 +240,16 @@ const BATCHES = {
   'CDX-2607-008': { product: 'PT-141',      slug: 'pt-141',      mg: '10 mg' },
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
 };
+
+/* Lote en stock de un producto, para que la ficha muestre un número que el
+   visitante puede comprobar en /verify/ sin escribirle a nadie. Empareja por
+   concentración cuando hay más de uno (retatrutide tiene 10 y 30 mg). */
+function batchFor(slug, mg) {
+  const hits = Object.keys(BATCHES).filter((c) => BATCHES[c] && BATCHES[c].slug === slug);
+  if (!hits.length) return null;
+  const code = (mg && hits.find((c) => BATCHES[c].mg === mg)) || hits[0];
+  return Object.assign({ code }, BATCHES[code]);
+}
 
 const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en ' +
   'Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). ' +
@@ -266,8 +280,8 @@ function productFaq(p) {
       a: `${list}. Prices are in USD${p.outOfStock ? '. This presentation is currently out of stock' : ''}.` },
     { q: `Is ${p.name} tested, and do you provide a certificate of analysis?`,
       a: 'Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of ' +
-         'analysis for your batch is shared on WhatsApp before payment, and any vial\'s batch number ' +
-         'can be checked at https://codexresearchlab.com/verify/.' },
+         'analysis is available on request, before you order if you want to see it first, and any ' +
+         'vial\'s batch number can be checked at https://codexresearchlab.com/verify/.' },
     { q: `How is ${p.name} shipped and how long does delivery take?`, a: SHIPPING_LINE },
     { q: `How should ${p.name} be stored?`,
       a: 'Lyophilized vials are kept cool and protected from light. Once reconstituted they are kept ' +
@@ -297,8 +311,8 @@ function productFaqEs(p) {
       a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
     { q: `¿${p.name} está analizado? ¿Entregan certificado de análisis?`,
       a: 'Sí. Cada lote se analiza al 99% de pureza por HPLC y espectrometría de masas. El certificado de ' +
-         'análisis de tu lote se comparte por WhatsApp antes del pago, y el número de lote de cualquier vial ' +
-         'se puede comprobar en https://codexresearchlab.com/verify/.' },
+         'análisis está disponible si lo pides, también antes de comprar, y el número de lote de cualquier ' +
+         'vial se puede comprobar en https://codexresearchlab.com/verify/.' },
     { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
     { q: `¿Cómo se debe almacenar ${p.name}?`,
       a: 'Los viales liofilizados se mantienen frescos y protegidos de la luz. Una vez reconstituidos se ' +
@@ -326,6 +340,6 @@ const BUSINESS = {
   phone: '+507 6335-4625',
 };
 
-window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, SALE,
+window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
   WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

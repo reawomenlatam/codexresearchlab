@@ -62,7 +62,7 @@
         <button class="acc-x" data-acc-close aria-label="${T('Close')}">✕</button>
         <h2 id="accTitle">${alta ? T('Create your researcher account') : T('Sign in')}</h2>
         <p class="acc-sub">${alta
-          ? T('Ordering is limited to researchers. It takes a minute and you only do it once.')
+          ? T('Your research declaration is recorded once, and your details prefill at checkout from then on. Takes a minute.')
           : T('Welcome back. Sign in to continue with your order.')}</p>
         <form id="accForm" novalidate>
           ${alta ? `

@@ -21,7 +21,7 @@
   </script>
   <!-- End Google tag -->
   <title>Codex Research | Laboratory-grade research peptides</title>
-  <meta name="description" content="Laboratory-grade research peptides, batch-verified with third-party COA and 99% HPLC purity. Shipping to the US and Panama with WhatsApp support.">
+  <meta name="description" content="Laboratory-grade research peptides, batch-verified with third-party COA and 99% HPLC purity. Order on our own checkout with card or crypto. Shipping to the US and Panama.">
   <link rel="canonical" href="https://codexresearchlab.com/">
   <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/">
   <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/">
@@ -45,7 +45,7 @@
   {"@context":"https://schema.org","@type":"WebSite","name":"Codex Research","legalName":"Codex Research LLC","url":"https://codexresearchlab.com/","address":{"@type":"PostalAddress","streetAddress":"30 N Gould St","addressLocality":"Sheridan","addressRegion":"WY","postalCode":"82801","addressCountry":"US"},"inLanguage":"en"}
   </script>
   <!-- FAQ-LD:START -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are your products verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. You can request your batch’s COA on WhatsApp."}},{"@type":"Question","name":"Where do you ship from and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging."}},{"@type":"Question","name":"Are these products for human consumption?","acceptedAnswer":{"@type":"Answer","text":"No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption."}},{"@type":"Question","name":"Do you ship internationally?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay."}},{"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site."}},{"@type":"Question","name":"How should I store the products?","acceptedAnswer":{"@type":"Answer","text":"Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are your products verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request — before you order if you want to see it first."}},{"@type":"Question","name":"Where do you ship from and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging."}},{"@type":"Question","name":"Are these products for human consumption?","acceptedAnswer":{"@type":"Answer","text":"No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption."}},{"@type":"Question","name":"Do you ship internationally?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay."}},{"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site."}},{"@type":"Question","name":"How should I store the products?","acceptedAnswer":{"@type":"Answer","text":"Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions."}}]}</script>
   <!-- FAQ-LD:END -->
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/products/bpc-157.jpg" fetchpriority="high">
@@ -87,8 +87,8 @@
         <span class="hero-eyebrow">● Batch-verified</span>
         <h1>Lab-grade <em>peptides</em>,<br>no guesswork.</h1>
         <p class="hero-sub">
-          A curated catalog with a certificate of analysis per batch, sealed shipping
-          and human support on WhatsApp at every step.
+          A curated catalog with a certificate of analysis per batch and a batch number
+          you can check before you open the vial. Order on the site, card or crypto.
         </p>
         <p class="hero-deliver" id="heroDeliver"></p>
         <div class="hero-ctas">
@@ -102,7 +102,11 @@
           <a href="product/bpc-157/"><img class="hero-photo product-photo" src="assets/products/bpc-157.jpg" alt="BPC-157 vial" width="1400" height="933" fetchpriority="high" decoding="async"></a>
           <figcaption>
             <b>BPC-157 · 10 mg</b>
-            <span class="mono-tag">Batch #A-2419 · COA available</span>
+            <!-- Este lote está horneado a mano porque la portada es HTML estático.
+                 DEBE existir en BATCHES de data.js: si se retira de /verify/, la
+                 portada estaría enseñando un número que no verifica — justo lo
+                 contrario de lo que esta sección promete. Al rotar stock, revisar. -->
+            <span class="mono-tag">CDX-2607-002 · verifiable</span>
           </figcaption>
         </figure>
         <div class="badge-float badge-a"><span class="dot"></span> HPLC-verified purity</div>
@@ -218,6 +222,42 @@
     </div>
   </section>
 
+  <!-- ============ Contraste (la alternativa real: comprar sin lote ni COA).
+        Hechos de proceso verificables por el propio visitante. Nada de
+        comparaciones con competidores nombrados ni de resultados. ============ -->
+  <section class="section compare-sec" id="compare">
+    <div class="container">
+      <div class="section-head">
+        <span class="mono-tag">The alternative</span>
+        <h2>What ordering without a batch number actually costs</h2>
+        <p>The comparison that matters is not between two catalogs. It is between a vial you can trace and one you cannot.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col compare-bad">
+          <h3>Without traceability</h3>
+          <ul>
+            <li>No batch number, nothing to check the vial against</li>
+            <li>No way to tie a certificate to the vial in your hand</li>
+            <li>Weeks in transit, with customs in between</li>
+            <li>Payment up front, with nothing to check on arrival</li>
+            <li>No one to answer once the parcel is gone</li>
+          </ul>
+        </div>
+        <div class="compare-col compare-good">
+          <h3>Codex Research</h3>
+          <ul>
+            <li>A batch number on the vial, checkable before you open it</li>
+            <li>Third-party COA per batch, HPLC and mass spectrometry</li>
+            <li>1-2 h in Panama City, 48-72 h in the United States</li>
+            <li>Card or crypto on our own checkout, price set server-side</li>
+            <li>Support that still answers after delivery, by WhatsApp or email</li>
+          </ul>
+        </div>
+      </div>
+      <p class="compare-foot">Every claim on this side is something you can check yourself: <a href="verify/">verify a batch number</a> before you buy anything.</p>
+    </div>
+  </section>
+
   <!-- ============ Proceso ============ -->
   <section class="section" id="proceso">
     <div class="container">
@@ -237,15 +277,15 @@
           <div class="process-step">
             <span class="step-num">STEP 02</span>
             <span class="step-go" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5 11.5 4.5M11.5 4.5H5.5M11.5 4.5v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Guided order</h3>
-            <p>You confirm your order on WhatsApp with a specialist who answers your questions before you pay.</p>
+            <h3>Order on the site</h3>
+            <p>You order and pay on our own checkout, by card or crypto. No messaging required to buy.</p>
             <span class="step-fig" aria-hidden="true">02</span>
           </div>
           <div class="process-step">
             <span class="step-num">STEP 03</span>
             <span class="step-go" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5 11.5 4.5M11.5 4.5H5.5M11.5 4.5v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <h3>Fast, sealed dispatch</h3>
-            <p>Neutral packaging, careful handling and tracking all the way to delivery.</p>
+            <p>Sealed, protective packaging with every vial labeled with its compound, strength and batch number. Tracked to delivery.</p>
             <span class="step-fig" aria-hidden="true">03</span>
           </div>
         </div>
@@ -257,7 +297,7 @@
   <section class="section cta-band">
     <div class="container">
       <h2>Questions? Message us.</h2>
-      <p>Our team replies on WhatsApp in minutes, not days.</p>
+      <p>Buying never requires a chat. But if you want to ask before you order, our team replies on WhatsApp in minutes, not days.</p>
       <a class="btn btn-primary pulse-cta" href="https://wa.me/50763354625" target="_blank" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
         Chat with a specialist
