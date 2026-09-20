@@ -13,6 +13,7 @@
   const KEY = 'rea-cart-v1';
   const { PRODUCTS, WHATSAPP } = window.REA;
 
+  const AVISO_KEY = 'rea-cart-notice';
   const money = (n) => '$' + n.toFixed(2);
   const lineId = (slug, size) => `${slug}::${size}`;
 
@@ -64,9 +65,11 @@
     if (existing) existing.qty = Math.min(max, existing.qty + qty);
     else items.push({ slug, size, qty: Math.min(max, qty) });
     save(items);
-    // Meta Pixel: evento de conversión AddToCart.
-    // opts.noPixel lo suprime cuando el gate de cuentas ya lo emitió en el
-    // momento del intento (account.js), para no contarlo dos veces.
+    // Meta Pixel: evento de conversión AddToCart. Siempre se emite aquí: desde
+    // el 2026-09-19 nada envuelve esta función (el gate de cuenta vive en el
+    // checkout), así que este es el único punto que lo cuenta. `opts.noPixel`
+    // queda para quien necesite añadir sin registrar conversión (p. ej. restaurar
+    // un carrito), no para un paso previo.
     if (typeof fbq === 'function' && prod && !opts.noPixel) {
       fbq('track', 'AddToCart', {
         content_ids: [slug], content_name: prod.name, content_type: 'product',
@@ -222,9 +225,62 @@
     ensureDom();
     wireHeaderButtons();
     render();
+    avisoPendiente();
   });
-  // El cambio de país altera el umbral de envío gratis del drawer
-  window.addEventListener('rea-country-change', render);
+  /* El cambio de país altera el umbral de envío gratis del drawer y, desde que
+     el stock es por bodega, también puede dejar líneas sin existencias: load()
+     las descarta. Descartarlas en silencio sería peor que el problema —el
+     cliente vería el carrito vaciarse sin motivo—, así que se nombra lo que se
+     quitó y por qué. */
+  function avisarDescartes() {
+    let crudo = [];
+    try { crudo = JSON.parse(localStorage.getItem(KEY)) || []; } catch { return; }
+    const fuera = [];
+    crudo.forEach((i) => {
+      const p = findProduct(i.slug);
+      if (p && p.outOfStock && !fuera.includes(p.name)) fuera.push(p.name);
+    });
+    if (!fuera.length) return;
+
+    // Se persiste el carrito ya limpio: si no, el aviso volvería a salir en
+    // cada render mientras las líneas siguieran guardadas.
+    save(load());
+
+    const cfg = window.REACountry.config();
+    const T = window.T || ((x) => x);
+    const texto = fuera.join(', ') + ' ' +
+      T('is not available for shipping to') + ' ' + T(cfg.label) + ', ' +
+      T('so it was removed from your cart.');
+
+    // La ficha de producto se recarga cuando cambia la disponibilidad, y una
+    // recarga se llevaría por delante el aviso justo cuando más falta hace.
+    // Se guarda con su hora: si la página vuelve a cargar enseguida, el aviso
+    // reaparece; si no, esa copia caduca sola y no molesta en la siguiente visita.
+    try { sessionStorage.setItem(AVISO_KEY, JSON.stringify({ texto, ts: Date.now() })); } catch {}
+    pintarAviso(texto);
+  }
+
+  function pintarAviso(texto) {
+    const el = document.createElement('div');
+    el.setAttribute('role', 'status');
+    el.style.cssText = 'position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);z-index:9999;' +
+      'max-width:min(92vw,30rem);background:#1f2937;color:#fff;padding:.85rem 1.1rem;border-radius:10px;' +
+      'font-size:.88rem;line-height:1.5;box-shadow:0 8px 30px rgba(0,0,0,.35);';
+    el.textContent = texto;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 7000);
+  }
+
+  function avisoPendiente() {
+    let g = null;
+    try { g = JSON.parse(sessionStorage.getItem(AVISO_KEY) || 'null'); } catch { return; }
+    if (!g) return;
+    try { sessionStorage.removeItem(AVISO_KEY); } catch {}
+    // Solo si la recarga fue consecuencia del mismo cambio de país.
+    if (Date.now() - g.ts < 5000) pintarAviso(g.texto);
+  }
+
+  window.addEventListener('rea-country-change', () => { avisarDescartes(); render(); });
 
   window.REACart = { add, setQty, remove, open, close, items: () => items, detailed, count, total };
 })();

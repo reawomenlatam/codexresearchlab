@@ -348,6 +348,16 @@
   setEta();
   window.addEventListener('rea-country-change', setEta);
 
+  /* La ficha lee el estado agotado y el tope de unidades una sola vez, al
+     pintarse. Si al cambiar de país ese estado cambia —hay bodegas donde el
+     producto no está— la página entera queda mintiendo: botón activo, tope de
+     cantidad viejo. Repintar pieza por pieza sería fácil de olvidar al tocar
+     la ficha, así que se recarga, y solo cuando de verdad cambió. */
+  window.addEventListener('rea-country-change', () => {
+    const ahora = !!p.outOfStock;
+    if (ahora !== oos) location.reload();
+  });
+
   // Barra fija: aparece cuando el botón principal sale de vista (móvil)
   const mainAddBtn = document.getElementById('pdAdd');
   const sticky = document.getElementById('pdSticky');

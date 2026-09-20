@@ -210,48 +210,20 @@
     authHeaders: () => (isIn() ? { Authorization: 'Bearer ' + state.token } : {}),
   };
 
-  /* ---------- Medición del intento, antes del gate ---------- */
-  // El AddToCart del carrito vive dentro de REACart.add, y el gate envuelve esa
-  // función: para un visitante sin cuenta el evento no llegaba a emitirse nunca.
-  // Resultado medido: desde que el gate entró (13-sep-2026) el píxel dejó de
-  // registrar AddToCart pese a cientos de visitas pagadas, y Meta se quedó sin
-  // señal intermedia con la que optimizar. El intento de añadir al carrito es
-  // una conversión real del embudo, así que se emite aquí y se le pide al
-  // carrito que no lo repita luego (opts.noPixel).
-  function emitirIntento(slug, size, qty) {
-    try {
-      const prod = ((window.REA && window.REA.PRODUCTS) || []).find((p) => p.slug === slug);
-      if (!prod || prod.outOfStock) return;   // el carrito tampoco lo añadiría
-      const talla = prod.sizes && prod.sizes.find((x) => x.label === size);
-      const unidad = talla ? talla.price : 0;
-      const unidades = qty || 1;
-      if (typeof fbq === 'function') {
-        fbq('track', 'AddToCart', {
-          content_ids: [slug], content_name: prod.name, content_type: 'product',
-          value: unidad * unidades, currency: 'USD',
-        });
-      }
-      if (typeof gtag === 'function') {
-        gtag('event', 'add_to_cart', {
-          currency: 'USD', value: unidad * unidades,
-          items: [{ item_id: slug, item_name: prod.name, price: unidad, quantity: unidades }],
-        });
-      }
-    } catch (e) { /* la medición nunca debe romper la compra */ }
-  }
+  /* ---------- Dónde vive el gate (y dónde NO) ----------
+     La cuenta se pide al PAGAR, en `placeOrder()` de cart-page.js, y el servidor
+     la exige de verdad en `acc_require()` (stripe-pay.php / crypto-pay.php).
+     Añadir al carrito es libre: el visitante arma su pedido y solo entonces se
+     le pide registrarse, cuando ya hay algo que perder. El registro probatorio
+     no cambia — la declaración se guarda en cada compra, que es donde ocurre.
 
-  /* ---------- El gate: añadir al carrito pide cuenta ---------- */
-  // Se envuelve el único punto por el que pasa todo: REACart.add. Así da igual
-  // desde qué botón, página o atajo se añada.
-  if (window.REACart && typeof window.REACart.add === 'function') {
-    const add = window.REACart.add.bind(window.REACart);
-    window.REACart.add = function (slug, size, qty, opts) {
-      if (isIn()) return require(() => add(slug, size, qty, opts));
-      emitirIntento(slug, size, qty);
-      const sinRepetir = Object.assign({}, opts, { noPixel: true });
-      return require(() => add(slug, size, qty, sinRepetir));
-    };
-  }
+     Hasta el 2026-09-19 el gate envolvía `window.REACart.add`, y esa decisión
+     costó cinco días de medición: el `fbq('AddToCart')` vive DENTRO de esa
+     función, así que un visitante sin cuenta no lo disparaba nunca y Meta se
+     quedó sin señal intermedia con la que optimizar (gastó en Audience Network).
+     La lección, por si alguien vuelve a necesitar un paso previo al carrito:
+     **cualquier cosa que envuelva `REACart.add` envuelve también la analítica.**
+     Antes de meter nada delante, comprobar qué eventos quedan detrás. */
 
   // Al abrir la tienda, se comprueba que la sesión siga viva (caduca a los 30 días).
   if (isIn()) refresh();

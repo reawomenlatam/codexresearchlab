@@ -57,6 +57,9 @@
     'View product': 'Ver producto',
     'from': 'desde',
     'Out of stock': 'Agotado',
+    // Aviso cuando cambiar de país deja una línea del carrito sin bodega.
+    'is not available for shipping to': 'no está disponible para envío a',
+    'so it was removed from your cart.': 'así que se quitó de tu carrito.',
     'In stock': 'En stock',
     'Only {n} left': 'Quedan {n}',
     '99% purity (HPLC)': '99% de pureza (HPLC)',
@@ -75,6 +78,7 @@
     'Batch-verified with third-party COA': 'Lote verificado con COA de terceros',
     'Batch {n} · third-party COA': 'Lote {n} · COA de terceros',
     'Best value': 'Mejor precio',
+    'Completing the order needs a researcher account. It takes a minute and happens right here, without leaving this page.': 'Para completar el pedido hace falta una cuenta de investigador. Se crea en un minuto, aquí mismo, sin salir de esta página.',
     'Your research declaration is recorded once, and your details prefill at checkout from then on. Takes a minute.': 'Tu declaración de investigación queda registrada una sola vez, y a partir de ahí tus datos se completan solos en el checkout. Toma un minuto.',
     'see the certificate': 'ver el certificado',
     'For research use only.': 'Solo para investigación.',

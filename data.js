@@ -159,11 +159,55 @@ const FAQS_ES = [
 ];
 
 
-// Existencias reales. Con menos de 10 se muestra "Only N left" y la
-// cantidad no puede pasar de ahí. Los que no aparecen aquí van con 25.
-// Los agotados se marcan con outOfStock en el producto, no aquí.
-const STOCK = { 'ahk-cu': 1 };
-PRODUCTS.forEach((p) => { p.stock = STOCK[p.slug] != null ? STOCK[p.slug] : 25; });
+// Existencias reales POR BODEGA. Panamá y Estados Unidos son almacenes
+// distintos: un vial en Panamá no sirve para despachar un pedido de Miami.
+//
+// GENERADO desde el panel de inventario (inventory.php → "Llevar estos
+// números a la tienda"). No editar a mano: lo que aquí se escriba se pierde
+// en la siguiente copia, y peor, dejaría de coincidir con lo que el servidor
+// permite cobrar.
+//
+// Con menos de 10 se muestra "Only N left" y la cantidad no puede pasar de
+// ahí. Con cero, el producto queda agotado para ese país.
+const STOCK_BY_COUNTRY = {
+  PA: { 'ahk-cu': 1, 'bac-water': 0, 'bac-water-10ml': 67, 'bpc-157': 6, 'ghk-cu': 23, 'ipamorelin': 17, 'mots-c': 13, 'nad-plus': 10, 'pt-141': 19, 'retatrutide': 35, 'tirzepatide': 10 },
+  US: { 'ahk-cu': 0, 'bac-water': 140, 'bac-water-10ml': 0, 'bpc-157': 20, 'ghk-cu': 30, 'ipamorelin': 0, 'mots-c': 30, 'nad-plus': 0, 'pt-141': 0, 'retatrutide': 80, 'tirzepatide': 0 },
+};
+
+// Lo que el inventario todavía no controla sigue como antes, con 25: un
+// producto ausente de la tabla no debe quedar bloqueado por omisión.
+const STOCK_DEFAULT = 25;
+
+/* Las páginas de producto y los artículos son los MISMOS para los dos países
+   (build-seo.js genera un solo HTML). Para ese marcado vale el mejor caso:
+   algo con existencias en cualquier bodega está disponible. Quien decide de
+   verdad es el servidor cuando se va a cobrar. */
+STOCK_BY_COUNTRY.ANY = PRODUCTS.reduce((acc, p) => {
+  const pa = STOCK_BY_COUNTRY.PA[p.slug], us = STOCK_BY_COUNTRY.US[p.slug];
+  if (pa != null || us != null) acc[p.slug] = Math.max(pa || 0, us || 0);
+  return acc;
+}, {});
+
+// El catálogo puede marcar un producto agotado a mano (outOfStock en el
+// producto). Esa decisión manda siempre sobre el conteo.
+PRODUCTS.forEach((p) => { p.catalogOut = !!p.outOfStock; });
+
+/* Aplica las existencias de una bodega. Se llama al cargar y cada vez que el
+   visitante cambia de país, desde country.js. Además de p.stock ajusta
+   p.outOfStock, que es lo que ya respetan el catálogo, la ficha y el carrito:
+   así un cero en la bodega bloquea la compra sin tocar cada vista. */
+function applyStock(code) {
+  const tabla = STOCK_BY_COUNTRY[code] || STOCK_BY_COUNTRY.ANY || {};
+  PRODUCTS.forEach((p) => {
+    const n = tabla[p.slug];
+    p.stock = n != null ? n : STOCK_DEFAULT;
+    p.outOfStock = p.catalogOut || p.stock === 0;
+  });
+}
+
+// Base hasta que country.js diga cuál es el país: el mejor caso, para que una
+// página que se pinta antes de resolver el país no marque nada agotado de más.
+applyStock('ANY');
 
 // ---------------------------------------------------------------------------
 // REBAJA GENERAL DE LA TIENDA
@@ -341,5 +385,6 @@ const BUSINESS = {
 };
 
 window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
+  STOCK_BY_COUNTRY, applyStock,
   WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

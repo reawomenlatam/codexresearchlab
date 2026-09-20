@@ -58,6 +58,9 @@
     apply();
   });
   searchEl.addEventListener('input', () => { state.q = searchEl.value.trim(); apply(); });
+  // Otra bodega, otras existencias: hay que repintar para que los agotados de
+  // ese país se marquen como tales.
+  window.addEventListener('rea-country-change', apply);
   sortEl.addEventListener('change', () => { state.sort = sortEl.value; apply(); });
 
   ui.wireAddButtons(grid);

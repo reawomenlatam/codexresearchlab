@@ -49,7 +49,8 @@
   // Sin esto, acaba de escribir su nombre y correo y el checkout se los vuelve a
   // pedir en blanco.
   window.addEventListener('rea-account-change', () => {
-    if (prefillFromAccount()) render();
+    prefillFromAccount();
+    render();
   });
   const resetBuyer = () => Object.keys(buyer).forEach((k) => { buyer[k] = ''; });
   let placing = false;      // evita doble envío
@@ -208,6 +209,7 @@
           <span>${T('I confirm I am 21 or older and that I am purchasing these products for laboratory research use only. They are not for human or animal consumption.')} <a href="usage/" target="_blank" rel="noopener">${T('Read the usage notice')}</a></span>
         </label>
 
+        ${ACC.isIn() ? '' : `<p class="co-acc-hint">${T('Completing the order needs a researcher account. It takes a minute and happens right here, without leaving this page.')}</p>`}
         <p class="co-msg" id="coMsg" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary sum-checkout" id="coSubmit">${c.icon}${c.btn}</button>
         <p class="sum-note" id="coNote">${c.note}</p>

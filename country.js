@@ -40,5 +40,16 @@
     window.dispatchEvent(new CustomEvent('rea-cart-change'));
   }
 
+  /* Las existencias dependen de la bodega, así que el país no solo cambia el
+     envío: cambia lo que se puede comprar. Se aplica aquí porque data.js se
+     carga antes que este archivo y todavía no sabe el país. */
+  function syncStock() {
+    if (window.REA && typeof window.REA.applyStock === 'function') window.REA.applyStock(code());
+  }
+  syncStock();
+  // Va antes que los listeners de las vistas (este archivo se carga primero),
+  // así que cuando ellas repintan, el stock ya está actualizado.
+  window.addEventListener('rea-country-change', syncStock);
+
   window.REACountry = { get, code, config, set, detect };
 })();

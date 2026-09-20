@@ -78,8 +78,14 @@
   // ---------- Render de la home ----------
   const grid = document.getElementById('productsGrid');
   if (grid) {
-    grid.innerHTML = PRODUCTS.slice(0, 8).map(window.REAui.productCard).join('');
-    window.REAui.wireAddButtons(grid);
+    const paintGrid = () => {
+      grid.innerHTML = PRODUCTS.slice(0, 8).map(window.REAui.productCard).join('');
+      window.REAui.wireAddButtons(grid);
+    };
+    paintGrid();
+    // Cambiar de país cambia la bodega, y con ella qué está agotado: sin esto
+    // las tarjetas seguirían ofreciendo algo que ya no se puede comprar.
+    window.addEventListener('rea-country-change', paintGrid);
   }
 
   const faqList = document.getElementById('faqList');
