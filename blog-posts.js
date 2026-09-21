@@ -290,6 +290,44 @@
         <h2>Putting it together</h2>
         <p>Read as a whole, a good COA answers three questions: which batch is this, how pure is it, and is it the right molecule. If a document only answers one of those, it is incomplete. At Codex Research the full COA is available on request before you pay, and any vial can be checked by its batch number.</p>
 
+        <h2>The other fields a complete COA carries</h2>
+        <p>Batch, purity and identity are the headline items, but a thorough certificate reports more than three lines. Depending on the compound, you may also see:</p>
+        <ul>
+          <li><b>Product name and identifiers,</b> including a <a href="article/cas-numbers-explained/">CAS number</a> where one exists, so the document cannot be confused with a similar compound.</li>
+          <li><b>Appearance:</b> a short qualitative description of the material, usually a lyophilised powder.</li>
+          <li><b>Net peptide content:</b> how much of the powder is actually peptide rather than salt and water.</li>
+          <li><b>Water content,</b> usually by Karl Fischer titration, because lyophilised peptides take up moisture.</li>
+          <li><b>Counterion content:</b> trifluoroacetate or acetate left over from purification.</li>
+          <li><b>Residual solvents:</b> traces of the solvents used in synthesis and purification.</li>
+          <li><b>Bacterial endotoxin,</b> reported when the intended laboratory work is sensitive to it, such as cell-based assays.</li>
+          <li><b>Methods, date and signature:</b> which procedure produced each number, when, and who is answerable for it.</li>
+        </ul>
+        <p>Not every certificate carries every line. What matters is that the ones it does carry are numbers tied to a named method, not adjectives.</p>
+
+        <h2>Chromatographic purity is not net peptide content</h2>
+        <p>This is the most common misreading of a peptide COA. Chromatographic purity asks a question about the peaks: of everything the method detected, what share was the target peptide? Net peptide content asks a question about the powder: of the material you weighed out, what share is peptide at all?</p>
+        <p>The gap between them is real. Peptides purified by reversed-phase HPLC are typically isolated as salts, so part of the powder is counterion and part is absorbed water. A batch can be 99 percent pure by HPLC and still be well under 99 percent peptide by mass, with no contradiction between the two figures. They measure different things, and a certificate reporting only one is not wrong, just incomplete.</p>
+
+        <h2>Reading the chromatogram itself</h2>
+        <p>If the COA includes the chromatogram and not only the percentage, look at the trace and not just the number beside it. One tall, symmetrical peak on a flat baseline is the picture you want. Small peaks near the main one are common in peptide synthesis and usually correspond to closely related species, such as truncated or modified sequences the column separates only narrowly. A secondary peak sitting very close to the main one tells you the method had to work to resolve it, which is why the method conditions belong on the certificate.</p>
+
+        <h2>What mass spectrometry adds that HPLC cannot</h2>
+        <p>HPLC separates and quantifies; it does not name. Two different compounds can elute at a similar time under the same conditions, and a UV detector reports both as peaks without opinion. Mass spectrometry answers what chromatography leaves open by measuring mass directly, so the observed value can be compared with the mass calculated from the sequence, and tandem approaches fragment the molecule to support the sequence itself. That is why purity without an identity method is half a document.</p>
+
+        <h2>Who signs it, and why that matters</h2>
+        <p>A certificate is a claim by whoever issued it, so independent testing matters because it separates the party making the claim from the party selling the material. Laboratories working to a recognised competence standard are assessed against defined criteria for competence and impartiality, and accreditation covers a specific list of methods rather than testing in general. The useful question is not only what the number says, but who produced it and under which method.</p>
+
+        <h2>Red flags on a certificate</h2>
+        <ul>
+          <li><b>No batch or lot number,</b> or one that does not match the vial: the document describes someone else's material.</li>
+          <li><b>No analysis date,</b> so the results cannot be tied to a point in that batch's life.</li>
+          <li><b>No named methods.</b> "Purity: 99%" with no procedure behind it is a statement, not a result.</li>
+          <li><b>No laboratory identity or signature,</b> which leaves no author to stand behind it.</li>
+          <li><b>A low-resolution image</b> in which the chromatogram axes and header cannot be read.</li>
+          <li><b>The same document for every product,</b> which means it is not batch-specific at all.</li>
+        </ul>
+        <p>At Codex Research every batch is tested by an independent laboratory using HPLC and mass spectrometry, the certificate is specific to that batch, and the full document is sent on request before you pay. The batch number on the label follows the format CDX-YYMM-NNN, and that string is what ties the vial to its paperwork. For checking a vial you already have, see our guide to <a href="article/verify-research-peptide-batch-coa-panama/">verifying a batch and its COA</a>.</p>
+
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
@@ -297,8 +335,17 @@
         { q: 'What is on a peptide certificate of analysis?', a: 'A COA reports the batch or lot number, the purity (usually from HPLC), the identity (usually from mass spectrometry), the analysis date, and the testing methods used. Together these say which batch it is, how pure it is, and whether it is the right molecule.' },
         { q: 'Why does the batch number on a COA matter?', a: 'The batch number links the document to a specific vial. If the number on the COA does not match the number on the label, the certificate does not describe your material. It is also the number used to verify a batch is genuine.' },
         { q: 'Is a purity percentage enough on its own?', a: 'No. Purity tells you how much of the sample is one main component, but not that the component is the correct peptide. A complete COA pairs HPLC purity with a mass spectrometry identity check.' },
+        { q: 'What is the difference between HPLC purity and net peptide content?', a: 'HPLC purity is the share of the detected peaks that corresponds to the target peptide. Net peptide content is the share of the powder that is peptide rather than counterion and absorbed water. A batch can be 99 percent pure by HPLC and still be well below 99 percent peptide by mass; the two figures measure different things.' },
+        { q: 'Why does a COA list counterions such as TFA or acetate?', a: 'Peptides purified by reversed-phase HPLC are usually isolated as salts, so trifluoroacetate or acetate remains bound to the material. It is reported because it is part of the weighed powder and because it is a known residual of the purification process.' },
+        { q: 'What are the warning signs of an unreliable certificate of analysis?', a: 'No batch number, or one that does not match the vial; no analysis date; no named test methods; no identified laboratory or signature; an image too low in resolution to read the chromatogram; or the same document reused across every product instead of being specific to one batch.' },
       ],
-      references: [],
+      references: [
+        { text: 'Q6A Specifications: Test Procedures and Acceptance Criteria for New Drug Substances and New Drug Products: Chemical Substances. ICH guidance, U.S. Food and Drug Administration.', url: 'https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q6a-specifications-test-procedures-and-acceptance-criteria-new-drug-substances-and-new-drug-products' },
+        { text: 'General Chapter 1503, Quality Attributes of Synthetic Peptide Drug Substances. United States Pharmacopeia (USP-NF).', url: 'https://doi.usp.org/USPNF/USPNF_M12935_02_01.html' },
+        { text: 'General Chapter 503.1, Trifluoroacetic Acid (TFA) in Peptides. United States Pharmacopeia (USP-NF).', url: 'https://doi.usp.org/USPNF/USPNF_M9393_01_01.html' },
+        { text: 'Quality Control of Amino Acids and Peptides: A Guide. Bachem Knowledge Center.', url: 'https://www.bachem.com/knowledge-center/quality-control-of-amino-acids-peptides-a-guide/' },
+        { text: 'Elsayed YY, Kuhl T, Imhof D. Regulatory Guidelines for the Analysis of Therapeutic Peptides and Proteins. Journal of Peptide Science, 2025.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11806371/' },
+      ],
       cta: '<a href="verify/">Verify a batch number</a> or browse the <a href="catalog/">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
       related: ['peptide-purity-hplc-explained', 'mass-spectrometry-peptide-research'],
     },
@@ -1077,6 +1124,33 @@
         <h2>Buying in Panama</h2>
         <p>In Panama, you can ask for the COA before you order, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
+        <h2>Start from the label, not from the listing</h2>
+        <p>Verification runs in one direction: from the vial in your hand back to the paperwork. Every Codex Research vial carries a batch number in the format CDX-YYMM-NNN, and that string is the key to everything else. Read it off the label first, then check that the same string appears on the certificate you were sent. A COA that does not name your batch is a document about some other material, however impressive the numbers on it look.</p>
+
+        <h2>Ask for the certificate before you pay, not after</h2>
+        <p>The full COA is available on request before payment, which changes what you are able to do with it. Before an order is placed you can ask which batch you would receive, ask for that batch's certificate rather than a sample document, and read it while you still have the option to walk away. After payment the same certificate is only a record. The sequence matters more than the document.</p>
+        <p>Three questions cover most of it: which batch does this certificate belong to, which methods produced these numbers, and who ran them. A supplier that can answer all three in writing is operating differently from one that sends a screenshot.</p>
+
+        <h2>A one-minute check before you order</h2>
+        <ul>
+          <li><b>Batch match:</b> the number on the certificate is character-for-character the number on the label.</li>
+          <li><b>A date:</b> the certificate says when the analysis was performed, not merely when the file was created.</li>
+          <li><b>Named methods:</b> HPLC and mass spectrometry are identified as the procedures behind the figures, with numeric results rather than the word "pass".</li>
+          <li><b>An author:</b> the testing laboratory is identified and the document is signed or otherwise attributable.</li>
+          <li><b>Legibility:</b> you can actually read the header and the chromatogram, rather than a compressed image of them.</li>
+          <li><b>One batch, one document:</b> the certificate is specific to that lot, not a single file reused across a catalogue.</li>
+        </ul>
+        <p>What each of those fields means, and the difference between chromatographic purity and net peptide content, is covered in detail in <a href="article/how-to-read-a-certificate-of-analysis/">how to read a certificate of analysis</a>. This guide is about confirming that the certificate in front of you belongs to the vial in front of you.</p>
+
+        <h2>What makes testing independent</h2>
+        <p>Third-party testing means the laboratory reporting the result is not the party selling the material. That separation is the entire value of the arrangement, and it is why the laboratory's identity belongs on the certificate rather than being described in the abstract. Recognised competence standards for testing laboratories are built around exactly these two ideas, competence and impartiality, and where a laboratory holds accreditation it applies to a defined list of methods rather than to testing in general. At Codex Research, every batch is tested by an independent laboratory using HPLC and mass spectrometry.</p>
+
+        <h2>Verifying a batch in Panama</h2>
+        <p>Local delivery in Panama City makes one step easier than it is anywhere else: you can compare the printed label against the certificate at the moment of handover, with the vial in your hand rather than in a photograph. In practice the useful order is to request the COA before ordering, read it, place the order, and then confirm the label at delivery. The verification is the same everywhere; the difference is that here the last step happens face to face instead of after a customs queue.</p>
+
+        <h2>If the number does not match</h2>
+        <p>A mismatch is not automatically evidence of a bad batch. Transcription errors happen, and a number can be misread off a small label. The response is the same either way: do not accept an explanation given verbally, and ask for the certificate that carries the exact string on your vial. If a supplier cannot produce a batch-specific document for the batch you were sent, the material is effectively untested from your side of the transaction, whatever was tested upstream. You can also enter the number on the <a href="verify/">batch verification page</a> or send it to the team to check.</p>
+
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
@@ -1084,8 +1158,17 @@
         { q: 'What is a certificate of analysis (COA)?', a: 'A COA is a laboratory document that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides it is based on independent HPLC and mass spectrometry testing and is tied to the batch number on the vial.' },
         { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify/. A valid number confirms the product and that it is on record. The full COA is also available on request before you pay.' },
         { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
+        { q: 'Can I see the certificate of analysis before I pay?', a: 'Yes. The full batch COA is sent on request before payment. Ask which batch you would receive and request that batch\u2019s certificate specifically, rather than a sample document, so you can read it while you still have the option not to order.' },
+        { q: 'What does a Codex Research batch number look like?', a: 'Batch numbers are printed on the vial label in the format CDX-YYMM-NNN. That string is what links the vial to its certificate of analysis, so it should appear character-for-character on the COA you are sent.' },
+        { q: 'What should I do if the batch number does not match the COA?', a: 'Do not accept a verbal explanation. Ask for the certificate that carries the exact number printed on your vial, since a mismatch may simply be a transcription error. You can also enter the number on the batch verification page or send it to the team to check.' },
       ],
-      references: [],
+      references: [
+        { text: 'Q7A Good Manufacturing Practice Guidance for Active Pharmaceutical Ingredients. ICH guidance, U.S. Food and Drug Administration.', url: 'https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q7a-good-manufacturing-practice-guidance-active-pharmaceutical-ingredients' },
+        { text: 'WHO model certificate of analysis. WHO Technical Report Series 1010, Annex 4, World Health Organization, 2018.', url: 'https://www.who.int/publications/m/item/trs1010-annex4' },
+        { text: 'ISO/IEC 17025, General requirements for the competence of testing and calibration laboratories. International Organization for Standardization.', url: 'https://help.iso.org/en/articles/376299-iso-iec-17025-general-requirements-for-the-competence-of-testing-and-calibration-laboratories' },
+        { text: 'Frequently Asked Questions: scope of accreditation and the ILAC MRA Signatory Search. International Laboratory Accreditation Cooperation (ILAC).', url: 'https://ilac.org/about-ilac/faqs/' },
+        { text: 'ICH Q2(R2) Validation of analytical procedures, scientific guideline. European Medicines Agency.', url: 'https://www.ema.europa.eu/en/ich-q2r2-validation-analytical-procedures-scientific-guideline' },
+      ],
       cta: '<a href="verify/">Verify a batch number</a> or browse the <a href="catalog/">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
       related: ['buy-research-peptides-panama', 'mass-spectrometry-peptide-research'],
     },
