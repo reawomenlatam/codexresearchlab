@@ -4,6 +4,10 @@
 (function () {
   const REA = window.REA || {};
   const WA = REA.WHATSAPP;
+  // Traducción: la clave es la frase en inglés y lo que falte cae en inglés.
+  // El mensaje que se manda por WhatsApp NO se traduce a propósito: lo lee el
+  // equipo, igual que lo que se envía a order.php.
+  const T = window.T || ((x) => x);
   const form = document.getElementById('verifyForm');
   const input = document.getElementById('verifyInput');
   const out = document.getElementById('verifyResult');
@@ -25,21 +29,21 @@
     const waText = encodeURIComponent('Hi Codex Research, I’d like the full COA for batch ' + code +
       (withProduct ? ' (' + b.product + ' ' + (b.mg || '') + ')' : '') + '.');
     const rows = withProduct
-      ? `<div><dt>Product</dt><dd><a href="product/${esc(b.slug)}/">${esc(b.product)}</a></dd></div>
-         <div><dt>Strength</dt><dd>${esc(b.mg)}</dd></div>
-         <div><dt>Status</dt><dd>Genuine, on record</dd></div>
-         <div><dt>Testing</dt><dd>HPLC + mass spectrometry</dd></div>`
-      : `<div><dt>Status</dt><dd>Genuine, on record</dd></div>
-         <div><dt>Testing</dt><dd>HPLC + mass spectrometry</dd></div>
-         <div><dt>Certificate</dt><dd>Available on request</dd></div>`;
+      ? `<div><dt>${T('Product')}</dt><dd><a href="product/${esc(b.slug)}/">${esc(b.product)}</a></dd></div>
+         <div><dt>${T('Strength')}</dt><dd>${esc(b.mg)}</dd></div>
+         <div><dt>${T('Status')}</dt><dd>${T('Genuine, on record')}</dd></div>
+         <div><dt>${T('Testing')}</dt><dd>${T('HPLC + mass spectrometry')}</dd></div>`
+      : `<div><dt>${T('Status')}</dt><dd>${T('Genuine, on record')}</dd></div>
+         <div><dt>${T('Testing')}</dt><dd>${T('HPLC + mass spectrometry')}</dd></div>
+         <div><dt>${T('Certificate')}</dt><dd>${T('Available on request')}</dd></div>`;
     return `
       <div class="verify-card ok">
         <div class="verify-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h2>Batch verified</h2>
-        <p class="verify-sub">Batch <b>${esc(code)}</b> is a genuine Codex Research batch.</p>
+        <h2>${T('Batch verified')}</h2>
+        <p class="verify-sub">${T('Batch')} <b>${esc(code)}</b> ${T('is a genuine Codex Research batch.')}</p>
         <dl class="verify-rows">${rows}</dl>
-        <p class="verify-help">Want the full certificate of analysis? Request it on WhatsApp and we’ll send it right over.</p>
-        <a class="btn btn-primary verify-cta" href="https://wa.me/${WA}?text=${waText}" target="_blank" rel="noopener">Request the full COA on WhatsApp</a>
+        <p class="verify-help">${T('Want the full certificate of analysis? Request it on WhatsApp and we’ll send it right over.')}</p>
+        <a class="btn btn-primary verify-cta" href="https://wa.me/${WA}?text=${waText}" target="_blank" rel="noopener">${T('Request the full COA on WhatsApp')}</a>
       </div>`;
   }
 
@@ -48,9 +52,9 @@
     return `
       <div class="verify-card err">
         <div class="verify-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <h2>We couldn’t find that batch</h2>
-        <p class="verify-sub">No record for <b>${esc(code)}</b>. Double-check the number on your vial label, or send it to us and we’ll verify it for you.</p>
-        <a class="btn btn-primary verify-cta" href="https://wa.me/${WA}?text=${waText}" target="_blank" rel="noopener">Verify with our team on WhatsApp</a>
+        <h2>${T('We couldn’t find that batch')}</h2>
+        <p class="verify-sub">${T('No record for')} <b>${esc(code)}</b>. ${T('Double-check the number on your vial label, or send it to us and we’ll verify it for you.')}</p>
+        <a class="btn btn-primary verify-cta" href="https://wa.me/${WA}?text=${waText}" target="_blank" rel="noopener">${T('Verify with our team on WhatsApp')}</a>
       </div>`;
   }
 

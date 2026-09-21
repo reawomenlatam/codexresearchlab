@@ -10,6 +10,26 @@
 */
 (function () {
   const ES = {
+    // --- Verificador de lote (verify.js) ---
+    'Product': 'Producto',
+    'Strength': 'Concentración',
+    'Status': 'Estado',
+    'Genuine, on record': 'Auténtico, registrado',
+    'Testing': 'Análisis',
+    'HPLC + mass spectrometry': 'HPLC + espectrometría de masas',
+    'Certificate': 'Certificado',
+    'Available on request': 'Disponible a solicitud',
+    'Batch verified': 'Lote verificado',
+    'Batch': 'Lote',
+    'is a genuine Codex Research batch.': 'es un lote auténtico de Codex Research.',
+    'Want the full certificate of analysis? Request it on WhatsApp and we\u2019ll send it right over.':
+      '¿Quieres el certificado de análisis completo? Pídelo por WhatsApp y te lo enviamos enseguida.',
+    'Request the full COA on WhatsApp': 'Pedir el COA completo por WhatsApp',
+    'Verify with our team on WhatsApp': 'Verificarlo con el equipo por WhatsApp',
+    'We couldn\u2019t find that batch': 'No encontramos ese lote',
+    'No record for': 'Sin registro de',
+    'Double-check the number on your vial label, or send it to us and we\u2019ll verify it for you.':
+      'Revisa el número impreso en la etiqueta del vial, o envíanoslo y lo verificamos por ti.',
     'Home': 'Inicio',
     'Products': 'Productos',
     'Verify batch': 'Verificar lote',
@@ -329,7 +349,7 @@
   // Enlaces internos: sólo las rutas que existen traducidas llevan el prefijo
   // /es/. El blog, la calculadora y los legales siguen en inglés por ahora, así
   // que enlazarlos con prefijo daría 404.
-  const ES_PAGES = ['catalog/', 'cart/'];
+  const ES_PAGES = ['catalog/', 'cart/', 'verify/'];
   function url(p) {
     if (lang !== 'es') return p;
     if (ES_PAGES.indexOf(p) >= 0 || /^product\//.test(p)) return 'es/' + p;

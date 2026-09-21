@@ -7,16 +7,18 @@
   const T = window.T;
   const U = window.REAi18n.url;
   const LANG = window.REAi18n.lang;
-  // Las páginas en español viven bajo /es/ y llevan <base href="/es/">, así que
-  // los enlaces relativos ("catalog/") ya resuelven solos. Sólo la raíz y los
-  // anclas de la portada necesitan saber en qué idioma estamos.
+  // OJO: las páginas en español llevan <base href="/">, no "/es/" (lo necesitan
+  // para que styles.css y los scripts no den 404). Por eso un enlace relativo
+  // como "blog/" resuelve a /blog/, la versión inglesa: todo enlace interno
+  // tiene que pasar por U(), que añade el prefijo /es/ sólo a las rutas que
+  // existen traducidas. La raíz y los anclas usan HOME.
   const HOME = LANG === 'es' ? '/es/' : '/';
 
   const link = (href, label, key) =>
     `<a href="${href}" class="${nav === key ? 'active' : ''}">${label}</a>`;
 
   // Páginas que existen en los dos idiomas: sólo ahí se ofrece el cambio.
-  const PAIRED = [/^\/$/, /^\/catalog\/$/, /^\/cart\/$/, /^\/product\/[^/]+\/$/];
+  const PAIRED = [/^\/$/, /^\/catalog\/$/, /^\/cart\/$/, /^\/verify\/$/, /^\/product\/[^/]+\/$/];
   function altLang() {
     const p = location.pathname;
     if (LANG === 'es') {
@@ -40,8 +42,8 @@
         <nav class="nav">
           ${link(HOME, T('Home'), 'inicio')}
           ${link(U('catalog/'), T('Products'), 'productos')}
-          ${link('verify/', T('Verify batch'), 'verify')}
-          ${link('blog/', T('Blog'), 'blog')}
+          ${link(U('verify/'), T('Verify batch'), 'verify')}
+          ${link(U('blog/'), T('Blog'), 'blog')}
           ${link(HOME + '#proceso', T('Process'), 'proceso')}
           ${link(HOME + '#faq', T('FAQ'), 'faq')}
         </nav>
@@ -81,8 +83,8 @@
       </div>
       ${link(HOME, T('Home'), 'inicio')}
       ${link(U('catalog/'), T('Products'), 'productos')}
-      ${link('verify/', T('Verify batch'), 'verify')}
-      ${link('blog/', T('Blog'), 'blog')}
+      ${link(U('verify/'), T('Verify batch'), 'verify')}
+      ${link(U('blog/'), T('Blog'), 'blog')}
       ${link(HOME + '#proceso', T('Process'), 'proceso')}
       ${link(HOME + '#faq', T('FAQ'), 'faq')}
       ${alt ? `<a class="mobile-nav-lang" href="${alt.href}" hreflang="${alt.code.toLowerCase()}">${alt.label}</a>` : ''}
