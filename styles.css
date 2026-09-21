@@ -1548,3 +1548,26 @@ a, button, input, select, textarea, label, summary,
 /* Aviso de cuenta en el checkout: el gate vive en el botón de pagar, así que se
    anuncia antes para que el último clic no sea una sorpresa. */
 .co-acc-hint { margin: 0 0 .7rem; font-size: .82rem; line-height: 1.45; color: var(--muted); background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .6rem .8rem; }
+
+/* Puente entre el blog y la tienda: enlace de la ficha a su artículo y del
+   artículo a su ficha. Heredaban el color del texto y sin subrayado, así que no
+   se distinguían de un párrafo normal. */
+.pd-related-reading { margin-top: 1.4rem; }
+.pd-related-reading h3 { margin-bottom: .35rem; }
+.pd-related-reading a,
+.article-product a {
+  color: var(--cta);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.pd-related-reading a:hover,
+.article-product a:hover { text-decoration-thickness: 2px; }
+.article-product {
+  margin: 1.8rem 0;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid rgba(120,130,140,.22);
+  border-radius: 10px;
+  background: var(--bg-soft);
+}
+.article-product h2 { font-size: 1.02rem; margin: 0 0 .4rem; }
+.article-product p { margin: 0; }

@@ -112,6 +112,20 @@
     `<li><a href="${r.url}" target="_blank" rel="noopener nofollow">${r.text}</a></li>`).join('');
 
   // ---------- Render ----------
+  // Enlace a la ficha del compuesto. El HTML horneado ya lo trae, pero este
+  // render lo reemplaza entero, así que hay que repetirlo aquí. El slug lo
+  // declara build-seo.js en el bundle del artículo, para no duplicar el mapa.
+  const prodSlug = window.REA.POST_PRODUCT;
+  const prod = prodSlug && (window.REA.PRODUCTS || []).find((x) => x.slug === prodSlug);
+  const prodHtml = prod
+    ? `<section class="article-product">
+        <h2>The compound at Codex Research</h2>
+        <p><a href="product/${prod.slug}/">${prod.alias
+            ? `${prod.alias.charAt(0).toUpperCase() + prod.alias.slice(1)} (listed as ${prod.name}), ${prod.mg} per vial`
+            : `${prod.name}, ${prod.mg} per vial`}</a> — batch-verified, with its certificate of analysis.</p>
+      </section>`
+    : '';
+
   main.innerHTML = `
     <article>
       <div class="container">
@@ -131,6 +145,7 @@
       <div class="container article-layout">
         <div class="article-body">
           ${p.body}
+          ${prodHtml}
 
           <section class="article-faq">
             <h2>Frequently asked questions</h2>
