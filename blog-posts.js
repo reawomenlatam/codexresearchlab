@@ -1296,7 +1296,7 @@
           <li>Assess purity and identify by-products in synthetic preparations.</li>
           <li>Sequence peptides through fragmentation analysis.</li>
         </ul>
-        <p>${cite('Reference: Yates et al., 2009', 'https://doi.org/10.1146/annurev.biochem.78.081307.110406').trim()}</p>
+        <p>${cite('Reference: Yates et al., 2009', 'https://doi.org/10.1146/annurev-bioeng-061008-124934').trim()}</p>
 
         <h2>Common approaches in peptide MS</h2>
         <p>Several methods are frequently applied in peptide analysis:</p>
@@ -1324,7 +1324,7 @@
       ],
       references: [
         { text: 'Aebersold, R., &amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198-207.', url: 'https://doi.org/10.1038/nature01511' },
-        { text: 'Yates, J.R., et al. (2009). Proteomics by mass spectrometry: approaches, advances, and applications. Annual Review of Biochemistry, 78, 243-272.', url: 'https://doi.org/10.1146/annurev.biochem.78.081307.110406' },
+        { text: 'Yates, J.R., Ruse, C.I., &amp; Nakorchevsky, A. (2009). Proteomics by mass spectrometry: approaches, advances, and applications. Annual Review of Biomedical Engineering, 11, 49-79.', url: 'https://doi.org/10.1146/annurev-bioeng-061008-124934' },
         { text: 'Domon, B., &amp; Aebersold, R. (2006). Mass spectrometry and protein analysis. Science, 312(5771), 212-217.', url: 'https://doi.org/10.1126/science.1111443' },
         { text: 'Aebersold, R., &amp; Mann, M. (2016). Mass-spectrometric exploration of proteome structure and function. Nature, 537, 347-355.', url: 'https://doi.org/10.1038/nature19949' },
       ],
@@ -1347,7 +1347,7 @@
         <p class="lead">High Performance Liquid Chromatography (HPLC) is an analytical technique used to separate, identify, and quantify the components of a mixture. A high-pressure pump pushes a liquid sample through a column packed with a stationary phase, and each compound exits at a different retention time, allowing precise analysis of peptides and other molecules.</p>
 
         <h2>How does HPLC work?</h2>
-        <p>HPLC passes a liquid sample through a column packed with a stationary phase while a high-pressure pump drives the solvent, known as the mobile phase. Different compounds interact with the stationary phase at varying strengths, so they exit the column at different times. This principle is called retention time.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
+        <p>HPLC passes a liquid sample through a column packed with a stationary phase while a high-pressure pump drives the solvent, known as the mobile phase. Different compounds interact with the stationary phase at varying strengths, so they exit the column at different times. This principle is called retention time.${cite('Reference: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
 
         <h2>How is HPLC used in research?</h2>
         <p>HPLC is applied across many scientific fields. In peptide and pharmaceutical research it is commonly used to:</p>
@@ -1357,7 +1357,7 @@
           <li>Detect small concentrations of impurities.</li>
           <li>Prepare samples for further structural or biological testing, often paired with <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>.</li>
         </ul>
-        <p>${cite('Reference: Kazakevich &amp; LoBrutto, 2007', 'https://doi.org/10.1016/B978-0-12-370540-2.X5000-2').trim()}</p>
+        <p>${cite('Reference: Kazakevich &amp; LoBrutto, 2007', 'https://doi.org/10.1002/0470087951').trim()}</p>
 
         <h2>Key features of HPLC</h2>
         <p>Researchers value HPLC because it offers:</p>
@@ -1367,10 +1367,10 @@
           <li><b>Versatility:</b> can analyze peptides, proteins, metabolites, and small organic molecules.</li>
           <li><b>Scalability:</b> methods adapt from microgram-level analysis to preparative purification.</li>
         </ul>
-        <p>${cite('Reference: Swartz &amp; Krull, 2012', 'https://doi.org/10.1002/9781118152547').trim()}</p>
+        <p>${cite('Reference: Swartz &amp; Krull, 2012', 'https://doi.org/10.1201/b12039').trim()}</p>
 
         <h2>What researchers have observed</h2>
-        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article/lyophilization-freeze-drying/">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1007/978-1-4614-7230-7')}</p>
+        <p>Studies using HPLC consistently report its value in quality control and characterization of peptides. Peptide research often uses reverse-phase HPLC to confirm purity above 98 to 99 percent, while analytical runs let scientists detect even trace contaminants. Beyond peptides, HPLC has been applied to track metabolic intermediates, assess drug stability, and monitor chemical synthesis efficiency. It is also used to check reference standards prepared by <a href="article/lyophilization-freeze-drying/">lyophilization</a>.${cite('Reference: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
       `,
       faq: [
         { q: 'What is HPLC used for?', a: 'HPLC is used to separate, identify, and quantify the components of a mixture. In peptide research it verifies purity and detects impurities.' },
@@ -1378,9 +1378,9 @@
         { q: 'What purity can HPLC confirm for peptides?', a: 'Reverse-phase HPLC is commonly used to confirm peptide purity above 98 to 99 percent and to detect trace contaminants.' },
       ],
       references: [
-        { text: 'Dong, M.W. (2013). Modern HPLC for Practicing Scientists. Springer.', url: 'https://doi.org/10.1007/978-1-4614-7230-7' },
-        { text: 'Kazakevich, Y.V., &amp; LoBrutto, R. (2007). HPLC for Pharmaceutical Scientists. Academic Press.', url: 'https://doi.org/10.1016/B978-0-12-370540-2.X5000-2' },
-        { text: 'Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Techniques in HPLC. Wiley.', url: 'https://doi.org/10.1002/9781118152547' },
+        { text: 'Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.', url: 'https://doi.org/10.1002/0471973106' },
+        { text: 'Kazakevich, Y.V., &amp; LoBrutto, R. (Eds.). (2006). HPLC for Pharmaceutical Scientists. Wiley.', url: 'https://doi.org/10.1002/0470087951' },
+        { text: 'Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.', url: 'https://doi.org/10.1201/b12039' },
       ],
       cta: 'Browse <a href="catalog/">research peptides</a> verified by HPLC for purity above 98 percent.',
       related: ['mass-spectrometry-peptide-research', 'peptide-synthesis', 'lyophilization-freeze-drying'],
@@ -1402,10 +1402,10 @@
         <p class="lead">Amino acids, peptides, and proteins differ mainly in size and structure. Amino acids are single molecules and the building blocks. Peptides are short chains of 2 to about 50 amino acids. Proteins are long chains, often hundreds of residues, that fold into complex three-dimensional structures with specialized functions.</p>
 
         <h2>What are amino acids?</h2>
-        <p>Amino acids are the building blocks of peptides and proteins. Each amino acid has a central carbon atom bonded to an amino group, a carboxyl group, a hydrogen atom, and a unique side chain, called the R-group. These side chains give each amino acid distinct chemical properties, from polar to nonpolar and acidic to basic.${cite('Reference: Nelson &amp; Cox, 2017', 'https://doi.org/10.1007/978-3-319-56512-5')}</p>
+        <p>Amino acids are the building blocks of peptides and proteins. Each amino acid has a central carbon atom bonded to an amino group, a carboxyl group, a hydrogen atom, and a unique side chain, called the R-group. These side chains give each amino acid distinct chemical properties, from polar to nonpolar and acidic to basic.</p>
 
         <h2>What are peptides?</h2>
-        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article/peptide-synthesis/">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article/what-is-mots-c/">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptides are short chains of amino acids linked by peptide bonds. A peptide bond forms when the carboxyl group of one amino acid reacts with the amino group of another, releasing water. In research, peptides are often made through <a href="article/peptide-synthesis/">peptide synthesis</a> to study signaling pathways, enzyme interactions, and structural motifs. Peptides are typically defined as chains of 2 to about 50 amino acids, though the exact cutoff varies. A well-studied example is <a href="article/what-is-mots-c/">MOTS-c</a>, a mitochondrial-derived peptide.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
 
         <h2>What are proteins?</h2>
         <p>Proteins are larger, more complex chains of amino acids, often containing hundreds of residues. Unlike short peptides, proteins fold into intricate three-dimensional structures that determine their function. They can act as enzymes, structural scaffolds, transporters, or receptors. Research into protein folding and misfolding has provided key insights into diseases such as Alzheimer's and Parkinson's.${cite('Reference: Dobson, 2003', 'https://doi.org/10.1038/nature02261')}</p>
@@ -1424,8 +1424,8 @@
         { q: 'How many amino acids make a peptide instead of a protein?', a: 'Peptides are usually defined as chains of 2 to about 50 amino acids. Longer chains that fold into stable structures are generally classified as proteins, though the cutoff varies.' },
       ],
       references: [
-        { text: 'Nelson, D.L., &amp; Cox, M.M. (2017). Lehninger Principles of Biochemistry. Springer.', url: 'https://doi.org/10.1007/978-3-319-56512-5' },
-        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis: The Synthesis of a Tetrapeptide. Science, 138(3549), 1059-1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
+        { text: 'Nelson, D.L., &amp; Cox, M.M. (2017). Lehninger Principles of Biochemistry (7th ed.). W.H. Freeman.' },
+        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.', url: 'https://doi.org/10.1021/ja00897a025' },
         { text: 'Dobson, C.M. (2003). Protein folding and misfolding. Nature, 426, 884-890.', url: 'https://doi.org/10.1038/nature02261' },
         { text: 'Berg, J.M., Tymoczko, J.L., &amp; Stryer, L. (2002). Biochemistry. 5th edition. W.H. Freeman.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK21154/' },
       ],
@@ -1532,7 +1532,7 @@
         <p class="lead">Excipients are inactive substances added to a peptide formulation alongside the main compound. They do not provide biological activity, but they stabilize, protect, and help deliver the peptide, keeping it intact and usable during storage, handling, and experiments.</p>
 
         <h2>What are excipients?</h2>
-        <p>Excipients are inactive substances added to a formulation alongside the primary compound. In peptide research, excipients help stabilize, protect, or deliver the peptide in a controlled way. While they provide no direct biological activity, they ensure peptides remain intact and usable during storage, handling, and experimental application.${cite('Reference: Rowe et al., 2006', 'https://doi.org/10.1201/9781420006306')}</p>
+        <p>Excipients are inactive substances added to a formulation alongside the primary compound. In peptide research, excipients help stabilize, protect, or deliver the peptide in a controlled way. While they provide no direct biological activity, they ensure peptides remain intact and usable during storage, handling, and experimental application.</p>
 
         <h2>Why are excipients important for peptides?</h2>
         <p>Peptides are highly sensitive molecules that can degrade from light, heat, moisture, or enzymatic activity. Excipients are added to reduce these risks. They can:</p>
@@ -1542,7 +1542,7 @@
           <li>Enhance solubility for laboratory use.</li>
           <li>Serve as bulking agents during <a href="article/lyophilization-freeze-drying/">lyophilization</a>.</li>
         </ul>
-        <p>${cite('Reference: Maa &amp; Hsu, 1996', 'https://doi.org/10.1021/js950316u').trim()}</p>
+        <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
 
         <h2>Common excipients in peptide formulations</h2>
         <p>Researchers often use a small set of excipients with well-documented properties:</p>
@@ -1555,7 +1555,7 @@
         <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
 
         <h2>Research applications</h2>
-        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
+        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1007/978-1-4615-0557-0_5')}</p>
       `,
       faq: [
         { q: 'What is an excipient in a peptide formulation?', a: 'An excipient is an inactive substance added alongside the peptide to stabilize, protect, or deliver it. It has no biological activity of its own.' },
@@ -1563,10 +1563,10 @@
         { q: 'Why are excipients added to peptides?', a: 'They prevent aggregation and oxidation, adjust pH, improve solubility, and act as bulking agents during freeze-drying, keeping the peptide stable and reproducible.' },
       ],
       references: [
-        { text: 'Rowe, R.C., et al. (2006). Handbook of Pharmaceutical Excipients. Pharmaceutical Press.', url: 'https://doi.org/10.1201/9781420006306' },
-        { text: 'Maa, Y.F., &amp; Hsu, C.C. (1996). Protein denaturation by freeze-drying: stabilization by excipients. Journal of Pharmaceutical Sciences, 85(10), 1050-1056.', url: 'https://doi.org/10.1021/js950316u' },
+        { text: 'Rowe, R.C., Sheskey, P.J., &amp; Owen, S.C. (Eds.). (2006). Handbook of Pharmaceutical Excipients (5th ed.). Pharmaceutical Press.' },
         { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1016/S0378-5173(00)00423-3' },
-        { text: 'Carpenter, J.F., et al. (2002). Rational design of stable protein formulations: theory and practice. Journal of Controlled Release, 78(1-3), 1-9.', url: 'https://doi.org/10.1016/S0168-3659(02)00092-3' },
+        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1016/S0378-5173(00)00423-3' },
+        { text: 'Carpenter, J.F., Chang, B.S., Garzon-Rodriguez, W., &amp; Randolph, T.W. (2002). Rational design of stable lyophilized protein formulations: theory and practice. In Rational Design of Stable Protein Formulations (Pharmaceutical Biotechnology, pp. 109-133). Springer.', url: 'https://doi.org/10.1007/978-1-4615-0557-0_5' },
       ],
       cta: 'Browse our <a href="catalog/">research peptides</a> formulated for stability and reproducible results.',
       related: ['lyophilization-freeze-drying', 'peptide-synthesis', 'high-performance-liquid-chromatography-hplc'],
@@ -1587,7 +1587,7 @@
         <p class="lead">Peptide synthesis is the laboratory process of building short chains of amino acids linked by peptide bonds. Most modern synthesis uses solid-phase peptide synthesis (SPPS), where amino acids are added one at a time to a resin bead through repeated cycles of coupling and deprotection.</p>
 
         <h2>What is peptide synthesis?</h2>
-        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1126/science.138.3549.1059')}</p>
+        <p>Peptide synthesis is the laboratory process of creating short chains of amino acids linked by peptide bonds. These chains can mimic naturally occurring sequences or be custom-designed for research. Because peptides play roles in signaling, enzyme activity, and structural biology, synthetic production lets researchers study them in controlled ways. For the underlying concepts, see our guide on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
 
         <h2>How is peptide synthesis performed in the lab?</h2>
         <p>Most modern peptide synthesis uses solid-phase peptide synthesis (SPPS). The first amino acid is attached to a solid resin bead, and additional amino acids are added step by step. Each cycle involves:</p>
@@ -1596,7 +1596,7 @@
           <li><b>Coupling:</b> forming a peptide bond between the growing chain and the new amino acid.</li>
           <li><b>Deprotection:</b> removing protective groups so the chain can continue extending.</li>
         </ol>
-        <p>Once the sequence is complete, the peptide is cleaved from the resin and purified for research use.${cite('Reference: Chan &amp; White, 2000', 'https://doi.org/10.1385/1-59259-087-7:1')}</p>
+        <p>Once the sequence is complete, the peptide is cleaved from the resin and purified for research use.${cite('Reference: Chan &amp; White, 2000', 'https://doi.org/10.1093/oso/9780199637256.001.0001')}</p>
 
         <h2>Key features of synthetic peptide production</h2>
         <p>Peptide synthesis offers researchers:</p>
@@ -1617,8 +1617,8 @@
         { q: 'How is peptide purity confirmed after synthesis?', a: 'Purity is confirmed with HPLC and mass spectrometry, which verify the correct sequence, molecular weight, and absence of significant by-products.' },
       ],
       references: [
-        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Science, 138(3549), 1059-1060.', url: 'https://doi.org/10.1126/science.138.3549.1059' },
-        { text: 'Chan, W.C., &amp; White, P.D. (2000). Fmoc Solid Phase Peptide Synthesis: A Practical Approach. Oxford University Press.', url: 'https://doi.org/10.1385/1-59259-087-7:1' },
+        { text: 'Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.', url: 'https://doi.org/10.1021/ja00897a025' },
+        { text: 'Chan, W.C., &amp; White, P.D. (2000). Fmoc Solid Phase Peptide Synthesis: A Practical Approach. Oxford University Press.', url: 'https://doi.org/10.1093/oso/9780199637256.001.0001' },
         { text: 'Coin, I. (2010). High-throughput peptide synthesis and screening. Nature Methods, 7, 431-433.', url: 'https://doi.org/10.1038/nmeth.1403' },
         { text: 'Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869-878.', url: 'https://doi.org/10.1002/anie.198606031' },
       ],
@@ -1660,7 +1660,7 @@
           <li><b>Age-related patterns:</b> research notes that MOTS-c concentrations decline with age in some tissues and circulating samples.</li>
           <li><b>Exercise association:</b> human studies have measured increases in MOTS-c after acute bouts of physical activity.</li>
         </ul>
-        <p>${cite('Reference: Zempo et al., 2021', 'https://doi.org/10.1007/s00421-021-04643-8').trim()}</p>
+        <p>${cite('Reference: Reynolds et al., 2021', 'https://doi.org/10.1038/s41467-020-20790-0').trim()}</p>
 
         <h2>Common research applications</h2>
         <p>MOTS-c is currently studied in laboratory settings to:</p>
@@ -1681,7 +1681,7 @@
         { text: 'Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. Cell Metabolism, 21(3), 443-454.', url: 'https://doi.org/10.1016/j.cmet.2015.09.001' },
         { text: 'Kim, K.H., et al. (2018). Mitochondrial peptides as regulators of metabolism. Cell Metabolism, 28(3), 330-341.', url: 'https://doi.org/10.1016/j.cmet.2018.02.001' },
         { text: 'Reynolds, J.C., et al. (2021). MOTS-c: a mitochondrial signal regulating metabolism and aging. Frontiers in Endocrinology, 12, 678778.', url: 'https://doi.org/10.3389/fendo.2021.678778' },
-        { text: 'Zempo, H., et al. (2021). Exercise increases MOTS-c levels in circulation. European Journal of Applied Physiology, 121(12), 3285-3293.', url: 'https://doi.org/10.1007/s00421-021-04643-8' },
+        { text: 'Reynolds, J.C., et al. (2021). MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis. Nature Communications, 12, 470.', url: 'https://doi.org/10.1038/s41467-020-20790-0' },
       ],
       cta: 'Explore our <a href="catalog/?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
       related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis', 'what-is-nad-plus'],
