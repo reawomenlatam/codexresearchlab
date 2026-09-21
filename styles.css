@@ -1571,3 +1571,33 @@ a, button, input, select, textarea, label, summary,
 }
 .article-product h2 { font-size: 1.02rem; margin: 0 0 .4rem; }
 .article-product p { margin: 0; }
+
+/* Tablas de datos en los artículos (secuencias, identificadores, cifras).
+   El blog no usaba <table> hasta ahora, así que no había ningún estilo: sin
+   esto salen con el aspecto por defecto del navegador. Se desbordan en su
+   propio contenedor para que el móvil no arrastre la página entera. */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+  font-size: .92rem;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.article-body table th,
+.article-body table td {
+  border-bottom: 1px solid rgba(120,130,140,.22);
+  padding: .5rem .8rem;
+  text-align: left;
+  vertical-align: top;
+}
+.article-body table th {
+  font-weight: 600;
+  background: var(--bg-soft);
+  white-space: nowrap;
+}
+.article-body table tr:last-child td { border-bottom: 0; }
+@media (min-width: 720px) {
+  .article-body table { display: table; white-space: normal; }
+}

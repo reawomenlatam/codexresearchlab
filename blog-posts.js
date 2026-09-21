@@ -141,7 +141,7 @@
       ],
       references: [],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['lyophilization-freeze-drying', 'how-to-read-a-certificate-of-analysis'],
+      related: ['lyophilization-freeze-drying', 'how-to-read-a-certificate-of-analysis', 'bacteriostatic-water-for-peptide-reconstitution'],
     },
     {
       slug: 'cyclic-vs-linear-peptides',
@@ -219,7 +219,7 @@
       ],
       references: [],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, which lists the formula and molecular weight of each compound.',
-      related: ['mass-spectrometry-peptide-research', 'cas-numbers-explained'],
+      related: ['mass-spectrometry-peptide-research', 'cas-numbers-explained', 'cyclic-vs-linear-peptides'],
     },
     {
       slug: 'cas-numbers-explained',
@@ -347,7 +347,7 @@
         { text: 'Elsayed YY, Kuhl T, Imhof D. Regulatory Guidelines for the Analysis of Therapeutic Peptides and Proteins. Journal of Peptide Science, 2025.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11806371/' },
       ],
       cta: '<a href="verify/">Verify a batch number</a> or browse the <a href="catalog/">Codex Research catalog</a>. Every batch ships with its certificate of analysis.',
-      related: ['peptide-purity-hplc-explained', 'mass-spectrometry-peptide-research'],
+      related: ['peptide-purity-hplc-explained', 'mass-spectrometry-peptide-research', 'endotoxins-in-research-peptides'],
     },
     {
       slug: 'peptide-purity-hplc-explained',
@@ -386,7 +386,7 @@
       ],
       references: [],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
+      related: ['high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research', 'endotoxins-in-research-peptides'],
     },
     {
       slug: 'what-are-melanocortin-receptors',
@@ -464,7 +464,7 @@
       ],
       references: [],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['what-is-ipamorelin', 'what-is-pt-141'],
+      related: ['what-is-ipamorelin', 'what-is-pt-141', 'what-are-melanocortin-receptors'],
     },
     {
       slug: 'what-is-a-growth-hormone-secretagogue',
@@ -677,7 +677,7 @@
       ],
       references: [],
       cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference'],
+      related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference', 'what-are-copper-peptides'],
     },
     {
       slug: 'bacteriostatic-water-for-peptide-reconstitution',
@@ -697,14 +697,54 @@
         <h2>What is bacteriostatic water?</h2>
         <p>Bacteriostatic water is sterile water that contains a small amount of benzyl alcohol, usually around 0.9 percent, added as a preservative. The word "bacteriostatic" describes what that preservative does: it slows or stops the growth of bacteria rather than killing everything outright. That single ingredient is the whole difference between it and plain water for injection.</p>
 
+        <h2>The specification, in numbers</h2>
+        <p>The USP product label is specific about what the fluid contains:</p>
+        <table>
+          <tr><th>Attribute</th><th>Value</th></tr>
+          <tr><td>Preservative</td><td>Benzyl alcohol, 0.9% (9 mg/mL)</td></tr>
+          <tr><td>pH</td><td>5.7 (range 4.5 to 7.0)</td></tr>
+          <tr><td>Presentation</td><td>Sterile, nonpyrogenic, multiple-dose container</td></tr>
+          <tr><td>Other additives</td><td>None</td></tr>
+        </table>
+        <p>The mildly acidic pH is a detail that occasionally matters, since it sits inside the range where deamidation, the most common degradation route for peptides in water, proceeds most slowly.</p>
+
+
         <h2>How it differs from sterile water</h2>
         <p>Sterile water for injection is exactly that, water with nothing added, and it is intended for single use. Once opened it has no preservative to hold back contamination. Bacteriostatic water, because of the benzyl alcohol, can tolerate being entered more than once over a period of time, which is why it suits a multi-dose research vial that gets drawn from repeatedly. For peptides that are studied over days or weeks, that reusability is the practical advantage.</p>
 
         <h2>Why labs use it for peptides</h2>
         <p>Bacteriostatic water suits laboratory work well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides/">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
 
+        <h2>What reconstitution means as a laboratory operation</h2>
+        <p>Reconstitution is dissolving a known mass of lyophilized solid in a measured volume of solvent so that the result is a solution of known concentration. The arithmetic is mass divided by volume, and nothing more:</p>
+        <table>
+          <tr><th>Solid in the vial</th><th>Solvent added</th><th>Resulting concentration</th></tr>
+          <tr><td>5 mg</td><td>1.00 mL</td><td>5 mg/mL</td></tr>
+          <tr><td>5 mg</td><td>2.00 mL</td><td>2.5 mg/mL</td></tr>
+          <tr><td>10 mg</td><td>2.00 mL</td><td>5 mg/mL</td></tr>
+          <tr><td>10 mg</td><td>5.00 mL</td><td>2 mg/mL</td></tr>
+        </table>
+        <p>Two things make that arithmetic less trivial than it looks. The first is that a freeze-dried cake occupies volume of its own, so the final volume of the solution is not exactly the volume of solvent added; for work where the concentration has to be accurate rather than approximate, the solution is made up to a mark rather than by adding a nominal volume. The second is that the mass printed on the label is the mass of solid, not the mass of peptide. Material purified by reversed-phase chromatography is isolated as a salt and carries a counterion plus residual water, so the net peptide content of the powder is typically well below 100 percent and is reported per batch on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a>. A concentration calculated from the label mass alone is a nominal figure.</p>
+
+        <h2>Choosing a solvent</h2>
+        <p>Bacteriostatic water is the default because most short peptides carrying a reasonable number of charged residues dissolve in it readily, but it is a default, not a rule. Peptide manufacturers give the same general guidance: basic peptides are usually taken up in a small amount of an acidic solvent such as dilute acetic acid and then diluted; acidic peptides in a small amount of a basic solvent such as 0.1 percent aqueous ammonia and then diluted; markedly hydrophobic sequences may need an organic solvent such as DMSO, DMF or acetonitrile before any aqueous dilution. Test on a small portion first rather than committing the whole vial, and check the solvent suggested on the lot's own analytical data sheet. If material is slow to dissolve, a few minutes of sonication in a water bath can help, though excessive warming should be avoided.</p>
+
+        <h2>The preservative is not inert</h2>
+        <p>Benzyl alcohol is the most widely used antimicrobial preservative in multi-dose protein formulations, and its effect on the dissolved molecule has been studied directly. Preservatives of this class promote partial unfolding, and partial unfolding is what triggers aggregation; in a published comparison the tendency to induce aggregation ran m-cresol &gt; phenol &gt; benzyl alcohol &gt; phenoxyethanol &gt; chlorobutanol. Benzyl alcohol is therefore in the middle of that range rather than at the harmless end. For work where aggregation or an accurate physical characterisation is the point, plain sterile water or a defined buffer may be the better diluent, and whichever is chosen should be recorded alongside the concentration, because the diluent is part of the experimental condition.</p>
+
+        <h2>How long a reconstituted solution lasts</h2>
+        <p>Much less time than the dry solid, and for chemical reasons rather than microbial ones. The degradation routes that dominate in water are deamidation of asparagine and glutamine side chains, which is fastest at neutral and alkaline pH and slowest around pH 3 to 6; hydrolysis of the backbone, which is acid-catalysed and particularly noticeable at Asp-Gly and Asp-Pro junctions; and oxidation of methionine, histidine, lysine, tryptophan and tyrosine. All of them accelerate with temperature. A preservative does nothing about any of this, which is why the shelf life of a peptide in solution is short compared with the same peptide as a lyophilizate.</p>
+        <p>The practical consequences are the ones manufacturers publish: divide the solution into aliquots rather than returning to one vial repeatedly, keep those aliquots frozen below about minus fifteen degrees Celsius, avoid repeated freeze-thaw cycles, and treat long-term storage in solution as something to design around rather than rely on, especially for sequences containing asparagine, glutamine, cysteine, methionine or tryptophan.</p>
+
+        <h2>Handling the dry vial before anything is added</h2>
+        <p>Lyophilized peptides are hygroscopic, so the order of steps matters. A vial taken from cold storage should reach ambient temperature in a desiccator before it is opened, so moisture does not condense onto the cake, and should then be weighed out quickly and resealed tightly. Anything introduced into the vial after that, solvent included, becomes part of the system, which is the whole argument for a preserved diluent when a container will be entered more than once.</p>
+
+
         <h2>Handling and storage</h2>
         <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify/">batch number</a>.</p>
+
+        <h2>What this article does not cover</h2>
+        <p>This describes a laboratory operation on a research material: dissolving a defined solid in a defined volume to obtain a defined concentration. It is not preparation guidance for administration to humans or animals, and it contains no dosing information of any kind.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This article describes laboratory use only.</p>
@@ -713,8 +753,17 @@
         { q: 'What is bacteriostatic water?', a: 'Bacteriostatic water is sterile water with a small amount of benzyl alcohol (around 0.9 percent) added as a preservative. The preservative slows bacterial growth, which is what makes it suitable for a vial that will be entered more than once.' },
         { q: 'What is the difference between bacteriostatic and sterile water?', a: 'Sterile water for injection has nothing added and is meant for single use. Bacteriostatic water contains benzyl alcohol as a preservative, so it can tolerate being drawn from multiple times, which suits a multi-dose research vial.' },
         { q: 'Why is bacteriostatic water used to reconstitute peptides?', a: 'It dissolves most peptides cleanly and its preservative supports multiple draws from a single vial over the days or weeks a peptide might be studied. That reusability is the main practical reason labs choose it.' },
+        { q: 'How is a lyophilized peptide reconstituted in the laboratory?', a: 'A known mass of the freeze-dried solid is dissolved in a measured volume of solvent to give a solution of known concentration: 10 mg in 2.00 mL is 5 mg/mL. Two corrections matter for accurate work: the cake occupies volume of its own, so precise solutions are made up to a mark rather than by adding a nominal volume; and the labelled mass is solid, not net peptide, since the material carries a counterion and residual water. This describes a laboratory operation on a research material only.' },
+        { q: 'How long is a reconstituted peptide solution stable?', a: 'Much less time than the dry solid. In water, deamidation of asparagine and glutamine, hydrolysis of the backbone and oxidation of methionine, histidine, lysine, tryptophan and tyrosine all proceed, and all accelerate with temperature. A preservative does not slow any of them. Manufacturers advise dividing solutions into aliquots, keeping them frozen below about minus fifteen degrees Celsius, and avoiding repeated freeze-thaw cycles.' },
+        { q: 'Can plain sterile water be used instead of bacteriostatic water?', a: 'Yes, and sometimes it is preferable. Benzyl alcohol is not inert: preservatives of its class promote partial unfolding and aggregation, with benzyl alcohol falling mid-range in a published comparison. For work where aggregation or physical characterisation is the point, plain sterile water or a defined buffer may be the better diluent. Whichever is used should be recorded, because the diluent is part of the experimental condition.' },
       ],
-      references: [],
+      references: [
+        { text: 'Bacteriostatic Water for Injection, USP: product labeling. DailyMed, U.S. National Library of Medicine.', url: 'https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8' },
+        { text: 'Peptide solubility. Bachem Knowledge Center, technical note.', url: 'https://www.bachem.com/knowledge-center/technical-notes/peptide-solubility/' },
+        { text: 'Handling and storage guidelines for peptides. Bachem Knowledge Center.', url: 'https://www.bachem.com/knowledge-center/handling-and-storage-guidelines-for-peptides/' },
+        { text: 'Hutchings RL, Singh SM, Cabello-Villegas J, Mallela KMG. Effect of antimicrobial preservatives on partial protein unfolding and aggregation. Journal of Pharmaceutical Sciences, 2013;102(2):365-376.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3990441/' },
+        { text: 'Shi M, McHugh KJ. Strategies for overcoming protein and peptide instability in biodegradable drug delivery systems. Advanced Drug Delivery Reviews, 2023;199:114904.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/' },
+      ],
       cta: 'Browse <a href="catalog/">research peptides and supplies</a> at Codex Research, or <a href="verify/">check a batch number</a>.',
       related: ['excipients-in-peptides', 'how-to-store-research-peptides'],
     },
@@ -810,7 +859,7 @@
         { text: 'Bremelanotide (PT-141) compound summary. PubChem, National Library of Medicine (CID 9941379).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941379' },
       ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['peptide-synthesis', 'what-is-bpc-157'],
+      related: ['peptide-synthesis', 'what-is-bpc-157', 'what-are-melanocortin-receptors'],
     },
     {
       slug: 'what-is-ipamorelin',
@@ -857,7 +906,7 @@
         { text: 'Ipamorelin compound summary. PubChem, National Library of Medicine (CID 9831659).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9831659' },
       ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['peptide-synthesis', 'what-is-mots-c'],
+      related: ['peptide-synthesis', 'what-is-mots-c', 'what-is-a-growth-hormone-secretagogue'],
     },
     {
       slug: 'what-is-ghk-cu',
@@ -902,7 +951,7 @@
       ],
       references: [],
       cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['amino-acids-peptides-proteins-difference', 'what-is-bpc-157'],
+      related: ['amino-acids-peptides-proteins-difference', 'what-is-bpc-157', 'what-are-copper-peptides'],
     },
     {
       slug: 'what-is-retatrutide',
@@ -1017,6 +1066,44 @@
         <h2>Where does the sequence come from?</h2>
         <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis rather than by its source.</p>
 
+        <h2>The BPC-157 amino acid sequence</h2>
+        <p>A pentadecapeptide has fifteen residues. In BPC-157 they run, N-terminus to C-terminus, in three-letter code:</p>
+        <p><b>Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val</b></p>
+        <p>In one-letter code the same chain is <b>GEPPPGKPADDAGLV</b>, and the free-acid form is written <b>H-GEPPPGKPADDAGLV-OH</b>. Both notations are registered synonyms on the PubChem record, so either can be used to confirm that a listing describes the same molecule.</p>
+        <table>
+          <tr><th>Position</th><th>Residue</th><th>Code</th><th>Position</th><th>Residue</th><th>Code</th></tr>
+          <tr><td>1</td><td>Glycine</td><td>Gly / G</td><td>9</td><td>Alanine</td><td>Ala / A</td></tr>
+          <tr><td>2</td><td>Glutamic acid</td><td>Glu / E</td><td>10</td><td>Aspartic acid</td><td>Asp / D</td></tr>
+          <tr><td>3</td><td>Proline</td><td>Pro / P</td><td>11</td><td>Aspartic acid</td><td>Asp / D</td></tr>
+          <tr><td>4</td><td>Proline</td><td>Pro / P</td><td>12</td><td>Alanine</td><td>Ala / A</td></tr>
+          <tr><td>5</td><td>Proline</td><td>Pro / P</td><td>13</td><td>Glycine</td><td>Gly / G</td></tr>
+          <tr><td>6</td><td>Glycine</td><td>Gly / G</td><td>14</td><td>Leucine</td><td>Leu / L</td></tr>
+          <tr><td>7</td><td>Lysine</td><td>Lys / K</td><td>15</td><td>Valine</td><td>Val / V</td></tr>
+          <tr><td>8</td><td>Proline</td><td>Pro / P</td><td></td><td></td><td></td></tr>
+        </table>
+        <p>Only eight of the twenty standard amino acids appear. Proline is the most frequent with four residues, glycine appears three times, alanine and aspartic acid twice each, and glutamic acid, lysine, leucine and valine once each. Two structural points follow directly. There is no cysteine, so the molecule has no disulfide bridge and no free thiol. And positions 3, 4 and 5 are three consecutive prolines, a run described in the review literature as conformationally rigid and likely to adopt a polyproline II helix, a left-handed structure that is sterically awkward for proteolytic enzymes to attack.</p>
+        <p>The term itself is only a count. "Pentadeca-" is Greek for fifteen, from <i>penta</i> (five) and <i>deka</i> (ten), so a pentadecapeptide has exactly fifteen residues, the same way a dipeptide has two.</p>
+
+        <h2>Molecular formula, molecular weight and identifiers</h2>
+        <p>These are the public identifiers a catalogue listing and a certificate of analysis should agree on:</p>
+        <table>
+          <tr><th>Attribute</th><th>Value</th></tr>
+          <tr><td>Molecular formula</td><td>C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub></td></tr>
+          <tr><td>Average molecular weight</td><td>1419.5 g/mol (often quoted as 1419.53 Da)</td></tr>
+          <tr><td>Monoisotopic mass</td><td>1418.704 Da</td></tr>
+          <tr><td>CAS Registry Number</td><td>137525-51-0</td></tr>
+          <tr><td>PubChem CID</td><td>9941957</td></tr>
+          <tr><td>UNII</td><td>8ED8NXK95P</td></tr>
+          <tr><td>ChEMBL ID</td><td>CHEMBL4297358</td></tr>
+        </table>
+        <p>The formula can be checked against the sequence. Add up the atoms of the fifteen free amino acids, subtract the fourteen water molecules lost as the peptide bonds form, and the result is exactly C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub>: the sixteen nitrogens, for example, are the fifteen backbone amide nitrogens plus the one side-chain nitrogen of the lysine at position 7.</p>
+        <p>The two mass figures do different jobs. The average weight near 1419.5 accounts for natural isotope abundances and is the number used for weighing and concentration arithmetic. The monoisotopic mass of 1418.704 uses only the most abundant isotope of each element, and it is the figure a <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> identity check is matched against.</p>
+
+        <h2>Where the name comes from, and when it was described</h2>
+        <p>BPC is short for Body Protection Compound. The name belongs first to a larger protein of roughly 40 kDa found in gastric juice; BPC-157 is the fifteen-residue fragment taken from its N-terminal end, a relationship stated in the same terms in both the patent and the analytical literature. It entered the scientific literature in 1993, in a paper by Sikiric, Petek, Rucman, Seiwerth and colleagues in Zagreb, with the chemistry developed in parallel at the Slovenian company Diagen.</p>
+        <p>The patent trail is public. The earliest filings, including US Patent 5,288,708, concern the natural BPC protein isolated from gastric juice. Later filings, EP 0572688 and US Patent 6,268,346, concern the synthetic fragment. A 2014 international application, WO2014142764A1, assigned to Diagen with Rudolf Rucman named as inventor, covers stable salts of the pentadecapeptide and restates both the sequence and its gastric origin. A patent describes a claimed invention, not a regulatory status.</p>
+
+
         <h2>How is BPC-157 studied?</h2>
         <p>Published research on BPC-157 has mostly used cell culture and animal models. Recurring themes in that work include:</p>
         <ul>
@@ -1025,6 +1112,10 @@
           <li><b>Tissue and connective structures:</b> models looking at tendon, muscle, and gastrointestinal tissue.</li>
         </ul>
         <p>It is worth being precise here. These are observations from laboratory models, not conclusions about people or animals. BPC-157 is a research compound, and the honest summary is that it remains an active area of preclinical study rather than a settled one.</p>
+
+        <h2>How BPC-157 is made</h2>
+        <p>Nothing is extracted from tissue. Research-grade BPC-157 is assembled residue by residue using <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a>, which builds the chain on an insoluble polymeric support; the Diagen patent documents credit Sikiric and Rucman with the synthetic route and reference preparation on solid polymeric carriers. The starting materials are protected amino acid derivatives, not biological material. After assembly the chain is cleaved from the support, purified by reversed-phase <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, confirmed by mass spectrometry and freeze-dried. Because reversed-phase purification isolates peptides as salts, the dried solid carries a counterion such as trifluoroacetate plus residual water, so the weighed mass is not one hundred percent peptide; our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> explains how that is reported.</p>
+        <p>One storage detail follows from the sequence itself: BPC-157 contains no asparagine, glutamine, cysteine, methionine or tryptophan, the residues peptide manufacturers single out as shortening shelf life because they are the most prone to deamidation or oxidation.</p>
 
         <h2>Quality, purity, and handling</h2>
         <p>Because a short peptide is only as reliable as the batch you actually receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify/">batch number</a>.</p>
@@ -1036,12 +1127,20 @@
         { q: 'What does BPC-157 stand for?', a: 'BPC stands for "Body Protection Compound." BPC-157 is a synthetic pentadecapeptide (15 amino acids) whose sequence is derived from a protein found in gastric juice. It is used strictly for laboratory research.' },
         { q: 'Is BPC-157 a natural or synthetic peptide?', a: 'The sequence originates from a naturally occurring gastric protein, but the BPC-157 used in research is made synthetically by solid-phase peptide synthesis and verified by HPLC and mass spectrometry.' },
         { q: 'How is BPC-157 studied in the lab?', a: 'Most published work uses cell culture and animal models, looking at pathways associated with angiogenesis, nitric oxide signaling, and connective tissue. These are preclinical observations, not conclusions about use in people or animals.' },
+        { q: 'What is the amino acid sequence of BPC-157?', a: 'In one-letter code the sequence is GEPPPGKPADDAGLV; in three-letter code, Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val, read from the N-terminus to the C-terminus. The free-acid form is written H-GEPPPGKPADDAGLV-OH. Only eight different amino acids appear in the chain, and proline occupies four of the fifteen positions.' },
+        { q: 'What is the molecular formula and molecular weight of BPC-157?', a: 'The molecular formula is C62H98N16O22. PubChem lists the average molecular weight as 1419.5 g/mol, commonly quoted in the literature as 1419.53 Da, and the monoisotopic mass as 1418.704 Da. Its CAS Registry Number is 137525-51-0 and its PubChem CID is 9941957.' },
+        { q: 'Why is BPC-157 called a pentadecapeptide?', a: '"Pentadeca-" is Greek for fifteen, from penta (five) and deka (ten), so a pentadecapeptide is a peptide of exactly fifteen amino acid residues. The term describes chain length and nothing else.' },
+        { q: 'When was BPC-157 first described, and is there a patent?', a: 'It entered the scientific literature in 1993 in a paper by Sikiric, Petek, Rucman, Seiwerth and colleagues in Zagreb, with the chemistry developed at the Slovenian company Diagen. The related patent family includes US 5,288,708 on the natural gastric protein, EP 0572688 and US 6,268,346 on the synthetic fragment, and the 2014 application WO2014142764A1 on stable salts of the pentadecapeptide.' },
       ],
       references: [
-        { text: 'BPC-157 (Bepecin) compound summary. PubChem, National Library of Medicine (CID 9941957).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941957' },
+        { text: 'BPC-157 compound summary (CID 9941957). PubChem, National Library of Medicine.', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/9941957' },
+        { text: 'Mateescu et al. BPC-157 as an investigational peptide: biopharmaceutical challenges, formulation strategies and translational development barriers. Pharmaceutics, 2026.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13210877/' },
+        { text: 'Tian T, Jing J, Li Y, Wang Y, Deng X, Shan Y. Characterization of the in vitro metabolic profile of BPC-157 by UHPLC-HRMS. Molecules, 2023.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10650108/' },
+        { text: 'Patent WO2014142764A1, stable pentadecapeptide salts (applicant Diagen d.o.o.; inventor R. Rucman). Google Patents.', url: 'https://patents.google.com/patent/WO2014142764A1/en' },
+        { text: 'Sikiric P, Petek M, Rucman R, Seiwerth S, et al. Journal of Physiology (Paris), 1993;87(5):313-327 (PMID 8298609). First published description of the gastric juice peptide BPC.', url: 'https://pubmed.ncbi.nlm.nih.gov/8298609/' },
       ],
       cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['peptide-synthesis', 'amino-acids-peptides-proteins-difference'],
+      related: ['peptide-synthesis', 'amino-acids-peptides-proteins-difference', 'peptide-length-terminology'],
     },
     {
       slug: 'buy-research-peptides-panama',
@@ -1331,7 +1430,7 @@
         { text: 'Berg, J.M., Tymoczko, J.L., &amp; Stryer, L. (2002). Biochemistry. 5th edition. W.H. Freeman.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK21154/' },
       ],
       cta: 'Ready to go deeper? Browse our <a href="catalog/">research peptides</a> or learn how they are made in our <a href="article/peptide-synthesis/">peptide synthesis</a> guide.',
-      related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-mots-c'],
+      related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-mots-c', 'peptide-length-terminology'],
     },
 
     {
@@ -1348,8 +1447,12 @@
       body: `
         <p class="lead">Lyophilization, also called freeze-drying, is a dehydration process that removes water from a frozen sample through sublimation under reduced pressure. It preserves sensitive compounds such as peptides, proteins, and vaccines by maintaining their structure and stability for long-term storage.</p>
 
+        <h2>What "lyophilized powder" actually means</h2>
+        <p>The phrase describes the physical state of the material, not a grade or a formulation. What is left in the vial after freeze-drying is a porous solid that occupies roughly the same shape and volume the frozen solution did, which is why it is usually called a cake rather than a powder. The ice sublimes away and the solid matrix it was holding stays behind. Some cakes are dense and uniform, some are flaky or crumble at the edges, and at the small masses typical of research peptides the cake can be a thin film or a few flecks on the wall of the vial, or look like nothing at all. A vial that appears empty has not necessarily lost its contents.</p>
+
+
         <h2>What is lyophilization?</h2>
-        <p>Lyophilization, also known as freeze-drying, is a dehydration process used in research and pharmaceutical labs to preserve biological materials. The technique removes water from a frozen sample through sublimation, the direct transition of ice into vapor, under reduced pressure. This helps maintain the structure and stability of sensitive compounds such as peptides, proteins, and vaccines.${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1208/ps060610')}</p>
+        <p>Lyophilization, also known as freeze-drying, is a dehydration process used in research and pharmaceutical labs to preserve biological materials. The technique removes water from a frozen sample through sublimation, the direct transition of ice into vapor, under reduced pressure. This helps maintain the structure and stability of sensitive compounds such as peptides, proteins, and vaccines.${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75')}</p>
 
         <h2>How does the lyophilization process work?</h2>
         <p>Lyophilization typically occurs in three stages:</p>
@@ -1358,10 +1461,21 @@
           <li><b>Primary drying (sublimation):</b> pressure is lowered and heat is gently applied, causing frozen water to sublimate into vapor without passing through the liquid phase.</li>
           <li><b>Secondary drying (desorption):</b> remaining bound water molecules are removed, reducing final moisture content to very low levels.</li>
         </ol>
-        <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S1359-0294(98)00017-6').trim()}</p>
+        <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S0939-6411(98)00004-6').trim()}</p>
+
+        <h2>Why the freezing step decides most of the outcome</h2>
+        <p>Freezing is not just cooling. As the temperature falls, water separates out as ice and the remaining solutes are pushed into progressively more concentrated pockets, which freeze at lower temperatures than the surrounding water. Most samples behave as eutectics, a mixture of solutes and solvent that is only properly frozen once the entire eutectic mixture has solidified. Others never crystallise at all: the suspension simply grows more viscous as it cools until it sets as a vitreous solid at the glass transition point, and this second type is considerably harder to freeze-dry.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+        <p>Cooling rate matters for the same reason. Rapid cooling gives small ice crystals, useful when a structure has to be preserved for microscopy, but it leaves narrow channels in the matrix and makes the sample slower to dry. Slower cooling gives larger crystals and less restrictive channels for vapour to escape through. Either way, the product has to be frozen below its eutectic or glass transition temperature before drying begins, because pockets of unfrozen material will expand under vacuum and compromise the structure of the finished cake.</p>
+
+        <h2>Collapse temperature, and what a bad cake tells you</h2>
+        <p>There is a temperature above which the macroscopic structure of the drying product gives way; it is called the collapse temperature, and it generally sits about two degrees above the glass transition temperature of the formulation in its frozen state.${cite('Reference: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} Drying has to be run below it. Push the product temperature too high to save time and the matrix slumps, which is visible afterwards as a shrunken, glassy or melted-back cake. A collapsed cake is not only a cosmetic problem: it is associated with higher residual moisture and slower redissolution, so appearance is a genuine quality indicator rather than a preference.</p>
+
+        <h2>Residual moisture</h2>
+        <p>Sublimation does not remove all the water. Depending on the formulation and the cycle, the product leaving primary drying may still hold something in the region of five to twenty percent water by weight, bound to the solid rather than present as ice.${cite('Reference: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} That is what secondary drying is for, and it is normally continued until residual water is down to roughly one to two percent. The reason to care is that water acts as a plasticiser: the more of it that remains in an amorphous solid, the lower the glass transition temperature of the finished cake and the more molecular mobility there is at any given storage temperature. Residual moisture is measured by Karl Fischer titration and is one of the attributes a complete <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> can report.</p>
+
 
         <h2>Why do researchers use lyophilization?</h2>
-        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article/excipients-in-peptides/">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229')}</p>
+        <p>The method allows long-term preservation of compounds that are unstable in liquid form. For peptides and proteins, lyophilization minimizes degradation, supports easier storage and transport, and enables precise reconstitution for experiments. It often relies on <a href="article/excipients-in-peptides/">excipients</a> that act as bulking agents and stabilizers. The process is also scalable, from small laboratory samples to large industrial batches.${cite('Reference: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3')}</p>
 
         <h2>Key applications in laboratory research</h2>
         <ul>
@@ -1370,20 +1484,37 @@
           <li>Preparing reference standards for analytical methods such as <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.</li>
           <li>Enabling controlled reconstitution for in vitro or in vivo research models.</li>
         </ul>
-        <p>${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1208/ps060610').trim()}</p>
+        <p>${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75').trim()}</p>
+      
+        <h2>What the equipment is actually doing</h2>
+        <p>A freeze dryer sets up a pressure difference and then supplies heat across it. Sublimation depends on the difference in vapour pressure between the product and the ice collector, so the collector, a cold trap, has to be held significantly colder than the product; water molecules migrate from the higher-pressure sample toward the lower-pressure collector, where they condense, while the vacuum pump removes the gases that will not condense. Heat is the driving force, not an afterthought: subliming a gram of water from ice to vapour takes on the order of ten times the energy needed to freeze that gram in the first place.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+
+        <h2>A note on "lyophilized powder for injection"</h2>
+        <p>That phrase is a dosage-form designation from pharmaceutical labelling. It identifies a licensed, sterile drug product manufactured and released under a regulatory filing, and it carries a set of legal obligations that have nothing to do with the drying method itself. A research compound supplied lyophilized is not that, regardless of how it looks in the vial. The two share a physical state and nothing else, and the distinction is worth keeping straight when comparing catalogue descriptions.</p>
+
+        <h2>Why research peptides are supplied this way</h2>
+        <p>Because the dry state is the stable one. Peptides in solution have a markedly shorter usable life than the same material as a lyophilizate, since the degradation routes that matter most, hydrolysis of the backbone and deamidation of side chains, need water to proceed.${cite('Reference: Shi and McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} Freeze-drying also makes small quantities practical to weigh, ship at ambient temperature and store, and it lets the material be presented as a defined mass in a sealed vial. What happens next, dissolving that solid in a measured volume of solvent to obtain a solution of known concentration, is covered separately in our note on <a href="article/bacteriostatic-water-for-peptide-reconstitution/">reconstituting lyophilized peptides</a>.</p>
       `,
       faq: [
         { q: 'What is lyophilization used for?', a: 'Lyophilization is used to preserve compounds that are unstable in liquid form, such as peptides, proteins, and vaccines, by removing water while keeping their structure intact.' },
         { q: 'What are the three stages of freeze-drying?', a: 'The three stages are freezing, primary drying by sublimation, and secondary drying by desorption of bound water.' },
         { q: 'Why are peptides freeze-dried?', a: 'Freeze-drying minimizes peptide degradation, makes storage and transport easier, and allows precise reconstitution before experiments.' },
+        { q: 'What does "lyophilized powder" mean?', a: 'It describes the physical state of the material after freeze-drying, not a grade or a formulation. What remains in the vial is a porous solid, usually called a cake, that keeps roughly the shape and volume the frozen solution had once the ice has sublimed away.' },
+        { q: 'Why does a vial of lyophilized peptide sometimes look empty?', a: 'At the small masses typical of research peptides, the cake can be a thin film or a few flecks on the wall of the vial rather than a visible volume of powder. A vial that looks empty has not necessarily lost its contents; the labelled mass and the certificate of analysis are what define what is in it.' },
+        { q: 'What is the collapse temperature in freeze-drying?', a: 'It is the temperature above which the macroscopic structure of the drying product gives way, and it generally sits about two degrees above the glass transition temperature of the frozen formulation. Drying above it produces a shrunken or melted-back cake, which is associated with higher residual moisture and slower redissolution.' },
+        { q: 'How much water is left after freeze-drying?', a: 'Product leaving primary drying can still hold roughly five to twenty percent water by weight. Secondary drying removes the bound water, typically down to about one to two percent, which is measured by Karl Fischer titration.' },
       ],
       references: [
-        { text: 'Franks, F. (1998). Freeze-drying of bioproducts: putting principles into practice. European Journal of Pharmaceutics and Biopharmaceutics, 45(3), 221-229.', url: 'https://doi.org/10.1016/S1359-0294(98)00017-6' },
-        { text: 'Tang, X., &amp; Pikal, M.J. (2004). Design of freeze-drying processes for pharmaceuticals: practical advice. Pharmaceutical Research, 21(2), 191-200.', url: 'https://doi.org/10.1208/ps060610' },
-        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
+        { text: 'Franks, F. (1998). Freeze-drying of bioproducts: putting principles into practice. European Journal of Pharmaceutics and Biopharmaceutics, 45(3), 221-229.', url: 'https://doi.org/10.1016/S0939-6411(98)00004-6' },
+        { text: 'Tang, X., &amp; Pikal, M.J. (2004). Design of freeze-drying processes for pharmaceuticals: practical advice. Pharmaceutical Research, 21(2), 191-200.', url: 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75' },
+        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1016/S0378-5173(00)00423-3' },
+      
+        { text: 'Chen Y, Mutukuri TT, Wilson NE, Zhou Q. Pharmaceutical protein solids: drying technology, solid-state characterization and stability. Advanced Drug Delivery Reviews, 2021;172:211-233.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/' },
+        { text: 'A Guide to Freeze Drying for the Laboratory. Labconco technical publication.', url: 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf' },
+        { text: 'Shi M, McHugh KJ. Strategies for overcoming protein and peptide instability in biodegradable drug delivery systems. Advanced Drug Delivery Reviews, 2023;199:114904.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/' },
       ],
       cta: 'Our <a href="catalog/">research peptides</a> are supplied lyophilized for maximum stability and shelf life.',
-      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis'],
+      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-for-peptide-reconstitution'],
     },
 
     {
@@ -1421,7 +1552,7 @@
           <li><b>Buffers (phosphate, citrate):</b> maintain pH and ionic strength.</li>
           <li><b>Polysorbates (Tween 20, Tween 80):</b> protect against surface adsorption and aggregation.</li>
         </ul>
-        <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1208/ps020229').trim()}</p>
+        <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
 
         <h2>Research applications</h2>
         <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1016/S0168-3659(02)00092-3')}</p>
@@ -1434,7 +1565,7 @@
       references: [
         { text: 'Rowe, R.C., et al. (2006). Handbook of Pharmaceutical Excipients. Pharmaceutical Press.', url: 'https://doi.org/10.1201/9781420006306' },
         { text: 'Maa, Y.F., &amp; Hsu, C.C. (1996). Protein denaturation by freeze-drying: stabilization by excipients. Journal of Pharmaceutical Sciences, 85(10), 1050-1056.', url: 'https://doi.org/10.1021/js950316u' },
-        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1208/ps020229' },
+        { text: 'Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.', url: 'https://doi.org/10.1016/S0378-5173(00)00423-3' },
         { text: 'Carpenter, J.F., et al. (2002). Rational design of stable protein formulations: theory and practice. Journal of Controlled Release, 78(1-3), 1-9.', url: 'https://doi.org/10.1016/S0168-3659(02)00092-3' },
       ],
       cta: 'Browse our <a href="catalog/">research peptides</a> formulated for stability and reproducible results.',
@@ -1492,7 +1623,7 @@
         { text: 'Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869-878.', url: 'https://doi.org/10.1002/anie.198606031' },
       ],
       cta: 'Explore our catalog of lab-synthesized <a href="catalog/">research peptides</a>, verified by HPLC and mass spectrometry.',
-      related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
+      related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research', 'cyclic-vs-linear-peptides'],
     },
 
     {
@@ -1553,7 +1684,7 @@
         { text: 'Zempo, H., et al. (2021). Exercise increases MOTS-c levels in circulation. European Journal of Applied Physiology, 121(12), 3285-3293.', url: 'https://doi.org/10.1007/s00421-021-04643-8' },
       ],
       cta: 'Explore our <a href="catalog/?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
-      related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis'],
+      related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis', 'what-is-nad-plus'],
     },
   ];
 
