@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Síntesis de péptidos: de la SPPS a un lote 99% por HPLC</title>
+  <meta name="description" content="Cómo se fabrican los péptidos de investigación: síntesis en fase sólida, escisión y purificación por HPLC, y por qué el sólido final no es péptido puro.">
+  <link rel="canonical" href="https://codexresearchlab.com/es/article/peptide-synthesis/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/article/peptide-synthesis/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/article/peptide-synthesis/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/article/peptide-synthesis/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Síntesis de péptidos: de la SPPS a un lote 99% por HPLC">
+  <meta property="og:description" content="Cómo se fabrican los péptidos de investigación: síntesis en fase sólida, escisión y purificación por HPLC, y por qué el sólido final no es péptido puro.">
+  <meta property="og:url" content="https://codexresearchlab.com/es/article/peptide-synthesis/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/blog/peptide-synthesis.jpg">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Síntesis de péptidos: de la SPPS a un lote 99% por HPLC">
+  <meta name="twitter:description" content="Cómo se fabrican los péptidos de investigación: síntesis en fase sólida, escisión y purificación por HPLC, y por qué el sólido final no es péptido puro.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/blog/peptide-synthesis.jpg">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Síntesis de péptidos: de la SPPS a un lote 99% por HPLC","description":"Cómo se fabrican los péptidos de investigación: síntesis en fase sólida, escisión y purificación por HPLC, y por qué el sólido final no es péptido puro.","image":["https://codexresearchlab.com/assets/blog/peptide-synthesis.jpg"],"inLanguage":"es","datePublished":"2025-07-22","dateModified":"2025-07-22","author":{"@type":"Organization","name":"Codex Research"},"publisher":{"@type":"Organization","name":"Codex Research","logo":{"@type":"ImageObject","url":"https://codexresearchlab.com/assets/logo-horizontal-dark.png"}},"mainEntityOfPage":"https://codexresearchlab.com/es/article/peptide-synthesis/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://codexresearchlab.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://codexresearchlab.com/es/blog/"},{"@type":"ListItem","position":3,"name":"Síntesis de péptidos: cómo se fabrican en el laboratorio","item":"https://codexresearchlab.com/es/article/peptide-synthesis/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se fabrican los péptidos en el laboratorio?","acceptedAnswer":{"@type":"Answer","text":"La mayoría se fabrican por síntesis en fase sólida (SPPS), anclando aminoácidos de uno en uno a una perla de resina mediante ciclos repetidos de acoplamiento y desprotección, para después escindir y purificar la cadena."}},{"@type":"Question","name":"¿Qué es la síntesis de péptidos en fase sólida (SPPS)?","acceptedAnswer":{"@type":"Answer","text":"La SPPS es un método en el que la cadena en crecimiento permanece anclada a una resina sólida mientras se añaden los aminoácidos paso a paso, lo que hace la síntesis eficiente y fácil de automatizar."}},{"@type":"Question","name":"¿Cómo se confirma la pureza después de la síntesis?","acceptedAnswer":{"@type":"Answer","text":"La pureza se confirma con HPLC y espectrometría de masas, que verifican la secuencia correcta, el peso molecular y la ausencia de subproductos significativos."}}]}</script>
+</head>
+<body data-nav="blog" data-slug="peptide-synthesis">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="articleMain">
+    <article>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/es/">Inicio</a> <span>/</span>
+          <a href="es/blog/">Blog</a> <span>/</span>
+          <span>Síntesis de péptidos: cómo se fabrican en el laboratorio</span>
+        </nav>
+        <header class="article-head">
+          <span class="blog-tag">Procesos de laboratorio · 22 jul 2025</span>
+          <h1>Síntesis de péptidos: cómo se fabrican en el laboratorio</h1>
+        </header>
+      </div>
+      <div class="container article-cover-wrap">
+        <figure class="article-figure">
+          <img src="assets/blog/peptide-synthesis.jpg" alt="Síntesis de péptidos en fase sólida sobre perlas de resina en un laboratorio" width="1415" height="1800">
+          <figcaption>Síntesis de péptidos en fase sólida sobre perlas de resina en un laboratorio</figcaption>
+        </figure>
+      </div>
+      <div class="container article-layout">
+        <div class="article-body">
+          
+        <p class="lead">La síntesis de péptidos es el proceso de laboratorio con el que se construyen cadenas cortas de aminoácidos unidos por enlaces peptídicos. La mayor parte de la síntesis moderna usa síntesis en fase sólida (SPPS), donde los aminoácidos se añaden de uno en uno sobre una perla de resina mediante ciclos repetidos de acoplamiento y desprotección.</p>
+
+        <h2>¿Qué es la síntesis de péptidos?</h2>
+        <p>Es el proceso de laboratorio con el que se crean cadenas cortas de aminoácidos unidos por enlaces peptídicos. Esas cadenas pueden imitar secuencias naturales o diseñarse a medida para investigación. Como los péptidos participan en la señalización, la actividad enzimática y la biología estructural, producirlos de forma sintética permite estudiarlos de manera controlada. Para los conceptos de base, mira nuestra guía sobre <a href="es/article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>. <a class="cite" href="https://doi.org/10.1021/ja00897a025" target="_blank" rel="noopener nofollow">(Referencia: Merrifield, 1963)</a></p>
+
+        <h2>¿Cómo se hace en el laboratorio?</h2>
+        <p>La mayor parte de la síntesis moderna usa síntesis de péptidos en fase sólida (SPPS). El primer aminoácido se ancla a una perla de resina sólida y los siguientes se añaden paso a paso. Cada ciclo consiste en:</p>
+        <ol>
+          <li><b>Activación:</b> preparar el siguiente aminoácido para el acoplamiento.</li>
+          <li><b>Acoplamiento:</b> formar un enlace peptídico entre la cadena en crecimiento y el aminoácido nuevo.</li>
+          <li><b>Desprotección:</b> retirar los grupos protectores para que la cadena pueda seguir creciendo.</li>
+        </ol>
+        <p>Una vez completa la secuencia, el péptido se escinde de la resina y se purifica para uso en investigación. <a class="cite" href="https://doi.org/10.1093/oso/9780199637256.001.0001" target="_blank" rel="noopener nofollow">(Referencia: Chan y White, 2000)</a></p>
+
+        <h2>Características de la producción sintética</h2>
+        <p>La síntesis de péptidos ofrece:</p>
+        <ul>
+          <li><b>Precisión:</b> la posibilidad de diseñar secuencias de aminoácidos exactas.</li>
+          <li><b>Flexibilidad:</b> incorporar modificaciones como aminoácidos no naturales o marcajes.</li>
+          <li><b>Escalabilidad:</b> desde miligramos para experimentos hasta cantidades mayores para ensayos.</li>
+          <li><b>Control de pureza:</b> los productos se analizan por <a href="es/article/high-performance-liquid-chromatography-hplc/">HPLC</a> y <a href="es/article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para confirmar identidad y pureza.</li>
+        </ul>
+        <p><a class="cite" href="https://doi.org/10.1038/nmeth.1403" target="_blank" rel="noopener nofollow">(Referencia: Coin, 2010)</a></p>
+
+        <h2>Qué se ha observado</h2>
+        <p>Los sintetizadores automáticos han mejorado mucho la eficiencia y permiten producir péptidos complejos con alta reproducibilidad. Los avances en reactivos de acoplamiento y en tecnologías de resina han reducido las reacciones secundarias y mejorado el rendimiento. Aun así, los péptidos muy largos o muy hidrofóbicos siguen siendo difíciles y suelen requerir condiciones optimizadas o químicas especializadas. <a class="cite" href="https://doi.org/10.1002/anie.198606031" target="_blank" rel="noopener nofollow">(Referencia: Merrifield, 1986)</a></p>
+      
+          
+          <section class="article-faq"><h2>Preguntas frecuentes</h2><div class="faq-item"><h3>¿Cómo se fabrican los péptidos en el laboratorio?</h3><p>La mayoría se fabrican por síntesis en fase sólida (SPPS), anclando aminoácidos de uno en uno a una perla de resina mediante ciclos repetidos de acoplamiento y desprotección, para después escindir y purificar la cadena.</p></div><div class="faq-item"><h3>¿Qué es la síntesis de péptidos en fase sólida (SPPS)?</h3><p>La SPPS es un método en el que la cadena en crecimiento permanece anclada a una resina sólida mientras se añaden los aminoácidos paso a paso, lo que hace la síntesis eficiente y fácil de automatizar.</p></div><div class="faq-item"><h3>¿Cómo se confirma la pureza después de la síntesis?</h3><p>La pureza se confirma con HPLC y espectrometría de masas, que verifican la secuencia correcta, el peso molecular y la ausencia de subproductos significativos.</p></div></section>
+          <section class="article-refs"><h2>Referencias</h2><ul><li><a href="https://doi.org/10.1021/ja00897a025" target="_blank" rel="noopener nofollow">Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.</a></li><li><a href="https://doi.org/10.1093/oso/9780199637256.001.0001" target="_blank" rel="noopener nofollow">Chan, W.C., &amp;amp; White, P.D. (2000). Fmoc Solid Phase Peptide Synthesis: A Practical Approach. Oxford University Press.</a></li><li><a href="https://doi.org/10.1038/nmeth.1403" target="_blank" rel="noopener nofollow">Coin, I. (2010). High-throughput peptide synthesis and screening. Nature Methods, 7, 431-433.</a></li><li><a href="https://doi.org/10.1002/anie.198606031" target="_blank" rel="noopener nofollow">Merrifield, R.B. (1986). Solid-phase synthesis: the early years. Angewandte Chemie International Edition, 25(9), 869-878.</a></li></ul></section>
+          <section class="article-related"><h2>Artículos relacionados</h2><ul><li><a href="es/article/amino-acids-peptides-proteins-difference/">Aminoácidos, péptidos y proteínas: ¿cuál es la diferencia?</a></li><li><a href="es/article/high-performance-liquid-chromatography-hplc/">¿Qué es la cromatografía líquida de alta resolución (HPLC)?</a></li><li><a href="es/article/mass-spectrometry-peptide-research/">La espectrometría de masas en la investigación con péptidos</a></li></ul></section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="es/article/peptide-synthesis/post.js"></script>
+  <script src="article.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

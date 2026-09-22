@@ -15,6 +15,9 @@
    (article/<slug>/, catalog/, verify/): build-seo.js los reescribe a su versión
    en español cuando existe, y los deja en inglés cuando no. */
 (function () {
+  const cite = (text, url) =>
+    ` <a class="cite" href="${url}" target="_blank" rel="noopener nofollow">(${text})</a>`;
+
   const POSTS_ES = {
 
     'buy-research-peptides-panama': {
@@ -206,6 +209,413 @@
         { q: '¿Cuáles son las señales de un certificado de análisis poco fiable?', a: 'Sin número de lote, o con uno que no coincide con el vial; sin fecha de análisis; sin métodos de ensayo con nombre; sin laboratorio identificado ni firma; una imagen con resolución demasiado baja para leer el cromatograma; o el mismo documento reutilizado en todos los productos en vez de ser específico de un lote.' },
       ],
       cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'mass-spectrometry-peptide-research': {
+      title: 'La espectrometría de masas en la investigación con péptidos',
+      metaTitle: 'Espectrometría de masas: confirmar qué es un péptido',
+      metaDescription: 'Cómo se usa la espectrometría de masas para confirmar la identidad de un péptido, detectar modificaciones y evaluar la pureza: MALDI-TOF, ESI y LC-MS/MS.',
+      category: 'Técnicas analíticas',
+      date: '11 oct 2025',
+      excerpt: 'Cómo esta técnica confirma la identidad, la masa molecular y la pureza de cada compuesto.',
+      imageAlt: 'Equipo de espectrometría de masas usado para analizar péptidos de investigación',
+      related: ['high-performance-liquid-chromatography-hplc', 'how-to-read-a-certificate-of-analysis', 'peptide-purity-hplc-explained'],
+      body: `
+        <p class="lead">La espectrometría de masas (EM) es una técnica analítica que mide la relación masa-carga de moléculas ionizadas. En la investigación con péptidos se usa para confirmar la identidad, medir el peso molecular exacto, detectar modificaciones y evaluar la pureza, lo que la convierte en una de las herramientas más fiables para caracterizar péptidos sintéticos.</p>
+
+        <h2>¿Qué es la espectrometría de masas?</h2>
+        <p>La espectrometría de masas convierte los compuestos en partículas cargadas y las separa en un analizador según su relación masa-carga. Eso permite determinar pesos moleculares, identificar compuestos desconocidos y analizar mezclas complejas con alta sensibilidad.${cite('Referencia: Aebersold y Mann, 2003', 'https://doi.org/10.1038/nature01511')}</p>
+
+        <h2>¿Por qué se usa en la investigación con péptidos?</h2>
+        <p>Los péptidos son cadenas cortas de aminoácidos que pueden variar en secuencia, modificaciones y pureza. Si quieres los fundamentos, mira nuestra guía sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>. La espectrometría de masas es esencial para estudiarlos porque aporta información molecular precisa. Se usa para:</p>
+        <ul>
+          <li>Confirmar la identidad de un péptido midiendo su peso molecular exacto.</li>
+          <li>Detectar modificaciones postraduccionales o sintéticas.</li>
+          <li>Evaluar la pureza e identificar subproductos en preparaciones sintéticas.</li>
+          <li>Secuenciar péptidos mediante análisis de fragmentación.</li>
+        </ul>
+        <p>${cite('Referencia: Yates et al., 2009', 'https://doi.org/10.1146/annurev-bioeng-061008-124934').trim()}</p>
+
+        <h2>Enfoques habituales en péptidos</h2>
+        <p>Varios métodos se aplican con frecuencia al análisis de péptidos:</p>
+        <ul>
+          <li><b>MALDI-TOF</b> (ionización/desorción láser asistida por matriz, con analizador de tiempo de vuelo): muy usado para determinar rápidamente la masa de un péptido.</li>
+          <li><b>ESI</b> (ionización por electrospray): permite analizar péptidos en disolución y se acopla bien a la cromatografía líquida.</li>
+          <li><b>LC-MS/MS</b> (cromatografía líquida con espectrometría de masas en tándem): combina separación y fragmentación para secuenciación y análisis estructural en detalle.</li>
+        </ul>
+        <p>La EM se combina a menudo con la <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución (HPLC)</a> para verificar la pureza.${cite('Referencia: Domon y Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
+
+        <h2>Aplicaciones en investigación</h2>
+        <p>La espectrometría de masas se usa ampliamente en la ciencia de péptidos, por ejemplo para:</p>
+        <ul>
+          <li>Verificar la identidad y la pureza de lotes de péptido sintético, un paso de rutina tras la <a href="article/peptide-synthesis/">síntesis</a>.</li>
+          <li>Mapear interacciones entre péptidos y proteínas.</li>
+          <li>Perfilar péptidos endógenos en muestras biológicas.</li>
+          <li>Apoyar estudios estructurales localizando modificaciones de aminoácidos.</li>
+        </ul>
+        <p>${cite('Referencia: Aebersold y Mann, 2016', 'https://doi.org/10.1038/nature19949').trim()}</p>
+      `,
+      faq: [
+        { q: '¿Qué mide la espectrometría de masas en un péptido?', a: 'Mide la relación masa-carga de las moléculas de péptido ionizadas, lo que da su peso molecular exacto y confirma la identidad y la pureza.' },
+        { q: '¿Cuál es la diferencia entre MALDI-TOF y ESI en péptidos?', a: 'MALDI-TOF se usa para determinar rápidamente la masa de péptidos en una matriz sólida, mientras que ESI ioniza los péptidos en disolución y se acopla con facilidad a la cromatografía líquida.' },
+        { q: '¿Por qué importa la espectrometría de masas después de sintetizar un péptido?', a: 'Confirma que el péptido sintetizado tiene la secuencia y el peso molecular correctos, y ayuda a detectar subproductos antes de usarlo en investigación.' },
+      ],
+      cta: 'Mira nuestra gama de <a href="catalog/">péptidos de investigación</a>, analizados por espectrometría de masas y HPLC para verificar su pureza.',
+    },
+
+    'high-performance-liquid-chromatography-hplc': {
+      title: '¿Qué es la cromatografía líquida de alta resolución (HPLC)?',
+      metaTitle: 'HPLC: cómo se produce el número de pureza de un péptido',
+      metaDescription: 'Guía clara de la cromatografía líquida de alta resolución (HPLC): cómo separa y cuantifica compuestos, y por qué es clave en la investigación con péptidos.',
+      category: 'Técnicas analíticas',
+      date: '29 ago 2025',
+      excerpt: 'El método estándar para verificar la pureza de un lote antes de enviarlo, explicado paso a paso.',
+      imageAlt: 'Sistema de cromatografía líquida de alta resolución HPLC separando muestras de péptidos',
+      related: ['mass-spectrometry-peptide-research', 'peptide-purity-hplc-explained', 'how-to-read-a-certificate-of-analysis'],
+      body: `
+        <p class="lead">La cromatografía líquida de alta resolución (HPLC, por sus siglas en inglés) es una técnica analítica que sirve para separar, identificar y cuantificar los componentes de una mezcla. Una bomba de alta presión empuja una muestra líquida a través de una columna rellena de una fase estacionaria, y cada compuesto sale en un tiempo distinto, lo que permite analizar péptidos y otras moléculas con precisión.</p>
+
+        <h2>¿Cómo funciona la HPLC?</h2>
+        <p>La HPLC hace pasar una muestra líquida por una columna rellena de una fase estacionaria mientras una bomba de alta presión impulsa el disolvente, llamado fase móvil. Los distintos compuestos interactúan con la fase estacionaria con distinta fuerza, así que salen de la columna en momentos diferentes. A ese principio se le llama tiempo de retención.${cite('Referencia: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
+
+        <h2>¿Para qué se usa en investigación?</h2>
+        <p>La HPLC se aplica en muchos campos científicos. En investigación de péptidos y farmacéutica se usa habitualmente para:</p>
+        <ul>
+          <li>Verificar la pureza de compuestos sintetizados, un paso de calidad clave tras la <a href="article/peptide-synthesis/">síntesis de péptidos</a>.</li>
+          <li>Separar fragmentos peptídicos o análogos.</li>
+          <li>Detectar concentraciones pequeñas de impurezas.</li>
+          <li>Preparar muestras para análisis estructurales o biológicos posteriores, muchas veces junto con la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</li>
+        </ul>
+        <p>${cite('Referencia: Kazakevich y LoBrutto, 2007', 'https://doi.org/10.1002/0470087951').trim()}</p>
+
+        <h2>Características clave de la HPLC</h2>
+        <p>Quienes investigan valoran la HPLC porque ofrece:</p>
+        <ul>
+          <li><b>Alta resolución:</b> capacidad de separar con precisión compuestos muy parecidos entre sí.</li>
+          <li><b>Exactitud cuantitativa:</b> datos fiables de concentración en mezclas complejas.</li>
+          <li><b>Versatilidad:</b> sirve para péptidos, proteínas, metabolitos y moléculas orgánicas pequeñas.</li>
+          <li><b>Escalabilidad:</b> los métodos se adaptan desde el análisis de microgramos hasta la purificación preparativa.</li>
+        </ul>
+        <p>${cite('Referencia: Swartz y Krull, 2012', 'https://doi.org/10.1201/b12039').trim()}</p>
+
+        <h2>Qué se ha observado</h2>
+        <p>Los estudios que usan HPLC reportan de forma consistente su valor en el control de calidad y la caracterización de péptidos. La investigación con péptidos suele usar HPLC de fase reversa para confirmar purezas por encima del 98 o 99 por ciento, y las corridas analíticas permiten detectar contaminantes incluso en trazas. Más allá de los péptidos, la HPLC se ha aplicado para seguir intermediarios metabólicos, evaluar la estabilidad de fármacos y vigilar la eficiencia de una síntesis química. También se usa para comprobar estándares de referencia preparados por <a href="article/lyophilization-freeze-drying/">liofilización</a>.${cite('Referencia: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
+      `,
+      faq: [
+        { q: '¿Para qué se usa la HPLC?', a: 'La HPLC sirve para separar, identificar y cuantificar los componentes de una mezcla. En investigación con péptidos verifica la pureza y detecta impurezas.' },
+        { q: '¿Qué es el tiempo de retención en HPLC?', a: 'El tiempo de retención es lo que tarda un compuesto en recorrer la columna y salir de ella. Compuestos distintos tienen tiempos de retención distintos, y así es como se separan.' },
+        { q: '¿Qué pureza puede confirmar la HPLC en péptidos?', a: 'La HPLC de fase reversa se usa habitualmente para confirmar purezas de péptido por encima del 98 o 99 por ciento y para detectar contaminantes en trazas.' },
+      ],
+      cta: 'Mira los <a href="catalog/">péptidos de investigación</a> verificados por HPLC con pureza superior al 98 por ciento.',
+    },
+
+    'bacteriostatic-water-for-peptide-reconstitution': {
+      title: 'Agua bacteriostática para reconstituir péptidos',
+      metaTitle: 'Agua bacteriostática: alcohol bencílico, pH y solubilidad',
+      metaDescription: 'Agua bacteriostática para reconstituir péptidos: contenido de alcohol bencílico, pH, cómo elegir disolvente y cuánto dura una disolución.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Qué separa el agua bacteriostática del agua estéril común, y por qué los laboratorios la eligen primero.',
+      imageAlt: 'Vial de agua bacteriostática usado para reconstituir péptidos de investigación',
+      related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
+      body: `
+        <p class="lead">Cuando un péptido liofilizado necesita un líquido en el que disolverse, la respuesta por defecto en la mayoría de los laboratorios es el agua bacteriostática. No es la única opción, pero es la primera a la que se recurre, y hay una razón concreta. La versión corta: permite usar un vial más de una vez.</p>
+
+        <h2>¿Qué es el agua bacteriostática?</h2>
+        <p>El agua bacteriostática es agua estéril que contiene una pequeña cantidad de alcohol bencílico, normalmente alrededor del 0,9 por ciento, añadido como conservante. La palabra «bacteriostático» describe lo que hace ese conservante: frena o detiene el crecimiento bacteriano, en vez de matarlo todo de golpe. Ese único ingrediente es toda la diferencia con el agua para inyección común.</p>
+
+        <h2>La especificación, en números</h2>
+        <p>La etiqueta USP del producto es específica sobre lo que contiene el líquido:</p>
+        <table>
+          <tr><th>Atributo</th><th>Valor</th></tr>
+          <tr><td>Conservante</td><td>Alcohol bencílico, 0,9% (9 mg/mL)</td></tr>
+          <tr><td>pH</td><td>5,7 (rango de 4,5 a 7,0)</td></tr>
+          <tr><td>Presentación</td><td>Estéril, apirógena, envase multidosis</td></tr>
+          <tr><td>Otros aditivos</td><td>Ninguno</td></tr>
+        </table>
+        <p>El pH ligeramente ácido es un detalle que a veces importa, porque cae dentro del rango en el que la desamidación, la vía de degradación más común de los péptidos en agua, avanza más despacio.</p>
+
+        <h2>En qué se diferencia del agua estéril</h2>
+        <p>El agua estéril para inyección es exactamente eso, agua sin nada añadido, y está pensada para un solo uso. Una vez abierta no tiene conservante que contenga la contaminación. El agua bacteriostática, por el alcohol bencílico, tolera que se entre en ella más de una vez a lo largo de un tiempo, y por eso encaja con un vial multidosis de investigación del que se extrae repetidamente. Para péptidos que se estudian durante días o semanas, esa reutilización es la ventaja práctica.</p>
+
+        <h2>Por qué los laboratorios la usan con péptidos</h2>
+        <p>El agua bacteriostática encaja bien con el trabajo de laboratorio: disuelve limpiamente la mayoría de los péptidos, el conservante permite varias extracciones de un mismo vial, y está ampliamente disponible en volúmenes estándar. Conviene saber además que el alcohol bencílico cuenta como una clase de <a href="article/excipients-in-peptides/">excipiente</a>, un ingrediente inactivo que sostiene la formulación sin ser el compuesto activo.</p>
+
+        <h2>Qué es reconstituir, como operación de laboratorio</h2>
+        <p>Reconstituir es disolver una masa conocida de sólido liofilizado en un volumen medido de disolvente, de modo que el resultado sea una disolución de concentración conocida. La aritmética es masa dividida entre volumen, y nada más:</p>
+        <table>
+          <tr><th>Sólido en el vial</th><th>Disolvente añadido</th><th>Concentración resultante</th></tr>
+          <tr><td>5 mg</td><td>1,00 mL</td><td>5 mg/mL</td></tr>
+          <tr><td>5 mg</td><td>2,00 mL</td><td>2,5 mg/mL</td></tr>
+          <tr><td>10 mg</td><td>2,00 mL</td><td>5 mg/mL</td></tr>
+          <tr><td>10 mg</td><td>5,00 mL</td><td>2 mg/mL</td></tr>
+        </table>
+        <p>Dos cosas hacen esa aritmética menos trivial de lo que parece. La primera es que la torta liofilizada ocupa volumen propio, así que el volumen final de la disolución no es exactamente el volumen de disolvente añadido; para trabajos donde la concentración tiene que ser exacta y no aproximada, la disolución se enrasa a una marca en vez de añadir un volumen nominal. La segunda es que la masa impresa en la etiqueta es la masa de sólido, no la masa de péptido. El material purificado por cromatografía de fase reversa se aísla como sal y arrastra un contraión más agua residual, así que el contenido neto de péptido del polvo suele estar bastante por debajo del 100 por ciento y se reporta por lote en el <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a>. Una concentración calculada solo con la masa de la etiqueta es una cifra nominal.</p>
+
+        <h2>Elegir disolvente</h2>
+        <p>El agua bacteriostática es la opción por defecto porque la mayoría de los péptidos cortos con un número razonable de residuos cargados se disuelven en ella con facilidad, pero es un valor por defecto, no una regla. Los fabricantes de péptidos dan la misma orientación general: los péptidos básicos se toman normalmente en una pequeña cantidad de disolvente ácido, como ácido acético diluido, y luego se diluyen; los péptidos ácidos, en una pequeña cantidad de disolvente básico, como amoniaco acuoso al 0,1 por ciento, y luego se diluyen; las secuencias marcadamente hidrofóbicas pueden necesitar un disolvente orgánico como DMSO, DMF o acetonitrilo antes de cualquier dilución acuosa. Prueba primero con una porción pequeña en vez de comprometer el vial entero, y revisa el disolvente que sugiere la hoja de datos analíticos del propio lote. Si el material tarda en disolverse, unos minutos de sonicación en baño de agua pueden ayudar, aunque conviene evitar calentar en exceso.</p>
+
+        <h2>El conservante no es inerte</h2>
+        <p>El alcohol bencílico es el conservante antimicrobiano más usado en formulaciones proteicas multidosis, y su efecto sobre la molécula disuelta se ha estudiado de forma directa. Los conservantes de esta clase favorecen el desplegamiento parcial, y el desplegamiento parcial es lo que dispara la agregación; en una comparación publicada, la tendencia a inducir agregación fue m-cresol &gt; fenol &gt; alcohol bencílico &gt; fenoxietanol &gt; clorobutanol. El alcohol bencílico está por tanto en la mitad de ese rango, no en el extremo inocuo. Para trabajos donde la agregación o una caracterización física exacta son el objetivo, el agua estéril común o un tampón definido pueden ser mejor diluyente, y sea cual sea el elegido debe anotarse junto con la concentración, porque el diluyente forma parte de la condición experimental.</p>
+
+        <h2>Cuánto dura una disolución reconstituida</h2>
+        <p>Mucho menos que el sólido seco, y por razones químicas más que microbianas. Las vías de degradación que dominan en agua son la desamidación de las cadenas laterales de asparagina y glutamina, más rápida a pH neutro y alcalino y más lenta alrededor de pH 3 a 6; la hidrólisis del esqueleto, catalizada por ácido y especialmente notable en las uniones Asp-Gly y Asp-Pro; y la oxidación de metionina, histidina, lisina, triptófano y tirosina. Todas se aceleran con la temperatura. Un conservante no hace nada contra ninguna de ellas, y por eso la vida útil de un péptido en disolución es corta comparada con la del mismo péptido liofilizado.</p>
+        <p>Las consecuencias prácticas son las que publican los fabricantes: repartir la disolución en alícuotas en vez de volver una y otra vez al mismo vial, mantener esas alícuotas congeladas por debajo de unos quince grados bajo cero, evitar ciclos repetidos de congelación y descongelación, y tratar el almacenamiento prolongado en disolución como algo que hay que diseñar, no algo en lo que confiar, sobre todo en secuencias que contienen asparagina, glutamina, cisteína, metionina o triptófano.</p>
+
+        <h2>Manejar el vial seco antes de añadir nada</h2>
+        <p>Los péptidos liofilizados son higroscópicos, así que el orden de los pasos importa. Un vial sacado del frío debe alcanzar la temperatura ambiente dentro de un desecador antes de abrirlo, para que no condense humedad sobre la torta, y después hay que pesarlo rápido y volver a cerrarlo bien. Todo lo que entre en el vial a partir de ahí, disolvente incluido, pasa a formar parte del sistema, y ese es todo el argumento a favor de un diluyente conservado cuando se va a entrar en un envase más de una vez.</p>
+
+        <h2>Manejo y conservación</h2>
+        <p>Igual que los péptidos que disuelve, una disolución reconstituida se mantiene generalmente fría y protegida de la luz, con las condiciones exactas en la etiqueta del producto. El agua bacteriostática se conserva según su propia etiqueta. Si la vas a usar con un vial de péptido, puedes confirmar que ese vial es auténtico por su <a href="verify/">número de lote</a>.</p>
+
+        <h2>Lo que este artículo no cubre</h2>
+        <p>Esto describe una operación de laboratorio sobre un material de investigación: disolver un sólido definido en un volumen definido para obtener una concentración definida. No es una guía de preparación para administración a humanos ni a animales, y no contiene información de dosis de ningún tipo.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Este artículo describe únicamente uso de laboratorio.</p>
+      `,
+      faq: [
+        { q: '¿Qué es el agua bacteriostática?', a: 'Es agua estéril con una pequeña cantidad de alcohol bencílico (alrededor del 0,9 por ciento) añadida como conservante. El conservante frena el crecimiento bacteriano, y eso es lo que la hace adecuada para un vial en el que se va a entrar más de una vez.' },
+        { q: '¿Cuál es la diferencia entre agua bacteriostática y agua estéril?', a: 'El agua estéril para inyección no lleva nada añadido y está pensada para un solo uso. El agua bacteriostática contiene alcohol bencílico como conservante, así que tolera varias extracciones, lo que encaja con un vial multidosis de investigación.' },
+        { q: '¿Por qué se usa agua bacteriostática para reconstituir péptidos?', a: 'Disuelve limpiamente la mayoría de los péptidos y su conservante permite varias extracciones de un mismo vial durante los días o semanas que puede durar un estudio. Esa reutilización es la razón práctica principal por la que los laboratorios la eligen.' },
+        { q: '¿Cómo se reconstituye un péptido liofilizado en el laboratorio?', a: 'Se disuelve una masa conocida del sólido liofilizado en un volumen medido de disolvente para obtener una disolución de concentración conocida: 10 mg en 2,00 mL son 5 mg/mL. Dos correcciones importan en trabajo exacto: la torta ocupa volumen propio, así que las disoluciones precisas se enrasan a una marca en vez de añadir un volumen nominal; y la masa etiquetada es de sólido, no de péptido neto, porque el material arrastra un contraión y agua residual. Esto describe únicamente una operación de laboratorio sobre un material de investigación.' },
+        { q: '¿Cuánto tiempo es estable una disolución de péptido reconstituida?', a: 'Mucho menos que el sólido seco. En agua avanzan la desamidación de asparagina y glutamina, la hidrólisis del esqueleto y la oxidación de metionina, histidina, lisina, triptófano y tirosina, y todas se aceleran con la temperatura. Un conservante no frena ninguna. Los fabricantes aconsejan repartir las disoluciones en alícuotas, mantenerlas congeladas por debajo de unos quince grados bajo cero y evitar ciclos repetidos de congelación y descongelación.' },
+        { q: '¿Se puede usar agua estéril común en vez de bacteriostática?', a: 'Sí, y a veces es preferible. El alcohol bencílico no es inerte: los conservantes de su clase favorecen el desplegamiento parcial y la agregación, y el alcohol bencílico queda en la mitad del rango en una comparación publicada. Para trabajos donde la agregación o la caracterización física son el objetivo, el agua estéril común o un tampón definido pueden ser mejor diluyente. Sea cual sea el que se use, conviene anotarlo, porque el diluyente forma parte de la condición experimental.' },
+      ],
+      cta: 'Mira los <a href="catalog/">péptidos de investigación e insumos</a> de Codex Research, o <a href="verify/">revisa un número de lote</a>.',
+    },
+
+    'amino-acids-peptides-proteins-difference': {
+      title: 'Aminoácidos, péptidos y proteínas: ¿cuál es la diferencia?',
+      metaTitle: '¿Aminoácido, péptido o proteína? Dónde está la línea',
+      metaDescription: 'Aminoácidos, péptidos y proteínas explicados: las diferencias de tamaño, estructura y función, desde una molécula suelta hasta una proteína plegada.',
+      category: 'Fundamentos de péptidos',
+      date: '16 ago 2025',
+      excerpt: 'Una guía breve de la jerarquía de las moléculas biológicas, del residuo suelto a la proteína plegada.',
+      imageAlt: 'Diagrama que compara aminoácidos, péptidos y proteínas por tamaño y estructura',
+      related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-bpc-157'],
+      body: `
+        <p class="lead">Los aminoácidos, los péptidos y las proteínas se diferencian sobre todo en tamaño y estructura. Los aminoácidos son moléculas sueltas y son los ladrillos. Los péptidos son cadenas cortas, de 2 a unos 50 aminoácidos. Las proteínas son cadenas largas, a menudo de cientos de residuos, que se pliegan en estructuras tridimensionales complejas con funciones especializadas.</p>
+
+        <h2>¿Qué son los aminoácidos?</h2>
+        <p>Los aminoácidos son los ladrillos de los péptidos y las proteínas. Cada aminoácido tiene un carbono central unido a un grupo amino, un grupo carboxilo, un hidrógeno y una cadena lateral única, llamada grupo R. Esas cadenas laterales dan a cada aminoácido propiedades químicas distintas, de polar a apolar y de ácido a básico.</p>
+
+        <h2>¿Qué son los péptidos?</h2>
+        <p>Los péptidos son cadenas cortas de aminoácidos unidos por enlaces peptídicos. Un enlace peptídico se forma cuando el grupo carboxilo de un aminoácido reacciona con el grupo amino de otro y se libera agua. En investigación, los péptidos se fabrican a menudo mediante <a href="article/peptide-synthesis/">síntesis de péptidos</a> para estudiar vías de señalización, interacciones enzimáticas y motivos estructurales. Se definen típicamente como cadenas de 2 a unos 50 aminoácidos, aunque el corte exacto varía. Un ejemplo muy estudiado es el <a href="article/what-is-bpc-157/">BPC-157</a>, un pentadecapéptido sintético de quince residuos.${cite('Referencia: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
+
+        <h2>¿Qué son las proteínas?</h2>
+        <p>Las proteínas son cadenas de aminoácidos más grandes y complejas, a menudo de cientos de residuos. A diferencia de los péptidos cortos, se pliegan en estructuras tridimensionales intrincadas que determinan su función. Pueden actuar como enzimas, andamios estructurales, transportadores o receptores. La investigación sobre el plegamiento y el mal plegamiento de proteínas ha dado claves sobre enfermedades como el alzhéimer y el párkinson.${cite('Referencia: Dobson, 2003', 'https://doi.org/10.1038/nature02261')}</p>
+
+        <h2>Diferencias clave</h2>
+        <ul>
+          <li><b>Tamaño:</b> los aminoácidos son moléculas sueltas, los péptidos son cadenas cortas y las proteínas son cadenas largas plegadas.</li>
+          <li><b>Estructura:</b> las proteínas se pliegan en estructuras 3D estables, mientras que los péptidos suelen quedarse lineales o plegarse solo en parte.</li>
+          <li><b>Función:</b> los aminoácidos son ladrillos, los péptidos actúan a menudo como moléculas de señalización y las proteínas llevan a cabo funciones biológicas complejas.</li>
+        </ul>
+        <p>Herramientas analíticas como la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> se usan para confirmar la identidad de péptidos y proteínas.${cite('Referencia: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
+      `,
+      faq: [
+        { q: '¿Cuál es la diferencia entre un péptido y una proteína?', a: 'Los péptidos son cadenas cortas de aproximadamente 2 a 50 aminoácidos, mientras que las proteínas son cadenas mucho más largas que se pliegan en estructuras tridimensionales complejas con funciones especializadas.' },
+        { q: '¿Qué es un enlace peptídico?', a: 'Un enlace peptídico es la unión entre dos aminoácidos. Se forma cuando el grupo carboxilo de uno reacciona con el grupo amino del otro y se libera una molécula de agua.' },
+        { q: '¿Cuántos aminoácidos hacen un péptido en vez de una proteína?', a: 'Los péptidos se definen normalmente como cadenas de 2 a unos 50 aminoácidos. Las cadenas más largas que se pliegan en estructuras estables se clasifican generalmente como proteínas, aunque el corte varía.' },
+      ],
+      cta: '¿Quieres ir más a fondo? Mira nuestros <a href="catalog/">péptidos de investigación</a> o aprende cómo se fabrican en la guía de <a href="article/peptide-synthesis/">síntesis de péptidos</a>.',
+    },
+
+    'peptide-synthesis': {
+      title: 'Síntesis de péptidos: cómo se fabrican en el laboratorio',
+      metaTitle: 'Síntesis de péptidos: de la SPPS a un lote 99% por HPLC',
+      metaDescription: 'Cómo se fabrican los péptidos de investigación: síntesis en fase sólida, escisión y purificación por HPLC, y por qué el sólido final no es péptido puro.',
+      category: 'Procesos de laboratorio',
+      date: '22 jul 2025',
+      excerpt: 'Del enlace peptídico a la purificación final: cómo se construyen y se verifican los péptidos sintéticos.',
+      imageAlt: 'Síntesis de péptidos en fase sólida sobre perlas de resina en un laboratorio',
+      related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
+      body: `
+        <p class="lead">La síntesis de péptidos es el proceso de laboratorio con el que se construyen cadenas cortas de aminoácidos unidos por enlaces peptídicos. La mayor parte de la síntesis moderna usa síntesis en fase sólida (SPPS), donde los aminoácidos se añaden de uno en uno sobre una perla de resina mediante ciclos repetidos de acoplamiento y desprotección.</p>
+
+        <h2>¿Qué es la síntesis de péptidos?</h2>
+        <p>Es el proceso de laboratorio con el que se crean cadenas cortas de aminoácidos unidos por enlaces peptídicos. Esas cadenas pueden imitar secuencias naturales o diseñarse a medida para investigación. Como los péptidos participan en la señalización, la actividad enzimática y la biología estructural, producirlos de forma sintética permite estudiarlos de manera controlada. Para los conceptos de base, mira nuestra guía sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>.${cite('Referencia: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
+
+        <h2>¿Cómo se hace en el laboratorio?</h2>
+        <p>La mayor parte de la síntesis moderna usa síntesis de péptidos en fase sólida (SPPS). El primer aminoácido se ancla a una perla de resina sólida y los siguientes se añaden paso a paso. Cada ciclo consiste en:</p>
+        <ol>
+          <li><b>Activación:</b> preparar el siguiente aminoácido para el acoplamiento.</li>
+          <li><b>Acoplamiento:</b> formar un enlace peptídico entre la cadena en crecimiento y el aminoácido nuevo.</li>
+          <li><b>Desprotección:</b> retirar los grupos protectores para que la cadena pueda seguir creciendo.</li>
+        </ol>
+        <p>Una vez completa la secuencia, el péptido se escinde de la resina y se purifica para uso en investigación.${cite('Referencia: Chan y White, 2000', 'https://doi.org/10.1093/oso/9780199637256.001.0001')}</p>
+
+        <h2>Características de la producción sintética</h2>
+        <p>La síntesis de péptidos ofrece:</p>
+        <ul>
+          <li><b>Precisión:</b> la posibilidad de diseñar secuencias de aminoácidos exactas.</li>
+          <li><b>Flexibilidad:</b> incorporar modificaciones como aminoácidos no naturales o marcajes.</li>
+          <li><b>Escalabilidad:</b> desde miligramos para experimentos hasta cantidades mayores para ensayos.</li>
+          <li><b>Control de pureza:</b> los productos se analizan por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para confirmar identidad y pureza.</li>
+        </ul>
+        <p>${cite('Referencia: Coin, 2010', 'https://doi.org/10.1038/nmeth.1403').trim()}</p>
+
+        <h2>Qué se ha observado</h2>
+        <p>Los sintetizadores automáticos han mejorado mucho la eficiencia y permiten producir péptidos complejos con alta reproducibilidad. Los avances en reactivos de acoplamiento y en tecnologías de resina han reducido las reacciones secundarias y mejorado el rendimiento. Aun así, los péptidos muy largos o muy hidrofóbicos siguen siendo difíciles y suelen requerir condiciones optimizadas o químicas especializadas.${cite('Referencia: Merrifield, 1986', 'https://doi.org/10.1002/anie.198606031')}</p>
+      `,
+      faq: [
+        { q: '¿Cómo se fabrican los péptidos en el laboratorio?', a: 'La mayoría se fabrican por síntesis en fase sólida (SPPS), anclando aminoácidos de uno en uno a una perla de resina mediante ciclos repetidos de acoplamiento y desprotección, para después escindir y purificar la cadena.' },
+        { q: '¿Qué es la síntesis de péptidos en fase sólida (SPPS)?', a: 'La SPPS es un método en el que la cadena en crecimiento permanece anclada a una resina sólida mientras se añaden los aminoácidos paso a paso, lo que hace la síntesis eficiente y fácil de automatizar.' },
+        { q: '¿Cómo se confirma la pureza después de la síntesis?', a: 'La pureza se confirma con HPLC y espectrometría de masas, que verifican la secuencia correcta, el peso molecular y la ausencia de subproductos significativos.' },
+      ],
+      cta: 'Explora nuestro catálogo de <a href="catalog/">péptidos de investigación</a> sintetizados en laboratorio, verificados por HPLC y espectrometría de masas.',
+    },
+
+    'cas-numbers-explained': {
+      title: 'El número CAS, explicado',
+      metaTitle: 'Número CAS: comprobar un compuesto en 30 segundos',
+      metaDescription: 'Qué es un número de registro CAS, cómo funciona su dígito de control y cómo usarlo para confirmar que un compuesto es el que crees que es.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'El identificador único que acompaña a cada nombre de compuesto, y cómo leerlo de verdad.',
+      imageAlt: 'Número de registro CAS impreso en la etiqueta de un compuesto de investigación',
+      related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
+      body: `
+        <p class="lead">Junto a casi todo compuesto de una ficha de investigación hay una cadena de dígitos etiquetada como CAS. Es fácil pasarla por alto, pero ese número pequeño es una de las formas más fiables de saber exactamente qué sustancia tienes delante. Los nombres pueden ser ambiguos. Un número CAS no.</p>
+
+        <h2>¿Qué es un número CAS?</h2>
+        <p>Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta recibe el suyo, y no hay dos que compartan uno. Ahí está todo su valor: un compuesto puede tener varios nombres comunes, una abreviatura y un nombre sistemático larguísimo, pero tiene exactamente un número CAS. Corta de raíz la confusión de nombres.</p>
+
+        <h2>Cómo está estructurado</h2>
+        <p>Un número CAS se escribe en tres grupos de dígitos separados por guiones, con el patrón de un grupo más largo, luego dos dígitos y luego uno solo; por ejemplo, 137525-51-0. Ese último dígito suelto es un dígito de control, calculado a partir de los demás, que permite al software detectar una errata. Los dígitos en sí no esconden ningún significado sobre la estructura: son una entrada de registro, como un número de catálogo.</p>
+
+        <h2>Por qué aparece en las fichas de péptidos</h2>
+        <p>Los péptidos de investigación suelen tener nombres y abreviaturas que se solapan, así que el número CAS es una forma precisa de confirmar qué compuesto se vende. En el catálogo de Codex Research verás el número CAS junto a cada producto; por ejemplo, el <a href="article/what-is-bpc-157/">BPC-157</a> con 137525-51-0. Es un detalle pequeño que hace la ficha comprobable en vez de solo descriptiva.</p>
+
+        <h2>Usarlo para comprobar un compuesto</h2>
+        <p>Como el número CAS es único, sirve para buscar una sustancia en bases de datos químicas públicas y confirmar que estás ante el compuesto que esperas. Junto con un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y un número de lote verificable, es parte de cómo un proveedor de investigación hace su material trazable en vez de anónimo.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Qué es un número CAS?', a: 'Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta tiene exactamente uno, lo que lo convierte en una forma precisa de confirmar de qué compuesto se habla, sea cual sea el nombre que se use.' },
+        { q: '¿Cómo se escribe un número CAS?', a: 'Se escribe en tres grupos de dígitos separados por guiones, como 137525-51-0: un grupo más largo, después dos dígitos y después un único dígito de control calculado a partir de los demás para detectar erratas.' },
+        { q: '¿Por qué los péptidos de investigación llevan número CAS?', a: 'Los péptidos suelen tener varios nombres y abreviaturas, así que el número CAS es una forma inequívoca de identificar el compuesto exacto. Además permite buscar la sustancia en bases de datos químicas públicas para confirmarla.' },
+      ],
+      cta: 'Mira el <a href="catalog/">catálogo de Codex Research</a>, donde cada producto lista su número CAS, o <a href="verify/">revisa un número de lote</a>.',
+    },
+
+    'excipients-in-peptides': {
+      title: 'Excipientes en péptidos: qué son y para qué se usan',
+      metaTitle: 'Excipientes en péptidos: qué más hay en el vial',
+      metaDescription: '¿Qué son los excipientes en una formulación de péptidos? Cómo los estabilizantes, tampones y crioprotectores mantienen íntegro el péptido de investigación.',
+      category: 'Formulación',
+      date: '06 sep 2025',
+      excerpt: 'El papel de los estabilizantes, los tampones y los agentes de carga en un vial liofilizado.',
+      imageAlt: 'Excipientes comunes usados para estabilizar formulaciones de péptidos de investigación',
+      related: ['lyophilization-freeze-drying', 'peptide-synthesis', 'high-performance-liquid-chromatography-hplc'],
+      body: `
+        <p class="lead">Los excipientes son sustancias inactivas que se añaden a una formulación de péptido junto al compuesto principal. No aportan actividad biológica, pero estabilizan, protegen y ayudan a administrar el péptido, manteniéndolo íntegro y utilizable durante el almacenamiento, el manejo y los experimentos.</p>
+
+        <h2>¿Qué son los excipientes?</h2>
+        <p>Los excipientes son sustancias inactivas que se añaden a una formulación junto al compuesto principal. En investigación con péptidos ayudan a estabilizar, proteger o administrar el péptido de forma controlada. Aunque no aportan actividad biológica directa, aseguran que el péptido siga íntegro y utilizable durante el almacenamiento, el manejo y la aplicación experimental.</p>
+
+        <h2>¿Por qué importan en péptidos?</h2>
+        <p>Los péptidos son moléculas muy sensibles que pueden degradarse por luz, calor, humedad o actividad enzimática. Los excipientes se añaden para reducir esos riesgos. Pueden:</p>
+        <ul>
+          <li>Prevenir la agregación o la oxidación del péptido.</li>
+          <li>Ajustar el pH para favorecer la estabilidad.</li>
+          <li>Mejorar la solubilidad para el trabajo de laboratorio.</li>
+          <li>Servir de agentes de carga durante la <a href="article/lyophilization-freeze-drying/">liofilización</a>.</li>
+        </ul>
+        <p>${cite('Referencia: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
+
+        <h2>Excipientes habituales</h2>
+        <p>Se usa a menudo un conjunto pequeño de excipientes con propiedades bien documentadas:</p>
+        <ul>
+          <li><b>Manitol y trehalosa:</b> actúan como crioprotectores y estabilizantes durante la liofilización.</li>
+          <li><b>Arginina o glicina:</b> mejoran la solubilidad y reducen la agregación.</li>
+          <li><b>Tampones (fosfato, citrato):</b> mantienen el pH y la fuerza iónica.</li>
+          <li><b>Polisorbatos (Tween 20, Tween 80):</b> protegen frente a la adsorción superficial y la agregación.</li>
+        </ul>
+        <p>${cite('Referencia: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
+
+        <h2>Aplicaciones en investigación</h2>
+        <p>Los excipientes no se estudian por efectos terapéuticos, pero son críticos en la preparación de laboratorio. Ayudan a mantener la integridad del péptido en el vial, favorecen la reproducibilidad en ensayos de cultivo celular y dan resultados consistentes entre experimentos repetidos. Su inclusión ayuda a asegurar que lo que se observa se debe al péptido en estudio y no a la inestabilidad de la muestra. La pureza de la formulación final se confirma a menudo por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Referencia: Carpenter et al., 2002', 'https://doi.org/10.1007/978-1-4615-0557-0_5')}</p>
+      `,
+      faq: [
+        { q: '¿Qué es un excipiente en una formulación de péptido?', a: 'Un excipiente es una sustancia inactiva que se añade junto al péptido para estabilizarlo, protegerlo o administrarlo. No tiene actividad biológica propia.' },
+        { q: '¿Cuáles son los excipientes habituales en péptidos?', a: 'Los más comunes son el manitol y la trehalosa como crioprotectores, la arginina o la glicina para la solubilidad, los tampones de fosfato o citrato, y los polisorbatos como Tween 20 y Tween 80.' },
+        { q: '¿Por qué se añaden excipientes a los péptidos?', a: 'Previenen la agregación y la oxidación, ajustan el pH, mejoran la solubilidad y actúan como agentes de carga durante la liofilización, manteniendo el péptido estable y reproducible.' },
+      ],
+      cta: 'Mira nuestros <a href="catalog/">péptidos de investigación</a>, formulados para la estabilidad y para dar resultados reproducibles.',
+    },
+
+    'lyophilization-freeze-drying': {
+      title: 'Liofilización: cómo funciona',
+      metaTitle: 'Polvo liofilizado: por qué los péptidos se envían secos',
+      metaDescription: '¿Qué es la liofilización? Cómo el secado por congelación conserva péptidos y proteínas: congelación, secado primario y secado secundario, paso a paso.',
+      category: 'Procesos de laboratorio',
+      date: '03 ago 2025',
+      excerpt: 'Por qué los péptidos se liofilizan para conservar su estructura y su estabilidad durante el almacenamiento.',
+      imageAlt: 'Proceso de liofilización retirando agua de muestras de péptido congeladas',
+      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-for-peptide-reconstitution'],
+      body: `
+        <p class="lead">La liofilización, también llamada secado por congelación, es un proceso de deshidratación que retira el agua de una muestra congelada por sublimación a presión reducida. Conserva compuestos sensibles como péptidos, proteínas y vacunas manteniendo su estructura y su estabilidad para el almacenamiento prolongado.</p>
+
+        <h2>Qué significa realmente «polvo liofilizado»</h2>
+        <p>La expresión describe el estado físico del material, no un grado ni una formulación. Lo que queda en el vial después del secado por congelación es un sólido poroso que ocupa aproximadamente la misma forma y el mismo volumen que ocupaba la disolución congelada, y por eso se le suele llamar torta y no polvo. El hielo sublima y la matriz sólida que lo sostenía se queda atrás. Algunas tortas son densas y uniformes, otras son escamosas o se desmoronan en los bordes, y con las masas pequeñas típicas de los péptidos de investigación la torta puede ser una película fina o unas pocas motas en la pared del vial, o no parecer nada. Un vial que parece vacío no ha perdido necesariamente su contenido.</p>
+
+        <h2>¿Qué es la liofilización?</h2>
+        <p>La liofilización es un proceso de deshidratación que se usa en laboratorios de investigación y farmacéuticos para conservar materiales biológicos. La técnica retira el agua de una muestra congelada mediante sublimación, el paso directo del hielo a vapor, a presión reducida. Eso ayuda a mantener la estructura y la estabilidad de compuestos sensibles como péptidos, proteínas y vacunas.${cite('Referencia: Tang y Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75')}</p>
+
+        <h2>¿Cómo funciona el proceso?</h2>
+        <p>La liofilización ocurre típicamente en tres etapas:</p>
+        <ol>
+          <li><b>Congelación:</b> la muestra se enfría hasta que el agua se convierte en hielo, formando una matriz sólida que estabiliza el material.</li>
+          <li><b>Secado primario (sublimación):</b> se baja la presión y se aplica calor suavemente, de modo que el agua congelada sublima a vapor sin pasar por la fase líquida.</li>
+          <li><b>Secado secundario (desorción):</b> se retiran las moléculas de agua ligadas que quedan, reduciendo la humedad final a niveles muy bajos.</li>
+        </ol>
+        <p>${cite('Referencia: Franks, 1998', 'https://doi.org/10.1016/S0939-6411(98)00004-6').trim()}</p>
+
+        <h2>Por qué la congelación decide casi todo el resultado</h2>
+        <p>Congelar no es solo enfriar. A medida que baja la temperatura, el agua se separa como hielo y los solutos restantes quedan empujados a bolsas cada vez más concentradas, que congelan a temperaturas más bajas que el agua de alrededor. La mayoría de las muestras se comportan como eutécticos, una mezcla de solutos y disolvente que solo está bien congelada cuando toda la mezcla eutéctica ha solidificado. Otras no cristalizan nunca: la suspensión simplemente se vuelve más viscosa al enfriarse hasta que fragua como un sólido vítreo en el punto de transición vítrea, y este segundo tipo es bastante más difícil de liofilizar.${cite('Referencia: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+        <p>La velocidad de enfriamiento importa por la misma razón. Enfriar rápido da cristales de hielo pequeños, útiles cuando hay que preservar una estructura para microscopía, pero deja canales estrechos en la matriz y hace que la muestra seque más despacio. Enfriar lento da cristales más grandes y canales menos restrictivos por los que el vapor puede escapar. En cualquier caso, el producto tiene que estar congelado por debajo de su temperatura eutéctica o de transición vítrea antes de empezar a secar, porque las bolsas de material sin congelar se expanden bajo vacío y arruinan la estructura de la torta final.</p>
+
+        <h2>Temperatura de colapso, y qué dice una torta mala</h2>
+        <p>Hay una temperatura por encima de la cual la estructura macroscópica del producto que se seca cede; se llama temperatura de colapso, y suele estar unos dos grados por encima de la temperatura de transición vítrea de la formulación congelada.${cite('Referencia: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} El secado tiene que correr por debajo de ella. Si se sube demasiado la temperatura del producto para ahorrar tiempo, la matriz se hunde, y eso se ve después como una torta encogida, vítrea o refundida. Una torta colapsada no es solo un problema estético: se asocia a más humedad residual y a una redisolución más lenta, así que el aspecto es un indicador de calidad real y no una preferencia.</p>
+
+        <h2>Humedad residual</h2>
+        <p>La sublimación no retira toda el agua. Según la formulación y el ciclo, el producto que sale del secado primario puede conservar todavía del orden de un cinco a un veinte por ciento de agua en peso, ligada al sólido en vez de presente como hielo.${cite('Referencia: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} Para eso está el secado secundario, que normalmente se prolonga hasta bajar el agua residual a alrededor de un uno o dos por ciento. Importa porque el agua actúa como plastificante: cuanta más quede en un sólido amorfo, más baja es la temperatura de transición vítrea de la torta terminada y más movilidad molecular hay a cualquier temperatura de almacenamiento. La humedad residual se mide por valoración Karl Fischer y es uno de los atributos que puede reportar un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo.</p>
+
+        <h2>¿Por qué se usa la liofilización?</h2>
+        <p>El método permite conservar a largo plazo compuestos que son inestables en forma líquida. Para péptidos y proteínas, la liofilización minimiza la degradación, facilita el almacenamiento y el transporte, y permite una reconstitución precisa para los experimentos. Suele apoyarse en <a href="article/excipients-in-peptides/">excipientes</a> que actúan como agentes de carga y estabilizantes. El proceso también es escalable, desde muestras pequeñas de laboratorio hasta lotes industriales.${cite('Referencia: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3')}</p>
+
+        <h2>Aplicaciones clave en el laboratorio</h2>
+        <ul>
+          <li>Conservar muestras de péptido y proteína para una vida útil prolongada.</li>
+          <li>Estabilizar vacunas y biológicos durante la producción y la distribución.</li>
+          <li>Preparar estándares de referencia para métodos analíticos como la <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.</li>
+          <li>Permitir una reconstitución controlada para modelos de investigación in vitro o in vivo.</li>
+        </ul>
+        <p>${cite('Referencia: Tang y Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75').trim()}</p>
+
+        <h2>Qué está haciendo realmente el equipo</h2>
+        <p>Un liofilizador establece una diferencia de presión y después aporta calor a través de ella. La sublimación depende de la diferencia de presión de vapor entre el producto y el colector de hielo, así que el colector, una trampa fría, tiene que mantenerse bastante más frío que el producto; las moléculas de agua migran desde la muestra, a mayor presión, hacia el colector, a menor presión, donde condensan, mientras la bomba de vacío retira los gases que no condensan. El calor es la fuerza motriz, no un añadido: sublimar un gramo de agua de hielo a vapor cuesta del orden de diez veces la energía necesaria para congelar ese mismo gramo.${cite('Referencia: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+
+        <h2>Una nota sobre «polvo liofilizado para inyección»</h2>
+        <p>Esa frase es una designación de forma farmacéutica del etiquetado regulatorio. Identifica un medicamento estéril autorizado, fabricado y liberado bajo un registro sanitario, y arrastra un conjunto de obligaciones legales que no tienen nada que ver con el método de secado. Un compuesto de investigación suministrado liofilizado no es eso, por mucho que se parezca en el vial. Los dos comparten un estado físico y nada más, y conviene no confundirlos al comparar descripciones de catálogo.</p>
+
+        <h2>Por qué los péptidos de investigación se suministran así</h2>
+        <p>Porque el estado seco es el estable. Los péptidos en disolución tienen una vida útil marcadamente más corta que el mismo material liofilizado, porque las vías de degradación que más pesan, la hidrólisis del esqueleto y la desamidación de cadenas laterales, necesitan agua para avanzar.${cite('Referencia: Shi y McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} El secado por congelación también hace que cantidades pequeñas sean prácticas de pesar, enviar a temperatura ambiente y guardar, y permite presentar el material como una masa definida en un vial sellado. Lo que viene después, disolver ese sólido en un volumen medido de disolvente para obtener una disolución de concentración conocida, se cubre aparte en nuestra nota sobre <a href="article/bacteriostatic-water-for-peptide-reconstitution/">reconstituir péptidos liofilizados</a>.</p>
+      `,
+      faq: [
+        { q: '¿Para qué se usa la liofilización?', a: 'La liofilización se usa para conservar compuestos que son inestables en forma líquida, como péptidos, proteínas y vacunas, retirando el agua sin alterar su estructura.' },
+        { q: '¿Cuáles son las tres etapas del secado por congelación?', a: 'Las tres etapas son la congelación, el secado primario por sublimación y el secado secundario por desorción del agua ligada.' },
+        { q: '¿Por qué se liofilizan los péptidos?', a: 'El secado por congelación minimiza la degradación del péptido, facilita el almacenamiento y el transporte, y permite una reconstitución precisa antes de los experimentos.' },
+        { q: '¿Qué significa «polvo liofilizado»?', a: 'Describe el estado físico del material después del secado por congelación, no un grado ni una formulación. Lo que queda en el vial es un sólido poroso, normalmente llamado torta, que conserva aproximadamente la forma y el volumen que tenía la disolución congelada una vez que el hielo ha sublimado.' },
+        { q: '¿Por qué a veces un vial de péptido liofilizado parece vacío?', a: 'Con las masas pequeñas típicas de los péptidos de investigación, la torta puede ser una película fina o unas pocas motas en la pared del vial en vez de un volumen visible de polvo. Un vial que parece vacío no ha perdido necesariamente su contenido: la masa etiquetada y el certificado de análisis son los que definen qué hay dentro.' },
+        { q: '¿Qué es la temperatura de colapso en liofilización?', a: 'Es la temperatura por encima de la cual cede la estructura macroscópica del producto que se está secando, y suele estar unos dos grados por encima de la temperatura de transición vítrea de la formulación congelada. Secar por encima de ella produce una torta encogida o refundida, asociada a más humedad residual y a una redisolución más lenta.' },
+        { q: '¿Cuánta agua queda después del secado por congelación?', a: 'El producto que sale del secado primario puede conservar todavía entre un cinco y un veinte por ciento de agua en peso. El secado secundario retira el agua ligada, normalmente hasta alrededor de un uno o dos por ciento, y eso se mide por valoración Karl Fischer.' },
+      ],
+      cta: 'Nuestros <a href="catalog/">péptidos de investigación</a> se suministran liofilizados para máxima estabilidad y vida útil.',
     },
 
     'what-is-bpc-157': {

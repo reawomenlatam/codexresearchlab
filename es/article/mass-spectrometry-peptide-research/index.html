@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Espectrometría de masas: confirmar qué es un péptido</title>
+  <meta name="description" content="Cómo se usa la espectrometría de masas para confirmar la identidad de un péptido, detectar modificaciones y evaluar la pureza: MALDI-TOF, ESI y LC-MS/MS.">
+  <link rel="canonical" href="https://codexresearchlab.com/es/article/mass-spectrometry-peptide-research/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/article/mass-spectrometry-peptide-research/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/article/mass-spectrometry-peptide-research/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/article/mass-spectrometry-peptide-research/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Espectrometría de masas: confirmar qué es un péptido">
+  <meta property="og:description" content="Cómo se usa la espectrometría de masas para confirmar la identidad de un péptido, detectar modificaciones y evaluar la pureza: MALDI-TOF, ESI y LC-MS/MS.">
+  <meta property="og:url" content="https://codexresearchlab.com/es/article/mass-spectrometry-peptide-research/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/blog/mass-spectrometry-peptide-research.jpg">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Espectrometría de masas: confirmar qué es un péptido">
+  <meta name="twitter:description" content="Cómo se usa la espectrometría de masas para confirmar la identidad de un péptido, detectar modificaciones y evaluar la pureza: MALDI-TOF, ESI y LC-MS/MS.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/blog/mass-spectrometry-peptide-research.jpg">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Espectrometría de masas: confirmar qué es un péptido","description":"Cómo se usa la espectrometría de masas para confirmar la identidad de un péptido, detectar modificaciones y evaluar la pureza: MALDI-TOF, ESI y LC-MS/MS.","image":["https://codexresearchlab.com/assets/blog/mass-spectrometry-peptide-research.jpg"],"inLanguage":"es","datePublished":"2025-10-11","dateModified":"2025-10-11","author":{"@type":"Organization","name":"Codex Research"},"publisher":{"@type":"Organization","name":"Codex Research","logo":{"@type":"ImageObject","url":"https://codexresearchlab.com/assets/logo-horizontal-dark.png"}},"mainEntityOfPage":"https://codexresearchlab.com/es/article/mass-spectrometry-peptide-research/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://codexresearchlab.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://codexresearchlab.com/es/blog/"},{"@type":"ListItem","position":3,"name":"La espectrometría de masas en la investigación con péptidos","item":"https://codexresearchlab.com/es/article/mass-spectrometry-peptide-research/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué mide la espectrometría de masas en un péptido?","acceptedAnswer":{"@type":"Answer","text":"Mide la relación masa-carga de las moléculas de péptido ionizadas, lo que da su peso molecular exacto y confirma la identidad y la pureza."}},{"@type":"Question","name":"¿Cuál es la diferencia entre MALDI-TOF y ESI en péptidos?","acceptedAnswer":{"@type":"Answer","text":"MALDI-TOF se usa para determinar rápidamente la masa de péptidos en una matriz sólida, mientras que ESI ioniza los péptidos en disolución y se acopla con facilidad a la cromatografía líquida."}},{"@type":"Question","name":"¿Por qué importa la espectrometría de masas después de sintetizar un péptido?","acceptedAnswer":{"@type":"Answer","text":"Confirma que el péptido sintetizado tiene la secuencia y el peso molecular correctos, y ayuda a detectar subproductos antes de usarlo en investigación."}}]}</script>
+</head>
+<body data-nav="blog" data-slug="mass-spectrometry-peptide-research">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="articleMain">
+    <article>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/es/">Inicio</a> <span>/</span>
+          <a href="es/blog/">Blog</a> <span>/</span>
+          <span>La espectrometría de masas en la investigación con péptidos</span>
+        </nav>
+        <header class="article-head">
+          <span class="blog-tag">Técnicas analíticas · 11 oct 2025</span>
+          <h1>La espectrometría de masas en la investigación con péptidos</h1>
+        </header>
+      </div>
+      <div class="container article-cover-wrap">
+        <figure class="article-figure">
+          <img src="assets/blog/mass-spectrometry-peptide-research.jpg" alt="Equipo de espectrometría de masas usado para analizar péptidos de investigación" width="1575" height="1800">
+          <figcaption>Equipo de espectrometría de masas usado para analizar péptidos de investigación</figcaption>
+        </figure>
+      </div>
+      <div class="container article-layout">
+        <div class="article-body">
+          
+        <p class="lead">La espectrometría de masas (EM) es una técnica analítica que mide la relación masa-carga de moléculas ionizadas. En la investigación con péptidos se usa para confirmar la identidad, medir el peso molecular exacto, detectar modificaciones y evaluar la pureza, lo que la convierte en una de las herramientas más fiables para caracterizar péptidos sintéticos.</p>
+
+        <h2>¿Qué es la espectrometría de masas?</h2>
+        <p>La espectrometría de masas convierte los compuestos en partículas cargadas y las separa en un analizador según su relación masa-carga. Eso permite determinar pesos moleculares, identificar compuestos desconocidos y analizar mezclas complejas con alta sensibilidad. <a class="cite" href="https://doi.org/10.1038/nature01511" target="_blank" rel="noopener nofollow">(Referencia: Aebersold y Mann, 2003)</a></p>
+
+        <h2>¿Por qué se usa en la investigación con péptidos?</h2>
+        <p>Los péptidos son cadenas cortas de aminoácidos que pueden variar en secuencia, modificaciones y pureza. Si quieres los fundamentos, mira nuestra guía sobre <a href="es/article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>. La espectrometría de masas es esencial para estudiarlos porque aporta información molecular precisa. Se usa para:</p>
+        <ul>
+          <li>Confirmar la identidad de un péptido midiendo su peso molecular exacto.</li>
+          <li>Detectar modificaciones postraduccionales o sintéticas.</li>
+          <li>Evaluar la pureza e identificar subproductos en preparaciones sintéticas.</li>
+          <li>Secuenciar péptidos mediante análisis de fragmentación.</li>
+        </ul>
+        <p><a class="cite" href="https://doi.org/10.1146/annurev-bioeng-061008-124934" target="_blank" rel="noopener nofollow">(Referencia: Yates et al., 2009)</a></p>
+
+        <h2>Enfoques habituales en péptidos</h2>
+        <p>Varios métodos se aplican con frecuencia al análisis de péptidos:</p>
+        <ul>
+          <li><b>MALDI-TOF</b> (ionización/desorción láser asistida por matriz, con analizador de tiempo de vuelo): muy usado para determinar rápidamente la masa de un péptido.</li>
+          <li><b>ESI</b> (ionización por electrospray): permite analizar péptidos en disolución y se acopla bien a la cromatografía líquida.</li>
+          <li><b>LC-MS/MS</b> (cromatografía líquida con espectrometría de masas en tándem): combina separación y fragmentación para secuenciación y análisis estructural en detalle.</li>
+        </ul>
+        <p>La EM se combina a menudo con la <a href="es/article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución (HPLC)</a> para verificar la pureza. <a class="cite" href="https://doi.org/10.1126/science.1111443" target="_blank" rel="noopener nofollow">(Referencia: Domon y Aebersold, 2006)</a></p>
+
+        <h2>Aplicaciones en investigación</h2>
+        <p>La espectrometría de masas se usa ampliamente en la ciencia de péptidos, por ejemplo para:</p>
+        <ul>
+          <li>Verificar la identidad y la pureza de lotes de péptido sintético, un paso de rutina tras la <a href="es/article/peptide-synthesis/">síntesis</a>.</li>
+          <li>Mapear interacciones entre péptidos y proteínas.</li>
+          <li>Perfilar péptidos endógenos en muestras biológicas.</li>
+          <li>Apoyar estudios estructurales localizando modificaciones de aminoácidos.</li>
+        </ul>
+        <p><a class="cite" href="https://doi.org/10.1038/nature19949" target="_blank" rel="noopener nofollow">(Referencia: Aebersold y Mann, 2016)</a></p>
+      
+          
+          <section class="article-faq"><h2>Preguntas frecuentes</h2><div class="faq-item"><h3>¿Qué mide la espectrometría de masas en un péptido?</h3><p>Mide la relación masa-carga de las moléculas de péptido ionizadas, lo que da su peso molecular exacto y confirma la identidad y la pureza.</p></div><div class="faq-item"><h3>¿Cuál es la diferencia entre MALDI-TOF y ESI en péptidos?</h3><p>MALDI-TOF se usa para determinar rápidamente la masa de péptidos en una matriz sólida, mientras que ESI ioniza los péptidos en disolución y se acopla con facilidad a la cromatografía líquida.</p></div><div class="faq-item"><h3>¿Por qué importa la espectrometría de masas después de sintetizar un péptido?</h3><p>Confirma que el péptido sintetizado tiene la secuencia y el peso molecular correctos, y ayuda a detectar subproductos antes de usarlo en investigación.</p></div></section>
+          <section class="article-refs"><h2>Referencias</h2><ul><li><a href="https://doi.org/10.1038/nature01511" target="_blank" rel="noopener nofollow">Aebersold, R., &amp;amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198-207.</a></li><li><a href="https://doi.org/10.1146/annurev-bioeng-061008-124934" target="_blank" rel="noopener nofollow">Yates, J.R., Ruse, C.I., &amp;amp; Nakorchevsky, A. (2009). Proteomics by mass spectrometry: approaches, advances, and applications. Annual Review of Biomedical Engineering, 11, 49-79.</a></li><li><a href="https://doi.org/10.1126/science.1111443" target="_blank" rel="noopener nofollow">Domon, B., &amp;amp; Aebersold, R. (2006). Mass spectrometry and protein analysis. Science, 312(5771), 212-217.</a></li><li><a href="https://doi.org/10.1038/nature19949" target="_blank" rel="noopener nofollow">Aebersold, R., &amp;amp; Mann, M. (2016). Mass-spectrometric exploration of proteome structure and function. Nature, 537, 347-355.</a></li></ul></section>
+          <section class="article-related"><h2>Artículos relacionados</h2><ul><li><a href="es/article/high-performance-liquid-chromatography-hplc/">¿Qué es la cromatografía líquida de alta resolución (HPLC)?</a></li><li><a href="es/article/how-to-read-a-certificate-of-analysis/">Cómo leer un certificado de análisis de péptidos</a></li><li><a href="es/article/peptide-purity-hplc-explained/">Pureza de péptidos: qué significa 99% por HPLC</a></li></ul></section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="es/article/mass-spectrometry-peptide-research/post.js"></script>
+  <script src="article.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
