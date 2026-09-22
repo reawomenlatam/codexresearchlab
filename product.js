@@ -381,19 +381,21 @@
   // FAQ + relacionados
   // El mismo FAQ que build-seo.js hornea en el HTML y en el JSON-LD FAQPage:
   // si aquí se pintara otro, el schema declararía preguntas que nadie ve.
-  ui.faqAccordion(document.getElementById('pdFaq'), window.REA.productFaq(p));
+  ui.faqAccordion(document.getElementById('pdFaq'), window.REA[esPage ? 'productFaqEs' : 'productFaq'](p));
 
   // Enlace al artículo que explica el compuesto. El HTML horneado lo trae, pero
   // este archivo reemplaza el <main> entero al hidratar, así que hay que
   // reponerlo. El slug lo declara build-seo.js en data-article del <body>, para
   // no duplicar aquí el mapa de producto a artículo.
-  const artSlug = document.body.dataset.article;
-  if (artSlug) {
+  // data-article trae la ruta ya resuelta (con prefijo /es/ si el artículo está
+  // traducido): la ficha no carga el bundle del blog y no puede averiguarlo.
+  const artHref = document.body.dataset.article;
+  if (artHref) {
     const host = document.querySelector('.pd-info-main') || main.querySelector('.container') || main;
     const sec = document.createElement('section');
     sec.className = 'pd-related-reading';
-    sec.innerHTML = `<h3>Related reading</h3>
-      <p><a href="article/${artSlug}/">Read the research explainer on ${p.alias || p.name}</a></p>`;
+    sec.innerHTML = `<h3>${T('Related reading')}</h3>
+      <p><a href="${artHref}">${T('Read the research explainer on {name}', { name: p.alias || p.name })}</a></p>`;
     host.appendChild(sec);
   }
   ui.wireAddButtons(document.getElementById('pdRelated'));

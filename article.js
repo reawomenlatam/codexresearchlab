@@ -6,6 +6,10 @@
   const ui = window.REAui;
   const main = document.getElementById('articleMain');
   const SITE = 'https://codexresearchlab.com';
+  // El idioma sale del <html lang> de la página. El bundle que carga cada
+  // artículo ya trae el texto en ese idioma; aquí sólo se traduce el armazón.
+  const ES = window.REAi18n.lang === 'es';
+  const PREFIX = ES ? '/es' : '';
 
   const slug = document.body.getAttribute('data-slug') || new URLSearchParams(location.search).get('slug');
   const p = POSTS.find((x) => x.slug === slug);
@@ -13,9 +17,9 @@
   if (!p) {
     main.innerHTML = `
       <section class="section"><div class="container" style="text-align:center;">
-        <h1>Article not found</h1>
-        <p style="color:var(--muted);margin:.6rem 0 1.4rem;">This article doesn’t exist or was moved.</p>
-        <a class="btn btn-primary" href="blog/">Back to the blog</a>
+        <h1>${T('Article not found')}</h1>
+        <p style="color:var(--muted);margin:.6rem 0 1.4rem;">${T('This article doesn’t exist or was moved.')}</p>
+        <a class="btn btn-primary" href="${U('blog/')}">${T('Back to the blog')}</a>
       </div></section>`;
     return;
   }
@@ -27,7 +31,7 @@
     if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
     el.setAttribute('content', val);
   };
-  const url = `${SITE}/article/${p.slug}/`;
+  const url = `${SITE}${PREFIX}/article/${p.slug}/`;
   setMeta('description', p.metaDescription);
   setMeta('og:title', p.metaTitle, 'property');
   setMeta('og:description', p.metaDescription, 'property');
@@ -61,8 +65,8 @@
   const breadcrumbSchema = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+      { '@type': 'ListItem', position: 1, name: T('Home'), item: `${SITE}${PREFIX}/` },
+      { '@type': 'ListItem', position: 2, name: T('Blog'), item: `${SITE}${PREFIX}/blog/` },
       { '@type': 'ListItem', position: 3, name: p.title, item: url },
     ],
   };
@@ -88,10 +92,10 @@
     : '';
   const cover = `
     <figure class="article-figure">
-      <a href="${imgSrc}" target="_blank" rel="noopener" aria-label="Open full-size image">
+      <a href="${imgSrc}" target="_blank" rel="noopener" aria-label="${T('Open full-size image')}">
         <img src="${imgSrc}" alt="${p.imageAlt}"${dimAttr}>
       </a>
-      <figcaption>${p.imageAlt} · <span>Click to view full size</span></figcaption>
+      <figcaption>${p.imageAlt} · <span>${T('Click to view full size')}</span></figcaption>
     </figure>`;
   setMeta('og:image', `${SITE}/${imgSrc}`, 'property');
 
@@ -100,7 +104,7 @@
     .map((s) => POSTS.find((x) => x.slug === s))
     .filter(Boolean)
     .map((r) => `
-      <a class="blog-card" href="article/${r.slug}/">
+      <a class="blog-card" href="${U('article/' + r.slug + '/')}">
         <div class="blog-card-body">
           <span class="blog-tag">${r.category} · ${r.date}</span>
           <h3>${r.title}</h3>
@@ -117,12 +121,17 @@
   // declara build-seo.js en el bundle del artículo, para no duplicar el mapa.
   const prodSlug = window.REA.POST_PRODUCT;
   const prod = prodSlug && (window.REA.PRODUCTS || []).find((x) => x.slug === prodSlug);
+  const prodLabel = (x) => {
+    const alias = x.alias ? x.alias.charAt(0).toUpperCase() + x.alias.slice(1) : '';
+    if (ES) {
+      return x.alias ? `${alias} (en la tienda, ${x.name}), ${x.mg} por vial` : `${x.name}, ${x.mg} por vial`;
+    }
+    return x.alias ? `${alias} (listed as ${x.name}), ${x.mg} per vial` : `${x.name}, ${x.mg} per vial`;
+  };
   const prodHtml = prod
     ? `<section class="article-product">
-        <h2>The compound at Codex Research</h2>
-        <p><a href="product/${prod.slug}/">${prod.alias
-            ? `${prod.alias.charAt(0).toUpperCase() + prod.alias.slice(1)} (listed as ${prod.name}), ${prod.mg} per vial`
-            : `${prod.name}, ${prod.mg} per vial`}</a> — batch-verified, with its certificate of analysis.</p>
+        <h2>${T('The compound at Codex Research')}</h2>
+        <p><a href="${U('product/' + prod.slug + '/')}">${prodLabel(prod)}</a> — ${T('batch-verified, with its certificate of analysis.')}</p>
       </section>`
     : '';
 
@@ -130,8 +139,8 @@
     <article>
       <div class="container">
         <nav class="breadcrumb">
-          <a href="/">Home</a> <span>/</span>
-          <a href="blog/">Blog</a> <span>/</span>
+          <a href="${PREFIX}/">${T('Home')}</a> <span>/</span>
+          <a href="${U('blog/')}">${T('Blog')}</a> <span>/</span>
           <span>${p.title}</span>
         </nav>
         <header class="article-head">
@@ -148,26 +157,26 @@
           ${prodHtml}
 
           <section class="article-faq">
-            <h2>Frequently asked questions</h2>
+            <h2>${T('Frequently asked questions')}</h2>
             <div class="faq-list" id="articleFaq"></div>
           </section>
 
           ${p.references && p.references.length ? `
           <section class="article-refs">
-            <h2>References</h2>
+            <h2>${T('References')}</h2>
             <ul>${refsHtml}</ul>
           </section>` : ''}
 
           <div class="article-cta">${p.cta}</div>
 
-          <p class="article-disclaimer"><b>Disclaimer:</b> ${BLOG_DISCLAIMER}</p>
+          <p class="article-disclaimer"><b>${T('Disclaimer:')}</b> ${BLOG_DISCLAIMER}</p>
         </div>
       </div>
 
       ${relatedCards ? `
       <div class="container">
         <section class="cross-sell">
-          <div class="section-head" style="margin-bottom:1.4rem;"><h2>Related articles</h2></div>
+          <div class="section-head" style="margin-bottom:1.4rem;"><h2>${T('Related articles')}</h2></div>
           <div class="blog-grid">${relatedCards}</div>
         </section>
       </div>` : ''}

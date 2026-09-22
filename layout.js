@@ -25,6 +25,10 @@
       const en = p.replace(/^\/es/, '') || '/';
       return { href: en, label: 'English', code: 'EN' };
     }
+    // El blog y los artículos sólo tienen gemela cuando están traducidos, y eso
+    // no se puede consultar aquí: el bundle que trae la lista carga después.
+    // build-seo.js lo marca con data-has-es en el <body> de las que sí la tienen.
+    if (document.body.dataset.hasEs) return { href: '/es' + p, label: 'Español', code: 'ES' };
     return PAIRED.some((r) => r.test(p)) ? { href: '/es' + p, label: 'Español', code: 'ES' } : null;
   }
   const alt = altLang();

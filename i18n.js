@@ -332,6 +332,21 @@
     'Dermal proliferation': 'Proliferación dérmica',
     'Collagen deposition': 'Depósito de colágeno',
     'Hair follicle biology': 'Biología del folículo piloso',
+    // --- Blog y artículos (blog.js, article.js, product.js) ---
+    'Read article \u2192': 'Leer artículo \u2192',
+    'Related reading': 'Lectura relacionada',
+    'Read the research explainer on {name}': 'Lee el artículo de investigación sobre {name}',
+    'Article not found': 'Artículo no encontrado',
+    'This article doesn\u2019t exist or was moved.': 'Este artículo no existe o fue movido.',
+    'Back to the blog': 'Volver al blog',
+    'Open full-size image': 'Abrir la imagen a tamaño completo',
+    'Click to view full size': 'Clic para verla a tamaño completo',
+    'Frequently asked questions': 'Preguntas frecuentes',
+    'References': 'Referencias',
+    'Related articles': 'Artículos relacionados',
+    'Disclaimer:': 'Aviso:',
+    'The compound at Codex Research': 'El compuesto en Codex Research',
+    'batch-verified, with its certificate of analysis.': 'con lote verificado y su certificado de análisis.',
     'Sterile diluent': 'Diluyente estéril',
     '0.9% benzyl alcohol': 'Alcohol bencílico al 0,9%',
     'Multi-dose reconstitution': 'Reconstitución multidosis',
@@ -347,12 +362,18 @@
   }
 
   // Enlaces internos: sólo las rutas que existen traducidas llevan el prefijo
-  // /es/. El blog, la calculadora y los legales siguen en inglés por ahora, así
-  // que enlazarlos con prefijo daría 404.
-  const ES_PAGES = ['catalog/', 'cart/', 'verify/'];
+  // /es/. La calculadora y los legales siguen en inglés, así que enlazarlos con
+  // prefijo daría 404.
+  const ES_PAGES = ['catalog/', 'cart/', 'verify/', 'blog/'];
+  // Los artículos se traducen de a poco. La lista de los que existen en español
+  // la declara el bundle generado (window.REA.ES_ARTICLES), así que se consulta
+  // en cada llamada y no al cargar: este archivo se evalúa antes que el bundle.
+  const esArticles = () => (window.REA && window.REA.ES_ARTICLES) || [];
   function url(p) {
     if (lang !== 'es') return p;
     if (ES_PAGES.indexOf(p) >= 0 || /^product\//.test(p)) return 'es/' + p;
+    const m = /^article\/([^/]+)\/$/.exec(p);
+    if (m) return esArticles().indexOf(m[1]) >= 0 ? 'es/' + p : p;
     return p;
   }
 

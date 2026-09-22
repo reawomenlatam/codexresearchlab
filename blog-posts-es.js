@@ -1,0 +1,341 @@
+/* Codex Research - contenido del blog en español.
+   Se expone en window.REA.POSTS_ES como un mapa slug -> campos traducidos.
+
+   No es una copia del post entero: solo los campos que cambian de idioma
+   (title, metaTitle, metaDescription, category, date, excerpt, imageAlt, body,
+   faq, cta). El resto -- slug, dateISO, image, references, related -- se hereda
+   del post en inglés, así una corrección de fuente o de portada no hay que
+   hacerla dos veces.
+
+   Un artículo sin entrada aquí NO genera página en español: build-seo.js lo
+   salta. Publicar /es/article/<slug>/ con el texto en inglés sería peor que no
+   tener la página.
+
+   Los enlaces internos del cuerpo se escriben igual que en inglés
+   (article/<slug>/, catalog/, verify/): build-seo.js los reescribe a su versión
+   en español cuando existe, y los deja en inglés cuando no. */
+(function () {
+  const POSTS_ES = {
+
+    'buy-research-peptides-panama': {
+      title: 'Cómo comprar péptidos de investigación en Panamá',
+      metaTitle: 'Comprar péptidos de investigación en Panamá: COA y envío',
+      metaDescription: 'Comprar péptidos de investigación en Panamá: cómo se verifica cada lote, qué debe mostrar el COA, entrega en la ciudad y formas de pago.',
+      category: 'Guía de compra',
+      date: '02 ago 2026',
+      excerpt: 'Entrega el mismo día en la ciudad de Panamá, pago local y cómo verificar cada lote antes de pagar.',
+      imageAlt: 'Vial de péptido de investigación entregado en Panamá junto a su certificado de análisis',
+      body: `
+        <p class="lead">Comprar péptidos de investigación en Panamá es sencillo cuando sabes cómo funcionan el pedido, la entrega y la verificación aquí. Esta guía cubre la entrega el mismo día en la ciudad de Panamá, el envío al interior, los medios de pago disponibles en el país y cómo confirmar que cada vial es auténtico antes de pagar. Todos los productos son únicamente para uso en investigación de laboratorio.</p>
+
+        <h2>Cómo se hace un pedido en Panamá</h2>
+        <p>En Codex Research agregas los productos al carrito en el sitio y confirmas el pedido con un especialista por WhatsApp (+507 6335-4625). Los detalles del pedido, la entrega y cualquier duda se resuelven directamente en el chat, así que puedes preguntar antes de pagar. Los precios se muestran en dólares estadounidenses, la moneda de curso en Panamá.</p>
+
+        <h2>Entrega en la ciudad de Panamá y en el interior</h2>
+        <ul>
+          <li><b>Ciudad de Panamá:</b> $4 de envío fijo, entrega en <b>1 a 2 horas</b> desde el inventario local.</li>
+          <li><b>Interior</b> — David, Chitré, Colón y otras ciudades: al siguiente día hábil por transporte Fergunson.</li>
+          <li><b>Envío gratis</b> en pedidos sobre $100.</li>
+          <li>Todo pedido sale en <b>empaque sellado y protegido</b>, con cada vial etiquetado con su compuesto, su concentración y su número de lote.</li>
+        </ul>
+        <p>Como el inventario está en el país, no hay que esperar semanas por un paquete internacional ni pasar por aduana.</p>
+
+        <h2>Formas de pago en Panamá</h2>
+        <p>El pago se hace en el propio sitio, al momento de finalizar la compra:</p>
+        <ul>
+          <li><b>Tarjeta</b> — Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de tu tarjeta nunca pasan por nuestro sitio.</li>
+          <li><b>Cripto</b> — USDC o USDT en Ethereum, transferidos desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
+        </ul>
+        <p>El monto lo calcula nuestro servidor en el momento del pago, así que siempre coincide con lo que muestra tu carrito. Cualquier duda, antes o después del pedido, la responde un especialista por WhatsApp.</p>
+
+        <h2>Cómo verificar la autenticidad antes de pagar</h2>
+        <p>Cada lote se analiza en un laboratorio independiente por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, y su certificado de análisis (COA) está disponible a solicitud, incluso antes de pedir si quieres verlo primero. También puedes confirmar que un vial es auténtico ingresando su número de lote en la <a href="verify/">página de verificación de lotes</a>.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Entregan péptidos de investigación en la ciudad de Panamá?', a: 'Sí. Codex Research envía desde inventario local con $4 de envío fijo y entrega en 1 a 2 horas dentro de la ciudad de Panamá. Ciudades del interior como David, Chitré y Colón reciben al siguiente día hábil por transporte Fergunson, y el envío es gratis en pedidos sobre $100.' },
+        { q: '¿Qué formas de pago puedo usar en Panamá?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). El pago se completa en el sitio al finalizar la compra, y el monto lo calcula el servidor, así que siempre coincide con tu carrito.' },
+        { q: '¿Cómo sé que los péptidos son auténticos?', a: 'Cada lote se analiza en un laboratorio independiente por HPLC y espectrometría de masas, y su certificado de análisis está disponible a solicitud antes de pagar. También puedes verificar un vial ingresando su número de lote en la página de verificación, en codexresearchlab.com/es/verify/.' },
+      ],
+      cta: 'Mira el <a href="catalog/">catálogo de Codex Research</a> o <a href="verify/">verifica un número de lote</a>. Los pedidos en Panamá se confirman por WhatsApp antes de pagar.',
+    },
+
+    'verify-research-peptide-batch-coa-panama': {
+      title: 'Cómo verificar el lote y el COA de un péptido',
+      metaTitle: 'Verificar que el COA corresponde a tu vial antes de pagar',
+      metaDescription: 'Cómo confirmar que un certificado de análisis pertenece a tu lote: qué revisar en la etiqueta, qué pedir antes de pagar y qué significa que no coincida.',
+      category: 'Guía de compra',
+      date: '01 ago 2026',
+      excerpt: 'Qué muestra un certificado de análisis y cómo confirmar que tu vial es auténtico antes de pagar.',
+      imageAlt: 'Certificado de análisis y verificación de número de lote de péptidos de investigación',
+      body: `
+        <p class="lead">Un certificado de análisis (COA) es la forma de confirmar que un péptido de investigación es lo que dice la etiqueta. Esta guía explica qué muestra un COA, cómo se usan la HPLC y la espectrometría de masas para analizar cada lote, y cómo verificar tu vial concreto por su número de lote. Todos los productos son únicamente para uso en investigación de laboratorio.</p>
+
+        <h2>Qué es un certificado de análisis</h2>
+        <p>Un COA es un documento emitido por un laboratorio analítico que reporta la identidad, la pureza y la cantidad de un compuesto para un lote específico. En péptidos de investigación, un COA creíble se basa en análisis independientes y no en la palabra del vendedor, y está atado al número de lote impreso en el vial.</p>
+
+        <h2>Qué muestra un COA</h2>
+        <ul>
+          <li><b>Identidad:</b> la confirmación de que el compuesto corresponde al péptido esperado, normalmente por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</li>
+          <li><b>Pureza:</b> el porcentaje del péptido buscado, medido por <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución (HPLC)</a>.</li>
+          <li><b>Referencia del lote:</b> el número de lote, una fecha de análisis y los métodos empleados.</li>
+        </ul>
+
+        <h2>Cómo verificar tu número de lote</h2>
+        <p>En Codex Research, cada lote se analiza en un laboratorio independiente por HPLC y espectrometría de masas, y el COA completo está disponible a solicitud antes de pagar. Para confirmar que un vial es auténtico, ingresa su número de lote en la <a href="verify/">página de verificación</a>: un número válido devuelve el producto y confirma que está registrado. Si un número no aparece, puedes enviarlo al equipo para que lo revise.</p>
+
+        <h2>Comprar en Panamá</h2>
+        <p>En Panamá puedes pedir el COA antes de ordenar, pagar con tarjeta o cripto al finalizar la compra, y recibir tu pedido en 1 a 2 horas dentro de la ciudad. La guía completa de <a href="article/buy-research-peptides-panama/">cómo comprar péptidos de investigación en Panamá</a> cubre el envío y el pago en detalle.</p>
+
+        <h2>Empieza por la etiqueta, no por el anuncio</h2>
+        <p>La verificación va en una sola dirección: del vial que tienes en la mano hacia el papel. Cada vial de Codex Research lleva un número de lote con el formato CDX-AAMM-NNN, y esa cadena es la llave de todo lo demás. Léela primero en la etiqueta y después comprueba que esa misma cadena aparece en el certificado que te enviaron. Un COA que no nombra tu lote es un documento sobre otro material, por buenos que se vean los números.</p>
+
+        <h2>Pide el certificado antes de pagar, no después</h2>
+        <p>El COA completo está disponible a solicitud antes del pago, y eso cambia lo que puedes hacer con él. Antes de ordenar puedes preguntar qué lote recibirías, pedir el certificado de ese lote en vez de un documento de muestra, y leerlo mientras todavía tienes la opción de no comprar. Después de pagar, ese mismo certificado es solo un registro. El orden importa más que el documento.</p>
+        <p>Tres preguntas cubren casi todo: a qué lote pertenece este certificado, con qué métodos se obtuvieron estos números y quién los hizo. Un proveedor que responde las tres por escrito opera distinto de uno que manda una captura de pantalla.</p>
+
+        <h2>Una revisión de un minuto antes de pedir</h2>
+        <ul>
+          <li><b>Coincidencia de lote:</b> el número del certificado es, carácter por carácter, el de la etiqueta.</li>
+          <li><b>Una fecha:</b> el certificado dice cuándo se hizo el análisis, no solo cuándo se creó el archivo.</li>
+          <li><b>Métodos con nombre:</b> la HPLC y la espectrometría de masas aparecen identificadas como los procedimientos detrás de las cifras, con resultados numéricos y no con la palabra «cumple».</li>
+          <li><b>Un autor:</b> el laboratorio que analizó está identificado y el documento está firmado o es atribuible de alguna forma.</li>
+          <li><b>Legibilidad:</b> se pueden leer de verdad el encabezado y el cromatograma, no una imagen comprimida de ellos.</li>
+          <li><b>Un lote, un documento:</b> el certificado es específico de ese lote, no un archivo único reutilizado en todo el catálogo.</li>
+        </ul>
+        <p>Qué significa cada uno de esos campos, y la diferencia entre pureza cromatográfica y contenido neto de péptido, está en detalle en <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado de análisis</a>. Esta guía trata de confirmar que el certificado que tienes delante pertenece al vial que tienes delante.</p>
+
+        <h2>Qué hace que un análisis sea independiente</h2>
+        <p>Análisis de terceros significa que el laboratorio que reporta el resultado no es quien vende el material. Esa separación es todo el valor del arreglo, y por eso la identidad del laboratorio pertenece al certificado en vez de describirse en abstracto. Las normas de competencia reconocidas para laboratorios de ensayo están construidas justo sobre esas dos ideas, competencia e imparcialidad, y cuando un laboratorio tiene acreditación, esta aplica a una lista definida de métodos y no a los análisis en general. En Codex Research, cada lote lo analiza un laboratorio independiente por HPLC y espectrometría de masas.</p>
+
+        <h2>Verificar un lote en Panamá</h2>
+        <p>La entrega local en la ciudad de Panamá hace más fácil un paso que en otros lados no lo es: puedes comparar la etiqueta impresa contra el certificado en el momento de la entrega, con el vial en la mano y no en una foto. En la práctica el orden útil es pedir el COA antes de ordenar, leerlo, hacer el pedido y confirmar la etiqueta en la entrega. La verificación es la misma en todas partes; la diferencia es que aquí el último paso ocurre cara a cara en vez de después de una cola en aduana.</p>
+
+        <h2>Si el número no coincide</h2>
+        <p>Que no coincida no es prueba automática de un lote malo. Los errores de transcripción existen, y un número se puede leer mal en una etiqueta pequeña. La respuesta es la misma en los dos casos: no aceptes una explicación verbal y pide el certificado que lleva exactamente la cadena de tu vial. Si un proveedor no puede producir un documento específico del lote que te envió, el material está sin analizar desde tu lado de la transacción, sea lo que sea que se haya analizado antes. También puedes ingresar el número en la <a href="verify/">página de verificación</a> o enviárselo al equipo para que lo revise.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Qué es un certificado de análisis (COA)?', a: 'Un COA es un documento de laboratorio que reporta la identidad, la pureza y la cantidad de un compuesto para un lote específico. En péptidos de investigación se basa en análisis independientes por HPLC y espectrometría de masas, y está atado al número de lote del vial.' },
+        { q: '¿Cómo verifico un número de lote de Codex Research?', a: 'Ingresa el número de lote impreso en la etiqueta del vial en codexresearchlab.com/es/verify/. Un número válido confirma el producto y que está registrado. El COA completo también está disponible a solicitud antes de pagar.' },
+        { q: '¿Qué pureza debería mostrar el COA de un péptido de investigación?', a: 'Los péptidos de investigación suelen verificarse alrededor del 99% de pureza por HPLC, con la identidad confirmada por espectrometría de masas. La cifra exacta aparece en el COA del lote.' },
+        { q: '¿Puedo ver el certificado de análisis antes de pagar?', a: 'Sí. El COA completo del lote se envía a solicitud antes del pago. Pregunta qué lote recibirías y pide el certificado de ese lote en concreto, no un documento de muestra, para poder leerlo mientras todavía tienes la opción de no comprar.' },
+        { q: '¿Cómo es un número de lote de Codex Research?', a: 'Los números de lote van impresos en la etiqueta del vial con el formato CDX-AAMM-NNN. Esa cadena es lo que une el vial con su certificado de análisis, así que debe aparecer carácter por carácter en el COA que te envían.' },
+        { q: '¿Qué hago si el número de lote no coincide con el COA?', a: 'No aceptes una explicación verbal. Pide el certificado que lleva el número exacto impreso en tu vial, ya que la diferencia puede ser un simple error de transcripción. También puedes ingresar el número en la página de verificación o enviárselo al equipo para que lo revise.' },
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'how-to-read-a-certificate-of-analysis': {
+      title: 'Cómo leer un certificado de análisis de péptidos',
+      metaTitle: 'Leer un COA de péptidos: pureza, identidad y contenido',
+      metaDescription: 'Qué significa cada campo de un COA de péptidos, por qué la pureza cromatográfica no es el contenido neto y las señales de un certificado poco fiable.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Campo por campo, qué reporta realmente un COA, para que el documento deje de ser un misterio.',
+      imageAlt: 'Documento de certificado de análisis de péptidos con resultados de pureza e identidad',
+      body: `
+        <p class="lead">Un certificado de análisis, o COA, es el documento que convierte lo que dice una etiqueta en algo comprobable. En péptidos de investigación es el papel más útil que vas a manejar y, aun así, la mayoría mira el número de pureza y pasa de largo. Así se lee el resto.</p>
+
+        <h2>Número de lote</h2>
+        <p>Cada COA está atado a un lote específico, y el número de lote es el vínculo entre el papel y el vial que tienes en la mano. Si el número del documento no coincide con el de la etiqueta, el COA no describe tu material. Ese es también el número que usarías para <a href="verify/">verificar que un lote</a> es auténtico.</p>
+
+        <h2>Pureza</h2>
+        <p>La pureza suele reportarse como un porcentaje obtenido por <a href="article/peptide-purity-hplc-explained/">HPLC</a>, muchas veces cercano al 99 por ciento. Te dice qué parte de la muestra es el péptido buscado frente a todo lo demás que detectó el método. Una cifra alta con un resultado limpio es buena señal, pero recuerda que la pureza por sí sola no confirma qué péptido es.</p>
+
+        <h2>Identidad</h2>
+        <p>La identidad es la otra mitad del cuadro, y normalmente se confirma por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>. El COA reporta la masa medida y la compara con la masa esperada para ese péptido. Cuando las dos coinciden, tienes evidencia de que el compuesto es lo que dice ser, y no solo de que está puro.</p>
+
+        <h2>Fecha de análisis y métodos</h2>
+        <p>Un COA debe decir cuándo se hicieron los análisis y qué métodos se usaron, típicamente HPLC y espectrometría de masas. La fecha importa porque ata los resultados a un momento en la vida de ese lote. Los métodos importan porque te dicen cómo se produjeron los números, en vez de pedirte que los creas.</p>
+
+        <h2>Leerlo completo</h2>
+        <p>Leído como un todo, un buen COA responde tres preguntas: qué lote es este, qué tan puro está y si es la molécula correcta. Si un documento solo responde una, está incompleto. En Codex Research el COA completo está disponible a solicitud antes de pagar, y cualquier vial se puede revisar por su número de lote.</p>
+
+        <h2>Los demás campos que lleva un COA completo</h2>
+        <p>Lote, pureza e identidad son los titulares, pero un certificado a fondo reporta más de tres líneas. Según el compuesto, también puedes ver:</p>
+        <ul>
+          <li><b>Nombre e identificadores del producto,</b> incluido un <a href="article/cas-numbers-explained/">número CAS</a> cuando existe, para que el documento no se pueda confundir con un compuesto parecido.</li>
+          <li><b>Aspecto:</b> una descripción cualitativa breve del material, casi siempre un polvo liofilizado.</li>
+          <li><b>Contenido neto de péptido:</b> qué parte del polvo es péptido de verdad, y no sal y agua.</li>
+          <li><b>Contenido de agua,</b> normalmente por valoración Karl Fischer, porque los péptidos liofilizados absorben humedad.</li>
+          <li><b>Contenido de contraión:</b> trifluoroacetato o acetato que queda de la purificación.</li>
+          <li><b>Disolventes residuales:</b> trazas de los disolventes usados en la síntesis y la purificación.</li>
+          <li><b>Endotoxina bacteriana,</b> reportada cuando el trabajo de laboratorio previsto es sensible a ella, como los ensayos celulares.</li>
+          <li><b>Métodos, fecha y firma:</b> qué procedimiento produjo cada número, cuándo y quién responde por él.</li>
+        </ul>
+        <p>No todos los certificados llevan todas las líneas. Lo que importa es que las que sí lleva sean números atados a un método con nombre, no adjetivos.</p>
+
+        <h2>La pureza cromatográfica no es el contenido neto de péptido</h2>
+        <p>Esta es la confusión más común al leer un COA de péptidos. La pureza cromatográfica hace una pregunta sobre los picos: de todo lo que detectó el método, ¿qué proporción era el péptido buscado? El contenido neto de péptido hace una pregunta sobre el polvo: del material que pesaste, ¿qué proporción es péptido siquiera?</p>
+        <p>La diferencia es real. Los péptidos purificados por HPLC de fase reversa se aíslan normalmente como sales, así que parte del polvo es contraión y parte es agua absorbida. Un lote puede tener 99 por ciento de pureza por HPLC y estar bastante por debajo del 99 por ciento de péptido en masa, sin contradicción entre las dos cifras. Miden cosas distintas, y un certificado que reporta solo una no está equivocado: está incompleto.</p>
+
+        <h2>Leer el cromatograma</h2>
+        <p>Si el COA incluye el cromatograma y no solo el porcentaje, mira la traza y no únicamente el número que tiene al lado. Un pico alto y simétrico sobre una línea base plana es la imagen que quieres. Los picos pequeños cerca del principal son comunes en síntesis de péptidos y suelen corresponder a especies muy relacionadas, como secuencias truncadas o modificadas que la columna separa apenas. Un pico secundario muy pegado al principal te dice que el método tuvo que esforzarse para resolverlo, y por eso las condiciones del método pertenecen al certificado.</p>
+
+        <h2>Lo que aporta la espectrometría de masas y la HPLC no puede</h2>
+        <p>La HPLC separa y cuantifica; no nombra. Dos compuestos distintos pueden eluir a tiempos parecidos bajo las mismas condiciones, y un detector UV reporta los dos como picos sin opinar. La espectrometría de masas responde lo que la cromatografía deja abierto midiendo la masa directamente, de modo que el valor observado se puede comparar con el calculado a partir de la secuencia, y los enfoques en tándem fragmentan la molécula para respaldar la secuencia misma. Por eso una pureza sin método de identidad es medio documento.</p>
+
+        <h2>Quién lo firma, y por qué importa</h2>
+        <p>Un certificado es una afirmación de quien lo emite, así que el análisis independiente importa porque separa a quien hace la afirmación de quien vende el material. Los laboratorios que trabajan bajo una norma de competencia reconocida se evalúan contra criterios definidos de competencia e imparcialidad, y la acreditación cubre una lista específica de métodos, no los análisis en general. La pregunta útil no es solo qué dice el número, sino quién lo produjo y con qué método.</p>
+
+        <h2>Señales de alarma en un certificado</h2>
+        <ul>
+          <li><b>Sin número de lote,</b> o con uno que no coincide con el vial: el documento describe el material de otro.</li>
+          <li><b>Sin fecha de análisis,</b> con lo que los resultados no se pueden atar a un punto en la vida de ese lote.</li>
+          <li><b>Sin métodos con nombre.</b> «Pureza: 99%» sin un procedimiento detrás es una declaración, no un resultado.</li>
+          <li><b>Sin identidad ni firma del laboratorio,</b> lo que deja el documento sin autor que responda por él.</li>
+          <li><b>Una imagen de baja resolución</b> en la que no se leen los ejes del cromatograma ni el encabezado.</li>
+          <li><b>El mismo documento para todos los productos,</b> que significa que no es específico de ningún lote.</li>
+        </ul>
+        <p>En Codex Research cada lote lo analiza un laboratorio independiente por HPLC y espectrometría de masas, el certificado es específico de ese lote, y el documento completo se envía a solicitud antes de pagar. El número de lote de la etiqueta sigue el formato CDX-AAMM-NNN, y esa cadena es lo que une el vial con su papelería. Para revisar un vial que ya tienes, mira nuestra guía de <a href="article/verify-research-peptide-batch-coa-panama/">cómo verificar un lote y su COA</a>.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Qué lleva un certificado de análisis de péptidos?', a: 'Un COA reporta el número de lote, la pureza (normalmente por HPLC), la identidad (normalmente por espectrometría de masas), la fecha de análisis y los métodos empleados. Juntos dicen qué lote es, qué tan puro está y si es la molécula correcta.' },
+        { q: '¿Por qué importa el número de lote de un COA?', a: 'El número de lote une el documento con un vial específico. Si el número del COA no coincide con el de la etiqueta, el certificado no describe tu material. Es también el número que se usa para verificar que un lote es auténtico.' },
+        { q: '¿Basta con el porcentaje de pureza?', a: 'No. La pureza te dice qué parte de la muestra es un componente principal, pero no que ese componente sea el péptido correcto. Un COA completo acompaña la pureza por HPLC con una comprobación de identidad por espectrometría de masas.' },
+        { q: '¿Cuál es la diferencia entre pureza por HPLC y contenido neto de péptido?', a: 'La pureza por HPLC es la proporción de los picos detectados que corresponde al péptido buscado. El contenido neto de péptido es la proporción del polvo que es péptido y no contraión ni agua absorbida. Un lote puede tener 99 por ciento de pureza por HPLC y estar muy por debajo del 99 por ciento de péptido en masa: las dos cifras miden cosas distintas.' },
+        { q: '¿Por qué un COA lista contraiones como TFA o acetato?', a: 'Los péptidos purificados por HPLC de fase reversa se aíslan normalmente como sales, así que queda trifluoroacetato o acetato unido al material. Se reporta porque es parte del polvo que se pesa y porque es un residuo conocido del proceso de purificación.' },
+        { q: '¿Cuáles son las señales de un certificado de análisis poco fiable?', a: 'Sin número de lote, o con uno que no coincide con el vial; sin fecha de análisis; sin métodos de ensayo con nombre; sin laboratorio identificado ni firma; una imagen con resolución demasiado baja para leer el cromatograma; o el mismo documento reutilizado en todos los productos en vez de ser específico de un lote.' },
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-bpc-157': {
+      title: '¿Qué es BPC-157?',
+      metaTitle: 'BPC-157: secuencia, peso molecular y fórmula',
+      metaDescription: 'Secuencia de BPC-157 (GEPPPGKPADDAGLV), fórmula molecular C62H98N16O22, peso molecular, número CAS y cómo se sintetiza el pentadecapéptido.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un péptido sintético de 15 aminoácidos con una secuencia tomada de una proteína gástrica, y la investigación a su alrededor.',
+      imageAlt: 'Vial del péptido de investigación BPC-157, un pentadecapéptido, con su certificado de análisis',
+      // Los relacionados en inglés (síntesis, terminología) aún no están
+      // traducidos: se sustituyen por los del territorio que sí lo está.
+      related: ['how-to-read-a-certificate-of-analysis', 'verify-research-peptide-batch-coa-panama'],
+      body: `
+        <p class="lead">BPC-157 es uno de los péptidos de investigación de los que más se habla, y también uno de los peor entendidos. Es un péptido sintético corto cuya secuencia de aminoácidos está tomada de una proteína presente en el jugo gástrico. En el laboratorio se estudia por cómo interactúa con vías de señalización ligadas a la reparación de tejidos y a la formación de vasos sanguíneos. Esto es lo que es, sin adornos.</p>
+
+        <h2>¿Qué es BPC-157?</h2>
+        <p>BPC-157 es un pentadecapéptido, que significa simplemente un péptido de 15 aminoácidos. El nombre viene de «Body Protection Compound», compuesto de protección corporal, y la secuencia deriva de una proteína más grande presente en el estómago. Se produce de forma sintética para investigación mediante <a href="article/peptide-synthesis/">síntesis de péptidos en fase sólida</a>, no se extrae de tejido. Su número CAS es 137525-51-0 y su fórmula molecular es C62H98N16O22, con un peso molecular cercano a 1419 g/mol. Si no queda clara la diferencia entre un péptido corto como este y una proteína completa, nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> la cubre.</p>
+
+        <h2>¿De dónde viene la secuencia?</h2>
+        <p>La secuencia de BPC-157 corresponde a un fragmento de una proteína protectora identificada en el jugo gástrico. Ese origen es parte de por qué llama la atención en investigación: los péptidos que se mantienen íntegros en un medio ácido son interesantes de estudiar, y buena parte de la literatura temprana miró a BPC-157 justo en ese contexto. La versión que se usa hoy en los laboratorios es totalmente sintética y se caracteriza por su certificado de análisis, no por su procedencia.</p>
+
+        <h2>La secuencia de aminoácidos de BPC-157</h2>
+        <p>Un pentadecapéptido tiene quince residuos. En BPC-157 van, del extremo N al extremo C, en código de tres letras:</p>
+        <p><b>Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val</b></p>
+        <p>En código de una letra la misma cadena es <b>GEPPPGKPADDAGLV</b>, y la forma de ácido libre se escribe <b>H-GEPPPGKPADDAGLV-OH</b>. Las dos notaciones son sinónimos registrados en la ficha de PubChem, así que cualquiera sirve para confirmar que una ficha describe la misma molécula.</p>
+        <table>
+          <tr><th>Posición</th><th>Residuo</th><th>Código</th><th>Posición</th><th>Residuo</th><th>Código</th></tr>
+          <tr><td>1</td><td>Glicina</td><td>Gly / G</td><td>9</td><td>Alanina</td><td>Ala / A</td></tr>
+          <tr><td>2</td><td>Ácido glutámico</td><td>Glu / E</td><td>10</td><td>Ácido aspártico</td><td>Asp / D</td></tr>
+          <tr><td>3</td><td>Prolina</td><td>Pro / P</td><td>11</td><td>Ácido aspártico</td><td>Asp / D</td></tr>
+          <tr><td>4</td><td>Prolina</td><td>Pro / P</td><td>12</td><td>Alanina</td><td>Ala / A</td></tr>
+          <tr><td>5</td><td>Prolina</td><td>Pro / P</td><td>13</td><td>Glicina</td><td>Gly / G</td></tr>
+          <tr><td>6</td><td>Glicina</td><td>Gly / G</td><td>14</td><td>Leucina</td><td>Leu / L</td></tr>
+          <tr><td>7</td><td>Lisina</td><td>Lys / K</td><td>15</td><td>Valina</td><td>Val / V</td></tr>
+          <tr><td>8</td><td>Prolina</td><td>Pro / P</td><td></td><td></td><td></td></tr>
+        </table>
+        <p>Solo aparecen ocho de los veinte aminoácidos estándar. La prolina es la más frecuente, con cuatro residuos; la glicina aparece tres veces; la alanina y el ácido aspártico, dos cada una; y el ácido glutámico, la lisina, la leucina y la valina, una vez cada uno. De ahí salen dos puntos estructurales directos. No hay cisteína, así que la molécula no tiene puente disulfuro ni tiol libre. Y las posiciones 3, 4 y 5 son tres prolinas consecutivas, una secuencia que la literatura de revisión describe como conformacionalmente rígida y propensa a adoptar una hélice de poliprolina II, una estructura levógira estéricamente incómoda de atacar para las enzimas proteolíticas.</p>
+        <p>El término en sí es solo un conteo. «Pentadeca-» es quince en griego, de <i>penta</i> (cinco) y <i>deka</i> (diez), así que un pentadecapéptido tiene exactamente quince residuos, igual que un dipéptido tiene dos.</p>
+
+        <h2>Fórmula molecular, peso molecular e identificadores</h2>
+        <p>Estos son los identificadores públicos en los que deben coincidir una ficha de catálogo y un certificado de análisis:</p>
+        <table>
+          <tr><th>Atributo</th><th>Valor</th></tr>
+          <tr><td>Fórmula molecular</td><td>C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub></td></tr>
+          <tr><td>Peso molecular promedio</td><td>1419,5 g/mol (se cita a menudo como 1419,53 Da)</td></tr>
+          <tr><td>Masa monoisotópica</td><td>1418,704 Da</td></tr>
+          <tr><td>Número de registro CAS</td><td>137525-51-0</td></tr>
+          <tr><td>PubChem CID</td><td>9941957</td></tr>
+          <tr><td>UNII</td><td>8ED8NXK95P</td></tr>
+          <tr><td>ChEMBL ID</td><td>CHEMBL4297358</td></tr>
+        </table>
+        <p>La fórmula se puede comprobar contra la secuencia. Suma los átomos de los quince aminoácidos libres, resta las catorce moléculas de agua que se pierden al formarse los enlaces peptídicos, y el resultado es exactamente C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub>: los dieciséis nitrógenos, por ejemplo, son los quince nitrógenos amida del esqueleto más el nitrógeno de la cadena lateral de la lisina en la posición 7.</p>
+        <p>Las dos cifras de masa hacen trabajos distintos. El peso promedio cercano a 1419,5 tiene en cuenta la abundancia natural de los isótopos y es el número que se usa para pesar y para los cálculos de concentración. La masa monoisotópica de 1418,704 usa solo el isótopo más abundante de cada elemento, y es la cifra contra la que se compara una comprobación de identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</p>
+
+        <h2>De dónde viene el nombre, y cuándo se describió</h2>
+        <p>BPC es la abreviatura de Body Protection Compound. El nombre pertenece primero a una proteína más grande, de unos 40 kDa, presente en el jugo gástrico; BPC-157 es el fragmento de quince residuos tomado de su extremo N-terminal, una relación que se enuncia en los mismos términos tanto en la patente como en la literatura analítica. Entró en la literatura científica en 1993, en un artículo de Sikiric, Petek, Rucman, Seiwerth y colegas en Zagreb, con la química desarrollada en paralelo en la empresa eslovena Diagen.</p>
+        <p>El rastro de patentes es público. Las solicitudes más antiguas, incluida la patente estadounidense 5.288.708, se refieren a la proteína BPC natural aislada del jugo gástrico. Las posteriores, EP 0572688 y la patente estadounidense 6.268.346, se refieren al fragmento sintético. Una solicitud internacional de 2014, WO2014142764A1, asignada a Diagen y con Rudolf Rucman como inventor, cubre sales estables del pentadecapéptido y repite tanto la secuencia como su origen gástrico. Una patente describe una invención reivindicada, no una situación regulatoria.</p>
+
+        <h2>¿Cómo se estudia BPC-157?</h2>
+        <p>La investigación publicada sobre BPC-157 ha usado sobre todo cultivo celular y modelos animales. Los temas recurrentes en ese trabajo incluyen:</p>
+        <ul>
+          <li><b>Angiogénesis:</b> cómo se relaciona el péptido con la formación de vasos sanguíneos nuevos en sistemas modelo.</li>
+          <li><b>Señalización del óxido nítrico:</b> su interacción con una vía implicada en el tono vascular y en la respuesta de los tejidos.</li>
+          <li><b>Tejidos y estructuras conectivas:</b> modelos que miran tendón, músculo y tejido gastrointestinal.</li>
+        </ul>
+        <p>Conviene ser preciso aquí. Son observaciones de modelos de laboratorio, no conclusiones sobre personas ni sobre animales. BPC-157 es un compuesto de investigación, y el resumen honesto es que sigue siendo un área de estudio preclínico activa, no cerrada.</p>
+
+        <h2>Cómo se fabrica BPC-157</h2>
+        <p>No se extrae nada de tejido. El BPC-157 de grado investigación se ensambla residuo por residuo con <a href="article/peptide-synthesis/">síntesis de péptidos en fase sólida</a>, que construye la cadena sobre un soporte polimérico insoluble; los documentos de patente de Diagen atribuyen a Sikiric y Rucman la ruta sintética y mencionan la preparación sobre soportes poliméricos sólidos. Los materiales de partida son derivados de aminoácidos protegidos, no material biológico. Después del ensamblaje la cadena se libera del soporte, se purifica por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> de fase reversa, se confirma por espectrometría de masas y se liofiliza. Como la purificación en fase reversa aísla los péptidos como sales, el sólido seco lleva un contraión, típicamente trifluoroacetato, más agua residual, así que la masa pesada no es cien por ciento péptido; nuestra guía de <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado de análisis</a> explica cómo se reporta eso.</p>
+        <p>Un detalle de conservación se desprende de la propia secuencia: BPC-157 no contiene asparagina, glutamina, cisteína, metionina ni triptófano, los residuos que los fabricantes de péptidos señalan como acortadores de la vida útil por ser los más propensos a la desamidación o a la oxidación.</p>
+
+        <h2>Calidad, pureza y manejo</h2>
+        <p>Como un péptido corto vale lo que vale el lote que realmente recibes, la pureza importa más que el nombre de la etiqueta. El BPC-157 de grado investigación se verifica por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> para la pureza y por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para la identidad, y cada lote debe venir con su propio certificado de análisis. Normalmente se envía liofilizado, y cualquier vial de Codex Research se puede comprobar por su <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido BPC-157, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Qué significa BPC-157?', a: 'BPC viene de «Body Protection Compound», compuesto de protección corporal. BPC-157 es un pentadecapéptido sintético (15 aminoácidos) cuya secuencia deriva de una proteína presente en el jugo gástrico. Se usa estrictamente para investigación de laboratorio.' },
+        { q: '¿BPC-157 es un péptido natural o sintético?', a: 'La secuencia se origina en una proteína gástrica natural, pero el BPC-157 que se usa en investigación se fabrica de forma sintética por síntesis en fase sólida y se verifica por HPLC y espectrometría de masas.' },
+        { q: '¿Cómo se estudia BPC-157 en el laboratorio?', a: 'La mayor parte del trabajo publicado usa cultivo celular y modelos animales, mirando vías asociadas a la angiogénesis, la señalización del óxido nítrico y el tejido conectivo. Son observaciones preclínicas, no conclusiones sobre su uso en personas ni en animales.' },
+        { q: '¿Cuál es la secuencia de aminoácidos de BPC-157?', a: 'En código de una letra la secuencia es GEPPPGKPADDAGLV; en código de tres letras, Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val, leída del extremo N al extremo C. La forma de ácido libre se escribe H-GEPPPGKPADDAGLV-OH. Solo aparecen ocho aminoácidos distintos en la cadena, y la prolina ocupa cuatro de las quince posiciones.' },
+        { q: '¿Cuál es la fórmula molecular y el peso molecular de BPC-157?', a: 'La fórmula molecular es C62H98N16O22. PubChem lista el peso molecular promedio como 1419,5 g/mol, citado habitualmente en la literatura como 1419,53 Da, y la masa monoisotópica como 1418,704 Da. Su número de registro CAS es 137525-51-0 y su PubChem CID es 9941957.' },
+        { q: '¿Por qué a BPC-157 se le llama pentadecapéptido?', a: '«Pentadeca-» es quince en griego, de penta (cinco) y deka (diez), así que un pentadecapéptido es un péptido de exactamente quince residuos de aminoácido. El término describe la longitud de la cadena y nada más.' },
+        { q: '¿Cuándo se describió BPC-157 por primera vez, y hay patente?', a: 'Entró en la literatura científica en 1993, en un artículo de Sikiric, Petek, Rucman, Seiwerth y colegas en Zagreb, con la química desarrollada en la empresa eslovena Diagen. La familia de patentes relacionada incluye US 5.288.708 sobre la proteína gástrica natural, EP 0572688 y US 6.268.346 sobre el fragmento sintético, y la solicitud de 2014 WO2014142764A1 sobre sales estables del pentadecapéptido.' },
+      ],
+      cta: 'Explora los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
+    },
+
+    'peptide-purity-hplc-explained': {
+      title: 'Pureza de péptidos: qué significa 99% por HPLC',
+      metaTitle: 'Pureza de péptidos: lo que el 99% por HPLC no te dice',
+      metaDescription: 'Qué mide una cifra de 99% de pureza por HPLC, qué deja fuera y por qué la identidad por espectrometría de masas responde lo que la pureza no puede.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Qué mide de verdad un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
+      imageAlt: 'Cromatograma de HPLC usado para medir la pureza de péptidos de investigación',
+      body: `
+        <p class="lead">Casi todas las fichas de péptidos de investigación mencionan una cifra de pureza, muchas veces 99 por ciento por HPLC. Es uno de los números más citados del campo y uno de los menos explicados. Vale la pena deletrear qué mide ese número y, tan importante como eso, qué no mide.</p>
+
+        <h2>Cómo se mide la pureza</h2>
+        <p>La pureza se determina normalmente por <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución</a>, o HPLC. En términos simples, la muestra se empuja a través de una columna que separa sus componentes, y cada componente aparece como un pico en un gráfico llamado cromatograma. El péptido buscado es el pico principal. La pureza es el área de ese pico principal expresada como porcentaje de todos los picos juntos. Así que 99 por ciento significa que el péptido buscado representa alrededor del 99 por ciento de lo que detectó el método.</p>
+
+        <h2>Qué te dice el número</h2>
+        <p>Una cifra alta de pureza por HPLC dice que apareció muy poco más junto al péptido. Los picos laterales pequeños pueden venir de fragmentos peptídicos relacionados, secuencias incompletas o material sobrante de la síntesis. Un cromatograma limpio con un pico dominante es buena señal de que el lote es en su mayor parte lo que dice ser. Esa información es genuinamente útil.</p>
+
+        <h2>Qué no te dice</h2>
+        <p>La pureza no es identidad. La HPLC te dice qué parte de la muestra es un componente principal, pero no prueba por sí sola que ese componente sea el péptido correcto. Por eso la identidad se confirma aparte, normalmente por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, comparando la masa medida con la esperada. Un certificado de análisis fiable reporta las dos cosas: pureza por HPLC e identidad por espectrometría de masas. Un número sin el otro es medio cuadro.</p>
+
+        <h2>Por qué importa</h2>
+        <p>En investigación, la consistencia depende de saber qué hay realmente en el vial. Una cifra de pureza respaldada por una comprobación de identidad es lo que permite comparar un lote con otro. Si quieres confirmar que un vial de Codex Research es auténtico, puedes revisar su <a href="verify/">número de lote</a>, y su certificado de análisis completo está disponible a solicitud.</p>
+
+        <h2>Solo para investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        { q: '¿Qué significa 99% de pureza por HPLC?', a: 'Significa que el péptido buscado representa alrededor del 99 por ciento de lo que la HPLC detectó en la muestra. La HPLC separa los componentes en picos, y la pureza es el área del pico principal como porcentaje de todos los picos juntos.' },
+        { q: '¿La pureza por HPLC confirma la identidad del péptido?', a: 'No. La HPLC mide qué parte de la muestra es un componente principal, pero no prueba que ese componente sea el péptido correcto. La identidad se confirma aparte, normalmente por espectrometría de masas, comparando la masa medida con la esperada.' },
+        { q: '¿Por qué importa la pureza de un péptido en investigación?', a: 'La consistencia depende de saber qué hay en el vial. Una cifra de pureza respaldada por una comprobación de identidad permite comparar un lote con otro. Un certificado de análisis debe reportar tanto la pureza por HPLC como la identidad por espectrometría de masas.' },
+      ],
+      cta: 'Mira los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
+    },
+
+  };
+
+  window.REA = window.REA || {};
+  window.REA.POSTS_ES = POSTS_ES;
+  window.REA.BLOG_DISCLAIMER_ES =
+    'Todos los productos que vende Codex Research son estrictamente para uso en investigación de ' +
+    'laboratorio. No están destinados al consumo humano ni animal, ni a uso médico o terapéutico. ' +
+    'La información de este sitio es únicamente educativa e informativa.';
+})();

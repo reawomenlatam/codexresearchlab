@@ -11,19 +11,19 @@
   const feature = POSTS[0];
   if (feature) {
     document.getElementById('blogFeature').innerHTML = `
-      <a class="blog-feature-link" href="article/${feature.slug}/">
+      <a class="blog-feature-link" href="${U('article/' + feature.slug + '/')}">
         ${cover(feature)}
         <div class="blog-feature-body">
           <span class="blog-tag">${feature.category} · ${feature.date}</span>
           <h2>${feature.title}</h2>
           <p>${feature.excerpt}</p>
-          <span class="link">Read article →</span>
+          <span class="link">${T('Read article →')}</span>
         </div>
       </a>`;
   }
 
   document.getElementById('blogGrid').innerHTML = POSTS.slice(1).map((a) => `
-    <a class="blog-card" href="article/${a.slug}/">
+    <a class="blog-card" href="${U('article/' + a.slug + '/')}">
       ${cover(a)}
       <div class="blog-card-body">
         <span class="blog-tag">${a.category} · ${a.date}</span>
