@@ -37,7 +37,7 @@
         <h2>Entrega en la ciudad de Panamá y en el interior</h2>
         <ul>
           <li><b>Ciudad de Panamá:</b> $4 de envío fijo, entrega en <b>1 a 2 horas</b> desde el inventario local.</li>
-          <li><b>Interior</b> — David, Chitré, Colón y otras ciudades: al siguiente día hábil por transporte Fergunson.</li>
+          <li><b>Interior</b>: David, Chitré, Colón y otras ciudades: al siguiente día hábil por transporte Fergunson.</li>
           <li><b>Envío gratis</b> en pedidos sobre $100.</li>
           <li>Todo pedido sale en <b>empaque sellado y protegido</b>, con cada vial etiquetado con su compuesto, su concentración y su número de lote.</li>
         </ul>
@@ -46,8 +46,8 @@
         <h2>Formas de pago en Panamá</h2>
         <p>El pago se hace en el propio sitio, al momento de finalizar la compra:</p>
         <ul>
-          <li><b>Tarjeta</b> — Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de tu tarjeta nunca pasan por nuestro sitio.</li>
-          <li><b>Cripto</b> — USDC o USDT en Ethereum, transferidos desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
+          <li><b>Tarjeta</b>: Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de tu tarjeta nunca pasan por nuestro sitio.</li>
+          <li><b>Cripto</b>: USDC o USDT en Ethereum, transferidos desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
         </ul>
         <p>El monto lo calcula nuestro servidor en el momento del pago, así que siempre coincide con lo que muestra tu carrito. Cualquier duda, antes o después del pedido, la responde un especialista por WhatsApp.</p>
 
@@ -105,7 +105,7 @@
           <li><b>Una fecha:</b> el certificado dice cuándo se hizo el análisis, no solo cuándo se creó el archivo.</li>
           <li><b>Métodos con nombre:</b> la HPLC y la espectrometría de masas aparecen identificadas como los procedimientos detrás de las cifras, con resultados numéricos y no con la palabra «cumple».</li>
           <li><b>Un autor:</b> el laboratorio que analizó está identificado y el documento está firmado o es atribuible de alguna forma.</li>
-          <li><b>Legibilidad:</b> se pueden leer de verdad el encabezado y el cromatograma, no una imagen comprimida de ellos.</li>
+          <li><b>Legibilidad:</b> se pueden leer el encabezado y el cromatograma, no una imagen comprimida de ellos.</li>
           <li><b>Un lote, un documento:</b> el certificado es específico de ese lote, no un archivo único reutilizado en todo el catálogo.</li>
         </ul>
         <p>Qué significa cada uno de esos campos, y la diferencia entre pureza cromatográfica y contenido neto de péptido, está en detalle en <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado de análisis</a>. Esta guía trata de confirmar que el certificado que tienes delante pertenece al vial que tienes delante.</p>
@@ -139,10 +139,10 @@
       metaDescription: 'Qué significa cada campo de un COA de péptidos, por qué la pureza cromatográfica no es el contenido neto y las señales de un certificado poco fiable.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
-      excerpt: 'Campo por campo, qué reporta realmente un COA, para que el documento deje de ser un misterio.',
+      excerpt: 'Qué reporta un certificado de análisis, campo por campo.',
       imageAlt: 'Documento de certificado de análisis de péptidos con resultados de pureza e identidad',
       body: `
-        <p class="lead">Un certificado de análisis, o COA, es el documento que convierte lo que dice una etiqueta en algo comprobable. En péptidos de investigación es el papel más útil que vas a manejar y, aun así, la mayoría mira el número de pureza y pasa de largo. Así se lee el resto.</p>
+        <p class="lead">Un certificado de análisis, o COA, convierte lo que dice una etiqueta en algo comprobable. El número de pureza se lleva toda la atención, y es el resto del documento el que le da sentido.</p>
 
         <h2>Número de lote</h2>
         <p>Cada COA está atado a un lote específico, y el número de lote es el vínculo entre el papel y el vial que tienes en la mano. Si el número del documento no coincide con el de la etiqueta, el COA no describe tu material. Ese es también el número que usarías para <a href="verify/">verificar que un lote</a> es auténtico.</p>
@@ -164,7 +164,7 @@
         <ul>
           <li><b>Nombre e identificadores del producto,</b> incluido un <a href="article/cas-numbers-explained/">número CAS</a> cuando existe, para que el documento no se pueda confundir con un compuesto parecido.</li>
           <li><b>Aspecto:</b> una descripción cualitativa breve del material, casi siempre un polvo liofilizado.</li>
-          <li><b>Contenido neto de péptido:</b> qué parte del polvo es péptido de verdad, y no sal y agua.</li>
+          <li><b>Contenido neto de péptido:</b> qué parte del polvo es péptido, y no sal y agua.</li>
           <li><b>Contenido de agua,</b> normalmente por valoración Karl Fischer, porque los péptidos liofilizados absorben humedad.</li>
           <li><b>Contenido de contraión:</b> trifluoroacetato o acetato que queda de la purificación.</li>
           <li><b>Disolventes residuales:</b> trazas de los disolventes usados en la síntesis y la purificación.</li>
@@ -464,7 +464,7 @@
         { q: '¿Qué es la síntesis de péptidos en fase sólida (SPPS)?', a: 'La SPPS es un método en el que la cadena en crecimiento permanece anclada a una resina sólida mientras se añaden los aminoácidos paso a paso, lo que hace la síntesis eficiente y fácil de automatizar.' },
         { q: '¿Cómo se confirma la pureza después de la síntesis?', a: 'La pureza se confirma con HPLC y espectrometría de masas, que verifican la secuencia correcta, el peso molecular y la ausencia de subproductos significativos.' },
       ],
-      cta: 'Explora nuestro catálogo de <a href="catalog/">péptidos de investigación</a> sintetizados en laboratorio, verificados por HPLC y espectrometría de masas.',
+      cta: 'Mira el catálogo de <a href="catalog/">péptidos de investigación</a> sintetizados en laboratorio, verificados por HPLC y espectrometría de masas.',
     },
 
     'cas-numbers-explained': {
@@ -473,14 +473,14 @@
       metaDescription: 'Qué es un número de registro CAS, cómo funciona su dígito de control y cómo usarlo para confirmar que un compuesto es el que crees que es.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
-      excerpt: 'El identificador único que acompaña a cada nombre de compuesto, y cómo leerlo de verdad.',
+      excerpt: 'El identificador único que acompaña a cada nombre de compuesto, y cómo leerlo.',
       imageAlt: 'Número de registro CAS impreso en la etiqueta de un compuesto de investigación',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
       body: `
         <p class="lead">Junto a casi todo compuesto de una ficha de investigación hay una cadena de dígitos etiquetada como CAS. Es fácil pasarla por alto, pero ese número pequeño es una de las formas más fiables de saber exactamente qué sustancia tienes delante. Los nombres pueden ser ambiguos. Un número CAS no.</p>
 
         <h2>¿Qué es un número CAS?</h2>
-        <p>Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta recibe el suyo, y no hay dos que compartan uno. Ahí está todo su valor: un compuesto puede tener varios nombres comunes, una abreviatura y un nombre sistemático larguísimo, pero tiene exactamente un número CAS. Corta de raíz la confusión de nombres.</p>
+        <p>Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta recibe el suyo, y no hay dos que compartan uno. Un compuesto puede tener varios nombres comunes, una abreviatura y un nombre sistemático larguísimo, pero tiene exactamente un número CAS. Corta de raíz la confusión de nombres.</p>
 
         <h2>Cómo está estructurado</h2>
         <p>Un número CAS se escribe en tres grupos de dígitos separados por guiones, con el patrón de un grupo más largo, luego dos dígitos y luego uno solo; por ejemplo, 137525-51-0. Ese último dígito suelto es un dígito de control, calculado a partir de los demás, que permite al software detectar una errata. Los dígitos en sí no esconden ningún significado sobre la estructura: son una entrada de registro, como un número de catálogo.</p>
@@ -560,7 +560,7 @@
       body: `
         <p class="lead">La liofilización, también llamada secado por congelación, es un proceso de deshidratación que retira el agua de una muestra congelada por sublimación a presión reducida. Conserva compuestos sensibles como péptidos, proteínas y vacunas manteniendo su estructura y su estabilidad para el almacenamiento prolongado.</p>
 
-        <h2>Qué significa realmente «polvo liofilizado»</h2>
+        <h2>Qué significa «polvo liofilizado»</h2>
         <p>La expresión describe el estado físico del material, no un grado ni una formulación. Lo que queda en el vial después del secado por congelación es un sólido poroso que ocupa aproximadamente la misma forma y el mismo volumen que ocupaba la disolución congelada, y por eso se le suele llamar torta y no polvo. El hielo sublima y la matriz sólida que lo sostenía se queda atrás. Algunas tortas son densas y uniformes, otras son escamosas o se desmoronan en los bordes, y con las masas pequeñas típicas de los péptidos de investigación la torta puede ser una película fina o unas pocas motas en la pared del vial, o no parecer nada. Un vial que parece vacío no ha perdido necesariamente su contenido.</p>
 
         <h2>¿Qué es la liofilización?</h2>
@@ -576,7 +576,7 @@
         <p>${cite('Referencia: Franks, 1998', 'https://doi.org/10.1016/S0939-6411(98)00004-6').trim()}</p>
 
         <h2>Por qué la congelación decide casi todo el resultado</h2>
-        <p>Congelar no es solo enfriar. A medida que baja la temperatura, el agua se separa como hielo y los solutos restantes quedan empujados a bolsas cada vez más concentradas, que congelan a temperaturas más bajas que el agua de alrededor. La mayoría de las muestras se comportan como eutécticos, una mezcla de solutos y disolvente que solo está bien congelada cuando toda la mezcla eutéctica ha solidificado. Otras no cristalizan nunca: la suspensión simplemente se vuelve más viscosa al enfriarse hasta que fragua como un sólido vítreo en el punto de transición vítrea, y este segundo tipo es bastante más difícil de liofilizar.${cite('Referencia: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+        <p>Congelar no es solo enfriar. A medida que baja la temperatura, el agua se separa como hielo y los solutos restantes quedan empujados a bolsas cada vez más concentradas, que congelan a temperaturas más bajas que el agua de alrededor. La mayoría de las muestras se comportan como eutécticos, una mezcla de solutos y disolvente que solo está bien congelada cuando toda la mezcla eutéctica ha solidificado. Otras no cristalizan nunca: la suspensión se vuelve más viscosa al enfriarse hasta que fragua como un sólido vítreo en el punto de transición vítrea, y este segundo tipo es bastante más difícil de liofilizar.${cite('Referencia: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
         <p>La velocidad de enfriamiento importa por la misma razón. Enfriar rápido da cristales de hielo pequeños, útiles cuando hay que preservar una estructura para microscopía, pero deja canales estrechos en la matriz y hace que la muestra seque más despacio. Enfriar lento da cristales más grandes y canales menos restrictivos por los que el vapor puede escapar. En cualquier caso, el producto tiene que estar congelado por debajo de su temperatura eutéctica o de transición vítrea antes de empezar a secar, porque las bolsas de material sin congelar se expanden bajo vacío y arruinan la estructura de la torta final.</p>
 
         <h2>Temperatura de colapso, y qué dice una torta mala</h2>
@@ -597,7 +597,7 @@
         </ul>
         <p>${cite('Referencia: Tang y Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75').trim()}</p>
 
-        <h2>Qué está haciendo realmente el equipo</h2>
+        <h2>Qué hace el equipo</h2>
         <p>Un liofilizador establece una diferencia de presión y después aporta calor a través de ella. La sublimación depende de la diferencia de presión de vapor entre el producto y el colector de hielo, así que el colector, una trampa fría, tiene que mantenerse bastante más frío que el producto; las moléculas de agua migran desde la muestra, a mayor presión, hacia el colector, a menor presión, donde condensan, mientras la bomba de vacío retira los gases que no condensan. El calor es la fuerza motriz, no un añadido: sublimar un gramo de agua de hielo a vapor cuesta del orden de diez veces la energía necesaria para congelar ese mismo gramo.${cite('Referencia: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
 
         <h2>Una nota sobre «polvo liofilizado para inyección»</h2>
@@ -633,7 +633,7 @@
         <p class="lead">BPC-157 es uno de los péptidos de investigación de los que más se habla, y también uno de los peor entendidos. Es un péptido sintético corto cuya secuencia de aminoácidos está tomada de una proteína presente en el jugo gástrico. En el laboratorio se estudia por cómo interactúa con vías de señalización ligadas a la reparación de tejidos y a la formación de vasos sanguíneos. Esto es lo que es, sin adornos.</p>
 
         <h2>¿Qué es BPC-157?</h2>
-        <p>BPC-157 es un pentadecapéptido, que significa simplemente un péptido de 15 aminoácidos. El nombre viene de «Body Protection Compound», compuesto de protección corporal, y la secuencia deriva de una proteína más grande presente en el estómago. Se produce de forma sintética para investigación mediante <a href="article/peptide-synthesis/">síntesis de péptidos en fase sólida</a>, no se extrae de tejido. Su número CAS es 137525-51-0 y su fórmula molecular es C62H98N16O22, con un peso molecular cercano a 1419 g/mol. Si no queda clara la diferencia entre un péptido corto como este y una proteína completa, nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> la cubre.</p>
+        <p>BPC-157 es un pentadecapéptido, que significa un péptido de 15 aminoácidos. El nombre viene de «Body Protection Compound», compuesto de protección corporal, y la secuencia deriva de una proteína más grande presente en el estómago. Se produce de forma sintética para investigación mediante <a href="article/peptide-synthesis/">síntesis de péptidos en fase sólida</a>, no se extrae de tejido. Su número CAS es 137525-51-0 y su fórmula molecular es C62H98N16O22, con un peso molecular cercano a 1419 g/mol. Si no queda clara la diferencia entre un péptido corto como este y una proteína completa, nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> la cubre.</p>
 
         <h2>¿De dónde viene la secuencia?</h2>
         <p>La secuencia de BPC-157 corresponde a un fragmento de una proteína protectora identificada en el jugo gástrico. Ese origen es parte de por qué llama la atención en investigación: los péptidos que se mantienen íntegros en un medio ácido son interesantes de estudiar, y buena parte de la literatura temprana miró a BPC-157 justo en ese contexto. La versión que se usa hoy en los laboratorios es totalmente sintética y se caracteriza por su certificado de análisis, no por su procedencia.</p>
@@ -689,7 +689,7 @@
         <p>Un detalle de conservación se desprende de la propia secuencia: BPC-157 no contiene asparagina, glutamina, cisteína, metionina ni triptófano, los residuos que los fabricantes de péptidos señalan como acortadores de la vida útil por ser los más propensos a la desamidación o a la oxidación.</p>
 
         <h2>Calidad, pureza y manejo</h2>
-        <p>Como un péptido corto vale lo que vale el lote que realmente recibes, la pureza importa más que el nombre de la etiqueta. El BPC-157 de grado investigación se verifica por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> para la pureza y por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para la identidad, y cada lote debe venir con su propio certificado de análisis. Normalmente se envía liofilizado, y cualquier vial de Codex Research se puede comprobar por su <a href="verify/">número de lote</a>.</p>
+        <p>Como un péptido corto vale lo que vale el lote que recibes, la pureza importa más que el nombre de la etiqueta. El BPC-157 de grado investigación se verifica por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> para la pureza y por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para la identidad, y cada lote debe venir con su propio certificado de análisis. Normalmente se envía liofilizado, y cualquier vial de Codex Research se puede comprobar por su <a href="verify/">número de lote</a>.</p>
 
         <h2>Solo para investigación</h2>
         <p>Todos los productos que vende Codex Research, incluido BPC-157, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
@@ -703,7 +703,7 @@
         { q: '¿Por qué a BPC-157 se le llama pentadecapéptido?', a: '«Pentadeca-» es quince en griego, de penta (cinco) y deka (diez), así que un pentadecapéptido es un péptido de exactamente quince residuos de aminoácido. El término describe la longitud de la cadena y nada más.' },
         { q: '¿Cuándo se describió BPC-157 por primera vez, y hay patente?', a: 'Entró en la literatura científica en 1993, en un artículo de Sikiric, Petek, Rucman, Seiwerth y colegas en Zagreb, con la química desarrollada en la empresa eslovena Diagen. La familia de patentes relacionada incluye US 5.288.708 sobre la proteína gástrica natural, EP 0572688 y US 6.268.346 sobre el fragmento sintético, y la solicitud de 2014 WO2014142764A1 sobre sales estables del pentadecapéptido.' },
       ],
-      cta: 'Explora los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
+      cta: 'Mira los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
     },
 
     'peptide-purity-hplc-explained': {
@@ -712,7 +712,7 @@
       metaDescription: 'Qué mide una cifra de 99% de pureza por HPLC, qué deja fuera y por qué la identidad por espectrometría de masas responde lo que la pureza no puede.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
-      excerpt: 'Qué mide de verdad un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
+      excerpt: 'Qué mide un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
       imageAlt: 'Cromatograma de HPLC usado para medir la pureza de péptidos de investigación',
       body: `
         <p class="lead">Casi todas las fichas de péptidos de investigación mencionan una cifra de pureza, muchas veces 99 por ciento por HPLC. Es uno de los números más citados del campo y uno de los menos explicados. Vale la pena deletrear qué mide ese número y, tan importante como eso, qué no mide.</p>
@@ -727,7 +727,7 @@
         <p>La pureza no es identidad. La HPLC te dice qué parte de la muestra es un componente principal, pero no prueba por sí sola que ese componente sea el péptido correcto. Por eso la identidad se confirma aparte, normalmente por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, comparando la masa medida con la esperada. Un certificado de análisis fiable reporta las dos cosas: pureza por HPLC e identidad por espectrometría de masas. Un número sin el otro es medio cuadro.</p>
 
         <h2>Por qué importa</h2>
-        <p>En investigación, la consistencia depende de saber qué hay realmente en el vial. Una cifra de pureza respaldada por una comprobación de identidad es lo que permite comparar un lote con otro. Si quieres confirmar que un vial de Codex Research es auténtico, puedes revisar su <a href="verify/">número de lote</a>, y su certificado de análisis completo está disponible a solicitud.</p>
+        <p>En investigación, la consistencia depende de saber qué hay en el vial. Una cifra de pureza respaldada por una comprobación de identidad es lo que permite comparar un lote con otro. Si quieres confirmar que un vial de Codex Research es auténtico, puedes revisar su <a href="verify/">número de lote</a>, y su certificado de análisis completo está disponible a solicitud.</p>
 
         <h2>Solo para investigación</h2>
         <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>

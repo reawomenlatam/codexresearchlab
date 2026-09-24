@@ -141,7 +141,7 @@
   const checkoutLabel = (cfg, payId) => {
     if (payId === 'crypto') {
       return { btn: T('Pay with crypto'), icon: '',
-        note: T('You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm — network fees are paid by you.') };
+        note: T('You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm. Network fees are paid by you.') };
     }
     return { btn: T('Pay by card'), icon: '',
       note: T('You’ll finish payment on Stripe’s secure checkout and come straight back. Your card details never touch our site.') };

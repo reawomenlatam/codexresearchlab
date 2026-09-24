@@ -112,7 +112,7 @@
       imageAlt: 'Research peptide vials stored cool and protected from light',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">A research peptide can be verified, pure, and correctly identified, and still be wasted by careless storage. The good news is that storage is not complicated. It mostly comes down to understanding that a dry peptide and a dissolved one are two different situations, and the label on the vial is the final word.</p>
+        <p class="lead">A verified, pure peptide can still be ruined by careless storage. Storage comes down to one distinction: a dry peptide and a dissolved one are two different situations, and the label on the vial settles the details.</p>
 
         <h2>Lyophilized powder is the stable form</h2>
         <p>Peptides usually arrive <a href="article/lyophilization-freeze-drying/">lyophilized</a>, meaning freeze-dried into a dry powder or thin cake. In that state they are relatively forgiving, because the water that drives most degradation has been removed. Kept cool, dry, and away from light, a lyophilized peptide holds up well. The main enemy is moisture, which is why a cold vial should be allowed to warm before it is opened, so condensation does not form inside.</p>
@@ -191,11 +191,11 @@
       category: 'Peptide Research',
       tags: ['molecular weight', 'daltons', 'mass spectrometry', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
-      excerpt: 'What the g/mol figure next to a peptide actually means, and where it quietly matters.',
+      excerpt: 'What the g/mol figure next to a peptide means, and where it matters.',
       imageAlt: 'Molecular weight of a research peptide shown with its molecular formula',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Every peptide listing carries a molecular weight, usually a number followed by g/mol. It looks like a spec you can safely ignore, but it turns out to sit at the center of two things that matter in the lab: confirming a peptide is the right one, and working out how to reconstitute it.</p>
+        <p class="lead">Every peptide listing carries a molecular weight, usually a number followed by g/mol. That number anchors two things in the lab: confirming a peptide is the one you ordered, and the arithmetic of turning milligrams into a concentration.</p>
 
         <h2>What molecular weight means</h2>
         <p>Molecular weight is the mass of one molecule, added up from the masses of all its atoms. For a peptide, that means summing the amino acids in the sequence, minus the water lost each time two of them join. The result is expressed in grams per mole (g/mol), or equivalently in daltons. A larger peptide with more amino acids has a higher molecular weight, which is why a compound like tirzepatide sits far above a small tripeptide.</p>
@@ -230,14 +230,14 @@
       category: 'Peptide Research',
       tags: ['CAS number', 'chemical identifier', 'quality', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
-      excerpt: 'The unique identifier next to every compound name, and how to actually read it.',
+      excerpt: 'The unique identifier next to every compound name, and how to read it.',
       imageAlt: 'CAS registry number shown on a research compound label',
       image: 'assets/og-default.png',
       body: `
         <p class="lead">Next to almost every compound on a research listing sits a string of digits labeled CAS. It is easy to skip, but that little number is one of the most reliable ways to know exactly which chemical you are looking at. Names can be ambiguous. A CAS number is not.</p>
 
         <h2>What is a CAS number?</h2>
-        <p>A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance gets its own number, and no two substances share one. That is the whole value: a compound might have several common names, an abbreviation, and a long systematic name, but it has exactly one CAS number. It cuts through the naming confusion.</p>
+        <p>A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance gets its own number, and no two substances share one. A compound might have several common names, an abbreviation, and a long systematic name, but it has exactly one CAS number. It cuts through the naming confusion.</p>
 
         <h2>How the number is structured</h2>
         <p>A CAS number is written as three groups of digits separated by hyphens, in the pattern of a longer group, then two digits, then a single digit, for example 137525-51-0. That final single digit is a check digit, calculated from the others, which lets software catch a typo. The digits themselves carry no hidden meaning about the structure. They are just a registry entry, like a catalog number.</p>
@@ -269,11 +269,11 @@
       category: 'Peptide Research',
       tags: ['certificate of analysis', 'COA', 'quality', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
-      excerpt: 'A field-by-field look at what a COA actually reports, so the document stops being a mystery.',
+      excerpt: 'What a certificate of analysis reports, field by field.',
       imageAlt: 'Peptide certificate of analysis document with purity and identity results',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">A certificate of analysis, or COA, is the document that turns a claim on a label into something checkable. For research peptides it is the single most useful piece of paper you will handle, and yet most people glance at the purity number and move on. Here is how to read the rest of it.</p>
+        <p class="lead">A certificate of analysis, or COA, turns a claim on a label into something checkable. The purity number gets all the attention, and the rest of the document is where the number gets its meaning.</p>
 
         <h2>Batch or lot number</h2>
         <p>Every COA is tied to a specific batch, and the batch number is the link between the paper and the vial in your hand. If the number on the document does not match the number on the label, the COA does not describe your material. This is also the number you would enter to <a href="verify/">verify a batch</a> is genuine.</p>
@@ -295,7 +295,7 @@
         <ul>
           <li><b>Product name and identifiers,</b> including a <a href="article/cas-numbers-explained/">CAS number</a> where one exists, so the document cannot be confused with a similar compound.</li>
           <li><b>Appearance:</b> a short qualitative description of the material, usually a lyophilised powder.</li>
-          <li><b>Net peptide content:</b> how much of the powder is actually peptide rather than salt and water.</li>
+          <li><b>Net peptide content:</b> how much of the powder is peptide rather than salt and water.</li>
           <li><b>Water content,</b> usually by Karl Fischer titration, because lyophilised peptides take up moisture.</li>
           <li><b>Counterion content:</b> trifluoroacetate or acetate left over from purification.</li>
           <li><b>Residual solvents:</b> traces of the solvents used in synthesis and purification.</li>
@@ -315,7 +315,7 @@
         <p>HPLC separates and quantifies; it does not name. Two different compounds can elute at a similar time under the same conditions, and a UV detector reports both as peaks without opinion. Mass spectrometry answers what chromatography leaves open by measuring mass directly, so the observed value can be compared with the mass calculated from the sequence, and tandem approaches fragment the molecule to support the sequence itself. That is why purity without an identity method is half a document.</p>
 
         <h2>Who signs it, and why that matters</h2>
-        <p>A certificate is a claim by whoever issued it, so independent testing matters because it separates the party making the claim from the party selling the material. Laboratories working to a recognised competence standard are assessed against defined criteria for competence and impartiality, and accreditation covers a specific list of methods rather than testing in general. The useful question is not only what the number says, but who produced it and under which method.</p>
+        <p>A certificate is a claim by whoever issued it, so independent testing matters because it separates the party making the claim from the party selling the material. Laboratories working to a recognised competence standard are assessed against defined criteria for competence and impartiality, and accreditation covers a specific list of methods rather than testing in general. The useful question is who produced the number, and under which method.</p>
 
         <h2>Red flags on a certificate</h2>
         <ul>
@@ -358,23 +358,23 @@
       category: 'Peptide Research',
       tags: ['peptide purity', 'HPLC', 'quality', 'research peptides', 'COA'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
-      excerpt: 'What a purity percentage really measures, and what it does not, when you read it on a COA.',
+      excerpt: 'What a purity percentage measures, and what it does not, when you read it on a COA.',
       imageAlt: 'HPLC chromatogram used to measure research peptide purity',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Almost every research peptide listing mentions a purity figure, often 99 percent by HPLC. It is one of the most quoted numbers in the field and one of the least explained. So it is worth spelling out what that number is measuring, and just as importantly, what it is not.</p>
+        <p class="lead">Almost every research peptide listing mentions a purity figure, often 99 percent by HPLC. It is one of the most quoted numbers in the field and one of the least explained. Worth spelling out what that number measures, and what it does not.</p>
 
         <h2>How purity is measured</h2>
         <p>Purity is usually determined by <a href="article/high-performance-liquid-chromatography-hplc/">high-performance liquid chromatography</a>, or HPLC. In simple terms, the sample is pushed through a column that separates its components, and each component shows up as a peak on a chart called a chromatogram. The target peptide is the main peak. Purity is the area of that main peak expressed as a percentage of all the peaks combined. So 99 percent means the target peptide accounts for about 99 percent of what the method detected.</p>
 
         <h2>What the number tells you</h2>
-        <p>A high HPLC purity figure says that very little else showed up alongside the peptide. Small side peaks can come from related peptide fragments, incomplete sequences, or leftover material from synthesis. A clean chromatogram with one dominant peak is a good sign that the batch is mostly what it claims to be. That is genuinely useful information.</p>
+        <p>A high HPLC purity figure says that very little else showed up alongside the peptide. Small side peaks can come from related peptide fragments, incomplete sequences, or leftover material from synthesis. A clean chromatogram with one dominant peak is a good sign that the batch is mostly what it claims to be.</p>
 
         <h2>What it does not tell you</h2>
         <p>Purity is not identity. HPLC tells you how much of the sample is one main component, but it does not by itself prove that component is the right peptide. That is why identity is confirmed separately, usually by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> comparing the measured mass with the expected one. A trustworthy certificate of analysis reports both: purity from HPLC and identity from mass spectrometry. One number without the other is only half the picture.</p>
 
         <h2>Why it matters</h2>
-        <p>For research, consistency depends on knowing what is actually in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify/">batch number</a>, and its full certificate of analysis is available on request.</p>
+        <p>For research, consistency depends on knowing what is in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify/">batch number</a>, and its full certificate of analysis is available on request.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -440,7 +440,7 @@
       imageAlt: 'Diagram concept of agonist and antagonist binding at a receptor',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Read a few peptide descriptions and two words show up constantly: agonist and antagonist. They sound like jargon, but they answer a very basic question about any compound that acts on a receptor. Does it switch the receptor on, or does it get in the way? That is the whole distinction.</p>
+        <p class="lead">Read a few peptide descriptions and two words show up constantly: agonist and antagonist. They sound like jargon, but they answer a very basic question about any compound that acts on a receptor. Does it switch the receptor on, or does it get in the way?</p>
 
         <h2>What a receptor does</h2>
         <p>A receptor is a protein that receives a signal. When the right molecule binds to it, the receptor changes shape and triggers some activity inside the cell. Think of it as a lock waiting for a key. The interesting part is that not every key turns the lock, and some keys jam it.</p>
@@ -479,13 +479,13 @@
       imageAlt: 'Growth hormone secretagogue research peptide studied at the ghrelin receptor',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">The phrase "growth hormone secretagogue" is a mouthful, but it is really just a label for a category. When a research peptide like <a href="article/what-is-ipamorelin/">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect. Here is what the label actually means.</p>
+        <p class="lead">"Growth hormone secretagogue" names a category rather than an effect. When a research peptide like <a href="article/what-is-ipamorelin/">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect.</p>
 
         <h2>What the term means</h2>
         <p>A secretagogue is anything that prompts a cell to release, or secrete, a substance. So a growth hormone secretagogue is a compound studied for how it engages the signaling that leads to growth hormone release. Many of the peptides in this class act as agonists at the ghrelin receptor, which is also called the growth hormone secretagogue receptor. The receptor name and the compound class are two sides of the same coin.</p>
 
         <h2>The ghrelin receptor connection</h2>
-        <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. A secretagogue that activates it is being used, in a research setting, as a way to probe that pathway. Different compounds in the class engage the receptor with different profiles, and that variation is a big part of what researchers compare. An agonist, in this context, is simply a compound that activates a receptor rather than blocking it.</p>
+        <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. A secretagogue that activates it is being used, in a research setting, as a way to probe that pathway. Different compounds in the class engage the receptor with different profiles, and that variation is a big part of what researchers compare. An agonist, in this context, is a compound that activates a receptor rather than blocking it.</p>
 
         <h2>Why selectivity matters</h2>
         <p>Not every secretagogue is equally focused. Some activate the growth hormone pathway but also touch other hormone systems, which makes their effects harder to interpret. Others, like ipamorelin, are studied precisely because they show a more selective profile in laboratory models. For a research tool, that cleanliness is valuable: the more selective a compound, the easier it is to attribute an observed result to one receptor rather than several.</p>
@@ -532,7 +532,7 @@
         <p>Because the receptors are distinct, activating one is not the same as activating the other, even though both feed into glucose regulation. That separation is the whole reason a research question like "what happens when you engage both at once" is even meaningful.</p>
 
         <h2>Why the comparison matters for peptides</h2>
-        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide/">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are genuinely different receptors is what makes those distinctions make sense.</p>
+        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide/">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are different receptors is what makes those distinctions make sense.</p>
 
         <h2>Research use only</h2>
         <p>This article is background biology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -606,7 +606,7 @@
         <p class="lead">Copper peptides are a small, tidy category, and the name tells you most of what defines them. They are short peptides that hold onto a copper ion. That single feature, a peptide bound to a metal, is what sets them apart from the rest of the research peptides you will come across.</p>
 
         <h2>What makes a peptide a copper peptide?</h2>
-        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are really talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.</p>
+        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.</p>
 
         <h2>The two you will see most</h2>
         <p>Two copper tripeptides come up again and again:</p>
@@ -692,7 +692,7 @@
       imageAlt: 'Bacteriostatic water vial used to reconstitute research peptides',
       image: 'assets/products/bac-water.jpg',
       body: `
-        <p class="lead">When a lyophilized peptide needs a liquid to dissolve into, the default answer in most research settings is bacteriostatic water. It is not the only option, but it is the one people reach for first, and there is a specific reason why. The short version is that it lets a vial be used more than once.</p>
+        <p class="lead">When a lyophilized peptide needs a liquid to dissolve into, the default answer in most research settings is bacteriostatic water. Most laboratories reach for it first, for a specific reason. The short version is that it lets a vial be used more than once.</p>
 
         <h2>What is bacteriostatic water?</h2>
         <p>Bacteriostatic water is sterile water that contains a small amount of benzyl alcohol, usually around 0.9 percent, added as a preservative. The word "bacteriostatic" describes what that preservative does: it slows or stops the growth of bacteria rather than killing everything outright. That single ingredient is the whole difference between it and plain water for injection.</p>
@@ -780,7 +780,7 @@
       imageAlt: 'NAD+ research compound vial with certificate of analysis',
       image: 'assets/products/nad-plus.jpg',
       body: `
-        <p class="lead">NAD+ is the odd one out in this series. It is not a peptide at all, it is a coenzyme, and it sits at the center of how cells manage energy. It shows up in research catalogs alongside peptides because it is a defined molecule that laboratories study in the same careful, batch-verified way. Here is what it actually is.</p>
+        <p class="lead">NAD+ is the odd one out in this series. It is not a peptide at all, it is a coenzyme, and it sits at the center of how cells manage energy. It shows up in research catalogs alongside peptides because it is a defined molecule that laboratories study in the same careful, batch-verified way.</p>
 
         <h2>What is NAD+?</h2>
         <p>NAD+ stands for nicotinamide adenine dinucleotide. It is a coenzyme present in every living cell, built from two nucleotides joined together. Its CAS number is 53-84-9 and its molecular formula is C21H27N7O14P2. The "plus" refers to its oxidized form, which pairs with a reduced form called NADH. That pairing is the whole point of the molecule, since it lets NAD+ shuttle electrons during metabolism.</p>
@@ -1029,7 +1029,7 @@
         <p>These are laboratory and preclinical contexts. Tirzepatide is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
 
         <h2>Structure and quality</h2>
-        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. It is verified for purity by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify/">batch number</a>.</p>
+        <p>Because tirzepatide is a large, modified peptide, batch-to-batch consistency is not a given. We verify each batch for purity by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and for identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and it ships lyophilized with its own certificate of analysis. You can confirm any Codex Research vial by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including tirzepatide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1058,10 +1058,10 @@
       imageAlt: 'BPC-157 pentadecapeptide research peptide vial with certificate of analysis',
       image: 'assets/products/bpc-157.jpg',
       body: `
-        <p class="lead">BPC-157 is one of the most talked-about research peptides, and also one of the most misunderstood. It is a short synthetic peptide whose amino acid sequence is taken from a protein found in gastric juice. In the lab it is studied for the way it interacts with signaling pathways tied to tissue repair and blood vessel formation. Here is a plain look at what it actually is.</p>
+        <p class="lead">BPC-157 is one of the most talked-about research peptides, and also one of the most misunderstood. It is a short synthetic peptide whose amino acid sequence is taken from a protein found in gastric juice. In the lab it is studied for the way it interacts with signaling pathways tied to tissue repair and blood vessel formation.</p>
 
         <h2>What is BPC-157?</h2>
-        <p>BPC-157 is a pentadecapeptide, which simply means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> covers it.</p>
+        <p>BPC-157 is a pentadecapeptide, which means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> covers it.</p>
 
         <h2>Where does the sequence come from?</h2>
         <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis rather than by its source.</p>
@@ -1118,7 +1118,7 @@
         <p>One storage detail follows from the sequence itself: BPC-157 contains no asparagine, glutamine, cysteine, methionine or tryptophan, the residues peptide manufacturers single out as shortening shelf life because they are the most prone to deamidation or oxidation.</p>
 
         <h2>Quality, purity, and handling</h2>
-        <p>Because a short peptide is only as reliable as the batch you actually receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify/">batch number</a>.</p>
+        <p>Because a short peptide is only as reliable as the batch you receive, purity matters more than the name on the label. Research-grade BPC-157 is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> for purity and by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> for identity, and each batch should come with its own certificate of analysis. It typically ships lyophilized, and you can check any Codex Research vial by its <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including BPC-157, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1172,8 +1172,8 @@
         <h2>Payment methods in Panama</h2>
         <p>Payment happens on the site itself, at checkout:</p>
         <ul>
-          <li><b>Card</b> — Visa, Mastercard and American Express, processed by Stripe. You finish on Stripe's own secure checkout, so your card details never touch our site.</li>
-          <li><b>Crypto</b> — USDC or USDT on Ethereum, transferred from your own wallet and verified on-chain before the order is released.</li>
+          <li><b>Card</b>: Visa, Mastercard and American Express, processed by Stripe. You finish on Stripe's own secure checkout, so your card details never touch our site.</li>
+          <li><b>Crypto</b>: USDC or USDT on Ethereum, transferred from your own wallet and verified on-chain before the order is released.</li>
         </ul>
         <p>The amount charged is calculated by our server at the moment of payment, so it always matches what your cart shows. Any question before or after ordering is answered by a specialist on WhatsApp.</p>
 
@@ -1236,7 +1236,7 @@
           <li><b>A date:</b> the certificate says when the analysis was performed, not merely when the file was created.</li>
           <li><b>Named methods:</b> HPLC and mass spectrometry are identified as the procedures behind the figures, with numeric results rather than the word "pass".</li>
           <li><b>An author:</b> the testing laboratory is identified and the document is signed or otherwise attributable.</li>
-          <li><b>Legibility:</b> you can actually read the header and the chromatogram, rather than a compressed image of them.</li>
+          <li><b>Legibility:</b> you can read the header and the chromatogram, rather than a compressed image of them.</li>
           <li><b>One batch, one document:</b> the certificate is specific to that lot, not a single file reused across a catalogue.</li>
         </ul>
         <p>What each of those fields means, and the difference between chromatographic purity and net peptide content, is covered in detail in <a href="article/how-to-read-a-certificate-of-analysis/">how to read a certificate of analysis</a>. This guide is about confirming that the certificate in front of you belongs to the vial in front of you.</p>
@@ -1259,7 +1259,7 @@
         { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
         { q: 'Can I see the certificate of analysis before I pay?', a: 'Yes. The full batch COA is sent on request before payment. Ask which batch you would receive and request that batch\u2019s certificate specifically, rather than a sample document, so you can read it while you still have the option not to order.' },
         { q: 'What does a Codex Research batch number look like?', a: 'Batch numbers are printed on the vial label in the format CDX-YYMM-NNN. That string is what links the vial to its certificate of analysis, so it should appear character-for-character on the COA you are sent.' },
-        { q: 'What should I do if the batch number does not match the COA?', a: 'Do not accept a verbal explanation. Ask for the certificate that carries the exact number printed on your vial, since a mismatch may simply be a transcription error. You can also enter the number on the batch verification page or send it to the team to check.' },
+        { q: 'What should I do if the batch number does not match the COA?', a: 'Do not accept a verbal explanation. Ask for the certificate that carries the exact number printed on your vial, since a mismatch may be a transcription error. You can also enter the number on the batch verification page or send it to the team to check.' },
       ],
       references: [
         { text: 'Q7A Good Manufacturing Practice Guidance for Active Pharmaceutical Ingredients. ICH guidance, U.S. Food and Drug Administration.', url: 'https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q7a-good-manufacturing-practice-guidance-active-pharmaceutical-ingredients' },
@@ -1447,7 +1447,7 @@
       body: `
         <p class="lead">Lyophilization, also called freeze-drying, is a dehydration process that removes water from a frozen sample through sublimation under reduced pressure. It preserves sensitive compounds such as peptides, proteins, and vaccines by maintaining their structure and stability for long-term storage.</p>
 
-        <h2>What "lyophilized powder" actually means</h2>
+        <h2>What "lyophilized powder" means</h2>
         <p>The phrase describes the physical state of the material, not a grade or a formulation. What is left in the vial after freeze-drying is a porous solid that occupies roughly the same shape and volume the frozen solution did, which is why it is usually called a cake rather than a powder. The ice sublimes away and the solid matrix it was holding stays behind. Some cakes are dense and uniform, some are flaky or crumble at the edges, and at the small masses typical of research peptides the cake can be a thin film or a few flecks on the wall of the vial, or look like nothing at all. A vial that appears empty has not necessarily lost its contents.</p>
 
 
@@ -1464,7 +1464,7 @@
         <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S0939-6411(98)00004-6').trim()}</p>
 
         <h2>Why the freezing step decides most of the outcome</h2>
-        <p>Freezing is not just cooling. As the temperature falls, water separates out as ice and the remaining solutes are pushed into progressively more concentrated pockets, which freeze at lower temperatures than the surrounding water. Most samples behave as eutectics, a mixture of solutes and solvent that is only properly frozen once the entire eutectic mixture has solidified. Others never crystallise at all: the suspension simply grows more viscous as it cools until it sets as a vitreous solid at the glass transition point, and this second type is considerably harder to freeze-dry.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+        <p>Freezing is not just cooling. As the temperature falls, water separates out as ice and the remaining solutes are pushed into progressively more concentrated pockets, which freeze at lower temperatures than the surrounding water. Most samples behave as eutectics, a mixture of solutes and solvent that is only properly frozen once the entire eutectic mixture has solidified. Others never crystallise at all: the suspension grows more viscous as it cools until it sets as a vitreous solid at the glass transition point, and this second type is considerably harder to freeze-dry.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
         <p>Cooling rate matters for the same reason. Rapid cooling gives small ice crystals, useful when a structure has to be preserved for microscopy, but it leaves narrow channels in the matrix and makes the sample slower to dry. Slower cooling gives larger crystals and less restrictive channels for vapour to escape through. Either way, the product has to be frozen below its eutectic or glass transition temperature before drying begins, because pockets of unfrozen material will expand under vacuum and compromise the structure of the finished cake.</p>
 
         <h2>Collapse temperature, and what a bad cake tells you</h2>
@@ -1486,7 +1486,7 @@
         </ul>
         <p>${cite('Reference: Tang &amp; Pikal, 2004', 'https://doi.org/10.1023/B:PHAM.0000016234.73023.75').trim()}</p>
       
-        <h2>What the equipment is actually doing</h2>
+        <h2>What the equipment does</h2>
         <p>A freeze dryer sets up a pressure difference and then supplies heat across it. Sublimation depends on the difference in vapour pressure between the product and the ice collector, so the collector, a cold trap, has to be held significantly colder than the product; water molecules migrate from the higher-pressure sample toward the lower-pressure collector, where they condense, while the vacuum pump removes the gases that will not condense. Heat is the driving force, not an afterthought: subliming a gram of water from ice to vapour takes on the order of ten times the energy needed to freeze that gram in the first place.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
 
         <h2>A note on "lyophilized powder for injection"</h2>
@@ -1529,7 +1529,7 @@
       excerpt: 'The role of stabilizers, buffers and bulking agents in a lyophilized vial.',
       imageAlt: 'Common excipients used to stabilize research peptide formulations',
       body: `
-        <p class="lead">Excipients are inactive substances added to a peptide formulation alongside the main compound. They do not provide biological activity, but they stabilize, protect, and help deliver the peptide, keeping it intact and usable during storage, handling, and experiments.</p>
+        <p class="lead">Excipients are inactive substances added to a peptide formulation alongside the main compound. They stabilize, protect and help deliver the peptide without adding biological activity of their own, keeping it intact and usable during storage, handling, and experiments.</p>
 
         <h2>What are excipients?</h2>
         <p>Excipients are inactive substances added to a formulation alongside the primary compound. In peptide research, excipients help stabilize, protect, or deliver the peptide in a controlled way. While they provide no direct biological activity, they ensure peptides remain intact and usable during storage, handling, and experimental application.</p>
@@ -1555,7 +1555,7 @@
         <p>${cite('Reference: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
 
         <h2>Research applications</h2>
-        <p>Excipients are not studied for therapeutic effects, but they are critical in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1007/978-1-4615-0557-0_5')}</p>
+        <p>Excipients earn their place in laboratory preparation. They help maintain peptide integrity in storage vials, support reproducibility in cell culture assays, and provide consistent results across repeated experiments. Their inclusion helps ensure that observed outcomes are due to the peptide under study, not instability of the sample. Purity of the final formulation is often confirmed by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Reference: Carpenter et al., 2002', 'https://doi.org/10.1007/978-1-4615-0557-0_5')}</p>
       `,
       faq: [
         { q: 'What is an excipient in a peptide formulation?', a: 'An excipient is an inactive substance added alongside the peptide to stabilize, protect, or deliver it. It has no biological activity of its own.' },
@@ -1640,7 +1640,7 @@
         <p class="lead">MOTS-c is a small peptide encoded within the mitochondrial genome, unlike most peptides that come from nuclear DNA. It is studied as a mitochondrial-derived signaling molecule involved in metabolism, cellular stress responses, aging, and exercise.</p>
 
         <h2>What is MOTS-c?</h2>
-        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. This highlights the organelle's role not only in energy metabolism but also in signaling. The discovery has expanded interest in mitochondrial-derived peptides as potential regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
+        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. That origin puts the organelle in signaling as well as energy metabolism, and it opened interest in other mitochondrial-derived peptides as regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
 
         <h2>How has MOTS-c been studied?</h2>
         <p>Research on MOTS-c spans in vitro, animal, and human models:</p>

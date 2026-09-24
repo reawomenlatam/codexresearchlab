@@ -1,4 +1,4 @@
-# Codex Research — full reference
+# Codex Research · full reference
 
 > Codex Research (codexresearchlab.com) supplies laboratory-grade research peptides,
 > batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
@@ -6,7 +6,7 @@
 > the United States. Orders are placed and paid on the site, by card (Stripe) or
 > crypto (USDC/USDT); WhatsApp is support, not a required step to buy.
 
-Last updated: 2026-09-23. Machine-readable pricing: https://codexresearchlab.com/pricing.md
+Last updated: 2026-09-24. Machine-readable pricing: https://codexresearchlab.com/pricing.md
 
 All products are sold strictly for laboratory research and development. They are not for
 human or animal consumption and are not intended to diagnose, treat, cure or prevent any
@@ -237,7 +237,7 @@ Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) 
 
 ### Are your products verified?
 
-Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request — before you order if you want to see it first.
+Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request, before you order if you want to see it first.
 
 ### Where do you ship from and how long does it take?
 

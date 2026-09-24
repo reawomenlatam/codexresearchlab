@@ -1,7 +1,7 @@
-# Pricing — Codex Research (codexresearchlab.com)
+# Pricing · Codex Research (codexresearchlab.com)
 
-All prices in USD. Last updated: 2026-09-23.
-Research peptides sold strictly for laboratory research and development — not for
+All prices in USD. Last updated: 2026-09-24.
+Research peptides sold strictly for laboratory research and development, not for
 human or animal consumption.
 
 ## Shipping
@@ -14,7 +14,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 
 ## Catalog
 
-### GLP-2 (tirzepatide) — 20 mg per vial
+### GLP-2 (tirzepatide) · 20 mg per vial
 
 - URL: https://codexresearchlab.com/product/tirzepatide/
 - CAS number: 2023788-19-2
@@ -24,7 +24,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $149.00 USD
 - Pack · 3 vials: $411.24 USD (8% off)
 
-### GLP-3 (retatrutide) — 10 mg per vial
+### GLP-3 (retatrutide) · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/retatrutide/
 - Purity: 99% (HPLC), certificate of analysis per batch
@@ -32,7 +32,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $150.00 USD
 - Pack · 3 vials: $414.00 USD (8% off)
 
-### BPC-157 — 10 mg per vial
+### BPC-157 · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/bpc-157/
 - CAS number: 137525-51-0
@@ -42,7 +42,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $79.00 USD
 - Pack · 3 vials: $218.04 USD (8% off)
 
-### MOTS-c — 10 mg per vial
+### MOTS-c · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/mots-c/
 - CAS number: 1627580-64-6
@@ -52,7 +52,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $85.00 USD
 - Pack · 3 vials: $234.60 USD (8% off)
 
-### Ipamorelin — 10 mg per vial
+### Ipamorelin · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/ipamorelin/
 - CAS number: 170851-70-4
@@ -62,7 +62,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $135.00 USD
 - Pack · 3 vials: $372.60 USD (8% off)
 
-### GHK-Cu — 100 mg per vial
+### GHK-Cu · 100 mg per vial
 
 - URL: https://codexresearchlab.com/product/ghk-cu/
 - CAS number: 89030-95-5
@@ -71,7 +71,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $95.00 USD
 - Pack · 3 vials: $262.20 USD (8% off)
 
-### PT-141 — 10 mg per vial
+### PT-141 · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/pt-141/
 - CAS number: 189691-06-3
@@ -81,7 +81,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $85.00 USD
 - Pack · 3 vials: $234.60 USD (8% off)
 
-### NAD+ — 1000 mg per vial
+### NAD+ · 1000 mg per vial
 
 - URL: https://codexresearchlab.com/product/nad-plus/
 - CAS number: 53-84-9
@@ -91,7 +91,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $130.00 USD
 - Pack · 3 vials: $358.80 USD (8% off)
 
-### AHK-Cu — 50 mg per vial
+### AHK-Cu · 50 mg per vial
 
 - URL: https://codexresearchlab.com/product/ahk-cu/
 - CAS number: 682809-81-0
@@ -99,7 +99,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Availability: In stock
 - Single vial: $120.00 USD
 
-### Bacteriostatic Water — 3 ml per vial
+### Bacteriostatic Water · 3 ml per vial
 
 - URL: https://codexresearchlab.com/product/bac-water/
 - CAS number: N/A
@@ -108,7 +108,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - Single vial: $10.00 USD
 - Pack · 3 vials: $27.60 USD (8% off)
 
-### Bacteriostatic Water — 10 ml per vial
+### Bacteriostatic Water · 10 ml per vial
 
 - URL: https://codexresearchlab.com/product/bac-water-10ml/
 - CAS number: N/A

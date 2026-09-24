@@ -289,7 +289,7 @@
           ${batch && batch.lab ? `<div><dt>${T('Laboratory')}</dt><dd>${batch.lab}</dd></div>` : ''}
           <div><dt>${T('The certificate reports')}</dt><dd>${T('Purity, identity and quantity')}</dd></div>
         </dl>
-        <p class="coa-note">${T('This is the batch currently in stock. Its full certificate is available on request — before you order, if you want to see it first.')} <a href="verify/${batch ? '?batch=' + encodeURIComponent(batch.code) : ''}">${T('Check this batch number')}</a>.</p>
+        <p class="coa-note">${T('This is the batch currently in stock. Its full certificate is available on request, before you order if you want to see it first.')} <a href="verify/${batch ? '?batch=' + encodeURIComponent(batch.code) : ''}">${T('Check this batch number')}</a>.</p>
         <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent(T('Hi, I’d like the COA for') + ' ' + p.name + (batch ? ' (' + T('batch') + ' ' + batch.code + ')' : ''))}" target="_blank" rel="noopener">${T('Ask for this batch COA')}</a>
       </div>
     </div>
