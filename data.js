@@ -283,6 +283,7 @@ const BATCHES = {
   'CDX-2607-007': { product: 'Ipamorelin',  slug: 'ipamorelin',  mg: '10 mg' },
   'CDX-2607-008': { product: 'PT-141',      slug: 'pt-141',      mg: '10 mg' },
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
+  'CDX-1017': null, // lote universal: aplica a todos los productos
 };
 
 /* Lote en stock de un producto, para que la ficha muestre un número que el
