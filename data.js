@@ -286,10 +286,16 @@ const BATCHES = {
   'CDX-1017': null, // lote universal: aplica a todos los productos
 };
 
+/* Lote vigente que muestran TODAS las fichas. Los CDX-2607-* de arriba quedan
+   solo como registro para que /verify/ siga validando viales ya entregados.
+   Vacío ('') = volver a mostrar el lote propio de cada producto. */
+const CURRENT_BATCH = 'CDX-1017';
+
 /* Lote en stock de un producto, para que la ficha muestre un número que el
    visitante puede comprobar en /verify/ sin escribirle a nadie. Empareja por
    concentración cuando hay más de uno (retatrutide tiene 10 y 30 mg). */
 function batchFor(slug, mg) {
+  if (CURRENT_BATCH) return Object.assign({ code: CURRENT_BATCH }, BATCHES[CURRENT_BATCH] || {});
   const hits = Object.keys(BATCHES).filter((c) => BATCHES[c] && BATCHES[c].slug === slug);
   if (!hits.length) return null;
   const code = (mg && hits.find((c) => BATCHES[c].mg === mg)) || hits[0];

@@ -326,7 +326,7 @@
           <li><b>A low-resolution image</b> in which the chromatogram axes and header cannot be read.</li>
           <li><b>The same document for every product,</b> which means it is not batch-specific at all.</li>
         </ul>
-        <p>At Codex Research every batch is tested by an independent laboratory using HPLC and mass spectrometry, the certificate is specific to that batch, and the full document is sent on request before you pay. The batch number on the label follows the format CDX-YYMM-NNN, and that string is what ties the vial to its paperwork. For checking a vial you already have, see our guide to <a href="article/verify-research-peptide-batch-coa-panama/">verifying a batch and its COA</a>.</p>
+        <p>At Codex Research every batch is tested by an independent laboratory using HPLC and mass spectrometry, the certificate is specific to that batch, and the full document is sent on request before you pay. The batch number on the label follows the format CDX-NNNN (for example, CDX-1017), and that string is what ties the vial to its paperwork. For checking a vial you already have, see our guide to <a href="article/verify-research-peptide-batch-coa-panama/">verifying a batch and its COA</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1224,7 +1224,7 @@
         <p>In Panama, you can ask for the COA before you order, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Start from the label, not from the listing</h2>
-        <p>Verification runs in one direction: from the vial in your hand back to the paperwork. Every Codex Research vial carries a batch number in the format CDX-YYMM-NNN, and that string is the key to everything else. Read it off the label first, then check that the same string appears on the certificate you were sent. A COA that does not name your batch is a document about some other material, however impressive the numbers on it look.</p>
+        <p>Verification runs in one direction: from the vial in your hand back to the paperwork. Every Codex Research vial carries a batch number in the format CDX-NNNN (for example, CDX-1017), and that string is the key to everything else. Read it off the label first, then check that the same string appears on the certificate you were sent. A COA that does not name your batch is a document about some other material, however impressive the numbers on it look.</p>
 
         <h2>Ask for the certificate before you pay, not after</h2>
         <p>The full COA is available on request before payment, which changes what you are able to do with it. Before an order is placed you can ask which batch you would receive, ask for that batch's certificate rather than a sample document, and read it while you still have the option to walk away. After payment the same certificate is only a record. The sequence matters more than the document.</p>
@@ -1258,7 +1258,7 @@
         { q: 'How do I verify a Codex Research batch number?', a: 'Enter the batch number printed on your vial label at codexresearchlab.com/verify/. A valid number confirms the product and that it is on record. The full COA is also available on request before you pay.' },
         { q: 'What purity should a research peptide COA show?', a: 'Research peptides are commonly verified at around 99% purity by HPLC, with identity confirmed by mass spectrometry. The exact figure appears on the batch COA.' },
         { q: 'Can I see the certificate of analysis before I pay?', a: 'Yes. The full batch COA is sent on request before payment. Ask which batch you would receive and request that batch\u2019s certificate specifically, rather than a sample document, so you can read it while you still have the option not to order.' },
-        { q: 'What does a Codex Research batch number look like?', a: 'Batch numbers are printed on the vial label in the format CDX-YYMM-NNN. That string is what links the vial to its certificate of analysis, so it should appear character-for-character on the COA you are sent.' },
+        { q: 'What does a Codex Research batch number look like?', a: 'Batch numbers are printed on the vial label in the format CDX-NNNN (for example, CDX-1017). That string is what links the vial to its certificate of analysis, so it should appear character-for-character on the COA you are sent.' },
         { q: 'What should I do if the batch number does not match the COA?', a: 'Do not accept a verbal explanation. Ask for the certificate that carries the exact number printed on your vial, since a mismatch may be a transcription error. You can also enter the number on the batch verification page or send it to the team to check.' },
       ],
       references: [
