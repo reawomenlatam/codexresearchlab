@@ -28,29 +28,89 @@
       imageAlt: 'Endotoxin testing as part of research peptide quality control',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Purity and identity get most of the attention on a certificate of analysis, and for good reason. But there is a third quality measure that sometimes appears next to them, endotoxin content, and it answers a different question entirely. Not "is this the right peptide," but "is it clean of a specific kind of contamination."</p>
+        <p class="lead">A certificate that reports purity and identity has answered two questions about the peptide. Endotoxin content answers a third, about something the other two methods are not built to see, and it only appears when the intended work is sensitive to it.</p>
 
-        <h2>What are endotoxins?</h2>
-        <p>Endotoxins are components of the outer membrane of certain bacteria, specifically a molecule called lipopolysaccharide. They can be left behind even after the bacteria themselves are gone, and they are notably tough, surviving conditions that would destroy the organism. In a research context they are treated as a contaminant to be measured and kept low, because they can interfere with sensitive biological assays.</p>
+        <h2>What an endotoxin is</h2>
+        <p>The term names a specific molecule: lipopolysaccharide, a component of the outer membrane of Gram-negative bacteria. It has a lipid portion anchored in the membrane and a chain of sugars extending outward, and the lipid portion is the part responsible for its biological activity. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Reference: Raetz &amp; Whitfield, 2002)</a></p>
+        <p>Two properties make it a practical problem. It is shed by living bacteria and released when they die, so removing the organism does not remove the molecule. And it is far more robust than the bacterium: conditions that sterilise a solution leave endotoxin intact.</p>
 
-        <h2>Why purity testing does not catch them</h2>
-        <p>This is the key point. A <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> purity result and a <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> identity check tell you about the peptide itself, how much of it there is and whether it is the right molecule. Neither is designed to detect endotoxin. A peptide can be highly pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.</p>
+        <h2>Why sterile and endotoxin-free are different claims</h2>
+        <p>Sterility is about whether viable organisms are present. Endotoxin content is about whether a bacterial molecule is present. A solution can be sterile and carry a significant endotoxin load, because the sterilisation killed the source without destroying what it left behind.</p>
+        <p>Anyone treating the two as interchangeable is making a substitution that the chemistry does not support.</p>
 
-        <h2>How endotoxins are measured</h2>
-        <p>Endotoxin content is usually reported in endotoxin units per milligram, written as EU/mg. A lower number is better. On a certificate of analysis you might see a limit expressed as less than a certain value, for example under 0.5 EU/mg, which states an upper bound rather than an exact count. The takeaway is not the specific method but the fact that it is a distinct measurement with its own units.</p>
+        <h2>Why purity testing misses it entirely</h2>
+        <p>A <a href="article/high-performance-liquid-chromatography-hplc/">chromatographic purity figure</a> measures the share of detected peaks that correspond to the target peptide. Endotoxin is not a peptide, does not behave like one on a reversed-phase column, and has no useful absorbance at the wavelengths used for peptide detection. It contributes nothing to the total, so it cannot lower the percentage.</p>
+        <p><a href="article/mass-spectrometry-peptide-research/">Mass spectrometry</a> is no better placed. It is set up to confirm the mass of the intended molecule, not to survey everything else in the vial. A batch can be 99 percent pure, correctly identified, and carry endotoxin at a level that would ruin an experiment.</p>
 
-        <h2>Where it fits in quality</h2>
-        <p>Think of endotoxin as the third leg of a stool. Identity says the compound is correct, purity says little else is present, and endotoxin says a specific biological contaminant is controlled. Not every research use requires endotoxin testing, but when an assay is sensitive to it, the figure belongs on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> alongside the others.</p>
+        <h2>How it is measured</h2>
+        <p>Endotoxin is quantified by its own assay, based on a clotting reaction from horseshoe crab blood cells that is triggered by the molecule. The reaction is sensitive enough to detect very small quantities, and results are reported in endotoxin units per millilitre or per milligram. <a class="cite" href="https://doi.org/10.1177/096805199400100407" target="_blank" rel="noopener nofollow">(Reference: Novitsky, 1994)</a></p>
+        <p>An endotoxin unit is defined against a reference standard rather than as a mass, which is worth knowing when comparing numbers: the unit reflects activity in the assay.</p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+        <h2>Why it survives so much</h2>
+        <p>The robustness has a structural explanation. Lipopolysaccharide is not a protein, so it has no folded structure to denature, and the bonds holding it together are the ordinary bonds of a lipid and a sugar chain. Heat that unfolds and destroys a protein leaves it largely intact, and it takes considerably harsher treatment, sustained dry heat rather than the usual sterilisation conditions, to break it down.</p>
+        <p>It also aggregates in water, forming assemblies instead of dissolving as single molecules. That behaviour affects how readily it is removed by filtration and why a filter that retains bacteria does not reliably retain what they left behind.</p>
+
+        <h2>Keeping it out is easier than taking it out</h2>
+        <p>Removing endotoxin from a finished preparation is difficult, because the molecule sticks to surfaces and resembles nothing that a peptide purification is designed to separate. Controlling it upstream is the practical route: endotoxin-free water, clean glassware, and handling that does not introduce bacteria in the first place.</p>
+        <p>The same logic applies after the vial leaves the supplier. A batch measured as low at the point of manufacture can pick up contamination from the water used to dissolve it, which is one more reason the quality of that water is worth attention. Our note on <a href="article/bacteriostatic-water-for-peptide-reconstitution/">bacteriostatic water</a> covers what the fluid contains.</p>
+
+        <h2>When it matters and when it does not</h2>
+        <p>The answer depends entirely on the experiment. Work with cultured cells, particularly immune cells, is the classic case: these cells respond to endotoxin, so a contaminated reagent produces a response that looks like an effect of the compound under study. An apparent result can be an artefact of the vial, not an effect of the molecule.</p>
+        <p>For an analytical comparison, a binding measurement in a cell-free system, or a chemistry experiment, endotoxin is usually irrelevant. This is why the line appears on some certificates and not others, and why its absence from a document is not automatically a gap.</p>
+
+        <h2>Where it comes from</h2>
+        <p>A synthetic peptide made by <a href="article/peptide-synthesis/">solid-phase synthesis</a> has no bacterial step, so the compound itself is not a source. Contamination arrives from everything around it: water, buffers, glassware, resins and handling. Water is the most common route, since bacteria grow in it readily and leave their membranes behind when they die.</p>
+        <p>The practical implication is that endotoxin content is a property of the batch and its handling, not of the sequence. Two batches of the same compound can differ.</p>
+
+        <h2>Reading the line on a certificate</h2>
+        <p>A useful entry states a number, a unit and a method. A statement with no number attached says less than it appears to, and a limit is not a measurement: "below 1 EU/mg" reports a threshold, while a measured value reports what was found.</p>
+        <p>The same principle runs through every line of a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a>: a figure tied to a named method and a named batch is a result, and anything else is a claim. The batch number is what connects the two, and it can be <a href="verify/">checked</a>. Where endotoxin has not been measured for a batch, the honest description is that it was not measured, not that the material is free of it.</p>
       `,
       faq: [
-        { q: 'What are endotoxins?', a: 'Endotoxins are components of the outer membrane of certain bacteria, specifically lipopolysaccharide. They can remain even after the bacteria are gone and are treated as a contaminant to be measured and kept low, since they can interfere with sensitive biological assays.' },
-        { q: 'Does HPLC purity detect endotoxins?', a: 'No. HPLC purity and mass spectrometry identity describe the peptide itself. Neither detects endotoxin, so a peptide can be pure and correctly identified and still carry endotoxin, which is why it is tested separately when it matters.' },
-        { q: 'How are endotoxins measured?', a: 'Endotoxin content is usually reported in endotoxin units per milligram (EU/mg), where lower is better. A certificate of analysis may state an upper bound, such as less than 0.5 EU/mg.' },
+        {
+          "q": "What are endotoxins?",
+          "a": "Lipopolysaccharide molecules from the outer membrane of Gram-negative bacteria. The lipid portion carries the biological activity. They are shed by living bacteria and released when the cells die, so removing the organism does not remove them."
+        },
+        {
+          "q": "Is a sterile solution endotoxin-free?",
+          "a": "No. Sterility means no viable organisms are present. Endotoxin is a molecule that survives conditions which kill bacteria, so a sterile solution can still carry a significant load."
+        },
+        {
+          "q": "Why does an HPLC purity result not detect endotoxin?",
+          "a": "Because it is not a peptide. It does not behave like one on a reversed-phase column and has no useful absorbance at the wavelengths used for peptide detection, so it contributes nothing to the peak areas that make up the percentage."
+        },
+        {
+          "q": "How is endotoxin measured?",
+          "a": "By a dedicated assay based on a clotting reaction from horseshoe crab blood cells that the molecule triggers. Results are reported in endotoxin units, which are defined against a reference standard rather than as a mass."
+        },
+        {
+          "q": "When does endotoxin content matter?",
+          "a": "Mainly in work with cultured cells, especially immune cells, which respond to it. A contaminated reagent can produce a response that looks like an effect of the compound being studied. For cell-free or purely analytical work it is usually irrelevant."
+        },
+        {
+          "q": "Where does endotoxin in a synthetic peptide come from?",
+          "a": "Not from the synthesis, which has no bacterial step. It arrives from water, buffers, glassware, resins and handling, with water the most common route. Endotoxin content is therefore a property of the batch and its handling, and two batches of one compound can differ."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Raetz, C.R.H., &amp; Whitfield, C. (2002). Lipopolysaccharide endotoxins. Annual Review of Biochemistry, 71, 635-700.",
+          "url": "https://doi.org/10.1146/annurev.biochem.71.110601.135414"
+        },
+        {
+          "text": "Novitsky, T.J. (1994). Limulus amebocyte lysate (LAL) detection of endotoxin in human blood. Journal of Endotoxin Research, 1(4), 253-263.",
+          "url": "https://doi.org/10.1177/096805199400100407"
+        },
+        {
+          "text": "Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.",
+          "url": "https://doi.org/10.1016/S0378-5173(00)00423-3"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-read-a-certificate-of-analysis', 'peptide-purity-hplc-explained'],
     },
@@ -67,35 +127,93 @@
       imageAlt: 'Chain of amino acids illustrating peptide length terminology',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Peptide descriptions are full of prefixes: di, tri, penta, oligo, poly. They are not decoration. Each one is just counting amino acids, and once you know the pattern, a term like pentapeptide tells you something concrete before you read another word.</p>
+        <p class="lead">Dipeptide, oligopeptide, polypeptide, protein. The vocabulary for peptide length looks like a classification and behaves like a set of habits. Knowing where the conventions are firm and where they are loose keeps you from reading precision into a word that does not carry any.</p>
 
-        <h2>Counting by amino acids</h2>
-        <p>A peptide is a chain of <a href="article/amino-acids-peptides-proteins-difference/">amino acids</a> linked together. The prefix in its name usually tells you how many links are in the chain. The most common ones you will run into are:</p>
-        <ul>
-          <li><b>Dipeptide:</b> two amino acids.</li>
-          <li><b>Tripeptide:</b> three amino acids, like the copper peptides <a href="article/what-is-ghk-cu/">GHK-Cu</a> and AHK-Cu.</li>
-          <li><b>Pentapeptide:</b> five amino acids, like <a href="article/what-is-ipamorelin/">ipamorelin</a>.</li>
-          <li><b>Pentadecapeptide:</b> fifteen amino acids, like <a href="article/what-is-bpc-157/">BPC-157</a>.</li>
-        </ul>
+        <h2>Residue, not amino acid</h2>
+        <p>The first thing the terminology gets right is worth stating. A chain is counted in residues, and a residue is what remains of an amino acid after the bond forms: the free molecule minus the water that condensation removes. A tripeptide contains three residues, which is not the same as containing three amino acids.</p>
+        <p>The distinction is arithmetic as much as pedantry. A residue weighs about eighteen less than the amino acid it came from, so counting the wrong one throws a <a href="article/molecular-weight-of-peptides/">molecular weight</a> calculation off by eighteen per position.</p>
 
-        <h2>Oligopeptides and polypeptides</h2>
-        <p>Not every peptide gets a specific numeric name. When a chain is short, roughly a handful up to around ten or so amino acids, it is often called an oligopeptide, where "oligo" just means "a few." When the chain gets long, it becomes a polypeptide, where "poly" means "many." These are loose, descriptive terms rather than strict counts, but they give a quick sense of scale.</p>
+        <h2>The counting prefixes</h2>
+        <p>Short chains take Greek numeric prefixes: dipeptide for two residues, tripeptide for three, tetrapeptide for four, and so on. These are unambiguous, and the naming conventions for amino acids and peptides are set out formally by the joint IUPAC and IUB commission. <a class="cite" href="https://doi.org/10.1042/bj2190345" target="_blank" rel="noopener nofollow">(Reference: IUPAC-IUB, 1984)</a></p>
+        <p>Beyond about ten the prefixes stop being useful and two vaguer words take over. Oligopeptide describes a short chain, conventionally up to around ten or twenty residues. Polypeptide describes a long one. Neither has a boundary anyone enforces.</p>
 
         <h2>Where peptide ends and protein begins</h2>
-        <p>There is no hard, universally agreed number where a long peptide officially becomes a protein. As a rough convention, chains of up to around fifty amino acids are usually called peptides, and larger folded structures are called proteins. The line is fuzzy on purpose, because the more meaningful difference is often about folding and function, not just length.</p>
+        <p>The usual convention puts the line around fifty residues. Nothing chemical happens there. The same bond links residue fifty-one as linked residue two, and a chain does not acquire a new property by crossing a count.</p>
+        <p>What changes across that range is behaviour. Short chains tend to stay flexible in solution, while longer ones have enough internal interactions to hold a stable fold. The convention is a rough marker for that shift, and it is applied inconsistently: the same molecule is called a peptide in one paper and a small protein in the next. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers the underlying distinction.</p>
 
-        <h2>Why the terms are useful</h2>
-        <p>For anyone reading a catalog, the length prefix is a fast orientation. It hints at how large a molecule is, which relates to its <a href="article/molecular-weight-of-peptides/">molecular weight</a> and, loosely, to how it is handled. A tripeptide and a pentadecapeptide are very different molecules, and their names say so up front.</p>
+        <h2>Direction and numbering</h2>
+        <p>A sequence is written and numbered from the amino terminus to the carboxyl terminus. Residue 1 is the N-terminal one. This is not arbitrary decoration: reading a sequence backwards produces a different molecule that, in most cases, has exactly the same mass, so direction is part of the identity and a mass measurement will not catch the error.</p>
+        <p>Chemical <a href="article/peptide-synthesis/">synthesis</a> runs the other way, building from the C-terminus toward the N-terminus, which is the opposite of how a ribosome works. The numbering follows the sequence, not the order of assembly.</p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+        <h2>One-letter and three-letter codes</h2>
+        <p>Sequences are written two ways. The three-letter code spells each residue as an abbreviation, Gly-His-Lys, and the one-letter code compresses it to GHK. Short sequences usually appear in three-letter form because it is unambiguous to read aloud; long ones appear in one-letter form because the three-letter version becomes unmanageable.</p>
+        <p>The one-letter codes are not all first initials, since several residues start with the same letter and only one can have it. That is why tryptophan is W and asparagine is N. A compound name built from one-letter codes, as GHK-Cu is, is quoting a sequence rather than an abbreviation of a longer word.</p>
+
+        <h2>Residues outside the standard set</h2>
+        <p>Chemistry is not limited to the twenty residues biology uses, and a synthetic sequence can contain units that have no one-letter code at all. Those appear in three-letter form with their own abbreviations, and D-configured residues are marked as such because the mirror image is a different compound with an identical mass.</p>
+        <p>A sequence written with such residues is therefore longer to state and more informative. Our note on <a href="article/what-is-ipamorelin/">ipamorelin</a> covers a pentapeptide in which three of the five residues sit outside the standard set.</p>
+
+        <h2>Fragment notation</h2>
+        <p>Hormones cut from a longer precursor carry a numeric range that says which part of the parent they are. A notation such as 7-36 means residues seven through thirty-six of the precursor numbering, and the same hormone can exist as more than one fragment.</p>
+        <p>A suffix sometimes follows, most often to mark that the chain ends in an amide instead of a free acid. That ending changes the formula and the mass by about a dalton, so the notation is quoting something measurable. Our note on the <a href="article/what-are-incretins/">incretins</a> covers a case where this matters.</p>
+
+        <p>Precursor numbering also outlives the cut. A fragment keeps the numbers it had in the parent, so its first residue is rarely residue 1, and two papers describing the same molecule can appear to disagree when one numbers from the precursor and the other from the fragment.</p>
+
+        <h2>Words that describe shape, not length</h2>
+        <p>Some terms in the same sentence as a length are describing something else entirely. Cyclic says the chain is closed into a ring, which changes the mass by the water lost in closing it; see <a href="article/cyclic-vs-linear-peptides/">cyclic and linear peptides</a>. Branched says a side chain carries another chain. Neither is a length.</p>
+        <p>Peptidomimetic goes further and describes something that is not a peptide at all, built to present a similar shape without the same backbone.</p>
+
+        <p>Conjugate is another word in that category. It says something is attached to the chain, a fatty acid or a label, without saying where or how much, and the attachment changes the mass by whatever it weighs.</p>
+
+        <h2>Why any of this reaches a specification</h2>
+        <p>A specification that says tripeptide is telling you the count, which sets the expected mass range and says something about how the material was made. A three-residue chain is three coupling cycles; a forty-residue chain is forty, with proportionally more opportunity for a <a href="article/peptide-synthesis/">deletion sequence</a> that a purity method then has to resolve.</p>
+        <p>The vocabulary describes the molecule. What is in the vial comes from the measurements on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> and from a batch you can <a href="verify/">check</a>.</p>
       `,
       faq: [
-        { q: 'What do dipeptide and tripeptide mean?', a: 'The prefix counts amino acids. A dipeptide has two amino acids and a tripeptide has three. For example, the copper peptides GHK-Cu and AHK-Cu are tripeptides.' },
-        { q: 'What is the difference between an oligopeptide and a polypeptide?', a: 'An oligopeptide is a short chain, roughly a few up to around ten amino acids ("oligo" means a few). A polypeptide is a long chain ("poly" means many). Both are loose descriptive terms rather than exact counts.' },
-        { q: 'At what length does a peptide become a protein?', a: 'There is no strict cutoff, but as a rough convention chains of up to around fifty amino acids are called peptides and larger folded structures are called proteins. The more meaningful difference is often folding and function.' },
+        {
+          "q": "What is the difference between a residue and an amino acid?",
+          "a": "A residue is what remains of an amino acid after the peptide bond forms, which is the free molecule minus a water. A residue therefore weighs about eighteen less, and chain lengths are counted in residues."
+        },
+        {
+          "q": "What do dipeptide, oligopeptide and polypeptide mean?",
+          "a": "Dipeptide and tripeptide give exact counts of two and three residues. Oligopeptide means a short chain, conventionally up to around ten or twenty, and polypeptide means a long one. The last two have no enforced boundary."
+        },
+        {
+          "q": "Where is the line between a peptide and a protein?",
+          "a": "Conventionally around fifty residues, though nothing chemical happens at that count. What changes across the range is whether the chain has enough internal interactions to hold a stable fold, and the convention is applied inconsistently."
+        },
+        {
+          "q": "Which direction is a peptide sequence written?",
+          "a": "From the amino terminus to the carboxyl terminus, with residue 1 at the N-terminal end. Reading a sequence backwards gives a different molecule that usually has the same mass, so direction is part of the identity and mass will not catch the error."
+        },
+        {
+          "q": "What does a notation like 7-36 mean?",
+          "a": "That the peptide is residues seven through thirty-six of a longer precursor, in the precursor numbering. A suffix often follows to mark a C-terminal amide, which changes the mass by about a dalton."
+        },
+        {
+          "q": "Is cyclic a length term?",
+          "a": "No. It describes shape: the chain is closed into a ring, which changes the mass by the water lost in closing it. Branched and peptidomimetic likewise describe structure rather than length."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "IUPAC-IUB Joint Commission on Biochemical Nomenclature (1984). Nomenclature and symbolism for amino acids and peptides. Biochemical Journal, 219(2), 345-373.",
+          "url": "https://doi.org/10.1042/bj2190345"
+        },
+        {
+          "text": "Merrifield, R.B. (1963). Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.",
+          "url": "https://doi.org/10.1021/ja00897a025"
+        },
+        {
+          "text": "Senko, M.W., Beu, S.C., &amp; McLafferty, F.W. (1995). Determination of monoisotopic masses and ion populations for large biomolecules from resolved isotopic distributions. Journal of the American Society for Mass Spectrometry, 6(4), 229-233.",
+          "url": "https://doi.org/10.1016/1044-0305(95)00017-8"
+        },
+        {
+          "text": "White, C.J., &amp; Yudin, A.K. (2011). Contemporary strategies for peptide macrocyclization. Nature Chemistry, 3, 509-524.",
+          "url": "https://doi.org/10.1038/nchem.1062"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['amino-acids-peptides-proteins-difference', 'molecular-weight-of-peptides'],
     },
@@ -231,29 +349,97 @@
       imageAlt: 'Comparison of cyclic and linear peptide structures in research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Peptides come in two broad shapes, and the difference is easy to picture. A linear peptide is a chain with two loose ends. A cyclic peptide is a chain that has been joined into a ring. It sounds like a small detail, but that closed loop changes how the molecule behaves in ways researchers care about.</p>
+        <p class="lead">A cyclic peptide is a chain joined back to itself. The change sounds cosmetic and is not: closing the ring alters the mass, the stability, the behaviour on a column, and what an identity measurement can and cannot settle.</p>
 
-        <h2>Linear peptides</h2>
-        <p>A linear peptide is the default form: a sequence of <a href="article/amino-acids-peptides-proteins-difference/">amino acids</a> linked end to end, with a distinct start and finish. Most short research peptides are linear. The two open ends make them straightforward to build by <a href="article/peptide-synthesis/">solid-phase synthesis</a>, and their flexibility is part of what makes them useful, though it can also make them easier to break down.</p>
+        <h2>Three ways to close a ring</h2>
+        <ul>
+          <li><b>Head to tail.</b> The amino terminus joins the carboxyl terminus, leaving a continuous backbone with no free ends at all.</li>
+          <li><b>Side chain to side chain.</b> Two side chains several positions apart are joined, most often as a lactam between an amine on one and a carboxyl on the other. The backbone keeps its ends; the loop sits inside the molecule.</li>
+          <li><b>Disulfide.</b> Two cysteine side chains are oxidised together. This one is reversible, which matters below.</li>
+        </ul>
+        <p>Peptides in this catalogue that are cyclic, such as <a href="article/what-is-pt-141/">PT-141</a>, use the side-chain lactam route. A lactam is an ordinary amide bond, the same kind that links the backbone, built in a different place.</p>
 
-        <h2>Cyclic peptides</h2>
-        <p>A cyclic peptide takes that chain and closes it into a loop, usually by forming a bond between two points on the sequence. The ring can be the full backbone or just a portion of it. Removing the loose ends and locking the shape tends to make a cyclic peptide more rigid and, in many cases, more resistant to the enzymes that would chew through a linear one.</p>
+        <h2>The mass changes, and by a known amount</h2>
+        <p>Joining an amine to a carboxyl releases a water, so a peptide closed by a lactam or head to tail weighs about eighteen daltons less than the linear precursor it came from. A disulfide is different: it removes two hydrogens, about two daltons.</p>
+        <p>Both differences are easy to measure, so a mass check confirms that cyclisation happened. That is the part a <a href="article/mass-spectrometry-peptide-research/">mass measurement</a> settles cleanly.</p>
 
-        <h2>Why the shape matters</h2>
-        <p>Structure drives behavior. A locked ring holds its atoms in a more fixed arrangement, which can change how tightly and selectively a peptide fits a receptor. It can also affect stability. This is not a small effect. Some research peptides are cyclic by design precisely because the ring gives them properties a linear version would not have. <a href="article/what-is-pt-141/">PT-141</a> is one example of a cyclic peptide in the research space.</p>
+        <h2>What it cannot settle</h2>
+        <p>If more than one pair of side chains could have reacted, every possible product has the same formula and the same mass. A single mass measurement cannot say where the ring closed. Distinguishing the alternatives requires fragmenting the molecule and reading the pieces, which is what tandem mass spectrometry provides.</p>
+        <p>This is the reason a certificate for a cyclic peptide is carrying more than it appears to when it reports a matching mass. The number answers a real question and not every question.</p>
 
-        <h2>How it shows up in practice</h2>
-        <p>For someone handling these compounds, the practical takeaway is simple: the shape is part of the identity. Whether a peptide is cyclic or linear, its structure is confirmed the same way, by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> and purity testing, and reported on its certificate of analysis. The form is a feature of the molecule, not a variable in your workflow.</p>
+        <h2>What the constraint buys</h2>
+        <p>A linear chain samples an enormous number of shapes. Closing it removes most of them, so the molecule spends its time in a narrower set of conformations. That is the point of making one: a constrained shape is a defined shape.</p>
+        <p>Removing the chain ends has a second effect. Enzymes that degrade peptides by chewing inward from a free terminus have nothing to grip on a head-to-tail cycle, so cyclic peptides are generally more resistant to that route. The strategy is well documented across the field. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Reference: White &amp; Yudin, 2011)</a></p>
+        <p>Constraint was also the design move that produced the potent melanocortin analogues of the late 1980s, which is where several compounds in this family trace their structure. <a class="cite" href="https://doi.org/10.1021/ja00191a044" target="_blank" rel="noopener nofollow">(Reference: Al-Obeidi et al., 1989)</a></p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <h2>Nature does it too</h2>
+        <p>Cyclic peptides are not only a laboratory trick. Plants make head-to-tail cyclic peptides with internal disulfides that are unusually resistant to heat and to enzymes, and those natural products are studied partly as evidence of how much stability the topology can deliver. <a class="cite" href="https://doi.org/10.1016/s0041-0101(01)00129-5" target="_blank" rel="noopener nofollow">(Reference: Craik et al., 2001)</a></p>
+
+
+        <h2>Size sets the difficulty</h2>
+        <p>Not all rings are equally easy to close. Very small cycles strain the bond angles, and very large ones give the two ends too much room to find each other, so the ends spend their time apart. The sizes in between close most readily, and a chemist choosing where to put a bridge is partly choosing a ring size that cooperates.</p>
+        <p>The position of the bridge also decides how much of the chain is inside the loop. A bridge between residues two and seven constrains a different portion of the molecule than one between residues one and eight, even though both produce a cyclic peptide by the same chemistry. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Reference: White &amp; Yudin, 2011)</a></p>
+
+        <h2>Partly cyclic is a real category</h2>
+        <p>A molecule can carry a ring and still have free ends, which is what a side-chain bridge produces. Descriptions sometimes call this cyclic without qualification, and the difference matters: a head-to-tail cycle has no terminus for an enzyme to attack, while a side-chain bridge leaves both termini exposed.</p>
+        <p>Reading a specification, the useful question is not whether the word cyclic appears but which atoms were joined.</p>
+
+        <h2>Making one is harder than making a chain</h2>
+        <p>The linear sequence is ordinary <a href="article/peptide-synthesis/">solid-phase synthesis</a>. The closure is an extra step with its own yield, and it competes with an unwanted reaction: at high concentration, chains join to each other instead of closing on themselves, producing dimers and larger species.</p>
+        <p>Two approaches manage that. Closing the ring while the chain is still attached to the resin keeps chains physically separated, so each is more likely to find its own other end. Closing it in solution achieves the same effect by working dilute, which means large volumes for small amounts of product. Either way, whatever failed to cyclise is still present when purification begins. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Reference: White &amp; Yudin, 2011)</a></p>
+
+        <h2>On a column they behave differently</h2>
+        <p>A constrained molecule presents a different surface than the open chain, so retention time on a <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase column</a> is not predictable from the sequence alone. The uncyclised precursor and the product usually separate, which is useful, since it means the purity measurement sees the failure.</p>
+
+        <p>Storage follows the same logic as any dry peptide, with one addition: a compound held closed by a disulfide should be kept away from conditions that reduce it, since the ring is only as durable as the bond holding it. Our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers the general case.</p>
+
+        <h2>Reading a specification</h2>
+        <p>A specification that says cyclic should say how: head to tail, a named side-chain bridge, or a disulfide. The three give different masses and different stabilities, and a disulfide can be reduced and reopened while a lactam cannot. Whatever it says, the material is established by the <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> and a batch you can <a href="verify/">check</a>.</p>
       `,
       faq: [
-        { q: 'What is the difference between cyclic and linear peptides?', a: 'A linear peptide is a chain of amino acids with two open ends. A cyclic peptide is a chain joined into a ring. Closing the loop removes the loose ends and locks the shape, which changes rigidity and often stability.' },
-        { q: 'Why are some peptides made cyclic?', a: 'A ring holds the molecule in a more fixed arrangement, which can change how it fits a receptor and can make it more resistant to enzymes that break down linear peptides. Some research peptides are cyclic by design for those reasons.' },
-        { q: 'Is PT-141 a cyclic peptide?', a: 'Yes, PT-141 is an example of a cyclic peptide studied in research. Its structure, like any peptide, is confirmed by mass spectrometry and purity testing and reported on its certificate of analysis.' },
+        {
+          "q": "What makes a peptide cyclic?",
+          "a": "The chain is joined back to itself: amino terminus to carboxyl terminus, one side chain to another, or two cysteines oxidised into a disulfide. Each route gives a different structure and a different mass change."
+        },
+        {
+          "q": "How much does cyclisation change the mass?",
+          "a": "Joining an amine to a carboxyl releases a water, so the product is about eighteen daltons lighter than the linear precursor. A disulfide instead removes two hydrogens, about two daltons."
+        },
+        {
+          "q": "Can mass spectrometry confirm where a peptide cyclised?",
+          "a": "Not from a single mass measurement. If more than one pair of side chains could have reacted, every product has the same formula and mass. Telling them apart requires fragmenting the molecule, which tandem mass spectrometry does."
+        },
+        {
+          "q": "Why make a cyclic peptide at all?",
+          "a": "A linear chain samples many shapes and a closed one samples far fewer, so the constraint gives a defined shape. Removing free chain ends also makes the molecule more resistant to enzymes that degrade peptides from a terminus."
+        },
+        {
+          "q": "What goes wrong when a peptide is cyclised?",
+          "a": "At high concentration chains react with each other instead of closing on themselves, producing dimers and larger species. Closing on the resin or working dilute in solution reduces that, and whatever failed to cyclise remains for purification to remove."
+        },
+        {
+          "q": "Is a disulfide the same as a lactam bridge?",
+          "a": "No. A disulfide can be reduced and reopened, so the constraint does not hold under reducing conditions. A lactam is an amide bond like those in the backbone and does not come apart that way."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "White, C.J., &amp; Yudin, A.K. (2011). Contemporary strategies for peptide macrocyclization. Nature Chemistry, 3, 509-524.",
+          "url": "https://doi.org/10.1038/nchem.1062"
+        },
+        {
+          "text": "Al-Obeidi, F., Hadley, M.E., Pettitt, B.M., &amp; Hruby, V.J. (1989). Design of a new class of superpotent cyclic alpha-melanotropins. Journal of the American Chemical Society, 111(9), 3413-3416.",
+          "url": "https://doi.org/10.1021/ja00191a044"
+        },
+        {
+          "text": "Craik, D.J., Daly, N.L., Mulvenna, J., Plan, M.R., &amp; Trabi, M. (2001). Plant cyclotides: circular, knotted peptide toxins. Toxicon, 39(11), 1809-1813.",
+          "url": "https://doi.org/10.1016/s0041-0101(01)00129-5"
+        },
+        {
+          "text": "Chan, W.C., &amp; White, P.D. (1999). Fmoc Solid Phase Peptide Synthesis: A Practical Approach. Oxford University Press.",
+          "url": "https://doi.org/10.1093/oso/9780199637256.001.0001"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['peptide-synthesis', 'what-is-pt-141'],
     },
@@ -270,29 +456,95 @@
       imageAlt: 'Molecular weight of a research peptide shown with its molecular formula',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Every peptide listing carries a molecular weight, usually a number followed by g/mol. That number anchors two things in the lab: confirming a peptide is the one you ordered, and the arithmetic of turning milligrams into a concentration.</p>
+        <p class="lead">The molecular weight on a peptide specification is the number an identity measurement is checked against. It looks like a single fixed value and it is not: the same molecule has at least two legitimate masses, and the form in the vial can differ from the form in the calculation.</p>
 
-        <h2>What molecular weight means</h2>
-        <p>Molecular weight is the mass of one molecule, added up from the masses of all its atoms. For a peptide, that means summing the amino acids in the sequence, minus the water lost each time two of them join. The result is expressed in grams per mole (g/mol), or equivalently in daltons. A larger peptide with more amino acids has a higher molecular weight, which is why a compound like tirzepatide sits far above a small tripeptide.</p>
+        <h2>Calculating it from the sequence</h2>
+        <p>A peptide is built by joining residues and losing a molecule of water at each bond. The mass follows directly: add up the residue masses for the sequence, then add the mass of one water for the two ends that were never joined. Nothing else is required, which is why a sequence alone determines a mass.</p>
+        <p>Residue masses are tabulated, and they are not the masses of the free amino acids. A free amino acid weighs about eighteen more, because it still has the water that condensation removes. Confusing the two is the most common arithmetic error in this calculation. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers the distinction.</p>
 
-        <h2>Where the number comes from</h2>
-        <p>The molecular weight follows directly from the molecular formula, the count of each type of atom in the molecule. If you know the formula, the weight is just arithmetic. That is why a good listing shows both, for example a formula like C62H98N16O22 alongside a weight near 1419 g/mol for <a href="article/what-is-bpc-157/">BPC-157</a>. The two are tied together.</p>
+        <h2>Two masses, both correct</h2>
+        <p>Elements occur as mixtures of isotopes, and the standard atomic weights are averages over those mixtures. <a class="cite" href="https://doi.org/10.1351/pac200678112051" target="_blank" rel="noopener nofollow">(Reference: Wieser, 2006)</a> That gives two ways to add up a formula.</p>
+        <ul>
+          <li><b>Average mass</b> uses those weighted values. It is the number to quote when you are weighing out material, because a milligram of powder contains the natural isotope mixture.</li>
+          <li><b>Monoisotopic mass</b> uses the lightest abundant isotope of each element: carbon-12, hydrogen-1, nitrogen-14, oxygen-16. It is the number a mass spectrometer reports for a resolved peak, because the instrument separates the isotopes instead of averaging them.</li>
+        </ul>
+        <p>For a short peptide the two differ by a fraction of a dalton. The gap widens with size, since a larger molecule has more carbon atoms available to carry a heavier isotope, and above a few thousand daltons it exceeds a dalton. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Reference: Senko et al., 1995)</a></p>
 
-        <h2>Why it matters for identity</h2>
-        <p>Molecular weight is the anchor of an identity check. When a lab runs <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, it measures the mass of the molecule and compares it with the expected molecular weight. A match is strong evidence that the compound is the intended peptide. A mismatch is a red flag. This is the second half of the story that a purity figure alone cannot tell you.</p>
 
-        <h2>Why it matters for reconstitution</h2>
-        <p>Molecular weight also shows up in practical bench work. When you convert between mass and moles, the weight is part of the arithmetic. For everyday concentration math the amount in milligrams and the volume of diluent are usually enough, but the molecular weight is the value underneath any mole-based calculation.</p>
+        <h2>Where residue masses come from</h2>
+        <p>The tabulated residue mass for each amino acid is the mass of the free amino acid minus one water, because that is what condensation leaves behind in a chain. Glycine contributes about 57, alanine about 71, tryptophan about 186. The spread across the twenty standard residues runs from roughly 57 to roughly 186, which is why sequences of the same length can differ substantially in mass.</p>
+        <p>Two consequences follow for anyone reading a spectrum. The difference between consecutive fragments in a tandem measurement equals the residue that was lost, which is how a sequence is read from a spectrum. And because leucine and isoleucine share a residue mass exactly, a mass measurement cannot separate them.</p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <h2>Modifications change the number</h2>
+        <p>Anything attached to the chain adds its own mass. A fatty acid on an acylated peptide contributes a large increment; acetylation at the amino terminus adds about 42; forming a disulfide bond removes two hydrogens. Cyclisation removes a water, about 18, because closing the ring is another condensation.</p>
+        <p>Each of these is large enough to see, so a specification that names a modification is naming something a measurement can confirm. It also means a calculated mass taken from the bare sequence will disagree with a modified compound, which is a common source of apparent mismatches.</p>
+
+        <h2>Why an observed mass can sit beside the expected one</h2>
+        <p>A measured value that differs from the specification is not automatically a problem. Several ordinary explanations come first.</p>
+        <ul>
+          <li><b>The two conventions.</b> A monoisotopic measurement compared against an average calculation will differ by about the gap described above.</li>
+          <li><b>The C-terminus.</b> A chain ending in an amide weighs about one dalton less than the same chain ending in a free acid. They are different compounds, and the linker used in <a href="article/peptide-synthesis/">synthesis</a> decides which one you have.</li>
+          <li><b>The salt form.</b> Peptides are usually isolated with a counterion from purification. The calculated mass of the free peptide does not include it.</li>
+        </ul>
+        <p>A specification that states which convention it uses and which form it describes removes all three ambiguities at once.</p>
+
+        <h2>Mass and mass-to-charge are different numbers</h2>
+        <p>An instrument using electrospray does not report mass. It reports mass-to-charge ratio, and a peptide in that source picks up several protons, so one molecule produces a series of peaks at different charge states. Software combines that series into a single mass.</p>
+        <p>The series is why a spectrum with several evenly spaced peaks is usually one compound rather than several. The detail matters when reading a raw spectrum on a certificate instead of the summary figure. Our note on <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> covers the ionisation side.</p>
+
+        <h2>What the number is doing on a certificate</h2>
+        <p>Identity on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> is a comparison between a calculated mass and a measured one. The calculation comes from the intended sequence; the measurement comes from the batch. Agreement is evidence that the material is the intended molecule.</p>
+        <p>It is evidence and not proof. Two sequences built from the same residues in a different order weigh the same, and a D-amino acid weighs exactly what its L counterpart weighs. Mass narrows the possibilities sharply without closing them, which is why purity and identity are reported together and why a batch can be tied to its paperwork by <a href="verify/">batch number</a>.</p>
+
+        <p>Resolution decides which of the two conventions an instrument can report. An instrument that separates the isotope peaks gives a monoisotopic value; one that does not gives an average-like figure for the unresolved envelope. That is why the same batch measured on two instruments can yield two numbers that are both honest.</p>
+
+        <h2>Weight is not content</h2>
+        <p>One last distinction, because it causes real confusion. Molecular weight describes one molecule. It says nothing about how much of the powder in a vial is that molecule. Counterion, absorbed water and any <a href="article/excipients-in-peptides/">excipients</a> are part of the weighed mass, which is why net peptide content is a separate figure from both the molecular weight and the <a href="article/high-performance-liquid-chromatography-hplc/">chromatographic purity</a>.</p>
       `,
       faq: [
-        { q: 'What does molecular weight mean for a peptide?', a: 'It is the mass of one molecule, summed from the masses of all its atoms. For a peptide it comes from adding up the amino acids in the sequence, minus the water lost as they join, and it is expressed in grams per mole or daltons.' },
-        { q: 'How is a peptide molecular weight calculated?', a: 'It follows from the molecular formula, the count of each atom in the molecule. If you know the formula, the weight is arithmetic. A good listing shows both the formula and the weight together.' },
-        { q: 'Why does molecular weight matter in the lab?', a: 'It anchors identity checks, since mass spectrometry compares the measured mass with the expected molecular weight, and it underlies any mole-based reconstitution or concentration calculation.' },
+        {
+          "q": "How is the molecular weight of a peptide calculated?",
+          "a": "Add the residue masses for the sequence and add one water for the two ends that were never joined. Residue masses are about eighteen less than the corresponding free amino acids, because condensation removes a water at every bond."
+        },
+        {
+          "q": "What is the difference between average and monoisotopic mass?",
+          "a": "Average mass uses the standard atomic weights, which are averages over natural isotope mixtures, and is the number for weighing material. Monoisotopic mass uses the lightest abundant isotope of each element and is what a mass spectrometer reports for a resolved peak."
+        },
+        {
+          "q": "Why do the two masses diverge as a peptide gets larger?",
+          "a": "A larger molecule has more atoms that can carry a heavier isotope, so the average pulls further from the all-light value. For a short peptide the difference is a fraction of a dalton; above a few thousand daltons it exceeds one."
+        },
+        {
+          "q": "Why might an observed mass differ from the specification?",
+          "a": "Usually for one of three ordinary reasons: a monoisotopic measurement compared against an average calculation, a C-terminal amide instead of a free acid, which is about a dalton lighter, or a salt form whose counterion is not in the calculated mass."
+        },
+        {
+          "q": "Does a mass spectrometer measure mass directly?",
+          "a": "No. An electrospray instrument reports mass-to-charge ratio, and a peptide picks up several protons, producing a series of peaks at different charge states that software combines into one mass."
+        },
+        {
+          "q": "Does molecular weight tell me how much peptide is in the vial?",
+          "a": "No. It describes one molecule. Counterion, absorbed water and any excipients are part of the weighed powder, which is why net peptide content is a separate figure from both molecular weight and chromatographic purity."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Wieser, M.E. (2006). Atomic weights of the elements 2005 (IUPAC Technical Report). Pure and Applied Chemistry, 78(11), 2051-2066.",
+          "url": "https://doi.org/10.1351/pac200678112051"
+        },
+        {
+          "text": "Senko, M.W., Beu, S.C., &amp; McLafferty, F.W. (1995). Determination of monoisotopic masses and ion populations for large biomolecules from resolved isotopic distributions. Journal of the American Society for Mass Spectrometry, 6(4), 229-233.",
+          "url": "https://doi.org/10.1016/1044-0305(95)00017-8"
+        },
+        {
+          "text": "IUPAC-IUB Joint Commission on Biochemical Nomenclature (1984). Nomenclature and symbolism for amino acids and peptides. Biochemical Journal, 219(2), 345-373.",
+          "url": "https://doi.org/10.1042/bj2190345"
+        },
+        {
+          "text": "Aebersold, R., &amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198-207.",
+          "url": "https://doi.org/10.1038/nature01511"
+        }
+      ],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, which lists the formula and molecular weight of each compound.',
       related: ['mass-spectrometry-peptide-research', 'cas-numbers-explained', 'cyclic-vs-linear-peptides'],
     },
@@ -309,29 +561,97 @@
       imageAlt: 'CAS registry number shown on a research compound label',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Next to almost every compound on a research listing sits a string of digits labeled CAS. It is easy to skip, but that little number is one of the most reliable ways to know exactly which chemical you are looking at. Names can be ambiguous. A CAS number is not.</p>
+        <p class="lead">A CAS number is a label, not a description. It carries no information about structure, formula or mass, and it cannot be derived from any of them. Its value is that it is unique and unambiguous: one registered substance, one number, no synonyms to argue about.</p>
 
-        <h2>What is a CAS number?</h2>
-        <p>A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance gets its own number, and no two substances share one. A compound might have several common names, an abbreviation, and a long systematic name, but it has exactly one CAS number. It cuts through the naming confusion.</p>
+        <h2>How the number is built</h2>
+        <p>The format is up to ten digits in three parts separated by hyphens, as in 137525-51-0. The parts have no chemical meaning. Numbers are assigned in sequence as substances are registered, so a high first block indicates a recent registration and nothing else.</p>
+        <p>The last digit is the exception. It is a check digit calculated from the others, which means a mistyped CAS number usually fails arithmetic rather than pointing at a different compound. That is a small but real safeguard when a number is copied by hand between a label, a certificate and a purchase order.</p>
 
-        <h2>How the number is structured</h2>
-        <p>A CAS number is written as three groups of digits separated by hyphens, in the pattern of a longer group, then two digits, then a single digit, for example 137525-51-0. That final single digit is a check digit, calculated from the others, which lets software catch a typo. The digits themselves carry no hidden meaning about the structure. They are just a registry entry, like a catalog number.</p>
+        <h2>What the number identifies</h2>
+        <p>It identifies a substance as registered, and the registry treats forms of the same compound as separate substances. A free acid and its sodium salt have different numbers. A hydrate and the anhydrous form have different numbers. Stereoisomers have different numbers.</p>
+        <p>The practical consequence is that a CAS number on a label makes a claim about the form, not only the molecule. If a specification quotes the number for a free base and the vial contains a salt, the label and the material disagree even though the peptide is the same.</p>
 
-        <h2>Why it appears on peptide listings</h2>
-        <p>Research peptides often have overlapping names and abbreviations, so a CAS number is a precise way to confirm which compound is being sold. On the Codex Research catalog you will see the CAS number listed with each product, for instance <a href="article/what-is-bpc-157/">BPC-157</a> at 137525-51-0. It is a small detail that makes the listing verifiable rather than just descriptive.</p>
+        <h2>Where this gets awkward for peptides</h2>
+        <p>Peptides purified by reversed-phase chromatography are usually isolated as salts, carrying trifluoroacetate or acetate from the purification. The peptide and its salt forms are different registered substances, so more than one number can be correct depending on which form is being described.</p>
+        <p>Metal complexes are worse. A copper peptide exists as a species in equilibrium whose charge and counterion depend on conditions, so the registry number attaches to one particular way of writing it. Our notes on <a href="article/what-are-copper-peptides/">copper peptides</a> and on <a href="article/what-is-ghk-cu/">GHK-Cu</a> cover why the name does not pin down a formula there.</p>
 
-        <h2>Using it to check a compound</h2>
-        <p>Because a CAS number is unique, you can use it to look a substance up in public chemical databases and confirm you are dealing with the compound you expect. Paired with a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> and a verifiable batch number, it is part of how a research supplier makes its material traceable rather than anonymous.</p>
+        <h2>Not every compound has one</h2>
+        <p>Registration is not automatic. A compound can be well characterised in the literature, catalogued elsewhere, and still have no CAS number attached to it in public sources. Newer research compounds sit in this position more often than older ones.</p>
+        <p>The absence of a number is not evidence of anything about the material. It means the public chemical record is thinner, which shifts the burden onto the batch documentation.</p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p>Catalogues compound the problem by renaming things for commercial reasons. A compound sold under a house name still has whatever registry number its structure earned, and the number is the thread back to the chemistry when the name has drifted.</p>
+
+        <h2>The other identifiers you will meet</h2>
+        <ul>
+          <li><b>PubChem CID:</b> a database record number, assigned by the database. It links to a structure, a formula and computed properties.</li>
+          <li><b>ChEMBL ID:</b> the same idea in a different database, oriented toward bioactivity data.</li>
+          <li><b>InChI and the InChI Key:</b> an identifier derived from the structure itself by a published algorithm, so two people with the same structure generate the same string without consulting any registry. <a class="cite" href="https://doi.org/10.1186/s13321-015-0068-4" target="_blank" rel="noopener nofollow">(Reference: Heller et al., 2015)</a></li>
+        </ul>
+        <p>The last one is the important contrast. A CAS number has to be looked up because it was assigned. An InChI can be computed, so it carries the structure inside it.</p>
+
+
+        <h2>Why a unique label was needed at all</h2>
+        <p>Chemical names are not unique. One compound can carry a systematic name, several trivial names, a research code, an international nonproprietary name and whatever a catalogue decides to print. Some of those names are ambiguous on their own, and some are shared between compounds that differ in ways a name does not capture.</p>
+        <p>Nomenclature rules exist and they help. The conventions for naming amino acids and peptides, for instance, are set out by the joint IUPAC and IUB commission. <a class="cite" href="https://doi.org/10.1042/bj2190345" target="_blank" rel="noopener nofollow">(Reference: IUPAC-IUB, 1984)</a> But a systematic name for a forty-residue peptide is unusable in practice, which is why a short arbitrary number earns its place.</p>
+
+        <h2>The number is not the measurement</h2>
+        <p>One habit worth resisting is treating a matching CAS number as a verification step. It confirms that the label names the substance the specification intends. It cannot confirm that the material is that substance, because nothing about the number is measured from the sample.</p>
+        <p>Every identifier shares this limitation, including the computed ones. An InChI derived from a drawn structure describes the structure someone drew, not the powder someone weighed.</p>
+
+        <h2>Checking one</h2>
+        <p>A CAS number resolves in the public chemical databases. Entering it should return a compound whose name, formula and mass match what the specification says. Three things are worth comparing rather than one: if the number resolves but the formula does not match the label, the disagreement is real and worth asking about.</p>
+        <p>This is also the fastest way to catch the difference between a free peptide and its complex or salt, because the two resolve to different records with different masses.</p>
+
+        <p>One more comparison is worth making while you are there. The mass in the database record is calculated from the structure, and the mass on a certificate is measured from the batch. Two numbers arrived at by different routes agreeing is a stronger statement than either alone.</p>
+
+        <h2>What a CAS number does not establish</h2>
+        <p>It says a substance with that identity has been registered. It says nothing about the vial: not the purity, not whether the material is that substance, not which batch it came from.</p>
+        <p>Those questions are answered by measurement. A purity figure from <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity result from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> tied to a batch number you can <a href="verify/">check</a>, are what connect a registry entry to the powder in front of you.</p>
       `,
       faq: [
-        { q: 'What is a CAS number?', a: 'A CAS number is a unique identifier assigned to a chemical substance by the Chemical Abstracts Service. Each distinct substance has exactly one, which makes it a precise way to confirm which compound is meant, regardless of naming.' },
-        { q: 'How is a CAS number formatted?', a: 'It is written as three groups of digits separated by hyphens, such as 137525-51-0: a longer group, then two digits, then a single check digit calculated from the others to catch typos.' },
-        { q: 'Why do research peptides list a CAS number?', a: 'Peptides often have several names and abbreviations, so a CAS number is an unambiguous way to identify the exact compound. It also lets you look the substance up in public chemical databases to confirm it.' },
+        {
+          "q": "What is a CAS number?",
+          "a": "A unique registry identifier for a chemical substance, up to ten digits in three hyphenated parts. It carries no structural information and cannot be derived from a formula; numbers are assigned in sequence as substances are registered."
+        },
+        {
+          "q": "Does the last digit mean anything?",
+          "a": "Yes. It is a check digit calculated from the preceding digits, so a mistyped CAS number usually fails the arithmetic instead of resolving to a different compound."
+        },
+        {
+          "q": "Do a peptide and its salt have the same CAS number?",
+          "a": "No. The registry treats a free acid, its salts, hydrates and stereoisomers as separate substances with separate numbers. Since peptides are usually isolated as salts after purification, more than one number can be correct depending on which form is described."
+        },
+        {
+          "q": "Does every compound have a CAS number?",
+          "a": "Registration is not automatic, so a well characterised compound can lack one in public sources. The absence says nothing about the material; it means the public record is thinner and the batch documentation carries more weight."
+        },
+        {
+          "q": "How is an InChI different from a CAS number?",
+          "a": "An InChI is computed from the structure by a published algorithm, so anyone with the same structure produces the same string. A CAS number is assigned by a registry and has to be looked up."
+        },
+        {
+          "q": "Does a CAS number on a label prove what is in the vial?",
+          "a": "No. It states which substance the label claims. Purity and identity come from measurement, reported on a certificate of analysis tied to a specific batch."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Heller, S.R., McNaught, A., Pletnev, I., Stein, S., &amp; Tchekhovskoi, D. (2015). InChI, the IUPAC International Chemical Identifier. Journal of Cheminformatics, 7, 23.",
+          "url": "https://doi.org/10.1186/s13321-015-0068-4"
+        },
+        {
+          "text": "IUPAC-IUB Joint Commission on Biochemical Nomenclature (1984). Nomenclature and symbolism for amino acids and peptides. Biochemical Journal, 219(2), 345-373.",
+          "url": "https://doi.org/10.1042/bj2190345"
+        },
+        {
+          "text": "Senko, M.W., Beu, S.C., &amp; McLafferty, F.W. (1995). Determination of monoisotopic masses and ion populations for large biomolecules from resolved isotopic distributions. Journal of the American Society for Mass Spectrometry, 6(4), 229-233.",
+          "url": "https://doi.org/10.1016/1044-0305(95)00017-8"
+        },
+        {
+          "text": "Wieser, M.E. (2006). Atomic weights of the elements 2005 (IUPAC Technical Report). Pure and Applied Chemistry, 78(11), 2051-2066.",
+          "url": "https://doi.org/10.1351/pac200678112051"
+        }
+      ],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a>, where each product lists its CAS number, or <a href="verify/">check a batch number</a>.',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
     },
@@ -437,29 +757,96 @@
       imageAlt: 'HPLC chromatogram used to measure research peptide purity',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Almost every research peptide listing mentions a purity figure, often 99 percent by HPLC. It is one of the most quoted numbers in the field and one of the least explained. Worth spelling out what that number measures, and what it does not.</p>
+        <p class="lead">Ninety-nine percent by HPLC is the most quoted number in this field and the least examined. It is a real measurement with a precise meaning, and that meaning is narrower than most people assume.</p>
 
-        <h2>How purity is measured</h2>
-        <p>Purity is usually determined by <a href="article/high-performance-liquid-chromatography-hplc/">high-performance liquid chromatography</a>, or HPLC. In simple terms, the sample is pushed through a column that separates its components, and each component shows up as a peak on a chart called a chromatogram. The target peptide is the main peak. Purity is the area of that main peak expressed as a percentage of all the peaks combined. So 99 percent means the target peptide accounts for about 99 percent of what the method detected.</p>
+        <h2>What the number is</h2>
+        <p>The sample is pushed through a column that separates its components, a detector records each one as it leaves, and the result is a chromatogram: a trace with peaks. The target peptide is the main peak. Purity is the area under that peak divided by the total area of all the peaks the detector saw, expressed as a percentage.</p>
+        <p>So 99 percent says the target accounted for about 99 percent of what this method detected under these conditions. Every part of that sentence is doing work.</p>
 
-        <h2>What the number tells you</h2>
-        <p>A high HPLC purity figure says that very little else showed up alongside the peptide. Small side peaks can come from related peptide fragments, incomplete sequences, or leftover material from synthesis. A clean chromatogram with one dominant peak is a good sign that the batch is mostly what it claims to be.</p>
+        <h2>Area is not mass</h2>
+        <p>This is the misreading that matters most. Area percent answers a question about the peaks. It does not answer what share of the powder in the vial is peptide.</p>
+        <p>Counterion from purification, absorbed water and any <a href="article/excipients-in-peptides/">excipients</a> are part of the weighed material and contribute no peak at the detection wavelength. A batch can be 99 percent pure by area and well under 99 percent peptide by mass, with no contradiction between the two figures. Net peptide content is the separate number that answers the second question, and a thorough <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> reports both.</p>
 
-        <h2>What it does not tell you</h2>
-        <p>Purity is not identity. HPLC tells you how much of the sample is one main component, but it does not by itself prove that component is the right peptide. That is why identity is confirmed separately, usually by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> comparing the measured mass with the expected one. A trustworthy certificate of analysis reports both: purity from HPLC and identity from mass spectrometry. One number without the other is only half the picture.</p>
+        <h2>Detected is doing work too</h2>
+        <p>Peptide methods normally detect in the ultraviolet, and the wavelength decides what is visible. Around 214 nm the amide bond itself absorbs, so essentially any peptide registers. At 280 nm the signal comes mainly from tryptophan and tyrosine, so a sequence without aromatic residues is nearly invisible.</p>
+        <p>Anything with no chromophore at the chosen wavelength contributes nothing to the total, which means it cannot reduce the percentage. The same sample analysed at two wavelengths can return two different purity figures, both honest.</p>
 
-        <h2>Why it matters</h2>
-        <p>For research, consistency depends on knowing what is in the vial. A purity figure backed by an identity check is what lets one batch be compared with another. If you want to confirm a Codex Research vial is genuine, you can check its <a href="verify/">batch number</a>, and its full certificate of analysis is available on request.</p>
+        <h2>Under these conditions is doing work as well</h2>
+        <p>The column, the gradient, the flow rate and the run time all change what separates from what. A shallow gradient resolves species that a steep one merges into a single peak, and two laboratories can report different figures for the same batch because one gave the separation more room. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Reference: Dong, 2006)</a> <a class="cite" href="https://doi.org/10.1002/9780470508183" target="_blank" rel="noopener nofollow">(Reference: Snyder et al., 2009)</a></p>
+        <p>A percentage quoted without its conditions is a statement rather than a result. Guidance on validating analytical procedures exists because a number is inseparable from the procedure that produced it. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Reference: Swartz &amp; Krull, 2012)</a></p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+        <h2>Why the acid in the mobile phase matters to the number</h2>
+        <p>Peptide methods run at low pH with an ion-pairing additive, usually trifluoroacetic acid, which sharpens peaks and improves the separation of closely related sequences. The concentration of that additive changes retention and resolution, and the effect has been studied systematically. <a class="cite" href="https://doi.org/10.1016/j.chroma.2005.02.047" target="_blank" rel="noopener nofollow">(Reference: Shibue et al., 2005)</a></p>
+        <p>Two consequences reach the certificate. A method with too little additive may fail to resolve an impurity that a better-tuned one separates, which raises the apparent purity. And for anything that is not a simple peptide, such as a metal complex, acidic conditions can shift the material toward its dissociated form, so the peak being measured may not be the species named on the label.</p>
+
+        <h2>A percentage has a precision</h2>
+        <p>Integration is not exact. Where the software places the start and end of a peak, how it draws the baseline under a drifting trace, and whether it groups a shoulder with the main peak or separates it all move the result. Two analysts integrating the same chromatogram can differ in the first decimal place.</p>
+        <p>This is why the difference between 99.1 and 99.4 percent usually carries less information than it appears to, while the difference between 95 and 99 is real.</p>
+
+        <h2>What hides inside the main peak</h2>
+        <p>An impurity that leaves the column at the same time as the target is counted as target. The usual candidates are the ones <a href="article/peptide-synthesis/">synthesis</a> produces: deletion sequences missing a single residue, or chains that kept a protecting group. They resemble the target closely enough that resolving them is exactly what the method has to do well.</p>
+        <p>A shoulder on the main peak, or a small peak sitting very close to it, is therefore more informative than a clean number. If the certificate includes the trace, the trace is worth reading. <a class="cite" href="https://doi.org/10.1002/0470087951" target="_blank" rel="noopener nofollow">(Reference: Kazakevich &amp; LoBrutto, 2006)</a></p>
+
+        <h2>Purity says nothing about identity</h2>
+        <p>A chromatogram reports that one component dominates. It has no opinion about what that component is. A sample could be 99 percent pure and be 99 percent of the wrong molecule, and the chromatogram would look the same.</p>
+        <p>Identity comes from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, which measures mass and compares it with the mass calculated from the intended sequence. Purity and identity are two questions, and a document answering one of them is half a document.</p>
+
+        <h2>And nothing about contamination of other kinds</h2>
+        <p>Endotoxin is the clearest example. It is not a peptide, it does not behave like one on the column, and a purity figure is not designed to see it. Where the intended work is sensitive to it, <a href="article/endotoxins-in-research-peptides/">endotoxin content</a> is measured by its own method and reported as its own line.</p>
+        <p>The same applies to residual solvents and to water content. Each is a separate determination, and none of them moves the purity percentage.</p>
+
+        <h2>Reading a specification</h2>
+        <p>A figure such as "≥99% by HPLC" is a specification, not a result: it states the threshold the batch was required to meet. A result is a measured number for a named batch on a named date. The two look similar on a page and mean different things, which is why the batch number is the thread that connects a claim to a measurement you can <a href="verify/">check</a>. A specification applies to every batch; a result applies to one.</p>
       `,
       faq: [
-        { q: 'What does 99% purity by HPLC mean?', a: 'It means the target peptide accounts for about 99 percent of what HPLC detected in the sample. HPLC separates the components into peaks, and purity is the area of the main peak as a percentage of all peaks combined.' },
-        { q: 'Does HPLC purity confirm the peptide identity?', a: 'No. HPLC measures how much of the sample is one main component, but it does not prove that component is the correct peptide. Identity is confirmed separately, usually by mass spectrometry comparing the measured mass with the expected mass.' },
-        { q: 'Why does peptide purity matter in research?', a: 'Consistency depends on knowing what is in the vial. A purity figure backed by an identity check lets one batch be compared with another. A certificate of analysis should report both HPLC purity and mass spectrometry identity.' },
+        {
+          "q": "What does 99 percent by HPLC mean?",
+          "a": "That the target peak accounted for about 99 percent of the total peak area the method detected, under the conditions used. It is a statement about the detected components, not about the weight of the powder."
+        },
+        {
+          "q": "Is 99 percent pure the same as 99 percent peptide?",
+          "a": "No. Counterion, absorbed water and any excipients are part of the weighed material and produce no peak. A batch can be 99 percent pure by area and considerably less than that by mass. Net peptide content is the separate figure."
+        },
+        {
+          "q": "Can the same sample give two different purity figures?",
+          "a": "Yes. The detection wavelength changes what is visible, and the gradient and column change what separates. A shallow gradient can resolve species that a steep one merges. Both results can be honest."
+        },
+        {
+          "q": "Can an impurity hide in the main peak?",
+          "a": "Yes. Anything that leaves the column at the same time as the target is counted as target. Deletion sequences missing a single residue are the usual candidates, which is why a shoulder on the main peak is worth looking at."
+        },
+        {
+          "q": "Does a purity figure confirm the peptide is the right one?",
+          "a": "No. A chromatogram shows that one component dominates without identifying it. Identity comes from mass spectrometry, comparing the measured mass with the mass calculated from the intended sequence."
+        },
+        {
+          "q": "What is the difference between a specification and a result?",
+          "a": "A specification such as ≥99% states the threshold a batch was required to meet. A result is a measured value for a named batch on a named date. The batch number is what connects the two."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Snyder, L.R., Kirkland, J.J., &amp; Dolan, J.W. (2009). Introduction to Modern Liquid Chromatography (3rd ed.). Wiley.",
+          "url": "https://doi.org/10.1002/9780470508183"
+        },
+        {
+          "text": "Kazakevich, Y.V., &amp; LoBrutto, R. (Eds.). (2006). HPLC for Pharmaceutical Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0470087951"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        },
+        {
+          "text": "Shibue, M., Mant, C.T., &amp; Hodges, R.S. (2005). Effect of anionic ion-pairing reagent concentration (1-60 mM) on reversed-phase liquid chromatography elution behaviour of peptides. Journal of Chromatography A, 1080(1), 58-67.",
+          "url": "https://doi.org/10.1016/j.chroma.2005.02.047"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research', 'endotoxins-in-research-peptides'],
     },
@@ -476,29 +863,91 @@
       imageAlt: 'Concept of melanocortin receptor signaling studied in peptide research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">When a peptide like <a href="article/what-is-pt-141/">PT-141</a> is described as a melanocortin receptor agonist, the receptor name does a lot of quiet work. Melanocortin receptors are a whole family, not a single target, and knowing that makes the compounds that act on them much easier to understand.</p>
+        <p class="lead">Calling a compound a melanocortin receptor agonist names a family, not a target. There are five of these receptors, spread across different tissues, and a molecule that reaches one will usually touch some of the others. Which ones, and how strongly, is the question that most work on these compounds is built around.</p>
 
-        <h2>What are melanocortin receptors?</h2>
-        <p>Melanocortin receptors are a family of receptors that respond to a group of signaling molecules called melanocortins. There are several members in the family, usually labeled MC1R through MC5R, and they are spread across different tissues. The name hints at one of their better-known roles, since "melano" points to pigmentation, but the family reaches well beyond that.</p>
+        <h2>Five receptors, cloned in a burst</h2>
+        <p>The family is labelled MC1R through MC5R. The first members were cloned in 1992, and the rest followed quickly, which is why so much of the foundational literature clusters in a few years. <a class="cite" href="https://doi.org/10.1126/science.1325670" target="_blank" rel="noopener nofollow">(Reference: Mountjoy et al., 1992)</a> They are G protein-coupled receptors, and they are among the smaller ones: the extracellular portions that many receptors use to grip a large ligand are short here. Recognition happens mostly within the membrane-spanning bundle, which sets a limit on how much of a ligand the receptor can read.</p>
+        <p>Their distribution across tissues differs, and that distribution is most of what separates them functionally. A receptor only acts where it is expressed.</p>
 
-        <h2>A family, not one target</h2>
-        <p>The reason researchers care about the distinction is that the subtypes do different things. Some are tied to pigmentation, others to central signaling in the nervous system, and others to processes like energy balance. A compound that acts on the family is not automatically acting on all of it, so a recurring research question is how selectively a given agonist engages one subtype over another. If the word agonist is unfamiliar, our note on <a href="article/agonist-vs-antagonist/">agonists vs antagonists</a> covers it.</p>
+        <h2>One precursor, several signals</h2>
+        <p>The natural ligands for these receptors come from a single precursor protein, proopiomelanocortin, which is cut into several smaller peptides. One gene therefore yields several distinct signalling molecules, and which ones appear depends on how the precursor is processed in a given tissue. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Reference: Cone, 2006)</a></p>
+        <p>Those fragments overlap in sequence, and several of them bind more than one receptor subtype. The system was built with cross-talk in it, which is why selectivity is difficult to achieve and interesting to measure.</p>
 
-        <h2>Where peptides come in</h2>
-        <p>Peptides that bind these receptors are used as tools to probe the family. PT-141, also known as bremelanotide, is one example studied for its activity at melanocortin receptors, particularly subtypes tied to central signaling. In that setting the peptide is a way to ask what a specific receptor does, and how cleanly a compound can target it.</p>
+        <h2>A family with natural antagonists</h2>
+        <p>Most receptor systems are studied with agonists that occur in nature and antagonists that chemists build. The melanocortin family has endogenous antagonists as well: proteins that bind these receptors and block them instead of switching them on. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Reference: Cone, 2006)</a></p>
+        <p>The existence of a natural blocker matters when reading results, because the baseline state of the receptor in a tissue is set by the balance between two opposing signals. Our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a> covers the vocabulary, including why a receptor can carry activity with nothing bound to it at all.</p>
 
-        <h2>How they are studied</h2>
-        <p>Laboratory work on melanocortin receptors typically looks at receptor binding across subtypes, the signaling pathways each one triggers, and neurobehavioral models tied to central melanocortin activity. These are preclinical, model-based studies. The peptides involved are supplied strictly as research compounds.</p>
+        <h2>What the subtypes are associated with</h2>
+        <p>The subtypes are linked to different processes. MC1R is the one associated with pigmentation, which is where the family name comes from. Others are tied to central signalling in the nervous system, and others to peripheral tissues. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Reference: Cone, 2006)</a></p>
+        <p>The honest summary is that a compound described as acting on melanocortin receptors has not been described precisely. The subtype, and how cleanly it is reached, is the information that matters.</p>
+
+        <h2>Why selectivity is hard here</h2>
+        <p>Receptors in one family share the regions that recognise a ligand, and the melanocortin family shares them closely. A peptide shaped to fit one subtype fits its relatives to some degree, so selectivity is measured as a ratio rather than claimed as an absolute: this subtype over that one, by some factor, under stated conditions.</p>
+        <p>One route around the problem is to constrain the peptide's shape. Cyclic analogues, in which a bridge between two side chains locks the backbone, were developed for this family in the 1980s and proved considerably more potent than their flexible counterparts. <a class="cite" href="https://doi.org/10.1021/ja00191a044" target="_blank" rel="noopener nofollow">(Reference: Al-Obeidi et al., 1989)</a> <a href="article/what-is-pt-141/">PT-141</a> belongs to that structural lineage, and our note on <a href="article/cyclic-vs-linear-peptides/">cyclic and linear peptides</a> covers what the constraint does.</p>
+
+
+        <h2>The shared core of the ligands</h2>
+        <p>The melanocortin peptides overlap in a short stretch of sequence that carries most of the receptor recognition. A handful of residues in that stretch does the essential work, which is why very short synthetic analogues can still activate these receptors while much longer fragments of the precursor are not needed. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Reference: Cone, 2006)</a></p>
+        <p>That compact recognition motif is convenient for a chemist and inconvenient for selectivity. A small set of residues gives fewer positions to vary, so the differences that distinguish one subtype from another have to be found within a narrow space. It is also why constraining the backbone, rather than lengthening the sequence, became the main design strategy for this family.</p>
+
+        <h2>What a receptor number does not tell you</h2>
+        <p>Subtype labels are useful shorthand and easy to over-read. MC1R and MC4R are different proteins with different distributions, but a compound that reaches one at a given concentration may reach the other at a concentration only a few times higher. A selectivity of tenfold and a selectivity of a thousandfold are both reported as selective, and only one of them supports attributing an observation to a single subtype.</p>
+
+        <h2>Reading a claim about selectivity</h2>
+        <p>A selectivity figure is a comparison produced by an assay, so it carries the assay's assumptions with it. How many receptors were present, which downstream event was measured, and which subtypes were included in the comparison all shape the number. Two papers can report different selectivity for the same compound without either being wrong. The number belongs to the experiment as much as to the molecule.</p>
+
+        <p>The same caution applies to the word potent. Potency and selectivity are separate measurements, and a compound can be strong at a receptor while being poor at telling that receptor apart from its neighbours.</p>
+
+        <h2>What none of this tells you about a vial</h2>
+        <p>Receptor pharmacology describes a molecule. It says nothing about the material in front of you: whether this batch contains that molecule, and how much of it does. Those come from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> tied to a batch you can <a href="verify/">check</a>.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p>This article is background pharmacology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What are melanocortin receptors?', a: 'They are a family of receptors that respond to signaling molecules called melanocortins. There are several subtypes, commonly labeled MC1R through MC5R, spread across different tissues and involved in processes from pigmentation to central signaling.' },
-        { q: 'How many melanocortin receptors are there?', a: 'The family is usually described as having five members, MC1R through MC5R. They are found in different tissues and are associated with different processes, which is why selectivity across subtypes is a common research question.' },
-        { q: 'Which peptide acts on melanocortin receptors?', a: 'PT-141, also called bremelanotide, is a well-known example studied as a melanocortin receptor agonist, particularly at subtypes tied to central signaling. It is used strictly for laboratory research.' },
+        {
+          "q": "What are melanocortin receptors?",
+          "a": "A family of five G protein-coupled receptors, labelled MC1R through MC5R, distributed across different tissues. The first members were cloned in 1992. They respond to peptides derived from a single precursor protein."
+        },
+        {
+          "q": "Where do the natural ligands come from?",
+          "a": "From one precursor protein, proopiomelanocortin, which is cut into several smaller peptides. A single gene therefore yields several signalling molecules, and which ones appear depends on how the precursor is processed in a given tissue."
+        },
+        {
+          "q": "Does this family have natural antagonists?",
+          "a": "Yes, which is unusual. Proteins exist that bind these receptors and block them instead of activating them, so the baseline state of a receptor in a tissue reflects the balance between two opposing signals."
+        },
+        {
+          "q": "Why is subtype selectivity difficult for melanocortin compounds?",
+          "a": "Because the receptors in the family share the regions that recognise a ligand. A peptide shaped to fit one subtype fits its relatives to some degree, so selectivity is reported as a ratio between subtypes under stated conditions, not as an absolute."
+        },
+        {
+          "q": "How do cyclic analogues fit in?",
+          "a": "Constraining a peptide into a ring with a bridge between two side chains narrows the shapes it can adopt. Cyclic analogues developed for this family in the 1980s proved considerably more potent than flexible ones, and later melanocortin peptides belong to that lineage."
+        },
+        {
+          "q": "Can two papers report different selectivity for the same compound?",
+          "a": "Yes. A selectivity figure comes from an assay and carries its assumptions: how many receptors were present, which downstream event was measured, and which subtypes were compared. Different systems can give different numbers without either being wrong."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Mountjoy, K.G., Robbins, L.S., Mortrud, M.T., &amp; Cone, R.D. (1992). The cloning of a family of genes that encode the melanocortin receptors. Science, 257(5074), 1248-1251.",
+          "url": "https://doi.org/10.1126/science.1325670"
+        },
+        {
+          "text": "Cone, R.D. (2006). Studies on the physiological functions of the melanocortin system. Endocrine Reviews, 27(7), 736-749.",
+          "url": "https://doi.org/10.1210/er.2006-0034"
+        },
+        {
+          "text": "Al-Obeidi, F., Hadley, M.E., Pettitt, B.M., &amp; Hruby, V.J. (1989). Design of a new class of superpotent cyclic alpha-melanotropins. Journal of the American Chemical Society, 111(9), 3413-3416.",
+          "url": "https://doi.org/10.1021/ja00191a044"
+        },
+        {
+          "text": "Kenakin, T. (2004). Principles: receptor theory in pharmacology. Trends in Pharmacological Sciences, 25(4), 186-192.",
+          "url": "https://doi.org/10.1016/j.tips.2004.02.012"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-pt-141', 'agonist-vs-antagonist'],
     },
@@ -626,29 +1075,91 @@
       imageAlt: 'Growth hormone secretagogue research peptide studied at the ghrelin receptor',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">"Growth hormone secretagogue" names a category rather than an effect. When a research peptide like <a href="article/what-is-ipamorelin/">ipamorelin</a> gets described this way, it is being placed in a group defined by what it targets rather than by any one effect.</p>
+        <p class="lead">Growth hormone secretagogue names a category by what a compound targets. The word secretagogue means something that prompts a cell to release a substance, so the label says where the molecule acts and leaves everything else open.</p>
 
-        <h2>What the term means</h2>
-        <p>A secretagogue is anything that prompts a cell to release, or secrete, a substance. So a growth hormone secretagogue is a compound studied for how it engages the signaling that leads to growth hormone release. Many of the peptides in this class act as agonists at the ghrelin receptor, which is also called the growth hormone secretagogue receptor. The receptor name and the compound class are two sides of the same coin.</p>
+        <h2>The receptor was found before its natural signal</h2>
+        <p>The usual order in pharmacology is that a hormone is identified and its receptor found afterwards. This class ran the other way. Synthetic compounds that triggered growth hormone release were known first, and the receptor they acted on was identified in 1996 and named after them: the growth hormone secretagogue receptor. <a class="cite" href="https://doi.org/10.1126/science.273.5277.974" target="_blank" rel="noopener nofollow">(Reference: Howard et al., 1996)</a></p>
+        <p>It remained an orphan receptor until 1999, when its endogenous ligand, ghrelin, was identified. <a class="cite" href="https://doi.org/10.1038/45230" target="_blank" rel="noopener nofollow">(Reference: Kojima et al., 1999)</a> That history is why the same receptor carries two names in the literature, and why a compound in this class is described both as a growth hormone secretagogue and as a ghrelin receptor agonist. Both are correct.</p>
 
-        <h2>The ghrelin receptor connection</h2>
-        <p>The ghrelin receptor sits upstream of pathways connected to growth hormone signaling. A secretagogue that activates it is being used, in a research setting, as a way to probe that pathway. Different compounds in the class engage the receptor with different profiles, and that variation is a big part of what researchers compare. An agonist, in this context, is a compound that activates a receptor rather than blocking it.</p>
+        <h2>The natural ligand carries a fatty acid</h2>
+        <p>Ghrelin has a feature that is unusual among peptide hormones: a fatty acid attached to one of its residues, added by a dedicated enzyme. The unmodified peptide does not activate the receptor the way the modified one does. <a class="cite" href="https://doi.org/10.1038/45230" target="_blank" rel="noopener nofollow">(Reference: Kojima et al., 1999)</a></p>
+        <p>The detail is worth knowing when comparing compounds, because a synthetic secretagogue does not need to imitate that modification to reach the same receptor. Several of them are small peptides with no fatty acid at all.</p>
 
-        <h2>Why selectivity matters</h2>
-        <p>Not every secretagogue is equally focused. Some activate the growth hormone pathway but also touch other hormone systems, which makes their effects harder to interpret. Others, like ipamorelin, are studied precisely because they show a more selective profile in laboratory models. For a research tool, that cleanliness is valuable: the more selective a compound, the easier it is to attribute an observed result to one receptor rather than several.</p>
 
-        <h2>How they are studied</h2>
-        <p>Laboratory work on growth hormone secretagogues typically looks at ghrelin receptor binding and activation, the secretagogue pathway itself, and comparisons between more and less selective compounds. These are preclinical, model-based studies. The peptides are supplied strictly as research compounds, and this article does not describe use in people or animals.</p>
+        <h2>Why an orphan receptor is a useful thing to find</h2>
+        <p>A receptor identified before anyone knows what binds to it naturally is called an orphan. Finding one poses an immediate question, since a receptor that exists is presumably responding to something, and the search for that something is a well-defined project with a clear endpoint.</p>
+        <p>The synthetic compounds that led to the receptor kept their usefulness afterwards. A molecule that activates a receptor is a tool for asking what that receptor does, independently of whether it resembles the natural ligand, and the compounds in this class were being used that way for years before ghrelin was found.</p>
+
+        <h2>Upstream is doing work in that sentence</h2>
+        <p>Describing a receptor as sitting upstream of a pathway says the signal passes through several steps before anything measurable happens at the other end. Each of those steps is a place where something else can intervene, and where the state of the system decides how much of the signal gets through.</p>
+        <p>This is why observations from these compounds depend heavily on the model they were made in. A result from cultured cells and a result from an intact animal are answering related but different questions, and neither transfers automatically to the other.</p>
+
+        <h2>The class is chemically mixed</h2>
+        <p>Membership is defined by the target, not by structure, so the compounds grouped under this label have little in common as molecules. Some are short peptides, some are peptide-like, and some are not peptides. Our note on <a href="article/what-is-ipamorelin/">ipamorelin</a> covers a pentapeptide in the class whose five residues include units no organism builds.</p>
+        <p>The consequence for reading a catalogue is that the label predicts nothing about the material: not the size, not the stability, not what the synthesis or the analysis required.</p>
+
+        <h2>What selective means here</h2>
+        <p>Earlier compounds in the class engaged their target and also touched other hormone axes. Selectivity, in this context, describes a compound that acts on its target pathway with limited activity elsewhere, and ipamorelin was characterised as the first with that profile. <a class="cite" href="https://doi.org/10.1530/eje.0.1390552" target="_blank" rel="noopener nofollow">(Reference: Raun et al., 1998)</a></p>
+        <p>For a research tool the value of a clean profile is interpretive. The fewer pathways a compound touches, the fewer alternative explanations there are for an observation. Selectivity is always a comparison under stated conditions, never an absolute, which our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a> covers alongside why two papers can report different figures for one compound.</p>
+        <p>These are preclinical, model-based observations. Compounds in this class are supplied strictly as research compounds, and nothing here describes use in people or animals.</p>
+
+        <h2>Secretagogue is not the same as the hormone</h2>
+        <p>A distinction worth stating plainly, because the category name invites the confusion. A secretagogue is not growth hormone. It is a separate molecule studied for its action on a receptor that sits upstream of that pathway, and growth hormone itself is a protein of around two hundred residues, an entirely different kind of material to make and to verify.</p>
+        <p>Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers why that size difference changes everything about handling.</p>
+
+        <h2>What the label says about a vial</h2>
+        <p>Nothing. It places a molecule in a category based on published work about its target. The category is drawn from published pharmacology, not from anything measured in the vial. Whether a batch contains that molecule, and what share of the powder it represents, comes from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>.</p>
+        <p>For short peptides in this class the identity question carries a specific wrinkle: several contain D-configured residues, and a D residue has exactly the same mass as its L counterpart. Mass alone cannot catch that substitution, which is one more reason purity and identity are reported together on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> tied to a batch you can <a href="verify/">check</a>.</p>
+
+        <p>Where a specification names a D residue explicitly, it is naming something the supplier has to have controlled during synthesis, since the correct isomer has to be used at that position in the first place.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p>This article is background pharmacology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What is a growth hormone secretagogue?', a: 'It is a class of compounds studied for how they engage the signaling that leads to growth hormone release. Many act as agonists at the ghrelin receptor, also called the growth hormone secretagogue receptor. They are used strictly for laboratory research.' },
-        { q: 'How does a secretagogue relate to the ghrelin receptor?', a: 'The ghrelin receptor sits upstream of growth hormone signaling pathways, and many secretagogues act as agonists there. That is why the receptor is also named the growth hormone secretagogue receptor.' },
-        { q: 'Why is selectivity important for these peptides?', a: 'A more selective secretagogue engages the growth hormone pathway with limited activity elsewhere, which makes laboratory results easier to attribute to a single receptor. Ipamorelin is often cited as an example of a more selective compound.' },
+        {
+          "q": "What is a growth hormone secretagogue?",
+          "a": "A compound studied for its action on the receptor that sits upstream of growth hormone release. A secretagogue is anything that prompts a cell to release a substance, so the label names the target rather than a structure or an effect."
+        },
+        {
+          "q": "Is the ghrelin receptor the same as the growth hormone secretagogue receptor?",
+          "a": "Yes. The receptor was identified in 1996 through the synthetic compounds that acted on it and named after them. Its natural ligand, ghrelin, was identified in 1999, which is why the same receptor carries both names."
+        },
+        {
+          "q": "What is unusual about ghrelin itself?",
+          "a": "It carries a fatty acid attached to one of its residues, added by a dedicated enzyme, and the unmodified peptide does not activate the receptor the way the modified one does. Synthetic secretagogues do not need that modification to reach the same receptor."
+        },
+        {
+          "q": "Do compounds in this class resemble each other?",
+          "a": "Not necessarily. Membership is defined by the target, so the group includes short peptides, peptide-like molecules and compounds that are not peptides at all. The label predicts nothing about size, stability or how the material was made."
+        },
+        {
+          "q": "What does selective mean for a secretagogue?",
+          "a": "That the compound acts on its target pathway with limited activity at other hormone axes that earlier compounds also affected. It is a comparison under stated conditions, not an absolute property."
+        },
+        {
+          "q": "Is a secretagogue the same as growth hormone?",
+          "a": "No. Growth hormone is a protein of around two hundred residues. A secretagogue is a separate and usually much smaller molecule studied for its action on a receptor upstream of that pathway."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Howard, A.D., et al. (1996). A receptor in pituitary and hypothalamus that functions in growth hormone release. Science, 273(5277), 974-977.",
+          "url": "https://doi.org/10.1126/science.273.5277.974"
+        },
+        {
+          "text": "Kojima, M., et al. (1999). Ghrelin is a growth-hormone-releasing acylated peptide from stomach. Nature, 402, 656-660.",
+          "url": "https://doi.org/10.1038/45230"
+        },
+        {
+          "text": "Raun, K., et al. (1998). Ipamorelin, the first selective growth hormone secretagogue. European Journal of Endocrinology, 139(5), 552-561.",
+          "url": "https://doi.org/10.1530/eje.0.1390552"
+        },
+        {
+          "text": "Kenakin, T. (2004). Principles: receptor theory in pharmacology. Trends in Pharmacological Sciences, 25(4), 186-192.",
+          "url": "https://doi.org/10.1016/j.tips.2004.02.012"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ipamorelin', 'peptide-synthesis'],
     },
@@ -665,31 +1176,95 @@
       imageAlt: 'Comparison of GLP-1 and GIP incretin signaling in metabolic research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">GLP-1 and GIP get mentioned in the same breath so often that it is easy to assume they are two names for the same thing. They are not. They are two different hormones from the same family, and the differences between them are exactly what makes modern metabolic peptides worth studying.</p>
+        <p class="lead">GLP-1 and GIP appear together so often that they read as one thing with two names. They are two hormones, from two genes, released by two kinds of cell, acting on two receptors. The differences are what make a compound that engages both worth studying at all.</p>
 
-        <h2>What they have in common</h2>
-        <p>Both GLP-1 and GIP are <a href="article/what-are-incretins/">incretins</a>, gut hormones released in response to nutrients. Both connect to pathways tied to insulin signaling and glucose handling, and both belong to the group of targets that metabolic research peptides are designed to engage. So the shared ground is real: same family, same general job of helping the body respond to incoming glucose.</p>
+        <h2>What they share</h2>
+        <p>Both are <a href="article/what-are-incretins/">incretins</a>: gut hormones released when nutrients arrive, contributing to the insulin response that follows. Both act through receptors in the same structural family, the one that also contains the glucagon and secretin receptors. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> And both are cut by the same enzyme at the same position, which is covered below.</p>
 
-        <h2>Where they differ</h2>
-        <p>The key difference is that each acts through its own receptor:</p>
-        <ul>
-          <li><b>GLP-1</b> (glucagon-like peptide-1) works through the GLP-1 receptor and is the more heavily studied of the two.</li>
-          <li><b>GIP</b> (glucose-dependent insulinotropic polypeptide) works through the GIP receptor.</li>
-        </ul>
-        <p>Because the receptors are distinct, activating one is not the same as activating the other, even though both feed into glucose regulation. That separation is the whole reason a research question like "what happens when you engage both at once" is even meaningful.</p>
+        <h2>Different origins</h2>
+        <p>Each hormone comes from its own precursor protein, encoded by its own gene, and each is released by a different population of enteroendocrine cells. The cells that release GIP are concentrated in the upper small intestine. The cells that release GLP-1 are more common further along. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a></p>
+        <p>That geography has a practical consequence for reading the literature. An experiment that changes where nutrients are absorbed changes the balance between the two signals, so two studies can describe the same system and see different mixtures.</p>
 
-        <h2>Why the comparison matters for peptides</h2>
-        <p>Research peptides in this space are often defined by how many of these receptors they hit. A GLP-1-only agonist engages one. A dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages both GLP-1 and GIP. A triple agonist like <a href="article/what-is-retatrutide/">retatrutide</a> adds glucagon on top. Understanding that GLP-1 and GIP are different receptors is what makes those distinctions make sense.</p>
+        <h2>Different receptors, and why that is the whole point</h2>
+        <p>The GIP receptor and the GLP-1 receptor are separate proteins with separate distributions across tissues. Activating one does not activate the other. Both feed into the regulation of glucose, and both belong to the same receptor class, but they are not two doors into the same room.</p>
+        <p>This is what makes a specific laboratory question possible: what changes when a single molecule engages both at once, compared with engaging either alone? A question like that only has meaning because the receptors are distinct.</p>
+
+        <p>Tissue distribution is the second half of that answer. A receptor only matters where it is expressed, so two receptors that both regulate glucose can still reach different tissues and produce different patterns of activity from the same starting signal.</p>
+
+        <h2>Both are clipped by the same enzyme</h2>
+        <p>Dipeptidyl peptidase-4 removes the first two residues from the end of both hormones, and the clipped product no longer activates the receptor the way the intact form does. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Reference: Mentlein, 1999)</a></p>
+        <p>The shared vulnerability explains a shared design pattern. Synthetic compounds aimed at either receptor tend to carry a substitution near that cleavage site, and many also carry a fatty acid chain that lets them associate with serum albumin and be cleared more slowly. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Reference: Hijazi, 2021)</a> Both modifications are visible in the molecule, and both change its mass and its behaviour on a column.</p>
+
+
+        <h2>How the receptors hold their ligand</h2>
+        <p>Receptors in this family are built in two parts: a large domain outside the cell and the usual seven membrane-spanning helices. The peptide binds across both. One end of the hormone is gripped by the extracellular domain, and the other end reaches into the core of the transmembrane bundle, where it does the work of switching the receptor on. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a></p>
+        <p>The arrangement explains two things at once. It is why both hormones are long peptides instead of small molecules, since a short ligand cannot reach both sites. And it is why a chemist has room to work: a molecule that touches the receptor along an extended interface tolerates substitution at positions that are not doing the binding, which is where the modifications in synthetic compounds go.</p>
+
+        <h2>Names and numbers</h2>
+        <p>Both hormones appear in the literature with numeric ranges attached, because each is a fragment cut from a longer precursor and more than one fragment exists. Some circulating forms end in an amide instead of a free acid. Those details are not bookkeeping: they change the formula and therefore the mass, so a specification that quotes a range and an ending is quoting something an identity measurement can confirm or contradict.</p>
+
+        <h2>Which is better studied</h2>
+        <p>GLP-1 has the larger literature by a wide margin, and for years the GIP arm attracted less attention. That imbalance is part of why dual engagement became an active question: the less-studied receptor was the open variable.</p>
+        <p>Anyone reading older work should keep the dates in view. Conclusions drawn when one arm was barely characterised are not wrong, but they were drawn with less of the picture available.</p>
+
+        <h2>Counting receptors is not measuring activity</h2>
+        <p>Compounds in this space are often described by how many receptors they engage: one for a GLP-1 agonist, two for a <a href="article/what-is-tirzepatide/">dual agonist</a>, three for a <a href="article/what-is-retatrutide/">triple agonist</a> that adds the glucagon receptor. The count is easy to state and easy to over-read. It describes how many targets a molecule was designed to reach, and says nothing about how strongly it reaches each one.</p>
+        <p>A compound can engage two receptors unevenly, and it can favour one downstream route over another at the same receptor. One dual agonist has been characterised in exactly those terms. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Reference: Willard et al., 2020)</a> The vocabulary for this sits in our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a>, and the short version is that "dual" is a label, not a measurement.</p>
+
+        <h2>What the comparison does not settle</h2>
+        <p>Knowing how the two hormones differ tells you what a compound is designed to do. It tells you nothing about the material in a vial. Whether a given batch contains the intended molecule, and how much of it is that molecule, comes from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> tied to a batch you can <a href="verify/">check</a>.</p>
 
         <h2>Research use only</h2>
         <p>This article is background biology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'Are GLP-1 and GIP the same thing?', a: 'No. They are two different incretin hormones from the same family. Each acts through its own receptor, GLP-1 through the GLP-1 receptor and GIP through the GIP receptor, so activating one is not the same as activating the other.' },
-        { q: 'Which is more studied, GLP-1 or GIP?', a: 'GLP-1 has historically been the more heavily studied of the two, though interest in GIP has grown as dual-receptor research peptides became a focus.' },
-        { q: 'Why does the GLP-1 vs GIP difference matter for peptides?', a: 'Research peptides are often described by how many of these receptors they engage. Single, dual, and triple agonists build on the fact that GLP-1 and GIP are distinct receptors that feed into glucose regulation.' },
+        {
+          "q": "Are GLP-1 and GIP the same thing?",
+          "a": "No. They are two hormones from two genes, released by different populations of gut cells, acting through two separate receptors. They share a receptor family and a common route of degradation."
+        },
+        {
+          "q": "Where is each hormone released?",
+          "a": "The cells that release GIP are concentrated in the upper small intestine, and the cells that release GLP-1 are more common further along. An experiment that changes where nutrients are absorbed changes the balance between the two signals."
+        },
+        {
+          "q": "Do the two receptors overlap?",
+          "a": "They are separate proteins with separate distributions across tissues, and activating one does not activate the other. Both belong to the same receptor family and both feed into glucose regulation."
+        },
+        {
+          "q": "Why are both hormones short-lived?",
+          "a": "Dipeptidyl peptidase-4 removes the first two residues from each of them, and the clipped product no longer activates the receptor as the intact form does. That shared vulnerability explains a shared design pattern in synthetic compounds."
+        },
+        {
+          "q": "Which of the two is better studied?",
+          "a": "GLP-1, by a wide margin. The GIP arm attracted less attention for years, which is part of why engaging both at once became an active research question: the less-studied receptor was the open variable."
+        },
+        {
+          "q": "Does a dual agonist affect both receptors equally?",
+          "a": "Not necessarily. One dual agonist has been characterised as unbalanced across its two targets and as favouring some downstream routes over others. The number of receptors in a description is a label, not a measurement."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Baggio, L.L., &amp; Drucker, D.J. (2007). Biology of incretins: GLP-1 and GIP. Gastroenterology, 132(6), 2131-2157.",
+          "url": "https://doi.org/10.1053/j.gastro.2007.03.054"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Mentlein, R. (1999). Dipeptidyl-peptidase IV (CD26): role in the inactivation of regulatory peptides. Regulatory Peptides, 85(1), 9-24.",
+          "url": "https://doi.org/10.1016/s0167-0115(99)00089-0"
+        },
+        {
+          "text": "Hijazi, Y. (2021). Prediction of half-life extension of peptides via serum albumin binding. European Journal of Drug Metabolism and Pharmacokinetics, 46(2), 163-172.",
+          "url": "https://doi.org/10.1007/s13318-020-00664-y"
+        },
+        {
+          "text": "Willard, F.S., et al. (2020). Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist. JCI Insight, 5(17), e140532.",
+          "url": "https://doi.org/10.1172/jci.insight.140532"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-are-incretins', 'what-is-tirzepatide'],
     },
@@ -706,34 +1281,104 @@
       imageAlt: 'Illustration of incretin signaling studied in metabolic peptide research',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">If you have read about peptides like <a href="article/what-is-tirzepatide/">tirzepatide</a> or <a href="article/what-is-retatrutide/">retatrutide</a>, you have run into the word incretin. It sounds technical, but the idea behind it is fairly simple, and understanding it makes the whole family of metabolic research peptides easier to follow.</p>
+        <p class="lead">The word incretin turns up in every description of a modern metabolic research peptide, usually without explanation. It names a specific observation about how the body handles glucose, and that observation is the reason this whole family of compounds exists.</p>
 
-        <h2>What are incretins?</h2>
-        <p>Incretins are hormones the gut releases when it detects nutrients, usually after eating. Their defining trick is the incretin effect: they help drive an insulin response that is stronger when glucose arrives through the gut than when the same amount is given another way. In other words, the body pays attention to how glucose shows up, and incretins are part of how it does that.</p>
+        <h2>The observation the word names</h2>
+        <p>Give the same amount of glucose two ways, by mouth and directly into a vein, and the insulin response is larger when it arrives through the gut. The gap between those two responses is the incretin effect, and it was quantified by comparing the two routes at matched glucose levels. <a class="cite" href="https://doi.org/10.1210/jcem-63-2-492" target="_blank" rel="noopener nofollow">(Reference: Nauck et al., 1986)</a></p>
+        <p>Something released by the gut is therefore contributing to the response. Incretins are the hormones that do it.</p>
 
-        <h2>The two main incretins</h2>
-        <p>Research centers on two of them:</p>
+        <h2>The two that research concentrates on</h2>
         <ul>
-          <li><b>GIP</b> (glucose-dependent insulinotropic polypeptide): one of the two primary incretin hormones.</li>
-          <li><b>GLP-1</b> (glucagon-like peptide-1): the other, and the more widely studied of the pair.</li>
+          <li><b>GIP</b>, glucose-dependent insulinotropic polypeptide, released by enteroendocrine cells concentrated in the upper small intestine.</li>
+          <li><b>GLP-1</b>, glucagon-like peptide-1, released by cells found further along the gut and the more heavily studied of the pair.</li>
         </ul>
-        <p>Each one acts through its own receptor, and each connects to pathways tied to insulin signaling and glucose handling. They are not interchangeable, which is exactly why comparing them is interesting.</p>
+        <p>Each acts through its own receptor, and the two receptors belong to the same structural family as the glucagon receptor. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> Our note on <a href="article/glp-1-vs-gip/">GLP-1 and GIP</a> compares the two directly.</p>
 
-        <h2>Why they matter in peptide research</h2>
-        <p>A lot of modern metabolic research peptides are built to act on incretin receptors. Some target GLP-1 alone. A dual agonist like tirzepatide engages both GIP and GLP-1, and a triple agonist like retatrutide adds the glucagon receptor on top. The common thread is the incretin system, so knowing what these hormones do makes those compounds far less mysterious. If you want to compare the two head to head, see our note on <a href="article/glp-1-vs-gip/">GLP-1 vs GIP</a>.</p>
 
-        <h2>A note on scope</h2>
-        <p>Everything here is background biology and laboratory context. The research peptides that target these receptors are supplied strictly as research compounds, and nothing in this article describes use in people or animals.</p>
+        <h2>Why the ligands are long peptides</h2>
+        <p>The incretin receptors sit in the class of G protein-coupled receptors that includes the glucagon and secretin receptors. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> Receptors in this class carry a large extracellular domain in front of the membrane-spanning part, and the ligand binds across both: one end of the peptide is held by that outer domain while the other reaches down into the transmembrane core.</p>
+        <p>Two consequences follow. The ligand has to be long enough to span both sites, which is why these hormones and the compounds built from them run to thirty or forty residues instead of a handful. And a molecule that binds across a long interface gives a chemist many positions to modify, which is what makes substitution at the cleavage site and acylation at a chosen residue practical in the first place.</p>
 
-        <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <h2>Where each one comes from</h2>
+        <p>The two hormones are released by different cells in different parts of the gut, which is why nutrients arriving at different points do not produce identical signals. GIP comes from cells concentrated in the upper small intestine. GLP-1 comes from cells that are more common further along. The distribution matters to anyone reading the literature, because a study that manipulates where nutrients are absorbed is manipulating the balance between the two. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a></p>
+
+        <h2>Both are cut by the same enzyme, and quickly</h2>
+        <p>This is the fact that explains most of what synthetic peptides in this family look like. An enzyme called dipeptidyl peptidase-4 removes the first two residues from the end of both hormones, and that clipped form no longer activates the receptor the way the intact one does. The enzyme is widespread, so the native hormones are short-lived. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Reference: Mentlein, 1999)</a></p>
+        <p>A molecule meant to be studied over hours instead of minutes has to survive that. Two design moves follow, and both are visible in the compounds themselves.</p>
+        <ul>
+          <li><b>Change the residues the enzyme reads.</b> Substituting near the cleavage site removes the enzyme's grip.</li>
+          <li><b>Attach a fatty acid.</b> Acylation lets the molecule associate reversibly with serum albumin, and albumin-bound peptides are cleared more slowly. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Reference: Hijazi, 2021)</a></li>
+        </ul>
+        <p>Both changes also make the molecule bigger and more hydrophobic, which is why these compounds behave differently from an ordinary short peptide on a <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase column</a>.</p>
+
+        <h2>Why the receptors became targets</h2>
+        <p>Once two receptors are known to sit on the same pathway, the obvious laboratory question is what changes when a single molecule engages one, the other, or both. That question produced the current generation of compounds: agonists selective for GLP-1, <a href="article/what-is-tirzepatide/">dual agonists</a> that engage GIP as well, and <a href="article/what-is-retatrutide/">triple agonists</a> that add the glucagon receptor.</p>
+        <p>Engaging two receptors is not the same as engaging them equally. Receptor pharmacology work has described at least one dual agonist as unbalanced across its two targets, so the count of receptors in a description says less than it appears to. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Reference: Willard et al., 2020)</a> The general vocabulary is covered in our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a>.</p>
+
+        <h2>A note on the numbers after the name</h2>
+        <p>GLP-1 appears in the literature with a numeric range attached, because the active hormone is a fragment cut from a larger precursor and more than one fragment exists. One of the circulating forms also ends in an amide instead of a free acid. Those numbers and that ending are part of the identity of the molecule, and they change its mass, so a specification that quotes them is quoting something a measurement can confirm. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a></p>
+
+        <h2>Glucose dependence</h2>
+        <p>The name GIP carries a detail worth reading: glucose-dependent. The insulin-releasing activity of these hormones is tied to glucose being present, so the signal is conditional on the state the system is already in. This is part of why the incretin axis is studied as a regulatory mechanism and not as a simple switch. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a></p>
+
+        <h2>What this means for a vial</h2>
+        <p>Knowing the biology explains why these compounds are designed the way they are. It says nothing about the material in front of you. A long, acylated peptide is harder to synthesise cleanly than a short one, so the purity figure and the identity measurement on its <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> carry more weight here, and a batch can be checked against its paperwork by <a href="verify/">batch number</a>.</p>
+
+        <h2>Scope</h2>
+        <p>Everything above is background biology and laboratory context. All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What are incretins in simple terms?', a: 'Incretins are hormones the gut releases in response to nutrients. They help produce a stronger insulin response when glucose arrives through the gut, which is called the incretin effect.' },
-        { q: 'What is the difference between GIP and GLP-1?', a: 'They are the two main incretin hormones, each acting through its own receptor. GLP-1 is the more widely studied, while GIP is the other primary incretin. Both connect to insulin signaling and glucose handling.' },
-        { q: 'Why do research peptides target incretins?', a: 'Many metabolic research peptides are designed to act on incretin receptors. Single, dual, and triple agonists all build on this system, so understanding incretins makes those compounds easier to follow.' },
+        {
+          "q": "What are incretins?",
+          "a": "Hormones released by the gut that contribute to the insulin response when nutrients arrive that way. The same glucose load produces a larger response by mouth than directly into a vein, and the gap between the two is the incretin effect."
+        },
+        {
+          "q": "Which are the two main incretins?",
+          "a": "GIP, glucose-dependent insulinotropic polypeptide, and GLP-1, glucagon-like peptide-1. Each acts through its own receptor, and both receptors belong to the same structural family as the glucagon receptor."
+        },
+        {
+          "q": "Why are native incretins short-lived?",
+          "a": "An enzyme called dipeptidyl peptidase-4 removes the first two residues from both hormones, and the clipped form no longer activates the receptor the way the intact one does. The enzyme is widespread, so the native hormones do not last long."
+        },
+        {
+          "q": "Why do synthetic incretin peptides carry a fatty acid?",
+          "a": "Acylation lets the molecule associate reversibly with serum albumin, and albumin-bound peptides are cleared more slowly. It also makes the molecule more hydrophobic, which changes how it behaves on a reversed-phase column."
+        },
+        {
+          "q": "What does glucose-dependent mean in the name GIP?",
+          "a": "That the insulin-releasing activity is tied to glucose being present, so the signal depends on the state the system is already in. It is studied as a regulatory mechanism rather than a simple switch."
+        },
+        {
+          "q": "Does engaging two incretin receptors mean twice the effect?",
+          "a": "No. Receptor pharmacology work has described at least one dual agonist as unbalanced across its two targets, so the number of receptors named in a description says little about how the activity is distributed between them."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Nauck, M., Stöckmann, F., Ebert, R., &amp; Creutzfeldt, W. (1986). Incretin effects of increasing glucose loads in man calculated from venous insulin and C-peptide responses. Journal of Clinical Endocrinology and Metabolism, 63(2), 492-498.",
+          "url": "https://doi.org/10.1210/jcem-63-2-492"
+        },
+        {
+          "text": "Baggio, L.L., &amp; Drucker, D.J. (2007). Biology of incretins: GLP-1 and GIP. Gastroenterology, 132(6), 2131-2157.",
+          "url": "https://doi.org/10.1053/j.gastro.2007.03.054"
+        },
+        {
+          "text": "Mentlein, R. (1999). Dipeptidyl-peptidase IV (CD26): role in the inactivation of regulatory peptides. Regulatory Peptides, 85(1), 9-24.",
+          "url": "https://doi.org/10.1016/s0167-0115(99)00089-0"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Hijazi, Y. (2021). Prediction of half-life extension of peptides via serum albumin binding. European Journal of Drug Metabolism and Pharmacokinetics, 46(2), 163-172.",
+          "url": "https://doi.org/10.1007/s13318-020-00664-y"
+        },
+        {
+          "text": "Willard, F.S., et al. (2020). Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist. JCI Insight, 5(17), e140532.",
+          "url": "https://doi.org/10.1172/jci.insight.140532"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-tirzepatide', 'what-is-retatrutide'],
     },
@@ -750,34 +1395,94 @@
       imageAlt: 'Copper peptides research vials with certificates of analysis',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Copper peptides are a small, tidy category, and the name tells you most of what defines them. They are short peptides that hold onto a copper ion. That single feature, a peptide bound to a metal, is what sets them apart from the rest of the research peptides you will come across.</p>
+        <p class="lead">Copper peptides are filed with the rest of the research peptides, and they belong to a different chemical category. They are coordination complexes: a short sequence holding a metal ion. The metal is part of the compound, which changes how they are made, how they behave on a column, and what a certificate has to establish.</p>
 
-        <h2>What makes a peptide a copper peptide?</h2>
-        <p>A copper peptide is a peptide, usually very short, that binds a copper ion with high affinity. Copper is a trace element the body uses in many enzymes, and certain amino acid sequences happen to grab it and hold it in a stable arrangement. When researchers talk about a copper peptide, they are talking about that peptide-plus-copper unit, not the bare sequence. For the basics of what a peptide is to begin with, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.</p>
+        <h2>Why copper, and why it is never loose</h2>
+        <p>Copper is an essential trace element. Enzymes use it to move electrons, which is exactly what makes it useful and what makes it dangerous: a metal that readily changes oxidation state will drive reactions it was not invited to. <a class="cite" href="https://doi.org/10.1016/j.cub.2011.09.040" target="_blank" rel="noopener nofollow">(Reference: Festa &amp; Thiele, 2011)</a></p>
+        <p>Biology handles that by never leaving it free. Copper is passed between binding proteins and delivered to its destination while still bound, so the pool of unbound copper inside a cell is effectively nil. <a class="cite" href="https://doi.org/10.1016/j.cbpa.2010.01.003" target="_blank" rel="noopener nofollow">(Reference: Lutsenko, 2010)</a> A peptide that binds copper tightly is therefore doing something the system already does constantly, which is part of why these sequences attract attention.</p>
 
-        <h2>The two you will see most</h2>
-        <p>Two copper tripeptides come up again and again:</p>
+        <h2>What makes a sequence a copper binder</h2>
+        <p>Holding a metal takes several donor atoms positioned around it at once. Short peptides with a histidine near the amino terminus are a recognised class of copper binders, because the terminal amine, the imidazole of the histidine and one or more backbone nitrogens can be brought into position together. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Reference: Harford &amp; Sarkar, 1997)</a></p>
+        <p>Using a backbone nitrogen as a donor has a consequence worth understanding: that nitrogen has to lose its proton to bind the metal. The complex therefore carries a different charge from the free peptide, and how much of the complex is present depends on pH. A copper peptide is not one fixed species but an equilibrium that sits somewhere depending on conditions.</p>
+
+        <h2>The two you will meet</h2>
         <ul>
-          <li><b><a href="article/what-is-ghk-cu/">GHK-Cu</a>:</b> the copper complex of glycyl-histidyl-lysine, and the most studied of the group.</li>
-          <li><b><a href="article/what-is-ahk-cu/">AHK-Cu</a>:</b> a close relative where the first amino acid is alanine instead of glycine.</li>
+          <li><b><a href="article/what-is-ghk-cu/">GHK-Cu</a></b>, the copper complex of glycyl-histidyl-lysine, and the most studied of the group. The geometry of its copper complex in solution was determined in 1982. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Reference: Freedman et al., 1982)</a></li>
+          <li><b><a href="article/what-is-ahk-cu/">AHK-Cu</a></b>, where the first residue is alanine instead of glycine.</li>
         </ul>
-        <p>The fact that these two differ by a single amino acid is exactly why they get compared. Small changes in sequence can change how a peptide binds copper, and that is a useful thing to study.</p>
+        <p>One residue apart is precisely why the pair gets compared. Changing the first position changes the environment immediately next to one of the donor atoms, and comparing near-identical sequences is a standard way to ask what a single residue contributes.</p>
 
-        <h2>Why the copper matters</h2>
-        <p>Most of the research interest in these compounds comes from the metal, not the peptide alone. Copper binding is central to how these molecules behave in model systems, and laboratory work often looks at copper transport, connective tissue and collagen signaling, and skin or hair follicle cell activity. These are model-based observations, and copper peptides are supplied strictly as research compounds.</p>
 
-        <h2>Handling and verification</h2>
-        <p>Because a copper ion is part of the molecule, identity and purity are worth confirming rather than assuming. Copper peptides are checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ship lyophilized, and come with a certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
+        <h2>Making one is two problems</h2>
+        <p>The peptide half is routine. A tripeptide is a short <a href="article/peptide-synthesis/">solid-phase synthesis</a>, three coupling cycles and a cleavage, and the sequences involved carry no difficult residues.</p>
+        <p>Forming the complex is the other half, and it is where a batch can go wrong without the peptide being at fault. The metal has to be introduced under controlled conditions so that the ratio comes out at one copper per peptide, and the pH has to sit where the intended species dominates. A preparation that is short of copper contains free peptide; one that is over-supplied carries copper that is not held by the sequence. Both are invisible to a purity figure that only looks at the peptide.</p>
+
+        <h2>Colour is a weak check</h2>
+        <p>Copper complexes with nitrogen donors absorb in the visible range, so the material is coloured while the free peptide is not. A vial of genuine complex does not look like a vial of white powder.</p>
+        <p>Useful as a sanity check and nothing more. Colour says a copper species is present. It says nothing about stoichiometry, about the purity of the peptide, or about whether the complex is the one intended.</p>
+
+        <h2>The name does not pin down the formula</h2>
+        <p>For an ordinary peptide, the sequence defines the material. For a metal complex it does not. The written formula depends on whether the binding nitrogen is counted as deprotonated, what the overall charge is, which counterion balances it, and whether the entry describes one peptide per copper or two. Public databases resolve those choices differently, so the same name carries several formulas and several masses.</p>
+        <p>This is not sloppiness in the databases. It reflects that the thing being named is a species in equilibrium. The practical consequence is that the batch documentation carries more weight here than the label does.</p>
+
+        <h2>Copper leaves a fingerprint in the spectrum</h2>
+        <p>Copper has two stable isotopes, copper-63 and copper-65, present in nature at roughly 69 and 31 percent. Any species containing a single copper atom therefore shows a pair of peaks two mass units apart in about that ratio, and the free peptide shows nothing of the sort.</p>
+        <p>That pattern is an internal check built into the identity measurement, and it is one of the few places where <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> confirms more than the number it reports.</p>
+
+        <h2>Why a purity figure answers less here</h2>
+        <p>A purity percentage from <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase chromatography</a> reports what share of the detected material was the target sequence. It does not report how much copper is present or whether it is bound in the intended ratio.</p>
+        <p>There is also a methodological trap. Reversed-phase peptide methods run at low pH with an acidic additive, and acidic conditions shift a labile metal complex toward its dissociated form. A clean peak can be a clean peak of the free tripeptide. For a metal complex the analytical conditions are part of the result, and copper content is worth reporting as its own figure. Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers what a complete document carries.</p>
+
+        <h2>Handling</h2>
+        <p>These compounds ship <a href="article/lyophilization-freeze-drying/">lyophilized</a> and follow the usual rules: dry, cool, away from light, and let a cold vial reach room temperature before opening so condensation does not form inside. Any Codex Research vial can be checked against its paperwork by <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research, including copper peptides such as GHK-Cu and AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What is a copper peptide?', a: 'A copper peptide is a short peptide that binds a copper ion with high affinity. The peptide-plus-copper unit is what defines the category, and it is studied strictly for laboratory research.' },
-        { q: 'What are examples of copper peptides?', a: 'The two most common are GHK-Cu (copper complex of glycyl-histidyl-lysine) and AHK-Cu (with alanine in place of glycine). They differ by a single amino acid, which is why they are often compared.' },
-        { q: 'Why is copper important in these peptides?', a: 'Most of the research interest comes from the metal binding rather than the peptide alone. Laboratory work looks at copper transport and pathways related to connective tissue and skin cell activity in model systems.' },
+        {
+          "q": "What is a copper peptide?",
+          "a": "A coordination complex: a short peptide sequence holding a copper ion. The metal is part of the compound, which puts these in a different chemical category from ordinary research peptides."
+        },
+        {
+          "q": "Why does biology keep copper bound?",
+          "a": "Because copper readily changes oxidation state, which makes it useful in enzymes and reactive where it is not wanted. It is passed between binding proteins and delivered while still bound, so the pool of unbound copper inside a cell is effectively nil."
+        },
+        {
+          "q": "What makes a peptide sequence bind copper?",
+          "a": "Several donor atoms positioned around the metal at once. Short sequences with a histidine near the amino terminus can bring the terminal amine, the histidine imidazole and one or more backbone nitrogens into position together."
+        },
+        {
+          "q": "Why do different sources give different formulas for the same copper peptide?",
+          "a": "Because the written formula depends on whether the binding nitrogen is counted as deprotonated, the overall charge, the counterion, and whether the entry describes one peptide per copper or two. The compound is a species in equilibrium, not one fixed formula."
+        },
+        {
+          "q": "Can mass spectrometry confirm the copper is present?",
+          "a": "Yes, distinctively. Copper has two stable isotopes at roughly 69 and 31 percent natural abundance, so a species with one copper atom shows a characteristic pair of peaks two mass units apart. The free peptide shows no such pattern."
+        },
+        {
+          "q": "Is an HPLC purity figure enough for a copper peptide?",
+          "a": "No. It reports the share of detected material that was the target sequence, not how much copper is present or whether it is bound as intended. Acidic reversed-phase conditions can also shift the complex toward its dissociated form."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Festa, R.A., &amp; Thiele, D.J. (2011). Copper: an essential metal in biology. Current Biology, 21(21), R877-R883.",
+          "url": "https://doi.org/10.1016/j.cub.2011.09.040"
+        },
+        {
+          "text": "Lutsenko, S. (2010). Human copper homeostasis: a network of interconnected pathways. Current Opinion in Chemical Biology, 14(2), 211-217.",
+          "url": "https://doi.org/10.1016/j.cbpa.2010.01.003"
+        },
+        {
+          "text": "Harford, C., &amp; Sarkar, B. (1997). Amino terminal Cu(II)- and Ni(II)-binding (ATCUN) motif of proteins and peptides. Accounts of Chemical Research, 30(3), 123-130.",
+          "url": "https://doi.org/10.1021/ar9501535"
+        },
+        {
+          "text": "Freedman, J.H., Pickart, L., Weinstein, B., Mims, W.B., &amp; Peisach, J. (1982). Structure of the glycyl-L-histidyl-L-lysine-copper(II) complex in solution. Biochemistry, 21(19), 4540-4544.",
+          "url": "https://doi.org/10.1021/bi00262a004"
+        }
+      ],
       cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ghk-cu', 'what-is-ahk-cu'],
     },
@@ -794,35 +1499,95 @@
       imageAlt: 'AHK-Cu copper tripeptide research vial with certificate of analysis',
       image: 'assets/products/ahk-cu.jpg',
       body: `
-        <p class="lead">AHK-Cu is easy to confuse with its better-known cousin, and the confusion is understandable. It is another short copper-binding peptide, only three amino acids long, and it shows up in the same corners of skin and tissue research as <a href="article/what-is-ghk-cu/">GHK-Cu</a>. The interesting part is where the two differ.</p>
+        <p class="lead">AHK-Cu differs from its better-known relative by one atom's worth of side chain. The tripeptide is alanyl-histidyl-lysine instead of glycyl-histidyl-lysine, which means a methyl group where the other has a hydrogen. That is the entire structural difference, and it sits directly beside the part of the molecule that holds the copper.</p>
 
-        <h2>What is AHK-Cu?</h2>
-        <p>AHK-Cu is the copper complex of the tripeptide alanyl-histidyl-lysine, which is where the letters A, H, and K come from. The "Cu" is copper. Its CAS number is 682809-81-0. Like other copper peptides, the sequence binds a copper ion, and much of the research attention sits on that metal-binding behavior rather than on the peptide by itself. If the idea of a three-amino-acid peptide is new, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> puts it in context.</p>
-
-        <h2>How is it different from GHK-Cu?</h2>
-        <p>GHK-Cu and AHK-Cu share the same basic idea, a tripeptide carrying copper, but the first amino acid is different: glycine in GHK, alanine in AHK. That single change matters to researchers because it can alter how the peptide binds copper and how it behaves in a model system. Comparing closely related sequences like these is a common way to study what a specific residue contributes.</p>
-
-        <h2>How is AHK-Cu studied?</h2>
-        <p>Laboratory work on AHK-Cu tends to focus on:</p>
+        <h2>Two sets of numbers, as with any metal complex</h2>
         <ul>
-          <li><b>Dermal cell activity:</b> models looking at skin cell proliferation.</li>
-          <li><b>Collagen and connective tissue:</b> research on tissue signaling pathways.</li>
-          <li><b>Hair follicle biology:</b> studies of follicle-related cell behavior in culture.</li>
+          <li><b>AHK, the free tripeptide:</b> C<sub>15</sub>H<sub>26</sub>N<sub>6</sub>O<sub>4</sub>, about 354 g/mol, CAS 126828-32-8, PubChem CID 7408502.</li>
+          <li><b>The copper complex:</b> CAS 682809-81-0, listed in PubChem as C<sub>15</sub>H<sub>24</sub>ClCuN<sub>6</sub>O<sub>4</sub><sup>-</sup> at about 451 g/mol (CID 168431292).</li>
         </ul>
-        <p>These are laboratory observations, not conclusions about people or animals. AHK-Cu is supplied strictly as a research compound.</p>
+        <p>The database entry for the complex carries a chloride and a negative charge. That is one way of writing it, not the only one: the formula of a coordination complex depends on the protonation state, the overall charge and the counterion chosen. Our note on <a href="article/what-are-copper-peptides/">copper peptides</a> covers why the name does not pin the formula down.</p>
+
+        <h2>Where the copper sits, and why residue one matters</h2>
+        <p>Short sequences with a histidine near the amino terminus bind copper by bringing several donor atoms around the metal at once: the terminal amine, the imidazole of the histidine, and a backbone nitrogen that has to lose its proton to participate. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Reference: Harford &amp; Sarkar, 1997)</a> The geometry of this arrangement was worked out for the glycine version in 1982. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Reference: Freedman et al., 1982)</a></p>
+        <p>The first residue contributes the terminal amine, which is one of those donors. Replacing glycine with alanine adds a methyl group on the carbon next to it. The substitution does not remove a donor or add one; it changes what sits beside the metal, and comparing the two complexes is how the contribution of that position gets measured.</p>
+
+
+        <h2>What a methyl group can and cannot do</h2>
+        <p>It is worth being precise about the scale of the change, because a single residue swap invites two opposite errors. One is to assume the two compounds are interchangeable, since they differ so little. The other is to assume the difference must be large, since chemists bothered to make both.</p>
+        <p>A methyl group changes three things a chemist can reason about: it takes up space next to the terminal amine, it is slightly greasier than a hydrogen, and it removes the unusual flexibility that glycine gives a backbone. Glycine, with no side chain at all, can adopt conformations no other residue can. Replacing it therefore constrains the local geometry as well as adding bulk.</p>
+        <p>Whether those changes matter in a given system is a measurement, not a deduction. The structural difference is small and precisely defined; the consequences are whatever an experiment reports.</p>
+
+        <h2>Why comparing near-identical sequences is standard practice</h2>
+        <p>Changing one residue at a time is the basic move of structure-activity work. If two compounds differ at a single position and behave differently, the difference is attributable. If they behave the same, that position is not doing the work.</p>
+        <p>A pair like AHK and GHK is useful for exactly this reason, and it is also a trap for a supplier's paperwork: two compounds this similar are easy to mislabel and impossible to distinguish by eye.</p>
+
+
+        <h2>The lysine at the end</h2>
+        <p>Both tripeptides finish with lysine, whose side chain carries an amine that stays protonated at ordinary pH. That charge is not part of the copper site, and it does most of the work of keeping these compounds water-soluble.</p>
+        <p>It also has an analytical consequence. A positively charged residue interacts with the acidic additive used in <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase methods</a>, so retention depends on the additive as well as on the sequence. Two laboratories running the same sample with different acid concentrations can see the peak in different places, which is one more reason the method conditions belong beside the purity figure.</p>
+
+        <h2>Telling them apart</h2>
+        <p>A methyl group is fourteen daltons. Both free tripeptides and both copper complexes differ by that amount, which is comfortably within the resolution of any <a href="article/mass-spectrometry-peptide-research/">mass spectrometer</a> used for this work. The identity measurement distinguishes them without difficulty.</p>
+        <p>The copper adds a second, independent check. Copper has two stable isotopes, copper-63 and copper-65, present at roughly 69 and 31 percent, so any species carrying one copper atom shows a pair of peaks two mass units apart in about that ratio. A spectrum of the free peptide shows nothing of the kind.</p>
+
+        <h2>What a purity figure does not cover</h2>
+        <p>A percentage from <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase chromatography</a> reports what share of the detected material was the target sequence. For a metal complex that leaves two questions open: how much copper is present, and whether it is bound at one copper per peptide.</p>
+        <p>Acidic conditions complicate it further. Reversed-phase peptide methods run at low pH with an acidic additive, and acid shifts a labile complex toward its dissociated form, so a clean peak can correspond to the free tripeptide. Copper content is worth reporting as a figure of its own, and the conditions of the analysis belong on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> alongside the number.</p>
+
+        <h2>Making it</h2>
+        <p>The peptide half is three coupling cycles of ordinary <a href="article/peptide-synthesis/">solid-phase synthesis</a> with no difficult residues. Forming the complex is the step where a batch can go wrong while the peptide is perfectly good: the copper has to be introduced under controlled conditions so the ratio comes out right, and the pH has to sit where the intended species dominates. Under-supplied copper leaves free peptide in the product; over-supplied copper leaves metal the sequence is not holding.</p>
 
         <h2>Handling and verification</h2>
-        <p>Because AHK-Cu carries a copper ion, confirming its identity and purity is worthwhile. It is checked by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
+        <p>Material ships <a href="article/lyophilization-freeze-drying/">lyophilized</a>, which is the stable form. Keep it dry, cool and out of direct light, and let a cold vial reach room temperature before opening so condensation does not form inside. Any Codex Research vial can be checked against its paperwork by <a href="verify/">batch number</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including AHK-Cu, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What does AHK-Cu stand for?', a: 'AHK are the single-letter codes for the amino acids in the tripeptide alanyl-histidyl-lysine, and Cu is the chemical symbol for copper. AHK-Cu is the copper complex of that tripeptide, used strictly for laboratory research.' },
-        { q: 'How is AHK-Cu different from GHK-Cu?', a: 'Both are copper-binding tripeptides, but the first amino acid differs: glycine in GHK-Cu and alanine in AHK-Cu. That change can affect copper binding and behavior in model systems, which is why the two are studied and compared.' },
-        { q: 'How is AHK-Cu verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
+        {
+          "q": "What does AHK-Cu stand for?",
+          "a": "The copper complex of the tripeptide alanyl-histidyl-lysine, whose one-letter codes are A, H and K. The free tripeptide is C15H26N6O4 at about 354 g/mol, CAS 126828-32-8; the copper complex carries CAS 682809-81-0."
+        },
+        {
+          "q": "How is AHK-Cu different from GHK-Cu?",
+          "a": "By one residue. The first position is alanine instead of glycine, which adds a methyl group next to the terminal amine that helps hold the copper. Nothing else in the sequence changes."
+        },
+        {
+          "q": "Does that single change affect copper binding?",
+          "a": "It does not remove or add a donor atom. It changes what sits immediately beside the metal, and comparing the two complexes is how the contribution of that position is measured."
+        },
+        {
+          "q": "How are AHK-Cu and GHK-Cu told apart analytically?",
+          "a": "By mass. A methyl group is fourteen daltons, a difference comfortably within the resolution of any mass spectrometer used for this work. The copper isotope pattern provides a second, independent check that the metal is present."
+        },
+        {
+          "q": "Why does PubChem list a chloride in the formula?",
+          "a": "Because a coordination complex has to be written with some charge and some counterion, and that entry makes one particular choice. Other sources write the same compound differently, which is why the name alone does not pin down a formula."
+        },
+        {
+          "q": "Is a purity percentage enough for AHK-Cu?",
+          "a": "No. It reports the share of detected material that was the target sequence and leaves open how much copper is present and whether it is bound one to one. Acidic chromatographic conditions can also dissociate the complex."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Alanyl-histidyl-lysine compound summary. PubChem, National Library of Medicine (CID 7408502).",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/7408502"
+        },
+        {
+          "text": "AHK-Cu compound summary. PubChem, National Library of Medicine (CID 168431292).",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/168431292"
+        },
+        {
+          "text": "Harford, C., &amp; Sarkar, B. (1997). Amino terminal Cu(II)- and Ni(II)-binding (ATCUN) motif of proteins and peptides. Accounts of Chemical Research, 30(3), 123-130.",
+          "url": "https://doi.org/10.1021/ar9501535"
+        },
+        {
+          "text": "Freedman, J.H., Pickart, L., Weinstein, B., Mims, W.B., &amp; Peisach, J. (1982). Structure of the glycyl-L-histidyl-L-lysine-copper(II) complex in solution. Biochemistry, 21(19), 4540-4544.",
+          "url": "https://doi.org/10.1021/bi00262a004"
+        }
+      ],
       cta: 'Explore <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference', 'what-are-copper-peptides'],
     },
@@ -927,36 +1692,107 @@
       imageAlt: 'NAD+ research compound vial with certificate of analysis',
       image: 'assets/products/nad-plus.jpg',
       body: `
-        <p class="lead">NAD+ is the odd one out in this series. It is not a peptide at all, it is a coenzyme, and it sits at the center of how cells manage energy. It shows up in research catalogs alongside peptides because it is a defined molecule that laboratories study in the same careful, batch-verified way.</p>
+        <p class="lead">NAD+ sits apart from everything else in this catalogue. It is not a peptide, has no sequence and no residues, and none of the analytical habits built around peptides transfer to it cleanly. It is a small organic cofactor, and reading a specification for one means reading different lines.</p>
 
-        <h2>What is NAD+?</h2>
-        <p>NAD+ stands for nicotinamide adenine dinucleotide. It is a coenzyme present in every living cell, built from two nucleotides joined together. Its CAS number is 53-84-9 and its molecular formula is C21H27N7O14P2. The "plus" refers to its oxidized form, which pairs with a reduced form called NADH. That pairing is the whole point of the molecule, since it lets NAD+ shuttle electrons during metabolism.</p>
-
-        <h2>What does NAD+ do?</h2>
-        <p>In basic biochemistry, NAD+ acts as an electron carrier. Cells constantly cycle it between its oxidized form (NAD+) and its reduced form (NADH) to move energy around during processes like glycolysis and cellular respiration. Beyond that classic role, NAD+ is also a substrate for a group of enzymes called sirtuins, which is a big part of why it draws interest in aging research.</p>
-
-        <h2>How is NAD+ studied?</h2>
-        <p>Laboratory research involving NAD+ commonly looks at:</p>
+        <h2>Identity</h2>
         <ul>
-          <li><b>Cellular metabolism:</b> its role as an electron carrier in energy pathways.</li>
-          <li><b>Mitochondrial function:</b> how NAD+ availability relates to the machinery that produces cellular energy.</li>
-          <li><b>Sirtuin signaling:</b> NAD+ as a substrate for enzymes tied to aging and stress response in model systems.</li>
+          <li><b>Molecular formula:</b> C<sub>21</sub>H<sub>27</sub>N<sub>7</sub>O<sub>14</sub>P<sub>2</sub></li>
+          <li><b>Molecular weight:</b> approximately 663 g/mol</li>
+          <li><b>PubChem CID:</b> 5892</li>
         </ul>
-        <p>These are laboratory and preclinical contexts. NAD+ is supplied strictly as a research compound, and this article does not describe use in people or animals. If you are comparing it with the small peptide <a href="article/what-is-mots-c/">MOTS-c</a>, both come up in mitochondrial research but they are very different molecules.</p>
+        <p>The name is an abbreviation of nicotinamide adenine dinucleotide, and the structure follows the name: two nucleotides joined through their phosphate groups, one carrying nicotinamide and the other adenine.</p>
 
-        <h2>Handling and verification</h2>
-        <p>NAD+ is sensitive to moisture and light, so how it is stored matters. It is verified by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, ships lyophilized, and comes with its certificate of analysis. Any Codex Research vial can be confirmed by its <a href="verify/">batch number</a>.</p>
+        <h2>The plus sign is part of the name</h2>
+        <p>NAD+ and NADH are the same molecule in two states. The cofactor works by accepting and giving up electrons, and the notation distinguishes the oxidised form from the reduced one. Writing NAD without a sign is ambiguous, because it does not say which state is meant.</p>
+        <p>This is not pedantry over notation. The two forms differ in mass and in how they behave analytically, so a specification that omits the sign has left out part of the identity.</p>
+
+        <h2>What it does in a cell</h2>
+        <p>The cofactor carries electrons between reactions, which places it in the centre of energy metabolism. Beyond that role it is consumed as a substrate by several families of enzymes, so the cell both recycles it and spends it, and the pool has to be replenished. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Reference: Cantó et al., 2015)</a></p>
+        <p>Because it is both a recycled carrier and a consumed substrate, its concentration is regulated rather than fixed, and how that balance is maintained has been reviewed in detail. <a class="cite" href="https://doi.org/10.1038/s42255-019-0161-5" target="_blank" rel="noopener nofollow">(Reference: Katsyuba et al., 2020)</a> <a class="cite" href="https://doi.org/10.1016/j.tibs.2006.11.006" target="_blank" rel="noopener nofollow">(Reference: Belenky et al., 2007)</a></p>
+        <p>These are laboratory and model-based observations. NAD+ is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
+
+
+        <h2>Four related molecules, four different compounds</h2>
+        <p>The abbreviations in this corner of a catalogue are close enough to misread at a glance, and each names a distinct substance with its own mass.</p>
+        <ul>
+          <li><b>NAD+</b> and <b>NADH</b>: the oxidised and reduced forms of the same cofactor.</li>
+          <li><b>NADP+</b> and <b>NADPH</b>: the same pair carrying an additional phosphate, which makes them different molecules used by different enzymes.</li>
+        </ul>
+        <p>A specification that names one of the four is naming something a mass measurement can confirm, since the phosphate and the hydride each change the mass by an amount an instrument resolves without difficulty. A listing that says only NAD has not specified which of them it means.</p>
+
+        <h2>Where the compound comes from</h2>
+        <p>Research-grade material is produced by chemical or enzymatic synthesis and purified, not extracted in any quantity from tissue. That matters for the impurity profile: what ends up alongside the product reflects the route used to make it and the purification that followed, which is the same logic that applies to a synthetic peptide even though the chemistry has nothing in common with <a href="article/peptide-synthesis/">solid-phase synthesis</a>.</p>
+        <p>It also means the compound carries no sequence to verify and no counterion story of the kind that complicates a peptide's <a href="article/excipients-in-peptides/">weighed mass</a>. The salt form, where one is present, is stated on the specification instead.</p>
+
+        <h2>Why the analytical questions are different</h2>
+        <p>For a peptide, identity means comparing a measured mass against one calculated from a sequence, and purity means resolving deletion sequences that differ by a single residue. Neither applies here.</p>
+        <p>NAD+ is a defined small molecule made by chemical or enzymatic routes, not assembled residue by residue, so there are no deletion sequences. Its likely impurities are its own relatives: the reduced form, the phosphorylated version, and breakdown products from hydrolysis of the linkage between the two halves.</p>
+        <p>That changes what a chromatographic method has to separate. Related nucleotides are polar, and the <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase conditions</a> tuned for peptides are not automatically the right conditions for them.</p>
+
+        <h2>It absorbs where peptides do not</h2>
+        <p>The nicotinamide and adenine rings absorb ultraviolet light strongly, with a maximum near 260 nm that comes from the adenine. That is a different wavelength from the ones used for peptide work, where detection sits near 214 nm for the amide bond or 280 nm for aromatic side chains.</p>
+        <p>The reduced form adds a second absorbance band that the oxidised form lacks, which is the basis of the classic assay for following these reactions and a quick way to tell the two states apart.</p>
+
+        <h2>It is less stable than a peptide in solution</h2>
+        <p>The bond joining the two nucleotide halves is susceptible to hydrolysis, and the molecule is sensitive to both acid and base. In solution it degrades faster than a typical lyophilized peptide would, and warmth accelerates it.</p>
+        <p>The handling rules are therefore the ordinary ones applied with more attention: keep the dry material dry and cool, let a cold vial reach room temperature before opening so condensation does not form inside, and treat a solution as short-lived. Our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers why the dry state is the stable one.</p>
+
+        <h2>What a certificate should carry</h2>
+        <p>The same principle as everywhere else, with the lines adjusted to the compound.</p>
+        <ul>
+          <li><b>Identity</b> confirmed against the formula and mass above, with the oxidation state stated.</li>
+          <li><b>Purity</b> from a method suited to polar nucleotides, with the conditions named.</li>
+          <li><b>Water content,</b> since a hygroscopic solid takes up moisture and the water is part of what you weigh.</li>
+          <li><b>A batch number</b> tying all of it to the vial, which can be <a href="verify/">checked</a>.</li>
+        </ul>
+        <p>Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> covers the general case; the fields differ for a cofactor, and the logic does not.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including NAD+, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'Is NAD+ a peptide?', a: 'No. NAD+ (nicotinamide adenine dinucleotide) is a coenzyme built from two nucleotides, not a peptide. It appears in research catalogs alongside peptides because it is a defined, batch-verified compound studied in metabolism research.' },
-        { q: 'What is the difference between NAD+ and NADH?', a: 'They are two forms of the same coenzyme. NAD+ is the oxidized form and NADH is the reduced form. Cells cycle between them to carry electrons during energy metabolism.' },
-        { q: 'Why is NAD+ studied in aging research?', a: 'Beyond its role as an electron carrier, NAD+ is a substrate for enzymes called sirtuins that are associated with stress response and aging in laboratory models, which is a major reason it appears in that research.' },
+        {
+          "q": "What is NAD+?",
+          "a": "Nicotinamide adenine dinucleotide, a small organic cofactor built from two nucleotides joined through their phosphates. Its formula is C21H27N7O14P2 and its molecular weight is about 663 g/mol. It is not a peptide and has no sequence."
+        },
+        {
+          "q": "What does the plus sign mean?",
+          "a": "It marks the oxidised form. NAD+ and NADH are the same molecule in two states, since the cofactor works by accepting and giving up electrons. Writing NAD without a sign leaves the state unspecified, and the two forms differ in mass."
+        },
+        {
+          "q": "Why is NAD+ analysed differently from a peptide?",
+          "a": "Because it is a defined small molecule rather than a chain assembled residue by residue, so there are no deletion sequences. Its likely impurities are related nucleotides and hydrolysis products, which are polar and need different chromatographic conditions."
+        },
+        {
+          "q": "Is NAD+ stable in solution?",
+          "a": "Less so than a lyophilized peptide. The bond joining its two halves is susceptible to hydrolysis and the molecule is sensitive to acid and base, so a solution should be treated as short-lived and kept cold."
+        },
+        {
+          "q": "Why does water content matter for NAD+?",
+          "a": "Because a hygroscopic solid takes up moisture from the air, and that water is part of what you weigh. It is also the reason a cold vial should reach room temperature before being opened."
+        },
+        {
+          "q": "What should a certificate for NAD+ report?",
+          "a": "Identity confirmed against the formula and mass with the oxidation state stated, purity from a method suited to polar nucleotides with the conditions named, water content, and a batch number tying all of it to the vial."
+        }
       ],
       references: [
-        { text: 'NAD+ (NAD) compound summary. PubChem, National Library of Medicine (CID 5892).', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/5892' },
+        {
+          "text": "NAD+ compound summary. PubChem, National Library of Medicine (CID 5892).",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5892"
+        },
+        {
+          "text": "Cantó, C., Menzies, K.J., &amp; Auwerx, J. (2015). NAD+ metabolism and the control of energy homeostasis: a balancing act between mitochondria and the nucleus. Cell Metabolism, 22(1), 31-53.",
+          "url": "https://doi.org/10.1016/j.cmet.2015.05.023"
+        },
+        {
+          "text": "Katsyuba, E., Romani, M., Hofer, D., &amp; Auwerx, J. (2020). NAD+ homeostasis in health and disease. Nature Metabolism, 2, 9-31.",
+          "url": "https://doi.org/10.1038/s42255-019-0161-5"
+        },
+        {
+          "text": "Belenky, P., Bogan, K.L., &amp; Brenner, C. (2007). NAD+ metabolism in health and disease. Trends in Biochemical Sciences, 32(1), 12-19.",
+          "url": "https://doi.org/10.1016/j.tibs.2006.11.006"
+        }
       ],
       cta: 'Browse <a href="catalog/">research compounds</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-mots-c', 'lyophilization-freeze-drying'],
@@ -1123,7 +1959,7 @@
         <h2>Handling and verification</h2>
         <p>Ipamorelin ships <a href="article/lyophilization-freeze-drying/">lyophilized</a>, which is the stable form. Keep it dry and cool, and let a cold vial reach room temperature before opening so condensation does not form inside; our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers the general case. Each batch can be checked against its paperwork by <a href="verify/">batch number</a> before the vial is opened.</p>
 
-        <p>One point specific to small peptides: at the masses typically supplied, the freeze-dried material in the vial can be a thin film or a few flecks on the glass rather than a visible powder. A vial that looks empty has usually not lost anything; that is <a href="article/lyophilization-freeze-drying/">how the drying works</a>.</p>
+        <p>One point specific to small peptides: at the masses typically supplied, the freeze-dried material in the vial can be a thin film or a few flecks on the glass instead of a visible powder. A vial that looks empty has usually not lost anything; that is <a href="article/lyophilization-freeze-drying/">how the drying works</a>.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including ipamorelin, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1289,35 +2125,98 @@
       imageAlt: 'Retatrutide research peptide vial with certificate of analysis',
       image: 'assets/products/retatrutide.jpg',
       body: `
-        <p class="lead">If a dual agonist like <a href="article/what-is-tirzepatide/">tirzepatide</a> engages two receptors, retatrutide takes the same idea one step further. It is a single synthetic peptide built to act on three metabolic receptors at once. That extra target is the whole reason it has become a focal point in current incretin research.</p>
+        <p class="lead">Retatrutide is described as a triple agonist: one synthetic peptide built to act at three receptors, the two <a href="article/what-are-incretins/">incretin</a> receptors plus the receptor for glucagon. Adding a third target changes what the compound is useful for in the laboratory, and it also changes what has to be proved about a batch before the material means anything.</p>
 
-        <h2>What is retatrutide?</h2>
-        <p>Retatrutide is a synthetic peptide described as a triple agonist. It acts on the receptors for glucose-dependent insulinotropic polypeptide (GIP), glucagon-like peptide-1 (GLP-1), and glucagon. Its molecular formula is C228H350N48O66. Like other peptides in this family, it carries a fatty acid chain that affects how long the molecule stays intact, and it is produced by <a href="article/peptide-synthesis/">solid-phase synthesis</a> rather than isolated from a natural source.</p>
+        <h2>What is verifiable about its identity</h2>
+        <p>Retatrutide carries the research code LY3437943 and is catalogued in ChEMBL as CHEMBL5095485, where it is classified as a protein-type entity with a defined sequence. It does not currently appear in PubChem under that name or that code, and a search of PubChem for the molecular formula quoted in some supplier listings returns no compound.</p>
+        <p>For most compounds in this catalogue the public databases give a formula, a mass and a CAS number that anyone can check. Here the public record is thinner, so the weight shifts onto the batch documentation: the measured mass on the certificate and the purity figure behind it. Our note on <a href="article/cas-numbers-explained/">CAS numbers</a> covers what those identifiers do and do not establish.</p>
 
-        <h2>Why a third receptor?</h2>
-        <p>GIP and GLP-1 are incretins, but glucagon sits on the other side of glucose regulation. Adding a glucagon receptor component changes the balance of signals a single molecule can send. For researchers, that raises a specific and testable question: what happens to metabolic pathways when all three receptors are engaged together instead of one or two? Retatrutide exists to study exactly that comparison.</p>
+        <h2>Why a third receptor</h2>
+        <p>GIP and GLP-1 are released by the gut and contribute to the insulin response that follows a meal. Glucagon sits on the other side of glucose regulation, and its receptor belongs to the same structural family as the two incretin receptors. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a></p>
+        <p>Because all three receptors share a family, a single peptide scaffold can be engineered to reach all three. The laboratory question that follows is narrow and testable: what changes when one molecule engages three of these receptors at once, measured against the same scaffold engaging one or two? Our note on <a href="article/glp-1-vs-gip/">GLP-1 and GIP</a> covers the two-receptor case.</p>
 
-        <h2>How is retatrutide studied?</h2>
-        <p>In the laboratory, retatrutide appears in research on:</p>
+
+        <h2>Why one scaffold can reach three receptors</h2>
+        <p>Receptors in this family are built in two parts, a large domain outside the cell and the seven membrane-spanning helices, and the peptide binds across both. One end is held by the outer domain while the other reaches into the transmembrane core. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a></p>
+        <p>Because the three receptors are relatives, the regions that grip the ligand resemble each other. A sequence can therefore be tuned position by position until it is tolerated by all three, which is the engineering problem behind a multi-receptor agonist. It also explains why the molecules end up long: a short ligand cannot span both binding sites, let alone span them in three different receptors at once.</p>
+
+        <h2>Three targets make interpretation harder, not easier</h2>
+        <p>Engaging two receptors is already not the same as engaging them equally. One dual agonist in this family has been characterised as unbalanced across its targets and as favouring some downstream routes over others. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Reference: Willard et al., 2020)</a></p>
+        <p>With three receptors the number of ways activity can be distributed grows, and an observed result has more possible explanations. The word triple counts targets. It does not describe the balance between them, and the balance is what an experiment has to establish. The vocabulary sits in our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a>.</p>
+
+        <h2>Why it carries a fatty acid</h2>
+        <p>Native incretins are short-lived because an enzyme, dipeptidyl peptidase-4, removes the first two residues and the clipped form no longer activates its receptor as the intact one does. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Reference: Mentlein, 1999)</a> Compounds in this family answer that with two modifications: a substitution near the cleavage site, and a fatty acid attached to the backbone.</p>
+        <p>Acylation lets the molecule associate reversibly with serum albumin, and albumin-bound peptides are cleared more slowly. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Reference: Hijazi, 2021)</a> It also makes the molecule considerably more hydrophobic, so it is held longer on a <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase column</a> than its unmodified backbone would be.</p>
+
+        <h2>A long chain is a hard synthesis</h2>
+        <p>Peptides of this family run to several dozen residues, and length works against a clean <a href="article/peptide-synthesis/">synthesis</a>. Every coupling step that stops short of completion leaves a fraction of chains one residue behind, and those shortened chains continue through every remaining cycle. The result is a deletion sequence: a molecule differing from the target by a single residue, which makes it the impurity hardest to separate.</p>
+        <p>The acylation step adds a second opportunity for error. Material that is otherwise correct but missing the fatty acid, or carrying it at the wrong position, is a distinct compound with a distinct mass.</p>
+
+        <h2>What a batch has to establish</h2>
         <ul>
-          <li><b>Glucose regulation:</b> how combined incretin and glucagon signaling relates to blood sugar handling in model systems.</li>
-          <li><b>Energy metabolism:</b> pathways connected to energy expenditure and metabolic balance.</li>
-          <li><b>Receptor pharmacology:</b> mapping the effect of triple activation against single and dual agonists.</li>
+          <li><b>Purity</b> from chromatography: what share of the detected material is the target. Deletion sequences appear here, usually as small peaks close to the main one.</li>
+          <li><b>Identity</b> from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>: whether the measured mass matches the mass calculated for the intended molecule. At several thousand daltons the gap between monoisotopic and average mass is no longer a rounding detail, so the certificate should say which convention it quotes.</li>
         </ul>
-        <p>These are preclinical observations. Retatrutide is a research compound, and this article does not describe use in people or animals.</p>
+        <p>Given how thin the public chemical record is for this compound, those two numbers are doing more work than usual. Material ships <a href="article/lyophilization-freeze-drying/">lyophilized</a>, and a batch can be checked against its paperwork by <a href="verify/">batch number</a> before the vial is opened.</p>
 
-        <h2>Structure and verification</h2>
-        <p>Retatrutide is a large, modified peptide, so its identity and purity have to be confirmed rather than assumed. Purity is measured by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and each batch ships lyophilized with its certificate of analysis. A Codex Research vial can be checked by its <a href="verify/">batch number</a>.</p>
+
+        <p>One further consequence of the design is worth noting for anyone handling the material. A long, acylated peptide is more hydrophobic and often less soluble than a short unmodified one, and it presents more surface to the walls of a vial. Formulations in this family therefore tend to carry <a href="article/excipients-in-peptides/">excipients</a>, which means part of the weighed powder is not compound. That is a second reason the figure on the label and the figure on the certificate can differ.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research, including retatrutide, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What makes retatrutide a triple agonist?', a: 'Retatrutide is a single synthetic peptide that acts on three receptors at once: GIP, GLP-1, and glucagon. That combination is what separates it from dual agonists like tirzepatide. It is used strictly for laboratory research.' },
-        { q: 'How is retatrutide different from tirzepatide?', a: 'Tirzepatide targets two receptors (GIP and GLP-1). Retatrutide adds a third, the glucagon receptor, so research with it looks at what triple activation does compared with single or dual activation.' },
-        { q: 'How is retatrutide verified for research?', a: 'Each batch is tested by HPLC for purity and mass spectrometry for identity, and ships with a certificate of analysis. Codex Research vials can also be checked by batch number at codexresearchlab.com/verify/.' },
+        {
+          "q": "What makes retatrutide a triple agonist?",
+          "a": "It is a single synthetic peptide built to act at three receptors: the two incretin receptors, for GIP and GLP-1, plus the receptor for glucagon. All three belong to the same structural receptor family, which is what makes one scaffold able to reach them."
+        },
+        {
+          "q": "How is retatrutide different from tirzepatide?",
+          "a": "Tirzepatide engages two receptors, GIP and GLP-1. Retatrutide adds the glucagon receptor. The count of targets is the difference in design; how the activity is balanced between them is a separate question that an experiment has to settle."
+        },
+        {
+          "q": "Does retatrutide have a CAS number and a PubChem entry?",
+          "a": "It is catalogued in ChEMBL as CHEMBL5095485 under the research code LY3437943, but it does not appear in PubChem under that name or code, and the molecular formula quoted in some listings returns no compound there. The public chemical record for it is thinner than for most compounds."
+        },
+        {
+          "q": "Why does retatrutide carry a fatty acid chain?",
+          "a": "Acylation lets the molecule associate reversibly with serum albumin, and albumin-bound peptides are cleared more slowly. It also makes the molecule more hydrophobic, which lengthens its retention on a reversed-phase column."
+        },
+        {
+          "q": "Why is a long peptide harder to synthesise cleanly?",
+          "a": "Each coupling step that falls short of completion leaves a fraction of chains one residue behind, and those chains continue through the remaining cycles. The resulting deletion sequences differ from the target by a single residue, which makes them the hardest impurities to resolve."
+        },
+        {
+          "q": "How is a retatrutide batch verified?",
+          "a": "Chromatography establishes what share of the detected material is the target, and mass spectrometry establishes that the target is the intended molecule. With a thin public chemical record, those two measurements carry more weight than usual."
+        }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Retatrutide (LY3437943). ChEMBL, European Bioinformatics Institute (CHEMBL5095485).",
+          "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL5095485/"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Baggio, L.L., &amp; Drucker, D.J. (2007). Biology of incretins: GLP-1 and GIP. Gastroenterology, 132(6), 2131-2157.",
+          "url": "https://doi.org/10.1053/j.gastro.2007.03.054"
+        },
+        {
+          "text": "Mentlein, R. (1999). Dipeptidyl-peptidase IV (CD26): role in the inactivation of regulatory peptides. Regulatory Peptides, 85(1), 9-24.",
+          "url": "https://doi.org/10.1016/s0167-0115(99)00089-0"
+        },
+        {
+          "text": "Hijazi, Y. (2021). Prediction of half-life extension of peptides via serum albumin binding. European Journal of Drug Metabolism and Pharmacokinetics, 46(2), 163-172.",
+          "url": "https://doi.org/10.1007/s13318-020-00664-y"
+        },
+        {
+          "text": "Willard, F.S., et al. (2020). Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist. JCI Insight, 5(17), e140532.",
+          "url": "https://doi.org/10.1172/jci.insight.140532"
+        }
+      ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
       related: ['what-is-tirzepatide', 'what-is-mots-c'],
     },
@@ -1539,38 +2438,95 @@
       imageAlt: 'Research peptide vial delivered in Panama with its certificate of analysis',
       image: 'assets/og-default.png',
       body: `
-        <p class="lead">Buying research peptides in Panama is straightforward when you know how ordering, delivery, and verification work locally. This guide covers same-day delivery in Panama City, shipping to the interior, the payment methods available in Panama, and how to confirm that every vial is genuine before you pay. All products are for laboratory research use only.</p>
+        <p class="lead">Buying research peptides in Panama differs from ordering them from abroad in one way that matters more than price: the material is already in the country. Nothing is waiting on customs, and nothing spends weeks in transit. This guide covers how ordering works, what delivery costs and how long it takes, how payment is handled, and how to confirm a vial before you pay.</p>
 
-        <h2>How ordering works in Panama</h2>
-        <p>At Codex Research you add products to your cart on the website and confirm the order with a specialist on WhatsApp (+507 6335-4625). No payment is charged on the website itself: your order details, delivery, and payment are arranged directly in the chat, so you can ask questions before you pay. Prices are shown in U.S. dollars, which is the currency used in Panama.</p>
+        <h2>How ordering works</h2>
+        <p>You add products to the cart and pay on the site. The order is placed at checkout, not negotiated in a chat, and the price the server charges is calculated at the moment of payment so it matches what the cart shows.</p>
+        <p>A specialist answers questions on WhatsApp before and after an order, which is a support channel and not a purchase step. Nothing has to be arranged by message for an order to go through.</p>
 
-        <h2>Delivery in Panama City and the interior</h2>
+        <h2>Delivery times and cost</h2>
         <ul>
-          <li><b>Panama City:</b> $4 flat shipping, delivered in <b>1-2 hours</b> from local stock.</li>
-          <li><b>Interior cities</b> such as David, Chitré, and Colón: next business day via Fergunson transport.</li>
+          <li><b>Panama City:</b> same-day delivery, 1 to 2 hours, $4 flat.</li>
+          <li><b>Interior cities</b> such as David, Chitré and Colón: next business day, by Fergunson transport.</li>
           <li><b>Free shipping</b> on orders over $100.</li>
-          <li>Every order ships in <b>sealed, protective packaging</b>, with each vial labeled with its compound, strength and batch number.</li>
         </ul>
-        <p>Because stock is held locally, you are not waiting weeks for an international parcel or dealing with customs.</p>
+        <p>Every order ships in sealed protective packaging, and each vial is labelled with its compound, its strength and its batch number. If a seal arrives broken, do not accept the package.</p>
 
-        <h2>Payment methods in Panama</h2>
-        <p>Payment happens on the site itself, at checkout:</p>
+        <h2>Why local stock changes the material, not only the wait</h2>
+        <p>An international parcel spends weeks moving between warehouses and vehicles, and the relevant count is not the number of days but how many temperature and humidity cycles the package went through. A freeze-dried peptide is stable while it stays dry, and each warming and cooling is an opportunity for moisture to reach it.</p>
+        <p>Two hours in a city is a short, single trip. This is a property of the material and how it travels, which our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers in detail.</p>
+
+        <h2>Paying in Panama</h2>
+        <p>Payment happens at checkout on the site, with two methods available.</p>
         <ul>
-          <li><b>Card</b>: Visa, Mastercard and American Express, processed by Stripe. You finish on Stripe's own secure checkout, so your card details never touch our site.</li>
-          <li><b>Crypto</b>: USDC or USDT on Ethereum, transferred from your own wallet and verified on-chain before the order is released.</li>
+          <li><b>Card:</b> Visa, Mastercard and American Express, processed by Stripe. The payment is completed on Stripe's own secure checkout, so card details never touch this site.</li>
+          <li><b>Crypto:</b> USDC or USDT on Ethereum, sent from your own wallet and verified on-chain before the order is released.</li>
         </ul>
-        <p>The amount charged is calculated by our server at the moment of payment, so it always matches what your cart shows. Any question before or after ordering is answered by a specialist on WhatsApp.</p>
+        <p>Prices are shown in U.S. dollars, the currency used in Panama, so there is no conversion at the point of payment.</p>
 
-        <h2>How to verify authenticity before you pay</h2>
-        <p>Every batch is third-party tested with <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, and its certificate of analysis (COA) is available on request, before you order if you want to see it first. You can also confirm that a vial is genuine by entering its batch number on the <a href="verify/">batch verification page</a>.</p>
+        <h2>Confirming a vial before you pay</h2>
+        <p>This is the part worth doing regardless of where you buy. A batch number printed on a label is only useful if it connects to something.</p>
+        <ul>
+          <li>Enter the batch number on the <a href="verify/">batch verification page</a>. It tells you whether that batch exists and what document it corresponds to.</li>
+          <li>Ask for the certificate of analysis for that batch. It can be requested before an order, not only after.</li>
+          <li>Read the certificate, not only the purity figure. Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> explains what each field means and which absences matter.</li>
+        </ul>
+        <p>The three questions a complete document answers are which batch this is, how pure it is, and whether it is the right molecule. A document that answers only one of them is incomplete, wherever it came from.</p>
+
+        <h2>What to check on the label</h2>
+        <p>The compound name, the strength in milligrams, and the batch number should all be present and should match the certificate. A mismatch between the number on the paper and the number on the vial means the document describes different material.</p>
+        <p>Storage instructions on the label take precedence over any general rule of thumb, including the ones in our own guides.</p>
+
+
+        <h2>What to ask any supplier, here or anywhere</h2>
+        <p>Three questions settle most of what matters, and they are worth asking before paying.</p>
+        <ul>
+          <li><b>Does the batch number on the document match the one on the vial?</b> If it does not, the certificate describes someone else's material.</li>
+          <li><b>With what method was it measured, and on what date?</b> A percentage with no procedure behind it is a statement, not a result.</li>
+          <li><b>Who signed the certificate, and do they also sell the material?</b> Independent testing separates the party making the claim from the party being paid.</li>
+        </ul>
+        <p>None of these is specific to Panama or to this supplier. They are the criteria that make any purchase checkable, and a supplier who cannot answer them has told you something useful.</p>
+
+        <h2>Ordering from outside Panama City</h2>
+        <p>The interior is served by ground transport with next business day delivery, which means an order placed late in the day arrives the following working day rather than the same evening. Public holidays shift that by a day.</p>
+        <p>Packaging is the same regardless of destination: sealed, protective, and labelled per vial. The additional day in transit is a single controlled leg and not a customs process, since the stock is already in the country.</p>
+
+        <h2>When it arrives</h2>
+        <p>Freeze-dried material can look like very little: a thin film, a few flecks on the glass, sometimes nothing obvious at all. A vial that appears empty has usually not lost anything, which is a consequence of <a href="article/lyophilization-freeze-drying/">how freeze-drying works</a> and of whether a bulking agent was part of the formulation.</p>
+        <p>Let a cold vial reach room temperature before opening it, so condensation does not form inside. Keep the material dry, cool and out of direct light.</p>
+
+        <h2>Prices and stock</h2>
+        <p>Prices are set on the site and the server calculates the charge at the moment of payment, so a price seen in the cart is the price charged. Stock is held locally, which is what makes same-day delivery possible and also what limits it: a compound that is out of stock in the country cannot be conjured onto a van, and the honest answer in that case is a date.</p>
+        <p>The pack of three follows the catalogue formula, a unit price multiplied by three with a discount applied, so the saving is visible in dollars on the product page instead of being described in the abstract.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. No guidance on use is given, before or after an order.</p>
       `,
       faq: [
-        { q: 'Do you deliver research peptides in Panama City?', a: 'Yes. Codex Research ships from local stock with $4 flat shipping and 1-2 hour delivery in Panama City. Interior cities like David, Chitré, and Colón receive orders the next business day via Fergunson transport, and shipping is free on orders over $100.' },
-        { q: 'What payment methods can I use in Panama?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on the site at checkout, and the amount is calculated by the server so it always matches your cart.' },
-        { q: 'How do I know the peptides are genuine?', a: 'Every batch is third-party tested by HPLC and mass spectrometry, and its certificate of analysis is available on request before you pay. You can also verify a vial by entering its batch number on the verification page at codexresearchlab.com/verify/.' },
+        {
+          "q": "How long does delivery take in Panama?",
+          "a": "In Panama City, 1 to 2 hours on the same day, with $4 flat shipping. Interior cities such as David, Chitré and Colón receive orders the next business day by Fergunson transport. Shipping is free on orders over $100."
+        },
+        {
+          "q": "How is payment handled?",
+          "a": "At checkout on the site. Card payments with Visa, Mastercard or American Express are processed by Stripe and completed on Stripe’s own secure checkout, so card details never touch this site. Crypto is accepted as USDC or USDT on Ethereum, verified on-chain before the order is released."
+        },
+        {
+          "q": "Do I have to order through WhatsApp?",
+          "a": "No. Orders are placed and paid at checkout. WhatsApp is a support channel where a specialist answers questions before and after an order, not a step in the purchase."
+        },
+        {
+          "q": "Can I see a certificate of analysis before ordering?",
+          "a": "Yes. The certificate for a batch can be requested before an order rather than only after delivery, and the batch number can be entered on the verification page to confirm which document it corresponds to."
+        },
+        {
+          "q": "Does buying locally change anything about the material?",
+          "a": "It shortens transit. A freeze-dried peptide is stable while dry, and a long journey means more temperature and humidity cycles, each an opportunity for moisture to reach the material. A short local delivery is a single trip."
+        },
+        {
+          "q": "My vial looks empty. Is something missing?",
+          "a": "Usually not. At the masses typically supplied, freeze-dried material can be a thin film or a few flecks on the glass. Appearance depends on how the drying went and on whether a bulking agent was present, not on how much compound is there."
+        }
       ],
       references: [],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a> or <a href="verify/">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
@@ -2310,50 +3266,103 @@
       excerpt: 'A mitochondrial-derived peptide and the areas of metabolism and aging research it appears in.',
       imageAlt: 'MOTS-c mitochondrial-derived peptide studied in metabolism and aging research',
       body: `
-        <p class="lead">MOTS-c is a small peptide encoded within the mitochondrial genome, unlike most peptides that come from nuclear DNA. It is studied as a mitochondrial-derived signaling molecule involved in metabolism, cellular stress responses, aging, and exercise.</p>
+        <p class="lead">Almost every peptide in a research catalogue is encoded in nuclear DNA. MOTS-c is not. It comes from a short open reading frame inside the mitochondrial genome, which is unusual enough that its discovery opened a category rather than adding to one.</p>
 
-        <h2>What is MOTS-c?</h2>
-        <p>MOTS-c (Mitochondrial Open Reading Frame of the 12S rRNA type-c) is a small peptide encoded within the mitochondrial genome. Unlike most peptides, which are coded in nuclear DNA, MOTS-c originates from mitochondrial DNA. That origin puts the organelle in signaling as well as energy metabolism, and it opened interest in other mitochondrial-derived peptides as regulators of cellular processes. To understand where peptides fit among biomolecules, see <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a>.${cite('Reference: Lee et al., 2015', 'https://doi.org/10.1016/j.cmet.2015.09.001')}</p>
-
-        <h2>How has MOTS-c been studied?</h2>
-        <p>Research on MOTS-c spans in vitro, animal, and human models:</p>
+        <h2>Identity</h2>
         <ul>
-          <li><b>Cell culture studies</b> have examined how MOTS-c influences metabolic pathways, including glucose utilization and stress responses.</li>
-          <li><b>Animal models</b> have explored its role in energy balance, skeletal muscle activity, and mitochondrial function.</li>
-          <li><b>Human studies</b> have measured circulating MOTS-c levels in contexts such as exercise and aging, showing how the peptide behaves under different physiological states.</li>
+          <li><b>Molecular formula:</b> C<sub>101</sub>H<sub>152</sub>N<sub>28</sub>O<sub>22</sub>S<sub>2</sub></li>
+          <li><b>Molecular weight:</b> approximately 2,175 g/mol</li>
+          <li><b>PubChem CID:</b> 146675088</li>
         </ul>
-        <p>${cite('Reference: Reynolds et al., 2021', 'https://doi.org/10.3389/fendo.2021.678778').trim()}</p>
+        <p>The name is an abbreviation of its origin: an open reading frame within the mitochondrial 12S ribosomal RNA gene. The two sulfur atoms in the formula come from its two methionine residues, which is worth noting for storage, since methionine is one of the residues most prone to oxidation.</p>
 
-        <h2>Key research observations</h2>
-        <p>Across published studies, several observations about MOTS-c have emerged:</p>
-        <ul>
-          <li><b>Metabolic regulation:</b> MOTS-c interacts with pathways related to AMPK signaling and folate metabolism.</li>
-          <li><b>Stress response:</b> MOTS-c levels change under cellular and environmental stress, suggesting a role in adaptive responses.</li>
-          <li><b>Age-related patterns:</b> research notes that MOTS-c concentrations decline with age in some tissues and circulating samples.</li>
-          <li><b>Exercise association:</b> human studies have measured increases in MOTS-c after acute bouts of physical activity.</li>
-        </ul>
-        <p>${cite('Reference: Reynolds et al., 2021', 'https://doi.org/10.1038/s41467-020-20790-0').trim()}</p>
+        <h2>Encoded where proteins are not usually found</h2>
+        <p>The mitochondrial genome is small and was long treated as coding for a short list of components of the respiratory machinery. Short open reading frames within it were not expected to produce functional peptides. MOTS-c was identified as one that does. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Reference: Lee et al., 2015)</a></p>
+        <p>The finding mattered beyond the single molecule, because it implied a class. Work on mitochondrially derived peptides as a group followed. <a class="cite" href="https://doi.org/10.1113/jp274472" target="_blank" rel="noopener nofollow">(Reference: Kim et al., 2017)</a></p>
 
-        <h2>Common research applications</h2>
-        <p>MOTS-c is currently studied in laboratory settings to:</p>
-        <ul>
-          <li>Investigate mitochondrial and nuclear communication pathways.</li>
-          <li>Analyze changes in peptide signaling during metabolic stress.</li>
-          <li>Explore mitochondrial contributions to age-related cellular changes.</li>
-          <li>Develop models of exercise-induced signaling molecules.</li>
-        </ul>
-        <p>Peptides like MOTS-c used in research are produced by <a href="article/peptide-synthesis/">peptide synthesis</a> and verified for purity.${cite('Reference: Kim et al., 2018', 'https://doi.org/10.1016/j.cmet.2018.02.001')}</p>
+        <h2>A peptide that moves</h2>
+        <p>One line of work reports that the peptide relocates to the nucleus under metabolic stress, where it has been studied in the context of gene expression. <a class="cite" href="https://doi.org/10.1016/j.cmet.2018.06.008" target="_blank" rel="noopener nofollow">(Reference: Kim et al., 2018)</a> A molecule made in one compartment and acting in another is the kind of observation that makes a signalling role plausible, and it is the mechanistic question most of the literature circles.</p>
+        <p>Later work examined its regulation in the context of exercise and age in model systems. <a class="cite" href="https://doi.org/10.1038/s41467-020-20790-0" target="_blank" rel="noopener nofollow">(Reference: Reynolds et al., 2021)</a></p>
+        <p>These are laboratory and model-based observations. MOTS-c is supplied strictly as a research compound, and nothing here describes use in people or animals.</p>
+
+
+        <h2>Why a mitochondrial gene reads differently</h2>
+        <p>Mitochondria use a genetic code that differs from the one in the nucleus at a few codons, a consequence of their separate evolutionary history. A sequence read with the nuclear code and the same sequence read with the mitochondrial code do not always give the same peptide.</p>
+        <p>The detail matters for anyone comparing a published sequence against a supplier's specification, because a discrepancy can come from which code was applied rather than from the material. It is also part of why short open reading frames in mitochondrial DNA went unexamined for so long: the tools that scanned genomes for coding sequences were built around nuclear assumptions.</p>
+
+        <h2>A class, not a one-off</h2>
+        <p>MOTS-c is not the only peptide attributed to the mitochondrial genome. Humanin was described earlier, and the recognition that both exist prompted systematic searches for others. <a class="cite" href="https://doi.org/10.1113/jp274472" target="_blank" rel="noopener nofollow">(Reference: Kim et al., 2017)</a></p>
+        <p>The practical reason this matters to a catalogue is that members of a class tend to be studied comparatively. Sequences from the same origin, examined side by side, is the same experimental logic that puts two copper tripeptides next to each other elsewhere in this catalogue.</p>
+
+        <h2>Sixteen residues is small for a signalling peptide</h2>
+        <p>At about 2,175 daltons this is a short chain by the standards of the other compounds here, where forty residues and an attached fatty acid are common. Short peptides tend to stay flexible in solution instead of holding one fold, which is normal and not a defect; our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers why.</p>
+        <p>Size also shapes what a vial looks like. A few milligrams of freeze-dried material may amount to a barely visible trace on the wall of the vial, which is a property of <a href="article/lyophilization-freeze-drying/">how the drying works</a>.</p>
+
+        <h2>Sixteen residues is a short synthesis</h2>
+        <p>At this length the <a href="article/peptide-synthesis/">solid-phase synthesis</a> is straightforward: sixteen coupling cycles, no unusual residues, no acylation step. The compound is far simpler to make than the acylated forty-residue peptides elsewhere in this catalogue, and the impurity profile is correspondingly simpler.</p>
+        <p>Deletion sequences remain the impurity to watch. In a sixteen-residue chain a missing residue is a proportionally larger change than in a forty-residue one, which helps a purity method resolve it.</p>
+
+        <h2>The methionines are the handling issue</h2>
+        <p>Methionine oxidises. The reaction adds an oxygen, about sixteen daltons, and produces a species that a <a href="article/mass-spectrometry-peptide-research/">mass measurement</a> separates cleanly from the intact peptide. With two methionines, a singly and a doubly oxidised form are both possible.</p>
+        <p>The practical consequence is ordinary and worth respecting: keep the material dry, cool and away from light, and let a cold vial reach room temperature before opening so condensation does not form inside. Our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers the routes of degradation in more detail.</p>
+
+        <h2>What verification establishes</h2>
+        <p>Purity from <a href="article/high-performance-liquid-chromatography-hplc/">chromatography</a> reports what share of the detected material is the target. Identity from mass spectrometry compares the measured mass against the mass calculated from the sequence, and at about 2,175 daltons the difference between monoisotopic and average mass is small but not zero, so the convention used belongs on the document.</p>
+        <p>Both figures, tied to a batch number, are what a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> reports and what can be <a href="verify/">checked</a> against a vial.</p>
+
+        <h2>Reading a specification for this one</h2>
+        <p>Two details are worth checking against any listing. The formula should account for both sulfur atoms, since a sequence quoted with one methionine describes a different peptide. And the mass should be quoted with its convention, because at this size the monoisotopic and average values differ by under a dalton, which is small enough to be mistaken for measurement error when it is a difference of definition.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research, including MOTS-c, are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What is MOTS-c?', a: 'MOTS-c is a small mitochondrial-derived peptide encoded in mitochondrial DNA. It is studied as a signaling molecule involved in metabolism, stress response, aging, and exercise.' },
-        { q: 'Where does MOTS-c come from?', a: 'Unlike most peptides, which are encoded in nuclear DNA, MOTS-c is encoded within the mitochondrial genome, specifically the 12S rRNA region.' },
-        { q: 'What does MOTS-c do in research studies?', a: 'Studies associate MOTS-c with AMPK signaling and folate metabolism, changes under cellular stress, declines with age in some tissues, and increases after exercise.' },
+        {
+          "q": "What is MOTS-c?",
+          "a": "A short peptide encoded by an open reading frame within the mitochondrial 12S ribosomal RNA gene, rather than by nuclear DNA. Its formula is C101H152N28O22S2 and its molecular weight is about 2,175 g/mol."
+        },
+        {
+          "q": "Why is its mitochondrial origin notable?",
+          "a": "The mitochondrial genome was long treated as coding only for a short list of respiratory components, and short open reading frames within it were not expected to yield functional peptides. Identifying one that does implied a whole class."
+        },
+        {
+          "q": "What does the research literature examine?",
+          "a": "Mechanistic work has reported relocation to the nucleus under metabolic stress and studied the peptide in the context of gene expression, with later work examining its regulation in exercise and age in model systems. These are laboratory and model-based observations."
+        },
+        {
+          "q": "Is MOTS-c difficult to synthesise?",
+          "a": "Less so than most compounds in this catalogue. Sixteen coupling cycles, no unusual residues and no acylation step make it a straightforward solid-phase synthesis with a correspondingly simpler impurity profile."
+        },
+        {
+          "q": "Why do the two methionines matter for storage?",
+          "a": "Methionine oxidises, adding about sixteen daltons per residue, and with two of them both singly and doubly oxidised forms are possible. Keeping the material dry, cool and out of light limits the reaction."
+        },
+        {
+          "q": "Can mass spectrometry detect oxidised MOTS-c?",
+          "a": "Yes. Each oxidation adds about sixteen daltons, a difference that a mass measurement resolves cleanly from the intact peptide."
+        }
       ],
       references: [
-        { text: 'Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. Cell Metabolism, 21(3), 443-454.', url: 'https://doi.org/10.1016/j.cmet.2015.09.001' },
-        { text: 'Kim, K.H., et al. (2018). Mitochondrial peptides as regulators of metabolism. Cell Metabolism, 28(3), 330-341.', url: 'https://doi.org/10.1016/j.cmet.2018.02.001' },
-        { text: 'Reynolds, J.C., et al. (2021). MOTS-c: a mitochondrial signal regulating metabolism and aging. Frontiers in Endocrinology, 12, 678778.', url: 'https://doi.org/10.3389/fendo.2021.678778' },
-        { text: 'Reynolds, J.C., et al. (2021). MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis. Nature Communications, 12, 470.', url: 'https://doi.org/10.1038/s41467-020-20790-0' },
+        {
+          "text": "MOTS-c compound summary. PubChem, National Library of Medicine (CID 146675088).",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/146675088"
+        },
+        {
+          "text": "Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis. Cell Metabolism, 21(3), 443-454.",
+          "url": "https://doi.org/10.1016/j.cmet.2015.02.009"
+        },
+        {
+          "text": "Kim, K.H., Son, J.M., Benayoun, B.A., &amp; Lee, C. (2018). The mitochondrial-encoded peptide MOTS-c translocates to the nucleus to regulate nuclear gene expression. Cell Metabolism, 28(3), 516-524.",
+          "url": "https://doi.org/10.1016/j.cmet.2018.06.008"
+        },
+        {
+          "text": "Kim, S.J., Xiao, J., Wan, J., Cohen, P., &amp; Yen, K. (2017). Mitochondrially derived peptides as novel regulators of metabolism. The Journal of Physiology, 595(21), 6613-6621.",
+          "url": "https://doi.org/10.1113/jp274472"
+        },
+        {
+          "text": "Reynolds, J.C., et al. (2021). MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis. Nature Communications, 12, 470.",
+          "url": "https://doi.org/10.1038/s41467-020-20790-0"
+        }
       ],
       cta: 'Explore our <a href="catalog/?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
       related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis', 'what-is-nad-plus'],
