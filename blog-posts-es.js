@@ -62,7 +62,7 @@
         { q: '¿Qué formas de pago puedo usar en Panamá?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). El pago se completa en el sitio al finalizar la compra, y el monto lo calcula el servidor, así que siempre coincide con tu carrito.' },
         { q: '¿Cómo sé que los péptidos son auténticos?', a: 'Cada lote se analiza en un laboratorio independiente por HPLC y espectrometría de masas, y su certificado de análisis está disponible a solicitud antes de pagar. También puedes verificar un vial ingresando su número de lote en la página de verificación, en codexresearchlab.com/es/verify/.' },
       ],
-      cta: 'Mira el <a href="catalog/">catálogo de Codex Research</a> o <a href="verify/">verifica un número de lote</a>. Los pedidos en Panamá se confirman por WhatsApp antes de pagar.',
+      cta: '¿Listo para pedir? Entra en <a href="es/comprar-peptidos-panama/">comprar péptidos de investigación en Panamá</a>, mira el <a href="catalog/">catálogo</a> o <a href="verify/">verifica un número de lote</a>.',
     },
 
     'verify-research-peptide-batch-coa-panama': {

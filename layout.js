@@ -22,6 +22,10 @@
   function altLang() {
     const p = location.pathname;
     if (LANG === 'es') {
+      // Hay páginas propias del mercado hispanohablante que no tienen gemela en
+      // inglés (p. ej. /es/comprar-peptidos-panama/). Sin esto el selector
+      // mandaría a una URL que no existe.
+      if (document.body.dataset.noAlt) return null;
       const en = p.replace(/^\/es/, '') || '/';
       return { href: en, label: 'English', code: 'EN' };
     }
