@@ -29,38 +29,89 @@
       excerpt: 'Entrega el mismo día en la ciudad de Panamá, pago local y cómo verificar cada lote antes de pagar.',
       imageAlt: 'Tiempos de entrega, pago en el checkout y cómo comprobar un lote antes de pagar.',
       body: `
-        <p class="lead">Comprar péptidos de investigación en Panamá es sencillo cuando sabes cómo funcionan el pedido, la entrega y la verificación aquí. Esta guía cubre la entrega el mismo día en la ciudad de Panamá, el envío al interior, los medios de pago disponibles en el país y cómo confirmar que cada vial es auténtico antes de pagar. Todos los productos son únicamente para uso en investigación de laboratorio.</p>
+        <p class="lead">Comprar péptidos de investigación en Panamá se diferencia de pedirlos al extranjero en algo que pesa más que el precio: el material ya está en el país. No hay nada esperando en aduana ni semanas de tránsito. Esta guía cubre cómo se hace el pedido, cuánto cuesta y cuánto tarda la entrega, cómo se paga, y cómo comprobar un vial antes de pagarlo.</p>
 
-        <h2>Cómo se hace un pedido en Panamá</h2>
-        <p>En Codex Research agregas los productos al carrito en el sitio y confirmas el pedido con un especialista por WhatsApp (+507 6335-4625). Los detalles del pedido, la entrega y cualquier duda se resuelven directamente en el chat, así que puedes preguntar antes de pagar. Los precios se muestran en dólares estadounidenses, la moneda de curso en Panamá.</p>
+        <h2>Cómo se hace un pedido</h2>
+        <p>Agregas los productos al carrito y pagas en el sitio. El pedido se cierra en el checkout, no se negocia por chat, y el precio que cobra el servidor se calcula en el momento del pago, así que coincide con lo que muestra el carrito.</p>
+        <p>Un especialista responde dudas por WhatsApp antes y después del pedido. Es un canal de soporte, no un paso de la compra: nada hay que arreglar por mensaje para que un pedido salga.</p>
 
-        <h2>Entrega en la ciudad de Panamá y en el interior</h2>
+        <h2>Tiempos y costo de entrega</h2>
         <ul>
-          <li><b>Ciudad de Panamá:</b> $4 de envío fijo, entrega en <b>1 a 2 horas</b> desde el inventario local.</li>
-          <li><b>Interior</b>: David, Chitré, Colón y otras ciudades: al siguiente día hábil por transporte Fergunson.</li>
+          <li><b>Ciudad de Panamá:</b> el mismo día, de 1 a 2 horas, $4 de envío fijo.</li>
+          <li><b>Interior:</b> David, Chitré, Colón y otras ciudades, al siguiente día hábil por transporte Fergunson.</li>
           <li><b>Envío gratis</b> en pedidos sobre $100.</li>
-          <li>Todo pedido sale en <b>empaque sellado y protegido</b>, con cada vial etiquetado con su compuesto, su concentración y su número de lote.</li>
         </ul>
-        <p>Como el inventario está en el país, no hay que esperar semanas por un paquete internacional ni pasar por aduana.</p>
+        <p>Todo sale en empaque sellado y protegido, y cada vial va etiquetado con su compuesto, su concentración y su número de lote. Si el sello llega roto, no recibas el paquete.</p>
 
-        <h2>Formas de pago en Panamá</h2>
-        <p>El pago se hace en el propio sitio, al momento de finalizar la compra:</p>
+        <h2>Por qué el inventario local cambia el material, no solo la espera</h2>
+        <p>Un paquete internacional pasa semanas moviéndose entre bodegas y vehículos, y lo que cuenta no son los días sino cuántos ciclos de temperatura y humedad atravesó. Un péptido liofilizado es estable mientras se mantenga seco, y cada calentamiento y enfriamiento es una oportunidad para que la humedad llegue hasta él.</p>
+        <p>Dos horas dentro de una ciudad son un solo trayecto corto. Es una propiedad del material y de cómo viaja, y nuestra guía de <a href="article/how-to-store-research-peptides/">almacenamiento</a> lo explica en detalle.</p>
+
+        <h2>Pagar desde Panamá</h2>
+        <p>El pago ocurre en el checkout del sitio, con dos métodos disponibles.</p>
         <ul>
-          <li><b>Tarjeta</b>: Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de tu tarjeta nunca pasan por nuestro sitio.</li>
-          <li><b>Cripto</b>: USDC o USDT en Ethereum, transferidos desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
+          <li><b>Tarjeta:</b> Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de la tarjeta nunca pasan por este sitio.</li>
+          <li><b>Cripto:</b> USDC o USDT en Ethereum, enviados desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
         </ul>
-        <p>El monto lo calcula nuestro servidor en el momento del pago, así que siempre coincide con lo que muestra tu carrito. Cualquier duda, antes o después del pedido, la responde un especialista por WhatsApp.</p>
+        <p>Los precios se muestran en dólares estadounidenses, la moneda de curso en Panamá, así que no hay conversión al momento de pagar.</p>
 
-        <h2>Cómo verificar la autenticidad antes de pagar</h2>
-        <p>Cada lote se analiza en un laboratorio independiente por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, y su certificado de análisis (COA) está disponible a solicitud, incluso antes de pedir si quieres verlo primero. También puedes confirmar que un vial es auténtico ingresando su número de lote en la <a href="verify/">página de verificación de lotes</a>.</p>
+        <h2>Comprobar un vial antes de pagar</h2>
+        <p>Esta parte conviene hacerla compres donde compres. Un número de lote impreso en una etiqueta solo sirve si conecta con algo.</p>
+        <ul>
+          <li>Escribe el número de lote en la <a href="verify/">página de verificación</a>. Te dice si ese lote existe y a qué documento corresponde.</li>
+          <li>Pide el certificado de análisis de ese lote. Se puede pedir antes del pedido, no solo después.</li>
+          <li>Lee el certificado completo. Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> explica qué significa cada campo y qué ausencias importan.</li>
+        </ul>
+        <p>Las tres preguntas que responde un documento completo son qué lote es, qué tan puro está y si es la molécula correcta. Un documento que solo responde una está incompleto, venga de donde venga.</p>
 
-        <h2>Solo para investigación</h2>
-        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+        <h2>Qué preguntarle a cualquier proveedor</h2>
+        <p>Tres preguntas resuelven casi todo, y conviene hacerlas antes de pagar.</p>
+        <ul>
+          <li><b>¿El número de lote del documento coincide con el del vial?</b> Si no, el certificado describe el material de otra persona.</li>
+          <li><b>¿Con qué método se midió, y en qué fecha?</b> Un porcentaje sin procedimiento detrás es una afirmación, no un resultado.</li>
+          <li><b>¿Quién firma el certificado, y además vende lo que midió?</b> Que mida un tercero separa a quien afirma de quien cobra.</li>
+        </ul>
+        <p>Ninguna es específica de Panamá ni de este proveedor. Son los criterios que hacen comprobable cualquier compra, y un proveedor que no pueda responderlas ya te dijo algo útil.</p>
+
+        <h2>Pedir desde fuera de la ciudad</h2>
+        <p>El interior se atiende por transporte terrestre con entrega al siguiente día hábil, así que un pedido hecho tarde llega al día laborable siguiente y no esa misma noche. Los feriados lo corren un día.</p>
+        <p>El empaque es el mismo sin importar el destino: sellado, protegido y etiquetado por vial. El día adicional es un tramo controlado y no un trámite de aduana, porque el inventario ya está en el país.</p>
+
+        <h2>Qué esperar al abrirlo</h2>
+        <p>El material liofilizado puede verse como muy poco: una película fina, unas escamas en el vidrio, a veces nada evidente. Un vial que parece vacío casi siempre no ha perdido nada, y es consecuencia de <a href="article/lyophilization-freeze-drying/">cómo funciona la liofilización</a> y de si la formulación llevaba un agente de relleno.</p>
+        <p>Deja que un vial frío llegue a temperatura ambiente antes de abrirlo, para que no se forme condensación por dentro. Guárdalo seco, fresco y lejos de la luz directa.</p>
+
+        <h2>Precios e inventario</h2>
+        <p>Los precios se fijan en el sitio y el servidor calcula el cobro en el momento del pago, así que el precio del carrito es el precio cobrado. El inventario está en el país, que es lo que hace posible la entrega el mismo día y también lo que la limita: un compuesto agotado en Panamá no aparece en una furgoneta por arte de magia, y la respuesta honesta en ese caso es una fecha.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. No damos orientación de uso, ni antes ni después de un pedido.</p>
       `,
       faq: [
-        { q: '¿Entregan péptidos de investigación en la ciudad de Panamá?', a: 'Sí. Codex Research envía desde inventario local con $4 de envío fijo y entrega en 1 a 2 horas dentro de la ciudad de Panamá. Ciudades del interior como David, Chitré y Colón reciben al siguiente día hábil por transporte Fergunson, y el envío es gratis en pedidos sobre $100.' },
-        { q: '¿Qué formas de pago puedo usar en Panamá?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). El pago se completa en el sitio al finalizar la compra, y el monto lo calcula el servidor, así que siempre coincide con tu carrito.' },
-        { q: '¿Cómo sé que los péptidos son auténticos?', a: 'Cada lote se analiza en un laboratorio independiente por HPLC y espectrometría de masas, y su certificado de análisis está disponible a solicitud antes de pagar. También puedes verificar un vial ingresando su número de lote en la página de verificación, en codexresearchlab.com/es/verify/.' },
+        {
+          "q": "¿Cuánto tarda la entrega en Panamá?",
+          "a": "En la ciudad de Panamá, de 1 a 2 horas el mismo día, con $4 de envío fijo. Ciudades del interior como David, Chitré y Colón reciben al siguiente día hábil por transporte Fergunson. El envío es gratis en pedidos sobre $100."
+        },
+        {
+          "q": "¿Cómo se paga?",
+          "a": "En el checkout del sitio. Las tarjetas Visa, Mastercard y American Express las procesa Stripe y el pago termina en su checkout seguro, así que los datos de la tarjeta nunca pasan por este sitio. También se acepta cripto en USDC o USDT sobre Ethereum, verificada en cadena antes de liberar el pedido."
+        },
+        {
+          "q": "¿Tengo que pedir por WhatsApp?",
+          "a": "No. Los pedidos se hacen y se pagan en el checkout. WhatsApp es un canal de soporte donde un especialista responde dudas antes y después del pedido, no un paso de la compra."
+        },
+        {
+          "q": "¿Puedo ver el certificado de análisis antes de pedir?",
+          "a": "Sí. El certificado de un lote se puede pedir antes del pedido y no solo después de la entrega, y el número de lote se puede escribir en la página de verificación para confirmar a qué documento corresponde."
+        },
+        {
+          "q": "¿Comprar local cambia algo del material?",
+          "a": "Acorta el tránsito. Un péptido liofilizado es estable mientras está seco, y un trayecto largo significa más ciclos de temperatura y humedad, cada uno una oportunidad para que llegue la humedad. Una entrega local corta es un solo trayecto."
+        },
+        {
+          "q": "Mi vial se ve vacío. ¿Falta algo?",
+          "a": "Normalmente no. A las masas que se suelen despachar, el material liofilizado puede ser una película fina o unas escamas en el vidrio. La apariencia depende de cómo salió el secado y de si había un agente de relleno, no de cuánto compuesto hay."
+        }
       ],
       cta: '¿Listo para pedir? Entra en <a href="es/comprar-peptidos-panama/">comprar péptidos de investigación en Panamá</a>, mira el <a href="catalog/">catálogo</a> o <a href="verify/">verifica un número de lote</a>.',
     },
@@ -221,44 +272,75 @@
       imageAlt: 'Equipo de espectrometría de masas usado para analizar péptidos de investigación',
       related: ['high-performance-liquid-chromatography-hplc', 'how-to-read-a-certificate-of-analysis', 'peptide-purity-hplc-explained'],
       body: `
-        <p class="lead">La espectrometría de masas (EM) es una técnica analítica que mide la relación masa-carga de moléculas ionizadas. En la investigación con péptidos se usa para confirmar la identidad, medir el peso molecular exacto, detectar modificaciones y evaluar la pureza, lo que la convierte en una de las herramientas más fiables para caracterizar péptidos sintéticos.</p>
+        <p class="lead">La espectrometría de masas mide la relación masa-carga de moléculas ionizadas. En trabajo con péptidos responde una pregunta que ninguna cifra de pureza responde por sí sola: ¿es esta la molécula correcta? Un cromatograma dice cuánto hay de una cosa. Un espectro de masas dice cuánto pesa esa cosa y, por tanto, qué es probablemente.</p>
 
-        <h2>¿Qué es la espectrometría de masas?</h2>
-        <p>La espectrometría de masas convierte los compuestos en partículas cargadas y las separa en un analizador según su relación masa-carga. Eso permite determinar pesos moleculares, identificar compuestos desconocidos y analizar mezclas complejas con alta sensibilidad.${cite('Referencia: Aebersold y Mann, 2003', 'https://doi.org/10.1038/nature01511')}</p>
+        <h2>Qué mide el instrumento</h2>
+        <p>Un espectrómetro de masas hace tres cosas en secuencia. Convierte moléculas neutras en iones, separa esos iones según su relación masa-carga, y los cuenta. La salida es un espectro: intensidad frente a m/z. Nada en ese proceso pesa una molécula directamente. Lo que se mide es cómo se comporta un ion en un campo eléctrico o magnético, y de ahí se infiere la masa. <a class="cite" href="https://doi.org/10.1038/nature01511" target="_blank" rel="noopener nofollow">(Referencia: Aebersold y Mann, 2003)</a></p>
 
-        <h2>¿Por qué se usa en la investigación con péptidos?</h2>
-        <p>Los péptidos son cadenas cortas de aminoácidos que pueden variar en secuencia, modificaciones y pureza. Si quieres los fundamentos, mira nuestra guía sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>. La espectrometría de masas es esencial para estudiarlos porque aporta información molecular precisa. Se usa para:</p>
+        <h2>Cómo un péptido se convierte en ion</h2>
+        <p>Los péptidos son grandes, frágiles y no volátiles, lo que los hizo muy difíciles de analizar hasta que dos métodos de ionización resolvieron el problema a finales de los ochenta.</p>
         <ul>
-          <li>Confirmar la identidad de un péptido midiendo su peso molecular exacto.</li>
-          <li>Detectar modificaciones postraduccionales o sintéticas.</li>
-          <li>Evaluar la pureza e identificar subproductos en preparaciones sintéticas.</li>
-          <li>Secuenciar péptidos mediante análisis de fragmentación.</li>
+          <li><b>Ionización por electrospray (ESI).</b> La muestra se pulveriza desde una aguja fina a alto voltaje. El disolvente se evapora de las gotas hasta dejar iones desnudos en fase gaseosa. Como trabaja desde disolución, el ESI se acopla directo a un cromatógrafo de líquidos. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Referencia: Fenn et al., 1989)</a></li>
+          <li><b>Desorción/ionización láser asistida por matriz (MALDI).</b> La muestra se cocristaliza con una matriz que absorbe luz y recibe un pulso láser. La matriz absorbe la energía y arrastra al péptido consigo a la fase gaseosa. <a class="cite" href="https://doi.org/10.1021/ac00171a028" target="_blank" rel="noopener nofollow">(Referencia: Karas y Hillenkamp, 1988)</a></li>
         </ul>
-        <p>${cite('Referencia: Yates et al., 2009', 'https://doi.org/10.1146/annurev-bioeng-061008-124934').trim()}</p>
+        <p>La diferencia práctica aparece en el espectro. El MALDI suele producir iones de una sola carga, así que el espectro es simple de leer. El ESI produce una serie de iones multicargados de la misma molécula, y el software combina esa serie en una masa. Un espectro con varios picos igualmente espaciados no son varios compuestos: es uno solo llevando distinto número de protones.</p>
 
-        <h2>Enfoques habituales en péptidos</h2>
-        <p>Varios métodos se aplican con frecuencia al análisis de péptidos:</p>
-        <ul>
-          <li><b>MALDI-TOF</b> (ionización/desorción láser asistida por matriz, con analizador de tiempo de vuelo): muy usado para determinar rápidamente la masa de un péptido.</li>
-          <li><b>ESI</b> (ionización por electrospray): permite analizar péptidos en disolución y se acopla bien a la cromatografía líquida.</li>
-          <li><b>LC-MS/MS</b> (cromatografía líquida con espectrometría de masas en tándem): combina separación y fragmentación para secuenciación y análisis estructural en detalle.</li>
-        </ul>
-        <p>La EM se combina a menudo con la <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución (HPLC)</a> para verificar la pureza.${cite('Referencia: Domon y Aebersold, 2006', 'https://doi.org/10.1126/science.1111443')}</p>
+        <h2>Masa monoisotópica y masa promedio</h2>
+        <p>Un certificado que reporta una masa observada está reportando uno de dos números distintos, y no son intercambiables.</p>
+        <p>La <b>masa monoisotópica</b> se calcula con el isótopo más ligero y abundante de cada elemento: carbono-12, hidrógeno-1, nitrógeno-14, oxígeno-16. La <b>masa promedio</b> pondera cada elemento por la abundancia natural de todos sus isótopos. Para un péptido pequeño las dos difieren en bastante menos de un dalton. A medida que la molécula crece la brecha se abre, porque hay más átomos de carbono disponibles para cargar un isótopo pesado. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Referencia: Senko et al., 1995)</a></p>
+        <p>Por eso una masa observada que queda a un dalton de lo esperado no es automáticamente un problema. Puede ser la misma molécula reportada con el otro criterio. Y por eso también un buen certificado dice qué masa está citando.</p>
 
-        <h2>Aplicaciones en investigación</h2>
-        <p>La espectrometría de masas se usa ampliamente en la ciencia de péptidos, por ejemplo para:</p>
+        <h2>Las configuraciones que verás nombradas</h2>
+        <p>Tres combinaciones cubren casi todo el análisis de péptidos, y un certificado suele nombrar una.</p>
         <ul>
-          <li>Verificar la identidad y la pureza de lotes de péptido sintético, un paso de rutina tras la <a href="article/peptide-synthesis/">síntesis</a>.</li>
-          <li>Mapear interacciones entre péptidos y proteínas.</li>
-          <li>Perfilar péptidos endógenos en muestras biológicas.</li>
-          <li>Apoyar estudios estructurales localizando modificaciones de aminoácidos.</li>
+          <li><b>MALDI-TOF.</b> Ionización láser con analizador de tiempo de vuelo, que separa iones por el tiempo que tardan en recorrer una distancia fija. Rápido, tolerante a sales y adecuado para confirmar la masa de una muestra purificada.</li>
+          <li><b>ESI-MS.</b> Electrospray alimentando el analizador directo desde disolución. La elección natural cuando la muestra ya está en líquido.</li>
+          <li><b>LC-MS/MS.</b> Cromatografía líquida delante, espectrometría en tándem detrás. El cromatógrafo separa, el primer analizador selecciona un componente y el segundo mide sus fragmentos. Es la configuración que da separación, masa y evidencia de secuencia en una sola corrida.</li>
         </ul>
-        <p>${cite('Referencia: Aebersold y Mann, 2016', 'https://doi.org/10.1038/nature19949').trim()}</p>
+
+        <h2>Espectrometría en tándem y la secuencia</h2>
+        <p>Medir la molécula entera confirma su masa. No confirma el orden de los residuos, y dos secuencias distintas construidas con los mismos aminoácidos pesan exactamente igual. La espectrometría en tándem cierra ese hueco: selecciona un ion, lo rompe y mide los pedazos.</p>
+        <p>Los péptidos tienden a romper por el esqueleto amida, produciendo dos familias de fragmentos: una serie que conserva el extremo amino y otra que conserva el carboxilo. La convención para nombrarlos es estándar desde 1984, y la diferencia entre fragmentos consecutivos corresponde al residuo que se perdió. Leyendo la serie, la secuencia aparece sola. <a class="cite" href="https://doi.org/10.1002/bms.1200111109" target="_blank" rel="noopener nofollow">(Referencia: Roepstorff y Fohlman, 1984)</a> <a class="cite" href="https://doi.org/10.1126/science.1124619" target="_blank" rel="noopener nofollow">(Referencia: Domon y Aebersold, 2006)</a></p>
+
+        <h2>Con qué se combina, y por qué</h2>
+        <p>La <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> separa y cuantifica, pero no nombra. Dos compuestos pueden salir de la columna a tiempos parecidos y un detector UV reporta ambos como picos, sin opinión. La espectrometría de masas nombra, pero por sí sola no dice qué proporción representa cada componente. Juntas como LC-MS cubren el punto ciego de la otra, y por eso un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo trae un resultado de cada una. <a class="cite" href="https://doi.org/10.1146/annurev-bioeng-061008-124934" target="_blank" rel="noopener nofollow">(Referencia: Yates et al., 2009)</a></p>
+
+        <h2>Qué no puede decirte</h2>
+        <ul>
+          <li><b>Los isómeros pesan igual.</b> Leucina e isoleucina tienen masas de residuo idénticas, así que una medición estándar no distingue secuencias que solo se diferencien en cambiar una por otra.</li>
+          <li><b>La estereoquímica es invisible.</b> Un aminoácido D y su contraparte L pesan lo mismo. Nada en el espectro los separa.</li>
+          <li><b>La altura del pico no es concentración.</b> Moléculas distintas ionizan con eficiencia distinta, así que la intensidad no se traduce en cantidad sin un patrón de referencia.</li>
+          <li><b>Ve lo que se ioniza.</b> Sales, agua y contraiones que forman parte del polvo pesado no aparecen como aparece el péptido.</li>
+        </ul>
+
+        <h2>Dónde encaja en el registro de un lote</h2>
+        <p>Para un péptido sintético la secuencia habitual es directa. Se fabrica el material, se purifica, una corrida cromatográfica establece qué proporción es el objetivo, y una medición de masa establece que el objetivo es la molécula pretendida. Los dos resultados, ligados a un número de lote, son lo que convierte una etiqueta en algo comprobable. Puedes consultar el lote de un vial en nuestra <a href="verify/">página de verificación</a>. <a class="cite" href="https://doi.org/10.1038/nature19949" target="_blank" rel="noopener nofollow">(Referencia: Aebersold y Mann, 2016)</a></p>
       `,
       faq: [
-        { q: '¿Qué mide la espectrometría de masas en un péptido?', a: 'Mide la relación masa-carga de las moléculas de péptido ionizadas, lo que da su peso molecular exacto y confirma la identidad y la pureza.' },
-        { q: '¿Cuál es la diferencia entre MALDI-TOF y ESI en péptidos?', a: 'MALDI-TOF se usa para determinar rápidamente la masa de péptidos en una matriz sólida, mientras que ESI ioniza los péptidos en disolución y se acopla con facilidad a la cromatografía líquida.' },
-        { q: '¿Por qué importa la espectrometría de masas después de sintetizar un péptido?', a: 'Confirma que el péptido sintetizado tiene la secuencia y el peso molecular correctos, y ayuda a detectar subproductos antes de usarlo en investigación.' },
+        {
+          "q": "¿Qué mide la espectrometría de masas en péptidos?",
+          "a": "La relación masa-carga de moléculas ionizadas. De ahí se infiere la masa molecular y se compara con la calculada a partir de la secuencia pretendida, que es lo que confirma la identidad."
+        },
+        {
+          "q": "¿Qué diferencia hay entre MALDI y ESI?",
+          "a": "El MALDI ioniza desde una matriz sólida golpeada por láser y suele dar iones de una sola carga, así que el espectro es simple. El ESI ioniza desde disolución y da una serie de iones multicargados que el software combina en una masa. El ESI se acopla directo a cromatografía líquida; el MALDI no."
+        },
+        {
+          "q": "¿Qué diferencia hay entre masa monoisotópica y promedio?",
+          "a": "La monoisotópica usa el isótopo más ligero y abundante de cada elemento. La promedio pondera cada elemento por la abundancia natural de todos sus isótopos. Difieren en bastante menos de un dalton en péptidos pequeños y la brecha se abre al crecer la molécula, así que el certificado debería decir cuál reporta."
+        },
+        {
+          "q": "¿Puede confirmar la secuencia de un péptido?",
+          "a": "La espectrometría en tándem sí. Selecciona un ion, lo fragmenta por el esqueleto y mide los pedazos. La diferencia entre fragmentos consecutivos corresponde al residuo perdido, así que la secuencia se lee a lo largo de la serie."
+        },
+        {
+          "q": "¿Qué no detecta la espectrometría de masas?",
+          "a": "No distingue isómeros de igual masa, como leucina e isoleucina, y no ve la estereoquímica. La intensidad del pico tampoco se traduce en concentración, porque moléculas distintas ionizan con distinta eficiencia."
+        },
+        {
+          "q": "¿Por qué la pureza sin medición de masa está incompleta?",
+          "a": "La pureza cromatográfica reporta cuánto del material detectado es un componente principal, pero no establece que ese componente sea la molécula correcta. Emparejar pureza con una medición de identidad es lo que completa un certificado."
+        }
       ],
       cta: 'Mira nuestra gama de <a href="catalog/">péptidos de investigación</a>, analizados por espectrometría de masas y HPLC para verificar su pureza.',
     },
@@ -273,38 +355,73 @@
       imageAlt: 'Sistema de cromatografía líquida de alta resolución HPLC separando muestras de péptidos',
       related: ['mass-spectrometry-peptide-research', 'peptide-purity-hplc-explained', 'how-to-read-a-certificate-of-analysis'],
       body: `
-        <p class="lead">La cromatografía líquida de alta resolución (HPLC, por sus siglas en inglés) es una técnica analítica que sirve para separar, identificar y cuantificar los componentes de una mezcla. Una bomba de alta presión empuja una muestra líquida a través de una columna rellena de una fase estacionaria, y cada compuesto sale en un tiempo distinto, lo que permite analizar péptidos y otras moléculas con precisión.</p>
+        <p class="lead">De la cromatografía líquida de alta resolución sale la cifra de pureza. Una bomba empuja la muestra por una columna empacada, los componentes viajan a velocidades distintas y un detector los registra al salir. El número de un certificado es una medición de ese registro, así que vale tanto como las condiciones que lo produjeron.</p>
 
-        <h2>¿Cómo funciona la HPLC?</h2>
-        <p>La HPLC hace pasar una muestra líquida por una columna rellena de una fase estacionaria mientras una bomba de alta presión impulsa el disolvente, llamado fase móvil. Los distintos compuestos interactúan con la fase estacionaria con distinta fuerza, así que salen de la columna en momentos diferentes. A ese principio se le llama tiempo de retención.${cite('Referencia: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
+        <h2>Cómo ocurre la separación</h2>
+        <p>La columna va empacada con una fase estacionaria. Un disolvente, la fase móvil, se impulsa a través de ella a alta presión arrastrando la muestra. Cada componente interactúa con la fase estacionaria en distinto grado, así que cada uno pasa retenido un tiempo distinto. Ese tiempo es el tiempo de retención, y es lo que separa un compuesto de otro. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Referencia: Dong, 2006)</a></p>
 
-        <h2>¿Para qué se usa en investigación?</h2>
-        <p>La HPLC se aplica en muchos campos científicos. En investigación de péptidos y farmacéutica se usa habitualmente para:</p>
+        <h2>Para péptidos casi siempre es fase reversa</h2>
+        <p>La palabra reversa es histórica. La fase estacionaria es apolar, normalmente sílice con cadenas alquílicas C18 enlazadas, y la fase móvil es polar. Los péptidos se pegan a la superficie apolar y se van despegando al subir gradualmente la proporción de disolvente orgánico, típicamente acetonitrilo. Las secuencias más hidrofóbicas aguantan más, así que salen más tarde. <a class="cite" href="https://doi.org/10.1002/9780470508183" target="_blank" rel="noopener nofollow">(Referencia: Snyder et al., 2009)</a></p>
+
+        <h2>Por qué hay ácido en la fase móvil</h2>
+        <p>Los métodos para péptidos suelen llevar una pequeña cantidad de ácido trifluoroacético. Cumple dos funciones: mantiene el pH bajo para que los grupos ionizables queden en un estado consistente, y actúa como agente de par iónico asociándose a los sitios básicos protonados del péptido. El resultado son picos más afilados y mejor separación de secuencias parecidas. El efecto depende de la concentración y del ácido usado, y se ha estudiado de forma sistemática. <a class="cite" href="https://doi.org/10.1016/j.chroma.2005.02.047" target="_blank" rel="noopener nofollow">(Referencia: Shibue et al., 2005)</a></p>
+        <p>Esto conecta con algo que aparece después en el certificado. Ese mismo trifluoroacetato puede quedarse unido al material tras la purificación, que es la razón de que un péptido se aísle normalmente como sal y de que parte del polvo que pesas sea contraión en vez de péptido.</p>
+
+        <h2>Gradiente y corrida isocrática</h2>
+        <p>Un método isocrático mantiene constante la composición de la fase móvil durante toda la corrida. Un método en gradiente la cambia, subiendo la proporción orgánica de forma sostenida. Los péptidos casi siempre se corren en gradiente, porque una composición fija que libere una secuencia a tiempo retendrá otra demasiado, o arrastrará ambas juntas sin separación alguna.</p>
+        <p>La forma de ese gradiente es una variable real. Uno suave dispersa los picos y resuelve especies que uno pronunciado funde en uno solo. Dos laboratorios pueden analizar el mismo lote, reportar con honestidad y llegar a cifras de pureza distintas porque uno le dio más espacio a la separación. Es otra razón por la que las condiciones van junto al número.</p>
+
+        <h2>Qué ve el detector</h2>
+        <p>Casi todo el trabajo con péptidos usa detección ultravioleta, y la longitud de onda no es arbitraria.</p>
         <ul>
-          <li>Verificar la pureza de compuestos sintetizados, un paso de calidad clave tras la <a href="article/peptide-synthesis/">síntesis de péptidos</a>.</li>
-          <li>Separar fragmentos peptídicos o análogos.</li>
-          <li>Detectar concentraciones pequeñas de impurezas.</li>
-          <li>Preparar muestras para análisis estructurales o biológicos posteriores, muchas veces junto con la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</li>
+          <li><b>Cerca de 214 nm</b> absorbe el propio enlace amida. Todo péptido tiene enlaces amida, así que esa longitud de onda detecta prácticamente cualquier secuencia.</li>
+          <li><b>A 280 nm</b> la absorbancia viene sobre todo de las cadenas laterales aromáticas, triptófano y tirosina. Un péptido sin residuos aromáticos es casi invisible ahí.</li>
         </ul>
-        <p>${cite('Referencia: Kazakevich y LoBrutto, 2007', 'https://doi.org/10.1002/0470087951').trim()}</p>
+        <p>La consecuencia vale la pena conocerla: dos corridas de la misma muestra a longitudes de onda distintas pueden dar cifras de pureza distintas, porque no están detectando lo mismo con la misma sensibilidad.</p>
 
-        <h2>Características clave de la HPLC</h2>
-        <p>Quienes investigan valoran la HPLC porque ofrece:</p>
+        <h2>Qué muestra la traza</h2>
+        <p>Si el certificado incluye el cromatograma, míralo. Un pico alto y simétrico sobre una línea base plana es la imagen que quieres. Picos pequeños cerca del principal son comunes en síntesis y suelen corresponder a especies emparentadas, como secuencias truncadas o modificadas. Un hombro en el pico principal significa que el método resolvió eso con poco margen, que es justo por qué las condiciones del método pertenecen al documento. <a class="cite" href="https://doi.org/10.1002/0470087951" target="_blank" rel="noopener nofollow">(Referencia: Kazakevich y LoBrutto, 2006)</a></p>
+
+        <h2>El porcentaje de área no es porcentaje en masa</h2>
+        <p>Esta es la lectura equivocada más común de un resultado de HPLC. La pureza se reporta normalmente como el área del pico objetivo dividida entre el área total de los picos detectados. Responde una pregunta sobre el material detectado: de todo lo que vio este método, ¿qué proporción era el objetivo?</p>
+        <p>No responde qué proporción del polvo es péptido. El contraión, el agua absorbida y cualquier cosa sin cromóforo a la longitud de onda elegida no entran en ese cálculo. Un lote puede ser 99 por ciento puro por área y estar bastante por debajo de 99 por ciento de péptido en masa, sin contradicción entre las dos cifras. Miden cosas distintas, y por eso un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo reporta ambas.</p>
+
+        <h2>Las condiciones son parte del resultado</h2>
+        <p>Una cifra de pureza sin método detrás es una afirmación, no una medición. La columna, el gradiente, el flujo, la longitud de onda y la duración cambian el número que sale. Reportadas juntas, permiten que otra persona repita el análisis. Reportado solo, el porcentaje pide que se le crea. Las guías sobre validación de procedimientos analíticos existen precisamente porque un resultado es inseparable del procedimiento que lo produjo. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Referencia: Swartz y Krull, 2012)</a></p>
+
+        <h2>Qué no puede hacer la HPLC</h2>
         <ul>
-          <li><b>Alta resolución:</b> capacidad de separar con precisión compuestos muy parecidos entre sí.</li>
-          <li><b>Exactitud cuantitativa:</b> datos fiables de concentración en mezclas complejas.</li>
-          <li><b>Versatilidad:</b> sirve para péptidos, proteínas, metabolitos y moléculas orgánicas pequeñas.</li>
-          <li><b>Escalabilidad:</b> los métodos se adaptan desde el análisis de microgramos hasta la purificación preparativa.</li>
+          <li><b>Separa, no identifica.</b> Un detector reporta un pico a un tiempo de retención. No tiene opinión sobre qué molécula es, y por eso la pureza se acompaña de <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</li>
+          <li><b>Algo puede esconderse bajo el pico.</b> Una impureza que sale a la vez que el objetivo se cuenta como objetivo. Las secuencias de deleción, que difieren en un solo residuo, son las candidatas habituales.</li>
+          <li><b>La respuesta no es uniforme.</b> Dos compuestos a la misma concentración no dan necesariamente picos de la misma área.</li>
         </ul>
-        <p>${cite('Referencia: Swartz y Krull, 2012', 'https://doi.org/10.1201/b12039').trim()}</p>
-
-        <h2>Qué se ha observado</h2>
-        <p>Los estudios que usan HPLC reportan de forma consistente su valor en el control de calidad y la caracterización de péptidos. La investigación con péptidos suele usar HPLC de fase reversa para confirmar purezas por encima del 98 o 99 por ciento, y las corridas analíticas permiten detectar contaminantes incluso en trazas. Más allá de los péptidos, la HPLC se ha aplicado para seguir intermediarios metabólicos, evaluar la estabilidad de fármacos y vigilar la eficiencia de una síntesis química. También se usa para comprobar estándares de referencia preparados por <a href="article/lyophilization-freeze-drying/">liofilización</a>.${cite('Referencia: Dong, 2013', 'https://doi.org/10.1002/0471973106')}</p>
+        <p>Usada para lo que sabe hacer, sigue siendo la forma estándar de establecer qué proporción de un lote es lo que dice ser, y ese número es uno de los dos resultados que deberías esperar ligados a un lote en cualquier <a href="verify/">vial que puedas comprobar</a>.</p>
       `,
       faq: [
-        { q: '¿Para qué se usa la HPLC?', a: 'La HPLC sirve para separar, identificar y cuantificar los componentes de una mezcla. En investigación con péptidos verifica la pureza y detecta impurezas.' },
-        { q: '¿Qué es el tiempo de retención en HPLC?', a: 'El tiempo de retención es lo que tarda un compuesto en recorrer la columna y salir de ella. Compuestos distintos tienen tiempos de retención distintos, y así es como se separan.' },
-        { q: '¿Qué pureza puede confirmar la HPLC en péptidos?', a: 'La HPLC de fase reversa se usa habitualmente para confirmar purezas de péptido por encima del 98 o 99 por ciento y para detectar contaminantes en trazas.' },
+        {
+          "q": "¿Para qué se usa la HPLC con péptidos?",
+          "a": "Separa los componentes de una muestra y los cuantifica, que es como se produce una cifra de pureza. Es el método estándar para establecer qué proporción de un lote es el compuesto buscado."
+        },
+        {
+          "q": "¿Qué es el tiempo de retención?",
+          "a": "Lo que tarda un compuesto en recorrer la columna y llegar al detector. Los componentes que interactúan más con la fase estacionaria quedan retenidos más tiempo, y esa diferencia es lo que los separa."
+        },
+        {
+          "q": "¿Por qué se usa fase reversa para péptidos?",
+          "a": "La fase estacionaria es apolar y la móvil polar, así que los péptidos se unen a la columna y se liberan al subir la proporción de disolvente orgánico. Las secuencias más hidrofóbicas salen más tarde, lo que separa bien péptidos parecidos."
+        },
+        {
+          "q": "¿Por qué se añade ácido trifluoroacético?",
+          "a": "Mantiene el pH bajo para que los grupos ionizables queden en un estado consistente y actúa como par iónico afinando los picos. Ese mismo trifluoroacetato puede quedarse después con el material como contraión."
+        },
+        {
+          "q": "¿Importa si se detecta a 214 o a 280 nm?",
+          "a": "Sí. A 214 nm absorbe el enlace amida, así que se detecta prácticamente cualquier péptido. A 280 nm la señal viene de triptófano y tirosina, de modo que un péptido sin aromáticos es casi invisible. La misma muestra puede dar cifras distintas."
+        },
+        {
+          "q": "¿99 por ciento por HPLC es 99 por ciento de péptido?",
+          "a": "No. La pureza por HPLC es el área del pico objetivo sobre el área total detectada. El contenido neto de péptido es la proporción del polvo pesado que es péptido y no contraión ni agua. Un lote puede ser 99 por ciento puro por área y bastante menos por masa."
+        }
       ],
       cta: 'Mira los <a href="catalog/">péptidos de investigación</a> verificados por HPLC con pureza superior al 98 por ciento.',
     },
@@ -395,29 +512,70 @@
       imageAlt: 'Diagrama que compara aminoácidos, péptidos y proteínas por tamaño y estructura',
       related: ['peptide-synthesis', 'mass-spectrometry-peptide-research', 'what-is-bpc-157'],
       body: `
-        <p class="lead">Los aminoácidos, los péptidos y las proteínas se diferencian sobre todo en tamaño y estructura. Los aminoácidos son moléculas sueltas y son los ladrillos. Los péptidos son cadenas cortas, de 2 a unos 50 aminoácidos. Las proteínas son cadenas largas, a menudo de cientos de residuos, que se pliegan en estructuras tridimensionales complejas con funciones especializadas.</p>
+        <p class="lead">Aminoácido, péptido y proteína describen el mismo tipo de molécula a tres escalas. Un aminoácido es una unidad suelta. Un péptido es una cadena corta de ellas. Una proteína es una cadena larga que se pliega en una forma definida. Los límites entre los tres son convenciones, no leyes de la química, y conviene saberlo antes de tratar cualquiera de ellos como un corte rígido.</p>
 
-        <h2>¿Qué son los aminoácidos?</h2>
-        <p>Los aminoácidos son los ladrillos de los péptidos y las proteínas. Cada aminoácido tiene un carbono central unido a un grupo amino, un grupo carboxilo, un hidrógeno y una cadena lateral única, llamada grupo R. Esas cadenas laterales dan a cada aminoácido propiedades químicas distintas, de polar a apolar y de ácido a básico.</p>
+        <h2>El aminoácido</h2>
+        <p>Todo aminoácido estándar está construido igual: un carbono central que lleva un grupo amino, un grupo carboxilo, un hidrógeno y una cadena lateral. Solo cambia la cadena lateral, y de ahí viene toda la variedad. Algunas están cargadas, otras son polares, otras son aceitosas y evitan el agua, y dos contienen anillos que absorben luz ultravioleta, propiedad que hace visible un péptido a un detector a 280 nm.</p>
+        <p>Ese carbono central lleva cuatro grupos distintos, así que es un centro estereogénico. Casi todos los aminoácidos de la biología son de forma L. La forma D es su imagen especular, idéntica en masa y en fórmula, y una medición de masa no distingue una de otra. Es de las pocas cosas que un certificado no puede resolver solo con la masa.</p>
 
-        <h2>¿Qué son los péptidos?</h2>
-        <p>Los péptidos son cadenas cortas de aminoácidos unidos por enlaces peptídicos. Un enlace peptídico se forma cuando el grupo carboxilo de un aminoácido reacciona con el grupo amino de otro y se libera agua. En investigación, los péptidos se fabrican a menudo mediante <a href="article/peptide-synthesis/">síntesis de péptidos</a> para estudiar vías de señalización, interacciones enzimáticas y motivos estructurales. Se definen típicamente como cadenas de 2 a unos 50 aminoácidos, aunque el corte exacto varía. Un ejemplo muy estudiado es el <a href="article/what-is-bpc-157/">BPC-157</a>, un pentadecapéptido sintético de quince residuos.${cite('Referencia: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
+        <h2>El enlace que los une</h2>
+        <p>Un enlace peptídico se forma cuando el carboxilo de un aminoácido reacciona con el amino de otro y se libera una molécula de agua. El enlace resultante no es un enlace simple cualquiera. Los electrones se comparten a lo largo de la unión, dándole carácter parcial de doble enlace, y la consecuencia es que los seis átomos alrededor quedan en un plano y no pueden rotar libremente.</p>
+        <p>Esa rigidez es lo que hace posible el plegamiento. Una cadena que pudiera girar en cualquier punto no tendría motivo para adoptar una forma sobre otra. En el laboratorio, formar ese enlace a propósito y en un orden elegido es todo el problema que resuelve la <a href="article/peptide-synthesis/">síntesis de péptidos</a>.</p>
 
-        <h2>¿Qué son las proteínas?</h2>
-        <p>Las proteínas son cadenas de aminoácidos más grandes y complejas, a menudo de cientos de residuos. A diferencia de los péptidos cortos, se pliegan en estructuras tridimensionales intrincadas que determinan su función. Pueden actuar como enzimas, andamios estructurales, transportadores o receptores. La investigación sobre el plegamiento y el mal plegamiento de proteínas ha dado claves sobre enfermedades como el alzhéimer y el párkinson.${cite('Referencia: Dobson, 2003', 'https://doi.org/10.1038/nature02261')}</p>
+        <h2>Veinte residuos estándar, y los de fuera de la lista</h2>
+        <p>La síntesis de proteínas en células vivas usa veinte aminoácidos estándar, más dos que se incorporan por mecanismos especiales. La química no está limitada a esa lista. Una secuencia sintética puede incluir residuos que ningún organismo construye: aminoácidos D, residuos con cadenas laterales modificadas, o unidades por completo artificiales introducidas para cambiar cómo se comporta la cadena.</p>
+        <p>Los extremos también se pueden alterar. El extremo amino suele acetilarse y el carboxilo amidarse, y ambas cosas retiran una carga que de otro modo quedaría en la punta de la molécula. Una cadena también puede unirse de cabeza a cola o por cadenas laterales, que es la diferencia entre un <a href="article/cyclic-vs-linear-peptides/">péptido cíclico y uno lineal</a>.</p>
+        <p>Las secuencias se escriben del extremo amino al carboxilo, con código de tres letras o de una por residuo. Una especificación que cita una secuencia la cita en esa dirección, y leerla al revés produce una molécula distinta que, en la mayoría de los casos, pesa exactamente lo mismo.</p>
+        <p>Cada uno de esos cambios altera la fórmula y, por tanto, la masa. Por eso una especificación que nombra un extremo modificado nombra un número que una medición de identidad confirma o contradice.</p>
 
-        <h2>Diferencias clave</h2>
+        <h2>Dónde se traza la línea entre péptido y proteína</h2>
+        <p>La convención habitual pone la raya alrededor de cincuenta residuos. Ahí no ocurre nada químico. El mismo enlace une el residuo cincuenta y uno que unió el dos, y una cadena no adquiere una propiedad nueva por cruzar una cuenta.</p>
+        <p>Lo que cambia a lo largo de ese rango es el comportamiento. Las cadenas cortas tienden a quedarse flexibles en disolución, mientras que las largas tienen suficientes interacciones internas para sostener un plegamiento estable. La convención es un marcador aproximado de ese cambio, y se aplica sin consistencia: la misma molécula es un péptido en un artículo y una proteína pequeña en el siguiente.</p>
+        <p>Los términos vecinos se solapan con la misma imprecisión. Oligopéptido describe una cadena corta, polipéptido una larga, y ambos se usan con holgura. Nuestra nota sobre <a href="article/peptide-length-terminology/">terminología de longitud</a> cubre cómo se usan en la práctica.</p>
+
+        <h2>La estructura tiene niveles</h2>
+        <p>La secuencia de residuos es la estructura primaria, y es el único nivel que hay que especificar para definir la molécula. Los patrones locales repetidos sostenidos por puentes de hidrógeno a lo largo del esqueleto, sobre todo la hélice y la lámina, son la estructura secundaria; ambas se predijeron a partir de la geometría de enlace antes de verse experimentalmente. La disposición tridimensional de toda la cadena es la estructura terciaria. <a class="cite" href="https://doi.org/10.1073/pnas.37.4.205" target="_blank" rel="noopener nofollow">(Referencia: Pauling et al., 1951)</a></p>
+
+        <h2>Por qué la secuencia pesa tanto</h2>
+        <p>Experimentos clásicos mostraron que una proteína desnaturalizada puede recuperar por su cuenta su forma y su actividad originales, lo que estableció que la información necesaria para plegarse está en la propia secuencia y no llega de fuera. <a class="cite" href="https://doi.org/10.1126/science.181.4096.223" target="_blank" rel="noopener nofollow">(Referencia: Anfinsen, 1973)</a> El corolario es que el plegamiento también puede salir mal, y el estudio del plegamiento incorrecto ha sido un campo sustancial por derecho propio. <a class="cite" href="https://doi.org/10.1038/nature02261" target="_blank" rel="noopener nofollow">(Referencia: Dobson, 2003)</a></p>
+
+        <h2>No todo se pliega, y es normal</h2>
+        <p>La imagen ordenada de una secuencia que colapsa en una forma fija no aplica a toda cadena. Muchas regiones funcionales no tienen estructura estable por su cuenta y solo adoptan una al encontrarse con su pareja de unión. Los péptidos cortos caen a menudo en esa categoría, y por eso describir un péptido como no plegado es una descripción y no un defecto. <a class="cite" href="https://doi.org/10.1006/jmbi.1999.3110" target="_blank" rel="noopener nofollow">(Referencia: Wright y Dyson, 1999)</a></p>
+
+        <h2>Cómo se distinguen en la práctica</h2>
+        <p>Nada de estas definiciones es lo que un laboratorio mide. Lo que se mide es masa, y cómo se comporta el material en una columna.</p>
         <ul>
-          <li><b>Tamaño:</b> los aminoácidos son moléculas sueltas, los péptidos son cadenas cortas y las proteínas son cadenas largas plegadas.</li>
-          <li><b>Estructura:</b> las proteínas se pliegan en estructuras 3D estables, mientras que los péptidos suelen quedarse lineales o plegarse solo en parte.</li>
-          <li><b>Función:</b> los aminoácidos son ladrillos, los péptidos actúan a menudo como moléculas de señalización y las proteínas llevan a cabo funciones biológicas complejas.</li>
+          <li><b>La masa</b> distingue una secuencia de otra, porque cada residuo aporta un incremento conocido. Es lo que reporta la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, y así se produce la línea de identidad de un certificado.</li>
+          <li><b>La hidrofobicidad</b> determina cuánto se retiene la molécula en una columna de fase reversa, que es la base de la <a href="article/high-performance-liquid-chromatography-hplc/">medición de pureza</a>.</li>
+          <li><b>El tamaño</b> importa para elegir el método. Lo que sirve para un péptido de quince residuos no siempre es lo que se usa para una proteína plegada.</li>
         </ul>
-        <p>Herramientas analíticas como la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> se usan para confirmar la identidad de péptidos y proteínas.${cite('Referencia: Berg et al., 2002', 'https://www.ncbi.nlm.nih.gov/books/NBK21154/')}</p>
+        <p>Leídas juntas, esas dos mediciones convierten un nombre en una etiqueta en una afirmación que se puede contrastar con un <a href="verify/">lote concreto</a>.</p>
       `,
       faq: [
-        { q: '¿Cuál es la diferencia entre un péptido y una proteína?', a: 'Los péptidos son cadenas cortas de aproximadamente 2 a 50 aminoácidos, mientras que las proteínas son cadenas mucho más largas que se pliegan en estructuras tridimensionales complejas con funciones especializadas.' },
-        { q: '¿Qué es un enlace peptídico?', a: 'Un enlace peptídico es la unión entre dos aminoácidos. Se forma cuando el grupo carboxilo de uno reacciona con el grupo amino del otro y se libera una molécula de agua.' },
-        { q: '¿Cuántos aminoácidos hacen un péptido en vez de una proteína?', a: 'Los péptidos se definen normalmente como cadenas de 2 a unos 50 aminoácidos. Las cadenas más largas que se pliegan en estructuras estables se clasifican generalmente como proteínas, aunque el corte varía.' },
+        {
+          "q": "¿Qué diferencia hay entre un péptido y una proteína?",
+          "a": "Longitud y comportamiento. Un péptido es por convención una cadena de dos a unos cincuenta residuos y suele quedarse flexible en disolución; una proteína es más larga y normalmente se pliega en una estructura tridimensional estable. El corte es una convención, no un límite químico."
+        },
+        {
+          "q": "¿Qué es un enlace peptídico?",
+          "a": "La unión entre dos aminoácidos, formada cuando un carboxilo reacciona con un amino y se libera agua. Los electrones se comparten a lo largo de la unión, dándole carácter parcial de doble enlace, así que los átomos de alrededor quedan en un plano y no rotan libremente."
+        },
+        {
+          "q": "¿Cuántos aminoácidos hacen un péptido en vez de una proteína?",
+          "a": "Normalmente de dos a unos cincuenta. Nada químico cambia en una cuenta concreta; lo que cambia en ese rango es si la cadena tiene suficientes interacciones para sostener una forma estable."
+        },
+        {
+          "q": "¿Qué diferencia hay entre aminoácidos L y D?",
+          "a": "Son imágenes especulares en el carbono central. La biología usa casi exclusivamente la forma L. Las dos tienen fórmulas y masas idénticas, así que la espectrometría de masas no las distingue."
+        },
+        {
+          "q": "¿Cuáles son los niveles de estructura?",
+          "a": "La primaria es la secuencia de residuos. La secundaria son patrones locales repetidos como hélices y láminas, sostenidos por puentes de hidrógeno del esqueleto. La terciaria es la disposición tridimensional de toda la cadena."
+        },
+        {
+          "q": "¿Todos los péptidos se pliegan en una forma definida?",
+          "a": "No. Muchas cadenas, y los péptidos cortos en particular, no tienen estructura estable por su cuenta y solo adoptan una al unirse a una pareja. Un péptido no plegado está siendo descrito, no diagnosticado como defectuoso."
+        }
       ],
       cta: '¿Quieres ir más a fondo? Mira nuestros <a href="catalog/">péptidos de investigación</a> o aprende cómo se fabrican en la guía de <a href="article/peptide-synthesis/">síntesis de péptidos</a>.',
     },
@@ -432,37 +590,72 @@
       imageAlt: 'Síntesis de péptidos en fase sólida sobre perlas de resina en un laboratorio',
       related: ['amino-acids-peptides-proteins-difference', 'high-performance-liquid-chromatography-hplc', 'mass-spectrometry-peptide-research'],
       body: `
-        <p class="lead">La síntesis de péptidos es el proceso de laboratorio con el que se construyen cadenas cortas de aminoácidos unidos por enlaces peptídicos. La mayor parte de la síntesis moderna usa síntesis en fase sólida (SPPS), donde los aminoácidos se añaden de uno en uno sobre una perla de resina mediante ciclos repetidos de acoplamiento y desprotección.</p>
+        <p class="lead">Un péptido sintético se construye residuo a residuo, en un orden fijo, con un lavado entre cada paso. El método que lo hace práctico es la síntesis en fase sólida, y entenderlo explica varias cosas que después aparecen en un certificado de análisis: por qué el polvo lleva un contraión, por qué unas secuencias cuestan más que otras, y por qué la pureza hay que medirla en vez de suponerla.</p>
 
-        <h2>¿Qué es la síntesis de péptidos?</h2>
-        <p>Es el proceso de laboratorio con el que se crean cadenas cortas de aminoácidos unidos por enlaces peptídicos. Esas cadenas pueden imitar secuencias naturales o diseñarse a medida para investigación. Como los péptidos participan en la señalización, la actividad enzimática y la biología estructural, producirlos de forma sintética permite estudiarlos de manera controlada. Para los conceptos de base, mira nuestra guía sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>.${cite('Referencia: Merrifield, 1963', 'https://doi.org/10.1021/ja00897a025')}</p>
+        <h2>El enlace que tiene que formarse, una y otra vez</h2>
+        <p>Un enlace peptídico se forma cuando el grupo carboxilo de un aminoácido se une al grupo amino del siguiente, liberando agua. Por su cuenta la reacción es lenta y poco selectiva, así que en la práctica el carboxilo se activa químicamente primero, y todo grupo que no deba reaccionar se bloquea con un grupo protector. Cada ciclo de una síntesis es una versión pequeña y controlada de ese problema. Para el vocabulario de base, ver nuestra guía sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a>.</p>
 
-        <h2>¿Cómo se hace en el laboratorio?</h2>
-        <p>La mayor parte de la síntesis moderna usa síntesis de péptidos en fase sólida (SPPS). El primer aminoácido se ancla a una perla de resina sólida y los siguientes se añaden paso a paso. Cada ciclo consiste en:</p>
+        <h2>Por qué anclar la cadena a una bolita lo cambió todo</h2>
+        <p>En disolución, cada paso de una síntesis termina con una purificación, porque hay que separar el producto de todo lo demás del matraz. Unir la cadena en crecimiento a una resina insoluble elimina ese problema. El péptido se queda en la bolita, y reactivos y subproductos se lavan a través de un filtro. La idea se introdujo en 1963 y es la razón de que la síntesis de péptidos pueda automatizarse. <a class="cite" href="https://doi.org/10.1021/ja00897a025" target="_blank" rel="noopener nofollow">(Referencia: Merrifield, 1963)</a> <a class="cite" href="https://doi.org/10.1002/anie.198507993" target="_blank" rel="noopener nofollow">(Referencia: Merrifield, 1985)</a></p>
+
+        <h2>La resina decide cómo termina la cadena</h2>
+        <p>El primer residuo no se ancla a la bolita directamente sino a través de un enlazador, y la química de ese enlazador determina cómo queda el extremo carboxilo al cortar el péptido. Un enlazador libera un ácido carboxílico; otro libera una amida. No es trivia de fabricación: las dos formas difieren en masa en torno a un dalton y son compuestos distintos, así que una especificación que dice que el extremo está amidado describe algo que una medición de masa puede confirmar o contradecir.</p>
+
+        <h2>El ciclo</h2>
+        <p>La síntesis corre del extremo carboxilo hacia el amino, al revés de como construye una proteína un ribosoma. Cada residuo añadido repite los mismos cuatro pasos:</p>
         <ol>
-          <li><b>Activación:</b> preparar el siguiente aminoácido para el acoplamiento.</li>
-          <li><b>Acoplamiento:</b> formar un enlace peptídico entre la cadena en crecimiento y el aminoácido nuevo.</li>
-          <li><b>Desprotección:</b> retirar los grupos protectores para que la cadena pueda seguir creciendo.</li>
+          <li><b>Desprotección.</b> Se retira el grupo protector temporal del extremo libre de la cadena, dejando una amina lista para reaccionar.</li>
+          <li><b>Lavado.</b> Se arrastran reactivos y grupos protectores liberados.</li>
+          <li><b>Acoplamiento.</b> El siguiente aminoácido, activado en su carboxilo, forma el nuevo enlace.</li>
+          <li><b>Lavado otra vez.</b> El exceso de reactivo sale antes de empezar el ciclo siguiente.</li>
         </ol>
-        <p>Una vez completa la secuencia, el péptido se escinde de la resina y se purifica para uso en investigación.${cite('Referencia: Chan y White, 2000', 'https://doi.org/10.1093/oso/9780199637256.001.0001')}</p>
+        <p>Un péptido de veinte residuos es ese bucle repetido veinte veces. Nada se purifica por el camino.</p>
 
-        <h2>Características de la producción sintética</h2>
-        <p>La síntesis de péptidos ofrece:</p>
-        <ul>
-          <li><b>Precisión:</b> la posibilidad de diseñar secuencias de aminoácidos exactas.</li>
-          <li><b>Flexibilidad:</b> incorporar modificaciones como aminoácidos no naturales o marcajes.</li>
-          <li><b>Escalabilidad:</b> desde miligramos para experimentos hasta cantidades mayores para ensayos.</li>
-          <li><b>Control de pureza:</b> los productos se analizan por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> para confirmar identidad y pureza.</li>
-        </ul>
-        <p>${cite('Referencia: Coin, 2010', 'https://doi.org/10.1038/nmeth.1403').trim()}</p>
+        <h2>Fmoc y Boc</h2>
+        <p>Dominan dos estrategias de grupos protectores, nombradas por el grupo que protege el extremo amino entre ciclos. La química Boc lo retira con ácido. La química Fmoc lo retira con una base suave, lo que significa que los protectores de cadena lateral, que se quitan después con ácido, quedan intactos durante la síntesis. Esa separación de condiciones es lo que hace de Fmoc la opción habitual hoy. <a class="cite" href="https://doi.org/10.1021/jo00795a005" target="_blank" rel="noopener nofollow">(Referencia: Carpino y Han, 1972)</a> <a class="cite" href="https://doi.org/10.1093/oso/9780199637256.001.0001" target="_blank" rel="noopener nofollow">(Referencia: Chan y White, 1999)</a></p>
 
-        <h2>Qué se ha observado</h2>
-        <p>Los sintetizadores automáticos han mejorado mucho la eficiencia y permiten producir péptidos complejos con alta reproducibilidad. Los avances en reactivos de acoplamiento y en tecnologías de resina han reducido las reacciones secundarias y mejorado el rendimiento. Aun así, los péptidos muy largos o muy hidrofóbicos siguen siendo difíciles y suelen requerir condiciones optimizadas o químicas especializadas.${cite('Referencia: Merrifield, 1986', 'https://doi.org/10.1002/anie.198606031')}</p>
+        <h2>Reactivos de acoplamiento y el costo de un paso incompleto</h2>
+        <p>El reactivo que activa cada aminoácido decide qué tan completo queda el acoplamiento, y eso importa más de lo que suena. Si un acoplamiento va al 99 por ciento, una cadena de cada cien queda con un residuo de menos, y esa cadena acortada sigue por todos los ciclos restantes. El resultado es una secuencia de deleción: una molécula casi idéntica al objetivo, que difiere en un residuo. Los mejores reactivos de activación existen justo para empujar cada paso más cerca de completarse. <a class="cite" href="https://doi.org/10.1021/ja00063a082" target="_blank" rel="noopener nofollow">(Referencia: Carpino, 1993)</a></p>
+        <p>Esas secuencias de deleción son las impurezas que un método de pureza tiene que resolver, y son la razón de que un pico pequeño pegado al principal en un cromatograma valga la pena mirarlo.</p>
+
+        <h2>Comprobar un paso antes de seguir</h2>
+        <p>Como nada se purifica entre ciclos, un acoplamiento fallido conviene detectarlo de inmediato. Desde 1970 se usa una prueba de color para grupos amino libres en la resina: las bolitas que aún llevan aminas sin reaccionar cambian de color, señal de que el acoplamiento no se completó. <a class="cite" href="https://doi.org/10.1016/0003-2697(70)90146-6" target="_blank" rel="noopener nofollow">(Referencia: Kaiser et al., 1970)</a></p>
+
+        <h2>El corte, y de dónde sale el contraión</h2>
+        <p>Cuando la secuencia está completa, el péptido se corta de la resina y se retiran los protectores de cadena lateral, normalmente en un solo paso ácido con ácido trifluoroacético y una mezcla de capturadores que recoge los fragmentos reactivos liberados. Ahí entra en escena el trifluoroacetato por primera vez. Reaparece durante la <a href="article/high-performance-liquid-chromatography-hplc/">purificación en fase reversa</a>, y parte de él se queda con el material, que es la razón de que un péptido se aísle normalmente como sal y de que parte del polvo pesado sea contraión y no péptido.</p>
+
+        <h2>Secuencias que se resisten</h2>
+        <p>No todas se comportan. Las cadenas ricas en residuos hidrofóbicos pueden agregarse sobre la resina, plegándose sobre sí mismas de modo que el extremo reactivo queda físicamente bloqueado y los acoplamientos se atascan. Las síntesis largas agravan el problema, porque cada ciclo extra es otra oportunidad para una pérdida pequeña. Los procedimientos estándar y las modificaciones para secuencias difíciles están bien documentados. <a class="cite" href="https://doi.org/10.1038/nprot.2007.454" target="_blank" rel="noopener nofollow">(Referencia: Coin et al., 2007)</a></p>
+        <p>Pasada cierta longitud, la síntesis por pasos deja de ser práctica. La respuesta habitual es construir dos fragmentos más cortos y unirlos químicamente, un enfoque que hizo posibles las proteínas totalmente sintéticas. <a class="cite" href="https://doi.org/10.1126/science.7973629" target="_blank" rel="noopener nofollow">(Referencia: Dawson et al., 1994)</a></p>
+
+        <h2>Lo que sale de la resina no es el producto final</h2>
+        <p>El material crudo contiene el objetivo, secuencias de deleción, cadenas mal desprotegidas y restos de la mezcla de corte. Se purifica, normalmente por cromatografía en fase reversa, y solo entonces se caracteriza: una corrida establece qué proporción es el objetivo, y la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> establece que el objetivo es la molécula pretendida. Esos dos resultados, ligados a un número de lote, son lo que reporta un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y lo que puedes contrastar con un <a href="verify/">vial que tengas en la mano</a>.</p>
       `,
       faq: [
-        { q: '¿Cómo se fabrican los péptidos en el laboratorio?', a: 'La mayoría se fabrican por síntesis en fase sólida (SPPS), anclando aminoácidos de uno en uno a una perla de resina mediante ciclos repetidos de acoplamiento y desprotección, para después escindir y purificar la cadena.' },
-        { q: '¿Qué es la síntesis de péptidos en fase sólida (SPPS)?', a: 'La SPPS es un método en el que la cadena en crecimiento permanece anclada a una resina sólida mientras se añaden los aminoácidos paso a paso, lo que hace la síntesis eficiente y fácil de automatizar.' },
-        { q: '¿Cómo se confirma la pureza después de la síntesis?', a: 'La pureza se confirma con HPLC y espectrometría de masas, que verifican la secuencia correcta, el peso molecular y la ausencia de subproductos significativos.' },
+        {
+          "q": "¿Cómo se fabrican los péptidos de investigación?",
+          "a": "Casi siempre por síntesis en fase sólida. El primer residuo se ancla a una resina insoluble y la cadena se extiende un aminoácido por vez mediante ciclos de desprotección, lavado y acoplamiento. Al final se corta de la resina y se purifica."
+        },
+        {
+          "q": "¿Por qué el péptido va unido a una resina?",
+          "a": "Porque elimina la necesidad de purificar después de cada paso. La cadena se queda en el soporte sólido mientras reactivos y subproductos se lavan a través de un filtro, que es lo que hace el proceso repetible y automatizable."
+        },
+        {
+          "q": "¿Qué diferencia hay entre síntesis Fmoc y Boc?",
+          "a": "En cómo se retira el protector temporal del extremo amino. Boc usa ácido; Fmoc usa una base suave, dejando intacta la protección de cadena lateral hasta el final. Esa separación de condiciones hace de Fmoc la opción más común."
+        },
+        {
+          "q": "¿Qué es una secuencia de deleción?",
+          "a": "Una cadena a la que le faltó un residuo porque un acoplamiento no se completó, y que siguió por los ciclos restantes. Es casi idéntica al objetivo y difiere en un solo residuo, lo que la convierte en la impureza más difícil de resolver."
+        },
+        {
+          "q": "¿Por qué un péptido sintético contiene trifluoroacetato?",
+          "a": "El ácido trifluoroacético se usa para cortar el péptido de la resina y de nuevo como aditivo en la purificación en fase reversa. Parte queda asociado al material, así que el péptido suele aislarse como sal y parte del polvo pesado es contraión."
+        },
+        {
+          "q": "¿Por qué unas secuencias son más difíciles que otras?",
+          "a": "Las hidrofóbicas pueden agregarse sobre la resina y bloquear físicamente el extremo reactivo, atascando los acoplamientos. La longitud además acumula pérdidas pequeñas, porque cada ciclo adicional es otra oportunidad para un paso incompleto."
+        }
       ],
       cta: 'Mira el catálogo de <a href="catalog/">péptidos de investigación</a> sintetizados en laboratorio, verificados por HPLC y espectrometría de masas.',
     },
@@ -477,27 +670,75 @@
       imageAlt: 'Un número de registro con dígito de control, y los otros tres identificadores que lo acompañan.',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
       body: `
-        <p class="lead">Junto a casi todo compuesto de una ficha de investigación hay una cadena de dígitos etiquetada como CAS. Es fácil pasarla por alto, pero ese número pequeño es una de las formas más fiables de saber exactamente qué sustancia tienes delante. Los nombres pueden ser ambiguos. Un número CAS no.</p>
+        <p class="lead">Un número CAS es una etiqueta, no una descripción. No contiene información sobre estructura, fórmula ni masa, y no se puede deducir de ninguna de ellas. Su valor está en que es único y sin ambigüedad: una sustancia registrada, un número, y ningún sinónimo que discutir.</p>
 
-        <h2>¿Qué es un número CAS?</h2>
-        <p>Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta recibe el suyo, y no hay dos que compartan uno. Un compuesto puede tener varios nombres comunes, una abreviatura y un nombre sistemático larguísimo, pero tiene exactamente un número CAS. Corta de raíz la confusión de nombres.</p>
+        <h2>Cómo está formado</h2>
+        <p>El formato son hasta diez dígitos en tres partes separadas por guiones, como 137525-51-0. Las partes no tienen significado químico. Los números se asignan por orden a medida que se registran las sustancias, así que un primer bloque alto indica un registro reciente y nada más.</p>
+        <p>El último dígito es la excepción. Es un dígito de control calculado a partir de los anteriores, de modo que un número mal tecleado suele fallar la aritmética en vez de apuntar a otro compuesto. Es una salvaguarda pequeña pero real cuando alguien copia un número a mano entre una etiqueta, un certificado y una orden de compra.</p>
 
-        <h2>Cómo está estructurado</h2>
-        <p>Un número CAS se escribe en tres grupos de dígitos separados por guiones, con el patrón de un grupo más largo, luego dos dígitos y luego uno solo; por ejemplo, 137525-51-0. Ese último dígito suelto es un dígito de control, calculado a partir de los demás, que permite al software detectar una errata. Los dígitos en sí no esconden ningún significado sobre la estructura: son una entrada de registro, como un número de catálogo.</p>
+        <h2>Qué identifica el número</h2>
+        <p>Identifica una sustancia registrada, y el registro trata las formas de un mismo compuesto como sustancias distintas. Un ácido libre y su sal de sodio llevan números distintos. Un hidrato y la forma anhidra llevan números distintos. Los estereoisómeros llevan números distintos.</p>
+        <p>La consecuencia práctica es que un número CAS en una etiqueta afirma algo sobre la forma, no solo sobre la molécula. Si una especificación cita el número de una base libre y el vial contiene una sal, la etiqueta y el material no coinciden aunque el péptido sea el mismo.</p>
 
-        <h2>Por qué aparece en las fichas de péptidos</h2>
-        <p>Los péptidos de investigación suelen tener nombres y abreviaturas que se solapan, así que el número CAS es una forma precisa de confirmar qué compuesto se vende. En el catálogo de Codex Research verás el número CAS junto a cada producto; por ejemplo, el <a href="article/what-is-bpc-157/">BPC-157</a> con 137525-51-0. Es un detalle pequeño que hace la ficha comprobable en vez de solo descriptiva.</p>
+        <h2>Dónde se complica con péptidos</h2>
+        <p>Los péptidos purificados por fase reversa suelen aislarse como sales, arrastrando trifluoroacetato o acetato de la purificación. El péptido y sus formas salinas son sustancias registradas distintas, así que más de un número puede ser correcto según qué forma se describa.</p>
+        <p>Los complejos metálicos son peores. Un péptido de cobre existe como una especie en equilibrio cuya carga y contraión dependen de las condiciones, de modo que el número de registro queda ligado a una manera concreta de escribirlo. Nuestras notas sobre <a href="article/what-are-copper-peptides/">péptidos de cobre</a> y sobre <a href="article/what-is-ghk-cu/">GHK-Cu</a> explican por qué ahí el nombre no fija la fórmula.</p>
 
-        <h2>Usarlo para comprobar un compuesto</h2>
-        <p>Como el número CAS es único, sirve para buscar una sustancia en bases de datos químicas públicas y confirmar que estás ante el compuesto que esperas. Junto con un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y un número de lote verificable, es parte de cómo un proveedor de investigación hace su material trazable en vez de anónimo.</p>
+        <h2>No todo compuesto tiene uno</h2>
+        <p>El registro no es automático. Un compuesto puede estar bien caracterizado en la literatura, catalogado en otras bases, y aun así no tener número CAS en fuentes públicas. A los compuestos de investigación recientes les pasa más que a los antiguos.</p>
+        <p>La ausencia del número no es evidencia de nada sobre el material. Significa que el registro público es más delgado, lo que traslada el peso a la documentación del lote.</p>
 
-        <h2>Solo para investigación</h2>
-        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+        <h2>Por qué hizo falta una etiqueta única</h2>
+        <p>Los nombres químicos no son únicos. Un compuesto puede llevar un nombre sistemático, varios nombres triviales, un código de investigación, una denominación común internacional y lo que decida imprimir un catálogo. Algunos de esos nombres son ambiguos por sí solos, y otros se comparten entre compuestos que difieren en cosas que un nombre no captura.</p>
+        <p>Existen reglas de nomenclatura y ayudan: las convenciones para nombrar aminoácidos y péptidos las fija la comisión conjunta de IUPAC e IUB. <a class="cite" href="https://doi.org/10.1042/bj2190345" target="_blank" rel="noopener nofollow">(Referencia: IUPAC-IUB, 1984)</a> Pero un nombre sistemático para un péptido de cuarenta residuos es impracticable, y ahí es donde un número corto y arbitrario se gana su sitio.</p>
+        <p>Los catálogos agravan el problema renombrando por motivos comerciales. Un compuesto vendido con nombre de casa conserva el número de registro que le corresponde a su estructura, y ese número es el hilo de vuelta a la química cuando el nombre ya se alejó.</p>
+
+        <h2>Los otros identificadores</h2>
+        <ul>
+          <li><b>PubChem CID:</b> un número de registro de base de datos, asignado por la propia base. Enlaza a una estructura, una fórmula y propiedades calculadas.</li>
+          <li><b>ChEMBL ID:</b> la misma idea en otra base, orientada a datos de bioactividad.</li>
+          <li><b>InChI y su clave:</b> un identificador derivado de la estructura misma por un algoritmo publicado, de modo que dos personas con la misma estructura generan la misma cadena sin consultar registro alguno. <a class="cite" href="https://doi.org/10.1186/s13321-015-0068-4" target="_blank" rel="noopener nofollow">(Referencia: Heller et al., 2015)</a></li>
+        </ul>
+        <p>El último marca el contraste importante. Un número CAS hay que consultarlo porque fue asignado. Un InChI se calcula, así que lleva la estructura dentro.</p>
+
+        <h2>El número no es la medición</h2>
+        <p>Conviene resistir la costumbre de tratar un CAS coincidente como un paso de verificación. Confirma que la etiqueta nombra la sustancia que la especificación pretende. No puede confirmar que el material sea esa sustancia, porque nada del número se mide sobre la muestra.</p>
+        <p>Todos los identificadores comparten esa limitación, incluidos los calculados. Un InChI derivado de una estructura dibujada describe la estructura que alguien dibujó, no el polvo que alguien pesó.</p>
+
+        <h2>Cómo comprobar uno</h2>
+        <p>Un número CAS resuelve en las bases químicas públicas. Al escribirlo debería devolver un compuesto cuyo nombre, fórmula y masa coincidan con lo que dice la especificación. Conviene comparar las tres cosas y no solo una: si el número resuelve pero la fórmula no cuadra con la etiqueta, la discrepancia es real y vale la pena preguntar.</p>
+        <p>Es además la forma más rápida de detectar la diferencia entre un péptido libre y su complejo o su sal, porque los dos resuelven a registros distintos con masas distintas.</p>
+        <p>Una comparación más vale la pena mientras estás ahí. La masa del registro se calcula a partir de la estructura, y la masa del certificado se mide sobre el lote. Que dos números obtenidos por caminos distintos coincidan dice más que cualquiera de los dos por separado.</p>
+
+        <h2>Qué no establece un número CAS</h2>
+        <p>Dice que se registró una sustancia con esa identidad. No dice nada del vial: ni la pureza, ni si el material es esa sustancia, ni de qué lote salió.</p>
+        <p>Esas preguntas se responden midiendo. Una cifra de pureza por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y un resultado de identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, reportados en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> ligado a un número de lote que puedes <a href="verify/">comprobar</a>, son lo que conecta una entrada de registro con el polvo que tienes delante.</p>
       `,
       faq: [
-        { q: '¿Qué es un número CAS?', a: 'Un número CAS es un identificador único que el Chemical Abstracts Service asigna a una sustancia química. Cada sustancia distinta tiene exactamente uno, lo que lo convierte en una forma precisa de confirmar de qué compuesto se habla, sea cual sea el nombre que se use.' },
-        { q: '¿Cómo se escribe un número CAS?', a: 'Se escribe en tres grupos de dígitos separados por guiones, como 137525-51-0: un grupo más largo, después dos dígitos y después un único dígito de control calculado a partir de los demás para detectar erratas.' },
-        { q: '¿Por qué los péptidos de investigación llevan número CAS?', a: 'Los péptidos suelen tener varios nombres y abreviaturas, así que el número CAS es una forma inequívoca de identificar el compuesto exacto. Además permite buscar la sustancia en bases de datos químicas públicas para confirmarla.' },
+        {
+          "q": "¿Qué es un número CAS?",
+          "a": "Un identificador único de registro para una sustancia química, de hasta diez dígitos en tres partes separadas por guiones. No contiene información estructural y no se deduce de una fórmula: los números se asignan por orden según se registran las sustancias."
+        },
+        {
+          "q": "¿El último dígito significa algo?",
+          "a": "Sí. Es un dígito de control calculado a partir de los anteriores, así que un número mal tecleado suele fallar la aritmética en vez de resolver a otro compuesto."
+        },
+        {
+          "q": "¿Un péptido y su sal comparten número CAS?",
+          "a": "No. El registro trata el ácido libre, sus sales, hidratos y estereoisómeros como sustancias distintas con números distintos. Como los péptidos suelen aislarse como sales tras la purificación, más de un número puede ser correcto según la forma que se describa."
+        },
+        {
+          "q": "¿Y si un compuesto no tiene número CAS?",
+          "a": "El registro no es automático, así que un compuesto bien caracterizado puede carecer de él en fuentes públicas. La ausencia no dice nada del material: significa que el registro público es más delgado y que la documentación del lote carga más peso."
+        },
+        {
+          "q": "¿En qué se diferencia un InChI de un número CAS?",
+          "a": "Un InChI se calcula a partir de la estructura con un algoritmo publicado, así que cualquiera con la misma estructura produce la misma cadena. Un número CAS lo asigna un registro y hay que consultarlo."
+        },
+        {
+          "q": "¿Un número CAS en la etiqueta prueba lo que hay en el vial?",
+          "a": "No. Indica qué sustancia afirma la etiqueta. La pureza y la identidad salen de mediciones, reportadas en un certificado de análisis ligado a un lote concreto."
+        }
       ],
       cta: 'Mira el <a href="catalog/">catálogo de Codex Research</a>, donde cada producto lista su número CAS, o <a href="verify/">revisa un número de lote</a>.',
     },
@@ -512,38 +753,68 @@
       imageAlt: 'Excipientes comunes usados para estabilizar formulaciones de péptidos de investigación',
       related: ['lyophilization-freeze-drying', 'peptide-synthesis', 'high-performance-liquid-chromatography-hplc'],
       body: `
-        <p class="lead">Los excipientes son sustancias inactivas que se añaden a una formulación de péptido junto al compuesto principal. No aportan actividad biológica, pero estabilizan, protegen y ayudan a administrar el péptido, manteniéndolo íntegro y utilizable durante el almacenamiento, el manejo y los experimentos.</p>
+        <p class="lead">Abre un vial de péptido liofilizado y, en muchos casos, la mayor parte de lo que ves no es péptido. Los excipientes son los otros ingredientes: sustancias sin actividad propia, añadidas porque un péptido solo no sobrevive demasiado bien a la liofilización y al almacenamiento. Saber cuáles son cambia cómo se lee una masa en una etiqueta.</p>
 
-        <h2>¿Qué son los excipientes?</h2>
-        <p>Los excipientes son sustancias inactivas que se añaden a una formulación junto al compuesto principal. En investigación con péptidos ayudan a estabilizar, proteger o administrar el péptido de forma controlada. Aunque no aportan actividad biológica directa, aseguran que el péptido siga íntegro y utilizable durante el almacenamiento, el manejo y la aplicación experimental.</p>
+        <h2>No son relleno</h2>
+        <p>La palabra excipiente suena a paja, y esa es la idea equivocada. Cada uno está ahí por un fallo concreto que evita. La liofilización es un proceso duro: el material se congela, se le retira casi toda el agua por sublimación, y lo que queda tiene que aguantar el almacenamiento y luego disolverse limpio. Un péptido que pase por ahí sin ayuda puede agregarse, oxidarse, o salir como un residuo colapsado que no vuelve a disolverse bien. <a class="cite" href="https://doi.org/10.1016/S0378-5173(00)00423-3" target="_blank" rel="noopener nofollow">(Referencia: Wang, 2000)</a></p>
 
-        <h2>¿Por qué importan en péptidos?</h2>
-        <p>Los péptidos son moléculas muy sensibles que pueden degradarse por luz, calor, humedad o actividad enzimática. Los excipientes se añaden para reducir esos riesgos. Pueden:</p>
-        <ul>
-          <li>Prevenir la agregación o la oxidación del péptido.</li>
-          <li>Ajustar el pH para favorecer la estabilidad.</li>
-          <li>Mejorar la solubilidad para el trabajo de laboratorio.</li>
-          <li>Servir de agentes de carga durante la <a href="article/lyophilization-freeze-drying/">liofilización</a>.</li>
-        </ul>
-        <p>${cite('Referencia: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
+        <h2>Azúcares: reemplazar el agua que se quitó</h2>
+        <p>La trehalosa y la sacarosa son los estabilizadores habituales, y el mecanismo es más interesante que "protegen". En una formulación seca el azúcar forma un vidrio amorfo: un sólido tan viscoso que el movimiento molecular dentro queda prácticamente detenido. El péptido queda inmovilizado en esa matriz, y los puentes de hidrógeno que habría hecho con el agua los hace con los grupos hidroxilo del azúcar.</p>
+        <p>La idea salió del estudio de organismos que sobreviven a una desecación casi total, que acumulan justamente estos azúcares antes de secarse. <a class="cite" href="https://doi.org/10.1146/annurev.physiol.60.1.73" target="_blank" rel="noopener nofollow">(Referencia: Crowe et al., 1998)</a></p>
 
-        <h2>Excipientes habituales</h2>
-        <p>Se usa a menudo un conjunto pequeño de excipientes con propiedades bien documentadas:</p>
-        <ul>
-          <li><b>Manitol y trehalosa:</b> actúan como crioprotectores y estabilizantes durante la liofilización.</li>
-          <li><b>Arginina o glicina:</b> mejoran la solubilidad y reducen la agregación.</li>
-          <li><b>Tampones (fosfato, citrato):</b> mantienen el pH y la fuerza iónica.</li>
-          <li><b>Polisorbatos (Tween 20, Tween 80):</b> protegen frente a la adsorción superficial y la agregación.</li>
-        </ul>
-        <p>${cite('Referencia: Wang, 2000', 'https://doi.org/10.1016/S0378-5173(00)00423-3').trim()}</p>
+        <h2>Manitol: el que construye el cake</h2>
+        <p>El manitol hace otro trabajo. Es un agente de relleno: a las cantidades de miligramos típicas de un péptido de investigación no hay material suficiente para formar un <a href="article/lyophilization-freeze-drying/">cake</a> sólido, y el manitol aporta la estructura que mantiene la forma tras irse el hielo.</p>
+        <p>También se comporta distinto de los formadores de vidrio. Tiende a cristalizar en vez de quedarse amorfo, lo que es bueno para un cake firme y menos bueno para proteger una molécula que depende de quedar encerrada en un vidrio. Muchas formulaciones usan los dos, uno para la estructura y otro para la estabilización.</p>
 
-        <h2>Aplicaciones en investigación</h2>
-        <p>Los excipientes no se estudian por efectos terapéuticos, pero son críticos en la preparación de laboratorio. Ayudan a mantener la integridad del péptido en el vial, favorecen la reproducibilidad en ensayos de cultivo celular y dan resultados consistentes entre experimentos repetidos. Su inclusión ayuda a asegurar que lo que se observa se debe al péptido en estudio y no a la inestabilidad de la muestra. La pureza de la formulación final se confirma a menudo por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>.${cite('Referencia: Carpenter et al., 2002', 'https://doi.org/10.1007/978-1-4615-0557-0_5')}</p>
+        <h2>Tampones, y la trampa que llevan dentro</h2>
+        <p>Los péptidos se degradan a velocidades que dependen mucho del pH, así que un tampón mantiene la disolución donde la degradación es más lenta. La complicación está en el camino hacia abajo: al congelarse una disolución, se separa hielo puro y todo lo demás se concentra en la fracción líquida que va encogiendo. Si un componente del par tampón cristaliza antes que el otro, el pH de esa fracción se desplaza, a veces varias unidades, justo cuando el material está más vulnerable.</p>
+        <p>Por eso elegir tampón para un producto liofilizado no es intercambiable con elegirlo para una disolución.</p>
+
+        <h2>Tensioactivos: proteger las superficies</h2>
+        <p>El polisorbato 20 y el polisorbato 80 aparecen a concentraciones muy bajas, y su trabajo son las interfases: aire-líquido, líquido-sólido, la pared del vial. Los péptidos y las proteínas se acumulan en las superficies y ahí pueden desplegarse o agregarse, y un tensioactivo ocupa esas interfases primero.</p>
+        <p>Vienen con una advertencia que vale la pena conocer, porque los propios polisorbatos se degradan con el tiempo por oxidación e hidrólisis, y sus productos de degradación no son inertes. Un estabilizador no es una solución permanente. <a class="cite" href="https://doi.org/10.1002/jps.21190" target="_blank" rel="noopener nofollow">(Referencia: Kerwin, 2008)</a></p>
+
+        <h2>Aminoácidos como excipientes</h2>
+        <p>La glicina se usa de relleno en el mismo papel que el manitol. La arginina se usa por otra razón: suprime la agregación y mejora la solubilidad, lo que importa en secuencias reacias a volver a disolverse. La histidina sirve de tampón y de estabilizador a la vez. <a class="cite" href="https://doi.org/10.1007/978-1-4615-0557-0_5" target="_blank" rel="noopener nofollow">(Referencia: Carpenter et al., 2002)</a></p>
+        <p>Conviene notar que son aminoácidos libres, no residuos de una cadena, y no aparecen en la secuencia del compuesto. Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre esa distinción.</p>
+
+        <h2>Algunos viales no llevan más que el compuesto</h2>
+        <p>Nada de esto significa que todo péptido de investigación esté formulado. Muchos se despachan como el compuesto purificado y su contraión y nada más, sobre todo cuando la cantidad basta para formar un cake por sí sola y la secuencia no es propensa a agregarse.</p>
+        <p>Los proveedores lo eligen a propósito, y en algunos contextos de laboratorio es lo preferible: un excipiente que estabiliza un vial también puede interferir en un ensayo, aportar fondo a un método analítico, o ser una variable más que controlar. La pregunta no es si hay excipientes sino si lo sabes.</p>
+
+        <h2>Por qué importa al pesar el polvo</h2>
+        <p>Los excipientes forman parte de la masa del vial. También el contraión que queda de la purificación, y también el agua absorbida.</p>
+        <p>Por eso la pureza cromatográfica y el contenido neto de péptido responden preguntas distintas. Un lote puede ser 99 por ciento puro por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, es decir que casi todo el péptido detectado era el objetivo, mientras el péptido es una minoría del polvo pesado. Ninguna cifra está mal. Un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> que reporta solo una está incompleto.</p>
+        <p>Los excipientes explican además algo que de otro modo parece una inconsistencia entre dos viales del mismo compuesto. Uno puede verse como un cake blanco y firme llenando la base y otro como una película apenas visible, y la diferencia puede ser de formulación y no de contenido: un agente de relleno construye estructura visible, y el material sin él no tiene con qué construirla. La apariencia no mide cuánto hay.</p>
+
+        <h2>Qué debería decir una especificación</h2>
+        <p>Para material de investigación la pregunta útil es si la formulación está declarada. Un vial descrito solo por su compuesto y su cifra de miligramos deja abierto si esa cifra se refiere al péptido o a sólidos totales, y si hay algo más presente. Cuando importa para el trabajo, la especificación debería decirlo.</p>
       `,
       faq: [
-        { q: '¿Qué es un excipiente en una formulación de péptido?', a: 'Un excipiente es una sustancia inactiva que se añade junto al péptido para estabilizarlo, protegerlo o administrarlo. No tiene actividad biológica propia.' },
-        { q: '¿Cuáles son los excipientes habituales en péptidos?', a: 'Los más comunes son el manitol y la trehalosa como crioprotectores, la arginina o la glicina para la solubilidad, los tampones de fosfato o citrato, y los polisorbatos como Tween 20 y Tween 80.' },
-        { q: '¿Por qué se añaden excipientes a los péptidos?', a: 'Previenen la agregación y la oxidación, ajustan el pH, mejoran la solubilidad y actúan como agentes de carga durante la liofilización, manteniendo el péptido estable y reproducible.' },
+        {
+          "q": "¿Qué son los excipientes en una formulación de péptido?",
+          "a": "Sustancias añadidas junto al péptido que no tienen actividad propia. Existen para evitar fallos concretos durante la liofilización y el almacenamiento: agregación, oxidación, colapso del cake o dificultad para volver a disolverse."
+        },
+        {
+          "q": "¿Por qué se usan azúcares como la trehalosa?",
+          "a": "Forman un vidrio amorfo en estado seco, un sólido tan viscoso que el movimiento molecular queda prácticamente detenido, y hacen puentes de hidrógeno con el péptido en lugar del agua retirada. La estrategia viene de organismos que sobreviven a la desecación casi total."
+        },
+        {
+          "q": "¿Qué hace el manitol?",
+          "a": "Es un agente de relleno. A cantidades de miligramos no hay material suficiente para formar un cake sólido, y el manitol aporta la estructura. Tiende a cristalizar en vez de formar vidrio, así que construye un cake firme pero estabiliza menos que un azúcar."
+        },
+        {
+          "q": "¿Por qué importa el tampón en un péptido liofilizado?",
+          "a": "Porque al congelarse se separa hielo puro y todo lo demás se concentra en una fracción líquida que encoge. Si un componente del par tampón cristaliza antes que el otro, el pH de esa fracción puede desplazarse varias unidades justo cuando el material está más vulnerable."
+        },
+        {
+          "q": "¿Los excipientes afectan a cuánto péptido tengo?",
+          "a": "Sí. Forman parte de la masa del vial, igual que el contraión de la purificación y el agua absorbida. Por eso la pureza cromatográfica y el contenido neto de péptido son cifras distintas y un certificado completo reporta ambas."
+        },
+        {
+          "q": "¿Los aminoácidos usados como excipientes son parte del péptido?",
+          "a": "No. La arginina, la glicina y la histidina pueden estar presentes como aminoácidos libres para relleno, solubilidad o tamponamiento. Son moléculas aparte y no aparecen en la secuencia del compuesto."
+        }
       ],
       cta: 'Mira nuestros <a href="catalog/">péptidos de investigación</a>, formulados para la estabilidad y para dar resultados reproducibles.',
     },
@@ -715,27 +986,72 @@
       excerpt: 'Qué mide un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
       imageAlt: 'El porcentaje de área, las condiciones que lo producen y las preguntas que deja abiertas.',
       body: `
-        <p class="lead">Casi todas las fichas de péptidos de investigación mencionan una cifra de pureza, muchas veces 99 por ciento por HPLC. Es uno de los números más citados del campo y uno de los menos explicados. Vale la pena deletrear qué mide ese número y, tan importante como eso, qué no mide.</p>
+        <p class="lead">Noventa y nueve por ciento por HPLC es la cifra más citada del sector y la menos examinada. Es una medición real con un significado preciso, y ese significado es más estrecho de lo que casi todo el mundo supone.</p>
 
-        <h2>Cómo se mide la pureza</h2>
-        <p>La pureza se determina normalmente por <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía líquida de alta resolución</a>, o HPLC. En términos simples, la muestra se empuja a través de una columna que separa sus componentes, y cada componente aparece como un pico en un gráfico llamado cromatograma. El péptido buscado es el pico principal. La pureza es el área de ese pico principal expresada como porcentaje de todos los picos juntos. Así que 99 por ciento significa que el péptido buscado representa alrededor del 99 por ciento de lo que detectó el método.</p>
+        <h2>Qué es la cifra</h2>
+        <p>La muestra se empuja por una columna que separa sus componentes, un detector registra cada uno al salir, y el resultado es un cromatograma: una traza con picos. El péptido buscado es el pico principal. La pureza es el área bajo ese pico dividida entre el área total de todos los picos que vio el detector, en porcentaje.</p>
+        <p>Así que 99 por ciento dice que el objetivo representó cerca del 99 por ciento de lo que este método detectó bajo estas condiciones. Cada parte de esa frase está trabajando.</p>
 
-        <h2>Qué te dice el número</h2>
-        <p>Una cifra alta de pureza por HPLC dice que apareció muy poco más junto al péptido. Los picos laterales pequeños pueden venir de fragmentos peptídicos relacionados, secuencias incompletas o material sobrante de la síntesis. Un cromatograma limpio con un pico dominante es buena señal de que el lote es en su mayor parte lo que dice ser. Esa información es genuinamente útil.</p>
+        <h2>El área no es masa</h2>
+        <p>Esta es la lectura equivocada que más importa. El porcentaje de área responde una pregunta sobre los picos. No responde qué parte del polvo del vial es péptido.</p>
+        <p>El contraión de la purificación, el agua absorbida y cualquier <a href="article/excipients-in-peptides/">excipiente</a> forman parte del material pesado y no aportan pico a la longitud de onda de detección. Un lote puede ser 99 por ciento puro por área y estar bastante por debajo de 99 por ciento de péptido en masa, sin contradicción entre las dos cifras. El contenido neto de péptido es el número aparte que responde la segunda pregunta, y un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> completo reporta las dos.</p>
 
-        <h2>Qué no te dice</h2>
-        <p>La pureza no es identidad. La HPLC te dice qué parte de la muestra es un componente principal, pero no prueba por sí sola que ese componente sea el péptido correcto. Por eso la identidad se confirma aparte, normalmente por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, comparando la masa medida con la esperada. Un certificado de análisis fiable reporta las dos cosas: pureza por HPLC e identidad por espectrometría de masas. Un número sin el otro es medio cuadro.</p>
+        <h2>"Detectó" también está trabajando</h2>
+        <p>Los métodos para péptidos detectan en el ultravioleta, y la longitud de onda decide qué se ve. Cerca de 214 nm absorbe el propio enlace amida, así que prácticamente cualquier péptido registra. A 280 nm la señal viene sobre todo de triptófano y tirosina, de modo que una secuencia sin residuos aromáticos es casi invisible.</p>
+        <p>Cualquier cosa sin cromóforo a la longitud de onda elegida no aporta nada al total, lo que significa que no puede bajar el porcentaje. La misma muestra analizada a dos longitudes de onda puede devolver dos cifras de pureza, ambas honestas.</p>
 
-        <h2>Por qué importa</h2>
-        <p>En investigación, la consistencia depende de saber qué hay en el vial. Una cifra de pureza respaldada por una comprobación de identidad es lo que permite comparar un lote con otro. Si quieres confirmar que un vial de Codex Research es auténtico, puedes revisar su <a href="verify/">número de lote</a>, y su certificado de análisis completo está disponible a solicitud.</p>
+        <h2>"Bajo estas condiciones" también</h2>
+        <p>La columna, el gradiente, el flujo y la duración de la corrida cambian qué se separa de qué. Un gradiente suave resuelve especies que uno pronunciado funde en un solo pico, y dos laboratorios pueden reportar cifras distintas para el mismo lote porque uno le dio más espacio a la separación. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Referencia: Dong, 2006)</a> <a class="cite" href="https://doi.org/10.1002/9780470508183" target="_blank" rel="noopener nofollow">(Referencia: Snyder et al., 2009)</a></p>
+        <p>Un porcentaje citado sin sus condiciones es una afirmación, no un resultado. Las guías sobre validación de procedimientos analíticos existen porque un número es inseparable del procedimiento que lo produjo. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Referencia: Swartz y Krull, 2012)</a></p>
 
-        <h2>Solo para investigación</h2>
-        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+        <h2>Por qué el ácido de la fase móvil afecta a la cifra</h2>
+        <p>Los métodos para péptidos corren a pH bajo con un aditivo de par iónico, normalmente ácido trifluoroacético, que afina los picos y mejora la separación de secuencias parecidas. La concentración de ese aditivo cambia la retención y la resolución, y el efecto se ha estudiado de forma sistemática. <a class="cite" href="https://doi.org/10.1016/j.chroma.2005.02.047" target="_blank" rel="noopener nofollow">(Referencia: Shibue et al., 2005)</a></p>
+        <p>Dos consecuencias llegan al certificado. Un método con poco aditivo puede no resolver una impureza que otro mejor ajustado sí separa, lo que sube la pureza aparente. Y para algo que no sea un péptido simple, como un complejo metálico, las condiciones ácidas pueden desplazarlo hacia su forma disociada, de modo que el pico medido tal vez no sea la especie que nombra la etiqueta.</p>
+
+        <h2>Un porcentaje tiene precisión</h2>
+        <p>La integración no es exacta. Dónde coloca el software el inicio y el final de un pico, cómo traza la línea base bajo una traza que deriva, y si agrupa un hombro con el pico principal o lo separa, todo mueve el resultado. Dos analistas integrando el mismo cromatograma pueden diferir en el primer decimal.</p>
+        <p>Por eso la diferencia entre 99,1 y 99,4 por ciento suele llevar menos información de la que aparenta, mientras que la diferencia entre 95 y 99 es real.</p>
+
+        <h2>Qué se esconde dentro del pico principal</h2>
+        <p>Una impureza que sale de la columna a la vez que el objetivo se cuenta como objetivo. Las candidatas habituales son las que produce la <a href="article/peptide-synthesis/">síntesis</a>: secuencias de deleción a las que falta un solo residuo, o cadenas que conservaron un grupo protector. Se parecen lo bastante al objetivo como para que resolverlas sea justo lo que el método tiene que hacer bien.</p>
+        <p>Un hombro en el pico principal, o un pico pequeño pegado a él, informa más que una cifra limpia. Si el certificado incluye la traza, la traza vale la pena leerla. <a class="cite" href="https://doi.org/10.1002/0470087951" target="_blank" rel="noopener nofollow">(Referencia: Kazakevich y LoBrutto, 2006)</a></p>
+
+        <h2>La pureza no dice nada de la identidad</h2>
+        <p>Un cromatograma reporta que un componente domina. No tiene opinión sobre cuál es. Una muestra podría ser 99 por ciento pura y ser 99 por ciento de la molécula equivocada, y el cromatograma se vería igual.</p>
+        <p>La identidad sale de la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, que mide la masa y la compara con la calculada para la secuencia pretendida. Pureza e identidad son dos preguntas, y un documento que responde una es medio documento.</p>
+
+        <h2>Ni de otras contaminaciones</h2>
+        <p>La endotoxina es el ejemplo más claro. No es un péptido, no se comporta como tal en la columna, y una cifra de pureza no está diseñada para verla. Cuando el trabajo previsto es sensible a ella, el <a href="article/endotoxins-in-research-peptides/">contenido de endotoxina</a> se mide por su propio método y se reporta en su propia línea.</p>
+        <p>Lo mismo vale para los disolventes residuales y para el contenido de agua. Cada uno es una determinación aparte, y ninguno mueve el porcentaje de pureza.</p>
+
+        <h2>Cómo leer una especificación</h2>
+        <p>Una cifra como "≥99% por HPLC" es una especificación, no un resultado: indica el umbral que el lote tenía que cumplir. Un resultado es un número medido para un lote con nombre y en una fecha. Se parecen en la página y significan cosas distintas, y por eso el número de lote es el hilo que conecta una afirmación con una medición que puedes <a href="verify/">comprobar</a>. Una especificación aplica a todos los lotes; un resultado, a uno.</p>
       `,
       faq: [
-        { q: '¿Qué significa 99% de pureza por HPLC?', a: 'Significa que el péptido buscado representa alrededor del 99 por ciento de lo que la HPLC detectó en la muestra. La HPLC separa los componentes en picos, y la pureza es el área del pico principal como porcentaje de todos los picos juntos.' },
-        { q: '¿La pureza por HPLC confirma la identidad del péptido?', a: 'No. La HPLC mide qué parte de la muestra es un componente principal, pero no prueba que ese componente sea el péptido correcto. La identidad se confirma aparte, normalmente por espectrometría de masas, comparando la masa medida con la esperada.' },
-        { q: '¿Por qué importa la pureza de un péptido en investigación?', a: 'La consistencia depende de saber qué hay en el vial. Una cifra de pureza respaldada por una comprobación de identidad permite comparar un lote con otro. Un certificado de análisis debe reportar tanto la pureza por HPLC como la identidad por espectrometría de masas.' },
+        {
+          "q": "¿Qué significa 99 por ciento por HPLC?",
+          "a": "Que el pico del objetivo representó cerca del 99 por ciento del área total de picos que el método detectó, bajo las condiciones usadas. Es una afirmación sobre los componentes detectados, no sobre el peso del polvo."
+        },
+        {
+          "q": "¿99 por ciento puro es lo mismo que 99 por ciento de péptido?",
+          "a": "No. El contraión, el agua absorbida y los excipientes forman parte del material pesado y no producen pico. Un lote puede ser 99 por ciento puro por área y bastante menos por masa. El contenido neto de péptido es la cifra aparte."
+        },
+        {
+          "q": "¿La misma muestra puede dar dos cifras de pureza?",
+          "a": "Sí. La longitud de onda cambia qué se ve, y el gradiente y la columna cambian qué se separa. Un gradiente suave puede resolver especies que uno pronunciado funde. Los dos resultados pueden ser honestos."
+        },
+        {
+          "q": "¿Puede esconderse una impureza en el pico principal?",
+          "a": "Sí. Lo que sale de la columna a la vez que el objetivo se cuenta como objetivo. Las secuencias de deleción a las que falta un residuo son las candidatas habituales, y por eso un hombro en el pico principal vale la pena mirarlo."
+        },
+        {
+          "q": "¿Una cifra de pureza confirma que el péptido es el correcto?",
+          "a": "No. El cromatograma muestra que un componente domina sin identificarlo. La identidad sale de la espectrometría de masas, comparando la masa medida con la calculada para la secuencia pretendida."
+        },
+        {
+          "q": "¿Qué diferencia hay entre una especificación y un resultado?",
+          "a": "Una especificación como ≥99% indica el umbral que un lote debía cumplir. Un resultado es un valor medido para un lote concreto en una fecha concreta. El número de lote es lo que conecta ambos."
+        }
       ],
       cta: 'Mira los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
     },
