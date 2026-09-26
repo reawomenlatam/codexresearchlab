@@ -27,7 +27,7 @@
       category: 'Guía de compra',
       date: '02 ago 2026',
       excerpt: 'Entrega el mismo día en la ciudad de Panamá, pago local y cómo verificar cada lote antes de pagar.',
-      imageAlt: 'Vial de péptido de investigación entregado en Panamá junto a su certificado de análisis',
+      imageAlt: 'Tiempos de entrega, pago en el checkout y cómo comprobar un lote antes de pagar.',
       body: `
         <p class="lead">Comprar péptidos de investigación en Panamá es sencillo cuando sabes cómo funcionan el pedido, la entrega y la verificación aquí. Esta guía cubre la entrega el mismo día en la ciudad de Panamá, el envío al interior, los medios de pago disponibles en el país y cómo confirmar que cada vial es auténtico antes de pagar. Todos los productos son únicamente para uso en investigación de laboratorio.</p>
 
@@ -72,7 +72,7 @@
       category: 'Guía de compra',
       date: '01 ago 2026',
       excerpt: 'Qué muestra un certificado de análisis y cómo confirmar que tu vial es auténtico antes de pagar.',
-      imageAlt: 'Certificado de análisis y verificación de número de lote de péptidos de investigación',
+      imageAlt: 'Ligar el número de lote de un vial al documento que lo describe.',
       body: `
         <p class="lead">Un certificado de análisis (COA) es la forma de confirmar que un péptido de investigación es lo que dice la etiqueta. Esta guía explica qué muestra un COA, cómo se usan la HPLC y la espectrometría de masas para analizar cada lote, y cómo verificar tu vial concreto por su número de lote. Todos los productos son únicamente para uso en investigación de laboratorio.</p>
 
@@ -140,7 +140,7 @@
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Qué reporta un certificado de análisis, campo por campo.',
-      imageAlt: 'Documento de certificado de análisis de péptidos con resultados de pureza e identidad',
+      imageAlt: 'Campo por campo: lote, pureza, identidad, y las líneas que un documento completo también trae.',
       body: `
         <p class="lead">Un certificado de análisis, o COA, convierte lo que dice una etiqueta en algo comprobable. El número de pureza se lleva toda la atención, y es el resto del documento el que le da sentido.</p>
 
@@ -474,7 +474,7 @@
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'El identificador único que acompaña a cada nombre de compuesto, y cómo leerlo.',
-      imageAlt: 'Número de registro CAS impreso en la etiqueta de un compuesto de investigación',
+      imageAlt: 'Un número de registro con dígito de control, y los otros tres identificadores que lo acompañan.',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
       body: `
         <p class="lead">Junto a casi todo compuesto de una ficha de investigación hay una cadena de dígitos etiquetada como CAS. Es fácil pasarla por alto, pero ese número pequeño es una de las formas más fiables de saber exactamente qué sustancia tienes delante. Los nombres pueden ser ambiguos. Un número CAS no.</p>
@@ -713,7 +713,7 @@
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Qué mide un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
-      imageAlt: 'Cromatograma de HPLC usado para medir la pureza de péptidos de investigación',
+      imageAlt: 'El porcentaje de área, las condiciones que lo producen y las preguntas que deja abiertas.',
       body: `
         <p class="lead">Casi todas las fichas de péptidos de investigación mencionan una cifra de pureza, muchas veces 99 por ciento por HPLC. Es uno de los números más citados del campo y uno de los menos explicados. Vale la pena deletrear qué mide ese número y, tan importante como eso, qué no mide.</p>
 

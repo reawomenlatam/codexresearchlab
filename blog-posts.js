@@ -25,8 +25,7 @@
       tags: ['endotoxins', 'quality', 'COA', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'A contaminant that purity testing alone will not catch, and how it is measured.',
-      imageAlt: 'Endotoxin testing as part of research peptide quality control',
-      image: 'assets/og-default.png',
+      imageAlt: 'A third quality measure, separate from purity and identity, and the assay that produces it.',
       body: `
         <p class="lead">A certificate that reports purity and identity has answered two questions about the peptide. Endotoxin content answers a third, about something the other two methods are not built to see, and it only appears when the intended work is sensitive to it.</p>
 
@@ -124,8 +123,7 @@
       tags: ['peptide length', 'oligopeptide', 'polypeptide', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'The prefixes that describe how many amino acids a peptide has, and where peptide ends and protein begins.',
-      imageAlt: 'Chain of amino acids illustrating peptide length terminology',
-      image: 'assets/og-default.png',
+      imageAlt: 'Residues, prefixes and the fifty-residue convention that nothing chemical enforces.',
       body: `
         <p class="lead">Dipeptide, oligopeptide, polypeptide, protein. The vocabulary for peptide length looks like a classification and behaves like a set of habits. Knowing where the conventions are firm and where they are loose keeps you from reading precision into a word that does not carry any.</p>
 
@@ -227,8 +225,7 @@
       tags: ['peptide storage', 'lyophilized', 'handling', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'Why the dry powder is forgiving, the solution is not, and the small habits that protect both.',
-      imageAlt: 'Research peptide vials stored cool and protected from light',
-      image: 'assets/og-default.png',
+      imageAlt: 'Water as both reactant and mobility, and the four routes by which a peptide degrades.',
       body: `
         <p class="lead">A batch can be pure, correctly identified and fully documented, and still be worthless by the time it is used. Storage is where that happens, and it comes down to one distinction: a dry peptide and a dissolved one are two different situations, governed by different rules.</p>
 
@@ -346,8 +343,7 @@
       tags: ['cyclic peptides', 'linear peptides', 'peptide structure', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'A ring or a chain, and why that single structural choice changes how a peptide behaves.',
-      imageAlt: 'Comparison of cyclic and linear peptide structures in research',
-      image: 'assets/og-default.png',
+      imageAlt: 'Three ways to close a ring, the eighteen daltons it costs, and what a mass check cannot settle.',
       body: `
         <p class="lead">A cyclic peptide is a chain joined back to itself. The change sounds cosmetic and is not: closing the ring alters the mass, the stability, the behaviour on a column, and what an identity measurement can and cannot settle.</p>
 
@@ -453,8 +449,7 @@
       tags: ['molecular weight', 'daltons', 'mass spectrometry', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'What the g/mol figure next to a peptide means, and where it matters.',
-      imageAlt: 'Molecular weight of a research peptide shown with its molecular formula',
-      image: 'assets/og-default.png',
+      imageAlt: 'Two masses for one molecule, and why an observed value can sit beside the expected one.',
       body: `
         <p class="lead">The molecular weight on a peptide specification is the number an identity measurement is checked against. It looks like a single fixed value and it is not: the same molecule has at least two legitimate masses, and the form in the vial can differ from the form in the calculation.</p>
 
@@ -558,8 +553,7 @@
       tags: ['CAS number', 'chemical identifier', 'quality', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'The unique identifier next to every compound name, and how to read it.',
-      imageAlt: 'CAS registry number shown on a research compound label',
-      image: 'assets/og-default.png',
+      imageAlt: 'A registry label with a check digit, and the three identifiers that sit alongside it.',
       body: `
         <p class="lead">A CAS number is a label, not a description. It carries no information about structure, formula or mass, and it cannot be derived from any of them. Its value is that it is unique and unambiguous: one registered substance, one number, no synonyms to argue about.</p>
 
@@ -665,8 +659,7 @@
       tags: ['certificate of analysis', 'COA', 'quality', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'What a certificate of analysis reports, field by field.',
-      imageAlt: 'Peptide certificate of analysis document with purity and identity results',
-      image: 'assets/og-default.png',
+      imageAlt: 'Field by field: batch, purity, identity, and the lines a complete document also carries.',
       body: `
         <p class="lead">A certificate of analysis, or COA, turns a claim on a label into something checkable. The purity number gets all the attention, and the rest of the document is where the number gets its meaning.</p>
 
@@ -754,8 +747,7 @@
       tags: ['peptide purity', 'HPLC', 'quality', 'research peptides', 'COA'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'What a purity percentage measures, and what it does not, when you read it on a COA.',
-      imageAlt: 'HPLC chromatogram used to measure research peptide purity',
-      image: 'assets/og-default.png',
+      imageAlt: 'Area percent, the conditions behind it, and the questions it leaves open.',
       body: `
         <p class="lead">Ninety-nine percent by HPLC is the most quoted number in this field and the least examined. It is a real measurement with a precise meaning, and that meaning is narrower than most people assume.</p>
 
@@ -860,8 +852,7 @@
       tags: ['melanocortin receptors', 'PT-141', 'receptor pharmacology', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'A receptor family behind processes from pigmentation to central signaling, and the peptides used to study it.',
-      imageAlt: 'Concept of melanocortin receptor signaling studied in peptide research',
-      image: 'assets/og-default.png',
+      imageAlt: 'Five receptors from one precursor, and why subtype selectivity is measured as a ratio.',
       body: `
         <p class="lead">Calling a compound a melanocortin receptor agonist names a family, not a target. There are five of these receptors, spread across different tissues, and a molecule that reaches one will usually touch some of the others. Which ones, and how strongly, is the question that most work on these compounds is built around.</p>
 
@@ -961,8 +952,7 @@
       tags: ['agonist', 'antagonist', 'receptor pharmacology', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'Two words that describe what a compound does at a receptor, and why the difference keeps coming up.',
-      imageAlt: 'Diagram concept of agonist and antagonist binding at a receptor',
-      image: 'assets/og-default.png',
+      imageAlt: 'Affinity and efficacy as separate properties, plus partial, inverse and biased agonism.',
       body: `
         <p class="lead">Agonist and antagonist are the two words that appear in almost every compound description, and most explanations stop at "one turns the receptor on, the other blocks it". That is true and it is not enough, because a compound can bind a receptor tightly and still do nothing, and two compounds can both be agonists while producing different outcomes at the same receptor.</p>
 
@@ -1072,8 +1062,7 @@
       tags: ['growth hormone secretagogue', 'ghrelin receptor', 'ipamorelin', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'The class of compounds that acts on the ghrelin receptor, and why selectivity is the whole game.',
-      imageAlt: 'Growth hormone secretagogue research peptide studied at the ghrelin receptor',
-      image: 'assets/og-default.png',
+      imageAlt: 'A category named for its target, and the receptor found before its natural signal.',
       body: `
         <p class="lead">Growth hormone secretagogue names a category by what a compound targets. The word secretagogue means something that prompts a cell to release a substance, so the label says where the molecule acts and leaves everything else open.</p>
 
@@ -1173,8 +1162,7 @@
       tags: ['GLP-1', 'GIP', 'incretins', 'metabolism', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'Two incretin hormones, two receptors, and the reason researchers keep comparing them.',
-      imageAlt: 'Comparison of GLP-1 and GIP incretin signaling in metabolic research',
-      image: 'assets/og-default.png',
+      imageAlt: 'Two genes, two cell populations, two receptors, and one shared route of degradation.',
       body: `
         <p class="lead">GLP-1 and GIP appear together so often that they read as one thing with two names. They are two hormones, from two genes, released by two kinds of cell, acting on two receptors. The differences are what make a compound that engages both worth studying at all.</p>
 
@@ -1278,8 +1266,7 @@
       tags: ['incretins', 'GIP', 'GLP-1', 'metabolism', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'The gut hormones behind the incretin effect, and the reason so many research peptides target them.',
-      imageAlt: 'Illustration of incretin signaling studied in metabolic peptide research',
-      image: 'assets/og-default.png',
+      imageAlt: 'The incretin effect, the enzyme that clips both hormones, and the design that follows.',
       body: `
         <p class="lead">The word incretin turns up in every description of a modern metabolic research peptide, usually without explanation. It names a specific observation about how the body handles glucose, and that observation is the reason this whole family of compounds exists.</p>
 
@@ -1392,8 +1379,7 @@
       tags: ['copper peptides', 'GHK-Cu', 'AHK-Cu', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'The small family of peptides defined by a bound copper ion, and why that metal is the point.',
-      imageAlt: 'Copper peptides research vials with certificates of analysis',
-      image: 'assets/og-default.png',
+      imageAlt: 'Coordination complexes rather than ordinary peptides, and the isotope pattern that proves it.',
       body: `
         <p class="lead">Copper peptides are filed with the rest of the research peptides, and they belong to a different chemical category. They are coordination complexes: a short sequence holding a metal ion. The metal is part of the compound, which changes how they are made, how they behave on a column, and what a certificate has to establish.</p>
 
@@ -2435,8 +2421,7 @@
       tags: ['Panama', 'research peptides', 'buying guide', 'shipping', 'COA'],
       date: 'Aug 02, 2026', dateISO: '2026-08-02',
       excerpt: 'Same-day delivery in Panama City, local payment methods, and how to verify every batch before you pay.',
-      imageAlt: 'Research peptide vial delivered in Panama with its certificate of analysis',
-      image: 'assets/og-default.png',
+      imageAlt: 'Delivery times, payment at checkout, and confirming a batch before you pay.',
       body: `
         <p class="lead">Buying research peptides in Panama differs from ordering them from abroad in one way that matters more than price: the material is already in the country. Nothing is waiting on customs, and nothing spends weeks in transit. This guide covers how ordering works, what delivery costs and how long it takes, how payment is handled, and how to confirm a vial before you pay.</p>
 
@@ -2542,8 +2527,7 @@
       tags: ['COA', 'batch verification', 'quality', 'Panama', 'research peptides'],
       date: 'Aug 01, 2026', dateISO: '2026-08-01',
       excerpt: 'What a certificate of analysis shows, and how to confirm your vial is genuine before you pay.',
-      imageAlt: 'Certificate of analysis and batch number verification for research peptides',
-      image: 'assets/og-default.png',
+      imageAlt: 'Matching a batch number on a vial to the document that describes it.',
       body: `
         <p class="lead">A certificate of analysis (COA) is how you confirm that a research peptide is what the label says. This guide explains what a COA shows, how HPLC and mass spectrometry are used to test each batch, and how to verify your specific vial by its batch number. All products are for laboratory research use only.</p>
 
