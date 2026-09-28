@@ -427,77 +427,91 @@
     },
 
     'bacteriostatic-water-for-peptide-reconstitution': {
-      title: 'Agua bacteriostática para reconstituir péptidos',
-      metaTitle: 'Agua bacteriostática: alcohol bencílico, pH y solubilidad',
-      metaDescription: 'Agua bacteriostática para reconstituir péptidos: contenido de alcohol bencílico, pH, cómo elegir disolvente y cuánto dura una disolución.',
+      title: 'Agua bacteriostática: qué especifica la etiqueta',
+      metaTitle: 'Agua bacteriostática: alcohol bencílico, pH y la norma USP',
+      metaDescription: 'Qué contiene el agua bacteriostática: 0,9 por ciento de alcohol bencílico, pH 5,7, estéril y apirógena, y por qué el conservante no es un ingrediente inerte.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
-      excerpt: 'Qué separa el agua bacteriostática del agua estéril común, y por qué los laboratorios la eligen primero.',
-      imageAlt: 'Vial de agua bacteriostática usado para reconstituir péptidos de investigación',
+      excerpt: 'Qué la separa del agua estéril común, y qué le hace el conservante a las moléculas disueltas en ella.',
+      imageAlt: 'Qué especifica la etiqueta USP, y por qué el conservante no es inerte.',
       related: ['how-to-read-a-certificate-of-analysis', 'what-is-bpc-157'],
       body: `
-        <p class="lead">Cuando un péptido liofilizado necesita un líquido en el que disolverse, la respuesta por defecto en la mayoría de los laboratorios es el agua bacteriostática. No es la única opción, pero es la primera a la que se recurre, y hay una razón concreta. La versión corta: permite usar un vial más de una vez.</p>
+        <p class="lead">El agua bacteriostática es agua estéril con una sola cosa añadida. Ese único ingrediente es toda la diferencia con el agua para inyección, y explica tanto para qué sirve el fluido como las formas en que no es neutro.</p>
 
-        <h2>¿Qué es el agua bacteriostática?</h2>
-        <p>El agua bacteriostática es agua estéril que contiene una pequeña cantidad de alcohol bencílico, normalmente alrededor del 0,9 por ciento, añadido como conservante. La palabra «bacteriostático» describe lo que hace ese conservante: frena o detiene el crecimiento bacteriano, en vez de matarlo todo de golpe. Ese único ingrediente es toda la diferencia con el agua para inyección común.</p>
+        <h2>Qué es</h2>
+        <p>Agua estéril que contiene una pequeña cantidad de alcohol bencílico como conservante. La palabra bacteriostático describe lo que hace ese conservante: frena o detiene el crecimiento bacteriano en vez de matarlo todo. Un agente bacteriostático mantiene a raya una población; uno bactericida la destruye. La distinción no es pedantería, porque fija con qué se puede contar y con qué no.</p>
 
         <h2>La especificación, en números</h2>
-        <p>La etiqueta USP del producto es específica sobre lo que contiene el líquido:</p>
+        <p>La etiqueta del producto USP es precisa sobre lo que contiene el fluido:</p>
         <table>
           <tr><th>Atributo</th><th>Valor</th></tr>
-          <tr><td>Conservante</td><td>Alcohol bencílico, 0,9% (9 mg/mL)</td></tr>
-          <tr><td>pH</td><td>5,7 (rango de 4,5 a 7,0)</td></tr>
+          <tr><td>Conservante</td><td>Alcohol bencílico, 0,9 % (9 mg/mL)</td></tr>
+          <tr><td>pH</td><td>5,7 (rango 4,5 a 7,0)</td></tr>
           <tr><td>Presentación</td><td>Estéril, apirógena, envase multidosis</td></tr>
           <tr><td>Otros aditivos</td><td>Ninguno</td></tr>
         </table>
-        <p>El pH ligeramente ácido es un detalle que a veces importa, porque cae dentro del rango en el que la desamidación, la vía de degradación más común de los péptidos en agua, avanza más despacio.</p>
+        <p>Cuatro líneas, y ninguna es una descripción escrita por un proveedor. Cada una se comprueba contra una fuente pública. <a class="cite" href="https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8" target="_blank" rel="noopener nofollow">(Referencia: DailyMed, etiquetado USP)</a></p>
+
+        <h2>De dónde viene el conservante</h2>
+        <p>El alcohol bencílico se usa como conservante farmacéutico desde hace mucho, y se mantiene porque cumple varias cosas a la vez: es eficaz frente a un rango amplio de organismos, es soluble en agua a las concentraciones necesarias, y es lo bastante estable como para que un envase cerrado conserve el contenido declarado durante una vida útil normal.</p>
+        <p>Existen alternativas y cada una cede algo. El fenol y el m-cresol son más agresivos con las proteínas disueltas, según la misma comparación que se cita más abajo. El clorobutanol es más suave pero menos eficaz en amplitud y menos estable. El 0,9 por ciento de la etiqueta es el resultado de ese equilibrio, no una cifra redonda elegida por comodidad.</p>
+
+        <h2>Qué hace esa concentración</h2>
+        <p>Nueve miligramos por mililitro bastan para mantener a raya una población y se quedan por debajo del punto en el que el conservante domina el comportamiento de la disolución. Las dos mitades de esa frase importan. Con menos, el envase no podría llamarse multidosis con honestidad; con más, los efectos que se describen abajo dejan de ser una consideración secundaria.</p>
+
+        <h2>Estéril y apirógena son dos afirmaciones</h2>
+        <p>Estéril significa que no hay organismos viables. Apirógena significa libre de los fragmentos bacterianos que provocan respuesta febril, sobre todo endotoxina, que sobrevive a condiciones que matan a la bacteria que la produjo.</p>
+        <p>Un fluido puede ser estéril y llevar endotoxina, y por eso la etiqueta declara las dos cosas. La misma distinción aplica a los compuestos con los que se use el agua, y nuestra nota sobre <a href="article/endotoxins-in-research-peptides/">endotoxinas</a> cubre por qué esa medición va aparte de la pureza.</p>
 
         <h2>En qué se diferencia del agua estéril</h2>
-        <p>El agua estéril para inyección es exactamente eso, agua sin nada añadido, y está pensada para un solo uso. Una vez abierta no tiene conservante que contenga la contaminación. El agua bacteriostática, por el alcohol bencílico, tolera que se entre en ella más de una vez a lo largo de un tiempo, y por eso encaja con un vial multidosis de investigación del que se extrae repetidamente. Para péptidos que se estudian durante días o semanas, esa reutilización es la ventaja práctica.</p>
+        <p>El agua estéril para inyección es agua sin nada añadido, pensada para un solo uso. Una vez abierto el envase no tiene conservante que contenga la contaminación. El agua bacteriostática, por el alcohol bencílico, tolera que se entre en ella más de una vez a lo largo de un tiempo, y por eso se suministra en envase multidosis mientras que el agua estéril común no.</p>
+        <p>El formato del envase se deriva de la química, no del marketing. Un fluido sin conservante no puede venderse honestamente como multidosis.</p>
 
-        <h2>Por qué los laboratorios la usan con péptidos</h2>
-        <p>El agua bacteriostática encaja bien con el trabajo de laboratorio: disuelve limpiamente la mayoría de los péptidos, el conservante permite varias extracciones de un mismo vial, y está ampliamente disponible en volúmenes estándar. Conviene saber además que el alcohol bencílico cuenta como una clase de <a href="article/excipients-in-peptides/">excipiente</a>, un ingrediente inactivo que sostiene la formulación sin ser el compuesto activo.</p>
-
-        <h2>Qué es reconstituir, como operación de laboratorio</h2>
-        <p>Reconstituir es disolver una masa conocida de sólido liofilizado en un volumen medido de disolvente, de modo que el resultado sea una disolución de concentración conocida. La aritmética es masa dividida entre volumen, y nada más:</p>
-        <table>
-          <tr><th>Sólido en el vial</th><th>Disolvente añadido</th><th>Concentración resultante</th></tr>
-          <tr><td>5 mg</td><td>1,00 mL</td><td>5 mg/mL</td></tr>
-          <tr><td>5 mg</td><td>2,00 mL</td><td>2,5 mg/mL</td></tr>
-          <tr><td>10 mg</td><td>2,00 mL</td><td>5 mg/mL</td></tr>
-          <tr><td>10 mg</td><td>5,00 mL</td><td>2 mg/mL</td></tr>
-        </table>
-        <p>Dos cosas hacen esa aritmética menos trivial de lo que parece. La primera es que la torta liofilizada ocupa volumen propio, así que el volumen final de la disolución no es exactamente el volumen de disolvente añadido; para trabajos donde la concentración tiene que ser exacta y no aproximada, la disolución se enrasa a una marca en vez de añadir un volumen nominal. La segunda es que la masa impresa en la etiqueta es la masa de sólido, no la masa de péptido. El material purificado por cromatografía de fase reversa se aísla como sal y arrastra un contraión más agua residual, así que el contenido neto de péptido del polvo suele estar bastante por debajo del 100 por ciento y se reporta por lote en el <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a>. Una concentración calculada solo con la masa de la etiqueta es una cifra nominal.</p>
-
-        <h2>Elegir disolvente</h2>
-        <p>El agua bacteriostática es la opción por defecto porque la mayoría de los péptidos cortos con un número razonable de residuos cargados se disuelven en ella con facilidad, pero es un valor por defecto, no una regla. Los fabricantes de péptidos dan la misma orientación general: los péptidos básicos se toman normalmente en una pequeña cantidad de disolvente ácido, como ácido acético diluido, y luego se diluyen; los péptidos ácidos, en una pequeña cantidad de disolvente básico, como amoniaco acuoso al 0,1 por ciento, y luego se diluyen; las secuencias marcadamente hidrofóbicas pueden necesitar un disolvente orgánico como DMSO, DMF o acetonitrilo antes de cualquier dilución acuosa. Prueba primero con una porción pequeña en vez de comprometer el vial entero, y revisa el disolvente que sugiere la hoja de datos analíticos del propio lote. Si el material tarda en disolverse, unos minutos de sonicación en baño de agua pueden ayudar, aunque conviene evitar calentar en exceso.</p>
+        <h2>Por qué el pH está en la etiqueta</h2>
+        <p>A 5,7 el fluido es ligeramente ácido, y esa cifra merece más atención de la que suele recibir. La desamidación, la vía de degradación más común de los péptidos en agua, depende mucho del pH: es más rápida a pH neutro y alcalino y más lenta en la banda aproximada de pH 3 a 6. El valor declarado cae dentro de la banda lenta.</p>
+        <p>Es una propiedad del líquido, no una promesa sobre ninguna molécula concreta. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">qué degrada un péptido</a> cubre las vías en detalle.</p>
 
         <h2>El conservante no es inerte</h2>
-        <p>El alcohol bencílico es el conservante antimicrobiano más usado en formulaciones proteicas multidosis, y su efecto sobre la molécula disuelta se ha estudiado de forma directa. Los conservantes de esta clase favorecen el desplegamiento parcial, y el desplegamiento parcial es lo que dispara la agregación; en una comparación publicada, la tendencia a inducir agregación fue m-cresol &gt; fenol &gt; alcohol bencílico &gt; fenoxietanol &gt; clorobutanol. El alcohol bencílico está por tanto en la mitad de ese rango, no en el extremo inocuo. Para trabajos donde la agregación o una caracterización física exacta son el objetivo, el agua estéril común o un tampón definido pueden ser mejor diluyente, y sea cual sea el elegido debe anotarse junto con la concentración, porque el diluyente forma parte de la condición experimental.</p>
+        <p>El alcohol bencílico es el conservante antimicrobiano más usado en formulaciones proteicas multidosis, y su efecto sobre las moléculas disueltas se ha estudiado de forma directa en vez de suponerse. Los conservantes de esta clase favorecen el desplegamiento parcial, y el desplegamiento parcial es lo que dispara la agregación. En una comparación publicada, la tendencia a inducir agregación fue m-cresol, luego fenol, luego alcohol bencílico, luego fenoxietanol y luego clorobutanol. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3990441/" target="_blank" rel="noopener nofollow">(Referencia: Hutchings et al., 2013)</a></p>
+        <p>El alcohol bencílico queda por tanto en la mitad de ese rango y no en el extremo inocuo. Cuando la agregación o una caracterización física exacta son el objeto del trabajo, el agua estéril común o un tampón definido son una elección distinta con propiedades distintas, y el fluido presente forma parte de la condición experimental. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/" target="_blank" rel="noopener nofollow">(Referencia: Shi y McHugh, 2023)</a></p>
 
-        <h2>Cuánto dura una disolución reconstituida</h2>
-        <p>Mucho menos que el sólido seco, y por razones químicas más que microbianas. Las vías de degradación que dominan en agua son la desamidación de las cadenas laterales de asparagina y glutamina, más rápida a pH neutro y alcalino y más lenta alrededor de pH 3 a 6; la hidrólisis del esqueleto, catalizada por ácido y especialmente notable en las uniones Asp-Gly y Asp-Pro; y la oxidación de metionina, histidina, lisina, triptófano y tirosina. Todas se aceleran con la temperatura. Un conservante no hace nada contra ninguna de ellas, y por eso la vida útil de un péptido en disolución es corta comparada con la del mismo péptido liofilizado.</p>
-        <p>Las consecuencias prácticas son las que publican los fabricantes: repartir la disolución en alícuotas en vez de volver una y otra vez al mismo vial, mantener esas alícuotas congeladas por debajo de unos quince grados bajo cero, evitar ciclos repetidos de congelación y descongelación, y tratar el almacenamiento prolongado en disolución como algo que hay que diseñar, no algo en lo que confiar, sobre todo en secuencias que contienen asparagina, glutamina, cisteína, metionina o triptófano.</p>
+        <h2>Cuenta como excipiente</h2>
+        <p>El alcohol bencílico es un ingrediente inactivo que sostiene una formulación sin ser el compuesto activo, que es la definición de <a href="article/excipients-in-peptides/">excipiente</a>. Leerlo así es útil, porque coloca al conservante en la misma categoría que el manitol o la trehalosa de un vial liofilizado: presente a propósito, haciendo un trabajo, y no químicamente mudo.</p>
 
-        <h2>Manejar el vial seco antes de añadir nada</h2>
-        <p>Los péptidos liofilizados son higroscópicos, así que el orden de los pasos importa. Un vial sacado del frío debe alcanzar la temperatura ambiente dentro de un desecador antes de abrirlo, para que no condense humedad sobre la torta, y después hay que pesarlo rápido y volver a cerrarlo bien. Todo lo que entre en el vial a partir de ahí, disolvente incluido, pasa a formar parte del sistema, y ese es todo el argumento a favor de un diluyente conservado cuando se va a entrar en un envase más de una vez.</p>
+        <h2>Conservar el agua en sí</h2>
+        <p>El fluido tiene su propia etiqueta y sus propias condiciones, que mandan sobre cualquier regla general. El alcohol bencílico es lo bastante volátil como para que un envase abierto pierda conservante con el tiempo, así que lo práctico es lo de siempre: mantenerlo cerrado, dentro de sus condiciones declaradas, y anotar la fecha en que se abrió por primera vez. <a class="cite" href="https://www.bachem.com/knowledge-center/handling-and-storage-guidelines-for-peptides/" target="_blank" rel="noopener nofollow">(Referencia: Bachem, manejo y conservación)</a></p>
 
-        <h2>Manejo y conservación</h2>
-        <p>Igual que los péptidos que disuelve, una disolución reconstituida se mantiene generalmente fría y protegida de la luz, con las condiciones exactas en la etiqueta del producto. El agua bacteriostática se conserva según su propia etiqueta. Si la vas a usar con un vial de péptido, puedes confirmar que ese vial es auténtico por su <a href="verify/">número de lote</a>.</p>
+        <h2>Qué no cubre este artículo</h2>
+        <p>Aquí se describe un fluido y lo que especifica su etiqueta. No es una guía de preparación, no contiene ningún procedimiento para combinarlo con nada, y no contiene información de dosis de ningún tipo.</p>
 
-        <h2>Lo que este artículo no cubre</h2>
-        <p>Esto describe una operación de laboratorio sobre un material de investigación: disolver un sólido definido en un volumen definido para obtener una concentración definida. No es una guía de preparación para administración a humanos ni a animales, y no contiene información de dosis de ningún tipo.</p>
-
-        <h2>Solo para investigación</h2>
-        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Este artículo describe únicamente uso de laboratorio.</p>
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
       `,
       faq: [
-        { q: '¿Qué es el agua bacteriostática?', a: 'Es agua estéril con una pequeña cantidad de alcohol bencílico (alrededor del 0,9 por ciento) añadida como conservante. El conservante frena el crecimiento bacteriano, y eso es lo que la hace adecuada para un vial en el que se va a entrar más de una vez.' },
-        { q: '¿Cuál es la diferencia entre agua bacteriostática y agua estéril?', a: 'El agua estéril para inyección no lleva nada añadido y está pensada para un solo uso. El agua bacteriostática contiene alcohol bencílico como conservante, así que tolera varias extracciones, lo que encaja con un vial multidosis de investigación.' },
-        { q: '¿Por qué se usa agua bacteriostática para reconstituir péptidos?', a: 'Disuelve limpiamente la mayoría de los péptidos y su conservante permite varias extracciones de un mismo vial durante los días o semanas que puede durar un estudio. Esa reutilización es la razón práctica principal por la que los laboratorios la eligen.' },
-        { q: '¿Cómo se reconstituye un péptido liofilizado en el laboratorio?', a: 'Se disuelve una masa conocida del sólido liofilizado en un volumen medido de disolvente para obtener una disolución de concentración conocida: 10 mg en 2,00 mL son 5 mg/mL. Dos correcciones importan en trabajo exacto: la torta ocupa volumen propio, así que las disoluciones precisas se enrasan a una marca en vez de añadir un volumen nominal; y la masa etiquetada es de sólido, no de péptido neto, porque el material arrastra un contraión y agua residual. Esto describe únicamente una operación de laboratorio sobre un material de investigación.' },
-        { q: '¿Cuánto tiempo es estable una disolución de péptido reconstituida?', a: 'Mucho menos que el sólido seco. En agua avanzan la desamidación de asparagina y glutamina, la hidrólisis del esqueleto y la oxidación de metionina, histidina, lisina, triptófano y tirosina, y todas se aceleran con la temperatura. Un conservante no frena ninguna. Los fabricantes aconsejan repartir las disoluciones en alícuotas, mantenerlas congeladas por debajo de unos quince grados bajo cero y evitar ciclos repetidos de congelación y descongelación.' },
-        { q: '¿Se puede usar agua estéril común en vez de bacteriostática?', a: 'Sí, y a veces es preferible. El alcohol bencílico no es inerte: los conservantes de su clase favorecen el desplegamiento parcial y la agregación, y el alcohol bencílico queda en la mitad del rango en una comparación publicada. Para trabajos donde la agregación o la caracterización física son el objetivo, el agua estéril común o un tampón definido pueden ser mejor diluyente. Sea cual sea el que se use, conviene anotarlo, porque el diluyente forma parte de la condición experimental.' },
+        {
+          "q": "¿Qué es el agua bacteriostática?",
+          "a": "Agua estéril que contiene una pequeña cantidad de alcohol bencílico como conservante, normalmente en torno al 0,9 por ciento. El conservante frena el crecimiento bacteriano en vez de matarlo todo."
+        },
+        {
+          "q": "¿En qué se diferencia del agua estéril?",
+          "a": "El agua estéril para inyección no lleva nada añadido y está pensada para un solo uso. La bacteriostática contiene alcohol bencílico, y por eso se suministra en envase multidosis mientras que la estéril común no."
+        },
+        {
+          "q": "¿Qué significa apirógena en la etiqueta?",
+          "a": "Libre de los fragmentos bacterianos que provocan respuesta febril, sobre todo endotoxina. Es una afirmación distinta de la esterilidad, porque la endotoxina sobrevive a condiciones que matan a la bacteria que la produjo."
+        },
+        {
+          "q": "¿Por qué la etiqueta declara pH 5,7?",
+          "a": "Porque importa. La desamidación, la vía de degradación más común de los péptidos en agua, es más rápida a pH neutro y alcalino y más lenta en la banda de pH 3 a 6 aproximadamente. El valor declarado cae dentro de la banda lenta."
+        },
+        {
+          "q": "¿El alcohol bencílico es inerte?",
+          "a": "No. Los conservantes de su clase favorecen el desplegamiento parcial, que es lo que dispara la agregación. En una comparación publicada quedó en la mitad del rango, por delante del fenoxietanol y el clorobutanol y por detrás del fenol y el m-cresol."
+        },
+        {
+          "q": "¿El alcohol bencílico es un excipiente?",
+          "a": "Sí. Es un ingrediente inactivo que sostiene la formulación sin ser el compuesto activo, lo que lo coloca en la misma categoría que los agentes de relleno y estabilizadores de un vial liofilizado."
+        }
       ],
       cta: 'Mira los <a href="catalog/">péptidos de investigación e insumos</a> de Codex Research, o <a href="verify/">revisa un número de lote</a>.',
     },
@@ -1056,6 +1070,1818 @@
       cta: 'Mira los <a href="catalog/">péptidos de investigación</a> de Codex Research, cada lote verificado con su certificado de análisis, o <a href="verify/">revisa un número de lote</a>.',
     },
 
+
+    'what-is-tirzepatide': {
+      title: 'Tirzepatida: el agonista dual de GIP y GLP-1',
+      metaTitle: 'Tirzepatida: agonista dual GIP y GLP-1, y su verificación',
+      metaDescription: 'Tirzepatida: fórmula, CAS y peso molecular, por qué lleva una cadena de ácido graso y qué tiene que probar el certificado de cada lote.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un péptido acilado de casi 4.800 daltons, y lo que hace difícil fabricarlo y verificarlo.',
+      imageAlt: 'Identidad química, la cadena de ácido graso y qué tiene que establecer un lote.',
+      body: `
+        <p class="lead">A la tirzepatida se la presenta como «agonista dual», lo que es exacto y no dice casi nada. Lo que conviene saber desde el punto de vista de quien maneja un vial es que se trata de un péptido sintético acilado y grande: cerca de 4.800 daltons, construido por síntesis por pasos, y con una cadena de ácido graso que lo hace comportarse distinto de un péptido corriente durante la purificación y el análisis.</p>
+
+        <h2>La identidad, en datos</h2>
+        <ul>
+          <li><b>Número CAS:</b> 2023788-19-2</li>
+          <li><b>Fórmula molecular:</b> C<sub>225</sub>H<sub>348</sub>N<sub>48</sub>O<sub>68</sub></li>
+          <li><b>Peso molecular:</b> unos 4.813 g/mol</li>
+          <li><b>PubChem CID:</b> 156588324</li>
+        </ul>
+        <p>Esos identificadores son a lo que un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> debería ligar un lote. Un nombre en una etiqueta puede ser una decisión comercial. Una fórmula y una masa, no.</p>
+
+        <h2>Un nombre no es un identificador</h2>
+        <p>A lo largo de su vida una misma molécula acumula varios nombres. Suele haber un código de desarrollo asignado por quien la fabricó primero, después una denominación común internacional, y después lo que decida llamarla un proveedor o un catálogo. Todos apuntan a la misma estructura y ninguno es la estructura.</p>
+        <p>Eso importa más de lo que parece cuando se compra material en vez de leer un artículo. Un nombre se cambia por decisión. Un número CAS, una fórmula molecular y una masa medida, no, y por eso la pregunta útil sobre un vial es qué dice el certificado que pesa y qué tan puro está. Nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a> cubre por qué ese identificador merece comprobarse.</p>
+
+        <h2>Por qué lleva una cadena de ácido graso</h2>
+        <p>La tirzepatida no es un péptido desnudo. Una cadena de diácido graso va unida al esqueleto a través de un enlazador, y esa modificación es deliberada. Acilar un péptido con un ácido graso le da capacidad de asociarse de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. Es una estrategia general de la química de péptidos, no algo propio de este compuesto. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Referencia: Hijazi, 2021)</a></p>
+        <p>La consecuencia práctica para quien analiza el material es que la cadena grasa lo vuelve bastante más hidrofóbico, así que queda retenido más tiempo en una <a href="article/high-performance-liquid-chromatography-hplc/">columna de fase reversa</a> de lo que quedaría su esqueleto sin modificar.</p>
+
+        <h2>Dos receptores, y el trasfondo de las incretinas</h2>
+        <p>GIP y GLP-1 son incretinas: moléculas de señalización que el intestino libera en respuesta a nutrientes, cada una a través de su propio receptor y cada una conectada a vías relacionadas con la señalización de insulina y el manejo de glucosa. La biología de ambas está ampliamente revisada. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a> La mayoría de los compuestos anteriores en este espacio actuaban solo sobre GLP-1. La tirzepatida actúa sobre los dos receptores, y esa es la pregunta de investigación que existe para explorar. Para el trasfondo, ver nuestras notas sobre <a href="article/what-are-incretins/">incretinas</a> y sobre <a href="article/glp-1-vs-gip/">en qué se diferencian GLP-1 y GIP</a>.</p>
+
+        <h2>Actuar sobre dos receptores no es actuar igual sobre los dos</h2>
+        <p>El trabajo de farmacología de receptores ha caracterizado a la tirzepatida como un agonista desequilibrado y sesgado: su actividad no se reparte por igual entre los dos receptores, y en un receptor dado no necesariamente dispara todas las ramas descendentes en la misma proporción que el ligando natural. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Referencia: Willard et al., 2020)</a> Esa asimetría es la parte interesante de la molécula desde el laboratorio, y es la razón de que «agonista dual» sea una etiqueta y no una descripción.</p>
+
+        <h2>Por qué un péptido de 4.800 daltons es difícil de hacer bien</h2>
+        <p>La longitud es enemiga de una síntesis limpia. Cada ciclo de acoplamiento de la <a href="article/peptide-synthesis/">síntesis en fase sólida</a> que no llega a completarse deja una fracción de cadenas con un residuo de menos, y esas cadenas acortadas siguen por todos los ciclos restantes. En una secuencia larga hay muchas oportunidades para que eso ocurra, y las secuencias de deleción resultantes se diferencian del objetivo en un solo residuo, lo que las convierte en las impurezas más difíciles de separar.</p>
+        <p>El paso de acilación añade una segunda cosa que puede salir mal: material por lo demás correcto pero sin el ácido graso, o con él en el sitio equivocado, es un compuesto distinto con una masa distinta.</p>
+        <p>Cadenas de esta longitud rozan además el límite práctico de construir una secuencia residuo a residuo, y por eso las síntesis largas se ensamblan a menudo a partir de fragmentos más cortos unidos después en vez de correrse como un bucle ininterrumpido. Sea cual sea la vía, la consecuencia para el comprador es la misma: la cifra de pureza está haciendo trabajo real, y un lote sin ella es un lote del que no se sabe nada.</p>
+
+        <h2>Qué tiene que establecer la verificación</h2>
+        <p>Para una molécula de este tamaño, las dos mediciones de rutina responden preguntas distintas y ninguna es opcional.</p>
+        <ul>
+          <li><b>La pureza</b> sale de la cromatografía y reporta qué proporción del material detectado es el objetivo. Ahí aparecen las secuencias de deleción, normalmente como picos pequeños pegados al principal.</li>
+          <li><b>La identidad</b> sale de la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>. Cerca de 4.813 daltons, la diferencia entre masa monoisotópica y promedio deja de ser un detalle de redondeo, así que un certificado que reporta masa observada debería decir qué criterio usó.</li>
+        </ul>
+
+        <h2>La conservación se deduce de la química</h2>
+        <p>Nada de la acilación cambia la regla básica de un péptido liofilizado: la forma seca es la estable, y la humedad es lo que lo degrada. Un vial frío debe alcanzar la temperatura ambiente antes de abrirse, para que no se forme condensación por dentro, y el contenido de agua del polvo es una de las cifras que reporta un certificado completo. Nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre el caso general, y cada lote se puede contrastar con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluida la tirzepatida, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es la tirzepatida, químicamente?",
+          "a": "Un péptido sintético grande de fórmula C225H348N48O68 y peso molecular de unos 4.813 g/mol, que lleva una cadena de diácido graso unida al esqueleto a través de un enlazador. Su número CAS es 2023788-19-2."
+        },
+        {
+          "q": "¿Por qué la tirzepatida lleva un ácido graso unido?",
+          "a": "La acilación con un ácido graso permite que el péptido se asocie de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. Para el análisis, la cadena además lo vuelve más hidrofóbico y por tanto más retenido en una columna de fase reversa."
+        },
+        {
+          "q": "¿La tirzepatida es un péptido GLP-1?",
+          "a": "Actúa sobre el receptor de GLP-1 pero no solo ahí. Actúa sobre el receptor de GIP y sobre el de GLP-1, que es lo que la distingue de los compuestos dirigidos solo a GLP-1."
+        },
+        {
+          "q": "¿Qué significa que sea un agonista sesgado?",
+          "a": "El trabajo de farmacología de receptores ha descrito su actividad como repartida de forma desigual entre los dos receptores, y como no necesariamente disparando todas las ramas descendentes en la misma proporción que el ligando natural. Actuar sobre dos receptores no es actuar igual sobre los dos."
+        },
+        {
+          "q": "¿Por qué un péptido largo es más difícil de sintetizar limpio?",
+          "a": "Cada ciclo de acoplamiento que no se completa deja una fracción de cadenas con un residuo de menos, y esas cadenas siguen por los ciclos restantes. Las secuencias largas dan más ocasiones para que ocurra, y las de deleción resultantes se diferencian en un solo residuo, lo que las hace difíciles de separar."
+        },
+        {
+          "q": "¿Cómo se verifica un lote de tirzepatida?",
+          "a": "La cromatografía establece qué proporción del material detectado es el objetivo, y la espectrometría de masas establece que el objetivo es la molécula pretendida. A este peso molecular la diferencia entre masa monoisotópica y promedio es significativa, así que el certificado debería indicar cuál reporta."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-retatrutide': {
+      title: 'Retatrutida: el agonista triple de GIP, GLP-1 y glucagón',
+      metaTitle: 'Retatrutida: agonista triple y qué se puede verificar',
+      metaDescription: 'Retatrutida: qué identificadores públicos existen, por qué tres receptores complican la interpretación y qué tiene que establecer el certificado de un lote.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un péptido con tres dianas, y un registro químico público más delgado de lo habitual.',
+      imageAlt: 'Tres receptores, la cadena de ácido graso y qué carga el certificado del lote.',
+      body: `
+        <p class="lead">La retatrutida se describe como agonista triple: un solo péptido sintético construido para actuar sobre tres receptores, los dos de las <a href="article/what-are-incretins/">incretinas</a> más el del glucagón. Añadir una tercera diana cambia para qué sirve el compuesto en el laboratorio, y cambia también lo que hay que probar de un lote para que el material signifique algo.</p>
+
+        <h2>Qué se puede verificar de su identidad</h2>
+        <p>La retatrutida lleva el código de investigación LY3437943 y está catalogada en ChEMBL como CHEMBL5095485, donde figura como entidad de tipo proteico con secuencia definida. No aparece hoy en PubChem bajo ese nombre ni bajo ese código, y una búsqueda en PubChem por la fórmula molecular que citan algunos listados no devuelve compuesto alguno.</p>
+        <p>Para la mayoría de los compuestos de este catálogo las bases públicas dan fórmula, masa y número CAS que cualquiera puede comprobar. Aquí el registro público es más delgado, así que el peso se traslada a la documentación del lote: la masa medida del certificado y la cifra de pureza que la acompaña. Nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a> cubre qué establecen y qué no esos identificadores.</p>
+
+        <h2>Por qué un tercer receptor</h2>
+        <p>GIP y GLP-1 los libera el intestino y contribuyen a la respuesta de insulina que sigue a una comida. El glucagón está al otro lado de la regulación de la glucosa, y su receptor pertenece a la misma familia estructural que los dos de las incretinas. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a> <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a></p>
+        <p>Como los tres receptores comparten familia, un mismo andamiaje peptídico puede diseñarse para alcanzar los tres. La pregunta de laboratorio que sigue es estrecha y comprobable: qué cambia cuando una molécula actúa sobre tres de estos receptores a la vez, medido contra el mismo andamiaje actuando sobre uno o dos. Nuestra nota sobre <a href="article/glp-1-vs-gip/">GLP-1 y GIP</a> cubre el caso de dos receptores.</p>
+
+        <h2>Por qué un andamiaje alcanza tres receptores</h2>
+        <p>Los receptores de esta familia están construidos en dos partes, un dominio grande fuera de la célula y las siete hélices que atraviesan la membrana, y el péptido se une a lo largo de las dos. Un extremo lo sujeta el dominio externo mientras el otro alcanza el núcleo transmembrana. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a></p>
+        <p>Como los tres receptores son parientes, las regiones que agarran el ligando se parecen. Una secuencia puede por tanto ajustarse posición a posición hasta que los tres la toleren, que es el problema de ingeniería detrás de un agonista multirreceptor. Explica además por qué estas moléculas acaban siendo largas: un ligando corto no alcanza los dos sitios de unión, y menos aún en tres receptores distintos a la vez.</p>
+
+        <h2>Tres dianas complican la interpretación, no la simplifican</h2>
+        <p>Actuar sobre dos receptores ya no es actuar igual sobre los dos. Un agonista dual de esta familia se ha caracterizado como desequilibrado entre sus dianas y como favorecedor de unas rutas descendentes sobre otras. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Referencia: Willard et al., 2020)</a></p>
+        <p>Con tres receptores crecen las formas en que la actividad puede repartirse, y un resultado observado tiene más explicaciones posibles. La palabra triple cuenta dianas. No describe el equilibrio entre ellas, y el equilibrio es lo que un experimento tiene que establecer. El vocabulario está en nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a>.</p>
+
+        <h2>Por qué lleva un ácido graso</h2>
+        <p>Las incretinas naturales duran poco porque una enzima, la dipeptidil peptidasa-4, retira los dos primeros residuos y la forma recortada ya no activa su receptor como lo hace la intacta. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Referencia: Mentlein, 1999)</a> Los compuestos de esta familia responden con dos modificaciones: una sustitución cerca del sitio de corte y un ácido graso unido al esqueleto.</p>
+        <p>La acilación permite que la molécula se asocie de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Referencia: Hijazi, 2021)</a> La vuelve además bastante más hidrofóbica, así que queda retenida más tiempo en una <a href="article/high-performance-liquid-chromatography-hplc/">columna de fase reversa</a> que su esqueleto sin modificar.</p>
+
+        <h2>Una cadena larga es una síntesis difícil</h2>
+        <p>Los péptidos de esta familia llegan a varias decenas de residuos, y la longitud juega en contra de una <a href="article/peptide-synthesis/">síntesis</a> limpia. Cada paso de acoplamiento que se queda corto deja una fracción de cadenas con un residuo de menos, y esas cadenas acortadas siguen por todos los ciclos restantes. El resultado es una secuencia de deleción: una molécula que difiere del objetivo en un solo residuo, lo que la convierte en la impureza más difícil de separar.</p>
+        <p>El paso de acilación añade una segunda ocasión de error. Material por lo demás correcto pero sin el ácido graso, o con él en la posición equivocada, es un compuesto distinto con una masa distinta.</p>
+
+        <h2>Qué tiene que establecer un lote</h2>
+        <ul>
+          <li><b>Pureza</b> por cromatografía: qué proporción del material detectado es el objetivo. Las secuencias de deleción aparecen aquí, normalmente como picos pequeños pegados al principal.</li>
+          <li><b>Identidad</b> por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>: si la masa medida coincide con la calculada para la molécula pretendida. A varios miles de daltons la diferencia entre masa monoisotópica y promedio deja de ser un detalle de redondeo, así que el certificado debería decir qué criterio cita.</li>
+        </ul>
+        <p>Dado lo delgado que es el registro químico público de este compuesto, esas dos cifras hacen más trabajo del habitual. El material se despacha <a href="article/lyophilization-freeze-drying/">liofilizado</a>, y un lote se puede contrastar con su documentación por <a href="verify/">número de lote</a> antes de abrir el vial.</p>
+        <p>Una consecuencia más del diseño conviene tenerla en cuenta al manejar el material. Un péptido largo y acilado es más hidrofóbico y a menudo menos soluble que uno corto sin modificar, y presenta más superficie a las paredes del vial. Las formulaciones de esta familia tienden por eso a llevar <a href="article/excipients-in-peptides/">excipientes</a>, lo que significa que parte del polvo pesado no es compuesto.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluida la retatrutida, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué hace de la retatrutida un agonista triple?",
+          "a": "Es un solo péptido sintético construido para actuar sobre tres receptores: los dos de las incretinas, GIP y GLP-1, más el del glucagón. Los tres pertenecen a la misma familia estructural, que es lo que permite a un mismo andamiaje alcanzarlos."
+        },
+        {
+          "q": "¿En qué se diferencia de la tirzepatida?",
+          "a": "La tirzepatida actúa sobre dos receptores, GIP y GLP-1. La retatrutida añade el del glucagón. La cuenta de dianas es la diferencia de diseño; cómo se reparte la actividad entre ellas es otra pregunta que tiene que resolver un experimento."
+        },
+        {
+          "q": "¿Tiene número CAS y entrada en PubChem?",
+          "a": "Está catalogada en ChEMBL como CHEMBL5095485 bajo el código de investigación LY3437943, pero no aparece en PubChem bajo ese nombre ni ese código, y la fórmula molecular que citan algunos listados no devuelve compuesto allí. El registro público es más delgado que el de la mayoría."
+        },
+        {
+          "q": "¿Por qué lleva una cadena de ácido graso?",
+          "a": "La acilación permite que la molécula se asocie de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. La vuelve además más hidrofóbica, lo que alarga su retención en una columna de fase reversa."
+        },
+        {
+          "q": "¿Por qué un péptido largo es más difícil de sintetizar limpio?",
+          "a": "Cada paso de acoplamiento que se queda corto deja una fracción de cadenas con un residuo de menos, y esas cadenas siguen por los ciclos restantes. Las secuencias de deleción resultantes difieren del objetivo en un solo residuo, lo que las hace las más difíciles de resolver."
+        },
+        {
+          "q": "¿Cómo se verifica un lote de retatrutida?",
+          "a": "La cromatografía establece qué proporción del material detectado es el objetivo y la espectrometría de masas establece que ese objetivo es la molécula pretendida. Con un registro químico público delgado, esas dos mediciones cargan más peso del habitual."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-ipamorelin': {
+      title: 'Ipamorelina: un pentapéptido selectivo del receptor de grelina',
+      metaTitle: 'Ipamorelina: secuencia, selectividad y verificación de lote',
+      metaDescription: 'Ipamorelina: los cinco residuos y por qué tres no son estándar, qué significa selectivo aquí, y por qué la masa sola no basta para confirmar un lote.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Cinco residuos, tres de ellos inusuales, y por qué eso complica verificarla.',
+      imageAlt: 'La secuencia, los residuos fuera del set estándar y qué no puede confirmar la masa.',
+      body: `
+        <p class="lead">La ipamorelina es un pentapéptido, lo que suena sencillo. No lo es. Tres de sus cinco residuos son cosas que ningún organismo construye, dos están en configuración especular, y la cadena termina en amida en vez de en ácido. Cada una de esas elecciones es deliberada, y juntas explican tanto por qué la molécula se comporta como lo hace como por qué confirmar un lote exige más que una medición de masa.</p>
+
+        <h2>La identidad, en datos</h2>
+        <ul>
+          <li><b>Número CAS:</b> 170851-70-4</li>
+          <li><b>Fórmula molecular:</b> C<sub>38</sub>H<sub>49</sub>N<sub>9</sub>O<sub>5</sub></li>
+          <li><b>Peso molecular:</b> unos 712 g/mol</li>
+          <li><b>PubChem CID:</b> 9831659</li>
+        </ul>
+
+        <h2>Cinco residuos, tres de ellos inusuales</h2>
+        <p>La secuencia es Aib-His-D-2-Nal-D-Phe-Lys-NH<sub>2</sub>. Leída de izquierda a derecha: un residuo de ácido α-aminoisobutírico, una histidina, una 2-naftilalanina en configuración D, una D-fenilalanina, y una lisina cuyo extremo carboxilo está amidado. <a class="cite" href="https://doi.org/10.1530/eje.0.1390552" target="_blank" rel="noopener nofollow">(Referencia: Raun et al., 1998)</a></p>
+        <p>Solo la histidina y la lisina están entre los veinte aminoácidos estándar. El Aib lleva dos grupos metilo en el carbono alfa en lugar de una cadena lateral y un hidrógeno, lo que rigidiza el esqueleto. La 2-naftilalanina es un aromático más voluminoso que cualquiera del set natural. Y los dos residuos D son imágenes especulares de las formas que usa la biología, una manera común de hacer que un péptido corto resista a enzimas que solo reconocen la configuración L. Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre por qué los veinte estándar no son un límite en química sintética.</p>
+
+        <h2>La amida del final</h2>
+        <p>La amida del extremo carboxilo no es un detalle. Que una cadena termine en ácido carboxílico libre o en amida lo decide el enlazador con el que se ancló el primer residuo a la resina durante la <a href="article/peptide-synthesis/">síntesis en fase sólida</a>, y las dos formas difieren en masa en torno a un dalton. Son compuestos distintos, y una especificación que nombra uno hace una afirmación que una medición de identidad puede comprobar.</p>
+
+        <h2>Corto no significa fácil</h2>
+        <p>Tienta suponer que una cadena de cinco residuos es trivial al lado de una de cuarenta. La longitud es solo una de las variables.</p>
+        <p>El Aib es el caso ejemplar. Como lleva dos grupos metilo donde la mayoría de residuos lleva un hidrógeno, el nitrógeno reactivo queda apiñado, y los residuos impedidos de este tipo se acoplan más despacio y de forma menos completa que los corrientes. Un paso que no se completa deja una fracción de cadenas sin ese residuo, y en una secuencia de cinco una deleción es proporcionalmente un cambio grande, no sutil.</p>
+        <p>Los residuos inusuales son además más caros que el set estándar, y cada uno hay que suministrarlo ya protegido en una forma compatible con el resto de la síntesis. Una secuencia corta hecha de cuatro aminoácidos corrientes y uno difícil no es cuatro quintos de un problema corriente.</p>
+
+        <h2>El receptor se encontró antes que su señal natural</h2>
+        <p>La farmacología aquí tiene una historia poco común. Se conocían compuestos sintéticos que liberaban hormona de crecimiento antes de saber cuál era la señal propia del organismo. El receptor sobre el que actuaban se identificó en 1996 y se nombró por los compuestos que lo encontraron: receptor de secretagogos de hormona de crecimiento. <a class="cite" href="https://doi.org/10.1126/science.273.5277.974" target="_blank" rel="noopener nofollow">(Referencia: Howard et al., 1996)</a> Quedó huérfano hasta 1999, cuando se identificó su ligando endógeno, la grelina. <a class="cite" href="https://doi.org/10.1038/45230" target="_blank" rel="noopener nofollow">(Referencia: Kojima et al., 1999)</a></p>
+        <p>Por eso el mismo receptor aparece con dos nombres en la literatura, y por eso la ipamorelina se describe tanto como secretagogo de hormona de crecimiento como agonista del receptor de grelina. Ambas son correctas. Para la clase en general, ver nuestra nota sobre <a href="article/what-is-a-growth-hormone-secretagogue/">secretagogos</a>.</p>
+
+        <h2>A qué se refiere «selectiva»</h2>
+        <p>La ipamorelina se caracterizó como el primer compuesto selectivo de su clase, en el sentido de que en los modelos empleados actuaba sobre su vía diana con actividad limitada en otros ejes hormonales que los secretagogos anteriores sí tocaban. <a class="cite" href="https://doi.org/10.1530/eje.0.1390552" target="_blank" rel="noopener nofollow">(Referencia: Raun et al., 1998)</a> Para una herramienta de investigación esa propiedad es todo el valor: cuanto más limpio el perfil, con más confianza se atribuye una observación a un receptor y no a varios. La distinción general entre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a> se cubre aparte.</p>
+        <p>Son observaciones preclínicas, basadas en modelos. La ipamorelina se suministra estrictamente como compuesto de investigación, y este artículo no describe uso en personas ni en animales.</p>
+
+        <h2>Por qué una medición de masa no basta</h2>
+        <p>Aquí vuelven los residuos inusuales. Un aminoácido D y su contraparte L tienen la misma fórmula y la misma masa. Nada en un <a href="article/mass-spectrometry-peptide-research/">espectro de masas</a> estándar los separa, así que un lote en el que un residuo D se hubiera suministrado por error en forma L devolvería la masa esperada y la fórmula esperada siendo una molécula distinta.</p>
+        <p>Lo que sí los distingue es el comportamiento en columna. Las impurezas diastereoméricas, cadenas que difieren solo en la configuración de un residuo, suelen eluir a un tiempo ligeramente distinto, así que aparecen en la <a href="article/high-performance-liquid-chromatography-hplc/">corrida cromatográfica</a> como un pico cercano al principal. Es un buen ejemplo de por qué pureza e identidad son dos preguntas y por qué un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> que responde solo una está incompleto.</p>
+
+        <h2>Manejo y verificación</h2>
+        <p>Se despacha <a href="article/lyophilization-freeze-drying/">liofilizada</a>, que es la forma estable. Mantenerla seca y fresca, y dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro; nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre el caso general. Un punto propio de los péptidos pequeños: a las masas que se suelen despachar, el material liofilizado puede ser una película fina o unas escamas en el vidrio en vez de un polvo visible. Un vial que parece vacío normalmente no ha perdido nada. Cada lote se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluida la ipamorelina, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es la ipamorelina, químicamente?",
+          "a": "Un pentapéptido sintético de secuencia Aib-His-D-2-Nal-D-Phe-Lys-NH2, fórmula C38H49N9O5 y peso molecular de unos 712 g/mol. Su número CAS es 170851-70-4."
+        },
+        {
+          "q": "¿Por qué contiene aminoácidos que no están entre los veinte estándar?",
+          "a": "El Aib rigidiza el esqueleto al llevar dos grupos metilo en el carbono alfa, y la 2-naftilalanina aporta una cadena lateral aromática más voluminosa que cualquiera del set natural. La química sintética no está limitada a los residuos que usa la biología."
+        },
+        {
+          "q": "¿Qué hacen los residuos D?",
+          "a": "Son imágenes especulares de las formas que usa la biología. Las enzimas que solo reconocen la configuración L no actúan sobre ellos, lo que es una manera común de hacer más resistente un péptido corto."
+        },
+        {
+          "q": "¿El receptor de grelina es el mismo que el de secretagogos?",
+          "a": "Sí. El receptor se identificó en 1996 a través de los compuestos sintéticos que actuaban sobre él y se nombró por ellos. Su ligando natural, la grelina, se identificó en 1999, y por eso el mismo receptor lleva los dos nombres."
+        },
+        {
+          "q": "¿Qué significa selectiva aquí?",
+          "a": "Que se caracterizó como actuando sobre su vía diana con actividad limitada en otros ejes hormonales que los secretagogos anteriores sí afectaban. Para una herramienta de investigación eso importa porque facilita atribuir una observación a un receptor y no a varios."
+        },
+        {
+          "q": "¿La espectrometría de masas confirma los residuos D?",
+          "a": "No. Un residuo D y su contraparte L tienen fórmulas y masas idénticas, así que una cadena con la configuración equivocada devolvería la masa esperada. Lo que los distingue es el tiempo de retención, porque esos diastereómeros suelen separarse en una columna."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-ghk-cu': {
+      title: 'GHK-Cu: el tripéptido de cobre, estructura y pureza',
+      metaTitle: 'GHK-Cu: complejo de cobre, fórmula y cómo se verifica',
+      metaDescription: 'GHK-Cu es un complejo de coordinación, no un péptido corriente: por qué su fórmula varía entre fuentes y qué huella deja el cobre en el espectro de masas.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Tres residuos sujetando un ion de cobre, y por qué eso cambia lo que un certificado tiene que probar.',
+      imageAlt: 'Por qué el nombre no fija la fórmula y qué huella deja el cobre en el espectro.',
+      body: `
+        <p class="lead">El GHK-Cu se archiva junto al resto de los péptidos de un catálogo, y eso induce a error. Es un complejo de coordinación: un péptido de tres residuos sujetando un ion de cobre. El metal es parte del compuesto, y eso cambia lo que un certificado tiene que probar.</p>
+
+        <h2>Dos cosas con dos juegos de números</h2>
+        <p>El péptido por su cuenta es glicil-L-histidil-L-lisina, de donde salen las letras.</p>
+        <ul>
+          <li><b>GHK, tripéptido libre:</b> C<sub>14</sub>H<sub>24</sub>N<sub>6</sub>O<sub>4</sub>, unos 340 g/mol, CAS 49557-75-7, PubChem CID 73587.</li>
+          <li><b>El complejo de cobre:</b> CAS 89030-95-5, listado en PubChem como C<sub>14</sub>H<sub>23</sub>CuN<sub>6</sub>O<sub>4</sub><sup>+</sup> a unos 403 g/mol (CID 71587328).</li>
+        </ul>
+        <p>Nótese que el complejo se escribe como catión. No es una rareza tipográfica, y es lo primero que conviene entender de este material.</p>
+
+        <h2>Por qué la fórmula se mueve</h2>
+        <p>Un péptido tiene una fórmula. La de un complejo metálico depende de cómo se contabilice: si el péptido se cuenta desprotonado en el nitrógeno que une el metal, cuál es la carga total, qué contraión la equilibra, y si la entrada describe un péptido por cobre o dos. Bases de datos y proveedores resuelven esas elecciones de forma distinta, y por eso se ven varias fórmulas y varias masas atadas al mismo nombre.</p>
+        <p>La consecuencia es práctica y no académica. Para un péptido corriente, el nombre más la secuencia definen el material. Para este no, así que el certificado carga más peso del habitual.</p>
+
+        <h2>Cómo se sujeta el cobre</h2>
+        <p>Los péptidos cortos con una histidina cerca del extremo amino son una clase conocida de ligandos de cobre, porque permiten colocar varios átomos donadores alrededor del metal a la vez. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Referencia: Harford y Sarkar, 1997)</a> Para este tripéptido en concreto, la geometría del complejo de cobre en disolución se resolvió en 1982, y la unión implica la amina terminal, el imidazol de la histidina y un nitrógeno del esqueleto, con el metal sujeto en una disposición aproximadamente plana. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Referencia: Freedman et al., 1982)</a></p>
+        <p>Unir un metal a través de un nitrógeno del esqueleto exige que ese nitrógeno pierda su protón, y por eso el complejo lleva una carga distinta de la del péptido libre y por eso el pH influye en cómo se reparte la especie. Nuestra nota sobre <a href="article/what-are-copper-peptides/">péptidos de cobre</a> presenta la familia, y el <a href="article/what-is-ahk-cu/">AHK-Cu</a> es un complejo emparentado construido sobre otro tripéptido.</p>
+
+        <h2>Lo único que se ve</h2>
+        <p>Casi nada de un péptido de investigación es visible al ojo. Este compuesto es la excepción, hasta cierto punto. Los complejos de cobre con donadores de nitrógeno absorben en el visible, así que el material es coloreado mientras que el tripéptido libre no. Un vial de complejo auténtico no parece un vial de polvo blanco.</p>
+        <p>Es una comprobación de cordura y nada más. El color dice que hay una especie de cobre presente; no dice la estequiometría, ni la pureza del péptido, ni si el complejo es el que se pretendía. Trátalo como tratarías el sello de una caja: digno de notar si está mal, y poca prueba de nada si está bien.</p>
+
+        <h2>El cobre deja huella</h2>
+        <p>Esta es la parte que hace este compuesto genuinamente más fácil de verificar que la mayoría, si el método es el adecuado. El cobre tiene dos isótopos estables, cobre-63 y cobre-65, presentes en la naturaleza en torno al 69 y al 31 por ciento. Cualquier especie que contenga un solo átomo de cobre muestra por tanto un par de picos separados por dos unidades de masa en esa proporción.</p>
+        <p>Ese patrón es difícil de falsificar y fácil de leer. Un <a href="article/mass-spectrometry-peptide-research/">espectro de masas</a> de material auténtico lo enseña; el del péptido libre sin metal, no. Es uno de los pocos casos en que la medición de identidad lleva dentro una comprobación propia.</p>
+
+        <h2>Por qué la pureza sola dice menos aquí</h2>
+        <p>Un porcentaje de pureza de <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía en fase reversa</a> responde una pregunta sobre el péptido: qué proporción del material detectado era la secuencia buscada. No dice por sí solo cuánto cobre hay ni si está unido en la proporción pretendida de uno a uno.</p>
+        <p>Hay además una trampa metodológica. Los métodos de fase reversa para péptidos corren normalmente a pH bajo con un aditivo ácido, y las condiciones ácidas pueden desplazar un complejo metálico lábil hacia su forma disociada. Una corrida que reporta un pico limpio puede estar reportando un pico limpio del tripéptido libre. Por eso, para un complejo metálico, las condiciones del análisis son parte del resultado más allá de lo habitual, y el contenido de cobre merece reportarse como cifra propia. Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">leer un certificado</a> cubre qué trae un documento completo.</p>
+
+        <h2>De dónde viene la secuencia</h2>
+        <p>A diferencia de los agonistas diseñados, el GHK es una secuencia que aparece de forma natural en el plasma humano. El material de investigación se fabrica por <a href="article/peptide-synthesis/">síntesis en fase sólida</a> y después se acompleja con cobre en condiciones controladas, de modo que la proporción y la pureza quedan definidas en vez de heredadas. El origen natural es parte de la historia; no sustituye a un registro de lote.</p>
+        <p>Esto es trabajo de laboratorio. El GHK-Cu se suministra estrictamente como compuesto de investigación, y nada aquí describe uso en personas ni en animales.</p>
+
+        <h2>Manejo y verificación</h2>
+        <p>El material se despacha <a href="article/lyophilization-freeze-drying/">liofilizado</a> y siguen valiendo las reglas de siempre: seco, fresco, lejos de la luz, y dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro. Cualquier vial de Codex Research se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido el GHK-Cu, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es el GHK-Cu?",
+          "a": "Un complejo de coordinación del tripéptido glicil-L-histidil-L-lisina con un ion de cobre. El péptido libre es C14H24N6O4 a unos 340 g/mol, CAS 49557-75-7; el complejo lleva CAS 89030-95-5 y figura en PubChem como un catión de unos 403 g/mol."
+        },
+        {
+          "q": "¿Por qué distintas fuentes dan fórmulas distintas?",
+          "a": "Porque la fórmula de un complejo metálico depende de si el nitrógeno que une el metal se cuenta desprotonado, de la carga total, del contraión que la equilibra, y de si la entrada describe un péptido por cobre o dos. El nombre no define el material con la firmeza con que lo haría en un péptido corriente."
+        },
+        {
+          "q": "¿Cómo une el péptido al cobre?",
+          "a": "A través de varios átomos donadores colocados a la vez: la amina terminal, el nitrógeno del imidazol de la histidina y un nitrógeno del esqueleto, sujetando el metal en una disposición aproximadamente plana. La geometría del complejo en disolución se determinó en 1982."
+        },
+        {
+          "q": "¿La espectrometría de masas confirma que el cobre está?",
+          "a": "Sí, y de forma distintiva. El cobre tiene dos isótopos estables con una abundancia natural en torno al 69 y al 31 por ciento, así que cualquier especie con un átomo de cobre muestra un par de picos característico separado por dos unidades de masa. El péptido libre no muestra ese patrón."
+        },
+        {
+          "q": "¿Basta una cifra de pureza por HPLC para el GHK-Cu?",
+          "a": "No. Reporta qué proporción del material detectado era la secuencia buscada, no cuánto cobre hay ni si está unido en la proporción pretendida. El contenido de cobre merece reportarse como cifra propia."
+        },
+        {
+          "q": "¿Puede disociarse el complejo durante el análisis?",
+          "a": "Puede. Los métodos de fase reversa para péptidos corren a pH bajo con un aditivo ácido, y las condiciones ácidas pueden desplazar un complejo metálico lábil hacia su forma disociada, de modo que un pico limpio puede corresponder al tripéptido libre."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-ahk-cu': {
+      title: 'AHK-Cu: un tripéptido de cobre y en qué se diferencia',
+      metaTitle: 'AHK-Cu: identidad, un residuo de diferencia y verificación',
+      metaDescription: 'AHK-Cu: fórmula del péptido libre y del complejo, qué cambia el metilo que lo separa del GHK-Cu, y cómo se distinguen analíticamente.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un grupo metilo de diferencia con su pariente conocido, y por qué eso basta para compararlos.',
+      imageAlt: 'Un residuo de diferencia con el GHK-Cu, y cómo se distinguen por masa.',
+      body: `
+        <p class="lead">El AHK-Cu se diferencia de su pariente más conocido por lo que ocupa un grupo metilo. El tripéptido es alanil-histidil-lisina en vez de glicil-histidil-lisina, es decir un metilo donde el otro tiene un hidrógeno. Esa es toda la diferencia estructural, y está justo al lado de la parte de la molécula que sujeta el cobre.</p>
+
+        <h2>Dos juegos de números, como en cualquier complejo metálico</h2>
+        <ul>
+          <li><b>AHK, el tripéptido libre:</b> C<sub>15</sub>H<sub>26</sub>N<sub>6</sub>O<sub>4</sub>, unos 354 g/mol, CAS 126828-32-8, PubChem CID 7408502.</li>
+          <li><b>El complejo de cobre:</b> CAS 682809-81-0, listado en PubChem como C<sub>15</sub>H<sub>24</sub>ClCuN<sub>6</sub>O<sub>4</sub><sup>-</sup> a unos 451 g/mol (CID 168431292).</li>
+        </ul>
+        <p>La entrada del complejo lleva un cloruro y una carga negativa. Es una manera de escribirlo, no la única: la fórmula de un complejo de coordinación depende del estado de protonación, de la carga total y del contraión elegido. Nuestra nota sobre <a href="article/what-are-copper-peptides/">péptidos de cobre</a> cubre por qué el nombre no fija la fórmula.</p>
+
+        <h2>Dónde se sienta el cobre, y por qué importa el primer residuo</h2>
+        <p>Las secuencias cortas con una histidina cerca del extremo amino unen cobre colocando varios átomos donadores alrededor del metal a la vez: la amina terminal, el imidazol de la histidina, y un nitrógeno del esqueleto que tiene que perder su protón para participar. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Referencia: Harford y Sarkar, 1997)</a> La geometría de esa disposición se resolvió para la versión con glicina en 1982. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Referencia: Freedman et al., 1982)</a></p>
+        <p>El primer residuo aporta la amina terminal, que es uno de esos donadores. Sustituir glicina por alanina añade un grupo metilo en el carbono contiguo. La sustitución no quita ni añade un donador; cambia lo que hay junto al metal, y comparar los dos complejos es como se mide la contribución de esa posición.</p>
+
+        <h2>Qué puede y qué no puede hacer un grupo metilo</h2>
+        <p>Conviene ser preciso con la escala del cambio, porque un intercambio de un solo residuo invita a dos errores opuestos. Uno es suponer que los dos compuestos son intercambiables, ya que difieren tan poco. El otro es suponer que la diferencia tiene que ser grande, ya que alguien se molestó en hacer los dos.</p>
+        <p>Un grupo metilo cambia tres cosas sobre las que se puede razonar: ocupa espacio junto a la amina terminal, es algo más graso que un hidrógeno, y elimina la flexibilidad inusual que la glicina da a un esqueleto. La glicina, sin cadena lateral alguna, adopta conformaciones que ningún otro residuo puede. Sustituirla restringe por tanto la geometría local además de añadir volumen.</p>
+        <p>Si esos cambios importan en un sistema dado es una medición, no una deducción. La diferencia estructural es pequeña y está definida con precisión; las consecuencias son las que reporte un experimento.</p>
+
+        <h2>Por qué comparar secuencias casi idénticas es práctica habitual</h2>
+        <p>Cambiar un residuo por vez es el movimiento básico del trabajo de estructura-actividad. Si dos compuestos difieren en una sola posición y se comportan distinto, la diferencia es atribuible. Si se comportan igual, esa posición no está haciendo el trabajo.</p>
+        <p>Un par como AHK y GHK sirve justo para eso, y es a la vez una trampa para la documentación de un proveedor: dos compuestos tan parecidos son fáciles de etiquetar mal e imposibles de distinguir a ojo.</p>
+
+        <h2>La lisina del final</h2>
+        <p>Los dos tripéptidos terminan en lisina, cuya cadena lateral lleva una amina que permanece protonada a pH ordinario. Esa carga no forma parte del sitio de cobre, y hace la mayor parte del trabajo de mantener solubles estos compuestos.</p>
+        <p>Tiene además una consecuencia analítica. Un residuo con carga positiva interactúa con el aditivo ácido de los <a href="article/high-performance-liquid-chromatography-hplc/">métodos de fase reversa</a>, así que la retención depende del aditivo además de la secuencia. Dos laboratorios corriendo la misma muestra con concentraciones distintas de ácido pueden ver el pico en sitios distintos, que es una razón más para que las condiciones del método acompañen a la cifra de pureza.</p>
+
+        <h2>Cómo se distinguen</h2>
+        <p>Un grupo metilo son catorce daltons. Tanto los tripéptidos libres como los complejos de cobre difieren en esa cantidad, holgadamente dentro de la resolución de cualquier <a href="article/mass-spectrometry-peptide-research/">espectrómetro de masas</a> usado para este trabajo. La medición de identidad los separa sin dificultad.</p>
+        <p>El cobre añade una segunda comprobación independiente. Tiene dos isótopos estables, cobre-63 y cobre-65, presentes en torno al 69 y al 31 por ciento, así que cualquier especie que lleve un átomo de cobre muestra un par de picos separados por dos unidades de masa en esa proporción. El espectro del péptido libre no muestra nada parecido.</p>
+
+        <h2>Qué no cubre una cifra de pureza</h2>
+        <p>Un porcentaje de fase reversa reporta qué proporción del material detectado era la secuencia buscada. Para un complejo metálico eso deja dos preguntas abiertas: cuánto cobre hay, y si está unido a razón de un cobre por péptido.</p>
+        <p>Las condiciones ácidas lo complican más. Los métodos de fase reversa corren a pH bajo con un aditivo ácido, y el ácido desplaza un complejo lábil hacia su forma disociada, de modo que un pico limpio puede corresponder al tripéptido libre. El contenido de cobre merece reportarse como cifra propia, y las condiciones del análisis pertenecen al <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> junto al número.</p>
+
+        <h2>Fabricarlo</h2>
+        <p>La mitad peptídica son tres ciclos de acoplamiento de <a href="article/peptide-synthesis/">síntesis en fase sólida</a> corriente, sin residuos difíciles. Formar el complejo es el paso donde un lote puede salir mal estando el péptido perfectamente bien: el cobre hay que introducirlo en condiciones controladas para que la proporción salga correcta, y el pH tiene que quedar donde domina la especie pretendida.</p>
+
+        <h2>Manejo y verificación</h2>
+        <p>El material se despacha <a href="article/lyophilization-freeze-drying/">liofilizado</a>, que es la forma estable. Seco, fresco y lejos de la luz directa, y dejando que un vial frío alcance la temperatura ambiente antes de abrirlo. Cualquier vial se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido el AHK-Cu, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué significa AHK-Cu?",
+          "a": "El complejo de cobre del tripéptido alanil-histidil-lisina, cuyos códigos de una letra son A, H y K. El tripéptido libre es C15H26N6O4 a unos 354 g/mol, CAS 126828-32-8; el complejo lleva CAS 682809-81-0."
+        },
+        {
+          "q": "¿En qué se diferencia del GHK-Cu?",
+          "a": "En un residuo. La primera posición es alanina en vez de glicina, lo que añade un grupo metilo junto a la amina terminal que ayuda a sujetar el cobre. Nada más en la secuencia cambia."
+        },
+        {
+          "q": "¿Ese cambio afecta a la unión del cobre?",
+          "a": "No quita ni añade un átomo donador. Cambia lo que hay inmediatamente al lado del metal, y comparar los dos complejos es como se mide la contribución de esa posición."
+        },
+        {
+          "q": "¿Cómo se distinguen analíticamente AHK-Cu y GHK-Cu?",
+          "a": "Por masa. Un grupo metilo son catorce daltons, una diferencia holgadamente dentro de la resolución de cualquier espectrómetro usado para este trabajo. El patrón isotópico del cobre aporta una segunda comprobación de que el metal está presente."
+        },
+        {
+          "q": "¿Por qué PubChem lista un cloruro en la fórmula?",
+          "a": "Porque un complejo de coordinación hay que escribirlo con alguna carga y algún contraión, y esa entrada toma una elección concreta. Otras fuentes escriben el mismo compuesto de otra forma, y por eso el nombre por sí solo no fija una fórmula."
+        },
+        {
+          "q": "¿Basta un porcentaje de pureza para el AHK-Cu?",
+          "a": "No. Reporta qué proporción del material detectado era la secuencia buscada y deja abierto cuánto cobre hay y si está unido uno a uno. Las condiciones cromatográficas ácidas además pueden disociar el complejo."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-pt-141': {
+      title: 'PT-141 (bremelanotida): un péptido cíclico de melanocortina',
+      metaTitle: 'PT-141 (bremelanotida): péptido cíclico y su verificación',
+      metaDescription: 'PT-141: fórmula, CAS y peso molecular, qué hace la ciclación a la molécula, y por qué una masa coincidente no dice dónde se cerró el anillo.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Dos nombres para la misma molécula, y un anillo que cambia cómo se fabrica y cómo se comprueba.',
+      imageAlt: 'El puente lactámico, los dieciocho daltons del cierre y lo que la masa no resuelve.',
+      body: `
+        <p class="lead">PT-141 y bremelanotida son la misma molécula bajo dos nombres, y eso es lo primero que despista. Lo segundo es que es cíclica. Esa sola característica estructural cambia cómo se fabrica, cómo se comporta en una columna y qué hace falta para probar que un vial contiene lo que dice la etiqueta.</p>
+
+        <h2>La identidad, en datos</h2>
+        <ul>
+          <li><b>Número CAS:</b> 189691-06-3</li>
+          <li><b>Fórmula molecular:</b> C<sub>50</sub>H<sub>68</sub>N<sub>14</sub>O<sub>10</sub></li>
+          <li><b>Peso molecular:</b> unos 1.025 g/mol</li>
+          <li><b>PubChem CID:</b> 9941379</li>
+        </ul>
+        <p>PT-141 es la abreviatura de investigación y bremelanotida la denominación común. Ninguno es un identificador como lo son la fórmula y el número CAS, que es el argumento para leer un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> en vez de una etiqueta.</p>
+
+        <h2>De dónde viene la estructura</h2>
+        <p>El PT-141 pertenece a un linaje de péptidos de melanocortina que empezó con análogos modificados de la hormona natural. Un paso clave de ese linaje fue el diseño de análogos cíclicos en los que un puente entre dos cadenas laterales fija el esqueleto en una forma restringida, estrategia introducida a finales de los ochenta y que demostró producir compuestos notablemente más potentes que sus equivalentes flexibles. <a class="cite" href="https://doi.org/10.1021/ja00191a044" target="_blank" rel="noopener nofollow">(Referencia: Al-Obeidi et al., 1989)</a></p>
+
+        <h2>El puente en sí</h2>
+        <p>La forma habitual de restringir un péptido de esta clase es un lactama de cadena lateral a cadena lateral: un enlace amida formado entre la amina de una cadena lateral y el carboxilo de otra, varias posiciones más allá en la secuencia. Es el mismo tipo de enlace que une el esqueleto, construido en otro sitio.</p>
+        <p>La elección es deliberada y no cómoda. Un puente disulfuro también cerraría un anillo, pero se puede reducir y reabrir. Un lactama no, así que la restricción aguanta en condiciones que deshacen un disulfuro. Esa estabilidad es la razón de que la estrategia se volviera estándar para esta familia.</p>
+
+        <h2>Qué hace la ciclación</h2>
+        <p>Cerrar un péptido en anillo tiene tres consecuencias que importan en el laboratorio, y ninguna trata de potencia.</p>
+        <ul>
+          <li><b>Restringe la conformación.</b> Una cadena lineal explora muchas formas. Un anillo restringido sostiene un conjunto más estrecho, que es el objetivo de fabricarlo.</li>
+          <li><b>Elimina los extremos de cadena.</b> Las enzimas que roen hacia dentro desde un extremo libre no tienen de dónde agarrar, así que los péptidos cíclicos suelen resistir mejor esa vía de degradación.</li>
+          <li><b>Cambia el comportamiento cromatográfico.</b> La forma plegada y restringida presenta a una columna de fase reversa una superficie distinta de la que presentaría la cadena abierta, así que el tiempo de retención no es predecible solo a partir de la secuencia.</li>
+        </ul>
+        <p>Nuestra nota sobre <a href="article/cyclic-vs-linear-peptides/">péptidos cíclicos y lineales</a> cubre el caso general.</p>
+
+        <h2>Los receptores de melanocortina</h2>
+        <p>La familia de melanocortina agrupa varios subtipos de receptor repartidos por distintos tejidos y asociados a un rango de procesos de señalización, y su fisiología está revisada en detalle. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a> Como la familia tiene varios miembros con preferencias de ligando solapadas, la pregunta recurrente para cualquier agonista de melanocortina es la selectividad: qué subtipos alcanza y con qué fuerza, en relación con los demás. Nuestra nota sobre <a href="article/what-are-melanocortin-receptors/">receptores de melanocortina</a> presenta la familia, y la distinción general entre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a> se cubre aparte.</p>
+        <p>Esto es trabajo de laboratorio y de modelos. El PT-141 se suministra estrictamente como compuesto de investigación, y nada aquí describe uso en personas ni en animales.</p>
+
+        <h2>El problema de verificación que crean los péptidos cíclicos</h2>
+        <p>Esta es la parte que rara vez se menciona y merece saberse. Formar un anillo es una condensación: se crea un enlace y se libera una molécula de agua. El producto cíclico pesa por tanto unos dieciocho daltons menos que el precursor lineal del que salió.</p>
+        <p>Dieciocho daltons es una diferencia fácil de medir, así que una simple comprobación de masa dice si la ciclación ocurrió. Lo que una sola medición de masa no dice es <em>dónde</em> se cerró el anillo, si más de un par de cadenas laterales podía haber reaccionado, porque todos esos productos tienen la misma fórmula y la misma masa. Distinguirlos exige fragmentar, que es lo que aporta la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> en tándem. Un certificado que reporta una masa coincidente ha respondido una pregunta real, no todas.</p>
+
+        <h2>Cuándo se cierra el anillo</h2>
+        <p>La ciclación puede hacerse con la cadena todavía unida a la resina o después de cortarla a disolución. En resina tiene una ventaja práctica: las bolitas mantienen las cadenas separadas físicamente, así que una cadena tiene más probabilidad de encontrar su propio otro extremo que el de una vecina. En disolución, la misma reacción hay que correrla diluida para conseguir el mismo efecto, lo que significa volúmenes grandes para poco producto.</p>
+        <p>De una forma u otra el paso tiene un rendimiento, y lo que no ciclara correctamente sigue en la mezcla cuando empieza la purificación.</p>
+
+        <h2>Fabricarlo</h2>
+        <p>La cadena se ensambla por <a href="article/peptide-synthesis/">síntesis en fase sólida</a> como cualquier otra secuencia, y la ciclación es un paso adicional con su propio rendimiento. Corrida a concentración alta, las cadenas tienden a reaccionar entre sí en vez de consigo mismas, produciendo dímeros y especies mayores en vez del anillo pretendido. Esos subproductos son parte de lo que un método de pureza tiene que separar, y por eso un péptido cíclico es más que un péptido lineal con un paso extra.</p>
+
+        <h2>Manejo y verificación</h2>
+        <p>El material se despacha <a href="article/lyophilization-freeze-drying/">liofilizado</a>, que es la forma estable. Seco, fresco y lejos de la luz, dejando que un vial frío alcance la temperatura ambiente antes de abrirlo. La pureza se establece por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y la identidad por espectrometría de masas, y cualquier vial se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+        <p>Un detalle propio de este compuesto conviene llevarlo a la documentación. Como parte de la pregunta analítica es si el anillo cerró y cerró en el sitio correcto, un certificado de péptido cíclico que reporta solo un porcentaje de pureza responde menos de lo que aparenta. La línea de identidad hace aquí más trabajo que en una secuencia lineal.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido el PT-141, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿PT-141 y bremelanotida son lo mismo?",
+          "a": "Sí. PT-141 es la abreviatura de investigación y bremelanotida la denominación común del mismo péptido sintético, CAS 189691-06-3, fórmula C50H68N14O10. Se suministra estrictamente para investigación de laboratorio."
+        },
+        {
+          "q": "¿Qué significa que sea un péptido cíclico?",
+          "a": "Un puente entre dos cadenas laterales cierra el esqueleto en anillo. Eso restringe las formas que la molécula puede adoptar, elimina los extremos libres que algunas enzimas degradan, y cambia cómo queda retenida en una columna de fase reversa."
+        },
+        {
+          "q": "¿Sobre qué receptores actúa?",
+          "a": "Actúa como agonista en receptores de melanocortina, una familia de varios subtipos repartidos por distintos tejidos y asociados a un rango de procesos de señalización. Como los subtipos tienen preferencias de ligando solapadas, la selectividad es la pregunta recurrente."
+        },
+        {
+          "q": "¿Por qué un péptido cíclico pesa menos que su precursor lineal?",
+          "a": "Porque formar el anillo es una condensación. Se crea un enlace y se libera una molécula de agua, así que el producto cíclico es unos dieciocho daltons más ligero que la cadena abierta de la que se hizo."
+        },
+        {
+          "q": "¿La espectrometría de masas confirma dónde cicló el péptido?",
+          "a": "No con una sola medición de masa. Si más de un par de cadenas laterales podía haber reaccionado, todos los productos posibles tienen la misma fórmula y la misma masa. Separarlos exige fragmentación, que aporta la espectrometría en tándem."
+        },
+        {
+          "q": "¿Qué subproductos produce la ciclación?",
+          "a": "Sobre todo dímeros y especies mayores, formados cuando las cadenas reaccionan entre sí en vez de cerrarse sobre sí mismas. Son parte de lo que un método de pureza tiene que separar."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-nad-plus': {
+      title: 'NAD+: el cofactor, y por qué no es un péptido',
+      metaTitle: 'NAD+: fórmula, el signo más y qué debe traer su certificado',
+      metaDescription: 'NAD+ no es un péptido: fórmula y peso, qué distingue NAD+ de NADH y de NADP+, y por qué sus preguntas analíticas son distintas a las de una secuencia.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un cofactor pequeño entre péptidos, y por qué sus preguntas analíticas son otras.',
+      imageAlt: 'Un cofactor sin secuencia, el signo más de la identidad y qué mide su certificado.',
+      body: `
+        <p class="lead">El NAD+ está aparte de todo lo demás de este catálogo. No es un péptido, no tiene secuencia ni residuos, y ninguna de las costumbres analíticas construidas alrededor de los péptidos se traslada limpiamente. Es un cofactor orgánico pequeño, y leer una especificación suya significa leer líneas distintas.</p>
+
+        <h2>La identidad, en datos</h2>
+        <ul>
+          <li><b>Fórmula molecular:</b> C<sub>21</sub>H<sub>27</sub>N<sub>7</sub>O<sub>14</sub>P<sub>2</sub></li>
+          <li><b>Peso molecular:</b> unos 663 g/mol</li>
+          <li><b>PubChem CID:</b> 5892</li>
+        </ul>
+        <p>El nombre es la abreviatura de dinucleótido de nicotinamida y adenina, y la estructura sigue al nombre: dos nucleótidos unidos por sus grupos fosfato, uno con nicotinamida y el otro con adenina.</p>
+
+        <h2>El signo más es parte del nombre</h2>
+        <p>NAD+ y NADH son la misma molécula en dos estados. El cofactor trabaja aceptando y cediendo electrones, y la notación distingue la forma oxidada de la reducida. Escribir NAD sin signo es ambiguo, porque no dice de qué estado se habla.</p>
+        <p>No es pedantería de notación. Las dos formas difieren en masa y en cómo se comportan analíticamente, así que una especificación que omite el signo ha dejado fuera parte de la identidad.</p>
+
+        <h2>Cuatro moléculas emparentadas, cuatro compuestos distintos</h2>
+        <p>Las abreviaturas de este rincón de un catálogo se parecen lo bastante como para confundirse de un vistazo, y cada una nombra una sustancia distinta con su propia masa.</p>
+        <ul>
+          <li><b>NAD+</b> y <b>NADH</b>: las formas oxidada y reducida del mismo cofactor.</li>
+          <li><b>NADP+</b> y <b>NADPH</b>: el mismo par llevando un fosfato adicional, lo que los convierte en moléculas distintas usadas por enzimas distintas.</li>
+        </ul>
+        <p>Una especificación que nombra una de las cuatro nombra algo que una medición de masa puede confirmar, porque el fosfato y el hidruro cambian la masa en cantidades que un instrumento resuelve sin dificultad. Un listado que dice solo NAD no ha especificado a cuál se refiere.</p>
+
+        <h2>Qué hace en una célula</h2>
+        <p>El cofactor transporta electrones entre reacciones, lo que lo coloca en el centro del metabolismo energético. Más allá de ese papel, varias familias de enzimas lo consumen como sustrato, así que la célula lo recicla y lo gasta a la vez, y la reserva tiene que reponerse. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Referencia: Cantó et al., 2015)</a></p>
+        <p>Como es a la vez transportador reciclado y sustrato consumido, su concentración está regulada en vez de fija, y cómo se mantiene ese equilibrio está revisado en detalle. <a class="cite" href="https://doi.org/10.1038/s42255-019-0161-5" target="_blank" rel="noopener nofollow">(Referencia: Katsyuba et al., 2020)</a> <a class="cite" href="https://doi.org/10.1016/j.tibs.2006.11.006" target="_blank" rel="noopener nofollow">(Referencia: Belenky et al., 2007)</a></p>
+        <p>Son observaciones de laboratorio y de modelos. El NAD+ se suministra estrictamente como compuesto de investigación, y nada aquí describe uso en personas ni en animales.</p>
+
+        <h2>De dónde sale el compuesto</h2>
+        <p>El material de investigación se produce por síntesis química o enzimática y se purifica, no se extrae en cantidad de tejido. Eso importa para el perfil de impurezas: lo que acompaña al producto refleja la ruta empleada y la purificación posterior, que es la misma lógica que se aplica a un péptido sintético aunque la química no tenga nada que ver con la <a href="article/peptide-synthesis/">síntesis en fase sólida</a>.</p>
+        <p>Significa además que el compuesto no lleva secuencia que verificar ni la historia de contraión que complica la <a href="article/excipients-in-peptides/">masa pesada</a> de un péptido. La forma salina, cuando la hay, se indica en la especificación.</p>
+
+        <h2>Por qué las preguntas analíticas son distintas</h2>
+        <p>Para un péptido, identidad significa comparar una masa medida contra otra calculada a partir de una secuencia, y pureza significa resolver secuencias de deleción que difieren en un solo residuo. Ninguna de las dos aplica aquí.</p>
+        <p>El NAD+ es una molécula pequeña definida, hecha por rutas químicas o enzimáticas y no ensamblada residuo a residuo, así que no hay secuencias de deleción. Sus impurezas probables son sus propios parientes: la forma reducida, la versión fosforilada, y productos de degradación por hidrólisis del enlace entre las dos mitades.</p>
+        <p>Eso cambia lo que un método cromatográfico tiene que separar. Los nucleótidos emparentados son polares, y las <a href="article/high-performance-liquid-chromatography-hplc/">condiciones de fase reversa</a> ajustadas para péptidos no son automáticamente las adecuadas para ellos.</p>
+
+        <h2>Absorbe donde los péptidos no</h2>
+        <p>Los anillos de nicotinamida y adenina absorben luz ultravioleta con fuerza, con un máximo cerca de 260 nm que procede de la adenina. Es una longitud de onda distinta de las que se usan en trabajo con péptidos, donde la detección se sitúa cerca de 214 nm para el enlace amida o de 280 nm para cadenas laterales aromáticas.</p>
+        <p>La forma reducida añade una segunda banda de absorbancia que la oxidada no tiene, lo que es la base del ensayo clásico para seguir estas reacciones y una manera rápida de distinguir los dos estados.</p>
+
+        <h2>Es menos estable que un péptido en disolución</h2>
+        <p>El enlace que une las dos mitades nucleotídicas es susceptible de hidrólisis, y la molécula es sensible tanto a ácido como a base. En disolución se degrada más rápido de lo que lo haría un péptido liofilizado típico, y el calor lo acelera.</p>
+        <p>Las reglas de manejo son por tanto las de siempre aplicadas con más atención: mantener el material seco seco y fresco, dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro, y tratar una disolución como algo de vida corta. Nuestra guía sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre por qué el estado seco es el estable.</p>
+
+        <h2>Qué debería traer un certificado</h2>
+        <p>El mismo principio que en todo lo demás, con las líneas ajustadas al compuesto.</p>
+        <ul>
+          <li><b>Identidad</b> confirmada contra la fórmula y la masa de arriba, con el estado de oxidación declarado.</li>
+          <li><b>Pureza</b> por un método adecuado a nucleótidos polares, con las condiciones nombradas.</li>
+          <li><b>Contenido de agua</b>, porque un sólido higroscópico toma humedad y ese agua forma parte de lo que se pesa.</li>
+          <li><b>Un número de lote</b> que ate todo eso al vial, y que se puede <a href="verify/">comprobar</a>.</li>
+        </ul>
+        <p>Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">leer un certificado de análisis</a> cubre el caso general; para un cofactor cambian los campos, no la lógica.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido el NAD+, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es el NAD+?",
+          "a": "Dinucleótido de nicotinamida y adenina, un cofactor orgánico pequeño formado por dos nucleótidos unidos por sus fosfatos. Su fórmula es C21H27N7O14P2 y su peso molecular unos 663 g/mol. No es un péptido y no tiene secuencia."
+        },
+        {
+          "q": "¿Qué significa el signo más?",
+          "a": "Marca la forma oxidada. NAD+ y NADH son la misma molécula en dos estados, porque el cofactor trabaja aceptando y cediendo electrones. Escribir NAD sin signo deja el estado sin especificar, y las dos formas difieren en masa."
+        },
+        {
+          "q": "¿Por qué se analiza distinto de un péptido?",
+          "a": "Porque es una molécula pequeña definida y no una cadena ensamblada residuo a residuo, así que no hay secuencias de deleción. Sus impurezas probables son nucleótidos emparentados y productos de hidrólisis, que son polares y piden condiciones cromatográficas distintas."
+        },
+        {
+          "q": "¿Es estable en disolución?",
+          "a": "Menos que un péptido liofilizado. El enlace que une sus dos mitades es susceptible de hidrólisis y la molécula es sensible a ácido y base, así que una disolución debe tratarse como de vida corta y mantenerse fría."
+        },
+        {
+          "q": "¿Por qué importa el contenido de agua?",
+          "a": "Porque un sólido higroscópico toma humedad del aire, y esa agua forma parte de lo que se pesa. Es también la razón de dejar que un vial frío alcance la temperatura ambiente antes de abrirlo."
+        },
+        {
+          "q": "¿Qué debería reportar un certificado de NAD+?",
+          "a": "Identidad confirmada contra la fórmula y la masa con el estado de oxidación declarado, pureza por un método adecuado a nucleótidos polares con las condiciones nombradas, contenido de agua, y un número de lote que ate todo al vial."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-mots-c': {
+      title: 'MOTS-c: el péptido codificado en la mitocondria',
+      metaTitle: 'MOTS-c: origen mitocondrial, identidad y verificación',
+      metaDescription: 'MOTS-c: fórmula y peso, por qué su origen en el genoma mitocondrial fue inesperado, y por qué sus dos metioninas son el punto de atención al conservarlo.',
+      category: 'Investigación con péptidos',
+      date: '02 may 2025',
+      excerpt: 'Codificado donde no se esperaba encontrar péptidos, y con dos metioninas que vigilar.',
+      imageAlt: 'Un péptido del genoma mitocondrial, y las dos metioninas que se oxidan.',
+      body: `
+        <p class="lead">Casi todos los péptidos de un catálogo de investigación están codificados en el ADN nuclear. El MOTS-c no. Viene de un marco de lectura abierto corto dentro del genoma mitocondrial, algo bastante inusual como para que su descubrimiento abriera una categoría en vez de sumar a una.</p>
+
+        <h2>La identidad, en datos</h2>
+        <ul>
+          <li><b>Fórmula molecular:</b> C<sub>101</sub>H<sub>152</sub>N<sub>28</sub>O<sub>22</sub>S<sub>2</sub></li>
+          <li><b>Peso molecular:</b> unos 2.175 g/mol</li>
+          <li><b>PubChem CID:</b> 146675088</li>
+        </ul>
+        <p>El nombre abrevia su origen: un marco de lectura abierto dentro del gen del ARN ribosómico 12S mitocondrial. Los dos átomos de azufre de la fórmula vienen de sus dos metioninas, cosa que conviene anotar para la conservación, porque la metionina es de los residuos más propensos a oxidarse.</p>
+
+        <h2>Codificado donde no se buscaban proteínas</h2>
+        <p>El genoma mitocondrial es pequeño y durante mucho tiempo se trató como codificante de una lista corta de componentes de la maquinaria respiratoria. No se esperaba que los marcos de lectura abiertos cortos de su interior produjeran péptidos funcionales. El MOTS-c se identificó como uno que sí lo hace. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Referencia: Lee et al., 2015)</a></p>
+        <p>El hallazgo importó más allá de la molécula concreta, porque implicaba una clase. El trabajo sobre péptidos de origen mitocondrial como grupo vino después. <a class="cite" href="https://doi.org/10.1113/jp274472" target="_blank" rel="noopener nofollow">(Referencia: Kim et al., 2017)</a></p>
+
+        <h2>Por qué un gen mitocondrial se lee distinto</h2>
+        <p>Las mitocondrias usan un código genético que difiere del nuclear en unos pocos codones, consecuencia de su historia evolutiva separada. Una secuencia leída con el código nuclear y la misma secuencia leída con el mitocondrial no siempre dan el mismo péptido.</p>
+        <p>El detalle importa a quien compare una secuencia publicada contra la especificación de un proveedor, porque una discrepancia puede venir del código aplicado y no del material. Es además parte de por qué los marcos de lectura cortos del ADN mitocondrial pasaron desapercibidos tanto tiempo: las herramientas que rastreaban genomas buscando secuencias codificantes se construyeron sobre supuestos nucleares.</p>
+
+        <h2>Una clase, no un caso aislado</h2>
+        <p>El MOTS-c no es el único péptido atribuido al genoma mitocondrial. La humanina se describió antes, y reconocer que ambos existen impulsó búsquedas sistemáticas de otros. <a class="cite" href="https://doi.org/10.1113/jp274472" target="_blank" rel="noopener nofollow">(Referencia: Kim et al., 2017)</a></p>
+        <p>La razón práctica de que eso importe a un catálogo es que los miembros de una clase tienden a estudiarse de forma comparada. Secuencias del mismo origen, examinadas una junto a otra, es la misma lógica experimental que pone dos tripéptidos de cobre uno al lado del otro en otra parte de este catálogo.</p>
+
+        <h2>Un péptido que se desplaza</h2>
+        <p>Una línea de trabajo reporta que el péptido se traslada al núcleo bajo estrés metabólico, donde se ha estudiado en el contexto de la expresión génica. <a class="cite" href="https://doi.org/10.1016/j.cmet.2018.06.008" target="_blank" rel="noopener nofollow">(Referencia: Kim et al., 2018)</a> Una molécula fabricada en un compartimento y que actúa en otro es el tipo de observación que hace plausible un papel de señalización, y es la pregunta mecanística alrededor de la que gira la mayor parte de la literatura.</p>
+        <p>Trabajo posterior examinó su regulación en el contexto del ejercicio y la edad en sistemas modelo. <a class="cite" href="https://doi.org/10.1038/s41467-020-20790-0" target="_blank" rel="noopener nofollow">(Referencia: Reynolds et al., 2021)</a></p>
+        <p>Son observaciones de laboratorio y de modelos. El MOTS-c se suministra estrictamente como compuesto de investigación, y nada aquí describe uso en personas ni en animales.</p>
+
+        <h2>Dieciséis residuos es poco para un péptido de señalización</h2>
+        <p>A unos 2.175 daltons es una cadena corta para los estándares del resto de compuestos de aquí, donde cuarenta residuos y un ácido graso unido son comunes. Los péptidos cortos tienden a quedarse flexibles en disolución en vez de sostener un plegamiento, lo que es normal y no un defecto; nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre por qué.</p>
+        <p>El tamaño moldea además el aspecto de un vial. Unos pocos miligramos de material liofilizado pueden quedar en una traza apenas visible en la pared del vidrio, que es una propiedad de <a href="article/lyophilization-freeze-drying/">cómo funciona el secado</a>.</p>
+
+        <h2>Dieciséis residuos es una síntesis corta</h2>
+        <p>A esta longitud la <a href="article/peptide-synthesis/">síntesis en fase sólida</a> es directa: dieciséis ciclos de acoplamiento, sin residuos inusuales, sin paso de acilación. El compuesto es bastante más sencillo de fabricar que los péptidos acilados de cuarenta residuos de este mismo catálogo, y el perfil de impurezas es proporcionalmente más simple.</p>
+        <p>Las secuencias de deleción siguen siendo la impureza a vigilar. En una cadena de dieciséis residuos, uno que falte es un cambio proporcionalmente mayor que en una de cuarenta, lo que ayuda a que un método de pureza lo resuelva.</p>
+
+        <h2>Las metioninas son el punto de manejo</h2>
+        <p>La metionina se oxida. La reacción añade un oxígeno, unos dieciséis daltons, y produce una especie que una <a href="article/mass-spectrometry-peptide-research/">medición de masa</a> separa limpiamente del péptido intacto. Con dos metioninas son posibles tanto una forma mono como una dioxidada.</p>
+        <p>La consecuencia práctica es corriente y merece respetarse: mantener el material seco, fresco y lejos de la luz, y dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro. Nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas de degradación en detalle.</p>
+
+        <h2>Qué establece la verificación</h2>
+        <p>La pureza por <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía</a> reporta qué proporción del material detectado es el objetivo. La identidad por espectrometría de masas compara la masa medida contra la calculada a partir de la secuencia, y a unos 2.175 daltons la diferencia entre masa monoisotópica y promedio es pequeña pero no nula, así que el criterio usado pertenece al documento.</p>
+        <p>Ambas cifras, ligadas a un número de lote, son lo que reporta un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y lo que se puede <a href="verify/">comprobar</a> contra un vial.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research, incluido el MOTS-c, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es el MOTS-c?",
+          "a": "Un péptido corto codificado por un marco de lectura abierto dentro del gen del ARN ribosómico 12S mitocondrial, y no por ADN nuclear. Su fórmula es C101H152N28O22S2 y su peso molecular unos 2.175 g/mol."
+        },
+        {
+          "q": "¿Por qué es notable su origen mitocondrial?",
+          "a": "El genoma mitocondrial se trató mucho tiempo como codificante solo de una lista corta de componentes respiratorios, y no se esperaba que sus marcos de lectura cortos dieran péptidos funcionales. Identificar uno que sí lo hace implicaba toda una clase."
+        },
+        {
+          "q": "¿Qué examina la literatura?",
+          "a": "El trabajo mecanístico ha reportado traslado al núcleo bajo estrés metabólico y ha estudiado el péptido en el contexto de la expresión génica, y trabajo posterior examinó su regulación en ejercicio y edad en sistemas modelo. Son observaciones de laboratorio y de modelos."
+        },
+        {
+          "q": "¿Es difícil de sintetizar?",
+          "a": "Menos que la mayoría de compuestos de este catálogo. Dieciséis ciclos de acoplamiento, sin residuos inusuales y sin paso de acilación lo hacen una síntesis en fase sólida directa, con un perfil de impurezas proporcionalmente más simple."
+        },
+        {
+          "q": "¿Por qué importan sus dos metioninas al conservarlo?",
+          "a": "La metionina se oxida y añade unos dieciséis daltons por residuo, y con dos son posibles tanto la forma mono como la dioxidada. Mantener el material seco, fresco y lejos de la luz limita la reacción."
+        },
+        {
+          "q": "¿La espectrometría de masas detecta el MOTS-c oxidado?",
+          "a": "Sí. Cada oxidación añade unos dieciséis daltons, una diferencia que una medición de masa resuelve limpiamente frente al péptido intacto."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'how-to-store-research-peptides': {
+      title: 'Conservar péptidos de investigación: vial seco frente a disolución',
+      metaTitle: 'Conservar péptidos: por qué el seco aguanta y la disolución no',
+      metaDescription: 'Por qué el estado seco es el estable, las cuatro rutas que degradan un péptido, y por qué los ciclos de temperatura pesan más que los días transcurridos.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Por qué el polvo seco perdona y la disolución no, y qué cuenta de verdad en el tránsito.',
+      imageAlt: 'El agua como reactivo y como movilidad, y las cuatro rutas por las que un péptido se degrada.',
+      body: `
+        <p class="lead">Un lote puede ser puro, estar correctamente identificado y venir bien documentado, y aun así no valer nada cuando se use. Ahí es donde entra la conservación, y se reduce a una distinción: un péptido seco y uno disuelto son dos situaciones distintas, gobernadas por reglas distintas.</p>
+
+        <h2>Por qué la forma seca es la estable</h2>
+        <p>El agua no es un espectador neutro. Participa en las reacciones que descomponen un péptido, y da a las moléculas la movilidad necesaria para alcanzarse y reaccionar. Retirarla por <a href="article/lyophilization-freeze-drying/">liofilización</a> retira las dos cosas.</p>
+        <p>La parte de la movilidad es la que se pasa por alto. Una formulación bien secada es un sólido amorfo, y por debajo de cierta temperatura ese sólido se comporta como un vidrio en el que el movimiento molecular está prácticamente detenido. El agua absorbida baja la temperatura a la que ese vidrio se ablanda, así que un polvo que ha tomado humedad no está simplemente más húmedo: se ha convertido en un sistema donde las cosas pueden moverse y por tanto reaccionar. <a class="cite" href="https://doi.org/10.1023/A:1018941810744" target="_blank" rel="noopener nofollow">(Referencia: Hancock y Zografi, 1994)</a></p>
+        <p>Esa es la razón de fondo de que la humedad sea el enemigo principal, y de que el contenido de agua aparezca como cifra en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo.</p>
+
+        <h2>Qué se degrada</h2>
+        <p>La degradación no es un proceso vago. Unas pocas rutas químicas concretas dan cuenta de casi toda, y conocerlas explica cada consejo de conservación.</p>
+        <ul>
+          <li><b>Desamidación.</b> Los residuos de asparagina y glutamina pierden su grupo amida y pasan a formas ácidas, a veces a través de un intermedio cíclico que además puede invertir la configuración del residuo. Es la ruta más común en agua, depende mucho del pH, y cambia la masa en torno a un dalton. <a class="cite" href="https://doi.org/10.1073/pnas.98.3.944" target="_blank" rel="noopener nofollow">(Referencia: Robinson y Robinson, 2001)</a></li>
+          <li><b>Oxidación.</b> Metionina, cisteína y triptófano son los residuos vulnerables. El oxígeno, la luz y trazas de metales la aceleran.</li>
+          <li><b>Hidrólisis.</b> El propio esqueleto se puede cortar, y algunos pares de residuos son mucho más susceptibles que otros.</li>
+          <li><b>Agregación.</b> Las moléculas se asocian en especies que ya no se disuelven bien. A diferencia de las otras es física y no química, así que la masa no cambia y solo algunos métodos la ven.</li>
+        </ul>
+        <p>Estas rutas están bien caracterizadas. <a class="cite" href="https://doi.org/10.1002/bit.260480511" target="_blank" rel="noopener nofollow">(Referencia: Li et al., 1995)</a> <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Referencia: Manning et al., 2010)</a></p>
+
+        <h2>El problema de la condensación</h2>
+        <p>Es el error de manejo más común y el más fácil de evitar. Un vial sacado del frío está más frío que la sala, así que la humedad del aire condensa sobre él y dentro de él en cuanto se abre. El agua entra directa al polvo.</p>
+        <p>Dejar que un vial frío alcance la temperatura ambiente antes de abrirlo no cuesta nada y elimina el problema por completo. En un clima húmedo importa más, no menos.</p>
+
+        <h2>Temperatura, y por qué los ciclos son peores que el calor</h2>
+        <p>Las velocidades de reacción suben con la temperatura, así que guardar más frío ralentiza todas las rutas de arriba. Lo menos evidente es que mover el material repetidamente entre temperaturas puede hacer más daño que mantenerlo a una temperatura estable algo más alta. Cada ciclo es otra oportunidad de condensación y otro paso por el rango en el que la matriz seca se ablanda.</p>
+        <p>Sacar un vial una vez y dejarlo fuera suele ser peor. Sacarlo, devolverlo y repetir, peor todavía.</p>
+
+        <h2>La luz</h2>
+        <p>La luz impulsa la oxidación, sobre todo la de los residuos aromáticos. Basta con viales ámbar y una caja cerrada; no hace falta nada elaborado. Es la variable que más se ignora porque su efecto es invisible hasta que lo revela un análisis.</p>
+
+        <h2>Qué hace y qué no hace el tránsito</h2>
+        <p>Un material que ha pasado semanas moviéndose entre bodegas y vehículos no simplemente ha envejecido. Ha atravesado una serie de oscilaciones de temperatura y humedad. La cuenta que importa es cuántos de esos ciclos atravesó y de qué amplitud fue cada uno.</p>
+        <p>Un vial seco y bien sellado es genuinamente robusto y tolera un viaje razonable. Lo que tolera peor es calentarse y enfriarse repetidamente en aire húmedo con un sello que no es el que debería. Es una propiedad del material y no una afirmación sobre la logística de nadie: la química de arriba no distingue quién movió la caja, solo qué le pasó a la caja.</p>
+
+        <h2>En disolución el reloj se acelera</h2>
+        <p>Disolver el material devuelve todo lo que el secado quitó. Una degradación que tardaba meses en el estado seco puede tardar días. El pH de la disolución influye directamente, porque las velocidades de desamidación dependen de él, y eso es parte de por qué el <a href="article/bacteriostatic-water-for-peptide-reconstitution/">agua bacteriostática</a> se sitúa donde se sitúa en la escala de pH.</p>
+        <p>Una disolución es además un envase que se ha abierto, así que la refrigeración y la protección de la luz dejan de ser opcionales. Anotar la fecha no es pulcritud: es la única forma de saber después con qué se está trabajando.</p>
+        <p>Una cosa más conviene decirla con claridad, porque provoca alarmas innecesarias: a las masas que se suelen despachar, el material seco puede ser una película fina, unas escamas en el vidrio, o no ser visible en absoluto. Un vial que parece vacío normalmente no ha perdido nada. La apariencia es una propiedad de cómo salió el secado y de si había un <a href="article/excipients-in-peptides/">agente de relleno</a>, no una medida del contenido.</p>
+
+        <h2>La etiqueta manda</h2>
+        <p>Todo lo anterior es el caso general. Las condiciones de un compuesto concreto pertenecen a su etiqueta y a su certificado, y esas instrucciones mandan sobre cualquier regla aproximada, incluida esta. Algunas secuencias tienen requisitos propios. Si quieres confirmar que un vial es auténtico antes de fiarte de él, comprueba su <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Esta guía describe manejo de laboratorio únicamente.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Por qué un péptido liofilizado es más estable que una disolución?",
+          "a": "Porque el agua participa en las reacciones que lo descomponen y da a las moléculas la movilidad para reaccionar. Retirarla retira las dos cosas. Una formulación bien secada se comporta como un vidrio en el que el movimiento molecular está prácticamente detenido."
+        },
+        {
+          "q": "¿Por qué importa tanto la humedad?",
+          "a": "El agua absorbida baja la temperatura a la que la matriz seca se ablanda. Un polvo que ha tomado humedad no está solo más húmedo: se ha convertido en un sistema donde las moléculas pueden moverse y reaccionar. Es también por lo que el contenido de agua aparece en un certificado completo."
+        },
+        {
+          "q": "¿Por qué hay que dejar templar un vial frío antes de abrirlo?",
+          "a": "Porque está más frío que la sala, así que la humedad del aire condensa sobre él y dentro de él al abrirlo, y esa agua entra al polvo. Dejar que alcance la temperatura ambiente elimina el problema por completo."
+        },
+        {
+          "q": "¿Qué reacciones degradan un péptido?",
+          "a": "Sobre todo desamidación de asparagina y glutamina, oxidación de metionina, cisteína y triptófano, hidrólisis del esqueleto, y agregación. Las tres primeras cambian la masa; la agregación es física, así que la masa no cambia y solo algunos métodos la detectan."
+        },
+        {
+          "q": "¿Los ciclos de temperatura son peores que el calor estable?",
+          "a": "Pueden serlo. Cada ciclo es otra oportunidad de condensación y otro paso por el rango en el que la matriz seca se ablanda. Sacar un vial y devolverlo repetidamente suele ser peor que una condición estable."
+        },
+        {
+          "q": "¿La etiqueta manda sobre las reglas generales?",
+          "a": "Sí. Las condiciones de un compuesto concreto pertenecen a su etiqueta y a su certificado de análisis, y esas instrucciones tienen prioridad sobre cualquier regla aproximada."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'endotoxins-in-research-peptides': {
+      title: 'Endotoxinas: cuándo debe reportarlas el certificado',
+      metaTitle: 'Endotoxinas en péptidos: cuándo se miden y por qué aparte',
+      metaDescription: 'Qué es una endotoxina, por qué estéril no es lo mismo que libre de endotoxina, y por qué una cifra de pureza no puede detectarla.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Una tercera medida de calidad, aparte de la pureza y la identidad, y el ensayo que la produce.',
+      imageAlt: 'Por qué estéril no es libre de endotoxina y por qué la pureza no la ve.',
+      body: `
+        <p class="lead">Un certificado que reporta pureza e identidad ha respondido dos preguntas sobre el péptido. El contenido de endotoxina responde una tercera, sobre algo que los otros dos métodos no están construidos para ver, y solo aparece cuando el trabajo previsto es sensible a ello.</p>
+
+        <h2>Qué es una endotoxina</h2>
+        <p>El término nombra una molécula concreta: el lipopolisacárido, un componente de la membrana externa de las bacterias gramnegativas. Tiene una porción lipídica anclada en la membrana y una cadena de azúcares que se extiende hacia fuera, y la porción lipídica es la responsable de su actividad biológica. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Referencia: Raetz y Whitfield, 2002)</a></p>
+        <p>Dos propiedades la convierten en un problema práctico. La sueltan las bacterias vivas y se libera cuando mueren, así que retirar el organismo no retira la molécula. Y es mucho más robusta que la bacteria: condiciones que esterilizan una disolución dejan la endotoxina intacta.</p>
+
+        <h2>Por qué sobrevive a tanto</h2>
+        <p>La robustez tiene explicación estructural. El lipopolisacárido no es una proteína, así que no tiene estructura plegada que desnaturalizar, y los enlaces que lo sostienen son los ordinarios de un lípido y una cadena de azúcares. El calor que despliega y destruye una proteína lo deja en gran medida intacto, y hace falta un tratamiento bastante más duro, calor seco sostenido en vez de las condiciones habituales de esterilización, para descomponerlo.</p>
+        <p>Además se agrega en agua, formando ensamblajes en vez de disolverse como moléculas sueltas. Ese comportamiento afecta a lo fácil que resulta retirarlo por filtración y explica por qué un filtro que retiene bacterias no retiene de forma fiable lo que estas dejaron atrás.</p>
+
+        <h2>Estéril y libre de endotoxina son afirmaciones distintas</h2>
+        <p>La esterilidad trata de si hay organismos viables. El contenido de endotoxina trata de si hay una molécula bacteriana presente. Una disolución puede ser estéril y llevar una carga de endotoxina significativa, porque la esterilización mató la fuente sin destruir lo que dejó.</p>
+        <p>Quien trata las dos cosas como intercambiables está haciendo una sustitución que la química no sostiene.</p>
+
+        <h2>Por qué la pureza no la detecta</h2>
+        <p>Una cifra de pureza <a href="article/high-performance-liquid-chromatography-hplc/">cromatográfica</a> mide qué proporción de los picos detectados corresponde al péptido buscado. La endotoxina no es un péptido, no se comporta como tal en una columna de fase reversa, y no tiene absorbancia útil a las longitudes de onda que se usan para detectar péptidos. No aporta nada al total, así que no puede bajar el porcentaje.</p>
+        <p>La <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> no está mejor situada. Está montada para confirmar la masa de la molécula pretendida, no para inventariar todo lo demás del vial. Un lote puede ser 99 por ciento puro, estar correctamente identificado, y llevar endotoxina a un nivel que arruinaría un experimento.</p>
+
+        <h2>Cómo se mide</h2>
+        <p>La endotoxina se cuantifica con su propio ensayo, basado en una reacción de coagulación de células sanguíneas de cangrejo herradura que la molécula dispara. La reacción es lo bastante sensible como para detectar cantidades muy pequeñas, y los resultados se reportan en unidades de endotoxina por mililitro o por miligramo. <a class="cite" href="https://doi.org/10.1177/096805199400100407" target="_blank" rel="noopener nofollow">(Referencia: Novitsky, 1994)</a></p>
+        <p>Una unidad de endotoxina se define contra un patrón de referencia y no como una masa, cosa que conviene saber al comparar cifras: la unidad refleja actividad en el ensayo.</p>
+
+        <h2>Evitarla es más fácil que quitarla</h2>
+        <p>Retirar endotoxina de una preparación terminada es difícil, porque la molécula se pega a las superficies y no se parece a nada que una purificación de péptidos esté diseñada para separar. Controlarla aguas arriba es la vía práctica: agua libre de endotoxina, material de vidrio limpio, y un manejo que no introduzca bacterias de entrada.</p>
+        <p>La misma lógica aplica después de que el vial salga del proveedor. Un lote medido como bajo en el punto de fabricación puede recoger contaminación del agua con que se disuelva, que es una razón más para prestar atención a la calidad de ese agua. Nuestra nota sobre el <a href="article/bacteriostatic-water-for-peptide-reconstitution/">agua bacteriostática</a> cubre qué contiene el fluido.</p>
+
+        <h2>Cuándo importa y cuándo no</h2>
+        <p>La respuesta depende por completo del experimento. El trabajo con células cultivadas, y en particular con células inmunitarias, es el caso clásico: esas células responden a la endotoxina, así que un reactivo contaminado produce una respuesta que parece un efecto del compuesto en estudio. Un resultado aparente puede ser un artefacto del vial y no de la molécula.</p>
+        <p>Para una comparación analítica, una medición de unión en un sistema sin células, o un experimento de química, la endotoxina suele ser irrelevante. Por eso la línea aparece en unos certificados y en otros no, y por eso su ausencia de un documento no es automáticamente una carencia.</p>
+
+        <h2>De dónde viene</h2>
+        <p>Un péptido sintético hecho por <a href="article/peptide-synthesis/">síntesis en fase sólida</a> no tiene paso bacteriano, así que el compuesto en sí no es una fuente. La contaminación llega de todo lo que lo rodea: agua, tampones, material de vidrio, resinas y manipulación. El agua es la vía más común, porque las bacterias crecen en ella con facilidad y dejan sus membranas al morir.</p>
+        <p>La implicación práctica es que el contenido de endotoxina es una propiedad del lote y de su manejo, no de la secuencia, y dos lotes de un mismo compuesto pueden diferir.</p>
+
+        <h2>Cómo leer la línea de un certificado</h2>
+        <p>Una entrada útil indica un número, una unidad y un método. Una afirmación sin número adjunto dice menos de lo que aparenta, y un límite no es una medición: «por debajo de 1 EU/mg» reporta un umbral, mientras que un valor medido reporta lo que se encontró.</p>
+        <p>El mismo principio recorre cada línea de un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a>: una cifra atada a un método con nombre y a un lote con nombre es un resultado, y cualquier otra cosa es una afirmación. El número de lote es lo que conecta ambos, y se puede <a href="verify/">comprobar</a>. Cuando la endotoxina no se ha medido para un lote, la descripción honesta es que no se midió, no que el material esté libre de ella.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué son las endotoxinas?",
+          "a": "Moléculas de lipopolisacárido de la membrana externa de bacterias gramnegativas. La porción lipídica lleva la actividad biológica. Las sueltan las bacterias vivas y se liberan al morir, así que retirar el organismo no las retira."
+        },
+        {
+          "q": "¿Una disolución estéril está libre de endotoxina?",
+          "a": "No. Estéril significa que no hay organismos viables. La endotoxina es una molécula que sobrevive a condiciones que matan bacterias, así que una disolución estéril puede llevar una carga significativa."
+        },
+        {
+          "q": "¿Por qué un resultado de pureza por HPLC no detecta endotoxina?",
+          "a": "Porque no es un péptido. No se comporta como tal en una columna de fase reversa y no tiene absorbancia útil a las longitudes de onda usadas para detectar péptidos, así que no aporta nada a las áreas de pico que forman el porcentaje."
+        },
+        {
+          "q": "¿Cómo se mide la endotoxina?",
+          "a": "Con un ensayo dedicado basado en una reacción de coagulación de células sanguíneas de cangrejo herradura que la molécula dispara. Los resultados se reportan en unidades de endotoxina, definidas contra un patrón de referencia y no como una masa."
+        },
+        {
+          "q": "¿Cuándo importa el contenido de endotoxina?",
+          "a": "Sobre todo en trabajo con células cultivadas, especialmente inmunitarias, que responden a ella. Un reactivo contaminado puede producir una respuesta que parece un efecto del compuesto estudiado. Para trabajo sin células o puramente analítico suele ser irrelevante."
+        },
+        {
+          "q": "¿De dónde viene la endotoxina de un péptido sintético?",
+          "a": "No de la síntesis, que no tiene paso bacteriano. Llega del agua, los tampones, el material de vidrio, las resinas y la manipulación, con el agua como vía más común. Es por tanto una propiedad del lote y su manejo, no de la secuencia."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'peptide-length-terminology': {
+      title: 'Di, tri, oligo, poli: cómo se nombra la longitud de un péptido',
+      metaTitle: 'Longitud de un péptido: residuos, prefijos y dónde está la raya',
+      metaDescription: 'Residuo no es aminoácido, los prefijos de conteo, dónde acaba un péptido y empieza una proteína, y por qué la dirección de una secuencia es parte de su identidad.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Un vocabulario que parece una clasificación y funciona como un conjunto de costumbres.',
+      imageAlt: 'Residuos, prefijos y la convención de los cincuenta residuos que nada impone.',
+      body: `
+        <p class="lead">Dipéptido, oligopéptido, polipéptido, proteína. El vocabulario de longitud parece una clasificación y se comporta como un conjunto de costumbres. Saber dónde las convenciones son firmes y dónde son laxas evita leer precisión en una palabra que no la lleva.</p>
+
+        <h2>Residuo, no aminoácido</h2>
+        <p>Lo primero que la terminología acierta merece decirse. Una cadena se cuenta en residuos, y un residuo es lo que queda de un aminoácido después de formarse el enlace: la molécula libre menos el agua que retira la condensación. Un tripéptido contiene tres residuos, que no es lo mismo que contener tres aminoácidos.</p>
+        <p>La distinción es aritmética tanto como pedante. Un residuo pesa unos dieciocho menos que el aminoácido del que vino, así que contar el equivocado desvía un cálculo de <a href="article/molecular-weight-of-peptides/">peso molecular</a> en dieciocho por posición.</p>
+
+        <h2>Los prefijos de conteo</h2>
+        <p>Las cadenas cortas llevan prefijos numéricos griegos: dipéptido para dos residuos, tripéptido para tres, tetrapéptido para cuatro, y así. Son inequívocos, y las convenciones de nomenclatura de aminoácidos y péptidos las fija formalmente la comisión conjunta de IUPAC e IUB. <a class="cite" href="https://doi.org/10.1042/bj2190345" target="_blank" rel="noopener nofollow">(Referencia: IUPAC-IUB, 1984)</a></p>
+        <p>Pasados unos diez, los prefijos dejan de ser útiles y toman el relevo dos palabras más vagas. Oligopéptido describe una cadena corta, por convención hasta unos diez o veinte residuos. Polipéptido describe una larga. Ninguna tiene una frontera que nadie haga cumplir.</p>
+
+        <h2>Códigos de una y de tres letras</h2>
+        <p>Las secuencias se escriben de dos maneras. El código de tres letras deletrea cada residuo con una abreviatura, Gly-His-Lys, y el de una letra lo comprime a GHK. Las secuencias cortas suelen aparecer en forma de tres letras porque se lee en voz alta sin ambigüedad; las largas, en una letra, porque la versión de tres se vuelve inmanejable.</p>
+        <p>Los códigos de una letra no son todos iniciales, porque varios residuos empiezan por la misma letra y solo uno puede quedársela. Por eso el triptófano es W y la asparagina es N. Un nombre de compuesto construido con códigos de una letra, como lo es GHK-Cu, está citando una secuencia y no abreviando una palabra más larga.</p>
+
+        <h2>Residuos fuera del set estándar</h2>
+        <p>La química no se limita a los veinte residuos que usa la biología, y una secuencia sintética puede contener unidades que no tienen código de una letra. Esas aparecen en forma de tres letras con sus propias abreviaturas, y los residuos en configuración D se marcan como tales porque la imagen especular es un compuesto distinto con masa idéntica.</p>
+        <p>Una secuencia escrita con esos residuos es por tanto más larga de enunciar y más informativa. Nuestra nota sobre la <a href="article/what-is-ipamorelin/">ipamorelina</a> cubre un pentapéptido en el que tres de los cinco residuos quedan fuera del set estándar.</p>
+
+        <h2>Dónde acaba el péptido y empieza la proteína</h2>
+        <p>La convención habitual pone la raya alrededor de cincuenta residuos. Ahí no ocurre nada químico. El mismo enlace une el residuo cincuenta y uno que unió el dos, y una cadena no adquiere una propiedad nueva por cruzar una cuenta.</p>
+        <p>Lo que cambia a lo largo de ese rango es el comportamiento. Las cadenas cortas tienden a quedarse flexibles en disolución, mientras que las largas tienen suficientes interacciones internas para sostener un plegamiento estable. La convención es un marcador aproximado de ese cambio, y se aplica sin consistencia: la misma molécula es un péptido en un artículo y una proteína pequeña en el siguiente. Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre la distinción de fondo.</p>
+
+        <h2>Dirección y numeración</h2>
+        <p>Una secuencia se escribe y se numera del extremo amino al carboxilo. El residuo 1 es el del extremo amino. No es decoración arbitraria: leer una secuencia al revés produce una molécula distinta que, en la mayoría de los casos, tiene exactamente la misma masa, así que la dirección es parte de la identidad y una medición de masa no detecta el error.</p>
+        <p>La <a href="article/peptide-synthesis/">síntesis química</a> corre al revés, construyendo del extremo carboxilo hacia el amino, que es lo contrario de como trabaja un ribosoma. La numeración sigue a la secuencia, no al orden de ensamblaje.</p>
+
+        <h2>Notación de fragmentos</h2>
+        <p>Las hormonas cortadas de un precursor más largo llevan un rango numérico que indica qué parte del padre son. Una notación como 7-36 significa los residuos siete a treinta y seis en la numeración del precursor, y una misma hormona puede existir como más de un fragmento.</p>
+        <p>A veces sigue un sufijo, casi siempre para marcar que la cadena termina en amida y no en ácido libre. Ese final cambia la fórmula y la masa en torno a un dalton, así que la notación está citando algo medible. Nuestra nota sobre las <a href="article/what-are-incretins/">incretinas</a> cubre un caso donde esto importa.</p>
+        <p>La numeración del precursor además sobrevive al corte. Un fragmento conserva los números que tenía en el padre, así que su primer residuo rara vez es el residuo 1, y dos artículos que describen la misma molécula pueden parecer discrepar cuando uno numera desde el precursor y el otro desde el fragmento.</p>
+
+        <h2>Palabras que describen forma, no longitud</h2>
+        <p>Algunos términos que aparecen en la misma frase que una longitud describen otra cosa. Cíclico dice que la cadena está cerrada en anillo, lo que cambia la masa por el agua perdida al cerrarla; ver <a href="article/cyclic-vs-linear-peptides/">péptidos cíclicos y lineales</a>. Ramificado dice que una cadena lateral lleva otra cadena. Ninguno es una longitud.</p>
+        <p>Conjugado es otra palabra de esa categoría. Dice que algo va unido a la cadena, un ácido graso o un marcador, sin decir dónde ni cuánto, y la unión cambia la masa en lo que pese.</p>
+        <p>Peptidomimético va más lejos y describe algo que no es un péptido en absoluto, construido para presentar una forma parecida sin el mismo esqueleto.</p>
+
+        <h2>Por qué esto llega a una especificación</h2>
+        <p>Una especificación que dice tripéptido está indicando la cuenta, lo que fija el rango de masa esperado y dice algo de cómo se fabricó el material. Una cadena de tres residuos son tres ciclos de acoplamiento; una de cuarenta son cuarenta, con proporcionalmente más ocasiones para una secuencia de deleción que un método de pureza tiene luego que resolver.</p>
+        <p>El vocabulario describe la molécula. Lo que hay en el vial sale de las mediciones del <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y de un lote que puedes <a href="verify/">comprobar</a>.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué diferencia hay entre un residuo y un aminoácido?",
+          "a": "Un residuo es lo que queda de un aminoácido tras formarse el enlace peptídico, es decir la molécula libre menos un agua. Un residuo pesa por tanto unos dieciocho menos, y las longitudes de cadena se cuentan en residuos."
+        },
+        {
+          "q": "¿Qué significan dipéptido, oligopéptido y polipéptido?",
+          "a": "Dipéptido y tripéptido dan cuentas exactas de dos y tres residuos. Oligopéptido significa cadena corta, por convención hasta unos diez o veinte, y polipéptido significa cadena larga. Los dos últimos no tienen frontera impuesta."
+        },
+        {
+          "q": "¿Dónde está la raya entre péptido y proteína?",
+          "a": "Por convención alrededor de cincuenta residuos, aunque ahí no ocurre nada químico. Lo que cambia en ese rango es si la cadena tiene suficientes interacciones internas para sostener un plegamiento estable, y la convención se aplica sin consistencia."
+        },
+        {
+          "q": "¿En qué dirección se escribe una secuencia?",
+          "a": "Del extremo amino al carboxilo, con el residuo 1 en el extremo amino. Leerla al revés da una molécula distinta que normalmente tiene la misma masa, así que la dirección es parte de la identidad y la masa no detecta el error."
+        },
+        {
+          "q": "¿Qué significa una notación como 7-36?",
+          "a": "Que el péptido son los residuos siete a treinta y seis de un precursor más largo, en la numeración del precursor. Suele seguir un sufijo para marcar una amida en el extremo carboxilo, que cambia la masa en torno a un dalton."
+        },
+        {
+          "q": "¿Cíclico es un término de longitud?",
+          "a": "No. Describe forma: la cadena está cerrada en anillo, lo que cambia la masa por el agua perdida al cerrarla. Ramificado y peptidomimético describen igualmente estructura y no longitud."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'cyclic-vs-linear-peptides': {
+      title: 'Péptidos cíclicos y lineales: por qué el anillo lo cambia todo',
+      metaTitle: 'Cíclicos y lineales: los 18 daltons del cierre y qué prueban',
+      metaDescription: 'Tres formas de cerrar un anillo, cuánto cambia la masa, qué gana la molécula con la restricción y qué no puede resolver una sola medición de masa.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Cerrar una cadena sobre sí misma suena cosmético y no lo es.',
+      imageAlt: 'Tres formas de cerrar un anillo y lo que la masa sí y no resuelve.',
+      body: `
+        <p class="lead">Un péptido cíclico es una cadena unida consigo misma. El cambio suena cosmético y no lo es: cerrar el anillo altera la masa, la estabilidad, el comportamiento en columna, y lo que una medición de identidad puede y no puede resolver.</p>
+
+        <h2>Tres formas de cerrar un anillo</h2>
+        <ul>
+          <li><b>De cabeza a cola.</b> El extremo amino se une al carboxilo, dejando un esqueleto continuo sin extremos libres.</li>
+          <li><b>De cadena lateral a cadena lateral.</b> Se unen dos cadenas laterales separadas por varias posiciones, casi siempre como un lactama entre una amina de una y un carboxilo de otra. El esqueleto conserva sus extremos; el lazo queda dentro de la molécula.</li>
+          <li><b>Disulfuro.</b> Dos cadenas laterales de cisteína se oxidan juntas. Esta es reversible, y eso importa más abajo.</li>
+        </ul>
+        <p>Los péptidos cíclicos de este catálogo, como el <a href="article/what-is-pt-141/">PT-141</a>, usan la vía del lactama de cadena lateral. Un lactama es un enlace amida corriente, del mismo tipo que une el esqueleto, construido en otro sitio.</p>
+
+        <h2>La masa cambia, y en una cantidad conocida</h2>
+        <p>Unir una amina a un carboxilo libera un agua, así que un péptido cerrado por lactama o de cabeza a cola pesa unos dieciocho daltons menos que el precursor lineal del que salió. Un disulfuro es distinto: retira dos hidrógenos, unos dos daltons.</p>
+        <p>Las dos diferencias son fáciles de medir, así que una comprobación de masa confirma que la ciclación ocurrió. Esa es la parte que una <a href="article/mass-spectrometry-peptide-research/">medición de masa</a> resuelve limpiamente.</p>
+
+        <h2>Lo que no resuelve</h2>
+        <p>Si más de un par de cadenas laterales podía haber reaccionado, todos los productos posibles tienen la misma fórmula y la misma masa. Una sola medición de masa no dice dónde se cerró el anillo. Distinguir las alternativas exige fragmentar la molécula y leer los pedazos, que es lo que aporta la espectrometría de masas en tándem.</p>
+        <p>Por eso un certificado de péptido cíclico lleva más carga de la que aparenta cuando reporta una masa coincidente. El número responde una pregunta real, y no todas.</p>
+
+        <h2>Qué compra la restricción</h2>
+        <p>Una cadena lineal explora un número enorme de formas. Cerrarla elimina la mayoría, así que la molécula pasa el tiempo en un conjunto más estrecho de conformaciones. Ese es el objetivo de fabricarla: una forma restringida es una forma definida.</p>
+        <p>Quitar los extremos de cadena tiene un segundo efecto. Las enzimas que degradan péptidos royendo hacia dentro desde un extremo libre no tienen de dónde agarrar en un ciclo de cabeza a cola, así que los péptidos cíclicos suelen resistir mejor esa vía. La estrategia está bien documentada en el campo. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Referencia: White y Yudin, 2011)</a></p>
+        <p>La restricción fue además el movimiento de diseño que produjo los análogos potentes de melanocortina de finales de los ochenta, de donde varios compuestos de esta familia heredan su estructura. <a class="cite" href="https://doi.org/10.1021/ja00191a044" target="_blank" rel="noopener nofollow">(Referencia: Al-Obeidi et al., 1989)</a></p>
+
+        <h2>El tamaño fija la dificultad</h2>
+        <p>No todos los anillos son igual de fáciles de cerrar. Los ciclos muy pequeños tensionan los ángulos de enlace, y los muy grandes dan a los dos extremos demasiado espacio para encontrarse, así que los extremos pasan el tiempo separados. Los tamaños intermedios cierran con más facilidad, y un químico que elige dónde poner un puente está eligiendo en parte un tamaño de anillo que coopere.</p>
+        <p>La posición del puente decide además cuánta cadena queda dentro del lazo. Un puente entre los residuos dos y siete restringe una porción distinta de la molécula que uno entre el uno y el ocho, aunque ambos produzcan un péptido cíclico por la misma química. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Referencia: White y Yudin, 2011)</a></p>
+
+        <h2>Parcialmente cíclico es una categoría real</h2>
+        <p>Una molécula puede llevar un anillo y conservar extremos libres, que es lo que produce un puente de cadena lateral. Las descripciones a veces llaman a esto cíclico sin matizar, y la diferencia importa: un ciclo de cabeza a cola no tiene extremo del que tirar para una enzima, mientras que un puente de cadena lateral deja los dos expuestos.</p>
+        <p>Leyendo una especificación, la pregunta útil no es si aparece la palabra cíclico sino qué átomos se unieron.</p>
+
+        <h2>La naturaleza también lo hace</h2>
+        <p>Los péptidos cíclicos no son solo un truco de laboratorio. Las plantas fabrican péptidos cíclicos de cabeza a cola con disulfuros internos que resisten de forma inusual al calor y a las enzimas, y esos productos naturales se estudian en parte como evidencia de cuánta estabilidad puede aportar la topología. <a class="cite" href="https://doi.org/10.1016/s0041-0101(01)00129-5" target="_blank" rel="noopener nofollow">(Referencia: Craik et al., 2001)</a></p>
+
+        <h2>Fabricar uno es más difícil que fabricar una cadena</h2>
+        <p>La secuencia lineal es <a href="article/peptide-synthesis/">síntesis en fase sólida</a> corriente. El cierre es un paso extra con su propio rendimiento, y compite con una reacción no deseada: a concentración alta, las cadenas se unen entre sí en vez de cerrarse sobre sí mismas, produciendo dímeros y especies mayores.</p>
+        <p>Dos enfoques lo manejan. Cerrar el anillo con la cadena todavía unida a la resina mantiene las cadenas separadas físicamente, así que cada una tiene más probabilidad de encontrar su propio otro extremo. Cerrarlo en disolución consigue el mismo efecto trabajando diluido, lo que significa volúmenes grandes para poco producto. En cualquier caso, lo que no cicló sigue presente cuando empieza la purificación. <a class="cite" href="https://doi.org/10.1038/nchem.1062" target="_blank" rel="noopener nofollow">(Referencia: White y Yudin, 2011)</a></p>
+
+        <h2>En columna se comportan distinto</h2>
+        <p>Una molécula restringida presenta una superficie distinta de la de la cadena abierta, así que el tiempo de retención en una <a href="article/high-performance-liquid-chromatography-hplc/">columna de fase reversa</a> no es predecible solo a partir de la secuencia. El precursor sin ciclar y el producto suelen separarse, lo que es útil, porque significa que la medición de pureza ve el fallo.</p>
+
+        <h2>Cómo leer una especificación</h2>
+        <p>Una especificación que dice cíclico debería decir cómo: de cabeza a cola, un puente de cadena lateral con nombre, o un disulfuro. Los tres dan masas y estabilidades distintas, y un disulfuro se puede reducir y reabrir mientras que un lactama no. Diga lo que diga, el material lo establece el <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> y un lote que puedes <a href="verify/">comprobar</a>.</p>
+        <p>La conservación sigue la misma lógica que cualquier péptido seco, con un añadido: un compuesto cerrado por disulfuro debe mantenerse lejos de condiciones que lo reduzcan, porque el anillo dura lo que dure el enlace que lo sujeta. Nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre el caso general.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué hace cíclico a un péptido?",
+          "a": "Que la cadena se une consigo misma: extremo amino con carboxilo, una cadena lateral con otra, o dos cisteínas oxidadas en un disulfuro. Cada vía da una estructura distinta y un cambio de masa distinto."
+        },
+        {
+          "q": "¿Cuánto cambia la masa al ciclar?",
+          "a": "Unir una amina a un carboxilo libera un agua, así que el producto es unos dieciocho daltons más ligero que el precursor lineal. Un disulfuro en cambio retira dos hidrógenos, unos dos daltons."
+        },
+        {
+          "q": "¿La espectrometría de masas confirma dónde cicló?",
+          "a": "No con una sola medición. Si más de un par de cadenas laterales podía reaccionar, todos los productos tienen la misma fórmula y masa. Separarlos exige fragmentar la molécula, que es lo que hace la espectrometría en tándem."
+        },
+        {
+          "q": "¿Para qué fabricar un péptido cíclico?",
+          "a": "Una cadena lineal explora muchas formas y una cerrada muchas menos, así que la restricción da una forma definida. Quitar los extremos libres además lo hace más resistente a enzimas que degradan desde un terminal."
+        },
+        {
+          "q": "¿Qué sale mal al ciclar un péptido?",
+          "a": "A concentración alta las cadenas reaccionan entre sí en vez de cerrarse sobre sí mismas, produciendo dímeros y especies mayores. Cerrar en resina o trabajar diluido lo reduce, y lo que no cicló queda para que lo retire la purificación."
+        },
+        {
+          "q": "¿Un disulfuro es lo mismo que un puente lactámico?",
+          "a": "No. Un disulfuro se puede reducir y reabrir, así que la restricción no aguanta en condiciones reductoras. Un lactama es un enlace amida como los del esqueleto y no se deshace así."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'molecular-weight-of-peptides': {
+      title: 'Peso molecular de un péptido: masa promedio y monoisotópica',
+      metaTitle: 'Peso molecular de un péptido: dos masas, ambas correctas',
+      metaDescription: 'Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya problema.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'La cifra contra la que se contrasta la identidad, y por qué no es una sola.',
+      imageAlt: 'Dos masas para una molécula, y por qué una observada puede quedar al lado de la esperada.',
+      body: `
+        <p class="lead">El peso molecular de una especificación es la cifra contra la que se contrasta una medición de identidad. Parece un valor único y fijo y no lo es: la misma molécula tiene al menos dos masas legítimas, y la forma que hay en el vial puede diferir de la forma del cálculo.</p>
+
+        <h2>Calcularlo desde la secuencia</h2>
+        <p>Un péptido se construye uniendo residuos y perdiendo una molécula de agua en cada enlace. La masa se sigue de ahí: se suman las masas de residuo de la secuencia y se añade la masa de un agua por los dos extremos que nunca se unieron. No hace falta nada más, y por eso una secuencia por sí sola determina una masa.</p>
+        <p>Las masas de residuo están tabuladas, y no son las masas de los aminoácidos libres. Un aminoácido libre pesa unos dieciocho más, porque conserva el agua que la condensación retira. Confundir los dos es el error aritmético más común de este cálculo. Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre la distinción.</p>
+
+        <h2>De dónde salen las masas de residuo</h2>
+        <p>La masa de residuo tabulada de cada aminoácido es la del aminoácido libre menos un agua, porque eso es lo que la condensación deja en una cadena. La glicina aporta unos 57, la alanina unos 71, el triptófano unos 186. El rango entre los veinte residuos estándar va de unos 57 a unos 186, y por eso secuencias de la misma longitud pueden diferir bastante en masa.</p>
+        <p>De ahí salen dos consecuencias para quien lee un espectro. La diferencia entre fragmentos consecutivos en una medición en tándem equivale al residuo perdido, que es como se lee una secuencia a partir de un espectro. Y como la leucina y la isoleucina comparten masa de residuo exactamente, una medición de masa no las separa.</p>
+
+        <h2>Dos masas, las dos correctas</h2>
+        <p>Los elementos existen como mezclas de isótopos, y los pesos atómicos estándar son promedios sobre esas mezclas. <a class="cite" href="https://doi.org/10.1351/pac200678112051" target="_blank" rel="noopener nofollow">(Referencia: Wieser, 2006)</a> Eso da dos maneras de sumar una fórmula.</p>
+        <ul>
+          <li><b>La masa promedio</b> usa esos valores ponderados. Es la cifra a citar cuando se pesa material, porque un miligramo de polvo contiene la mezcla isotópica natural.</li>
+          <li><b>La masa monoisotópica</b> usa el isótopo más ligero y abundante de cada elemento: carbono-12, hidrógeno-1, nitrógeno-14, oxígeno-16. Es la cifra que reporta un espectrómetro para un pico resuelto, porque el instrumento separa los isótopos en vez de promediarlos.</li>
+        </ul>
+        <p>Para un péptido corto las dos difieren en una fracción de dalton. La brecha se abre con el tamaño, porque una molécula mayor tiene más átomos de carbono capaces de llevar un isótopo pesado, y por encima de unos pocos miles de daltons supera un dalton. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Referencia: Senko et al., 1995)</a></p>
+
+        <h2>Las modificaciones cambian el número</h2>
+        <p>Cualquier cosa unida a la cadena suma su propia masa. Un ácido graso en un péptido acilado aporta un incremento grande; la acetilación del extremo amino añade unos 42; formar un disulfuro retira dos hidrógenos. La ciclación retira un agua, unos 18, porque cerrar el anillo es otra condensación.</p>
+        <p>Cada una es lo bastante grande como para verse, así que una especificación que nombra una modificación nombra algo que una medición puede confirmar. Significa además que una masa calculada a partir de la secuencia desnuda discrepará de un compuesto modificado, lo que es una fuente común de desajustes aparentes.</p>
+
+        <h2>Por qué una masa observada puede quedar al lado de la esperada</h2>
+        <p>Un valor medido que difiere de la especificación no es automáticamente un problema. Hay varias explicaciones ordinarias que van primero.</p>
+        <ul>
+          <li><b>Los dos criterios.</b> Una medición monoisotópica comparada contra un cálculo promedio diferirá en torno a la brecha descrita arriba.</li>
+          <li><b>El extremo carboxilo.</b> Una cadena terminada en amida pesa aproximadamente un dalton menos que la misma cadena terminada en ácido libre. Son compuestos distintos, y el enlazador usado en la <a href="article/peptide-synthesis/">síntesis</a> decide cuál se tiene.</li>
+          <li><b>La forma salina.</b> Los péptidos se aíslan normalmente con un contraión de la purificación. La masa calculada del péptido libre no lo incluye.</li>
+        </ul>
+        <p>Una especificación que declara qué criterio usa y qué forma describe elimina las tres ambigüedades de una vez.</p>
+
+        <h2>Masa y relación masa-carga son números distintos</h2>
+        <p>Un instrumento de electrospray no reporta masa. Reporta relación masa-carga, y un péptido en esa fuente recoge varios protones, así que una molécula produce una serie de picos a distintos estados de carga. El software combina esa serie en una masa única.</p>
+        <p>La serie es la razón de que un espectro con varios picos igualmente espaciados sea normalmente un compuesto y no varios. El detalle importa al leer un espectro crudo en un certificado en vez de la cifra resumida. Nuestra nota sobre <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> cubre el lado de la ionización.</p>
+        <p>La resolución decide además cuál de los dos criterios puede reportar un instrumento. Uno que separa los picos isotópicos da un valor monoisotópico; uno que no, da una cifra parecida a la promedio para la envolvente sin resolver. Por eso el mismo lote medido en dos instrumentos puede dar dos números que son ambos honestos.</p>
+
+        <h2>Qué hace el número en un certificado</h2>
+        <p>La identidad en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> es una comparación entre una masa calculada y una medida. El cálculo sale de la secuencia pretendida; la medición sale del lote. Que coincidan es evidencia de que el material es la molécula pretendida.</p>
+        <p>Es evidencia y no prueba. Dos secuencias construidas con los mismos residuos en otro orden pesan igual, y un aminoácido D pesa exactamente lo que pesa su contraparte L. La masa estrecha las posibilidades mucho sin cerrarlas, y por eso pureza e identidad se reportan juntas y por eso un lote se puede atar a su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>El peso no es el contenido</h2>
+        <p>Una distinción más, porque provoca confusión real. El peso molecular describe una molécula. No dice cuánto del polvo de un vial es esa molécula. El contraión, el agua absorbida y cualquier <a href="article/excipients-in-peptides/">excipiente</a> forman parte de la masa pesada, y por eso el contenido neto de péptido es una cifra aparte tanto del peso molecular como de la <a href="article/high-performance-liquid-chromatography-hplc/">pureza cromatográfica</a>.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Cómo se calcula el peso molecular de un péptido?",
+          "a": "Sumando las masas de residuo de la secuencia y añadiendo un agua por los dos extremos que nunca se unieron. Las masas de residuo son unos dieciocho menores que las de los aminoácidos libres correspondientes, porque la condensación retira un agua en cada enlace."
+        },
+        {
+          "q": "¿Qué diferencia hay entre masa promedio y monoisotópica?",
+          "a": "La promedio usa los pesos atómicos estándar, que son promedios sobre las mezclas isotópicas naturales, y es la cifra para pesar material. La monoisotópica usa el isótopo más ligero y abundante de cada elemento y es la que reporta un espectrómetro para un pico resuelto."
+        },
+        {
+          "q": "¿Por qué las dos masas se separan al crecer el péptido?",
+          "a": "Una molécula mayor tiene más átomos que pueden llevar un isótopo pesado, así que el promedio se aleja del valor todo-ligero. En un péptido corto la diferencia es una fracción de dalton; por encima de unos miles de daltons supera uno."
+        },
+        {
+          "q": "¿Por qué una masa observada puede diferir de la especificación?",
+          "a": "Normalmente por una de tres razones ordinarias: una medición monoisotópica comparada contra un cálculo promedio, un extremo carboxilo amidado en vez de ácido libre, que pesa un dalton menos, o una forma salina cuyo contraión no está en la masa calculada."
+        },
+        {
+          "q": "¿Un espectrómetro mide la masa directamente?",
+          "a": "No. Un instrumento de electrospray reporta relación masa-carga, y un péptido recoge varios protones, produciendo una serie de picos a distintos estados de carga que el software combina en una masa."
+        },
+        {
+          "q": "¿El peso molecular dice cuánto péptido hay en el vial?",
+          "a": "No. Describe una molécula. El contraión, el agua absorbida y cualquier excipiente forman parte del polvo pesado, y por eso el contenido neto de péptido es una cifra aparte del peso molecular y de la pureza cromatográfica."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-are-melanocortin-receptors': {
+      title: 'Receptores de melanocortina: la familia MC1R a MC5R',
+      metaTitle: 'Receptores de melanocortina: cinco subtipos y la selectividad',
+      metaDescription: 'Cinco receptores de una familia, un precursor que da varias señales, y por qué la selectividad se mide como proporción y nunca como absoluto.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Nombrar la familia no es nombrar una diana, y ahí empieza casi todo el trabajo.',
+      imageAlt: 'Cinco receptores de un precursor, y por qué la selectividad se mide como proporción.',
+      body: `
+        <p class="lead">Llamar a un compuesto agonista de receptores de melanocortina nombra una familia, no una diana. Hay cinco de estos receptores, repartidos por distintos tejidos, y una molécula que alcanza uno normalmente toca alguno de los otros. Cuáles, y con qué fuerza, es la pregunta alrededor de la que se construye casi todo el trabajo con estos compuestos.</p>
+
+        <h2>Cinco receptores, clonados de golpe</h2>
+        <p>La familia se etiqueta de MC1R a MC5R. Los primeros miembros se clonaron en 1992 y el resto llegó deprisa, que es por qué tanta literatura fundacional se agrupa en pocos años. <a class="cite" href="https://doi.org/10.1126/science.1325670" target="_blank" rel="noopener nofollow">(Referencia: Mountjoy et al., 1992)</a> Son receptores acoplados a proteína G, y están entre los más pequeños: las porciones extracelulares que muchos receptores usan para agarrar un ligando grande aquí son cortas. El reconocimiento ocurre sobre todo dentro del haz que atraviesa la membrana, lo que pone un límite a cuánto ligando puede leer el receptor.</p>
+        <p>Su distribución por tejidos difiere, y esa distribución es la mayor parte de lo que los separa funcionalmente. Un receptor solo actúa donde se expresa.</p>
+
+        <h2>Un precursor, varias señales</h2>
+        <p>Los ligandos naturales de estos receptores salen de una sola proteína precursora, la proopiomelanocortina, que se corta en varios péptidos menores. Un gen rinde por tanto varias moléculas de señalización distintas, y cuáles aparecen depende de cómo se procese el precursor en un tejido dado. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
+        <p>Esos fragmentos se solapan en secuencia, y varios de ellos se unen a más de un subtipo. El sistema se construyó con diafonía dentro, y por eso la selectividad es difícil de conseguir e interesante de medir.</p>
+
+        <h2>El núcleo compartido de los ligandos</h2>
+        <p>Los péptidos de melanocortina se solapan en un tramo corto de secuencia que carga con la mayor parte del reconocimiento. Un puñado de residuos de ese tramo hace el trabajo esencial, y por eso análogos sintéticos muy cortos pueden activar estos receptores mientras que fragmentos mucho más largos del precursor no hacen falta. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
+        <p>Ese motivo compacto de reconocimiento es cómodo para un químico e incómodo para la selectividad. Un conjunto pequeño de residuos da menos posiciones que variar, así que las diferencias que separan un subtipo de otro hay que encontrarlas en un espacio estrecho. Es además por lo que restringir el esqueleto, en vez de alargar la secuencia, se convirtió en la estrategia principal de diseño de esta familia.</p>
+
+        <h2>Una familia con antagonistas naturales</h2>
+        <p>La mayoría de los sistemas de receptores se estudia con agonistas que existen en la naturaleza y antagonistas que construyen los químicos. La familia de melanocortina tiene además antagonistas endógenos: proteínas que se unen a estos receptores y los bloquean en vez de encenderlos. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
+        <p>La existencia de un bloqueador natural importa al leer resultados, porque el estado basal del receptor en un tejido lo fija el equilibrio entre dos señales opuestas. Nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a> cubre el vocabulario, incluido por qué un receptor puede llevar actividad sin nada unido.</p>
+
+        <h2>Con qué se asocian los subtipos</h2>
+        <p>Los subtipos se vinculan a procesos distintos. El MC1R es el asociado a la pigmentación, de donde viene el nombre de la familia. Otros se ligan a señalización central en el sistema nervioso, y otros a tejidos periféricos. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
+        <p>El resumen honesto es que un compuesto descrito como actuando sobre receptores de melanocortina no ha sido descrito con precisión. El subtipo, y con qué limpieza se alcanza, es la información que importa.</p>
+
+        <h2>Por qué la selectividad es difícil aquí</h2>
+        <p>Los receptores de una familia comparten las regiones que reconocen un ligando, y la de melanocortina las comparte estrechamente. Un péptido moldeado para encajar en un subtipo encaja hasta cierto punto en sus parientes, así que la selectividad se mide como una proporción en vez de afirmarse como un absoluto: este subtipo sobre aquel, por cierto factor, en condiciones declaradas.</p>
+        <p>Una vía para rodear el problema es restringir la forma del péptido. Los análogos cíclicos, en los que un puente entre dos cadenas laterales fija el esqueleto, se desarrollaron para esta familia en los ochenta y demostraron ser bastante más potentes que sus equivalentes flexibles. <a class="cite" href="https://doi.org/10.1021/ja00191a044" target="_blank" rel="noopener nofollow">(Referencia: Al-Obeidi et al., 1989)</a> El <a href="article/what-is-pt-141/">PT-141</a> pertenece a ese linaje estructural, y nuestra nota sobre <a href="article/cyclic-vs-linear-peptides/">péptidos cíclicos y lineales</a> cubre qué hace la restricción.</p>
+
+        <h2>Qué no dice un número de receptor</h2>
+        <p>Las etiquetas de subtipo son una taquigrafía útil y fácil de sobreinterpretar. MC1R y MC4R son proteínas distintas con distribuciones distintas, pero un compuesto que alcanza uno a cierta concentración puede alcanzar el otro a una concentración solo unas pocas veces mayor. Una selectividad de diez veces y una de mil se reportan las dos como selectivas, y solo una sostiene atribuir una observación a un subtipo.</p>
+
+        <h2>Cómo leer una afirmación de selectividad</h2>
+        <p>Una cifra de selectividad es una comparación que produce un ensayo, así que arrastra los supuestos del ensayo. Cuántos receptores había, qué evento descendente se midió y qué subtipos entraron en la comparación moldean el número. Dos artículos pueden reportar selectividades distintas para el mismo compuesto sin que ninguno se equivoque. El número pertenece al experimento tanto como a la molécula.</p>
+        <p>La misma cautela vale para la palabra potente. Potencia y selectividad son mediciones separadas, y un compuesto puede ser fuerte en un receptor y malo distinguiéndolo de sus vecinos.</p>
+
+        <h2>Qué no dice nada de esto sobre un vial</h2>
+        <p>La farmacología de receptores describe una molécula. No dice nada del material que tienes delante: si este lote contiene esa molécula, y cuánto de él lo es. Eso sale de una medición de pureza por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y una de identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, reportadas en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> ligado a un lote que puedes <a href="verify/">comprobar</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Este artículo es farmacología de fondo para contexto de laboratorio. Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo, no son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué son los receptores de melanocortina?",
+          "a": "Una familia de cinco receptores acoplados a proteína G, etiquetados de MC1R a MC5R, repartidos por distintos tejidos. Los primeros miembros se clonaron en 1992. Responden a péptidos derivados de una sola proteína precursora."
+        },
+        {
+          "q": "¿De dónde salen los ligandos naturales?",
+          "a": "De una proteína precursora, la proopiomelanocortina, que se corta en varios péptidos menores. Un solo gen rinde por tanto varias moléculas de señalización, y cuáles aparecen depende de cómo se procese el precursor en cada tejido."
+        },
+        {
+          "q": "¿Esta familia tiene antagonistas naturales?",
+          "a": "Sí, lo que es inusual. Existen proteínas que se unen a estos receptores y los bloquean en vez de activarlos, así que el estado basal de un receptor en un tejido refleja el equilibrio entre dos señales opuestas."
+        },
+        {
+          "q": "¿Por qué es difícil la selectividad de subtipo aquí?",
+          "a": "Porque los receptores de la familia comparten las regiones que reconocen un ligando. Un péptido moldeado para uno encaja hasta cierto punto en sus parientes, así que la selectividad se reporta como una proporción entre subtipos en condiciones declaradas, no como un absoluto."
+        },
+        {
+          "q": "¿Cómo encajan los análogos cíclicos?",
+          "a": "Restringir un péptido en anillo con un puente entre dos cadenas laterales estrecha las formas que puede adoptar. Los análogos cíclicos desarrollados para esta familia en los ochenta resultaron bastante más potentes que los flexibles, y los péptidos de melanocortina posteriores pertenecen a ese linaje."
+        },
+        {
+          "q": "¿Dos artículos pueden reportar selectividades distintas del mismo compuesto?",
+          "a": "Sí. Una cifra de selectividad viene de un ensayo y arrastra sus supuestos: cuántos receptores había, qué evento descendente se midió y qué subtipos se compararon. Sistemas distintos pueden dar números distintos sin que ninguno se equivoque."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'agonist-vs-antagonist': {
+      title: 'Agonista y antagonista: un receptor, dos resultados',
+      metaTitle: 'Agonista y antagonista: afinidad, eficacia y agonismo sesgado',
+      metaDescription: 'Afinidad y eficacia son propiedades independientes: agonistas parciales, antagonistas competitivos, agonistas inversos y por qué la etiqueta depende del ensayo.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Las dos palabras que aparecen en toda descripción de compuesto, y lo que suelen omitir.',
+      imageAlt: 'Afinidad y eficacia como propiedades separadas, y los tipos que la dicotomía no recoge.',
+      body: `
+        <p class="lead">Agonista y antagonista son las dos palabras que aparecen en casi toda descripción de compuesto, y casi todas las explicaciones se detienen en «uno enciende el receptor, el otro lo bloquea». Es cierto y no basta, porque un compuesto puede unirse perfectamente a un receptor y no hacer nada, y dos compuestos pueden ser ambos agonistas y producir resultados distintos en el mismo receptor.</p>
+
+        <h2>Unirse y actuar son propiedades separadas</h2>
+        <p>La imagen de la llave y la cerradura esconde la idea más útil de la farmacología de receptores: la capacidad de una molécula de engancharse a un receptor y su capacidad de producir una respuesta son dos cosas independientes.</p>
+        <p>La primera es la afinidad, que describe con qué facilidad el compuesto ocupa el sitio. La segunda es la eficacia, que describe qué ocurre una vez está ahí. La distinción se formalizó en los años cincuenta y es la razón de que exista la clasificación: agonistas y antagonistas pueden tener afinidad idéntica y diferir por completo en eficacia. <a class="cite" href="https://doi.org/10.1111/j.1476-5381.1956.tb00006.x" target="_blank" rel="noopener nofollow">(Referencia: Stephenson, 1956)</a></p>
+
+        <h2>Los agonistas vienen en grados</h2>
+        <p>Un agonista se une y activa. Pero la activación no es de todo o nada.</p>
+        <ul>
+          <li><b>Un agonista pleno</b> produce la respuesta máxima que el sistema puede dar.</li>
+          <li><b>Un agonista parcial</b> produce una respuesta submáxima incluso con todos los receptores ocupados. Añadir más no cierra la brecha, porque el techo es una propiedad del compuesto y no de la cantidad.</li>
+        </ul>
+        <p>Un agonista parcial en presencia de uno pleno se comporta por tanto en parte como un bloqueador, porque ocupa sitios que de otro modo darían respuesta plena. Las categorías no son tan limpias como sugiere el vocabulario.</p>
+
+        <h2>Los antagonistas bloquean de más de una forma</h2>
+        <p>Un antagonista ocupa el receptor sin activarlo. Cómo bloquea importa.</p>
+        <ul>
+          <li><b>Los antagonistas competitivos</b> compiten por el mismo sitio. Suficiente agonista los desplaza, así que el bloqueo se puede superar.</li>
+          <li><b>Los no competitivos y alostéricos</b> actúan en otro punto del receptor, cambiando su comportamiento sin disputar el sitio de unión. Añadir más agonista no restaura la respuesta plena.</li>
+        </ul>
+        <p>En el laboratorio la diferencia aparece como un desplazamiento de la curva de concentración-respuesta en el primer caso y como una reducción de su máximo en el segundo.</p>
+
+        <h2>Los receptores pueden estar activos sin nada unido</h2>
+        <p>La imagen clásica supone que un receptor está callado hasta que llega algo. Muchos no. Una fracción de receptores adopta la conformación activa de forma espontánea, produciendo lo que se llama actividad constitutiva, y un compuesto puede unirse y reducir esa línea base por debajo de donde estaría sin nada presente. Ese compuesto es un agonista inverso, una tercera categoría para la que el marco de encendido o apagado no tiene sitio. <a class="cite" href="https://doi.org/10.1124/mol.64.6.1271" target="_blank" rel="noopener nofollow">(Referencia: Milligan, 2003)</a></p>
+        <p>La consecuencia práctica es histórica tanto como técnica. Compuestos catalogados como antagonistas neutros antes de que la actividad constitutiva se reconociera ampliamente se reexaminaron después, y varios resultaron ser agonistas inversos. La clasificación depende de lo que el ensayo pudo ver.</p>
+
+        <h2>Dos agonistas en un receptor no son necesariamente equivalentes</h2>
+        <p>Un receptor suele tener más de una ruta descendente disponible. Un compuesto puede engancharse a un receptor y favorecer una de esas rutas sobre otra, así que dos agonistas de la misma diana pueden producir patrones de actividad genuinamente distintos y no más o menos de lo mismo. Esto se llama agonismo sesgado o selectividad funcional. <a class="cite" href="https://doi.org/10.1124/jpet.110.173948" target="_blank" rel="noopener nofollow">(Referencia: Kenakin, 2011)</a></p>
+        <p>No es un caso exótico. La <a href="article/what-is-tirzepatide/">tirzepatida</a> se ha caracterizado exactamente en esos términos: actúa sobre dos receptores, y lo hace de forma desigual. Llamarla agonista dual es exacto y no dice nada del equilibrio.</p>
+
+        <h2>Dónde encaja la selectividad</h2>
+        <p>Pocos receptores existen solos. La mayoría pertenece a familias cuyos miembros comparten suficiente estructura como para que un compuesto moldeado para uno toque a menudo a sus parientes, y selectividad es la palabra para lo limpiamente que lo evita. Es una comparación, nunca un absoluto: un compuesto es selectivo por un subtipo frente a otro por cierto factor, en ciertas condiciones.</p>
+        <p>Por eso la <a href="article/what-is-ipamorelin/">ipamorelina</a> se describe como selectiva, y por eso la pregunta recurrente para cualquier agonista de melanocortina como el <a href="article/what-is-pt-141/">PT-141</a> es qué <a href="article/what-are-melanocortin-receptors/">subtipos</a> alcanza y con qué fuerza. Para una herramienta de investigación, la selectividad es lo que hace atribuible una observación: cuanto más limpio el perfil, menos explicaciones alternativas de lo que se midió.</p>
+
+        <h2>La etiqueta es en parte una propiedad del experimento</h2>
+        <p>Aquí está lo que la mayoría de explicaciones omite. Que un compuesto parezca agonista pleno o parcial depende del compuesto y del sistema en que se mide: cuántos receptores hay presentes, con qué fuerza amplifica la lectura, y qué evento descendente se observa. Existen marcos formales precisamente para separar lo que pertenece a la molécula de lo que pertenece al ensayo. <a class="cite" href="https://doi.org/10.1098/rspb.1983.0093" target="_blank" rel="noopener nofollow">(Referencia: Black y Leff, 1983)</a> <a class="cite" href="https://doi.org/10.1016/j.tips.2004.02.012" target="_blank" rel="noopener nofollow">(Referencia: Kenakin, 2004)</a></p>
+        <p>La lectura práctica: un compuesto descrito como agonista en un artículo y como agonista parcial en otro puede no ser una contradicción. Pueden ser dos sistemas.</p>
+
+        <h2>Qué dice la palabra sobre un vial, y qué no</h2>
+        <p>Casi todos los compuestos de este catálogo se describen como agonistas de receptor. La ipamorelina en el receptor de grelina, el PT-141 en los de melanocortina, la tirzepatida en los de incretina. El término describe lo que se entiende que hace la molécula en su diana, a partir de trabajo publicado.</p>
+        <p>Lo que no describe es el material que tienes delante. «Agonista» es una afirmación sobre una estructura; no dice si este lote contiene esa estructura, qué tan puro está, ni si la molécula correcta está en el vial. Esas preguntas las responden un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> y comprobar un <a href="verify/">número de lote</a>, no una palabra de una descripción.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Este artículo es farmacología de fondo para contexto de laboratorio. Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo, no son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué diferencia hay entre un agonista y un antagonista?",
+          "a": "Un agonista se une a un receptor y lo activa. Un antagonista se une pero no lo activa, ocupando el sitio para que un agonista no pueda actuar ahí. La distinción va de eficacia, no de lo bien que el compuesto se une."
+        },
+        {
+          "q": "¿Qué diferencia hay entre afinidad y eficacia?",
+          "a": "La afinidad describe con qué facilidad un compuesto ocupa un receptor. La eficacia describe qué ocurre una vez unido. Son independientes, y por eso dos compuestos pueden unirse igual de bien y producir resultados completamente distintos."
+        },
+        {
+          "q": "¿Qué es un agonista parcial?",
+          "a": "Uno que produce una respuesta submáxima incluso con todos los receptores ocupados. Añadir más no cierra la brecha, porque el techo pertenece al compuesto. En presencia de un agonista pleno puede comportarse en parte como un bloqueador."
+        },
+        {
+          "q": "¿Qué es un agonista inverso?",
+          "a": "Un compuesto que reduce un receptor por debajo de la actividad basal que muestra sin nada unido. Solo tiene sentido para receptores con actividad constitutiva, es decir una fracción que adopta la conformación activa de forma espontánea."
+        },
+        {
+          "q": "¿Qué significa agonismo sesgado?",
+          "a": "Que un compuesto que se engancha a un receptor puede favorecer una ruta descendente sobre otra. Dos agonistas de la misma diana pueden por tanto producir patrones de actividad distintos y no más o menos de la misma respuesta."
+        },
+        {
+          "q": "¿Llamar agonista a un péptido dice algo del vial?",
+          "a": "No. Describe lo que se entiende que hace la molécula en su diana según trabajo publicado. Si un lote concreto contiene esa molécula, y qué tan puro está, lo responden un certificado de análisis y una comprobación de lote."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-is-a-growth-hormone-secretagogue': {
+      title: 'Secretagogos de hormona de crecimiento: qué nombra esa categoría',
+      metaTitle: 'Secretagogos: el receptor huérfano y qué significa selectivo',
+      metaDescription: 'Una categoría definida por la diana y no por la estructura: el receptor que se encontró antes que su señal natural, y qué significa selectivo aquí.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Una etiqueta que nombra una diana, no una estructura ni un efecto.',
+      imageAlt: 'Una categoría nombrada por su diana, y el receptor hallado antes que su ligando.',
+      body: `
+        <p class="lead">Secretagogo de hormona de crecimiento nombra una categoría por lo que un compuesto tiene como diana. La palabra secretagogo significa algo que induce a una célula a liberar una sustancia, así que la etiqueta dice dónde actúa la molécula y deja todo lo demás abierto.</p>
+
+        <h2>El receptor se encontró antes que su señal natural</h2>
+        <p>El orden habitual en farmacología es que se identifica una hormona y después se encuentra su receptor. Esta clase fue al revés. Primero se conocieron compuestos sintéticos que disparaban la liberación de hormona de crecimiento, y el receptor sobre el que actuaban se identificó en 1996 y se nombró por ellos: receptor de secretagogos de hormona de crecimiento. <a class="cite" href="https://doi.org/10.1126/science.273.5277.974" target="_blank" rel="noopener nofollow">(Referencia: Howard et al., 1996)</a></p>
+        <p>Siguió siendo un receptor huérfano hasta 1999, cuando se identificó su ligando endógeno, la grelina. <a class="cite" href="https://doi.org/10.1038/45230" target="_blank" rel="noopener nofollow">(Referencia: Kojima et al., 1999)</a> Esa historia es por qué el mismo receptor lleva dos nombres en la literatura, y por qué un compuesto de esta clase se describe tanto como secretagogo de hormona de crecimiento como agonista del receptor de grelina. Ambas son correctas.</p>
+
+        <h2>Por qué un receptor huérfano es un hallazgo útil</h2>
+        <p>A un receptor identificado antes de saber qué se le une de forma natural se le llama huérfano. Encontrar uno plantea una pregunta inmediata, ya que un receptor que existe presumiblemente responde a algo, y la búsqueda de ese algo es un proyecto bien definido con un final claro.</p>
+        <p>Los compuestos sintéticos que llevaron al receptor conservaron su utilidad después. Una molécula que activa un receptor es una herramienta para preguntar qué hace ese receptor, con independencia de si se parece al ligando natural, y los compuestos de esta clase se usaron así durante años antes de que se encontrara la grelina.</p>
+
+        <h2>El ligando natural lleva un ácido graso</h2>
+        <p>La grelina tiene una característica poco común entre hormonas peptídicas: un ácido graso unido a uno de sus residuos, añadido por una enzima dedicada. El péptido sin modificar no activa el receptor como lo hace el modificado. <a class="cite" href="https://doi.org/10.1038/45230" target="_blank" rel="noopener nofollow">(Referencia: Kojima et al., 1999)</a></p>
+        <p>El detalle conviene tenerlo al comparar compuestos, porque un secretagogo sintético no necesita imitar esa modificación para alcanzar el mismo receptor. Varios de ellos son péptidos pequeños sin ácido graso alguno.</p>
+
+        <h2>«Aguas arriba» está trabajando en esa frase</h2>
+        <p>Describir un receptor como situado aguas arriba de una vía dice que la señal pasa por varios pasos antes de que ocurra algo medible al otro extremo. Cada uno de esos pasos es un punto donde algo más puede intervenir, y donde el estado del sistema decide cuánta señal pasa.</p>
+        <p>Por eso las observaciones con estos compuestos dependen mucho del modelo en que se hicieron. Un resultado en células cultivadas y uno en un animal intacto responden preguntas emparentadas pero distintas, y ninguno se traslada automáticamente al otro.</p>
+
+        <h2>La clase es químicamente heterogénea</h2>
+        <p>La pertenencia la define la diana y no la estructura, así que los compuestos agrupados bajo esta etiqueta tienen poco en común como moléculas. Algunos son péptidos cortos, algunos son parecidos a péptidos, y algunos no son péptidos. Nuestra nota sobre la <a href="article/what-is-ipamorelin/">ipamorelina</a> cubre un pentapéptido de la clase cuyos cinco residuos incluyen unidades que ningún organismo construye.</p>
+        <p>La consecuencia para leer un catálogo es que la etiqueta no predice nada del material: ni el tamaño, ni la estabilidad, ni lo que exigieron la síntesis o el análisis.</p>
+
+        <h2>Qué significa selectivo aquí</h2>
+        <p>Los compuestos anteriores de la clase alcanzaban su diana y tocaban además otros ejes hormonales. Selectividad, en este contexto, describe un compuesto que actúa sobre su vía diana con actividad limitada en otros sitios, y la ipamorelina se caracterizó como el primero con ese perfil. <a class="cite" href="https://doi.org/10.1530/eje.0.1390552" target="_blank" rel="noopener nofollow">(Referencia: Raun et al., 1998)</a></p>
+        <p>Para una herramienta de investigación el valor de un perfil limpio es interpretativo. Cuantas menos vías toca un compuesto, menos explicaciones alternativas hay para una observación. La selectividad es siempre una comparación en condiciones declaradas, nunca un absoluto, cosa que cubre nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a> junto a por qué dos artículos pueden reportar cifras distintas para un compuesto.</p>
+        <p>Son observaciones preclínicas, basadas en modelos. Los compuestos de esta clase se suministran estrictamente como compuestos de investigación, y nada aquí describe uso en personas ni en animales.</p>
+
+        <h2>Un secretagogo no es la hormona</h2>
+        <p>Una distinción que merece decirse con claridad, porque el nombre de la categoría invita a la confusión. Un secretagogo no es hormona de crecimiento. Es una molécula aparte, estudiada por su acción sobre un receptor situado aguas arriba de esa vía, y la hormona de crecimiento en sí es una proteína de alrededor de doscientos residuos, un material por completo distinto de fabricar y de verificar.</p>
+        <p>Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre por qué esa diferencia de tamaño lo cambia todo en el manejo.</p>
+
+        <h2>Qué dice la etiqueta de un vial</h2>
+        <p>Nada. Coloca una molécula en una categoría a partir de trabajo publicado sobre su diana. La categoría sale de farmacología publicada, no de nada medido en el vial. Si un lote contiene esa molécula, y qué proporción del polvo representa, sale de una medición de pureza por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y una de identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>.</p>
+        <p>Para los péptidos cortos de esta clase la pregunta de identidad tiene un matiz específico: varios contienen residuos en configuración D, y un residuo D tiene exactamente la misma masa que su contraparte L. La masa sola no detecta esa sustitución, que es una razón más para que pureza e identidad se reporten juntas en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> ligado a un lote que puedes <a href="verify/">comprobar</a>. Donde una especificación nombra un residuo D de forma explícita, está nombrando algo que el proveedor tuvo que controlar durante la síntesis.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Este artículo es farmacología de fondo para contexto de laboratorio. Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo, no son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es un secretagogo de hormona de crecimiento?",
+          "a": "Un compuesto estudiado por su acción sobre el receptor situado aguas arriba de la liberación de hormona de crecimiento. Secretagogo es algo que induce a una célula a liberar una sustancia, así que la etiqueta nombra la diana y no una estructura ni un efecto."
+        },
+        {
+          "q": "¿El receptor de grelina es el mismo que el de secretagogos?",
+          "a": "Sí. El receptor se identificó en 1996 a través de los compuestos sintéticos que actuaban sobre él y se nombró por ellos. Su ligando natural, la grelina, se identificó en 1999, y por eso el mismo receptor lleva los dos nombres."
+        },
+        {
+          "q": "¿Qué tiene de inusual la grelina?",
+          "a": "Lleva un ácido graso unido a uno de sus residuos, añadido por una enzima dedicada, y el péptido sin modificar no activa el receptor como lo hace el modificado. Los secretagogos sintéticos no necesitan esa modificación para alcanzar el mismo receptor."
+        },
+        {
+          "q": "¿Los compuestos de esta clase se parecen entre sí?",
+          "a": "No necesariamente. La pertenencia la define la diana, así que el grupo incluye péptidos cortos, moléculas parecidas a péptidos y compuestos que no son péptidos. La etiqueta no predice tamaño, estabilidad ni cómo se fabricó el material."
+        },
+        {
+          "q": "¿Qué significa selectivo para un secretagogo?",
+          "a": "Que el compuesto actúa sobre su vía diana con actividad limitada en otros ejes hormonales que los compuestos anteriores sí afectaban. Es una comparación en condiciones declaradas, no una propiedad absoluta."
+        },
+        {
+          "q": "¿Un secretagogo es lo mismo que la hormona de crecimiento?",
+          "a": "No. La hormona de crecimiento es una proteína de alrededor de doscientos residuos. Un secretagogo es una molécula aparte y normalmente mucho menor, estudiada por su acción sobre un receptor aguas arriba de esa vía."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'glp-1-vs-gip': {
+      title: 'GLP-1 y GIP: dos incretinas, dos perfiles de receptor',
+      metaTitle: 'GLP-1 y GIP: dos genes, dos receptores y una enzima común',
+      metaDescription: 'Qué comparten y en qué difieren las dos incretinas principales, por qué la misma enzima las recorta, y por qué contar receptores no es medir actividad.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'Dos hormonas de dos genes, y la razón de que compararlas tenga sentido.',
+      imageAlt: 'Dos genes, dos poblaciones de células, dos receptores y una vía de degradación común.',
+      body: `
+        <p class="lead">GLP-1 y GIP aparecen juntas tan a menudo que se leen como una sola cosa con dos nombres. Son dos hormonas, de dos genes, liberadas por dos tipos de célula, actuando sobre dos receptores. Las diferencias son lo que hace que merezca la pena estudiar un compuesto que actúa sobre las dos.</p>
+
+        <h2>Qué comparten</h2>
+        <p>Las dos son <a href="article/what-are-incretins/">incretinas</a>: hormonas intestinales liberadas cuando llegan nutrientes, que contribuyen a la respuesta de insulina que sigue. Las dos actúan a través de receptores de la misma familia estructural, la que contiene además los del glucagón y la secretina. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a> Y a las dos las recorta la misma enzima en la misma posición, cosa que se cubre más abajo.</p>
+
+        <h2>Orígenes distintos</h2>
+        <p>Cada hormona sale de su propia proteína precursora, codificada por su propio gen, y cada una la libera una población distinta de células enteroendocrinas. Las que liberan GIP se concentran en el intestino delgado alto. Las que liberan GLP-1 abundan más adelante. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a></p>
+        <p>Esa geografía tiene una consecuencia práctica al leer la literatura. Un experimento que cambia dónde se absorben los nutrientes cambia el equilibrio entre las dos señales, así que dos estudios pueden describir el mismo sistema y ver mezclas distintas.</p>
+
+        <h2>Receptores distintos, y ahí está todo el asunto</h2>
+        <p>El receptor de GIP y el de GLP-1 son proteínas separadas con distribuciones separadas por los tejidos. Activar uno no activa el otro. Las dos alimentan la regulación de la glucosa y las dos pertenecen a la misma clase de receptor, pero no son dos puertas a la misma habitación.</p>
+        <p>Eso es lo que hace posible una pregunta de laboratorio concreta: qué cambia cuando una sola molécula actúa sobre los dos a la vez, comparado con actuar sobre cualquiera por separado. Una pregunta así solo tiene sentido porque los receptores son genuinamente distintos.</p>
+        <p>La distribución por tejidos es la segunda mitad de esa respuesta. Un receptor solo importa donde se expresa, así que dos receptores que regulan glucosa pueden llegar a tejidos distintos y producir patrones de actividad distintos a partir de la misma señal inicial.</p>
+
+        <h2>Cómo sujetan los receptores a su ligando</h2>
+        <p>Los receptores de esta familia se construyen en dos partes: un dominio grande fuera de la célula y las siete hélices habituales que atraviesan la membrana. El péptido se une a lo largo de las dos. Un extremo de la hormona lo agarra el dominio extracelular, y el otro alcanza el núcleo del haz transmembrana, donde hace el trabajo de encender el receptor. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a></p>
+        <p>La disposición explica dos cosas a la vez. Es por lo que las dos hormonas son péptidos largos y no moléculas pequeñas, ya que un ligando corto no alcanza los dos sitios. Y es por lo que un químico tiene margen: una molécula que toca el receptor a lo largo de una interfaz extensa tolera sustituciones en posiciones que no están uniendo, que es donde van las modificaciones de los compuestos sintéticos.</p>
+
+        <h2>A las dos las corta la misma enzima</h2>
+        <p>La dipeptidil peptidasa-4 retira los dos primeros residuos del extremo de ambas hormonas, y el producto recortado ya no activa el receptor como lo hace la forma intacta. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Referencia: Mentlein, 1999)</a></p>
+        <p>La vulnerabilidad compartida explica un patrón de diseño compartido. Los compuestos sintéticos dirigidos a cualquiera de los dos receptores suelen llevar una sustitución cerca de ese sitio de corte, y muchos llevan además una cadena de ácido graso que les permite asociarse con la albúmina sérica y eliminarse más despacio. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Referencia: Hijazi, 2021)</a> Las dos modificaciones son visibles en la molécula, y las dos cambian su masa y su comportamiento en columna.</p>
+
+        <h2>Nombres y números</h2>
+        <p>Las dos hormonas aparecen en la literatura con rangos numéricos adjuntos, porque cada una es un fragmento cortado de un precursor más largo y existe más de un fragmento. Algunas formas circulantes terminan en amida y no en ácido libre. Esos detalles no son contabilidad: cambian la fórmula y por tanto la masa, así que una especificación que cita un rango y un final está citando algo que una medición de identidad puede confirmar o contradecir.</p>
+
+        <h2>Cuál está mejor estudiada</h2>
+        <p>La GLP-1 tiene la literatura mayor por amplio margen, y durante años el brazo de GIP atrajo menos atención. Ese desequilibrio es parte de por qué la actuación dual se volvió una pregunta activa: el receptor menos estudiado era la variable abierta.</p>
+        <p>Quien lea trabajo antiguo debería tener las fechas presentes. Las conclusiones sacadas cuando un brazo apenas estaba caracterizado no son erróneas, pero se sacaron con menos cuadro disponible.</p>
+
+        <h2>Contar receptores no es medir actividad</h2>
+        <p>Los compuestos de este espacio se describen a menudo por cuántos receptores alcanzan: uno para un agonista de GLP-1, dos para un <a href="article/what-is-tirzepatide/">agonista dual</a>, tres para un <a href="article/what-is-retatrutide/">agonista triple</a> que añade el del glucagón. La cuenta es fácil de enunciar y fácil de sobreinterpretar. Describe cuántas dianas se diseñó una molécula para alcanzar, y no dice nada de con qué fuerza alcanza cada una.</p>
+        <p>Un compuesto puede actuar sobre dos receptores de forma desigual, y puede favorecer una ruta descendente sobre otra en el mismo receptor. Un agonista dual se ha caracterizado exactamente en esos términos. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Referencia: Willard et al., 2020)</a> El vocabulario está en nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a>, y la versión corta es que «dual» es una etiqueta, no una medición.</p>
+
+        <h2>Qué no resuelve la comparación</h2>
+        <p>Saber en qué difieren las dos hormonas dice para qué está diseñado un compuesto. No dice nada del material de un vial. Si un lote dado contiene la molécula pretendida, y cuánto de él lo es, sale de una medición de pureza por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y una de identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, reportadas en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> ligado a un lote que puedes <a href="verify/">comprobar</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Este artículo es biología de fondo para contexto de laboratorio. Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo, no son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿GLP-1 y GIP son lo mismo?",
+          "a": "No. Son dos hormonas de dos genes, liberadas por poblaciones distintas de células intestinales, actuando a través de dos receptores separados. Comparten familia de receptor y una vía común de degradación."
+        },
+        {
+          "q": "¿Dónde se libera cada hormona?",
+          "a": "Las células que liberan GIP se concentran en el intestino delgado alto, y las que liberan GLP-1 abundan más adelante. Un experimento que cambia dónde se absorben los nutrientes cambia el equilibrio entre las dos señales."
+        },
+        {
+          "q": "¿Los dos receptores se solapan?",
+          "a": "Son proteínas separadas con distribuciones separadas por los tejidos, y activar uno no activa el otro. Los dos pertenecen a la misma familia y los dos alimentan la regulación de la glucosa."
+        },
+        {
+          "q": "¿Por qué las dos hormonas duran poco?",
+          "a": "La dipeptidil peptidasa-4 retira los dos primeros residuos de cada una, y el producto recortado ya no activa el receptor como la forma intacta. Esa vulnerabilidad compartida explica un patrón de diseño compartido en los compuestos sintéticos."
+        },
+        {
+          "q": "¿Cuál de las dos está mejor estudiada?",
+          "a": "La GLP-1, por amplio margen. El brazo de GIP atrajo menos atención durante años, que es parte de por qué actuar sobre los dos a la vez se volvió una pregunta activa: el receptor menos estudiado era la variable abierta."
+        },
+        {
+          "q": "¿Un agonista dual afecta igual a los dos receptores?",
+          "a": "No necesariamente. Un agonista dual se ha caracterizado como desequilibrado entre sus dos dianas y como favorecedor de unas rutas descendentes sobre otras. La cuenta de receptores de una descripción es una etiqueta, no una medición."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-are-incretins': {
+      title: 'Incretinas: qué hacen GIP y GLP-1 en la investigación metabólica',
+      metaTitle: 'Incretinas: el efecto que nombran y por qué se diseñan así',
+      metaDescription: 'Qué observación nombra la palabra incretina, las dos hormonas principales, la enzima que las recorta y de dónde sale el diseño de los péptidos sintéticos.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'La observación que da nombre a la palabra, y la razón de que exista toda esta familia.',
+      imageAlt: 'El efecto incretina, la enzima que recorta las dos hormonas y el diseño que se sigue.',
+      body: `
+        <p class="lead">La palabra incretina aparece en cada descripción de un péptido metabólico moderno, casi siempre sin explicación. Nombra una observación concreta sobre cómo el organismo maneja la glucosa, y esa observación es la razón de que exista toda esta familia de compuestos.</p>
+
+        <h2>La observación que nombra la palabra</h2>
+        <p>Dar la misma cantidad de glucosa de dos formas, por boca y directamente a vena, produce una respuesta de insulina mayor cuando llega por el intestino. La diferencia entre esas dos respuestas es el efecto incretina, y se cuantificó comparando las dos vías a niveles de glucosa equiparados. <a class="cite" href="https://doi.org/10.1210/jcem-63-2-492" target="_blank" rel="noopener nofollow">(Referencia: Nauck et al., 1986)</a></p>
+        <p>Algo liberado por el intestino contribuye por tanto a la respuesta. Las incretinas son las hormonas que lo hacen.</p>
+
+        <h2>Las dos en las que se concentra la investigación</h2>
+        <ul>
+          <li><b>GIP</b>, polipéptido insulinotrópico dependiente de glucosa, liberado por células enteroendocrinas concentradas en el intestino delgado alto.</li>
+          <li><b>GLP-1</b>, péptido similar al glucagón tipo 1, liberado por células que se encuentran más adelante en el intestino y la más estudiada de las dos.</li>
+        </ul>
+        <p>Cada una actúa a través de su propio receptor, y los dos receptores pertenecen a la misma familia estructural que el del glucagón. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a> Nuestra nota sobre <a href="article/glp-1-vs-gip/">GLP-1 y GIP</a> las compara directamente.</p>
+
+        <h2>Por qué los ligandos son péptidos largos</h2>
+        <p>Los receptores de incretinas están en la clase de receptores acoplados a proteína G que incluye los del glucagón y la secretina. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Referencia: Mayo et al., 2003)</a> Los receptores de esta clase llevan un dominio extracelular grande delante de la parte que atraviesa la membrana, y el ligando se une a lo largo de ambas: un extremo del péptido lo sujeta ese dominio externo mientras el otro alcanza el núcleo transmembrana.</p>
+        <p>De ahí salen dos consecuencias. El ligando tiene que ser lo bastante largo para abarcar los dos sitios, y por eso estas hormonas y los compuestos construidos a partir de ellas llegan a treinta o cuarenta residuos en vez de un puñado. Y una molécula que se une a lo largo de una interfaz extensa da al químico muchas posiciones que modificar, que es lo que hace practicable sustituir en el sitio de corte y acilar en un residuo elegido.</p>
+
+        <h2>De dónde viene cada una</h2>
+        <p>Las dos hormonas las liberan células distintas en partes distintas del intestino, y por eso nutrientes que llegan a puntos distintos no producen señales idénticas. El GIP viene de células concentradas en el intestino delgado alto. El GLP-1, de células más frecuentes más adelante. La distribución importa a quien lee la literatura, porque un estudio que manipula dónde se absorben los nutrientes está manipulando el equilibrio entre las dos. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a></p>
+
+        <h2>A las dos las corta la misma enzima, y rápido</h2>
+        <p>Este es el hecho que explica casi todo el aspecto de los péptidos sintéticos de esta familia. Una enzima llamada dipeptidil peptidasa-4 retira los dos primeros residuos del extremo de ambas hormonas, y esa forma recortada ya no activa el receptor como lo hace la intacta. La enzima está muy extendida, así que las hormonas naturales duran poco. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Referencia: Mentlein, 1999)</a></p>
+        <p>Una molécula pensada para estudiarse durante horas en vez de minutos tiene que sobrevivir a eso. De ahí salen dos movimientos de diseño, y los dos son visibles en los compuestos.</p>
+        <ul>
+          <li><b>Cambiar los residuos que la enzima lee.</b> Sustituir cerca del sitio de corte le quita el agarre.</li>
+          <li><b>Unir un ácido graso.</b> La acilación permite a la molécula asociarse de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. <a class="cite" href="https://doi.org/10.1007/s13318-020-00664-y" target="_blank" rel="noopener nofollow">(Referencia: Hijazi, 2021)</a></li>
+        </ul>
+        <p>Los dos cambios hacen además la molécula más grande y más hidrofóbica, que es por lo que estos compuestos se comportan distinto de un péptido corto corriente en una <a href="article/high-performance-liquid-chromatography-hplc/">columna de fase reversa</a>.</p>
+
+        <h2>Una nota sobre los números que siguen al nombre</h2>
+        <p>La GLP-1 aparece en la literatura con un rango numérico adjunto, porque la hormona activa es un fragmento cortado de un precursor mayor y existe más de un fragmento. Una de las formas circulantes termina además en amida y no en ácido libre. Esos números y ese final son parte de la identidad de la molécula, y cambian su masa, así que una especificación que los cita está citando algo que una medición puede confirmar. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a></p>
+
+        <h2>Por qué los receptores se volvieron dianas</h2>
+        <p>Una vez se sabe que dos receptores están en la misma vía, la pregunta de laboratorio evidente es qué cambia cuando una sola molécula actúa sobre uno, sobre el otro, o sobre ambos. Esa pregunta produjo la generación actual de compuestos: agonistas selectivos de GLP-1, <a href="article/what-is-tirzepatide/">agonistas duales</a> que actúan también sobre GIP, y <a href="article/what-is-retatrutide/">agonistas triples</a> que añaden el receptor del glucagón.</p>
+        <p>Actuar sobre dos receptores no es actuar igual sobre los dos. El trabajo de farmacología de receptores ha descrito al menos un agonista dual como desequilibrado entre sus dos dianas, así que la cuenta de receptores de una descripción dice menos de lo que aparenta. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Referencia: Willard et al., 2020)</a> El vocabulario general está en nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a>.</p>
+
+        <h2>Dependencia de glucosa</h2>
+        <p>El nombre GIP lleva dentro un detalle que conviene leer: dependiente de glucosa. La actividad liberadora de insulina de estas hormonas está ligada a que haya glucosa presente, así que la señal es condicional al estado en que ya se encuentra el sistema. Es parte de por qué el eje de las incretinas se estudia como mecanismo regulador y no como un simple interruptor. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Referencia: Baggio y Drucker, 2007)</a></p>
+
+        <h2>Qué significa esto para un vial</h2>
+        <p>Conocer la biología explica por qué estos compuestos están diseñados como lo están. No dice nada del material que tienes delante. Un péptido largo y acilado es más difícil de sintetizar limpio que uno corto, así que la cifra de pureza y la medición de identidad de su <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> cargan aquí más peso, y un lote se puede contrastar con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Alcance</h2>
+        <p>Todo lo anterior es biología de fondo y contexto de laboratorio. Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué son las incretinas?",
+          "a": "Hormonas liberadas por el intestino que contribuyen a la respuesta de insulina cuando los nutrientes llegan por esa vía. La misma cantidad de glucosa produce una respuesta mayor por boca que directamente a vena, y esa diferencia es el efecto incretina."
+        },
+        {
+          "q": "¿Cuáles son las dos incretinas principales?",
+          "a": "GIP, polipéptido insulinotrópico dependiente de glucosa, y GLP-1, péptido similar al glucagón tipo 1. Cada una actúa a través de su propio receptor, y los dos pertenecen a la misma familia estructural que el del glucagón."
+        },
+        {
+          "q": "¿Por qué las incretinas naturales duran poco?",
+          "a": "Una enzima llamada dipeptidil peptidasa-4 retira los dos primeros residuos de ambas hormonas, y la forma recortada ya no activa el receptor como la intacta. La enzima está muy extendida, así que las hormonas naturales no duran."
+        },
+        {
+          "q": "¿Por qué los péptidos sintéticos de incretina llevan un ácido graso?",
+          "a": "La acilación permite a la molécula asociarse de forma reversible con la albúmina sérica, y los péptidos unidos a albúmina se eliminan más despacio. La vuelve además más hidrofóbica, lo que cambia su comportamiento en una columna de fase reversa."
+        },
+        {
+          "q": "¿Qué significa dependiente de glucosa en el nombre GIP?",
+          "a": "Que la actividad liberadora de insulina está ligada a que haya glucosa presente, así que la señal depende del estado en que ya se encuentra el sistema. Se estudia como mecanismo regulador y no como un simple interruptor."
+        },
+        {
+          "q": "¿Actuar sobre dos receptores de incretina duplica el efecto?",
+          "a": "No. El trabajo de farmacología ha descrito al menos un agonista dual como desequilibrado entre sus dos dianas, así que el número de receptores que nombra una descripción dice poco sobre cómo se reparte la actividad entre ellos."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'what-are-copper-peptides': {
+      title: 'Péptidos de cobre: complejos de coordinación, no péptidos corrientes',
+      metaTitle: 'Péptidos de cobre: por qué el nombre no fija la fórmula',
+      metaDescription: 'Por qué el cobre nunca anda suelto, qué hace que una secuencia lo una, por qué la fórmula varía entre fuentes y qué huella deja el metal en el espectro.',
+      category: 'Investigación con péptidos',
+      date: '03 ago 2026',
+      excerpt: 'El metal es parte del compuesto, y eso cambia lo que hay que probar.',
+      imageAlt: 'Complejos de coordinación en vez de péptidos, y el patrón isotópico que lo demuestra.',
+      body: `
+        <p class="lead">Los péptidos de cobre se archivan con el resto de los péptidos de investigación, y pertenecen a otra categoría química. Son complejos de coordinación: una secuencia corta sujetando un ion metálico. El metal es parte del compuesto, lo que cambia cómo se fabrican, cómo se comportan en una columna y qué tiene que establecer un certificado.</p>
+
+        <h2>Por qué cobre, y por qué nunca anda suelto</h2>
+        <p>El cobre es un oligoelemento esencial. Las enzimas lo usan para mover electrones, que es justo lo que lo hace útil y lo que lo hace peligroso: un metal que cambia de estado de oxidación con facilidad impulsa reacciones a las que nadie lo invitó. <a class="cite" href="https://doi.org/10.1016/j.cub.2011.09.040" target="_blank" rel="noopener nofollow">(Referencia: Festa y Thiele, 2011)</a></p>
+        <p>La biología lo resuelve no dejándolo nunca libre. El cobre se pasa entre proteínas de unión y se entrega a su destino sin soltarse, de modo que la reserva de cobre no unido dentro de una célula es prácticamente nula. <a class="cite" href="https://doi.org/10.1016/j.cbpa.2010.01.003" target="_blank" rel="noopener nofollow">(Referencia: Lutsenko, 2010)</a> Un péptido que une cobre con fuerza está haciendo por tanto algo que el sistema hace constantemente, y esa es parte de la razón de que estas secuencias atraigan atención.</p>
+
+        <h2>Qué hace que una secuencia una cobre</h2>
+        <p>Sujetar un metal requiere varios átomos donadores colocados a su alrededor a la vez. Los péptidos cortos con una histidina cerca del extremo amino son una clase reconocida de ligandos de cobre, porque la amina terminal, el imidazol de la histidina y uno o más nitrógenos del esqueleto pueden colocarse juntos. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Referencia: Harford y Sarkar, 1997)</a></p>
+        <p>Usar un nitrógeno del esqueleto como donador tiene una consecuencia que conviene entender: ese nitrógeno tiene que perder su protón para unir el metal. El complejo lleva por tanto una carga distinta de la del péptido libre, y cuánto complejo hay presente depende del pH. Un péptido de cobre no es una especie fija sino un equilibrio que se sitúa en algún punto según las condiciones.</p>
+
+        <h2>Los dos que vas a encontrarte</h2>
+        <ul>
+          <li><b><a href="article/what-is-ghk-cu/">GHK-Cu</a></b>, el complejo de cobre de la glicil-histidil-lisina, y el más estudiado del grupo. La geometría de su complejo de cobre en disolución se determinó en 1982. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Referencia: Freedman et al., 1982)</a></li>
+          <li><b><a href="article/what-is-ahk-cu/">AHK-Cu</a></b>, donde el primer residuo es alanina en vez de glicina.</li>
+        </ul>
+        <p>Un residuo de diferencia es justo por lo que se compara el par. Cambiar la primera posición cambia el entorno inmediato de uno de los átomos donadores, y comparar secuencias casi idénticas es una forma estándar de preguntar qué aporta un residuo concreto.</p>
+
+        <h2>Fabricar uno son dos problemas</h2>
+        <p>La mitad peptídica es rutina. Un tripéptido es una <a href="article/peptide-synthesis/">síntesis en fase sólida</a> corta, tres ciclos de acoplamiento y un corte, y las secuencias implicadas no llevan residuos difíciles.</p>
+        <p>Formar el complejo es la otra mitad, y es donde un lote puede salir mal sin que el péptido tenga la culpa. El metal hay que introducirlo en condiciones controladas para que la proporción salga a un cobre por péptido, y el pH tiene que quedar donde domina la especie pretendida. Una preparación escasa de cobre contiene péptido libre; una sobrada lleva cobre que la secuencia no sujeta. Las dos son invisibles para una cifra de pureza que solo mira al péptido.</p>
+
+        <h2>El color es una comprobación débil</h2>
+        <p>Los complejos de cobre con donadores de nitrógeno absorben en el visible, así que el material es coloreado mientras el péptido libre no lo es. Un vial de complejo auténtico no parece un vial de polvo blanco.</p>
+        <p>Útil como comprobación de cordura y nada más. El color dice que hay una especie de cobre presente. No dice la estequiometría, ni la pureza del péptido, ni si el complejo es el pretendido.</p>
+
+        <h2>El nombre no fija la fórmula</h2>
+        <p>Para un péptido corriente, la secuencia define el material. Para un complejo metálico no. La fórmula escrita depende de si el nitrógeno que une se cuenta desprotonado, de cuál es la carga total, de qué contraión la equilibra, y de si la entrada describe un péptido por cobre o dos. Las bases de datos públicas resuelven esas elecciones de forma distinta, así que un mismo nombre arrastra varias fórmulas y varias masas.</p>
+        <p>No es descuido de las bases. Refleja que lo que se nombra es una especie en equilibrio. La consecuencia práctica es que la documentación del lote carga aquí más peso que la etiqueta.</p>
+
+        <h2>El cobre deja huella en el espectro</h2>
+        <p>El cobre tiene dos isótopos estables, cobre-63 y cobre-65, presentes en la naturaleza en torno al 69 y al 31 por ciento. Cualquier especie que contenga un solo átomo de cobre muestra por tanto un par de picos separados por dos unidades de masa en aproximadamente esa proporción, y el péptido libre no muestra nada parecido.</p>
+        <p>Ese patrón es una comprobación interna incorporada a la medición de identidad, y es uno de los pocos sitios donde la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> confirma más que el número que reporta.</p>
+
+        <h2>Por qué una cifra de pureza responde menos aquí</h2>
+        <p>Un porcentaje de pureza de <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía en fase reversa</a> reporta qué proporción del material detectado era la secuencia buscada. No reporta cuánto cobre hay ni si está unido en la proporción pretendida.</p>
+        <p>Hay además una trampa metodológica. Los métodos de fase reversa para péptidos corren a pH bajo con un aditivo ácido, y las condiciones ácidas desplazan un complejo metálico lábil hacia su forma disociada. Un pico limpio puede ser un pico limpio del tripéptido libre. Para un complejo metálico las condiciones del análisis son parte del resultado, y el contenido de cobre merece reportarse como cifra propia. Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">leer un certificado</a> cubre qué trae un documento completo.</p>
+
+        <h2>Manejo</h2>
+        <p>Estos compuestos se despachan <a href="article/lyophilization-freeze-drying/">liofilizados</a> y siguen las reglas de siempre: secos, frescos, lejos de la luz, y dejando que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro. Cualquier vial de Codex Research se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es un péptido de cobre?",
+          "a": "Un complejo de coordinación: una secuencia peptídica corta sujetando un ion de cobre. El metal es parte del compuesto, lo que los coloca en una categoría química distinta de la de los péptidos de investigación corrientes."
+        },
+        {
+          "q": "¿Por qué la biología mantiene el cobre unido?",
+          "a": "Porque el cobre cambia de estado de oxidación con facilidad, lo que lo hace útil en enzimas y reactivo donde no se le quiere. Se pasa entre proteínas de unión y se entrega sin soltarse, de modo que la reserva de cobre no unido dentro de una célula es prácticamente nula."
+        },
+        {
+          "q": "¿Qué hace que una secuencia una cobre?",
+          "a": "Varios átomos donadores colocados alrededor del metal a la vez. Las secuencias cortas con una histidina cerca del extremo amino pueden colocar juntos la amina terminal, el imidazol de la histidina y uno o más nitrógenos del esqueleto."
+        },
+        {
+          "q": "¿Por qué distintas fuentes dan fórmulas distintas para el mismo péptido de cobre?",
+          "a": "Porque la fórmula escrita depende de si el nitrógeno que une se cuenta desprotonado, de la carga total, del contraión y de si la entrada describe un péptido por cobre o dos. El compuesto es una especie en equilibrio, no una fórmula fija."
+        },
+        {
+          "q": "¿La espectrometría de masas confirma que hay cobre?",
+          "a": "Sí, y de forma distintiva. El cobre tiene dos isótopos estables con una abundancia natural en torno al 69 y al 31 por ciento, así que una especie con un átomo de cobre muestra un par de picos característico separado por dos unidades de masa. El péptido libre no lo muestra."
+        },
+        {
+          "q": "¿Basta una cifra de pureza por HPLC para un péptido de cobre?",
+          "a": "No. Reporta la proporción del material detectado que era la secuencia buscada, no cuánto cobre hay ni si está unido como se pretendía. Las condiciones ácidas de fase reversa además pueden desplazar el complejo hacia su forma disociada."
+        }
+      ],
+      cta: '<a href="verify/">Verifica un número de lote</a> o mira el <a href="catalog/">catálogo de Codex Research</a>. Cada lote sale con su certificado de análisis.',
+    },
+
+    'verifying-a-peptide-supplier-checklist': {
+      title: 'Verificar a un proveedor de péptidos: la lista',
+      metaTitle: 'Verificar a un proveedor de péptidos: qué pedir antes de pagar',
+      metaDescription: 'Siete comprobaciones antes de pagar: número de lote, método declarado, fecha, quién firma, el cromatograma, contenido neto y lo que el papel omite.',
+      category: 'Investigación con péptidos',
+      date: '28 sep 2026',
+      excerpt: 'Siete cosas que se pueden comprobar antes de pagar, y qué resuelve cada una.',
+      imageAlt: 'Siete comprobaciones que se pueden hacer antes de pagar, y qué resuelve cada una.',
+      body: `
+        <p class="lead">Todas las comprobaciones de abajo se pueden hacer antes de que cambie el dinero de manos, a partir de documentos que un proveedor tiene o no tiene. Ninguna exige confiar en nadie y ninguna habla de una empresa en particular: son propiedades de un documento, y un documento las cumple o no.</p>
+
+        <h2>1. ¿El número de lote del papel coincide con el del vial?</h2>
+        <p>Va primero porque de ella dependen todas las demás. Un certificado describe un lote. Si el número impreso en la etiqueta no coincide con el del documento, el documento describe material de otro, por buenas que sean las cifras que trae.</p>
+        <p>Pide el certificado del lote que vas a recibir, no un certificado de muestra. Un proveedor que solo puede enseñar un documento genérico está diciendo que el análisis no es por lote. Nuestra nota sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> repasa los campos uno a uno.</p>
+
+        <h2>2. ¿Hay un método declarado junto a cada cifra?</h2>
+        <p>«Pureza: 99 %» es una afirmación. «Pureza: 99,2 % por RP-HPLC, C18, TFA 0,1 %, gradiente 20-60 % de acetonitrilo en 30 min, detección a 214 nm» es un resultado, porque otro podría repetirlo.</p>
+        <p>Las condiciones no son adorno. La columna, el gradiente y la longitud de onda de detección cambian el número que sale, y el mismo lote analizado de dos maneras devuelve dos cifras honestas. Las guías para validar procedimientos analíticos existen justamente porque un resultado es inseparable del procedimiento que lo produjo. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Ref.: Swartz y Krull, 2012)</a> Nuestra nota sobre <a href="article/peptide-purity-hplc-explained/">qué mide una cifra de pureza</a> lo desarrolla.</p>
+
+        <h2>3. ¿Tiene fecha de análisis?</h2>
+        <p>Un resultado sin fecha no está atado a un momento en la vida de ese lote. Los péptidos se degradan por rutas conocidas y todas avanzan con el tiempo y la temperatura, así que una medición de hace dieciocho meses describe el material como era entonces. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a></p>
+        <p>La fecha además deja ver algo que su ausencia tapa: si el documento se produjo para este lote o se reutilizó.</p>
+
+        <h2>4. ¿Quién lo firma, y vende el material?</h2>
+        <p>Un certificado es una afirmación de quien lo emite. El análisis independiente importa porque separa a quien hace la afirmación de quien cobra, y los laboratorios que trabajan bajo normas de competencia reconocidas se evalúan contra criterios definidos de competencia e imparcialidad.</p>
+        <p>Qué dice el número es una pregunta. Quién lo produjo, y con qué método, es la otra. Un documento sin laboratorio nombrado y sin firma no deja a nadie respondiendo por él.</p>
+
+        <h2>5. ¿Informa identidad además de pureza?</h2>
+        <p>Responden preguntas distintas y un documento con una sola es medio documento. La pureza que sale de la <a href="article/high-performance-liquid-chromatography-hplc/">cromatografía</a> dice qué proporción del material detectado corresponde a un componente principal. No tiene opinión sobre cuál es ese componente.</p>
+        <p>La identidad viene de la <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, comparando una masa medida contra la masa calculada a partir de la secuencia pretendida. Una muestra puede ser 99 % pura y ser 99 % de la molécula equivocada, y el cromatograma se vería idéntico.</p>
+
+        <h2>6. ¿Separa pureza de contenido neto?</h2>
+        <p>La pureza cromatográfica pregunta por los picos: de todo lo que el método detectó, ¿qué proporción era el objetivo? El contenido neto de péptido pregunta por el polvo: de lo que pesaste, ¿cuánto es péptido y cuánto contraión y agua?</p>
+        <p>La diferencia es real. El material purificado por fase reversa se aísla como sal, así que parte del polvo es contraión y parte es agua absorbida. Un lote puede ser 99 % puro por área y estar bastante por debajo del 99 % de péptido en masa, sin contradicción entre las dos cifras. Un certificado que informa solo una no está mal, está incompleto. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> cubre el resto de la masa.</p>
+
+        <h2>7. Si viene la traza, ¿aguanta la mirada?</h2>
+        <p>Un pico alto y simétrico sobre una línea base plana es la imagen que quieres. Los picos pequeños cerca del principal son frecuentes en síntesis y suelen corresponder a especies muy emparentadas, como las secuencias de deleción, que se diferencian del objetivo en un solo residuo. Un hombro significa que el método apenas separó algo.</p>
+        <p>Una imagen con resolución insuficiente para leer los ejes no es evidencia. Un cromatograma sin escala tampoco.</p>
+
+        <h2>Qué significa que falte una línea</h2>
+        <p>Algunos campos son opcionales de verdad. El contenido de endotoxina importa para trabajar con células en cultivo y es irrelevante en un experimento de química, así que su ausencia en un documento no es automáticamente un hueco. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Ref.: Raetz y Whitfield, 2002)</a></p>
+        <p>La descripción honesta de un parámetro no medido es que no se midió, no que el material esté libre de él. Un proveedor que lo dice así es más fácil de creer que uno cuyo documento insinúa una medición que nunca ocurrió.</p>
+
+        <h2>Una especificación no es un resultado</h2>
+        <p>Conviene decirlo aparte porque en la página se parecen. «≥99 % por HPLC» enuncia el umbral que el lote tenía que cumplir. «99,2 %, medido el 14 de marzo, lote CDX-1017» es la medición de un lote un día concreto.</p>
+        <p>Las dos tienen su sitio. Solo una te habla del material que vas a comprar, y el número de lote es el hilo que conecta una afirmación con una medición que puedes <a href="verify/">comprobar</a>.</p>
+
+        <h2>Lo que esta lista no es</h2>
+        <p>No es un juicio sobre ningún proveedor. Cada punto describe una propiedad de un documento, y cualquier proveedor puede cumplir los siete produciendo mejores documentos. De eso se trata: las comprobaciones son sobre lo que se puede verificar, no sobre quién vende.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué hay que pedirle a un proveedor de péptidos antes de comprar?",
+          "a": "Que el número de lote del certificado coincida con el del vial, que junto a cada cifra haya un método y una fecha, quién firma el documento, si informa identidad además de pureza, y si separa el contenido neto de péptido de la pureza cromatográfica."
+        },
+        {
+          "q": "¿Por qué el número de lote es lo más importante?",
+          "a": "Porque un certificado describe un lote. Si el número del documento no coincide con el de la etiqueta, el documento describe otro material, por buenas que parezcan sus cifras."
+        },
+        {
+          "q": "¿Qué convierte una cifra de pureza en un resultado y no en una afirmación?",
+          "a": "El método declarado al lado. La columna, el gradiente y la longitud de onda de detección cambian el número, así que un porcentaje citado sin sus condiciones no lo puede repetir nadie más."
+        },
+        {
+          "q": "¿Por qué no basta con la pureza?",
+          "a": "La pureza dice qué proporción del material detectado es un componente principal, sin identificarlo. Una muestra podría ser 99 % pura y ser 99 % de la molécula equivocada. La identidad viene de una medición de masa."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre pureza y contenido neto de péptido?",
+          "a": "La pureza es el área del pico objetivo sobre el área total detectada. El contenido neto es la proporción del polvo pesado que es péptido y no contraión ni agua absorbida. Un lote puede ser 99 % puro por área y estar bastante por debajo en masa."
+        },
+        {
+          "q": "¿Es mala señal que falte la línea de endotoxinas?",
+          "a": "No necesariamente. La endotoxina importa al trabajar con células en cultivo y es irrelevante en muchos experimentos de química. Lo que importa es que un parámetro no medido se describa como no medido, y no se insinúe que está ausente."
+        }
+      ],
+      cta: 'Pide el certificado de cualquier lote antes de encargar, o <a href="verify/">comprueba un número de lote</a> contra su papelería.',
+    },
+
+    'certificate-of-analysis-glossary': {
+      title: 'Certificado de análisis: glosario de términos',
+      metaTitle: 'Glosario del certificado de análisis: qué significa cada término',
+      metaDescription: 'Definiciones claras de lo que aparece en un certificado: RP-HPLC, ESI-MS, contenido neto de péptido, TFA, LAL, especificación, normalización de área y más.',
+      category: 'Investigación con péptidos',
+      date: '28 sep 2026',
+      excerpt: 'Las abreviaturas de un certificado, definidas una por una.',
+      imageAlt: 'Las abreviaturas de un certificado de análisis, definidas una por una.',
+      body: `
+        <p class="lead">Un certificado es un documento corto lleno de abreviaturas, y la mayoría son nombres de métodos más que jerga. Cuando sabes qué pregunta responde cada una, la página se lee rápido. Van agrupadas por lo que dicen, no en orden alfabético, porque así se lee un certificado.</p>
+
+        <h2>Términos sobre qué es el material</h2>
+
+        <h3>ESI-MS</h3>
+        <p>Espectrometría de masas con ionización por electrospray. La muestra se pulveriza desde una disolución a través de una aguja cargada, lo que produce iones sin romper la molécula, y el instrumento mide su relación masa-carga. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Ref.: Fenn et al., 1989)</a> Los péptidos suelen aparecer con varias cargas a la vez, así que un compuesto da una familia de señales emparentadas que el programa convierte de vuelta a una sola masa.</p>
+
+        <h3>MALDI-TOF</h3>
+        <p>Desorción/ionización láser asistida por matriz, con analizador de tiempo de vuelo. Otra forma de fabricar iones: la muestra se mezcla con una matriz que absorbe la luz del láser, y el tiempo de vuelo hasta el detector da la masa. <a class="cite" href="https://doi.org/10.1021/ac00171a028" target="_blank" rel="noopener nofollow">(Ref.: Karas y Hillenkamp, 1988)</a> Tiende a producir iones con una sola carga, lo que deja un espectro más sencillo de leer.</p>
+
+        <h3>Masa observada y masa teórica</h3>
+        <p>La masa teórica se calcula a partir de la secuencia pretendida, átomo por átomo. La observada es la que midió el instrumento. La comprobación de identidad es la comparación de las dos, y el certificado debería enseñar ambas en vez de un «conforme» a secas. Nuestra nota sobre <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> explica por qué las dos cifras casi nunca coinciden hasta el último decimal.</p>
+
+        <h3>Masa monoisotópica y masa media</h3>
+        <p>Dos maneras legítimas de calcular la masa de la misma molécula. La monoisotópica usa el isótopo más ligero de cada elemento; la media usa la mezcla isotópica natural. En un péptido se diferencian en unas pocas unidades, suficiente para parecer un error si comparas una medición monoisotópica contra un cálculo de masa media.</p>
+
+        <h2>Términos sobre cuánto hay</h2>
+
+        <h3>RP-HPLC</h3>
+        <p>Cromatografía líquida de alta resolución en fase reversa. La separación que hay detrás de casi toda cifra de pureza: la muestra atraviesa una columna rellena de una fase estacionaria apolar, y los componentes salen en momentos distintos según con cuánta fuerza se retengan. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Ref.: Dong, 2006)</a> Lo de «fase reversa» es histórico: la fase estacionaria es la apolar, al revés de como se hacía antes.</p>
+
+        <h3>C18</h3>
+        <p>La fase estacionaria más común, una cadena de dieciocho carbonos unida a partículas de sílice. Las cadenas más cortas, C8 y C4, retienen menos y se eligen a menudo para péptidos grandes.</p>
+
+        <h3>Gradiente</h3>
+        <p>La mezcla de disolventes que cambia a lo largo de la carrera, normalmente subiendo el acetonitrilo en un tiempo fijado. La forma del gradiente cambia lo bien que se separan dos picos cercanos, y por eso va al lado de una cifra de pureza.</p>
+
+        <h3>Normalización de área</h3>
+        <p>Cómo se calcula casi siempre un porcentaje de pureza: el área del pico objetivo dividida entre el área total de todos los picos detectados. La expresión importa porque define lo que el número no incluye. Todo lo que el método no detectó está ausente del numerador y del denominador, así que las sales y el agua no aparecen. Nuestra nota sobre <a href="article/peptide-purity-hplc-explained/">la pureza por HPLC</a> lo detalla.</p>
+
+        <h3>Longitud de onda de detección</h3>
+        <p>En péptidos suele ser 214 nm o 220 nm, donde absorbe el propio enlace peptídico, así que todo péptido de la muestra es visible. A 280 nm solo absorben los residuos aromáticos, de modo que un péptido sin triptófano, tirosina ni fenilalanina apenas se registraría.</p>
+
+        <h3>Tiempo de retención</h3>
+        <p>Cuánto tarda un componente en salir de la columna, en minutos. Es una propiedad del método más que de la molécula, así que solo significa algo junto a las condiciones que lo produjeron.</p>
+
+        <h2>Términos sobre masa frente a pureza</h2>
+
+        <h3>Contenido neto de péptido</h3>
+        <p>La proporción del polvo pesado que es péptido, frente a contraión, agua absorbida y cualquier excipiente. Distinto de la pureza, que describe los picos detectados. Un lote puede ser 99 % puro por área y estar bastante por debajo en masa, sin que ninguna cifra esté mal.</p>
+
+        <h3>TFA</h3>
+        <p>Ácido trifluoroacético, el aditivo de casi toda purificación en fase reversa. Deja el péptido como sal de TFA, así que parte del peso del polvo es contraión. Por eso a veces se informa el contenido de TFA. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> cubre el resto.</p>
+
+        <h3>Contraión</h3>
+        <p>El ion emparejado con los grupos cargados del péptido. Normalmente trifluoroacetato, a veces acetato o cloruro. Es una parte real de la masa del sólido y es la razón de que el contenido neto y la pureza se separen.</p>
+
+        <h3>Pérdida por secado y contenido de agua</h3>
+        <p>Dos formas de medir el agua de un sólido. La pérdida por secado pesa la muestra antes y después de calentarla; la valoración de Karl Fischer mide el agua específicamente por una reacción química. El material liofilizado es <a href="article/lyophilization-freeze-drying/">higroscópico</a> y toma agua del aire, así que esta cifra se mueve con el manejo.</p>
+
+        <h2>Términos sobre contaminación</h2>
+
+        <h3>LAL y UE/mg</h3>
+        <p>El ensayo con lisado de amebocitos de Limulus, que detecta endotoxina bacteriana, en unidades de endotoxina por miligramo. Importa al trabajar con células en cultivo, donde la endotoxina activa la señalización inmunitaria a concentraciones muy bajas, y es irrelevante en muchos experimentos de química. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Ref.: Raetz y Whitfield, 2002)</a> Nuestra nota sobre <a href="article/endotoxins-in-research-peptides/">endotoxinas</a> explica por qué no la quita una esterilización corriente.</p>
+
+        <h3>Disolventes residuales</h3>
+        <p>Restos de los disolventes usados en la síntesis y la purificación, sobre todo acetonitrilo. Se informan en partes por millón cuando se miden.</p>
+
+        <h3>Secuencia de deleción</h3>
+        <p>Un péptido al que le falta un residuo, producido cuando un acoplamiento no se completa durante la <a href="article/peptide-synthesis/">síntesis</a>. Es el motivo más frecuente de un pico pequeño pegado al principal, porque se diferencia del objetivo en un solo aminoácido.</p>
+
+        <h2>Términos sobre el documento mismo</h2>
+
+        <h3>Especificación</h3>
+        <p>El umbral que el lote tenía que cumplir, escrito como «≥98 %» o «no más de 1 %». Una especificación es una regla, no una medición. Un certificado que solo lista especificaciones te dice qué se exigía, no qué se encontró.</p>
+
+        <h3>Resultado</h3>
+        <p>El valor medido para este lote ese día: «99,2 %». Esta es la cifra que describe tu material.</p>
+
+        <h3>Número de lote</h3>
+        <p>El identificador que ata el documento a una cantidad física de material. Sin él, el certificado no se puede pegar a nada que puedas sostener, y es lo que usas para <a href="verify/">buscar un lote</a>.</p>
+
+        <h3>Validación del método</h3>
+        <p>La evidencia de que un procedimiento analítico hace lo que dice, evaluada por especificidad, exactitud, precisión y otras características definidas. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Ref.: Swartz y Krull, 2012)</a> Es la razón de que «por RP-HPLC» sea una frase con contenido y no un adorno.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué significa RP-HPLC en un certificado de análisis?",
+          "a": "Cromatografía líquida de alta resolución en fase reversa, la técnica de separación detrás de casi toda cifra de pureza. La muestra atraviesa una columna con fase estacionaria apolar y sus componentes salen en momentos distintos según con cuánta fuerza se retengan."
+        },
+        {
+          "q": "¿Qué es el contenido neto de péptido?",
+          "a": "La proporción del polvo pesado que es péptido de verdad y no contraión, agua absorbida ni excipiente. Responde una pregunta distinta de la pureza, que describe los picos detectados y no la masa."
+        },
+        {
+          "q": "¿Por qué aparece TFA en el certificado de un péptido?",
+          "a": "El ácido trifluoroacético es el aditivo habitual en la purificación por fase reversa, así que el péptido se aísla como sal de TFA y parte del peso del polvo es contraión trifluoroacetato."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre una especificación y un resultado?",
+          "a": "Una especificación es el umbral que el lote tenía que cumplir, por ejemplo ≥98 %. Un resultado es el valor medido para ese lote un día concreto. Solo el resultado describe el material que vas a comprar."
+        },
+        {
+          "q": "¿Qué significa UE/mg?",
+          "a": "Unidades de endotoxina por miligramo, del ensayo LAL. Cuantifica la endotoxina bacteriana, que importa al trabajar con células en cultivo y suele ser irrelevante en experimentos de química."
+        },
+        {
+          "q": "¿Qué es una secuencia de deleción?",
+          "a": "Un péptido al que le falta un residuo porque un acoplamiento de la síntesis no terminó. Como se diferencia del objetivo en un solo aminoácido, suele salir como un pico pequeño pegado al principal."
+        }
+      ],
+      cta: 'Cada lote que enviamos lleva un certificado con estos campos rellenos. <a href="verify/">Busca uno</a>.',
+    },
+
+    'documents-that-accompany-a-peptide-batch': {
+      title: 'Los documentos que acompañan a un lote',
+      metaTitle: 'Qué documentos trae un lote de péptido y qué prueba cada uno',
+      metaDescription: 'Certificado, cromatograma, espectro de masas, ficha de seguridad y etiqueta responden preguntas distintas. Qué prueba cada uno y qué deja abierto.',
+      category: 'Investigación con péptidos',
+      date: '28 sep 2026',
+      excerpt: 'Cinco documentos, cinco preguntas distintas. Qué resuelve cada uno y qué deja abierto.',
+      imageAlt: 'Los documentos que acompañan a un lote de péptido y qué prueba cada uno.',
+      body: `
+        <p class="lead">Un lote de material puede llegar con varios documentos, y no son versiones unos de otros. Cada uno responde una pregunta que los demás no responden, y saber cuál es cuál te ahorra leer un documento como prueba de algo de lo que nunca trató.</p>
+
+        <h2>El certificado de análisis</h2>
+        <p>El documento resumen. Nombra el lote, lista qué se midió, da el resultado de cada parámetro y el método que lo produjo, y lleva fecha y firma.</p>
+        <p>Es el documento al que se refiere la gente cuando dice que un péptido «tiene COA», y el que más se enseña cuando se pide. Por eso vale la pena ser preciso sobre sus límites.</p>
+        <p>Establece qué encontró alguien al analizar este lote. No establece que el material que tienes delante sea ese lote, para lo cual está el número de la etiqueta, y no dice nada de los parámetros que no lista. Los campos van uno a uno en nuestra nota sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a>, y las abreviaturas en el <a href="article/certificate-of-analysis-glossary/">glosario</a>.</p>
+
+        <h2>El cromatograma</h2>
+        <p>La traza cruda detrás de la cifra de pureza: respuesta del detector contra tiempo, con el objetivo como pico grande y todo lo demás que el método detectó como picos menores.</p>
+        <p>Un certificado puede informar 99,2 % sin enseñarte dónde está el 0,8 % restante. La traza lo enseña. Un hombro en el pico principal significa que el método apenas separó algo; varios picos pequeños repartidos a lo largo de la carrera son una imagen distinta de un solo pico pegado al objetivo, que en péptidos sintéticos suele corresponder a una <a href="article/peptide-synthesis/">secuencia de deleción</a> que se diferencia en un residuo.</p>
+        <p>Los ejes son parte de la evidencia. Una traza sin escala en el eje de tiempo no se puede comparar contra nada, y una imagen con resolución insuficiente para leer las etiquetas es una foto de un cromatograma más que un cromatograma.</p>
+        <p>Lo que no te puede decir es qué son esos picos. La cromatografía ordena por con cuánta fuerza se pega algo a una columna, no por identidad. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Ref.: Dong, 2006)</a> Tampoco te puede enseñar nada que el detector no viera: a 214 nm absorbe el enlace peptídico, pero las sales y el agua pasan invisibles.</p>
+
+        <h2>El espectro de masas</h2>
+        <p>La evidencia de identidad. El instrumento mide relaciones masa-carga, y la masa medida se compara contra la masa calculada a partir de la secuencia pretendida. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Ref.: Fenn et al., 1989)</a></p>
+        <p>Es el único de estos documentos que trata de qué es la molécula. Un cromatograma con un solo pico limpio es compatible con una muestra pura de un compuesto completamente equivocado, y solo una medición de masa cierra ese hueco. Nuestra nota sobre <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> explica cómo funciona la comparación.</p>
+        <p>Su punto ciego es el espejo del anterior: un espectro puede confirmar que la masa es la correcta y decir poco de cuánto más hay presente. Dos moléculas de masa idéntica son indistinguibles solo por masa, y por eso identidad y pureza se leen juntas.</p>
+
+        <h2>La ficha de datos de seguridad</h2>
+        <p>Un documento de comunicación de peligros, normalizado en dieciséis secciones por el Sistema Globalmente Armonizado, que cubre identificación, peligros, composición, primeros auxilios, manejo, almacenamiento, toxicología y eliminación en un orden fijo. <a class="cite" href="https://doi.org/10.18356/9789210019071c006" target="_blank" rel="noopener nofollow">(Ref.: UNECE, 2023)</a> El orden es fijo para que cualquiera encuentre la misma información en el mismo sitio, la escriba quien la escriba.</p>
+        <p>Se confunde a menudo con un documento de calidad. No lo es. Una ficha describe una sustancia como clase, no un lote, así que dos lotes de purezas muy distintas llevan fichas idénticas. Te dice cómo manejar el material con seguridad y nada sobre qué hay en el vial.</p>
+
+        <h2>La etiqueta</h2>
+        <p>El documento más corto y el que ata los demás a un objeto físico. Nombre del compuesto, número de lote, cantidad, condición de conservación y una declaración de para qué es el material.</p>
+        <p>El número de lote es todo el asunto. Es el hilo que conecta un certificado con algo que puedes sostener, y sin él la papelería describe material en abstracto. Las condiciones de conservación van ahí por la misma razón: un péptido se degrada por rutas conocidas que avanzan con el tiempo y la temperatura, así que un documento que nunca llega a quien guarda el vial no sirve de mucho. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> desarrolla el razonamiento.</p>
+
+        <h2>Lo que ningún documento establece</h2>
+        <p>Ninguno prueba que el material sea hoy el mismo que cuando se analizó. Un certificado lleva fecha porque un resultado pertenece a un momento, y el hueco entre esa fecha y el vial que tienes en la mano lo llena la conservación y el transporte, no la papelería.</p>
+        <p>Tampoco dice ninguno nada sobre un segundo vial. Los análisis se hacen sobre un lote. Un documento del lote CDX-1017 no te dice nada del CDX-1018, y por eso el número de lote se comprueba antes que nada en la página.</p>
+
+        <h2>Cuáles puedes pedir con razón</h2>
+        <p>Un certificado del lote y una etiqueta con el número de lote son el mínimo, y cualquier proveedor puede producir los dos. La ficha de seguridad es estándar y no cuesta nada enviarla, porque pertenece al compuesto y no al lote.</p>
+        <p>El cromatograma y el espectro crudos son un pedido mayor, porque salen de los archivos del propio instrumento del laboratorio y no de una plantilla. Un proveedor que los tiene te los manda. Uno que solo tiene siempre un resumen está diciendo algo sobre de dónde salió el resumen.</p>
+
+        <h2>Cómo encajan</h2>
+        <p>La etiqueta dice qué lote es. El certificado dice qué se encontró en ese lote y con qué método. El cromatograma enseña el resultado de pureza en vez de afirmarlo. El espectro de masas dice que el componente principal es la molécula pretendida. La ficha de seguridad describe la clase de compuesto, sea cual sea el lote.</p>
+        <p>Un proveedor que aporta los cinco no ha demostrado que su material sea bueno. Ha hecho posible que lo compruebes, que es otra cosa y la única que un documento puede hacer.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué documentos deberían venir con un péptido de investigación?",
+          "a": "Un certificado de análisis del lote, idealmente el cromatograma y el espectro de masas que hay detrás, una ficha de datos de seguridad y una etiqueta con el número de lote y la condición de conservación."
+        },
+        {
+          "q": "¿La ficha de seguridad es un documento de calidad?",
+          "a": "No. Describe una sustancia como clase y cubre manejo, conservación, primeros auxilios y eliminación. Dos lotes de purezas muy distintas llevan fichas idénticas, así que no dice nada sobre qué hay en un vial concreto."
+        },
+        {
+          "q": "¿Para qué pedir el cromatograma si el certificado ya da la pureza?",
+          "a": "La cifra es un solo número; la traza enseña dónde está el resto. Un hombro en el pico principal, o un pico pequeño pegado a él, es una imagen distinta de impurezas repartidas a lo largo de la carrera."
+        },
+        {
+          "q": "¿Qué añade un espectro de masas?",
+          "a": "La identidad. La cromatografía separa por retención, no por lo que un compuesto es, así que un solo pico limpio es compatible con una muestra pura de la molécula equivocada. Comparar la masa medida contra la calculada desde la secuencia cierra ese hueco."
+        },
+        {
+          "q": "¿Un certificado prueba que el material sigue en esa pureza?",
+          "a": "No. Un resultado pertenece a la fecha en que se midió. Lo que pasó entre esa fecha y el vial que tienes en la mano es cuestión de conservación y transporte, y eso no lo cubre ningún documento."
+        },
+        {
+          "q": "¿Por qué importa más el número de lote que las cifras?",
+          "a": "Porque es lo que ata la papelería a un objeto físico. Un documento de un lote no dice nada de otro, así que si el número de la etiqueta no coincide, las cifras describen otro material."
+        }
+      ],
+      cta: 'Cada lote que enviamos lleva su propio certificado. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
+    },
   };
 
   window.REA = window.REA || {};

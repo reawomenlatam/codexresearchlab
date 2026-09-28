@@ -1579,21 +1579,21 @@
     },
     {
       slug: 'bacteriostatic-water-for-peptide-reconstitution',
-      title: 'Bacteriostatic Water for Peptide Reconstitution',
-      metaTitle: 'Bacteriostatic Water: Benzyl Alcohol, pH and Solubility',
-      metaDescription: 'Bacteriostatic water for peptide reconstitution: benzyl alcohol content, pH, choosing a solvent, and how long a solution stays usable.',
+      title: 'Bacteriostatic Water: What the Label Specifies',
+      metaTitle: 'Bacteriostatic Water: Benzyl Alcohol, pH and the USP Spec',
+      metaDescription: 'What bacteriostatic water contains: 0.9 percent benzyl alcohol, pH 5.7, sterile and nonpyrogenic, and why the preservative is not an inert ingredient.',
       focusKeyword: 'bacteriostatic water for peptides',
       category: 'Peptide Research',
       tags: ['bacteriostatic water', 'reconstitution', 'diluent', 'research peptides'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
-      excerpt: 'What sets bacteriostatic water apart from plain sterile water, and why labs reach for it first.',
-      imageAlt: 'Bacteriostatic water vial used to reconstitute research peptides',
+      excerpt: 'What sets it apart from plain sterile water, and what the preservative does to molecules dissolved in it.',
+      imageAlt: 'What the USP label specifies, and why the preservative is not inert.',
       image: 'assets/products/bac-water.jpg',
       body: `
-        <p class="lead">When a lyophilized peptide needs a liquid to dissolve into, the default answer in most research settings is bacteriostatic water. Most laboratories reach for it first, for a specific reason. The short version is that it lets a vial be used more than once.</p>
+        <p class="lead">Bacteriostatic water is sterile water with one thing added. That single ingredient is the whole difference between it and water for injection, and it accounts for both what the fluid is good for and the ways it is not neutral.</p>
 
-        <h2>What is bacteriostatic water?</h2>
-        <p>Bacteriostatic water is sterile water that contains a small amount of benzyl alcohol, usually around 0.9 percent, added as a preservative. The word "bacteriostatic" describes what that preservative does: it slows or stops the growth of bacteria rather than killing everything outright. That single ingredient is the whole difference between it and plain water for injection.</p>
+        <h2>What it is</h2>
+        <p>Bacteriostatic water is sterile water containing a small amount of benzyl alcohol as a preservative. The word bacteriostatic describes what that preservative does: it slows or stops bacterial growth rather than killing everything outright. A bacteriostatic agent holds a population in check; a bactericidal one destroys it. The distinction is not pedantry, because it sets what the fluid can and cannot be relied on to do.</p>
 
         <h2>The specification, in numbers</h2>
         <p>The USP product label is specific about what the fluid contains:</p>
@@ -1604,56 +1604,69 @@
           <tr><td>Presentation</td><td>Sterile, nonpyrogenic, multiple-dose container</td></tr>
           <tr><td>Other additives</td><td>None</td></tr>
         </table>
-        <p>The mildly acidic pH is a detail that occasionally matters, since it sits inside the range where deamidation, the most common degradation route for peptides in water, proceeds most slowly.</p>
+        <p>Four lines, and none of them is a description a supplier wrote. Each is checkable against a public source rather than a supplier's description. <a class="cite" href="https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8" target="_blank" rel="noopener nofollow">(Reference: DailyMed, USP labeling)</a></p>
 
+
+        <h2>Where the preservative came from</h2>
+        <p>Benzyl alcohol has been used as a pharmaceutical preservative for a long time, and it persists because it does several jobs at once: it is effective against a broad range of organisms, it is soluble in water at the concentrations needed, and it is stable enough that a sealed container keeps its stated content over a normal shelf life.</p>
+        <p>Alternatives exist and each trades something. Phenol and m-cresol are more aggressive toward dissolved proteins, by the same comparison cited above. Chlorobutanol is gentler but less broadly effective and less stable. The 0.9 percent figure on the label is the outcome of that balance rather than a round number chosen for convenience.</p>
+
+        <h2>What the concentration is doing</h2>
+        <p>Nine milligrams per millilitre is enough to hold a population in check and low enough to stay below the point where the preservative dominates the solution's behaviour. Both halves of that sentence matter. Too little and the container cannot honestly be called multi-dose; too much and the effects described below stop being a secondary consideration.</p>
+
+        <h2>Sterile and nonpyrogenic are two claims</h2>
+        <p>Sterile means no viable organisms. Nonpyrogenic means free of the bacterial fragments that provoke a fever response, principally endotoxin, which survives conditions that kill the bacterium that produced it.</p>
+        <p>A fluid can be sterile and still carry endotoxin, which is why the label states both. The same distinction applies to the compounds the water might be used with, and our note on <a href="article/endotoxins-in-research-peptides/">endotoxins</a> covers why that measurement is separate from purity.</p>
 
         <h2>How it differs from sterile water</h2>
-        <p>Sterile water for injection is exactly that, water with nothing added, and it is intended for single use. Once opened it has no preservative to hold back contamination. Bacteriostatic water, because of the benzyl alcohol, can tolerate being entered more than once over a period of time, which is why it suits a multi-dose research vial that gets drawn from repeatedly. For peptides that are studied over days or weeks, that reusability is the practical advantage.</p>
+        <p>Sterile water for injection is water with nothing added, intended for single use. Once the container is opened it has no preservative holding back contamination. Bacteriostatic water, because of the benzyl alcohol, tolerates being entered more than once over a period, which is why it is supplied in a multiple-dose container while plain sterile water is not.</p>
+        <p>The container format follows from the chemistry rather than from marketing. A fluid with no preservative cannot honestly be sold as multi-dose.</p>
 
-        <h2>Why labs use it for peptides</h2>
-        <p>Bacteriostatic water suits laboratory work well: it dissolves most peptides cleanly, the preservative supports multiple draws from one vial, and it is widely available in standard volumes. It is also worth knowing that benzyl alcohol counts as a kind of <a href="article/excipients-in-peptides/">excipient</a>, an inactive ingredient that supports the formulation without being the active compound.</p>
-
-        <h2>What reconstitution means as a laboratory operation</h2>
-        <p>Reconstitution is dissolving a known mass of lyophilized solid in a measured volume of solvent so that the result is a solution of known concentration. The arithmetic is mass divided by volume, and nothing more:</p>
-        <table>
-          <tr><th>Solid in the vial</th><th>Solvent added</th><th>Resulting concentration</th></tr>
-          <tr><td>5 mg</td><td>1.00 mL</td><td>5 mg/mL</td></tr>
-          <tr><td>5 mg</td><td>2.00 mL</td><td>2.5 mg/mL</td></tr>
-          <tr><td>10 mg</td><td>2.00 mL</td><td>5 mg/mL</td></tr>
-          <tr><td>10 mg</td><td>5.00 mL</td><td>2 mg/mL</td></tr>
-        </table>
-        <p>Two things make that arithmetic less trivial than it looks. The first is that a freeze-dried cake occupies volume of its own, so the final volume of the solution is not exactly the volume of solvent added; for work where the concentration has to be accurate rather than approximate, the solution is made up to a mark rather than by adding a nominal volume. The second is that the mass printed on the label is the mass of solid, not the mass of peptide. Material purified by reversed-phase chromatography is isolated as a salt and carries a counterion plus residual water, so the net peptide content of the powder is typically well below 100 percent and is reported per batch on the <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a>. A concentration calculated from the label mass alone is a nominal figure.</p>
-
-        <h2>Choosing a solvent</h2>
-        <p>Bacteriostatic water is the default because most short peptides carrying a reasonable number of charged residues dissolve in it readily, but it is a default, not a rule. Peptide manufacturers give the same general guidance: basic peptides are usually taken up in a small amount of an acidic solvent such as dilute acetic acid and then diluted; acidic peptides in a small amount of a basic solvent such as 0.1 percent aqueous ammonia and then diluted; markedly hydrophobic sequences may need an organic solvent such as DMSO, DMF or acetonitrile before any aqueous dilution. Test on a small portion first rather than committing the whole vial, and check the solvent suggested on the lot's own analytical data sheet. If material is slow to dissolve, a few minutes of sonication in a water bath can help, though excessive warming should be avoided.</p>
+        <h2>Why the pH is on the label</h2>
+        <p>At 5.7 the fluid is mildly acidic, and that figure is worth more attention than it usually gets. Deamidation, the most common degradation route for peptides in water, depends strongly on pH: it runs fastest at neutral and alkaline pH and slowest in roughly the pH 3 to 6 band. The stated value sits inside the slower band.</p>
+        <p>That is a property of the liquid, not a promise about any particular molecule. Our note on <a href="article/how-to-store-research-peptides/">what degrades a peptide</a> covers the routes in more detail.</p>
 
         <h2>The preservative is not inert</h2>
-        <p>Benzyl alcohol is the most widely used antimicrobial preservative in multi-dose protein formulations, and its effect on the dissolved molecule has been studied directly. Preservatives of this class promote partial unfolding, and partial unfolding is what triggers aggregation; in a published comparison the tendency to induce aggregation ran m-cresol &gt; phenol &gt; benzyl alcohol &gt; phenoxyethanol &gt; chlorobutanol. Benzyl alcohol is therefore in the middle of that range rather than at the harmless end. For work where aggregation or an accurate physical characterisation is the point, plain sterile water or a defined buffer may be the better diluent, and whichever is chosen should be recorded alongside the concentration, because the diluent is part of the experimental condition.</p>
+        <p>Benzyl alcohol is the most widely used antimicrobial preservative in multi-dose protein formulations, and its effect on dissolved molecules has been studied directly rather than assumed. Preservatives of this class promote partial unfolding, and partial unfolding is what triggers aggregation. In a published comparison the tendency to induce aggregation ran m-cresol, then phenol, then benzyl alcohol, then phenoxyethanol, then chlorobutanol. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3990441/" target="_blank" rel="noopener nofollow">(Reference: Hutchings et al., 2013)</a></p>
+        <p>Benzyl alcohol therefore sits in the middle of that range rather than at the harmless end. Where aggregation or an accurate physical characterisation is the object of the work, plain sterile water or a defined buffer is a different choice with different properties, and whichever fluid is present forms part of the experimental condition. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/" target="_blank" rel="noopener nofollow">(Reference: Shi &amp; McHugh, 2023)</a></p>
 
-        <h2>How long a reconstituted solution lasts</h2>
-        <p>Much less time than the dry solid, and for chemical reasons rather than microbial ones. The degradation routes that dominate in water are deamidation of asparagine and glutamine side chains, which is fastest at neutral and alkaline pH and slowest around pH 3 to 6; hydrolysis of the backbone, which is acid-catalysed and particularly noticeable at Asp-Gly and Asp-Pro junctions; and oxidation of methionine, histidine, lysine, tryptophan and tyrosine. All of them accelerate with temperature. A preservative does nothing about any of this, which is why the shelf life of a peptide in solution is short compared with the same peptide as a lyophilizate.</p>
-        <p>The practical consequences are the ones manufacturers publish: divide the solution into aliquots rather than returning to one vial repeatedly, keep those aliquots frozen below about minus fifteen degrees Celsius, avoid repeated freeze-thaw cycles, and treat long-term storage in solution as something to design around rather than rely on, especially for sequences containing asparagine, glutamine, cysteine, methionine or tryptophan.</p>
+        <h2>It counts as an excipient</h2>
+        <p>Benzyl alcohol is an inactive ingredient that supports a formulation without being the active compound, which is the definition of an <a href="article/excipients-in-peptides/">excipient</a>. Reading it that way is useful, because it places the preservative in the same category as the mannitol or trehalose that might be in a lyophilized vial: present on purpose, doing a job, and not chemically silent.</p>
 
-        <h2>Handling the dry vial before anything is added</h2>
-        <p>Lyophilized peptides are hygroscopic, so the order of steps matters. A vial taken from cold storage should reach ambient temperature in a desiccator before it is opened, so moisture does not condense onto the cake, and should then be weighed out quickly and resealed tightly. Anything introduced into the vial after that, solvent included, becomes part of the system, which is the whole argument for a preserved diluent when a container will be entered more than once.</p>
-
-
-        <h2>Handling and storage</h2>
-        <p>Like the peptides it dissolves, a reconstituted solution is generally kept cool and protected from light, with the exact conditions on the product label. Bacteriostatic water itself is stored per its own label. If you are pairing it with a peptide vial, you can confirm that vial is genuine by its <a href="verify/">batch number</a>.</p>
+        <h2>Storing the water itself</h2>
+        <p>The fluid has its own label and its own conditions, which take precedence over any general rule. Benzyl alcohol is volatile enough that a container left open loses preservative over time, so the practical points are the ordinary ones: keep it closed, keep it within its stated conditions, and note the date a container was first opened. <a class="cite" href="https://www.bachem.com/knowledge-center/handling-and-storage-guidelines-for-peptides/" target="_blank" rel="noopener nofollow">(Reference: Bachem, handling and storage)</a></p>
 
         <h2>What this article does not cover</h2>
-        <p>This describes a laboratory operation on a research material: dissolving a defined solid in a defined volume to obtain a defined concentration. It is not preparation guidance for administration to humans or animals, and it contains no dosing information of any kind.</p>
+        <p>This describes a fluid and what its label specifies. It is not preparation guidance, it contains no procedure for combining it with anything, and it contains no dosing information of any kind.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. This article describes laboratory use only.</p>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
       `,
       faq: [
-        { q: 'What is bacteriostatic water?', a: 'Bacteriostatic water is sterile water with a small amount of benzyl alcohol (around 0.9 percent) added as a preservative. The preservative slows bacterial growth, which is what makes it suitable for a vial that will be entered more than once.' },
-        { q: 'What is the difference between bacteriostatic and sterile water?', a: 'Sterile water for injection has nothing added and is meant for single use. Bacteriostatic water contains benzyl alcohol as a preservative, so it can tolerate being drawn from multiple times, which suits a multi-dose research vial.' },
-        { q: 'Why is bacteriostatic water used to reconstitute peptides?', a: 'It dissolves most peptides cleanly and its preservative supports multiple draws from a single vial over the days or weeks a peptide might be studied. That reusability is the main practical reason labs choose it.' },
-        { q: 'How is a lyophilized peptide reconstituted in the laboratory?', a: 'A known mass of the freeze-dried solid is dissolved in a measured volume of solvent to give a solution of known concentration: 10 mg in 2.00 mL is 5 mg/mL. Two corrections matter for accurate work: the cake occupies volume of its own, so precise solutions are made up to a mark rather than by adding a nominal volume; and the labelled mass is solid, not net peptide, since the material carries a counterion and residual water. This describes a laboratory operation on a research material only.' },
-        { q: 'How long is a reconstituted peptide solution stable?', a: 'Much less time than the dry solid. In water, deamidation of asparagine and glutamine, hydrolysis of the backbone and oxidation of methionine, histidine, lysine, tryptophan and tyrosine all proceed, and all accelerate with temperature. A preservative does not slow any of them. Manufacturers advise dividing solutions into aliquots, keeping them frozen below about minus fifteen degrees Celsius, and avoiding repeated freeze-thaw cycles.' },
-        { q: 'Can plain sterile water be used instead of bacteriostatic water?', a: 'Yes, and sometimes it is preferable. Benzyl alcohol is not inert: preservatives of its class promote partial unfolding and aggregation, with benzyl alcohol falling mid-range in a published comparison. For work where aggregation or physical characterisation is the point, plain sterile water or a defined buffer may be the better diluent. Whichever is used should be recorded, because the diluent is part of the experimental condition.' },
+        {
+          "q": "What is bacteriostatic water?",
+          "a": "Sterile water containing a small amount of benzyl alcohol as a preservative, usually around 0.9 percent. The preservative slows bacterial growth rather than killing everything outright."
+        },
+        {
+          "q": "What is the difference between bacteriostatic and sterile water?",
+          "a": "Sterile water for injection has nothing added and is intended for single use. Bacteriostatic water contains benzyl alcohol, which is why it is supplied in a multiple-dose container while plain sterile water is not."
+        },
+        {
+          "q": "What does nonpyrogenic mean on the label?",
+          "a": "Free of the bacterial fragments that provoke a fever response, principally endotoxin. It is a separate claim from sterility, because endotoxin survives conditions that kill the bacterium that produced it."
+        },
+        {
+          "q": "Why is the pH stated as 5.7?",
+          "a": "Because it matters. Deamidation, the most common degradation route for peptides in water, runs fastest at neutral and alkaline pH and slowest in roughly the pH 3 to 6 band. The stated value sits inside the slower band."
+        },
+        {
+          "q": "Is benzyl alcohol inert?",
+          "a": "No. Preservatives of its class promote partial unfolding, which is what triggers aggregation. In a published comparison benzyl alcohol fell mid-range among common preservatives, ahead of phenoxyethanol and chlorobutanol and behind phenol and m-cresol."
+        },
+        {
+          "q": "Is benzyl alcohol an excipient?",
+          "a": "Yes. It is an inactive ingredient that supports the formulation without being the active compound, which places it in the same category as bulking agents and stabilisers found in a lyophilized vial."
+        }
       ],
       references: [
         { text: 'Bacteriostatic Water for Injection, USP: product labeling. DailyMed, U.S. National Library of Medicine.', url: 'https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8' },
@@ -3350,6 +3363,353 @@
       ],
       cta: 'Explore our <a href="catalog/?q=mots-c">MOTS-c research peptide</a> and related mitochondrial peptides for laboratory study.',
       related: ['amino-acids-peptides-proteins-difference', 'peptide-synthesis', 'what-is-nad-plus'],
+    },
+
+    {
+      slug: 'verifying-a-peptide-supplier-checklist',
+      title: 'Verifying a Peptide Supplier: A Checklist',
+      metaTitle: 'Verifying a Peptide Supplier: What to Ask Before You Pay',
+      metaDescription: 'Seven checks that can be made before paying: batch number, named method, analysis date, who signed, the chromatogram, net content, and what the label omits.',
+      focusKeyword: 'verify a peptide supplier',
+      category: 'Peptide Research',
+      tags: ["verification","certificate of analysis","quality","research peptides"],
+      date: 'Sep 28, 2026', dateISO: '2026-09-28',
+      excerpt: 'Seven things you can check before paying, and what each one settles.',
+      imageAlt: 'Seven checks that can be made before paying, and what each one settles.',
+      body: `
+        <p class="lead">Every check below can be made before money changes hands, from documents a supplier either has or does not. None of them requires trusting anyone, and none of them is about a particular company: they are properties of a document, and a document either carries them or it does not.</p>
+
+        <h2>1. Does the batch number on the paper match the vial?</h2>
+        <p>This is the first check because everything else depends on it. A certificate describes one batch. If the number printed on the label does not match the number on the document, the document describes someone else's material, however good the figures on it look.</p>
+        <p>Ask for the certificate for the specific batch you will receive, not a sample certificate. A supplier who can only produce a generic document is telling you the testing is not batch-specific. Our note on <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers the fields in detail.</p>
+
+        <h2>2. Is a method named next to every number?</h2>
+        <p>"Purity: 99%" is a statement. "Purity: 99.2% by RP-HPLC, C18, 0.1% TFA, gradient 20-60% acetonitrile over 30 min, detection at 214 nm" is a result, because someone else could repeat it.</p>
+        <p>The conditions are not decoration. The column, the gradient and the detection wavelength all change the number that comes out, and the same batch analysed two ways can return two honest figures. Guidance on validating analytical procedures exists precisely because a result is inseparable from the procedure that produced it. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Reference: Swartz &amp; Krull, 2012)</a> Our note on <a href="article/peptide-purity-hplc-explained/">what a purity figure measures</a> covers why.</p>
+
+        <h2>3. Is there an analysis date?</h2>
+        <p>A result without a date is not tied to a moment in that batch's life. Peptides degrade by known routes, and all of them proceed with time and temperature, so a measurement made eighteen months ago describes the material as it was then. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a></p>
+        <p>The date also lets you notice something that a missing date hides: whether the document was produced for this batch or reused.</p>
+
+        <h2>4. Who signed it, and do they sell the material?</h2>
+        <p>A certificate is a claim made by whoever issued it. Independent testing matters because it separates the party making the claim from the party being paid, and laboratories working to recognised competence standards are assessed against defined criteria for competence and impartiality.</p>
+        <p>What the number says is one question. Who produced it, and under which method, is the other. A document with no laboratory named and no signature leaves nobody answerable for it.</p>
+
+        <h2>5. Does it report identity as well as purity?</h2>
+        <p>These answer different questions and a document with only one is half a document. Purity from <a href="article/high-performance-liquid-chromatography-hplc/">chromatography</a> reports what share of the detected material is one main component. It has no opinion about what that component is.</p>
+        <p>Identity comes from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, comparing a measured mass against the mass calculated from the intended sequence. A sample can be 99 percent pure and be 99 percent of the wrong molecule, and a chromatogram alone would look identical.</p>
+
+        <h2>6. Does it separate purity from net content?</h2>
+        <p>Chromatographic purity asks about the peaks: of everything the method detected, what share was the target? Net peptide content asks about the powder: of what you weighed, how much is peptide and how much is counterion and water?</p>
+        <p>The gap is real. Material purified by reversed-phase chromatography is isolated as a salt, so part of the powder is counterion and part is absorbed water. A batch can be 99 percent pure by area and well under 99 percent peptide by mass, with no contradiction between the figures. A certificate reporting only one is incomplete, which is a different thing from wrong. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest of the mass.</p>
+
+        <h2>7. If the trace is included, does it hold up?</h2>
+        <p>One tall symmetrical peak on a flat baseline is the picture you want. Small peaks close to the main one are common in synthesis and usually correspond to closely related species such as deletion sequences, which differ from the target by a single residue. A shoulder means the method barely resolved something.</p>
+        <p>An image too low in resolution to read the axes is not evidence. Neither is a chromatogram with no scale on it.</p>
+
+        <h2>What the absence of a line means</h2>
+        <p>Some fields are optional for good reason. Endotoxin content matters for work with cultured cells and is irrelevant to a chemistry experiment, so its absence from a document is not automatically a gap. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Reference: Raetz &amp; Whitfield, 2002)</a></p>
+        <p>The honest description of an unmeasured parameter is that it was not measured, not that the material is free of it. A supplier who says so plainly is easier to trust than one whose document implies a measurement that never happened.</p>
+
+        <h2>A specification is not a result</h2>
+        <p>Worth stating separately because the two look alike on a page. "≥99% by HPLC" states the threshold a batch was required to meet. "99.2%, measured 14 March, batch CDX-1017" is a measurement of one batch on one day.</p>
+        <p>Both have their place. Only one tells you about the material you are buying, and the batch number is the thread that connects a claim to a measurement you can <a href="verify/">check</a>.</p>
+
+        <h2>What this checklist is not</h2>
+        <p>It is not a judgement about any supplier. Every item describes a property of a document, and any supplier can satisfy all seven by producing better documents. That is the point: the checks are about what can be verified, not about who is selling.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What should I ask a peptide supplier before buying?",
+          "a": "Whether the batch number on the certificate matches the vial, whether a method and a date sit next to every number, who signed the document, whether it reports identity as well as purity, and whether net peptide content is separated from chromatographic purity."
+        },
+        {
+          "q": "Why does the batch number matter most?",
+          "a": "Because a certificate describes one batch. If the number on the document does not match the number on the label, the document describes different material, however good its figures look."
+        },
+        {
+          "q": "What turns a purity figure into a result instead of a claim?",
+          "a": "A named method beside it. The column, the gradient and the detection wavelength all change the number, so a percentage quoted without its conditions cannot be repeated by anyone else."
+        },
+        {
+          "q": "Why is purity alone not enough?",
+          "a": "Purity reports what share of the detected material is one main component, without identifying it. A sample could be 99 percent pure and be 99 percent of the wrong molecule. Identity comes from a mass measurement."
+        },
+        {
+          "q": "What is the difference between purity and net peptide content?",
+          "a": "Purity is the target peak as a share of total detected peak area. Net content is the share of the weighed powder that is peptide, once counterion and absorbed water are set aside. A batch can be 99 percent pure by area and well below that by mass."
+        },
+        {
+          "q": "Is a missing endotoxin line a red flag?",
+          "a": "Not necessarily. Endotoxin matters for work with cultured cells and is irrelevant to many chemistry experiments. What matters is that an unmeasured parameter is described as unmeasured, not implied to be absent."
+        }
+      ],
+      references: [
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Raetz, C.R.H., &amp; Whitfield, C. (2002). Lipopolysaccharide endotoxins. Annual Review of Biochemistry, 71, 635-700.",
+          "url": "https://doi.org/10.1146/annurev.biochem.71.110601.135414"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        }
+      ],
+      cta: 'Ask for the certificate of any batch before you order, or <a href="verify/">check a batch number</a> against its paperwork.',
+      related: ["how-to-read-a-certificate-of-analysis","peptide-purity-hplc-explained","mass-spectrometry-peptide-research"],
+    },
+
+    {
+      slug: 'certificate-of-analysis-glossary',
+      title: 'Certificate of Analysis: A Glossary of Terms',
+      metaTitle: 'Certificate of Analysis Glossary: What Each Term Means',
+      metaDescription: 'Plain definitions for the terms on a peptide certificate: RP-HPLC, ESI-MS, net peptide content, TFA, LAL, specification, area normalization, and more.',
+      focusKeyword: 'certificate of analysis terms',
+      category: 'Peptide Research',
+      tags: ["certificate of analysis","glossary","analytical chemistry","quality"],
+      date: 'Sep 28, 2026', dateISO: '2026-09-28',
+      excerpt: 'The abbreviations on a certificate, defined one at a time.',
+      imageAlt: 'The abbreviations on a certificate of analysis, defined one at a time.',
+      body: `
+        <p class="lead">A certificate is a short document full of abbreviations, and most of them are names of methods, not jargon. Once you know which question each one answers, the page reads quickly. These are grouped by what they tell you, not alphabetically, because that is how you read a certificate.</p>
+
+        <h2>Terms about what the material is</h2>
+
+        <h3>ESI-MS</h3>
+        <p>Electrospray ionisation mass spectrometry. The sample is sprayed from a solution through a charged needle, which produces ions without breaking the molecule, and the instrument measures their mass-to-charge ratio. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Reference: Fenn et al., 1989)</a> Peptides usually appear carrying several charges at once, so one compound gives a family of related signals that the software converts back to a single mass.</p>
+
+        <h3>MALDI-TOF</h3>
+        <p>Matrix-assisted laser desorption ionisation, with a time-of-flight analyser. An alternative way of making ions: the sample is mixed with a matrix that absorbs laser light, and the flight time to the detector gives the mass. <a class="cite" href="https://doi.org/10.1021/ac00171a028" target="_blank" rel="noopener nofollow">(Reference: Karas &amp; Hillenkamp, 1988)</a> It tends to produce singly charged ions, which makes the spectrum simpler to read.</p>
+
+        <h3>Observed mass and theoretical mass</h3>
+        <p>The theoretical mass is calculated from the intended sequence, atom by atom. The observed mass is what the instrument measured. An identity check is the comparison of the two, and the certificate should show both, not a bare "conforms". Our note on <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> explains why the two figures rarely match to the last decimal.</p>
+
+        <h3>Monoisotopic and average mass</h3>
+        <p>Two legitimate ways of calculating the same molecule's mass. Monoisotopic uses the lightest isotope of each element; average uses the natural isotopic mix. They differ by a few units on a peptide, which is enough to look like an error if you compare a monoisotopic measurement against an average calculation.</p>
+
+        <h2>Terms about how much of it there is</h2>
+
+        <h3>RP-HPLC</h3>
+        <p>Reversed-phase high performance liquid chromatography. The separation behind almost every purity figure: the sample travels through a column packed with a nonpolar stationary phase, and components leave at different times according to how strongly they stick. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Reference: Dong, 2006)</a> "Reversed-phase" is historical: the stationary phase is the nonpolar one, the reverse of the earlier arrangement.</p>
+
+        <h3>C18</h3>
+        <p>The most common stationary phase, an eighteen-carbon chain bonded to silica particles. Shorter chains such as C8 and C4 retain less strongly and are often chosen for larger peptides.</p>
+
+        <h3>Gradient</h3>
+        <p>The changing solvent mixture pumped through the column during a run, typically increasing acetonitrile over a set time. The gradient shape changes how well two close peaks separate, which is why it belongs next to a purity figure.</p>
+
+        <h3>Area normalization</h3>
+        <p>How a purity percentage is usually calculated: the target peak's area divided by the total area of all detected peaks. The phrase matters because it defines what the number does not include. Anything the method did not detect is absent from both the numerator and the denominator, so salts and water do not appear at all. Our note on <a href="article/peptide-purity-hplc-explained/">purity by HPLC</a> covers this in detail.</p>
+
+        <h3>Detection wavelength</h3>
+        <p>Usually 214 nm or 220 nm for peptides, where the peptide bond itself absorbs, so every peptide in the sample is visible. At 280 nm only aromatic residues absorb, so a peptide without tryptophan, tyrosine or phenylalanine would barely register.</p>
+
+        <h3>Retention time</h3>
+        <p>How long a component takes to leave the column, given in minutes. It is a property of the method, not of the molecule, so it only means something alongside the conditions that produced it.</p>
+
+        <h2>Terms about mass versus purity</h2>
+
+        <h3>Net peptide content</h3>
+        <p>The share of the weighed powder that is peptide, as opposed to counterion, absorbed water and any excipient. Distinct from purity, which describes the detected peaks. A batch can be 99 percent pure by area and well below that by mass, without either figure being wrong.</p>
+
+        <h3>TFA</h3>
+        <p>Trifluoroacetic acid, the additive used in most reversed-phase purifications. It leaves the peptide as a TFA salt, so part of the powder's weight is counterion. TFA content is sometimes reported for that reason. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest.</p>
+
+        <h3>Counterion</h3>
+        <p>The ion paired with the charged groups on the peptide. Usually trifluoroacetate, sometimes acetate or chloride. It is a real part of the solid's mass and is why net content and purity diverge.</p>
+
+        <h3>Loss on drying and water content</h3>
+        <p>Two ways of measuring the water in a solid. Loss on drying weighs the sample before and after heating; Karl Fischer titration measures water specifically by a chemical reaction. Lyophilised material is <a href="article/lyophilization-freeze-drying/">hygroscopic</a> and picks up water from the air, so this figure moves with handling.</p>
+
+        <h2>Terms about contamination</h2>
+
+        <h3>LAL and EU/mg</h3>
+        <p>The Limulus amebocyte lysate assay, which detects bacterial endotoxin, reported in endotoxin units per milligram. It matters for work with cultured cells, where endotoxin activates immune signalling at very low concentrations, and is irrelevant to many chemistry experiments. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Reference: Raetz &amp; Whitfield, 2002)</a> Our note on <a href="article/endotoxins-in-research-peptides/">endotoxins</a> explains why it is not removed by ordinary sterilisation.</p>
+
+        <h3>Residual solvents</h3>
+        <p>Traces of the solvents used in synthesis and purification, most often acetonitrile. Reported in parts per million when measured at all.</p>
+
+        <h3>Deletion sequence</h3>
+        <p>A peptide missing one residue, produced when a coupling step does not go to completion during <a href="article/peptide-synthesis/">synthesis</a>. It is the commonest reason for a small peak sitting close to the main one, because it differs from the target by a single amino acid.</p>
+
+        <h2>Terms about the document itself</h2>
+
+        <h3>Specification</h3>
+        <p>The threshold a batch was required to meet, written as "≥98%" or "not more than 1%". A specification is a rule, not a measurement. A certificate that lists only specifications tells you what was required, not what was found.</p>
+
+        <h3>Result</h3>
+        <p>The measured value for this batch on this day: "99.2%". This is the figure that describes your material.</p>
+
+        <h3>Batch or lot number</h3>
+        <p>The identifier linking the document to a physical quantity of material. Without it, the certificate cannot be attached to anything you can hold, and it is what you use to <a href="verify/">look a batch up</a>.</p>
+
+        <h3>Method validation</h3>
+        <p>The evidence that an analytical procedure does what it claims, assessed through specificity, accuracy, precision and other defined characteristics. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Reference: Swartz &amp; Krull, 2012)</a> It is why "by RP-HPLC" carries meaning instead of being decoration.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What does RP-HPLC mean on a certificate of analysis?",
+          "a": "Reversed-phase high performance liquid chromatography, the separation technique behind almost every purity figure. The sample passes through a column with a nonpolar stationary phase and its components leave at different times according to how strongly they are retained."
+        },
+        {
+          "q": "What is net peptide content?",
+          "a": "The share of the weighed powder that is peptide, once counterion, absorbed water and excipient are set aside. It answers a different question from purity, which describes the detected peaks and not the mass."
+        },
+        {
+          "q": "Why does TFA appear on a peptide certificate?",
+          "a": "Trifluoroacetic acid is the usual additive in reversed-phase purification, so the peptide is isolated as a TFA salt and part of the powder weight is trifluoroacetate counterion."
+        },
+        {
+          "q": "What is the difference between a specification and a result?",
+          "a": "A specification is the threshold a batch had to meet, such as ≥98%. A result is the value measured for that batch on a given day. Only the result describes the material you are buying."
+        },
+        {
+          "q": "What does EU/mg mean?",
+          "a": "Endotoxin units per milligram, from the LAL assay. It quantifies bacterial endotoxin, which matters for work with cultured cells and is often irrelevant to chemistry experiments."
+        },
+        {
+          "q": "What is a deletion sequence?",
+          "a": "A peptide missing one residue because a coupling step during synthesis did not finish. Differing from the target by a single amino acid, it typically shows up as a small peak close to the main one."
+        }
+      ],
+      references: [
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Karas, M., &amp; Hillenkamp, F. (1988). Laser desorption ionization of proteins with molecular masses exceeding 10,000 daltons. Analytical Chemistry, 60(20), 2299-2301.",
+          "url": "https://doi.org/10.1021/ac00171a028"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Raetz, C.R.H., &amp; Whitfield, C. (2002). Lipopolysaccharide endotoxins. Annual Review of Biochemistry, 71, 635-700.",
+          "url": "https://doi.org/10.1146/annurev.biochem.71.110601.135414"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        }
+      ],
+      cta: 'Every batch we ship carries a certificate with these fields filled in. <a href="verify/">Look one up</a>.',
+      related: ["how-to-read-a-certificate-of-analysis","peptide-purity-hplc-explained","excipients-in-peptides"],
+    },
+
+    {
+      slug: 'documents-that-accompany-a-peptide-batch',
+      title: 'The Documents That Accompany a Batch',
+      metaTitle: 'What Documents Come With a Peptide Batch, and What Each Proves',
+      metaDescription: 'A certificate, a chromatogram, a mass spectrum, a safety data sheet and a label answer different questions. What each proves and what it leaves open.',
+      focusKeyword: 'peptide batch documentation',
+      category: 'Peptide Research',
+      tags: ["documentation","certificate of analysis","traceability","quality"],
+      date: 'Sep 28, 2026', dateISO: '2026-09-28',
+      excerpt: 'Five documents, five different questions. What each one settles and what it leaves open.',
+      imageAlt: 'The documents that accompany a peptide batch and what each one proves.',
+      body: `
+        <p class="lead">A batch of material can arrive with several documents, and they are not versions of one another. Each answers a question the others do not, and knowing which is which saves you from reading a document as evidence of something it was never about.</p>
+
+        <h2>The certificate of analysis</h2>
+        <p>The summary document. It names the batch, lists what was measured, gives the result for each parameter and the method that produced it, and carries a date and a signature.</p>
+        <p>It is the document people mean when they say a peptide "has a COA", and the one most often produced on request. That makes it worth being precise about its limits.</p>
+        <p>It establishes what someone found when they tested this batch. It does not establish that the material in front of you is that batch, which is what the number on the label is for, and it says nothing about parameters it does not list. The fields are covered one by one in our note on <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> and the abbreviations in the <a href="article/certificate-of-analysis-glossary/">glossary</a>.</p>
+
+        <h2>The chromatogram</h2>
+        <p>The raw trace behind the purity figure: detector response against time, with the target as the large peak and everything else the method detected as smaller ones.</p>
+        <p>A certificate can report 99.2 percent without showing you where the other 0.8 percent sits. The trace shows it. A shoulder on the main peak means the method barely separated something; several small peaks spread across the run are a different picture from one peak sitting right beside the target, which in synthetic peptides often corresponds to a <a href="article/peptide-synthesis/">deletion sequence</a> differing by a single residue.</p>
+        <p>The axes are part of the evidence. A trace with no scale on the time axis cannot be compared against anything, and an image too low in resolution to read the labels is a picture of a chromatogram, not a chromatogram.</p>
+        <p>What it cannot tell you is what any of those peaks are. Chromatography sorts by how strongly things stick to a column, not by identity. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Reference: Dong, 2006)</a> It also cannot show you anything the detector did not see: at 214 nm a peptide bond absorbs, but salts and water pass through invisibly.</p>
+
+        <h2>The mass spectrum</h2>
+        <p>The identity evidence. The instrument measures mass-to-charge ratios, and the measured mass is compared against the mass calculated from the intended sequence. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Reference: Fenn et al., 1989)</a></p>
+        <p>It is the only one of these documents that addresses what the molecule is. A chromatogram showing one clean peak is compatible with a pure sample of entirely the wrong compound, and only a mass measurement closes that gap. Our note on <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> covers how the comparison works.</p>
+        <p>Its blind spot is the mirror image: a mass spectrum can confirm the mass is right while saying little about how much else is present. Two molecules of identical mass are indistinguishable by mass alone, which is why identity and purity are read together.</p>
+
+        <h2>The safety data sheet</h2>
+        <p>A hazard communication document, standardised into sixteen sections by the Globally Harmonized System, covering identification, hazards, composition, first aid, handling, storage, toxicology and disposal in a fixed order. <a class="cite" href="https://doi.org/10.18356/9789210019071c006" target="_blank" rel="noopener nofollow">(Reference: UNECE, 2023)</a> The order is fixed so that anyone can find the same information in the same place, whoever wrote the sheet.</p>
+        <p>It is often mistaken for a quality document. It is not. An SDS describes a substance as a class, not a batch, so two batches of very different purity carry identical sheets. It tells you how to handle the material safely and nothing about what is in the vial.</p>
+
+        <h2>The label</h2>
+        <p>The shortest document and the one that ties the others to a physical object. Compound name, batch number, quantity, storage condition, and a statement of what the material is for.</p>
+        <p>The batch number is the whole point. It is the thread connecting a certificate to something you can hold, and without it the paperwork describes material in the abstract. Storage conditions belong here for the same reason: a peptide degrades by known routes that proceed with time and temperature, so a document that never reaches the person storing the vial is not much use. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the reasoning.</p>
+
+        <h2>What no document establishes</h2>
+        <p>None of these proves the material is the same today as when it was tested. A certificate is dated because a result belongs to a moment, and the gap between that date and the vial in your hand is filled by storage and shipping, not by paperwork.</p>
+        <p>Nor does any of them say anything about a second vial. Testing is done on a batch. A document for batch CDX-1017 tells you nothing about CDX-1018, which is why the batch number is checked before anything else on the page.</p>
+
+        <h2>Which ones you can reasonably ask for</h2>
+        <p>A batch-specific certificate and a label carrying the batch number are the minimum, and any supplier can produce both. The safety data sheet is standard and costs nothing to send, since it belongs to the compound and not to the batch.</p>
+        <p>The raw chromatogram and mass spectrum are a larger ask, because they come from the laboratory's own instrument files, not from a template. A supplier who has them will send them. One who only ever has a summary is telling you something about where the summary came from.</p>
+
+        <h2>How they fit together</h2>
+        <p>The label says which batch. The certificate says what was found in that batch and by what method. The chromatogram shows the purity result instead of asserting it. The mass spectrum says the main component is the intended molecule. The safety data sheet describes the compound class, whatever the batch.</p>
+        <p>A supplier who provides all five has not proven their material is good. They have made it possible for you to check, which is a different thing and the only one a document can do.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What documents should come with a research peptide?",
+          "a": "A batch-specific certificate of analysis, ideally the chromatogram and mass spectrum behind it, a safety data sheet, and a label carrying the batch number and storage condition."
+        },
+        {
+          "q": "Is a safety data sheet a quality document?",
+          "a": "No. An SDS describes a substance as a class and covers handling, storage, first aid and disposal. Two batches of very different purity carry identical sheets, so it says nothing about what is in a particular vial."
+        },
+        {
+          "q": "Why ask for the chromatogram if the certificate already gives a purity figure?",
+          "a": "The figure is a single number; the trace shows where the remainder sits. A shoulder on the main peak, or one small peak beside it, is a different picture from impurities spread across the run."
+        },
+        {
+          "q": "What does a mass spectrum add?",
+          "a": "Identity. Chromatography separates by retention, not by what a compound is, so a clean single peak is compatible with a pure sample of the wrong molecule. Comparing measured mass against the mass calculated from the sequence closes that gap."
+        },
+        {
+          "q": "Does a certificate prove the material is still at that purity?",
+          "a": "No. A result belongs to the date it was measured. What happened between that date and the vial in your hand is a matter of storage and shipping, which no document covers."
+        },
+        {
+          "q": "Why does the batch number matter more than the figures?",
+          "a": "Because it is what ties the paperwork to a physical object. A document for one batch says nothing about another, so if the number on the label does not match, the figures describe different material."
+        }
+      ],
+      references: [
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "UNECE (2023). Hazard communication: Safety Data Sheets (SDS). In Globally Harmonized System of Classification and Labelling of Chemicals (GHS). United Nations.",
+          "url": "https://doi.org/10.18356/9789210019071c006"
+        }
+      ],
+      cta: 'Every batch we ship carries its own certificate. <a href="verify/">Check a batch number</a> before you order.',
+      related: ["how-to-read-a-certificate-of-analysis","certificate-of-analysis-glossary","verifying-a-peptide-supplier-checklist"],
     },
   ];
 

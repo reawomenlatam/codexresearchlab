@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Peso molecular de un péptido: dos masas, ambas correctas</title>
+  <meta name="description" content="Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya…">
+  <link rel="canonical" href="https://codexresearchlab.com/es/article/molecular-weight-of-peptides/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/article/molecular-weight-of-peptides/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/article/molecular-weight-of-peptides/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/article/molecular-weight-of-peptides/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Peso molecular de un péptido: dos masas, ambas correctas">
+  <meta property="og:description" content="Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya…">
+  <meta property="og:url" content="https://codexresearchlab.com/es/article/molecular-weight-of-peptides/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/blog/molecular-weight-of-peptides.jpg">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peso molecular de un péptido: dos masas, ambas correctas">
+  <meta name="twitter:description" content="Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya…">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/blog/molecular-weight-of-peptides.jpg">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Peso molecular de un péptido: dos masas, ambas correctas","description":"Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya…","image":["https://codexresearchlab.com/assets/blog/molecular-weight-of-peptides.jpg"],"inLanguage":"es","datePublished":"2026-08-03","dateModified":"2026-08-03","author":{"@type":"Organization","name":"Codex Research"},"publisher":{"@type":"Organization","name":"Codex Research","logo":{"@type":"ImageObject","url":"https://codexresearchlab.com/assets/logo-horizontal-dark.png"}},"mainEntityOfPage":"https://codexresearchlab.com/es/article/molecular-weight-of-peptides/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://codexresearchlab.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://codexresearchlab.com/es/blog/"},{"@type":"ListItem","position":3,"name":"Peso molecular de un péptido: masa promedio y monoisotópica","item":"https://codexresearchlab.com/es/article/molecular-weight-of-peptides/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se calcula el peso molecular de un péptido?","acceptedAnswer":{"@type":"Answer","text":"Sumando las masas de residuo de la secuencia y añadiendo un agua por los dos extremos que nunca se unieron. Las masas de residuo son unos dieciocho menores que las de los aminoácidos libres correspondientes, porque la condensación retira un agua en cada enlace."}},{"@type":"Question","name":"¿Qué diferencia hay entre masa promedio y monoisotópica?","acceptedAnswer":{"@type":"Answer","text":"La promedio usa los pesos atómicos estándar, que son promedios sobre las mezclas isotópicas naturales, y es la cifra para pesar material. La monoisotópica usa el isótopo más ligero y abundante de cada elemento y es la que reporta un espectrómetro para un pico resuelto."}},{"@type":"Question","name":"¿Por qué las dos masas se separan al crecer el péptido?","acceptedAnswer":{"@type":"Answer","text":"Una molécula mayor tiene más átomos que pueden llevar un isótopo pesado, así que el promedio se aleja del valor todo-ligero. En un péptido corto la diferencia es una fracción de dalton; por encima de unos miles de daltons supera uno."}},{"@type":"Question","name":"¿Por qué una masa observada puede diferir de la especificación?","acceptedAnswer":{"@type":"Answer","text":"Normalmente por una de tres razones ordinarias: una medición monoisotópica comparada contra un cálculo promedio, un extremo carboxilo amidado en vez de ácido libre, que pesa un dalton menos, o una forma salina cuyo contraión no está en la masa calculada."}},{"@type":"Question","name":"¿Un espectrómetro mide la masa directamente?","acceptedAnswer":{"@type":"Answer","text":"No. Un instrumento de electrospray reporta relación masa-carga, y un péptido recoge varios protones, produciendo una serie de picos a distintos estados de carga que el software combina en una masa."}},{"@type":"Question","name":"¿El peso molecular dice cuánto péptido hay en el vial?","acceptedAnswer":{"@type":"Answer","text":"No. Describe una molécula. El contraión, el agua absorbida y cualquier excipiente forman parte del polvo pesado, y por eso el contenido neto de péptido es una cifra aparte del peso molecular y de la pureza cromatográfica."}}]}</script>
+</head>
+<body data-nav="blog" data-slug="molecular-weight-of-peptides">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="articleMain">
+    <article>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/es/">Inicio</a> <span>/</span>
+          <a href="es/blog/">Blog</a> <span>/</span>
+          <span>Peso molecular de un péptido: masa promedio y monoisotópica</span>
+        </nav>
+        <header class="article-head">
+          <span class="blog-tag">Investigación con péptidos · 03 ago 2026</span>
+          <h1>Peso molecular de un péptido: masa promedio y monoisotópica</h1>
+        </header>
+      </div>
+      <div class="container article-cover-wrap">
+        <figure class="article-figure">
+          <img src="assets/blog/molecular-weight-of-peptides.jpg" alt="Dos masas para una molécula, y por qué una observada puede quedar al lado de la esperada." width="1200" height="630">
+          <figcaption>Dos masas para una molécula, y por qué una observada puede quedar al lado de la esperada.</figcaption>
+        </figure>
+      </div>
+      <div class="container article-layout">
+        <div class="article-body">
+          
+        <p class="lead">El peso molecular de una especificación es la cifra contra la que se contrasta una medición de identidad. Parece un valor único y fijo y no lo es: la misma molécula tiene al menos dos masas legítimas, y la forma que hay en el vial puede diferir de la forma del cálculo.</p>
+
+        <h2>Calcularlo desde la secuencia</h2>
+        <p>Un péptido se construye uniendo residuos y perdiendo una molécula de agua en cada enlace. La masa se sigue de ahí: se suman las masas de residuo de la secuencia y se añade la masa de un agua por los dos extremos que nunca se unieron. No hace falta nada más, y por eso una secuencia por sí sola determina una masa.</p>
+        <p>Las masas de residuo están tabuladas, y no son las masas de los aminoácidos libres. Un aminoácido libre pesa unos dieciocho más, porque conserva el agua que la condensación retira. Confundir los dos es el error aritmético más común de este cálculo. Nuestra nota sobre <a href="es/article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre la distinción.</p>
+
+        <h2>De dónde salen las masas de residuo</h2>
+        <p>La masa de residuo tabulada de cada aminoácido es la del aminoácido libre menos un agua, porque eso es lo que la condensación deja en una cadena. La glicina aporta unos 57, la alanina unos 71, el triptófano unos 186. El rango entre los veinte residuos estándar va de unos 57 a unos 186, y por eso secuencias de la misma longitud pueden diferir bastante en masa.</p>
+        <p>De ahí salen dos consecuencias para quien lee un espectro. La diferencia entre fragmentos consecutivos en una medición en tándem equivale al residuo perdido, que es como se lee una secuencia a partir de un espectro. Y como la leucina y la isoleucina comparten masa de residuo exactamente, una medición de masa no las separa.</p>
+
+        <h2>Dos masas, las dos correctas</h2>
+        <p>Los elementos existen como mezclas de isótopos, y los pesos atómicos estándar son promedios sobre esas mezclas. <a class="cite" href="https://doi.org/10.1351/pac200678112051" target="_blank" rel="noopener nofollow">(Referencia: Wieser, 2006)</a> Eso da dos maneras de sumar una fórmula.</p>
+        <ul>
+          <li><b>La masa promedio</b> usa esos valores ponderados. Es la cifra a citar cuando se pesa material, porque un miligramo de polvo contiene la mezcla isotópica natural.</li>
+          <li><b>La masa monoisotópica</b> usa el isótopo más ligero y abundante de cada elemento: carbono-12, hidrógeno-1, nitrógeno-14, oxígeno-16. Es la cifra que reporta un espectrómetro para un pico resuelto, porque el instrumento separa los isótopos en vez de promediarlos.</li>
+        </ul>
+        <p>Para un péptido corto las dos difieren en una fracción de dalton. La brecha se abre con el tamaño, porque una molécula mayor tiene más átomos de carbono capaces de llevar un isótopo pesado, y por encima de unos pocos miles de daltons supera un dalton. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Referencia: Senko et al., 1995)</a></p>
+
+        <h2>Las modificaciones cambian el número</h2>
+        <p>Cualquier cosa unida a la cadena suma su propia masa. Un ácido graso en un péptido acilado aporta un incremento grande; la acetilación del extremo amino añade unos 42; formar un disulfuro retira dos hidrógenos. La ciclación retira un agua, unos 18, porque cerrar el anillo es otra condensación.</p>
+        <p>Cada una es lo bastante grande como para verse, así que una especificación que nombra una modificación nombra algo que una medición puede confirmar. Significa además que una masa calculada a partir de la secuencia desnuda discrepará de un compuesto modificado, lo que es una fuente común de desajustes aparentes.</p>
+
+        <h2>Por qué una masa observada puede quedar al lado de la esperada</h2>
+        <p>Un valor medido que difiere de la especificación no es automáticamente un problema. Hay varias explicaciones ordinarias que van primero.</p>
+        <ul>
+          <li><b>Los dos criterios.</b> Una medición monoisotópica comparada contra un cálculo promedio diferirá en torno a la brecha descrita arriba.</li>
+          <li><b>El extremo carboxilo.</b> Una cadena terminada en amida pesa aproximadamente un dalton menos que la misma cadena terminada en ácido libre. Son compuestos distintos, y el enlazador usado en la <a href="es/article/peptide-synthesis/">síntesis</a> decide cuál se tiene.</li>
+          <li><b>La forma salina.</b> Los péptidos se aíslan normalmente con un contraión de la purificación. La masa calculada del péptido libre no lo incluye.</li>
+        </ul>
+        <p>Una especificación que declara qué criterio usa y qué forma describe elimina las tres ambigüedades de una vez.</p>
+
+        <h2>Masa y relación masa-carga son números distintos</h2>
+        <p>Un instrumento de electrospray no reporta masa. Reporta relación masa-carga, y un péptido en esa fuente recoge varios protones, así que una molécula produce una serie de picos a distintos estados de carga. El software combina esa serie en una masa única.</p>
+        <p>La serie es la razón de que un espectro con varios picos igualmente espaciados sea normalmente un compuesto y no varios. El detalle importa al leer un espectro crudo en un certificado en vez de la cifra resumida. Nuestra nota sobre <a href="es/article/mass-spectrometry-peptide-research/">espectrometría de masas</a> cubre el lado de la ionización.</p>
+        <p>La resolución decide además cuál de los dos criterios puede reportar un instrumento. Uno que separa los picos isotópicos da un valor monoisotópico; uno que no, da una cifra parecida a la promedio para la envolvente sin resolver. Por eso el mismo lote medido en dos instrumentos puede dar dos números que son ambos honestos.</p>
+
+        <h2>Qué hace el número en un certificado</h2>
+        <p>La identidad en un <a href="es/article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> es una comparación entre una masa calculada y una medida. El cálculo sale de la secuencia pretendida; la medición sale del lote. Que coincidan es evidencia de que el material es la molécula pretendida.</p>
+        <p>Es evidencia y no prueba. Dos secuencias construidas con los mismos residuos en otro orden pesan igual, y un aminoácido D pesa exactamente lo que pesa su contraparte L. La masa estrecha las posibilidades mucho sin cerrarlas, y por eso pureza e identidad se reportan juntas y por eso un lote se puede atar a su documentación por <a href="es/verify/">número de lote</a>.</p>
+
+        <h2>El peso no es el contenido</h2>
+        <p>Una distinción más, porque provoca confusión real. El peso molecular describe una molécula. No dice cuánto del polvo de un vial es esa molécula. El contraión, el agua absorbida y cualquier <a href="es/article/excipients-in-peptides/">excipiente</a> forman parte de la masa pesada, y por eso el contenido neto de péptido es una cifra aparte tanto del peso molecular como de la <a href="es/article/high-performance-liquid-chromatography-hplc/">pureza cromatográfica</a>.</p>
+      
+          
+          <section class="article-faq"><h2>Preguntas frecuentes</h2><div class="faq-item"><h3>¿Cómo se calcula el peso molecular de un péptido?</h3><p>Sumando las masas de residuo de la secuencia y añadiendo un agua por los dos extremos que nunca se unieron. Las masas de residuo son unos dieciocho menores que las de los aminoácidos libres correspondientes, porque la condensación retira un agua en cada enlace.</p></div><div class="faq-item"><h3>¿Qué diferencia hay entre masa promedio y monoisotópica?</h3><p>La promedio usa los pesos atómicos estándar, que son promedios sobre las mezclas isotópicas naturales, y es la cifra para pesar material. La monoisotópica usa el isótopo más ligero y abundante de cada elemento y es la que reporta un espectrómetro para un pico resuelto.</p></div><div class="faq-item"><h3>¿Por qué las dos masas se separan al crecer el péptido?</h3><p>Una molécula mayor tiene más átomos que pueden llevar un isótopo pesado, así que el promedio se aleja del valor todo-ligero. En un péptido corto la diferencia es una fracción de dalton; por encima de unos miles de daltons supera uno.</p></div><div class="faq-item"><h3>¿Por qué una masa observada puede diferir de la especificación?</h3><p>Normalmente por una de tres razones ordinarias: una medición monoisotópica comparada contra un cálculo promedio, un extremo carboxilo amidado en vez de ácido libre, que pesa un dalton menos, o una forma salina cuyo contraión no está en la masa calculada.</p></div><div class="faq-item"><h3>¿Un espectrómetro mide la masa directamente?</h3><p>No. Un instrumento de electrospray reporta relación masa-carga, y un péptido recoge varios protones, produciendo una serie de picos a distintos estados de carga que el software combina en una masa.</p></div><div class="faq-item"><h3>¿El peso molecular dice cuánto péptido hay en el vial?</h3><p>No. Describe una molécula. El contraión, el agua absorbida y cualquier excipiente forman parte del polvo pesado, y por eso el contenido neto de péptido es una cifra aparte del peso molecular y de la pureza cromatográfica.</p></div></section>
+          <section class="article-refs"><h2>Referencias</h2><ul><li><a href="https://doi.org/10.1351/pac200678112051" target="_blank" rel="noopener nofollow">Wieser, M.E. (2006). Atomic weights of the elements 2005 (IUPAC Technical Report). Pure and Applied Chemistry, 78(11), 2051-2066.</a></li><li><a href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">Senko, M.W., Beu, S.C., &amp;amp; McLafferty, F.W. (1995). Determination of monoisotopic masses and ion populations for large biomolecules from resolved isotopic distributions. Journal of the American Society for Mass Spectrometry, 6(4), 229-233.</a></li><li><a href="https://doi.org/10.1042/bj2190345" target="_blank" rel="noopener nofollow">IUPAC-IUB Joint Commission on Biochemical Nomenclature (1984). Nomenclature and symbolism for amino acids and peptides. Biochemical Journal, 219(2), 345-373.</a></li><li><a href="https://doi.org/10.1038/nature01511" target="_blank" rel="noopener nofollow">Aebersold, R., &amp;amp; Mann, M. (2003). Mass spectrometry-based proteomics. Nature, 422, 198-207.</a></li></ul></section>
+          <section class="article-related"><h2>Artículos relacionados</h2><ul><li><a href="es/article/mass-spectrometry-peptide-research/">La espectrometría de masas en la investigación con péptidos</a></li><li><a href="es/article/cas-numbers-explained/">El número CAS, explicado</a></li><li><a href="es/article/cyclic-vs-linear-peptides/">Péptidos cíclicos y lineales: por qué el anillo lo cambia todo</a></li></ul></section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="es/article/molecular-weight-of-peptides/post.js"></script>
+  <script src="article.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
