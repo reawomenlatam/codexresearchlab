@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Peptide Isoelectric Point (pI) Calculator | Codex Research</title>
+  <meta name="description" content="Paste a peptide sequence and get its theoretical isoelectric point and net charge from pH 1 to 13, using the EMBOSS pKa set. Free, runs in your browser.">
+  <link rel="canonical" href="https://codexresearchlab.com/tools/peptide-isoelectric-point/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/tools/peptide-isoelectric-point/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/tools/peptide-isoelectric-point/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/tools/peptide-isoelectric-point/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Peptide Isoelectric Point (pI) Calculator | Codex Research">
+  <meta property="og:description" content="Paste a peptide sequence and get its theoretical isoelectric point and net charge from pH 1 to 13, using the EMBOSS pKa set. Free, runs in your browser.">
+  <meta property="og:url" content="https://codexresearchlab.com/tools/peptide-isoelectric-point/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peptide Isoelectric Point (pI) Calculator | Codex Research">
+  <meta name="twitter:description" content="Paste a peptide sequence and get its theoretical isoelectric point and net charge from pH 1 to 13, using the EMBOSS pKa set. Free, runs in your browser.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Peptide isoelectric point calculator","url":"https://codexresearchlab.com/tools/peptide-isoelectric-point/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"Paste a peptide sequence and get its theoretical isoelectric point and net charge from pH 1 to 13, using the EMBOSS pKa set. Free, runs in your browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Codex Research","url":"https://codexresearchlab.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the isoelectric point of a peptide?","acceptedAnswer":{"@type":"Answer","text":"The pH at which it carries no net charge, because its positive and negative groups exactly cancel. Above that pH the molecule is net negative and below it net positive."}},{"@type":"Question","name":"Why do different calculators give different pI values?","acceptedAnswer":{"@type":"Answer","text":"Because there is no single agreed table of side-chain pKa values. Published sets disagree by a few tenths of a unit and that propagates, so the same sequence can come out at 9.7 under one set and 9.9 under another."}},{"@type":"Question","name":"Which pKa set does this use?","acceptedAnswer":{"@type":"Answer","text":"The EMBOSS set, named on the page. A pI quoted without naming its pKa set cannot be reproduced or compared against anything."}},{"@type":"Question","name":"Why does solubility drop near the pI?","acceptedAnswer":{"@type":"Answer","text":"Net charge is what keeps molecules apart. At the pI there is none, so the electrostatic repulsion that holds a peptide in solution is at its weakest and aggregation is most likely."}},{"@type":"Question","name":"Does this account for C-terminal amidation?","acceptedAnswer":{"@type":"Answer","text":"No. Amidation removes a negative charge and moves the pI up noticeably, and nothing in a letter sequence shows that it is present. The same applies to N-terminal acetylation."}},{"@type":"Question","name":"Is a theoretical pI the same as a measured one?","acceptedAnswer":{"@type":"Answer","text":"Not exactly. The calculation treats every ionisable group as if free in solution, whereas in a folded structure a charged residue can shift a neighbour pKa substantially. It is an estimate, and a useful one."}}]}</script>
+</head>
+<body data-nav="tools" data-slug="peptide-isoelectric-point">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="toolsMain">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/">Home</a> <span>/</span>
+          <a href="tools/">Tools</a> <span>/</span>
+          <span>Peptide isoelectric point calculator</span>
+        </nav>
+        <h1>Peptide isoelectric point calculator</h1>
+        <p>Paste a sequence and get its theoretical pI and net charge across the pH range.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:1.2rem;">
+      <div class="container"><div class="tool-wrap" data-tool="pi" data-err-empty="Enter a sequence." data-err-unknown="Not a standard amino acid: %s. This calculator only handles the twenty proteinogenic residues." data-err-format="That input could not be read as a sequence." data-lbl-pi="Isoelectric point (pI)" data-lbl-charge7="Net charge at pH 7" data-lbl-length="Length" data-lbl-curve="Net charge by pH" data-residue="residue" data-residues="residues" data-note-pka="Calculated with the EMBOSS pKa set. Other published sets give pI values that differ by a few tenths, so a pI is only comparable against another one from the same set.">
+        <form class="tool-form" novalidate>
+          <label class="tool-label" for="toolInput">Peptide sequence</label>
+          <div class="tool-row">
+            <input type="text" id="toolInput" autocomplete="off" spellcheck="false" maxlength="2000" placeholder="e.g. GHK">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+          </div>
+          <p class="tool-help">One-letter or three-letter code. The pKa set used is named below, because a pI without it cannot be reproduced.</p>
+          <div class="tool-examples"><button type="button" class="tool-example" data-example="GHK">GHK</button><button type="button" class="tool-example" data-example="GEPPPGKPADDAGLV">BPC-157</button><button type="button" class="tool-example" data-example="MRWQEMGYIFYPRKLR">MOTS-c</button><button type="button" class="tool-example" data-example="EEEE">Poly-Glu</button></div>
+        </form>
+        <div class="tool-out" data-out hidden></div>
+      </div></div>
+    </section>
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:760px;">
+        
+        <h2>What the isoelectric point is</h2>
+        <p>The pH at which a peptide carries no net charge. Above it the molecule is net negative, below it net positive, and at it the positive and negative groups exactly cancel.</p>
+        <p>It is a practical number, not a trivia one. Net charge drives how a peptide behaves in ion-exchange chromatography and in electrophoresis, and solubility is usually at its lowest near the pI, where there is no net charge to keep molecules apart.</p>
+
+        <h2>How it is calculated</h2>
+        <p>Each ionisable group is treated with the Henderson-Hasselbalch relation: at a given pH, a basic group is protonated in a proportion set by the distance between that pH and the group's pKa, and an acidic group is deprotonated the same way. <a class="cite" href="https://doi.org/10.1002/elps.1150150171" target="_blank" rel="noopener nofollow">(Reference: Bjellqvist et al., 1994)</a> The groups that matter are the two termini plus the side chains of lysine, arginine and histidine on the positive side, and aspartate, glutamate, cysteine and tyrosine on the negative.</p>
+        <p>Summing those contributions gives the net charge at any pH. The curve falls monotonically as pH rises, so the pI is found by bisection: halve the interval, look at the sign of the charge, keep the half that contains the crossing, repeat. The table above shows the same curve at seven points.</p>
+
+        <h2>Why the pKa set has to be named</h2>
+        <p>There is no single authoritative table of side-chain pKa values. Several sets have been published from different experimental work, and they disagree by a few tenths of a unit. Those differences propagate, so the same sequence can come out with a pI of 9.7 under one set and 9.9 under another, with neither being wrong.</p>
+        <p>This calculator uses the EMBOSS set and says so, which is the only thing that makes the number reproducible. A pI quoted with no set named cannot be checked against anything, the same way a purity figure with no method named cannot. Our note on <a href="article/peptide-purity-hplc-explained/">what a purity figure measures</a> makes the same point about chromatography.</p>
+
+        <h2>What it does not account for</h2>
+        <p>This is a theoretical pI from the sequence alone. It assumes every ionisable group behaves as if it were free in solution, which is a simplification: in a folded structure a charged residue can shift its neighbour's pKa substantially. It also ignores terminal modifications. An amidated C-terminus removes a negative charge and moves the pI up noticeably, and nothing in a letter sequence shows that it is there.</p>
+      
+        <h2>Frequently asked questions</h2><div class="faq-item"><h3>What is the isoelectric point of a peptide?</h3><p>The pH at which it carries no net charge, because its positive and negative groups exactly cancel. Above that pH the molecule is net negative and below it net positive.</p></div><div class="faq-item"><h3>Why do different calculators give different pI values?</h3><p>Because there is no single agreed table of side-chain pKa values. Published sets disagree by a few tenths of a unit and that propagates, so the same sequence can come out at 9.7 under one set and 9.9 under another.</p></div><div class="faq-item"><h3>Which pKa set does this use?</h3><p>The EMBOSS set, named on the page. A pI quoted without naming its pKa set cannot be reproduced or compared against anything.</p></div><div class="faq-item"><h3>Why does solubility drop near the pI?</h3><p>Net charge is what keeps molecules apart. At the pI there is none, so the electrostatic repulsion that holds a peptide in solution is at its weakest and aggregation is most likely.</p></div><div class="faq-item"><h3>Does this account for C-terminal amidation?</h3><p>No. Amidation removes a negative charge and moves the pI up noticeably, and nothing in a letter sequence shows that it is present. The same applies to N-terminal acetylation.</p></div><div class="faq-item"><h3>Is a theoretical pI the same as a measured one?</h3><p>Not exactly. The calculation treats every ionisable group as if free in solution, whereas in a folded structure a charged residue can shift a neighbour pKa substantially. It is an estimate, and a useful one.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="assets/tools/peptide-chem.js"></script>
+  <script src="assets/tools/tools.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

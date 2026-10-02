@@ -52,6 +52,7 @@
           ${link(U('catalog/'), T('Products'), 'productos')}
           ${link(U('verify/'), T('Verify batch'), 'verify')}
           ${link(U('blog/'), T('Blog'), 'blog')}
+          ${link(U('tools/'), T('Tools'), 'tools')}
           ${link(HOME + '#proceso', T('Process'), 'proceso')}
           ${link(HOME + '#faq', T('FAQ'), 'faq')}
         </nav>
@@ -93,6 +94,7 @@
       ${link(U('catalog/'), T('Products'), 'productos')}
       ${link(U('verify/'), T('Verify batch'), 'verify')}
       ${link(U('blog/'), T('Blog'), 'blog')}
+      ${link(U('tools/'), T('Tools'), 'tools')}
       ${link(HOME + '#proceso', T('Process'), 'proceso')}
       ${link(HOME + '#faq', T('FAQ'), 'faq')}
       ${alt ? `<a class="mobile-nav-lang" href="${alt.href}" hreflang="${alt.code.toLowerCase()}">${alt.label}</a>` : ''}
@@ -122,10 +124,11 @@
           <div class="footer-col">
             <h4>${T('Shop')}</h4>
             <a href="${U('catalog/')}">${T('Catalog')}</a>
-            <a href="verify/">${T('Verify a batch')}</a>
+            <a href="${U('verify/')}">${T('Verify a batch')}</a>
             <a href="${HOME}#proceso">${T('Our process')}</a>
             <a href="${HOME}#faq">${T('FAQ')}</a>
-            <a href="blog/">${T('Blog')}</a>
+            <a href="${U('blog/')}">${T('Blog')}</a>
+            <a href="${U('tools/')}">${T('Free tools')}</a>
           </div>
           <div class="footer-col">
             <h4>${T('Legal')}</h4>

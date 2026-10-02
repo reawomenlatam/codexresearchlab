@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Peptide Molecular Weight Calculator | Codex Research</title>
+  <meta name="description" content="Paste a peptide sequence in one-letter or three-letter code and get its formula, average molecular weight and monoisotopic mass. Free, runs in your browser.">
+  <link rel="canonical" href="https://codexresearchlab.com/tools/peptide-molecular-weight/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/tools/peptide-molecular-weight/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/tools/peptide-molecular-weight/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/tools/peptide-molecular-weight/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Peptide Molecular Weight Calculator | Codex Research">
+  <meta property="og:description" content="Paste a peptide sequence in one-letter or three-letter code and get its formula, average molecular weight and monoisotopic mass. Free, runs in your browser.">
+  <meta property="og:url" content="https://codexresearchlab.com/tools/peptide-molecular-weight/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peptide Molecular Weight Calculator | Codex Research">
+  <meta name="twitter:description" content="Paste a peptide sequence in one-letter or three-letter code and get its formula, average molecular weight and monoisotopic mass. Free, runs in your browser.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Peptide molecular weight calculator","url":"https://codexresearchlab.com/tools/peptide-molecular-weight/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"Paste a peptide sequence in one-letter or three-letter code and get its formula, average molecular weight and monoisotopic mass. Free, runs in your browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Codex Research","url":"https://codexresearchlab.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between average and monoisotopic mass?","acceptedAnswer":{"@type":"Answer","text":"Average mass uses standard atomic weights, which are weighted means over natural isotopes. Monoisotopic mass uses only the lightest isotope of each element. A mass spectrometer reports the monoisotopic value for the first peak of the isotope cluster; a catalogue usually quotes the average."}},{"@type":"Question","name":"Why does the calculator reject my sequence?","acceptedAnswer":{"@type":"Answer","text":"It handles only the twenty standard amino acids. Synthetic residues such as Aib, Nle or D-2-Nal have no agreed single letter, so instead of inventing a mass for them the calculator refuses the sequence."}},{"@type":"Question","name":"Does this account for the salt form?","acceptedAnswer":{"@type":"Answer","text":"No. The result is the mass of the free peptide. Material purified by reversed-phase chromatography is isolated as a salt, commonly trifluoroacetate, and lyophilised powder also carries absorbed water, so a vial weighs more per mole than this figure."}},{"@type":"Question","name":"Can it calculate GHK-Cu?","acceptedAnswer":{"@type":"Answer","text":"It calculates GHK, the tripeptide. The copper is not part of the letter sequence, so the complex has a different formula and mass that this tool cannot derive from three letters."}},{"@type":"Question","name":"Does it accept three-letter code?","acceptedAnswer":{"@type":"Answer","text":"Yes. Gly-His-Lys and GHK give the same result. Any non-letter character is treated as a separator."}},{"@type":"Question","name":"Is anything sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The calculation runs in your browser from a script on this page. Nothing you type leaves the device."}}]}</script>
+</head>
+<body data-nav="tools" data-slug="peptide-molecular-weight">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="toolsMain">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/">Home</a> <span>/</span>
+          <a href="tools/">Tools</a> <span>/</span>
+          <span>Peptide molecular weight calculator</span>
+        </nav>
+        <h1>Peptide molecular weight calculator</h1>
+        <p>Paste a sequence and get its empirical formula, average mass and monoisotopic mass.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:1.2rem;">
+      <div class="container"><div class="tool-wrap" data-tool="weight" data-err-empty="Enter a sequence." data-err-unknown="Not a standard amino acid: %s. This calculator only handles the twenty proteinogenic residues." data-err-format="That input could not be read as a sequence." data-lbl-formula="Empirical formula" data-lbl-average="Average mass" data-lbl-mono="Monoisotopic mass" data-lbl-length="Length" data-lbl-seq="Sequence read" data-residue="residue" data-residues="residues" data-note-salt="This is the mass of the free peptide. Material purified by reversed-phase chromatography is isolated as a salt, so a vial weighs more than this per mole.">
+        <form class="tool-form" novalidate>
+          <label class="tool-label" for="toolInput">Peptide sequence</label>
+          <div class="tool-row">
+            <input type="text" id="toolInput" autocomplete="off" spellcheck="false" maxlength="2000" placeholder="e.g. GEPPPGKPADDAGLV">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+          </div>
+          <p class="tool-help">One-letter code (<code>GHK</code>) or three-letter code (<code>Gly-His-Lys</code>). Spaces, numbers and line breaks are ignored.</p>
+          <div class="tool-examples"><button type="button" class="tool-example" data-example="GHK">GHK</button><button type="button" class="tool-example" data-example="GEPPPGKPADDAGLV">BPC-157</button><button type="button" class="tool-example" data-example="MRWQEMGYIFYPRKLR">MOTS-c</button><button type="button" class="tool-example" data-example="Gly-His-Lys">Gly-His-Lys</button></div>
+        </form>
+        <div class="tool-out" data-out hidden></div>
+      </div></div>
+    </section>
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:760px;">
+        
+        <h2>How this is calculated</h2>
+        <p>A peptide bond forms by removing a molecule of water between two amino acids. So the calculator adds up the atoms of each residue, the amino acid minus that water, then adds one water back for the two free ends: the N-terminus keeps an H and the C-terminus an OH.</p>
+        <p>From that atom count come two different masses. The <b>average mass</b> uses the standard atomic weights, which are weighted means over each element's natural isotopes, and is the figure a catalogue usually quotes. The <b>monoisotopic mass</b> uses only the lightest isotope of each element, and is what a mass spectrometer reports for the first peak of the isotope cluster.</p>
+        <p>On a short peptide the two differ by about a unit; on a long one by several. Comparing a monoisotopic measurement against an average calculation is a common way to convince yourself a correct sample is wrong. Our note on <a href="article/molecular-weight-of-peptides/">average versus monoisotopic mass</a> goes through it.</p>
+
+        <h2>What it does not do</h2>
+        <p>It handles the twenty standard amino acids and nothing else. Synthetic analogues have no agreed letter, so a sequence containing Aib, D-2-Nal or Nle is rejected instead of being given an invented mass. Several research peptides are built from exactly those residues, which is why not every compound can be calculated from a sequence alone.</p>
+        <p>It also assumes a free, linear peptide with no modifications. Amidation at the C-terminus, acetylation at the N-terminus, a disulfide bridge or a bound metal all change the mass, and none of them is visible in a letter sequence. GHK and GHK-Cu have the same three residues; the copper is the difference, and this calculator will not see it. <a class="cite" href="https://doi.org/10.3390/ijms19071987" target="_blank" rel="noopener nofollow">(Reference: Pickart &amp; Margolina, 2018)</a></p>
+
+        <h2>Why the number on a vial is larger</h2>
+        <p>The mass above is of the free peptide. Material purified by reversed-phase chromatography comes out as a salt, usually trifluoroacetate, and lyophilised powder also holds absorbed water. Both add weight without adding peptide, which is the gap between chromatographic purity and net peptide content. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest of the mass.</p>
+
+        <h2>Checking it against something known</h2>
+        <p>The quickest sanity check is a compound whose formula is published. BPC-157 is GEPPPGKPADDAGLV, and the calculator returns C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub>, which is the formula on its PubChem record. If a calculator disagrees with a published formula for a sequence you trust, the calculator is what is wrong.</p>
+      
+        <h2>Frequently asked questions</h2><div class="faq-item"><h3>What is the difference between average and monoisotopic mass?</h3><p>Average mass uses standard atomic weights, which are weighted means over natural isotopes. Monoisotopic mass uses only the lightest isotope of each element. A mass spectrometer reports the monoisotopic value for the first peak of the isotope cluster; a catalogue usually quotes the average.</p></div><div class="faq-item"><h3>Why does the calculator reject my sequence?</h3><p>It handles only the twenty standard amino acids. Synthetic residues such as Aib, Nle or D-2-Nal have no agreed single letter, so instead of inventing a mass for them the calculator refuses the sequence.</p></div><div class="faq-item"><h3>Does this account for the salt form?</h3><p>No. The result is the mass of the free peptide. Material purified by reversed-phase chromatography is isolated as a salt, commonly trifluoroacetate, and lyophilised powder also carries absorbed water, so a vial weighs more per mole than this figure.</p></div><div class="faq-item"><h3>Can it calculate GHK-Cu?</h3><p>It calculates GHK, the tripeptide. The copper is not part of the letter sequence, so the complex has a different formula and mass that this tool cannot derive from three letters.</p></div><div class="faq-item"><h3>Does it accept three-letter code?</h3><p>Yes. Gly-His-Lys and GHK give the same result. Any non-letter character is treated as a separator.</p></div><div class="faq-item"><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser from a script on this page. Nothing you type leaves the device.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="assets/tools/peptide-chem.js"></script>
+  <script src="assets/tools/tools.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

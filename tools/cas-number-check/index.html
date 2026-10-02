@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>CAS Number Validator: Check the Check Digit | Codex</title>
+  <meta name="description" content="Paste a CAS Registry Number and see whether its final check digit is arithmetically consistent. Catches typos and invented numbers. Free, in your browser.">
+  <link rel="canonical" href="https://codexresearchlab.com/tools/cas-number-check/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/tools/cas-number-check/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/tools/cas-number-check/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/tools/cas-number-check/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CAS Number Validator: Check the Check Digit | Codex">
+  <meta property="og:description" content="Paste a CAS Registry Number and see whether its final check digit is arithmetically consistent. Catches typos and invented numbers. Free, in your browser.">
+  <meta property="og:url" content="https://codexresearchlab.com/tools/cas-number-check/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CAS Number Validator: Check the Check Digit | Codex">
+  <meta name="twitter:description" content="Paste a CAS Registry Number and see whether its final check digit is arithmetically consistent. Catches typos and invented numbers. Free, in your browser.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CAS number check digit validator","url":"https://codexresearchlab.com/tools/cas-number-check/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"Paste a CAS Registry Number and see whether its final check digit is arithmetically consistent. Catches typos and invented numbers. Free, in your browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Codex Research","url":"https://codexresearchlab.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a CAS check digit calculated?","acceptedAnswer":{"@type":"Answer","text":"Take the digits before the final hyphen, number them from right to left starting at one, multiply each digit by its position, sum the products and divide by ten. The remainder is the check digit."}},{"@type":"Question","name":"Does a valid check digit mean the CAS number is real?","acceptedAnswer":{"@type":"Answer","text":"No. It means the number is arithmetically consistent, which rules out most typos and casually invented numbers. A number can pass and still be unassigned, because the checksum only sees digits."}},{"@type":"Question","name":"Can a CAS number be valid but wrong for the compound?","acceptedAnswer":{"@type":"Answer","text":"Yes, and this is the common case. The check never sees the compound name, so a real CAS number paired with the wrong substance passes. Look the number up and read back which substance it returns."}},{"@type":"Question","name":"Why do some research peptides have no CAS number?","acceptedAnswer":{"@type":"Answer","text":"A number is assigned when a substance is indexed in the chemical literature. A compound that is new or has had little published work on it may not have one yet, which is not in itself a problem."}},{"@type":"Question","name":"What does a failed check usually mean?","acceptedAnswer":{"@type":"Answer","text":"Most often a digit transposed while copying a catalogue entry by hand. Sometimes a number invented to make a listing look documented, since producing an arithmetically consistent fake takes deliberate effort."}},{"@type":"Question","name":"Does the number tell me anything about purity?","acceptedAnswer":{"@type":"Answer","text":"Nothing at all. A CAS number identifies a substance in the abstract. What is in a particular vial is a question for that batch certificate of analysis."}}]}</script>
+</head>
+<body data-nav="tools" data-slug="cas-number-check">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="toolsMain">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/">Home</a> <span>/</span>
+          <a href="tools/">Tools</a> <span>/</span>
+          <span>CAS number check digit validator</span>
+        </nav>
+        <h1>CAS number check digit validator</h1>
+        <p>Paste a CAS Registry Number and see whether its check digit adds up.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:1.2rem;">
+      <div class="container"><div class="tool-wrap" data-tool="cas" data-err-format="That is not the shape of a CAS number. It should look like 137525-51-0." data-cas-good="%s is arithmetically valid." data-cas-bad="%s does not add up." data-cas-expected="The check digit should be %d, and the number ends in %g. Either a digit was mistyped or the number was made up." data-cas-note="The arithmetic holds, which rules out a typo and an invented number. It does not confirm the number is assigned, or that it belongs to the compound on the label.">
+        <form class="tool-form" novalidate>
+          <label class="tool-label" for="toolInput">CAS Registry Number</label>
+          <div class="tool-row">
+            <input type="text" id="toolInput" autocomplete="off" spellcheck="false" maxlength="2000" placeholder="e.g. 137525-51-0">
+            <button type="submit" class="btn btn-primary">Check</button>
+          </div>
+          <p class="tool-help">Format is two to seven digits, a hyphen, two digits, a hyphen and one check digit.</p>
+          <div class="tool-examples"><button type="button" class="tool-example" data-example="137525-51-0">137525-51-0</button><button type="button" class="tool-example" data-example="89030-95-5">89030-95-5</button><button type="button" class="tool-example" data-example="2023788-19-2">2023788-19-2</button><button type="button" class="tool-example" data-example="137525-51-1">137525-51-1</button></div>
+        </form>
+        <div class="tool-out" data-out hidden></div>
+      </div></div>
+    </section>
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:760px;">
+        
+        <h2>What a CAS number is</h2>
+        <p>A CAS Registry Number is an identifier assigned by the Chemical Abstracts Service to a specific substance. It carries no information about structure: it is a label, allocated in sequence, and its only job is to say "this substance and not another one" across every language and naming convention. Our note on <a href="article/cas-numbers-explained/">CAS numbers</a> covers why that matters when a compound has six names.</p>
+
+        <h2>How the check digit works</h2>
+        <p>The last digit is a checksum over the rest, not part of the identifier itself. Take all the digits before the final hyphen, number them from right to left starting at one, multiply each by its position, add the products, and the remainder when you divide by ten is the check digit.</p>
+        <p>For 7732-18-5, which is water: reading right to left from the digit before the check digit, 8×1 + 1×2 + 2×3 + 3×4 + 7×5 + 7×6 comes to 105, and 105 leaves a remainder of 5. The number ends in 5, so it is consistent.</p>
+        <p>The arithmetic is public and the test takes a second, which is the whole point. A single mistyped digit will almost always break it.</p>
+
+        <h2>What a pass does not prove</h2>
+        <p>Three things, and they matter more than the pass itself.</p>
+        <p>It does not prove the number is <b>assigned</b>. The checksum is arithmetic over digits, so a number can be perfectly consistent and correspond to nothing. Only a lookup in a registry answers that.</p>
+        <p>It does not prove the number belongs to the <b>compound on the label</b>. Pairing a real CAS number with the wrong name passes this check every time, because the check never sees the name. The useful follow-up is to look the number up and read back which substance it returns.</p>
+        <p>It does not prove anything about the <b>material in the vial</b>. A CAS number identifies a substance in the abstract. What is in a particular batch is a question for a certificate of analysis, and specifically for the mass measurement on it. Our note on <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers that.</p>
+
+        <h2>What a failure does mean</h2>
+        <p>That the number as written cannot be a valid CAS number at all. Usually a transposed pair of digits in a catalogue entry copied by hand. Occasionally a number invented to make a listing look documented, which the arithmetic catches because inventing a consistent one takes deliberate effort.</p>
+      
+        <h2>Frequently asked questions</h2><div class="faq-item"><h3>How is a CAS check digit calculated?</h3><p>Take the digits before the final hyphen, number them from right to left starting at one, multiply each digit by its position, sum the products and divide by ten. The remainder is the check digit.</p></div><div class="faq-item"><h3>Does a valid check digit mean the CAS number is real?</h3><p>No. It means the number is arithmetically consistent, which rules out most typos and casually invented numbers. A number can pass and still be unassigned, because the checksum only sees digits.</p></div><div class="faq-item"><h3>Can a CAS number be valid but wrong for the compound?</h3><p>Yes, and this is the common case. The check never sees the compound name, so a real CAS number paired with the wrong substance passes. Look the number up and read back which substance it returns.</p></div><div class="faq-item"><h3>Why do some research peptides have no CAS number?</h3><p>A number is assigned when a substance is indexed in the chemical literature. A compound that is new or has had little published work on it may not have one yet, which is not in itself a problem.</p></div><div class="faq-item"><h3>What does a failed check usually mean?</h3><p>Most often a digit transposed while copying a catalogue entry by hand. Sometimes a number invented to make a listing look documented, since producing an arithmetically consistent fake takes deliberate effort.</p></div><div class="faq-item"><h3>Does the number tell me anything about purity?</h3><p>Nothing at all. A CAS number identifies a substance in the abstract. What is in a particular vial is a question for that batch certificate of analysis.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="assets/tools/peptide-chem.js"></script>
+  <script src="assets/tools/tools.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

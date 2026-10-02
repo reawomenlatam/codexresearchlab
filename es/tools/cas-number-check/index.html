@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://capi-automation.s3.us-east-2.amazonaws.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net https://hooks.codexresearchlab.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://bded8a3c6ae-1-1053047382554.us-central1.run.app https://8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws; frame-src https://www.googletagmanager.com https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.facebook.com; frame-ancestors 'none'">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NJSJWNH9');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44S7TCGRFM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44S7TCGRFM');
+  </script>
+  <!-- End Google tag -->
+  <title>Validador de número CAS: comprueba el dígito de control</title>
+  <meta name="description" content="Pega un número de registro CAS y comprueba si su dígito final es aritméticamente consistente. Caza erratas y números inventados. Gratis, en tu navegador.">
+  <link rel="canonical" href="https://codexresearchlab.com/es/tools/cas-number-check/">
+  <link rel="alternate" hreflang="en" href="https://codexresearchlab.com/tools/cas-number-check/">
+  <link rel="alternate" hreflang="es" href="https://codexresearchlab.com/es/tools/cas-number-check/">
+  <link rel="alternate" hreflang="x-default" href="https://codexresearchlab.com/tools/cas-number-check/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Validador de número CAS: comprueba el dígito de control">
+  <meta property="og:description" content="Pega un número de registro CAS y comprueba si su dígito final es aritméticamente consistente. Caza erratas y números inventados. Gratis, en tu navegador.">
+  <meta property="og:url" content="https://codexresearchlab.com/es/tools/cas-number-check/">
+  <meta property="og:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <meta property="og:site_name" content="Codex Research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Validador de número CAS: comprueba el dígito de control">
+  <meta name="twitter:description" content="Pega un número de registro CAS y comprueba si su dígito final es aritméticamente consistente. Caza erratas y números inventados. Gratis, en tu navegador.">
+  <meta name="twitter:image" content="https://codexresearchlab.com/assets/og-default.png">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1589772189600279');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1589772189600279&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Validador del dígito de control de un número CAS","url":"https://codexresearchlab.com/es/tools/cas-number-check/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"Pega un número de registro CAS y comprueba si su dígito final es aritméticamente consistente. Caza erratas y números inventados. Gratis, en tu navegador.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Codex Research","url":"https://codexresearchlab.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se calcula el dígito de control de un CAS?","acceptedAnswer":{"@type":"Answer","text":"Coges los dígitos anteriores al último guion, los numeras de derecha a izquierda empezando en uno, multiplicas cada dígito por su posición, sumas los productos y divides entre diez. El resto es el dígito de control."}},{"@type":"Question","name":"¿Un dígito de control válido significa que el CAS es real?","acceptedAnswer":{"@type":"Answer","text":"No. Significa que el número es aritméticamente consistente, lo que descarta casi todas las erratas y los números inventados a la ligera. Un número puede pasar y seguir sin estar asignado, porque la comprobación solo ve dígitos."}},{"@type":"Question","name":"¿Puede un CAS ser válido y estar mal para ese compuesto?","acceptedAnswer":{"@type":"Answer","text":"Sí, y es el caso frecuente. La comprobación nunca ve el nombre del compuesto, así que un CAS real emparejado con la sustancia equivocada pasa. Busca el número y lee qué sustancia devuelve."}},{"@type":"Question","name":"¿Por qué algunos péptidos de investigación no tienen CAS?","acceptedAnswer":{"@type":"Answer","text":"Un número se asigna cuando una sustancia se indexa en la literatura química. Un compuesto nuevo o con poco trabajo publicado puede no tenerlo todavía, y eso no es de por sí un problema."}},{"@type":"Question","name":"¿Qué suele significar un suspenso?","acceptedAnswer":{"@type":"Answer","text":"Casi siempre un dígito cambiado de sitio al copiar a mano una entrada de catálogo. A veces un número inventado para que una ficha parezca documentada, ya que producir una falsificación aritméticamente consistente exige hacerlo a propósito."}},{"@type":"Question","name":"¿El número dice algo sobre la pureza?","acceptedAnswer":{"@type":"Answer","text":"Nada. Un número CAS identifica una sustancia en abstracto. Qué hay en un vial concreto es asunto del certificado de análisis de ese lote."}}]}</script>
+</head>
+<body data-nav="tools" data-slug="cas-number-check">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJSJWNH9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div data-header></div>
+
+  <main id="toolsMain">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/es/">Inicio</a> <span>/</span>
+          <a href="es/tools/">Herramientas</a> <span>/</span>
+          <span>Validador del dígito de control de un número CAS</span>
+        </nav>
+        <h1>Validador del dígito de control de un número CAS</h1>
+        <p>Pega un número de registro CAS y comprueba si su dígito de control cuadra.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:1.2rem;">
+      <div class="container"><div class="tool-wrap" data-tool="cas" data-err-format="Eso no tiene forma de número CAS. Debería parecerse a 137525-51-0." data-cas-good="%s es aritméticamente válido." data-cas-bad="%s no cuadra." data-cas-expected="El dígito de control debería ser %d, y el número termina en %g. O se tecleó mal un dígito o el número está inventado." data-cas-note="La aritmética cuadra, lo que descarta una errata y un número inventado. No confirma que el número esté asignado ni que corresponda al compuesto de la etiqueta.">
+        <form class="tool-form" novalidate>
+          <label class="tool-label" for="toolInput">Número de registro CAS</label>
+          <div class="tool-row">
+            <input type="text" id="toolInput" autocomplete="off" spellcheck="false" maxlength="2000" placeholder="p. ej. 137525-51-0">
+            <button type="submit" class="btn btn-primary">Comprobar</button>
+          </div>
+          <p class="tool-help">El formato es de dos a siete dígitos, guion, dos dígitos, guion y un dígito de control.</p>
+          <div class="tool-examples"><button type="button" class="tool-example" data-example="137525-51-0">137525-51-0</button><button type="button" class="tool-example" data-example="89030-95-5">89030-95-5</button><button type="button" class="tool-example" data-example="2023788-19-2">2023788-19-2</button><button type="button" class="tool-example" data-example="137525-51-1">137525-51-1</button></div>
+        </form>
+        <div class="tool-out" data-out hidden></div>
+      </div></div>
+    </section>
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:760px;">
+        
+        <h2>Qué es un número CAS</h2>
+        <p>Un número de registro CAS es un identificador que el Chemical Abstracts Service asigna a una sustancia concreta. No lleva información sobre la estructura: es una etiqueta, asignada por orden, y su único trabajo es decir «esta sustancia y no otra» por encima de cualquier idioma o convención de nombres. Nuestra nota sobre <a href="es/article/cas-numbers-explained/">números CAS</a> explica por qué eso importa cuando un compuesto tiene seis nombres.</p>
+
+        <h2>Cómo funciona el dígito de control</h2>
+        <p>El último dígito no forma parte del identificador: es una suma de comprobación sobre el resto. Coges todos los dígitos anteriores al último guion, los numeras de derecha a izquierda empezando en uno, multiplicas cada uno por su posición, sumas los productos, y el resto de dividir entre diez es el dígito de control.</p>
+        <p>Para 7732-18-5, que es el agua: leyendo de derecha a izquierda desde el dígito anterior al de control, 8×1 + 1×2 + 2×3 + 3×4 + 7×5 + 7×6 da 105, y 105 deja resto 5. El número termina en 5, así que es consistente.</p>
+        <p>La aritmética es pública y la comprobación lleva un segundo, que es justo la gracia. Un solo dígito mal tecleado casi siempre la rompe.</p>
+
+        <h2>Lo que un aprobado no demuestra</h2>
+        <p>Tres cosas, y pesan más que el aprobado.</p>
+        <p>No demuestra que el número esté <b>asignado</b>. La suma de comprobación es aritmética sobre dígitos, así que un número puede ser perfectamente consistente y no corresponder a nada. Eso solo lo responde una consulta en un registro.</p>
+        <p>No demuestra que el número sea el del <b>compuesto de la etiqueta</b>. Emparejar un CAS real con el nombre equivocado pasa esta comprobación siempre, porque la comprobación nunca ve el nombre. Lo útil después es buscar el número y leer qué sustancia devuelve.</p>
+        <p>No demuestra nada sobre el <b>material del vial</b>. Un número CAS identifica una sustancia en abstracto. Qué hay de verdad en un lote concreto es asunto de un certificado de análisis, y en concreto de la medición de masa que lleve. Nuestra nota sobre <a href="es/article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> lo cubre.</p>
+
+        <h2>Lo que sí significa un suspenso</h2>
+        <p>Que el número tal como está escrito no puede ser un CAS válido. Normalmente un par de dígitos cambiados de sitio al copiar a mano una entrada de catálogo. De vez en cuando, un número inventado para que una ficha parezca documentada, que la aritmética caza porque inventar uno consistente exige hacerlo a propósito.</p>
+      
+        <h2>Preguntas frecuentes</h2><div class="faq-item"><h3>¿Cómo se calcula el dígito de control de un CAS?</h3><p>Coges los dígitos anteriores al último guion, los numeras de derecha a izquierda empezando en uno, multiplicas cada dígito por su posición, sumas los productos y divides entre diez. El resto es el dígito de control.</p></div><div class="faq-item"><h3>¿Un dígito de control válido significa que el CAS es real?</h3><p>No. Significa que el número es aritméticamente consistente, lo que descarta casi todas las erratas y los números inventados a la ligera. Un número puede pasar y seguir sin estar asignado, porque la comprobación solo ve dígitos.</p></div><div class="faq-item"><h3>¿Puede un CAS ser válido y estar mal para ese compuesto?</h3><p>Sí, y es el caso frecuente. La comprobación nunca ve el nombre del compuesto, así que un CAS real emparejado con la sustancia equivocada pasa. Busca el número y lee qué sustancia devuelve.</p></div><div class="faq-item"><h3>¿Por qué algunos péptidos de investigación no tienen CAS?</h3><p>Un número se asigna cuando una sustancia se indexa en la literatura química. Un compuesto nuevo o con poco trabajo publicado puede no tenerlo todavía, y eso no es de por sí un problema.</p></div><div class="faq-item"><h3>¿Qué suele significar un suspenso?</h3><p>Casi siempre un dígito cambiado de sitio al copiar a mano una entrada de catálogo. A veces un número inventado para que una ficha parezca documentada, ya que producir una falsificación aritméticamente consistente exige hacerlo a propósito.</p></div><div class="faq-item"><h3>¿El número dice algo sobre la pureza?</h3><p>Nada. Un número CAS identifica una sustancia en abstracto. Qué hay en un vial concreto es asunto del certificado de análisis de ese lote.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="data.js"></script>
+  <script src="country.js"></script>
+  <script src="cart.js"></script>
+  <script src="i18n.js"></script>
+  <script src="account.js"></script>
+  <script src="layout.js"></script>
+  <script src="app.js"></script>
+  <script src="assets/tools/peptide-chem.js"></script>
+  <script src="assets/tools/tools.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

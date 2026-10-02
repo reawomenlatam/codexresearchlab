@@ -1601,3 +1601,63 @@ a, button, input, select, textarea, label, summary,
 @media (min-width: 720px) {
   .article-body table { display: table; white-space: normal; }
 }
+
+/* ---------- Herramientas (/tools/) ----------
+   Reutilizan la caja de .verify-form: es el mismo gesto (escribir algo y
+   obtener una respuesta) y tenerlas distintas sólo haría el sitio más disperso.
+   El resultado se monta con JS, así que las clases de dentro viven en
+   assets/tools/tools.js. */
+.tool-wrap { max-width: 680px; }
+.tool-form { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow-card); }
+.tool-label { display: block; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: .6rem; }
+.tool-row { display: flex; gap: .6rem; }
+.tool-row input { flex: 1; min-width: 0; padding: .85rem 1rem; font: inherit; font-size: 1rem; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); color: var(--ink); }
+.tool-row input:focus { outline: none; border-color: var(--cta); }
+.tool-row .btn { padding: .85rem 1.4rem; }
+.tool-help { font-size: .8rem; color: var(--muted); margin-top: .7rem; }
+/* Los ejemplos rellenan el campo y disparan el cálculo: una herramienta que
+   arranca vacía obliga a inventarse una entrada antes de ver qué hace. */
+.tool-examples { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .9rem; }
+.tool-example { font: inherit; font-family: var(--font-mono); font-size: .78rem; padding: .35rem .7rem; border: 1px solid var(--border); border-radius: 999px; background: var(--bg); color: var(--muted); cursor: pointer; }
+.tool-example:hover { border-color: var(--cta); color: var(--ink); }
+.tool-example:focus-visible { outline: 2px solid var(--cta); outline-offset: 2px; }
+
+.tool-out { margin-top: 1.2rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: var(--shadow-card); }
+.tool-out-bad { border-color: var(--danger); }
+.tool-grid { margin: 0; }
+.tool-grid .tool-row { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--border); }
+.tool-grid .tool-row:last-child { border-bottom: 0; }
+.tool-grid dt { color: var(--muted); font-size: .88rem; }
+.tool-grid dd { margin: 0; text-align: right; font-family: var(--font-mono); font-size: .92rem; }
+.tool-grid dd code { font-size: .82rem; word-break: break-all; }
+.tool-sub { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 1.2rem 0 .3rem; }
+.tool-note { font-size: .82rem; color: var(--muted); margin-top: 1rem; line-height: 1.6; }
+.tool-verdict { font-weight: 700; margin: 0; }
+/* El color no puede ser la única señal: el texto ya dice "válido" o "no cuadra". */
+.tool-good { color: #1a7f4b; }
+.tool-bad { color: var(--danger); }
+.tool-tally { font-family: var(--font-mono); font-size: .85rem; color: var(--muted); }
+
+.tool-check { list-style: none; margin: 0; padding: 0; }
+.tool-check li { display: flex; gap: .8rem; align-items: flex-start; padding: .9rem 0; border-bottom: 1px solid var(--border); }
+.tool-check li:last-child { border-bottom: 0; }
+.tool-check input { margin-top: .3rem; width: 18px; height: 18px; flex: none; accent-color: var(--cta); }
+.tool-check label { cursor: pointer; }
+.tool-check b { display: block; }
+.tool-check span { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+
+.tool-index { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 1.6rem; }
+.tool-card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow-card); text-decoration: none; color: inherit; }
+.tool-card:hover { border-color: var(--cta); }
+.tool-card h2 { font-size: 1.05rem; margin: 0 0 .4rem; }
+.tool-card p { font-size: .88rem; color: var(--muted); margin: 0; line-height: 1.6; }
+
+@media (max-width: 520px) {
+  .tool-row { flex-direction: column; }
+  .tool-grid .tool-row { flex-direction: row; }
+}
+/* Al imprimir el checklist sobra todo lo demás: se lleva al laboratorio. */
+@media print {
+  [data-tool="checklist"] .tool-examples, [data-print] { display: none; }
+  header, footer, [data-header], [data-footer], .breadcrumb { display: none !important; }
+}

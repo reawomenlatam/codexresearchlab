@@ -2882,6 +2882,618 @@
       ],
       cta: 'Cada lote que enviamos lleva su propio certificado. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
     },
+
+    'tirzepatide-vs-retatrutide': {
+      title: 'Tirzepatida y retatrutida: dos receptores frente a tres',
+      metaTitle: 'Tirzepatida vs retatrutida: receptores, masa y verificación',
+      metaDescription: 'En qué se diferencian: qué receptores activa cada una, sus fórmulas y masas, qué debe mostrar el certificado y por qué una es más difícil de verificar.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Dos receptores contra tres, y lo que cada caso le hace al problema de verificar.',
+      imageAlt: 'Un agonista dual y uno triple, comparados por identidad y papelería.',
+      body: `
+        <p class="lead">Las dos son péptidos sintéticos largos estudiados en señalización metabólica, y la diferencia de titular es cuántos receptores activa cada una. Esa diferencia es real, pero la que te afecta al comprar es cuál de las dos se puede contrastar contra un registro público.</p>
+
+        <h2>El recuento de receptores</h2>
+        <p>La tirzepatida activa dos receptores, GIP y GLP-1. La retatrutida activa esos dos y además el de glucagón.</p>
+        <p>GIP y GLP-1 son las dos hormonas incretinas, liberadas en el intestino y actuando sobre sus propios receptores. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Ref.: Baggio y Drucker, 2007)</a> El glucagón pertenece a la misma familia de receptores pero es otra señal, liberada en el páncreas. Así que el paso de dos a tres añade un receptor cuyo ligando natural viene de otro sitio, que es otro tipo de añadido. Nuestras notas sobre <a href="article/what-are-incretins/">incretinas</a> y sobre <a href="article/glp-1-vs-gip/">GLP-1 frente a GIP</a> cubren la familia.</p>
+        <p>«Agonista» en los tres no significa igual en los tres. Una molécula puede ser agonista completo en un receptor y parcial en otro, y puede además favorecer una vía corriente abajo sobre otra en el mismo receptor, algo descrito para la tirzepatida en GLP-1. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Ref.: Willard et al., 2020)</a> Un recuento de receptores es una etiqueta, no un perfil.</p>
+
+        <h2>Por qué el receptor de glucagón es el añadido interesante</h2>
+        <p>Los receptores de GIP, GLP-1 y glucagón pertenecen a la misma clase estructural, la familia de receptores acoplados a proteína G del tipo secretina, y por eso es plausible diseñar una molécula que encaje en los tres. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Ref.: Mayo et al., 2003)</a> El parecido de familia es lo que hace un agonista triple químicamente concebible en lugar de fantasioso.</p>
+        <p>También hace la selectividad más difícil de afirmar. Receptores que se parecen son receptores a los que una molécula puede unirse sin querer, así que una afirmación sobre cuáles tres activa un compuesto es una afirmación sobre unión medida, no sobre intención. Esa es cuestión de la farmacología publicada y no de un certificado de análisis, y conviene no mezclar los dos tipos de documento: un certificado dice qué hay en el vial, nunca qué hace.</p>
+
+        <h2>La identidad sobre el papel</h2>
+        <p>La tirzepatida es C<sub>225</sub>H<sub>348</sub>N<sub>48</sub>O<sub>68</sub>, 4813,45 g/mol, CAS 2023788-19-2, con registro en PubChem.</p>
+        <p>En la retatrutida es donde aparece la asimetría. No tiene número CAS en nuestro catálogo ni entrada en PubChem; el identificador que resuelve es su registro en ChEMBL. Eso no es un defecto del compuesto: es el aspecto que tiene un compuesto reciente en las bases de referencia, porque un identificador se asigna cuando una sustancia se ha indexado, y la indexación va detrás de la publicación.</p>
+        <p>La consecuencia es práctica. Para la tirzepatida puedes coger el número CAS, pasar el <a href="tools/cas-number-check/">dígito de control</a>, buscarlo y leer qué sustancia devuelve. Para la retatrutida esa vía no existe, así que la evidencia de identidad tiene que salir del propio certificado y no de un registro público.</p>
+
+        <h2>Lo que eso le hace a la verificación</h2>
+        <p>Con un compuesto que tiene registro público, un certificado dispone de una segunda opinión: la masa medida se puede comparar contra una masa calculada desde una fórmula publicada, y puedes comprobar las dos por separado.</p>
+        <p>Sin él, el espectro de masas del certificado es la evidencia de identidad y no hay nada externo contra lo que cruzarlo. Eso sube el peso que carga el resto del documento: si hay un método al lado de cada cifra, si hay fecha, si se nombra un laboratorio. Nuestra <a href="article/verifying-a-peptide-supplier-checklist/">lista de verificación de proveedor</a> lo recorre, y la <a href="tools/coa-checklist/">versión interactiva</a> son las mismas siete comprobaciones.</p>
+        <p>Conviene ser claro con esta parte. Que un compuesto sea más reciente que su papelería es normal. Que un proveedor lo tome como motivo para enseñarte menos, no.</p>
+
+        <h2>Masa, y por qué las cifras se parecen tanto</h2>
+        <p>La tirzepatida son 4813,45 g/mol y la retatrutida 4894,58, una diferencia de unas 81 unidades en moléculas de casi cinco mil. A esa escala una comprobación de identidad no puede descansar en un número redondeado: dos péptidos largos pueden diferenciarse en un residuo y seguir pareciéndose a un decimal.</p>
+        <p>Aquí es donde la distinción entre masa media y monoisotópica deja de ser pedantería. Un espectrómetro informa el valor monoisotópico del primer pico del grupo isotópico, mientras que un catálogo da el medio, y en moléculas de este tamaño se diferencian en varias unidades. Comparar uno contra el otro es una forma fiable de concluir que un lote correcto está mal. Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> devuelve las dos, y nuestra nota sobre <a href="article/molecular-weight-of-peptides/">masa media frente a monoisotópica</a> explica la distancia.</p>
+
+        <h2>La conservación es el mismo problema en las dos</h2>
+        <p>Nada de la diferencia de receptores cambia cómo se comporta cada una en un vial. Las dos llegan liofilizadas, las dos son higroscópicas y las dos se degradan por rutas que avanzan con el tiempo y la temperatura. Un certificado lleva fecha porque un resultado pertenece a un momento, y lo que pasa entre esa fecha y tu mesa es cuestión de conservación, no de papelería. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> desarrolla el razonamiento.</p>
+
+        <h2>Qué debe mostrar un certificado de cualquiera de las dos</h2>
+        <p>Los mismos campos, por las mismas razones. Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones escritas, porque la columna y el gradiente cambian el número. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, con masa observada y teórica a la vista. Contenido neto de péptido separado de la pureza cromatográfica, porque un lote puede ser 99 % puro por área y estar bastante por debajo en masa.</p>
+        <p>Las dos son péptidos largos, y eso importa para la cifra de pureza: cuanto más larga la <a href="article/peptide-synthesis/">síntesis</a>, más ocasiones de que un acoplamiento no termine, y las secuencias de deleción se diferencian del objetivo en un solo residuo y salen pegadas al pico principal.</p>
+
+        <h2>Lo que esta comparación no es</h2>
+        <p>No es un ranking y no dice nada de lo que hace cualquiera de los dos compuestos en un organismo. Los dos se venden aquí para investigación de laboratorio, y la única comparación que pinta algo en una tienda es entre lo que se puede documentar de cada uno.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Cuál es la diferencia entre tirzepatida y retatrutida?",
+          "a": "La tirzepatida activa dos receptores, GIP y GLP-1. La retatrutida activa esos dos más el de glucagón. El glucagón pertenece a la misma familia de receptores pero es otra señal, liberada en el páncreas y no en el intestino."
+        },
+        {
+          "q": "¿Activar tres receptores significa el triple de actividad?",
+          "a": "No. Una molécula puede ser agonista completo en un receptor y parcial en otro, y puede favorecer una vía corriente abajo sobre otra en el mismo receptor. Un recuento de receptores es una etiqueta, no un perfil."
+        },
+        {
+          "q": "¿Por qué la retatrutida no tiene número CAS?",
+          "a": "Un identificador se asigna cuando una sustancia se ha indexado en la literatura química, y la indexación va detrás de la publicación. Un compuesto reciente puede no tenerlo todavía, y eso no es un defecto."
+        },
+        {
+          "q": "¿Es la retatrutida más difícil de verificar que la tirzepatida?",
+          "a": "El contraste público lo es. La tirzepatida tiene CAS y registro en PubChem, así que una masa medida se puede comparar de forma independiente contra una fórmula publicada. En la retatrutida la evidencia de identidad tiene que salir del propio certificado."
+        },
+        {
+          "q": "¿Qué debe mostrar el certificado de cualquiera de las dos?",
+          "a": "Pureza por RP-HPLC con sus condiciones, identidad por espectrometría de masas con masa observada y teórica a la vista, contenido neto de péptido declarado aparte de la pureza cromatográfica, una fecha y un laboratorio nombrado."
+        },
+        {
+          "q": "¿Por qué importa aquí la longitud del péptido?",
+          "a": "Las dos son péptidos largos. Cuanto más larga la síntesis, más ocasiones de que un acoplamiento no termine, y las secuencias de deleción resultantes se diferencian del objetivo en un residuo y salen de la columna pegadas al pico principal."
+        }
+      ],
+      cta: 'Los dos compuestos se envían con certificado de lote. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
+    },
+
+    'ghk-cu-vs-ahk-cu': {
+      title: 'GHK-Cu y AHK-Cu: un residuo de diferencia',
+      metaTitle: 'GHK-Cu vs AHK-Cu: qué cambia un solo residuo',
+      metaDescription: 'Dos tripéptidos de cobre que se diferencian en una posición. Qué cambia eso en el sitio de unión del metal, en la masa y en lo que un certificado debe mostrar.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Glicina o alanina en la primera posición, y todo lo que se sigue de ahí.',
+      imageAlt: 'Dos tripéptidos de cobre que se diferencian en una sola posición, comparados.',
+      body: `
+        <p class="lead">GHK y AHK son tripéptidos que se diferencian en una posición: glicina en el primero, alanina en el segundo. Los dos unen cobre y los dos se venden como el complejo. Un solo grupo metilo es toda la diferencia química, y eso convierte a la pareja en un buen sitio para ver cuánto puede y cuánto no puede hacer un cambio pequeño.</p>
+
+        <h2>Las secuencias</h2>
+        <p>GHK es glicil-histidil-lisina. AHK es alanil-histidil-lisina. La alanina es glicina con un grupo metilo en el carbono alfa, así que los dos péptidos son idénticos salvo por ese añadido en el residuo del extremo N.</p>
+        <p>Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> devuelve C<sub>14</sub>H<sub>24</sub>N<sub>6</sub>O<sub>4</sub> para GHK y C<sub>15</sub>H<sub>26</sub>N<sub>6</sub>O<sub>4</sub> para AHK: un carbono y dos hidrógenos de distancia, unas 14 unidades de masa. Las dos cifras son del péptido libre, sin cobre.</p>
+
+        <h2>Dónde se sienta el cobre</h2>
+        <p>Esta es la parte que la sustitución no cambia, y es la razón de que los dos se comporten como pareja y no como compuestos ajenos. En péptidos de esta forma el cobre lo sujeta un motivo de unión del extremo amino, en el que la amina terminal, el nitrógeno siguiente del esqueleto y el imidazol de la histidina convergen sobre el metal. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Ref.: Harford y Sarkar, 1997)</a> La histidina de la posición dos es la que hace el trabajo estructural, y está en los dos.</p>
+        <p>El trabajo espectroscópico sobre el complejo de cobre de GHK estableció la geometría de ese sitio. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Ref.: Freedman et al., 1982)</a> Lo que el cambio de glicina a alanina añade es un metilo en un carbono contiguo al sitio, no un átomo donador nuevo. Nuestra nota sobre <a href="article/what-are-copper-peptides/">péptidos de cobre</a> cubre la familia.</p>
+
+        <h2>Por qué «GHK-Cu» no es una fórmula</h2>
+        <p>El nombre es una abreviatura, y la abreviatura tapa la pregunta que importa en un certificado. GHK es el tripéptido. GHK-Cu es un complejo de ese tripéptido con cobre, con su propia fórmula, su propia masa, su propio registro en PubChem y su propio número CAS, 89030-95-5.</p>
+        <p>Sobre el papel no son intercambiables. Un certificado que informa la masa del tripéptido libre para un producto vendido como complejo está informando de la molécula equivocada, y se verá del todo normal salvo que sepas cuál de los dos números deberías estar viendo. Lo mismo vale para AHK y AHK-Cu, CAS 682809-81-0. Puedes pasar cualquiera de los dos por el <a href="tools/cas-number-check/">validador del dígito de control</a> y luego buscar el número para leer qué sustancia devuelve.</p>
+
+        <h2>El cobre es además un problema analítico</h2>
+        <p>Un metal unido cambia lo que ven los métodos habituales. En <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> el cobre tiene dos isótopos estables en proporciones apreciables, así que un complejo de cobre da un patrón isotópico claramente distinto del de una molécula orgánica de masa nominal parecida. Ese patrón es evidencia por derecho propio: es difícil de falsificar y fácil de leer.</p>
+        <p>También significa que una masa calculada desde las tres letras de la secuencia no va a coincidir con una medición sobre el complejo, y no debe. Una calculadora que trabaja desde una secuencia de letras no puede ver un metal unido, que es un límite del método y no una discrepancia sobre el compuesto.</p>
+
+        <h2>Qué debe mostrar un certificado de cualquiera de los dos</h2>
+        <p>Qué especie se analizó, dicho de forma explícita: péptido libre o complejo de cobre. Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones escritas. Identidad por una medición de masa, con valores observado y teórico de la especie de la que trate el documento. Contenido de cobre, si el producto es el complejo, porque ésa es la diferencia entre los dos productos y es medible.</p>
+        <p>El contenido neto de péptido importa aquí también, y por un motivo extra. Son péptidos cortos, así que el contraión y el agua absorbida son una porción mayor del polvo de lo que serían en uno largo. Un 99 % de pureza por área sigue sin decir cuánto de la masa pesada es péptido. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> lo cubre.</p>
+
+        <h2>Los péptidos cortos son más fáciles de hacer limpios</h2>
+        <p>Tres residuos son dos acoplamientos. Cada paso es una ocasión de reacción incompleta, así que un tripéptido parte de una posición mucho mejor que un quincemero, y las cifras altas de pureza en compuestos tan cortos son poco llamativas. Nuestra nota sobre <a href="article/peptide-synthesis/">síntesis</a> explica de dónde salen las impurezas.</p>
+        <p>Qué significa eso en la práctica: en un péptido corto la pureza es el número fácil y la identidad es el que vale la pena leer. Un documento que te da el 99 % y ninguna masa te ha dado la mitad fácil.</p>
+
+        <h2>Lo que el metilo no resuelve</h2>
+        <p>Una diferencia de un residuo se lee como una diferencia pequeña en todo, y esa inferencia no se sostiene en ninguna de las dos direcciones. Una sola sustitución junto a un sitio de unión de metal puede cambiar con cuánta fuerza se sujeta el metal, cómo se comporta el complejo a un pH dado y cómo se sitúa la molécula en un disolvente, sin cambiar nada que se vea en una fórmula.</p>
+        <p>También puede no cambiar nada que importe. Cuál de los dos casos es se responde midiendo, no razonando sobre estructuras, y es el tipo de pregunta que una página de catálogo no está en posición de contestar. Lo que un catálogo sí puede declarar es la secuencia, la especie, la masa y el lote, y ése es el límite dentro del que se queda esta página.</p>
+
+        <h2>Leer los dos certificados en paralelo</h2>
+        <p>Si tienes los dos documentos, los campos que deberían diferir son pocos y concretos: la secuencia, la fórmula y la masa, el número CAS, y el contenido de cobre si los dos son complejos. Todo lo demás, desde las condiciones del método hasta la línea de contenido neto y el formato de fecha, debería parecer trabajo del mismo laboratorio.</p>
+        <p>Un par de certificados que difiera en más que eso merece una pregunta. Dos documentos del mismo proveedor para dos compuestos tan emparentados, hechos con plantillas distintas y campos distintos, suele querer decir que vinieron de sitios distintos. No es una acusación: es una observación que cualquiera puede hacer con las dos páginas abiertas, y es de las cosas que solo un par deja ver.</p>
+
+        <h2>Lo que esta comparación no es</h2>
+        <p>No afirma que uno sea mejor y no dice nada de lo que hace cualquiera de los dos en un organismo. La comparación que cabe aquí es entre lo que se puede documentar de cada uno, que es la única que un vendedor puede hacer con honestidad.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Cuál es la diferencia entre GHK-Cu y AHK-Cu?",
+          "a": "El primer residuo. GHK es glicil-histidil-lisina y AHK es alanil-histidil-lisina, y la alanina es glicina con un metilo añadido. Todo lo demás, incluida la histidina que organiza el sitio del cobre, es igual."
+        },
+        {
+          "q": "¿Los dos unen el cobre igual?",
+          "a": "Los dos usan un motivo de unión del extremo amino en el que la amina terminal, el nitrógeno siguiente del esqueleto y el imidazol de la histidina convergen sobre el metal. El cambio de glicina a alanina añade un metilo junto a ese sitio, no un átomo donador nuevo."
+        },
+        {
+          "q": "¿GHK es lo mismo que GHK-Cu?",
+          "a": "No. GHK es el tripéptido libre; GHK-Cu es su complejo con cobre, con otra fórmula, otra masa, otro registro en PubChem y otro número CAS. Un certificado que informa la masa del péptido libre para un producto vendido como complejo describe la especie equivocada."
+        },
+        {
+          "q": "¿Por qué el cobre cambia el espectro de masas?",
+          "a": "El cobre tiene dos isótopos estables en proporciones apreciables, así que un complejo de cobre produce un patrón isotópico claramente distinto del de una molécula orgánica de masa nominal parecida. Ese patrón es evidencia útil por sí solo."
+        },
+        {
+          "q": "¿Por qué una calculadora de secuencia no da la masa de GHK-Cu?",
+          "a": "Porque el cobre no forma parte de la secuencia de letras. Una calculadora que trabaja con tres letras devuelve la masa del tripéptido libre, y el complejo necesariamente difiere."
+        },
+        {
+          "q": "¿Es llamativa una pureza alta en un tripéptido?",
+          "a": "No especialmente. Tres residuos son dos acoplamientos, así que hay muchas menos ocasiones de reacción incompleta que en un péptido largo. En compuestos cortos la pureza es el número fácil y la identidad es el que vale la pena leer."
+        }
+      ],
+      cta: 'Los dos se envían con un certificado de lote que dice qué especie se analizó. <a href="verify/">Comprueba un número de lote</a>.',
+    },
+
+    'bpc-157-vs-ghk-cu': {
+      title: 'BPC-157 y GHK-Cu: dos clases de evidencia',
+      metaTitle: 'BPC-157 vs GHK-Cu: estructura, registros y documentación',
+      metaDescription: 'Un péptido de quince residuos y un tripéptido de cobre comparados por lo documentable: longitud, metal unido, registros públicos y qué exige cada certificado.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Un quincemero y un tripéptido de cobre, y por qué sus papeles no se parecen en nada.',
+      imageAlt: 'Un péptido de quince residuos junto a un tripéptido de cobre, comparados por su documentación.',
+      body: `
+        <p class="lead">A estos dos se los compara porque los dos aparecen en literatura sobre reparación de tejidos, que es una razón para leerlos juntos y una mala razón para tratarlos como alternativas. Químicamente no tienen casi nada en común, y la diferencia se ve mejor que en ningún sitio en lo que su documentación puede y no puede establecer.</p>
+
+        <h2>La longitud, y lo que se sigue de ella</h2>
+        <p>BPC-157 son quince residuos, GEPPPGKPADDAGLV. GHK son tres. En la <a href="article/peptide-length-terminology/">escala de nombres</a> uno es un oligopéptido del extremo largo y el otro un tripéptido, y la distancia no es cosmética.</p>
+        <p>Quince residuos son catorce acoplamientos en la <a href="article/peptide-synthesis/">síntesis</a>; tres son dos. Cada paso es una ocasión de que una reacción no se complete, y el resultado habitual es una secuencia de deleción, una cadena a la que le falta un residuo, que se diferencia del objetivo en un solo aminoácido y sale de la columna casi a la vez. Así que un 99 % en un quincemero representa trabajo real, mientras que la misma cifra en un tripéptido está cerca del punto de partida. Los porcentajes de pureza no son comparables entre longitudes, y eso es lo primero que hay que saber antes de poner dos certificados en paralelo.</p>
+
+        <h2>Uno lleva metal y el otro no</h2>
+        <p>BPC-157 es un péptido a secas. GHK-Cu es un complejo de un péptido con cobre, sujeto por un motivo de unión del extremo amino en el que la amina terminal, el nitrógeno siguiente del esqueleto y el imidazol de la histidina convergen sobre el metal. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Ref.: Harford y Sarkar, 1997)</a></p>
+        <p>Eso les da modos de fallo distintos en un certificado. En BPC-157 la pregunta es si la cadena es la cadena correcta, y una medición de masa la responde. En GHK-Cu hay una pregunta anterior: si el documento trata del tripéptido libre o del complejo de cobre, que tienen fórmulas, masas y números CAS distintos. Un certificado que informa el péptido libre para un producto vendido como complejo describe la especie equivocada y se verá perfectamente corriente. Nuestra nota sobre <a href="article/what-are-copper-peptides/">péptidos de cobre</a> cubre la distinción.</p>
+
+        <h2>Lo que te da el registro público</h2>
+        <p>Los dos tienen registro en PubChem, así que los dos admiten el mismo contraste externo: coges la fórmula del registro, calculas la masa y la comparas contra la masa del certificado. Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> hace la primera mitad desde una secuencia, con la salvedad de que no puede ver un metal unido, así que en GHK-Cu devuelve el tripéptido y no el complejo.</p>
+        <p>Los dos tienen además número CAS, 137525-51-0 y 89030-95-5, que se pueden pasar por el <a href="tools/cas-number-check/">validador del dígito de control</a> y luego buscar. Tener registro público es el caso corriente, no una distinción, y lo que merecería pregunta es su ausencia.</p>
+
+        <h2>En qué se diferencian las dos literaturas</h2>
+        <p>Esto pesa menos para comprar y más para leer, y conviene ser preciso. El sitio de unión del cobre en GHK-Cu está caracterizado estructuralmente, que es una afirmación física concreta y asentada sobre dónde se sienta el metal. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Ref.: Freedman et al., 1982)</a> No dice nada sobre actividad biológica, pero es el tipo de resultado que no hay que volver a discutir.</p>
+        <p>BPC-157 tiene un rastro más largo de trabajo biológico y, en correspondencia, un conjunto más débil de afirmaciones estructurales, con buena parte del material publicado en modelos animales. <a class="cite" href="https://pubmed.ncbi.nlm.nih.gov/8298609/" target="_blank" rel="noopener nofollow">(Ref.: Sikiric et al., 1993)</a> El resumen honesto es que los dos compuestos están documentados de maneras distintas, y que ninguna de las dos clases de documentación te dice qué hay en un vial concreto. Para eso solo habla un certificado de lote.</p>
+
+        <h2>Qué tiene que mostrar cada certificado</h2>
+        <p>En BPC-157: pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con las condiciones escritas, el cromatograma si lo consigues, e identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> con masa observada y teórica. En un péptido tan largo la traza vale más de lo normal, porque enseña dónde está el porcentaje que falta y si está pegado al pico principal.</p>
+        <p>En GHK-Cu: la especie, dicha explícitamente, más contenido de cobre, más los mismos campos de pureza e identidad. El contenido neto de péptido importa en los dos pero muerde más en el tripéptido, donde el contraión y el agua absorbida son una porción mayor del polvo pesado. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> lo cubre.</p>
+
+        <h2>La conservación tampoco es la misma pregunta</h2>
+        <p>Los dos llegan liofilizados y los dos son higroscópicos, así que los dos toman agua del aire en cuanto se abre un vial. Más allá de ahí la comparación deja de ser simétrica: BPC-157 tiene quince residuos de cadena por los que degradarse, y un complejo metálico tiene una variable extra en si el metal sigue unido. Un certificado lleva fecha justamente por esto, y lo que pasa entre esa fecha y tu mesa es una pregunta de conservación y no de papelería. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> expone las rutas.</p>
+
+        <h2>Por qué los dos certificados no se van a parecer</h2>
+        <p>Puestos en paralelo, las diferencias son estructurales y no cosméticas. El documento de BPC-157 debería llevar una historia de impurezas más larga: más picos, una nota sobre dónde están, y una cifra de pureza que se gane sus decimales. El de GHK-Cu debería llevar una declaración de especie y una línea de contenido metálico que no tienen equivalente en la otra página.</p>
+        <p>Ninguna ausencia es un problema en la página que toca. Una línea de cobre que falta en un certificado de BPC-157 es correcta; en uno de GHK-Cu es un hueco. Saber qué campos exige cada compuesto es la mayor parte de lo que consiste en leer un certificado, y es la razón de que una plantilla única para todo un catálogo sea informativa de por sí.</p>
+
+        <h2>Lo que esta comparación no es</h2>
+        <p>No es una recomendación y no afirma nada sobre lo que hace cualquiera de los dos compuestos. Los dos se venden aquí para investigación de laboratorio, y la comparación que un vendedor puede hacer con honestidad es entre lo documentado, no entre resultados.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿BPC-157 y GHK-Cu son alternativas entre sí?",
+          "a": "Aparecen en literatura que se solapa pero son químicamente ajenos: uno es un péptido de quince residuos y el otro un péptido de tres unido a cobre. Tratarlos como sustitutos es leer un tema compartido como un mecanismo compartido."
+        },
+        {
+          "q": "¿Por qué un 99 % de pureza vale más en BPC-157?",
+          "a": "Quince residuos son catorce acoplamientos frente a dos de un tripéptido, y cada paso es una ocasión de reacción incompleta. El mismo porcentaje representa mucho más trabajo en la cadena larga, así que las cifras de pureza no son comparables entre longitudes."
+        },
+        {
+          "q": "¿Qué tiene que declarar de más un certificado de GHK-Cu?",
+          "a": "Qué especie se analizó. El tripéptido libre y el complejo de cobre tienen fórmulas, masas y números CAS distintos, y un documento sobre el equivocado se ve del todo corriente salvo que sepas qué cifra esperar."
+        },
+        {
+          "q": "¿Los dos tienen registros públicos contra los que contrastar?",
+          "a": "Sí. Los dos tienen entrada en PubChem y número CAS, así que una masa medida se puede comparar contra una fórmula publicada al margen del vendedor. Ése es el caso corriente; lo que merecería pregunta es su ausencia."
+        },
+        {
+          "q": "¿Una calculadora de secuencia sirve para los dos?",
+          "a": "Con BPC-157 sirve directamente desde sus quince letras. Con GHK-Cu devuelve el tripéptido libre, porque el cobre no forma parte de una secuencia de letras y ninguna calculadora puede deducirlo."
+        },
+        {
+          "q": "¿La literatura publicada me dice qué hay en mi vial?",
+          "a": "No. El trabajo publicado describe compuestos en general; un certificado de análisis describe un lote. Responden preguntas distintas y solo el segundo trata del material que recibiste."
+        }
+      ],
+      cta: 'Cada compuesto se envía con su propio certificado de lote. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
+    },
+
+    'nad-plus-vs-mots-c': {
+      title: 'NAD+ y MOTS-c: una coenzima y un péptido',
+      metaTitle: 'NAD+ vs MOTS-c: por qué no son la misma categoría',
+      metaDescription: 'Una es una coenzima; el otro, un péptido codificado en la mitocondria. Qué le hace esa diferencia a sus fórmulas y a cómo se verifica cada uno.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'A los dos se los archiva bajo mitocondria. Solo uno de ellos es un péptido.',
+      imageAlt: 'Una coenzima y un péptido codificado en la mitocondria, comparados por categoría y papelería.',
+      body: `
+        <p class="lead">Estos dos acaban en la misma conversación porque de los dos se habla en relación con las mitocondrias. Ahí se acaba el parecido. Una es una coenzima que toda célula ya fabrica; el otro es un péptido codificado en el ADN mitocondrial. Tratarlos como dos opciones del mismo estante es un error de categoría, y se ve enseguida en sus certificados.</p>
+
+        <h2>Dos clases distintas de molécula</h2>
+        <p>NAD+ es nicotinamida adenina dinucleótido, una coenzima construida con una nicotinamida, una adenina, dos ribosas y dos fosfatos. No es un péptido y no tiene secuencia. Es central en la química redox de todo el metabolismo y su recambio es un asunto bien cartografiado. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Ref.: Cantó et al., 2015)</a></p>
+        <p>MOTS-c es un péptido de dieciséis residuos, MRWQEMGYIFYPRKLR, y lo llamativo es dónde está su gen: en el genoma mitocondrial y no en el nuclear, que no era donde se esperaba encontrar péptidos cortos. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Ref.: Lee et al., 2015)</a> Nuestra nota sobre <a href="article/what-is-mots-c/">MOTS-c</a> cuenta el descubrimiento.</p>
+        <p>Así que una es un cofactor de molécula pequeña y el otro un fragmento proteico corto. Casi nada se traslada de uno a otro en lo analítico.</p>
+
+        <h2>Lo que eso le hace a la papelería</h2>
+        <p>Un certificado de péptido y uno de molécula pequeña son documentos distintos que comparten nombre.</p>
+        <p>En MOTS-c la pregunta de identidad es si la cadena es la pretendida, y se responde comparando una masa medida contra una masa calculada desde la secuencia. Nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> devuelve C<sub>101</sub>H<sub>152</sub>N<sub>28</sub>O<sub>22</sub>S<sub>2</sub> para esas dieciséis letras, que coincide con su registro en PubChem, y la pregunta de pureza es sobre subproductos de <a href="article/peptide-synthesis/">síntesis</a> como las secuencias de deleción.</p>
+        <p>En NAD+ no hay secuencia desde la que calcular ni secuencias de deleción que buscar. La identidad descansa en que el compuesto coincida con una referencia conocida, y las impurezas de interés son las especies emparentadas de su propia química, sobre todo su forma reducida y sus productos de degradación. Un certificado que aplica vocabulario de péptidos a NAD+ se ha sacado de la plantilla equivocada.</p>
+
+        <h2>Dos metioninas, y por qué solo uno las tiene</h2>
+        <p>MOTS-c lleva dos residuos de metionina, y la metionina se oxida. Cada oxidación añade dieciséis unidades de masa, lo bastante grande para verse en un espectro y lo bastante pequeño para pasar desapercibido si nadie lo busca, así que la fracción oxidada es algo concreto que preguntar sobre este compuesto.</p>
+        <p>NAD+ no tiene metionina ni esa ruta. Su pregunta de estabilidad es otra: es sensible a su propia química, no a la oxidación de cadenas laterales. El principio general sobrevive a la diferencia, y es que los dos llevan fecha en su certificado porque un resultado pertenece a un momento, y los dos se degradan por rutas que avanzan con el tiempo y la temperatura. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre el lado de los péptidos.</p>
+
+        <h2>Registros públicos</h2>
+        <p>Los dos están bien indexados. NAD+ es CAS 53-84-9 con PubChem CID 5892; MOTS-c es CAS 1627580-64-6 con su propio registro. Cualquiera de los dos números se puede pasar por el <a href="tools/cas-number-check/">validador del dígito de control</a> y luego buscar para leer qué sustancia devuelve.</p>
+        <p>NAD+ es con mucho el más antiguo y mejor documentado de los dos, que es lo que cabe esperar de una coenzima descrita hace décadas al lado de un péptido reportado en 2015. La profundidad de la literatura es una propiedad de la historia de un compuesto, no una medida del cuidado con el que se hizo un lote concreto.</p>
+
+        <h2>Escalas de masa distintas, expectativas distintas</h2>
+        <p>NAD+ ronda los 663 g/mol; MOTS-c anda por 2174. Un orden de magnitud de diferencia cambia lo que puede resolver una medición de masa. En una molécula del tamaño de NAD+, un espectrómetro distingue especies que se diferencian en un átomo con holgura. En un péptido de dieciséis residuos el grupo isotópico es lo bastante ancho como para que haya que declarar la distinción entre masa monoisotópica y media, o dos cifras correctas van a parecer una discrepancia.</p>
+        <p>Ésta es la razón práctica de que un certificado deba nombrar su método e informar valores observado y teórico en lugar de un veredicto. Nuestra nota sobre <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> cubre la comparación.</p>
+
+        <h2>La solubilidad es una conversación aparte para cada uno</h2>
+        <p>Un péptido de dieciséis residuos tiene una carga neta que se mueve con el pH, y la solubilidad suele estar en su mínimo cerca del pH donde esa carga se anula. Nuestra <a href="tools/peptide-isoelectric-point/">calculadora de punto isoeléctrico</a> devuelve esa cifra desde la secuencia, con la salvedad de que es teórica y de que nombra el juego de pKa que usó.</p>
+        <p>NAD+ tiene fosfatos ionizables y se comporta de forma bastante distinta, y nada del razonamiento de péptidos se traslada. Se menciona aquí solo para dejar el punto de que dos compuestos archivados bajo un mismo epígrafe pueden exigir manejos del todo separados, y que el epígrafe no es lo que te lo dice.</p>
+
+        <h2>Por qué se emparejan siquiera</h2>
+        <p>De los dos se habla en relación con la función mitocondrial, y esa única palabra compartida hace mucho trabajo en cómo se organizan los catálogos. Conviene separar dos sentidos. NAD+ participa directamente en la química redox que llevan las mitocondrias; su relación es química e inmediata. MOTS-c está relacionado por origen, porque la secuencia se transcribe desde ADN mitocondrial.</p>
+        <p>Una molécula es parte de la maquinaria y el otro sale del plano. Ninguna relación implica la otra, y una etiqueta de estante que los junta está organizando por tema, no por mecanismo. Para leer es inofensivo; para decidir qué debe contener un certificado es toda la diferencia.</p>
+
+        <h2>Qué debe mostrar un certificado de cualquiera</h2>
+        <p>Pureza con método nombrado y sus condiciones, identidad como medición y no como palabra, una fecha, un laboratorio nombrado, y un número de lote que coincida con el vial. Eso es común a los dos. Lo que cambia es el vocabulario: el contenido neto de péptido y las secuencias de deleción tienen sentido en MOTS-c y no lo tienen en NAD+, mientras que NAD+ necesita su propio perfil de sustancias emparentadas. Nuestro <a href="article/certificate-of-analysis-glossary/">glosario</a> define los campos.</p>
+
+        <h2>Lo que esta comparación no es</h2>
+        <p>No es una elección entre dos cosas que hacen el mismo trabajo, porque no están en la misma categoría. Los dos se venden aquí para investigación de laboratorio, y la única comparación que hay es de lo que se puede documentar de cada uno.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿NAD+ es un péptido?",
+          "a": "No. Es una coenzima construida con una nicotinamida, una adenina, dos ribosas y dos fosfatos. No tiene secuencia de aminoácidos, y por eso los campos de certificado propios de péptidos no se le aplican."
+        },
+        {
+          "q": "¿Qué tiene MOTS-c de inusual?",
+          "a": "Su gen está en el genoma mitocondrial y no en el nuclear. No se esperaba que hubiera péptidos cortos codificados ahí, y eso es lo que hizo notable el trabajo de 2015."
+        },
+        {
+          "q": "¿Por qué sus certificados no se parecen?",
+          "a": "Porque las preguntas difieren. Un certificado de péptido pregunta si la cadena es la pretendida e informa subproductos de síntesis como las secuencias de deleción. Uno de molécula pequeña informa sustancias emparentadas de la propia química del compuesto. Vocabulario de péptidos aplicado a NAD+ significa que se usó la plantilla equivocada."
+        },
+        {
+          "q": "¿Por qué importan las dos metioninas de MOTS-c?",
+          "a": "La metionina se oxida, y cada oxidación añade dieciséis unidades de masa. Es lo bastante grande para verse en un espectro y lo bastante pequeño para pasar desapercibido si nadie lo busca, así que la fracción oxidada es algo concreto que preguntar sobre este compuesto."
+        },
+        {
+          "q": "¿Que NAD+ tenga más literatura significa que está mejor hecho?",
+          "a": "No. La profundidad del trabajo publicado refleja la historia de un compuesto, no el cuidado puesto en un lote concreto. De lo segundo solo habla un certificado de lote."
+        },
+        {
+          "q": "¿Puedo usar una calculadora de secuencia con los dos?",
+          "a": "Solo con MOTS-c. Una calculadora de secuencia trabaja con letras de aminoácido, y NAD+ no tiene ninguna, así que su fórmula y su masa salen de su registro químico."
+        }
+      ],
+      cta: 'Cada compuesto se envía con su propio certificado de lote. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
+    },
+
+    'how-codex-verifies-a-batch': {
+      title: 'Cómo un lote recibe su número y su papelería',
+      metaTitle: 'Cómo verifica Codex un lote: numeración y documentos',
+      metaDescription: 'Qué significa el número de lote de un vial de Codex, qué contiene su certificado, qué confirma la búsqueda y las tres cosas que no puede confirmar.',
+      category: 'Guía de compra',
+      date: '02 oct 2026',
+      excerpt: 'Para qué sirve el número de la etiqueta, y las tres cosas que no demuestra.',
+      imageAlt: 'Cómo se asigna un número de lote y qué prueba, y qué no, su papelería.',
+      body: `
+        <p class="lead">Esto describe nuestro propio proceso, lo que la convierte en la única página del sitio donde el sujeto somos nosotros y no el método. Está escrita con el mismo criterio que le exigimos a un certificado: todo lo que se afirma aquí se puede comprobar, y los límites se exponen con la misma claridad que las capacidades.</p>
+
+        <h2>El número de la etiqueta</h2>
+        <p>Cada vial lleva un número de lote con el formato CDX-NNNN, por ejemplo CDX-1017, impreso bajo el nombre del compuesto. El mismo número aparece en el certificado de análisis de ese lote.</p>
+        <p>Ese par que coincide es todo el mecanismo. Un certificado describe un lote, así que un documento cuyo número no coincide con tu etiqueta describe otro material, y nada de lo que diga viene al caso. Es la primera comprobación de nuestra <a href="article/verifying-a-peptide-supplier-checklist/">lista de verificación de proveedor</a> justamente por eso, y la razón nos aplica a nosotros igual que a cualquiera.</p>
+
+        <h2>Quién hace los análisis</h2>
+        <p>Un laboratorio independiente, contratado y pagado por nosotros, que cubre pureza por HPLC e identidad por espectrometría de masas en cada lote. No analizamos nuestro propio material para luego informar sobre él.</p>
+        <p>La distinción merece decirse porque «analizado» y «viene con análisis» son afirmaciones distintas, y en la distancia entre las dos vive buena parte del marketing impreciso de este sector. Pagar el análisis en vez de heredarlo es lo que pone un número de lote en el documento y no una etiqueta de muestra.</p>
+        <p>La independencia es el sentido del montaje. Un certificado es una afirmación de quien lo emite, así que un laboratorio sin interés en la venta es lo que separa a quien hace la afirmación de quien cobra por el producto. Un lote sin esa documentación no se lista.</p>
+
+        <h2>Qué hace la búsqueda</h2>
+        <p>Meter un número en <a href="verify/">la búsqueda</a> confirma tres cosas: que el número existe en nuestros registros, a qué compuesto y presentación corresponde, y qué análisis se corrieron sobre ese lote.</p>
+        <p>Es una comprobación de trazabilidad. La evidencia de fondo es el certificado en sí, que enviamos completo si se pide, también antes de que hayas encargado nada.</p>
+
+        <h2>Tres cosas que la búsqueda no hace</h2>
+        <p><b>No analiza tu vial.</b> Ninguna búsqueda puede. Te dice qué dicen los registros sobre un lote; si el polvo que tienes delante es de ese lote es una pregunta que solo responde un análisis de ese polvo. Esto vale para la página de verificación de cualquier proveedor, la nuestra incluida.</p>
+        <p><b>No demuestra que el material siga igual.</b> Un certificado lleva fecha porque un resultado pertenece a un momento. Los péptidos se degradan por rutas que avanzan con el tiempo y la temperatura, y lo que pasó entre la fecha del análisis y tu mesa es cuestión de manejo. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas.</p>
+        <p><b>No sustituye a leer el certificado.</b> Un resumen dice que se corrieron análisis. El documento dice qué encontraron, con qué método y en qué fecha. Son cantidades distintas de información, y nuestra <a href="article/how-to-read-a-certificate-of-analysis/">guía para leer uno</a> va campo por campo.</p>
+
+        <h2>Qué debe contener el certificado</h2>
+        <p>Los mismos campos que te decimos que le exijas a cualquiera. Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones, porque la columna y el gradiente cambian el número. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, con masa observada y teórica a la vista en lugar de un veredicto. Una fecha. Un laboratorio nombrado. El número de lote.</p>
+        <p>Cuando un compuesto tiene registro público hay además una comprobación que no nos involucra en absoluto: coge la fórmula de PubChem, calcula la masa con nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> o con cualquier otra, y compárala contra la cifra medida del documento. Un vendedor que te pide que confíes en él en vez de enseñarte cómo comprobar está pidiendo lo que no toca.</p>
+
+        <h2>Por qué publicamos comprobaciones que se pueden usar contra nosotros</h2>
+        <p>La <a href="tools/coa-checklist/">lista</a> y el <a href="tools/cas-number-check/">validador de CAS</a> funcionan sobre la papelería de cualquier proveedor, la nuestra incluida. La generosidad no tiene nada que ver: ésa es la única versión de este argumento que se sostiene. Una afirmación de verificación hecha por un vendedor vale lo que el comprador pueda confirmar por su cuenta, así que publicar el método es la afirmación.</p>
+        <p>Además fija un listón que luego tenemos que cumplir. Si un documento nuestro suspende una comprobación de nuestra propia página, eso es un problema real para nosotros, que es el sentido de ponerlo por escrito.</p>
+
+        <h2>Lo que un número de lote no es</h2>
+        <p>Es un identificador, no una nota. CDX-1017 dice de qué tirada de producción salió un vial y nada sobre lo buena que fue esa tirada, igual que un número CAS identifica una sustancia sin describir una muestra de ella. Nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a> hace la misma distinción un nivel más arriba.</p>
+        <p>La numeración secuencial tampoco lleva información sobre calidad ni sobre edad por sí sola. Un número más bajo es un lote anterior, que es un hecho cronológico. Si un lote anterior sigue en las cifras de su certificado es una pregunta de conservación, y la fecha del documento es lo que te permite hacerla.</p>
+
+        <h2>Dónde tiene que aparecer el número</h2>
+        <p>En tres sitios, y los tres tienen que coincidir: la etiqueta del vial, el certificado y nuestros registros. Dos de tres no es un aprobado. Una etiqueta y un certificado que coinciden entre sí pero no corresponden a nada en ningún registro es la situación que la numeración de lotes existe para hacer visible, y por eso la búsqueda es un paso aparte y no un trámite.</p>
+        <p>Nuestra nota sobre <a href="article/documents-that-accompany-a-peptide-batch/">los documentos que acompañan a un lote</a> expone qué establece cada uno por su cuenta.</p>
+
+        <h2>Si un número no resuelve</h2>
+        <p>Comprueba primero el tecleo: el formato son tres letras, un guion y cuatro dígitos. Si sigue sin salir, mándanos una foto de la etiqueta y lo rastreamos. Un número que no está en nuestros registros no es un lote nuestro, y preferimos saberlo.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué formato tiene un número de lote de Codex?",
+          "a": "CDX-NNNN, por ejemplo CDX-1017, impreso en la etiqueta del vial bajo el nombre del compuesto. El mismo número aparece en el certificado de análisis de ese lote."
+        },
+        {
+          "q": "¿Quién hace los análisis de un lote de Codex?",
+          "a": "Un laboratorio independiente que contratamos y pagamos, que cubre pureza por HPLC e identidad por espectrometría de masas en cada lote. No analizamos nuestro propio material para luego informar sobre él."
+        },
+        {
+          "q": "¿Qué confirma exactamente la búsqueda de lote?",
+          "a": "Que el número existe en nuestros registros, a qué compuesto y presentación corresponde, y qué análisis se corrieron sobre ese lote. Es una comprobación de trazabilidad; la evidencia es el certificado en sí."
+        },
+        {
+          "q": "¿Puedo ver el certificado antes de encargar?",
+          "a": "Sí. Pídelo con un número de lote, o con el nombre del compuesto si aún no has encargado, y enviamos el documento completo."
+        },
+        {
+          "q": "¿Una búsqueda con éxito demuestra que mi vial es auténtico?",
+          "a": "Demuestra que el número pertenece a un lote real nuestro y dice cuál fue ese lote. Si el polvo que tienes delante salió de ese lote es una pregunta que solo responde un análisis de ese polvo, y eso vale para la página de verificación de cualquier proveedor."
+        },
+        {
+          "q": "¿Por qué publicar comprobaciones que se pueden usar contra Codex?",
+          "a": "Porque una afirmación de verificación hecha por un vendedor vale solo lo que un comprador pueda confirmar por su cuenta. Publicar el método es la afirmación, y fija un listón que luego tenemos que cumplir."
+        }
+      ],
+      cta: '<a href="verify/">Busca un número de lote</a>, o pide el certificado completo antes de encargar.',
+    },
+
+    'why-peptide-prices-differ': {
+      title: 'Por qué dos viales del mismo péptido cuestan distinto',
+      metaTitle: 'Por qué varían tanto los precios de los péptidos',
+      metaDescription: 'Contenido neto de péptido, longitud de la síntesis, tamaño de lote y si alguien pagó los análisis. Qué hay de verdad detrás de una diferencia de precio.',
+      category: 'Guía de compra',
+      date: '02 oct 2026',
+      excerpt: 'Cuatro razones reales, y por qué los miligramos de la etiqueta no son la unidad que compras.',
+      imageAlt: 'Qué hay detrás de una diferencia de precio entre dos viales con etiquetas idénticas.',
+      body: `
+        <p class="lead">Dos fichas, el mismo compuesto, los mismos miligramos declarados, y una diferencia de precio de tres o cuatro veces. Parte de esa diferencia es margen y parte es real. Éstas son las partes que son reales, y conviene conocerlas porque además te dicen qué preguntar.</p>
+
+        <h2>Los miligramos de la etiqueta no son miligramos de péptido</h2>
+        <p>Es el factor más grande y el menos visible. El material purificado por fase reversa se aísla como sal, normalmente trifluoroacetato, y el polvo liofilizado además retiene agua absorbida. Las dos cosas añaden peso sin añadir péptido.</p>
+        <p>Así que «10 mg» puede querer decir diez miligramos de polvo, del que la fracción de péptido ronde el ochenta y pico por ciento, o diez miligramos de péptido con la sal encima. Son productos distintos con la misma etiqueta. La cifra que lo resuelve es el contenido neto de péptido, que es una línea aparte de la pureza cromatográfica: la pureza habla de los picos detectados, el contenido neto de la masa pesada. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> cubre el resto.</p>
+        <p>Un vial que parece un treinta por ciento más barato y no informa contenido neto puede estar al mismo precio por miligramo de péptido real, o más caro. Sin esa línea no se puede saber, que es justo el punto.</p>
+
+        <h2>La longitud, y el coste del último puñado de puntos</h2>
+        <p>Cada residuo de una <a href="article/peptide-synthesis/">síntesis</a> es un acoplamiento, y cada acoplamiento puede no completarse. El fallo habitual da una secuencia de deleción, una cadena a la que le falta un residuo, que se diferencia del objetivo en un solo aminoácido y sale de la columna casi a la vez.</p>
+        <p>Separar eso del producto es donde vive el coste de purificación, y no es lineal. Llevar una mezcla cruda al 95 % es rutina; llevar ese mismo material del 95 al 99 puede significar descartar buena parte de lo que hiciste. Así que un péptido largo con una cifra alta de pureza es caro por razones que nada tienen que ver con la marca, y uno corto con la misma cifra no lo es. Los porcentajes de pureza no son comparables entre longitudes, algo que nuestra nota sobre <a href="article/peptide-length-terminology/">longitud de péptidos</a> pone en contexto.</p>
+
+        <h2>Alguien pagó el análisis</h2>
+        <p>La HPLC y la espectrometría de masas son tiempo de instrumento, y analizar por lote significa pagarlo en cada lote en lugar de una vez sobre uno representativo. Un certificado genérico sale más barato porque se produce una sola vez.</p>
+        <p>Eso aparece directamente en el precio, y es la diferencia que estás viendo cuando un proveedor te puede dar un documento con tu número de lote y otro te da un ejemplar de muestra. Nuestra nota sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> cubre la distinción entre una especificación y un resultado.</p>
+
+        <h2>El tamaño del lote mueve el número en los dos sentidos</h2>
+        <p>Los costes fijos por lote se reparten entre más viales, así que una tirada mayor sale más barata por unidad. Es aritmética de fabricación corriente y juega a favor del comprador.</p>
+        <p>También pone un suelo a lo que puede costar el material de lote pequeño, algo que conviene recordar cuando un precio parece inverosímil y no meramente bajo. Un precio muy por debajo de lo que costarían la química más los análisis es información, aunque la versión honesta de esa observación es que da motivo para preguntar qué se saltó, no para concluir qué se saltó.</p>
+
+        <h2>El envío y la conservación también son precio</h2>
+        <p>Los péptidos liofilizados se envían en frío y se guardan en frío, y las dos cosas cuestan dinero que aterriza en algún punto de la cifra que ves. Un vendedor que envía desde stock local ya pagó por mantener ese stock en condición; uno que hace envío directo desde el extranjero no, y la diferencia aparece como un precio menor y un viaje más largo y menos controlado.</p>
+        <p>Ninguno de los dos montajes está mal, y la pregunta pertinente es cuál estás comprando. La degradación avanza con el tiempo y la temperatura, así que un vial más barato que pasó tres semanas en tránsito a temperatura ambiente es otro producto que el mismo vial guardado en frío, aun con certificados idénticos. El certificado lleva fecha por esto. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas.</p>
+
+        <h2>Lo que no es una razón</h2>
+        <p>Tres cosas se meten en el precio sin tener que estar.</p>
+        <p>Un <b>número CAS</b> no encarece la fabricación de un compuesto. Es una entrada de índice, asignada cuando una sustancia se cataloga, y nuestro <a href="tools/cas-number-check/">validador</a> más una búsqueda es todo lo que hace falta para comprobar uno.</p>
+        <p>La <b>profundidad de la literatura publicada</b> es una propiedad de la historia de un compuesto. Uno descrito hace décadas y uno reportado hace poco pueden costar lo mismo de sintetizar.</p>
+        <p>El <b>peso molecular</b> por sí solo dice poco. Una molécula pesada no es automáticamente más difícil de hacer que una ligera; lo que pesa es el número de acoplamientos y la dificultad de la purificación, y eso no se sigue de la masa.</p>
+
+        <h2>Qué significa esto al comparar dos fichas</h2>
+        <p>La unidad comparable son miligramos de péptido, no de polvo, y no se puede calcular sin una cifra de contenido neto. Así que la primera pregunta ante una ficha barata no es «por qué tan barato» sino «cuál es el contenido neto de péptido, y de qué lote».</p>
+        <p>Después, pregunta si el certificado lleva tu número de lote, si hay un método al lado de cada cifra y si informa identidad además de pureza. Nuestra <a href="tools/coa-checklist/">lista</a> son esas siete comprobaciones en un formato que puedes ir marcando. Un proveedor que responde a todas y aun así es más caro te ha dicho adónde se fue el dinero.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Por qué varía tanto el precio de los péptidos de investigación de un mismo compuesto?",
+          "a": "Sobre todo por el contenido neto de péptido, la longitud de la síntesis, si se pagaron análisis por lote y el tamaño del lote. El primero es el mayor y el menos visible, porque los miligramos de una etiqueta son miligramos de polvo y no de péptido."
+        },
+        {
+          "q": "¿Qué es el contenido neto de péptido y por qué afecta al precio?",
+          "a": "La proporción del polvo pesado que es péptido y no contraión ni agua absorbida. Un vial que no informa contenido neto no se puede comparar por precio por miligramo de péptido, que es la unidad que de verdad compras."
+        },
+        {
+          "q": "¿Por qué la longitud del péptido cambia el coste?",
+          "a": "Cada residuo es un acoplamiento que puede fallar, y eso produce secuencias de deleción difíciles de separar. Pasar del 95 al 99 % de pureza puede significar descartar buena parte de lo hecho, y ese coste sube con la longitud."
+        },
+        {
+          "q": "¿Analizar por lote encarece un producto?",
+          "a": "Sí. Analizar cada lote significa pagar tiempo de instrumento en cada uno, en lugar de una vez sobre una tirada representativa. Esa diferencia se ve como la distancia entre un certificado con tu número de lote y un documento de muestra."
+        },
+        {
+          "q": "¿Tener número CAS encarece un compuesto?",
+          "a": "No. Un número CAS es una entrada de índice que se asigna cuando una sustancia se cataloga. No dice nada sobre lo difícil que es sintetizar o purificar el compuesto."
+        },
+        {
+          "q": "¿Un precio muy bajo prueba que se saltaron algo?",
+          "a": "Da motivo para preguntar, no para concluir. Las preguntas útiles son cuál es el contenido neto de péptido y si el certificado lleva tu número de lote."
+        }
+      ],
+      cta: 'Pide el contenido neto de péptido y el certificado de tu lote antes de comparar precios. <a href="catalog/">Ver el catálogo</a>.',
+    },
+
+    'buy-research-peptides-usa': {
+      title: 'Comprar péptidos de investigación en Estados Unidos',
+      metaTitle: 'Comprar péptidos de investigación en EE. UU.: stock y COA',
+      metaDescription: 'Stock y envío domésticos dentro de EE. UU., checkout con tarjeta o cripto sin pasar por mensajería, y cómo comprobar el certificado del lote antes de pagar.',
+      category: 'Guía de compra',
+      date: '02 oct 2026',
+      excerpt: 'Stock doméstico, checkout sin mensajería y qué comprobar antes de pagar.',
+      imageAlt: 'Comprar péptidos de investigación en Estados Unidos: stock, pago y verificación.',
+      body: `
+        <p class="lead">Comprar dentro de EE. UU. plantea tres preguntas prácticas que nada tienen que ver con la química: desde dónde sale el material, si hay que hablar con alguien para encargar, y qué puedes comprobar antes de pagar. Así funciona cada una aquí.</p>
+
+        <h2>Stock doméstico, no un envío transfronterizo</h2>
+        <p>Tenemos stock en Estados Unidos y enviamos desde ahí dentro del país. Eso importa menos por la velocidad que por la condición: un paquete doméstico pasa días en tránsito y no semanas, y no se queda en una cola de aduana a la temperatura que haya en esa cola.</p>
+        <p>Los péptidos liofilizados se degradan por rutas que avanzan con el tiempo y la temperatura, así que el tránsito no es un periodo neutro. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Un certificado lleva fecha porque un resultado pertenece a un momento, y el viaje entre esa fecha y tu mesa es parte de lo que compras aunque no figure en ningún documento. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre la química.</p>
+        <p>La versión práctica: una ficha más barata porque hace envío directo desde el extranjero vende otro montaje logístico, no solo otro precio. Conviene saber cuál estás mirando.</p>
+
+        <h2>No hace falta escribirle a nadie para encargar</h2>
+        <p>El checkout corre en este sitio, con tarjeta o con criptomoneda, y no hay ningún paso de mensajería obligatorio para comprar. Lo mencionamos porque pedirle al comprador que se mueva a una aplicación de chat antes de poder pagar es frecuente en esta categoría, y vale la pena decir explícitamente que aquí no funciona así.</p>
+        <p>El soporte por WhatsApp existe y es 1 a 1, para preguntas y para pedir un certificado completo. Es un canal de soporte, no un checkout.</p>
+
+        <h2>Qué comprobar antes de pagar</h2>
+        <p>Todo lo de nuestra <a href="article/verifying-a-peptide-supplier-checklist/">lista de verificación de proveedor</a> se puede hacer antes de mover dinero, y nada de ello exige confiar en nosotros. La versión corta:</p>
+        <p>Pide el certificado <b>del lote que vas a recibir</b>, no un documento de muestra. Comprueba que hay un método al lado de cada cifra, que hay fecha y que se informa identidad además de pureza. Comprueba que el contenido neto de péptido está declarado aparte de la pureza cromatográfica, porque ésa es la diferencia entre miligramos de polvo y miligramos de péptido.</p>
+        <p>También puedes comprobar sin nosotros. Coge el número CAS, pásalo por el <a href="tools/cas-number-check/">validador del dígito de control</a>, búscalo y lee qué sustancia devuelve. Coge la fórmula del registro público, calcula la masa con nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> y compárala contra la cifra del certificado. La <a href="tools/coa-checklist/">lista interactiva</a> funciona sobre la papelería de cualquiera, la nuestra incluida.</p>
+
+        <h2>Números de lote y la búsqueda</h2>
+        <p>Cada vial lleva un número con el formato CDX-NNNN bajo el nombre del compuesto, y el mismo número aparece en el certificado de ese lote. La <a href="verify/">búsqueda</a> confirma que el número existe en nuestros registros, de qué compuesto y presentación se trata, y qué análisis se corrieron.</p>
+        <p>Es una comprobación de trazabilidad y no un análisis de tu vial, y <a href="article/how-codex-verifies-a-batch/">la página sobre nuestro proceso</a> es explícita sobre lo que no establece.</p>
+
+        <h2>Precio por miligramo de péptido, no por vial</h2>
+        <p>La comparación que importa entre fichas estadounidenses es el precio por miligramo de <em>péptido</em>, y la etiqueta de un vial no te lo da. El polvo purificado por fase reversa se aísla como sal y el polvo liofilizado retiene agua absorbida, así que parte del peso declarado no es ninguna de las dos cosas.</p>
+        <p>El contenido neto de péptido es la línea que lo resuelve, y es distinta de la pureza cromatográfica: la pureza describe los picos detectados, el contenido neto describe la masa pesada. Una ficha un treinta por ciento más barata sin cifra de contenido neto puede estar al mismo precio por miligramo de péptido o peor, y desde la página no hay forma de saberlo. Nuestra nota sobre <a href="article/why-peptide-prices-differ/">por qué varían los precios</a> recorre las cuatro razones reales.</p>
+
+        <h2>Uso en investigación, y por qué lo dicen las etiquetas</h2>
+        <p>Todo lo que se vende aquí es para investigación y desarrollo de laboratorio. Eso no es un descargo pegado al final: determina qué publica y qué no publica este sitio. No damos volúmenes de reconstitución, dosis, pautas de administración ni nada más que solo tendría sentido para su uso en una persona, y por mucho que se pida eso no cambia.</p>
+        <p>La otra cara es que todo lo que <em>sí</em> es verificable se publica entero, y por eso las herramientas y las listas son gratis y funcionan también sobre los documentos de la competencia.</p>
+
+        <h2>Dos mercados, un solo criterio</h2>
+        <p>También enviamos en Panamá, desde stock que tenemos allí, y la documentación es la misma en los dos sitios: la misma numeración de lotes, los mismos campos de certificado, la misma búsqueda. Nuestra nota sobre <a href="article/buy-research-peptides-panama/">comprar en Panamá</a> cubre lo que cambia, que son tiempos de entrega y pago local, nada del material.</p>
+        <p>Vale la pena decirlo porque un proveedor con criterios distintos por mercado es un patrón real, y la forma en que suele verse es en la papelería y no en la ficha de producto: un certificado por lote en un país y un documento de muestra en el otro. Un comprador de cualquiera de los dos mercados puede pedir el documento del otro y comparar.</p>
+
+        <h2>Qué se envía y qué aspecto tiene</h2>
+        <p>Los viales van sellados y etiquetados con compuesto, presentación y número de lote, en embalaje protector y con seguimiento hasta la entrega. La etiqueta es un documento por derecho propio: es lo que ata un certificado a un objeto que puedes sostener, y sin número de lote la papelería describe material en abstracto. Nuestra nota sobre <a href="article/documents-that-accompany-a-peptide-batch/">los documentos que acompañan a un lote</a> expone qué prueba cada uno.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Envían péptidos de investigación dentro de Estados Unidos?",
+          "a": "Sí, desde stock doméstico que tenemos en EE. UU. Eso deja el tránsito en días y no en semanas y evita una cola de aduana, lo que importa porque la degradación avanza con el tiempo y la temperatura."
+        },
+        {
+          "q": "¿Tengo que escribir por WhatsApp para encargar?",
+          "a": "No. El checkout corre en el sitio con tarjeta o criptomoneda y no hay paso de mensajería obligatorio. WhatsApp es un canal de soporte 1 a 1 para preguntas y para pedir un certificado completo."
+        },
+        {
+          "q": "¿Puedo ver el certificado de análisis antes de pagar?",
+          "a": "Sí. Pide el certificado del lote que vas a recibir, no un documento de muestra, y lo enviamos completo."
+        },
+        {
+          "q": "¿Cómo compruebo a un proveedor sin tener que confiar en él?",
+          "a": "Pasa el número CAS por un validador de dígito de control y búscalo. Coge la fórmula del registro público, calcula la masa y compárala contra el certificado. Esas comprobaciones no involucran a nadie más que a ti."
+        },
+        {
+          "q": "¿Qué aspecto tiene el número de lote?",
+          "a": "CDX-NNNN, impreso bajo el nombre del compuesto en la etiqueta del vial, y el mismo número aparece en el certificado de análisis de ese lote."
+        },
+        {
+          "q": "¿Por qué este sitio no publica pautas de reconstitución ni de dosis?",
+          "a": "Porque todo lo que se vende aquí es para investigación y desarrollo de laboratorio. Los volúmenes de reconstitución y las pautas de dosis solo tienen sentido para el uso en una persona, así que no se publican lo pida quien lo pida."
+        }
+      ],
+      cta: 'Pide el certificado de cualquier lote antes de encargar, o <a href="catalog/">mira qué hay en stock</a>.',
+    },
+
+    'research-peptide-cold-chain': {
+      title: 'La cadena de frío y el hueco que ningún certificado cubre',
+      metaTitle: 'Cadena de frío en péptidos: envío, tránsito y calor',
+      metaDescription: 'Un certificado describe un lote en una fecha. Lo que pasa entre esa fecha y tu mesa es tránsito, y no lo cubre ningún documento. Qué preguntar en su lugar.',
+      category: 'Guía de compra',
+      date: '02 oct 2026',
+      excerpt: 'El único tramo de la vida de un vial que ningún papel describe.',
+      imageAlt: 'El hueco de tránsito entre la fecha de un certificado y el vial en tu mesa.',
+      body: `
+        <p class="lead">Un certificado de análisis lleva fecha, y esa fecha es anterior a que se empaquetara el vial. Todo lo que viene después, el almacén, el transportista, la cola de aduana y el portal de tu casa, ocurre sin documentación. Es el único tramo de la vida de un vial que ningún papel cubre, y en un clima cálido no es corto.</p>
+
+        <h2>Por qué tiempo y temperatura son la misma variable</h2>
+        <p>Los péptidos se degradan por rutas químicas conocidas, y las que importan son química corriente: hidrólisis del esqueleto, oxidación de cadenas laterales susceptibles, desamidación de asparagina y glutamina. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Todas avanzan más rápido cuanto más calor hace, así que una semana a 30 °C no equivale a una semana a 4 °C.</p>
+        <p>Por eso un resultado pertenece a un momento. Un certificado que informa 99,2 % describe un lote el día en que se midió, y sigue siendo cierto sobre ese día pase lo que pase después. El documento no está mal. Trata de una medición, no del tránsito. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas con más detalle.</p>
+
+        <h2>La liofilización compra tiempo, no inmunidad</h2>
+        <p>La liofilización quita casi toda el agua, y el agua participa en varias de las rutas de degradación, así que un sólido seco es bastante más estable que el mismo péptido en disolución. Ésa es toda la razón de enviar polvo.</p>
+        <p>Lo que no hace es parar el reloj. Una torta liofilizada es <a href="article/lyophilization-freeze-drying/">higroscópica</a>, y va a tirar de humedad del aire a través de cualquier sellado imperfecto. En un clima cálido y húmedo a la vez, los dos factores se suman: más agua disponible y más energía para empujar las reacciones que esa agua permite.</p>
+
+        <h2>Dónde se abre el hueco</h2>
+        <p>En tres sitios, por orden aproximado de cuánto tiempo suponen.</p>
+        <p><b>El tránsito de larga distancia.</b> Un paquete que cruza fronteras pasa de días a semanas moviéndose, y la mayor parte de ese tiempo no va refrigerado por mucho que lo pida la etiqueta. La diferencia entre un envío doméstico y uno internacional es sobre todo duración, y la duración es la variable.</p>
+        <p><b>La retención en aduana.</b> Una espera impredecible en condiciones que nadie controla ni registra. Ésta es la parte que vuelve difícil de razonar una llegada transfronteriza: la duración no se puede saber de antemano.</p>
+        <p><b>La última milla.</b> Un paquete en un portal toda una tarde al sol puede alcanzar una temperatura mayor que nada de lo anterior del viaje, y es el tramo sobre el que el vendedor tiene menos control y el comprador más.</p>
+
+        <h2>Qué cambia enviar desde stock local</h2>
+        <p>Quita los dos primeros. El material guardado en el país y enviado dentro de él llega en días, sin cola de aduana, lo que significa que el tramo sin documentar es corto y razonablemente predecible en lugar de largo e imposible de saber.</p>
+        <p>No quita el tercero, y no vuelve el material inmune a nada. Lo que hace es encoger la parte de la historia de un vial que ningún documento describe, que es una afirmación más pequeña que «cadena de frío garantizada» y bastante más exacta.</p>
+
+        <h2>Por qué el problema es más agudo en clima cálido</h2>
+        <p>La velocidad depende de la temperatura, así que el mismo viaje cuesta más en Panamá que en un país templado, y los dos tramos de riesgo son justo los que alarga una ruta tropical: un almacén sin aire acondicionado y una tarde en un portal. La humedad añade el segundo factor, porque una torta higroscópica tiene más agua disponible de la que tirar.</p>
+        <p>Nada de esto es dramático en días. Se vuelve material en semanas, que es el argumento para que importe dónde está el stock y no solo qué dice el certificado. Un documento y un viaje son dos cosas distintas por las que preguntar, y solo una de ellas va impresa.</p>
+
+        <h2>Qué preguntar, y qué no puede contestar nadie</h2>
+        <p>Contestable: desde dónde sale el stock, cuánto tarda el tránsito doméstico, si el vial va sellado y protegido, y qué fecha lleva el certificado. La última es la más útil y la menos pedida. Un documento de hace dieciocho meses describe el lote como era hace dieciocho meses, hiciera lo que hiciera la cadena de frío desde entonces.</p>
+        <p>No contestable con honestidad por nadie: el historial de temperatura de un paquete concreto, salvo que viajara con un registrador. Un vendedor que afirma una cadena de frío ininterrumpida en un viaje internacional está afirmando conocimiento de las condiciones de un almacén de aduana. Lo exacto es hablar de cómo se guardó el material y cómo se envió, que es decir algo más estrecho.</p>
+
+        <h2>Qué puedes hacer al recibirlo</h2>
+        <p>Llévalo pronto a su condición de conservación en lugar de dejarlo en la mesa, y mantén el vial sellado hasta que lo necesites, porque la torta tira agua del aire en cuanto se abre.</p>
+        <p>Comprueba primero el número de lote de la etiqueta contra el certificado de ese lote, ya que esa comprobación es de identidad y no de condición, y es la que se puede hacer de inmediato. Nuestra <a href="tools/coa-checklist/">lista</a> cubre el resto del documento, y la <a href="verify/">búsqueda</a> confirma que el número pertenece a un lote real.</p>
+
+        <h2>Por qué existe esta página</h2>
+        <p>Porque la respuesta honesta a «¿está garantizada la cadena de frío?» es que ningún vendedor puede garantizar el tramo sin documentar, y la respuesta útil es cuán largo es ese tramo y qué se hizo para acortarlo. Nuestra nota sobre <a href="article/documents-that-accompany-a-peptide-batch/">los documentos que acompañan a un lote</a> hace el mismo razonamiento desde el lado de la papelería: hay una pregunta que ninguno responde.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Un certificado de análisis cubre las condiciones de envío?",
+          "a": "No. Un certificado describe un lote en la fecha en que se midió, que es anterior a que se empaquetara el vial. El tránsito y la conservación posteriores no los cubre ningún documento."
+        },
+        {
+          "q": "¿La liofilización hace estable un péptido a temperatura ambiente?",
+          "a": "Quita casi toda el agua y con ello frena las rutas que dependen de ella, y por eso se envía polvo y no disolución. Frena el reloj sin pararlo, y la torta seca es higroscópica."
+        },
+        {
+          "q": "¿Dónde pasa un envío más tiempo sin documentar?",
+          "a": "En el tránsito de larga distancia y en la retención de aduana, que juntos pueden sumar semanas en una ruta internacional. La última milla es más corta pero puede alcanzar la temperatura más alta del viaje."
+        },
+        {
+          "q": "¿Qué cambia de verdad enviar desde stock local?",
+          "a": "Quita el tránsito de larga distancia y la cola de aduana, así que el tramo sin documentar son días y no semanas y es razonablemente predecible. No vuelve el material inmune a nada."
+        },
+        {
+          "q": "¿Puede un vendedor garantizar una cadena de frío ininterrumpida?",
+          "a": "En un viaje internacional no, porque eso supondría afirmar conocimiento de las condiciones de un almacén de aduana. Lo que sí se puede declarar con exactitud es cómo se guardó el material y cómo se envió."
+        },
+        {
+          "q": "¿Cuál es la pregunta más útil sobre un certificado en esto?",
+          "a": "Su fecha. Un documento de hace dieciocho meses describe el lote como era entonces, y eso es cierto con independencia de lo bien que se haya manejado el material desde ese día."
+        }
+      ],
+      cta: 'Pregunta por la fecha del certificado de tu lote. <a href="verify/">Busca un número de lote</a>.',
+    },
   };
 
   window.REA = window.REA || {};

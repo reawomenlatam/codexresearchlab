@@ -33,6 +33,8 @@
     'Home': 'Inicio',
     'Products': 'Productos',
     'Verify batch': 'Verificar lote',
+    'Tools': 'Herramientas',
+    'Free tools': 'Herramientas gratis',
     'Blog': 'Blog',
     'Process': 'Proceso',
     'FAQ': 'Preguntas',
@@ -364,14 +366,14 @@
   // Enlaces internos: sólo las rutas que existen traducidas llevan el prefijo
   // /es/. La calculadora y los legales siguen en inglés, así que enlazarlos con
   // prefijo daría 404.
-  const ES_PAGES = ['catalog/', 'cart/', 'verify/', 'blog/'];
+  const ES_PAGES = ['catalog/', 'cart/', 'verify/', 'blog/', 'tools/'];
   // Los artículos se traducen de a poco. La lista de los que existen en español
   // la declara el bundle generado (window.REA.ES_ARTICLES), así que se consulta
   // en cada llamada y no al cargar: este archivo se evalúa antes que el bundle.
   const esArticles = () => (window.REA && window.REA.ES_ARTICLES) || [];
   function url(p) {
     if (lang !== 'es') return p;
-    if (ES_PAGES.indexOf(p) >= 0 || /^product\//.test(p)) return 'es/' + p;
+    if (ES_PAGES.indexOf(p) >= 0 || /^product\//.test(p) || /^tools\//.test(p)) return 'es/' + p;
     const m = /^article\/([^/]+)\/$/.exec(p);
     if (m) return esArticles().indexOf(m[1]) >= 0 ? 'es/' + p : p;
     return p;

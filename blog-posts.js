@@ -3711,6 +3711,806 @@
       cta: 'Every batch we ship carries its own certificate. <a href="verify/">Check a batch number</a> before you order.',
       related: ["how-to-read-a-certificate-of-analysis","certificate-of-analysis-glossary","verifying-a-peptide-supplier-checklist"],
     },
+
+    {
+      slug: 'tirzepatide-vs-retatrutide',
+      title: 'Tirzepatide vs Retatrutide: Two and Three Receptors',
+      metaTitle: 'Tirzepatide vs Retatrutide: Receptors, Mass, Verification',
+      metaDescription: 'How the two compounds differ: which receptors each engages, their formulas and masses, what the certificate should show, and why one is harder to verify.',
+      focusKeyword: 'tirzepatide vs retatrutide',
+      category: 'Peptide Research',
+      tags: ["tirzepatide","retatrutide","incretins","comparison"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Two receptors against three, and what each one does to the verification problem.',
+      imageAlt: 'A dual receptor agonist and a triple one, compared by identity and paperwork.',
+      body: `
+        <p class="lead">Both are long synthetic peptides studied in metabolic signalling, and the headline difference is how many receptors each engages. That difference is real, but the one that affects you at the point of buying is which of the two can be checked against a public record.</p>
+
+        <h2>The receptor count</h2>
+        <p>Tirzepatide engages two receptors, GIP and GLP-1. Retatrutide engages those two and the glucagon receptor as well.</p>
+        <p>GIP and GLP-1 are the two incretin hormones, released from the gut and acting on their own receptors. <a class="cite" href="https://doi.org/10.1053/j.gastro.2007.03.054" target="_blank" rel="noopener nofollow">(Reference: Baggio &amp; Drucker, 2007)</a> Glucagon belongs to the same receptor family but is a different signal, released from the pancreas. So the step from two to three adds a receptor whose natural ligand comes from somewhere else, which is a different kind of addition. Our notes on <a href="article/what-are-incretins/">incretins</a> and <a href="article/glp-1-vs-gip/">GLP-1 versus GIP</a> cover the family.</p>
+        <p>"Agonist" at all three does not mean equal at all three. A molecule can be a full agonist at one receptor and partial at another, and can also favour one downstream pathway over another at the same receptor, which has been described for tirzepatide at GLP-1. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Reference: Willard et al., 2020)</a> A receptor count is a label, not a profile.</p>
+
+        <h2>Why the glucagon receptor is the interesting addition</h2>
+        <p>GIP, GLP-1 and glucagon receptors all belong to the same structural class, the secretin-like family of G protein-coupled receptors, which is why one molecule can plausibly be designed to fit all three. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> Family resemblance is what makes a triple agonist chemically conceivable instead of fanciful.</p>
+        <p>It also makes selectivity harder to assert. Receptors that resemble each other are receptors a molecule can bind to by accident, so a claim about which three a compound engages is a claim about measured binding, not about intent. That is a question for the published pharmacology and not for a certificate of analysis, and it is worth keeping the two kinds of document apart: a certificate says what is in the vial, never what it does.</p>
+
+        <h2>Identity on paper</h2>
+        <p>Tirzepatide is C<sub>225</sub>H<sub>348</sub>N<sub>48</sub>O<sub>68</sub>, 4813.45 g/mol, CAS 2023788-19-2, with a PubChem record.</p>
+        <p>Retatrutide is where the asymmetry shows. It has no CAS number in our catalogue and no PubChem entry; the identifier that resolves is its ChEMBL record. That is what a newer compound looks like in the reference databases, and no reflection on the compound: an identifier is assigned once a substance has been indexed, and indexing follows publication.</p>
+        <p>The consequence is practical. For tirzepatide you can take the CAS number, run the <a href="tools/cas-number-check/">check digit</a>, look it up, and read back which substance it returns. For retatrutide that route does not exist, so the identity evidence has to come from the certificate itself and not from a public register.</p>
+
+        <h2>What that does to verification</h2>
+        <p>With a compound that has a public record, a certificate has a second opinion available: the measured mass can be compared against a mass calculated from a published formula, and you can check the two independently.</p>
+        <p>Without one, the mass spectrum on the certificate is the identity evidence, and there is nothing external to cross it against. That raises the weight carried by the rest of the document: whether a method sits next to each number, whether there is a date, whether a laboratory is named. Our <a href="article/verifying-a-peptide-supplier-checklist/">supplier checklist</a> walks through it, and the <a href="tools/coa-checklist/">interactive version</a> is the same seven checks.</p>
+        <p>This is the part worth being plain about. A compound being newer than its paperwork is normal. A supplier treating that as a reason to show you less is not.</p>
+
+        <h2>What a certificate should show for either</h2>
+        <p>The same fields, for the same reasons. Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with its conditions written out, because the column and gradient change the number. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, with observed and theoretical mass both shown. Net peptide content separate from chromatographic purity, because a batch can be 99 percent pure by area and well below that by mass.</p>
+        <p>Both are long peptides, which matters for the purity figure: the longer the <a href="article/peptide-synthesis/">synthesis</a>, the more chances for a coupling step not to finish, and deletion sequences differ from the target by a single residue and sit close to the main peak.</p>
+
+        <h2>Mass, and why the figures look so close</h2>
+        <p>Tirzepatide is 4813.45 g/mol and retatrutide 4894.58, a difference of about 81 units on molecules of nearly five thousand. On that scale an identity check cannot rest on a rounded number: two long peptides can differ by one residue and still look alike to one decimal place.</p>
+        <p>This is where the distinction between average and monoisotopic mass stops being pedantry. A mass spectrometer reports the monoisotopic value for the first peak of the isotope cluster, while a catalogue quotes the average, and on molecules this large the two differ by several units. Comparing one against the other is a reliable way to conclude that a correct batch is wrong. Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> returns both, and our note on <a href="article/molecular-weight-of-peptides/">average versus monoisotopic mass</a> explains the gap.</p>
+
+        <h2>Storage is the same problem for both</h2>
+        <p>Nothing in the receptor difference changes how either behaves in a vial. Both arrive lyophilised, both are hygroscopic, and both degrade by routes that proceed with time and temperature. A certificate is dated because a result belongs to a moment, and what happens between that date and your bench is a matter of storage, not of paperwork. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the reasoning.</p>
+
+        <h2>What this comparison is not</h2>
+        <p>It is not a ranking, and it says nothing about what either compound does in an organism. Both are sold here for laboratory research, and the only comparison that belongs on a storefront is between what can be documented about each.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is the difference between tirzepatide and retatrutide?",
+          "a": "Tirzepatide engages two receptors, GIP and GLP-1. Retatrutide engages those two plus the glucagon receptor. Glucagon belongs to the same receptor family but is a different signal, released from the pancreas and not the gut."
+        },
+        {
+          "q": "Does engaging three receptors mean three times the activity?",
+          "a": "No. A molecule can be a full agonist at one receptor and partial at another, and can favour one downstream pathway over another at the same receptor. A receptor count is a label, not a profile."
+        },
+        {
+          "q": "Why does retatrutide have no CAS number?",
+          "a": "An identifier is assigned once a substance has been indexed in the chemical literature, and indexing follows publication. A newer compound may not have one yet, and that is not a defect."
+        },
+        {
+          "q": "Is retatrutide harder to verify than tirzepatide?",
+          "a": "The public cross-check is harder. Tirzepatide has a CAS number and a PubChem record, so a measured mass can be compared against a published formula independently. For retatrutide the identity evidence has to come from the certificate itself."
+        },
+        {
+          "q": "What should the certificate show for either compound?",
+          "a": "Purity by RP-HPLC with its conditions, identity by mass spectrometry with observed and theoretical mass both shown, net peptide content stated separately from chromatographic purity, a date, and a named laboratory."
+        },
+        {
+          "q": "Why does peptide length matter for purity here?",
+          "a": "Both are long peptides. The longer the synthesis, the more opportunities for a coupling step not to finish, and the resulting deletion sequences differ from the target by a single residue and elute close to the main peak."
+        }
+      ],
+      references: [
+        {
+          "text": "Baggio, L.L., &amp; Drucker, D.J. (2007). Biology of incretins: GLP-1 and GIP. Gastroenterology, 132(6), 2131-2157.",
+          "url": "https://doi.org/10.1053/j.gastro.2007.03.054"
+        },
+        {
+          "text": "Willard, F.S., et al. (2020). Tirzepatide is an imbalanced and biased dual GIP and GLP-1 receptor agonist. JCI Insight, 5(17), e140532.",
+          "url": "https://doi.org/10.1172/jci.insight.140532"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Tirzepatide compound summary (CID 156588324). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/156588324"
+        },
+        {
+          "text": "Retatrutide (LY3437943). ChEMBL, European Bioinformatics Institute (CHEMBL5095485).",
+          "url": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL5095485/"
+        }
+      ],
+      cta: 'Both compounds ship with a batch certificate. <a href="verify/">Check a batch number</a> before you order.',
+      related: ["what-are-incretins","glp-1-vs-gip","verifying-a-peptide-supplier-checklist"],
+    },
+
+    {
+      slug: 'ghk-cu-vs-ahk-cu',
+      title: 'GHK-Cu vs AHK-Cu: One Residue Apart',
+      metaTitle: 'GHK-Cu vs AHK-Cu: What One Residue Changes',
+      metaDescription: 'Two copper tripeptides differing at one position. What that changes in the copper binding site, in the mass, and in what a certificate has to show.',
+      focusKeyword: 'GHK-Cu vs AHK-Cu',
+      category: 'Peptide Research',
+      tags: ["GHK-Cu","AHK-Cu","copper peptides","comparison"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Glycine or alanine at the first position, and everything that follows from it.',
+      imageAlt: 'Two copper tripeptides that differ at a single position, compared.',
+      body: `
+        <p class="lead">GHK and AHK are tripeptides that differ at one position: glycine in the first, alanine in the second. Both bind copper, and both are sold as the copper complex. A single methyl group is the whole chemical difference, which makes this a useful pair for seeing how much a small change can and cannot do.</p>
+
+        <h2>The sequences</h2>
+        <p>GHK is glycyl-histidyl-lysine. AHK is alanyl-histidyl-lysine. Alanine is glycine with a methyl group on the alpha carbon, so the two peptides are identical except for that one addition at the N-terminal residue.</p>
+        <p>Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> returns C<sub>14</sub>H<sub>24</sub>N<sub>6</sub>O<sub>4</sub> for GHK and C<sub>15</sub>H<sub>26</sub>N<sub>6</sub>O<sub>4</sub> for AHK: one carbon and two hydrogens apart, about 14 units of mass. Both figures are for the free peptide, without copper.</p>
+
+        <h2>Where the copper sits</h2>
+        <p>This is the part the substitution does not change, and it is the reason the two behave as a pair instead of as unrelated compounds. In peptides of this shape the copper is held by an amino-terminal binding motif, in which the terminal amine, the following backbone nitrogen and the histidine imidazole converge on the metal. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Reference: Harford &amp; Sarkar, 1997)</a> The histidine at position two is doing the structural work, and it is present in both.</p>
+        <p>Spectroscopic work on the GHK copper complex established the geometry of that site. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Reference: Freedman et al., 1982)</a> What the glycine-to-alanine swap adds is a methyl group on a carbon adjacent to the site, not a new donor atom. Our note on <a href="article/what-are-copper-peptides/">copper peptides</a> covers the family.</p>
+
+        <h2>Why "GHK-Cu" is not a formula</h2>
+        <p>The name is a shorthand and the shorthand hides the question that matters on a certificate. GHK is the tripeptide. GHK-Cu is a complex of that tripeptide with copper, with its own formula, its own mass, its own PubChem record and its own CAS number, 89030-95-5.</p>
+        <p>The two are not interchangeable on paper. A certificate reporting the mass of the free tripeptide for a product sold as the copper complex is reporting the wrong molecule, and it will look entirely normal unless you know which of the two numbers you should be seeing. The same applies to AHK and AHK-Cu, CAS 682809-81-0. You can run either through the <a href="tools/cas-number-check/">check digit validator</a> and then look the number up to read back which substance it returns.</p>
+
+        <h2>Copper is also an analytical problem</h2>
+        <p>A bound metal changes what the usual methods see. In <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> copper has two stable isotopes in substantial proportions, so a copper complex gives an isotope pattern noticeably different from that of an organic molecule of the same nominal mass. That pattern is evidence in its own right: it is hard to fake and easy to read.</p>
+        <p>It also means a mass calculated from the three letters of the sequence will not match a measurement on the complex, and should not. A calculator that works from a letter sequence cannot see a bound metal, which is a limit of the method, not a disagreement about the compound.</p>
+
+        <h2>What a certificate should show for either</h2>
+        <p>Which species was analysed, stated explicitly: free peptide or copper complex. Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with its conditions written out. Identity from a mass measurement, with observed and theoretical values both given for whichever species the document is about. Copper content, if the product is the complex, because that is the difference between the two products and it is measurable.</p>
+        <p>Net peptide content matters here too, and for an additional reason. These are short peptides, so the counterion and absorbed water are a larger share of the powder than they would be on a long one. A figure of 99 percent pure by area still says nothing about how much of the weighed mass is peptide. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers it.</p>
+
+        <h2>Short peptides are easier to make cleanly</h2>
+        <p>Three residues means two coupling steps. Each step is an opportunity for an incomplete reaction, so a tripeptide starts from a much better position than a fifteen-mer, and high purity figures on compounds this short are unremarkable. Our note on <a href="article/peptide-synthesis/">synthesis</a> explains where the impurities come from.</p>
+        <p>What that means in practice: on a short peptide, purity is the easy number and identity is the one worth reading. A document that gives you 99 percent and no mass has told you the easy half.</p>
+
+        <h2>What the methyl group does not settle</h2>
+        <p>A one-residue difference reads like a small difference in everything, and that inference does not hold in either direction. A single substitution next to a metal binding site can change how tightly the metal is held, how the complex behaves at a given pH, and how the molecule sits in a solvent, without changing anything you can see in a formula.</p>
+        <p>It can also change nothing of consequence. Which of the two is the case is a question for measurement, not for reasoning about structures, and it is the kind of question a catalogue page is in no position to answer. What a catalogue can state is the sequence, the species, the mass and the batch, and that is the boundary this page stays inside.</p>
+
+        <h2>Reading the two certificates side by side</h2>
+        <p>If you hold both documents, the fields that should differ are few and specific: the sequence, the formula and mass, the CAS number, and the copper content if both are complexes. Everything else, from the method conditions to the net content line to the date format, should look like the work of the same laboratory.</p>
+        <p>A pair of certificates that differ in more than that is worth a question. Two documents from the same supplier for two closely related compounds, produced on different templates with different fields, usually means they came from different places. No accusation is intended: it is an observation anyone can make with both pages open, and it is the sort of thing only a pair makes visible.</p>
+
+        <h2>What this comparison is not</h2>
+        <p>It is not a claim that one is better, and it says nothing about what either does in an organism. The comparison that belongs here is between what can be documented about each, which is the only one a seller can make honestly.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is the difference between GHK-Cu and AHK-Cu?",
+          "a": "The first residue. GHK is glycyl-histidyl-lysine and AHK is alanyl-histidyl-lysine, and alanine is glycine with an added methyl group. Everything else, including the histidine that organises the copper site, is the same."
+        },
+        {
+          "q": "Do both bind copper the same way?",
+          "a": "Both use an amino-terminal binding motif in which the terminal amine, the next backbone nitrogen and the histidine imidazole converge on the metal. The glycine-to-alanine change adds a methyl group next to that site, not a new donor atom."
+        },
+        {
+          "q": "Is GHK the same as GHK-Cu?",
+          "a": "No. GHK is the free tripeptide; GHK-Cu is its complex with copper, with a different formula, mass, PubChem record and CAS number. A certificate reporting the free peptide mass for a product sold as the complex is describing the wrong species."
+        },
+        {
+          "q": "Why does copper change the mass spectrum?",
+          "a": "Copper has two stable isotopes present in substantial proportions, so a copper complex produces an isotope pattern clearly different from an organic molecule of similar nominal mass. That pattern is useful evidence on its own."
+        },
+        {
+          "q": "Why can a sequence calculator not give the mass of GHK-Cu?",
+          "a": "Because the copper is not part of the letter sequence. A calculator working from three letters returns the mass of the free tripeptide, and the complex necessarily differs."
+        },
+        {
+          "q": "Is a high purity figure impressive on a tripeptide?",
+          "a": "Not particularly. Three residues means two coupling steps, so there are far fewer opportunities for incomplete reactions than on a long peptide. On short compounds purity is the easy number and identity is the one worth reading."
+        }
+      ],
+      references: [
+        {
+          "text": "Harford, C., &amp; Sarkar, B. (1997). Amino terminal Cu(II)- and Ni(II)-binding motif of proteins and peptides. Accounts of Chemical Research, 30(3), 123-130.",
+          "url": "https://doi.org/10.1021/ar9501535"
+        },
+        {
+          "text": "Freedman, J.H., Pickart, L., Weinstein, B., Mims, W.B., &amp; Peisach, J. (1982). Structure of the glycyl-L-histidyl-L-lysine-copper(II) complex. Biochemistry, 21(19), 4540-4544.",
+          "url": "https://doi.org/10.1021/bi00262a004"
+        },
+        {
+          "text": "Glycyl-L-histidyl-L-lysine compound summary (CID 73587). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/73587"
+        },
+        {
+          "text": "AHK-Cu compound summary (CID 168431292). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/168431292"
+        }
+      ],
+      cta: 'Both ship with a batch certificate stating which species was analysed. <a href="verify/">Check a batch number</a>.',
+      related: ["what-are-copper-peptides","what-is-ghk-cu","what-is-ahk-cu"],
+    },
+
+    {
+      slug: 'bpc-157-vs-ghk-cu',
+      title: 'BPC-157 vs GHK-Cu: Different Kinds of Evidence',
+      metaTitle: 'BPC-157 vs GHK-Cu: Structure, Records and Documentation',
+      metaDescription: 'A fifteen-residue peptide and a copper tripeptide compared by what can be documented: length, metal binding, public records and what each certificate must show.',
+      focusKeyword: 'BPC-157 vs GHK-Cu',
+      category: 'Peptide Research',
+      tags: ["BPC-157","GHK-Cu","comparison","verification"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'A fifteen-mer and a copper tripeptide, and why their paperwork looks nothing alike.',
+      imageAlt: 'A fifteen-residue peptide beside a copper tripeptide, compared by documentation.',
+      body: `
+        <p class="lead">These two get compared because both appear in literature about tissue repair, which is a reason to read about them together and a poor reason to treat them as alternatives. Chemically they have almost nothing in common, and the difference shows up most clearly in what their documentation can and cannot establish.</p>
+
+        <h2>Length, and what follows from it</h2>
+        <p>BPC-157 is fifteen residues, GEPPPGKPADDAGLV. GHK is three. On the <a href="article/peptide-length-terminology/">naming scale</a> one is an oligopeptide at the longer end and the other a tripeptide, and the gap is not cosmetic.</p>
+        <p>Fifteen residues means fourteen coupling steps in <a href="article/peptide-synthesis/">synthesis</a>; three means two. Every step is a chance for a reaction not to go to completion, and the usual result is a deletion sequence, a chain missing one residue, which differs from the target by a single amino acid and leaves the column at almost the same time. So a 99 percent figure on a fifteen-mer represents real work, while the same figure on a tripeptide is close to the baseline. Purity percentages are not comparable across lengths, which is the first thing to know before putting two certificates side by side.</p>
+
+        <h2>One has a metal, the other does not</h2>
+        <p>BPC-157 is a plain peptide. GHK-Cu is a complex of a peptide with copper, held by an amino-terminal binding motif in which the terminal amine, the following backbone nitrogen and the histidine imidazole converge on the metal. <a class="cite" href="https://doi.org/10.1021/ar9501535" target="_blank" rel="noopener nofollow">(Reference: Harford &amp; Sarkar, 1997)</a></p>
+        <p>That gives the two compounds different failure modes on a certificate. For BPC-157 the question is whether the chain is the right chain, and a mass measurement answers it. For GHK-Cu there is a prior question: whether the document is about the free tripeptide or the copper complex, which have different formulas, different masses and different CAS numbers. A certificate that reports the free peptide for a product sold as the complex is describing the wrong species and will look perfectly ordinary. Our note on <a href="article/what-are-copper-peptides/">copper peptides</a> covers the distinction.</p>
+
+        <h2>What the public record gives you</h2>
+        <p>Both have PubChem records, so both support the same external cross-check: take the formula from the record, calculate the mass, and compare it against the mass on the certificate. Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> does the first half from a sequence, with the caveat that it cannot see a bound metal, so for GHK-Cu it returns the tripeptide and not the complex.</p>
+        <p>Both also have CAS numbers, 137525-51-0 and 89030-95-5, which can be run through the <a href="tools/cas-number-check/">check digit validator</a> and then looked up. Having a public record is the ordinary case, not a distinction, and its absence is what would be worth asking about.</p>
+
+        <h2>Where the literatures differ in character</h2>
+        <p>This matters less for buying and more for reading, and it is worth being accurate about. The copper binding site in GHK-Cu has been characterised structurally, which is a specific, settled, physical claim about where the metal sits. <a class="cite" href="https://doi.org/10.1021/bi00262a004" target="_blank" rel="noopener nofollow">(Reference: Freedman et al., 1982)</a> It says nothing about biological activity, but it is the kind of result that does not need re-litigating.</p>
+        <p>BPC-157 has a longer trail of biological work and a correspondingly weaker set of structural claims, with much of the published material in animal models. <a class="cite" href="https://pubmed.ncbi.nlm.nih.gov/8298609/" target="_blank" rel="noopener nofollow">(Reference: Sikiric et al., 1993)</a> The honest summary is that the two compounds are documented in different ways, and that neither kind of documentation tells you what is in a particular vial. For that, only a batch certificate speaks.</p>
+
+        <h2>What each certificate has to show</h2>
+        <p>For BPC-157: purity by <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with the conditions written out, the chromatogram if you can get it, and identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> with observed and theoretical mass. On a peptide this long the trace is worth more than usual, because it shows where the remaining percent sits and whether it sits right beside the main peak.</p>
+        <p>For GHK-Cu: the species, stated explicitly, plus copper content, plus the same purity and identity fields. Net peptide content matters on both but bites harder on the tripeptide, where counterion and absorbed water are a larger share of the weighed powder. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers that.</p>
+
+        <h2>Storage is not the same question either</h2>
+        <p>Both arrive lyophilised and both are hygroscopic, so both pick up water from the air once a vial is open. Beyond that the comparison stops being symmetrical: BPC-157 has fifteen residues of chain to degrade along, and a metal complex has an additional variable in whether the metal stays bound. A certificate is dated for exactly this reason, and what happens between that date and your bench is a storage question, not a paperwork one. Our note on <a href="article/how-to-store-research-peptides/">storage</a> sets out the routes.</p>
+
+        <h2>Why the two certificates will not look alike</h2>
+        <p>Put them side by side and the differences are structural, not cosmetic. The BPC-157 document should carry a longer impurity story: more peaks, a note about where they sit, and a purity figure that earns its decimal places. The GHK-Cu document should carry a species statement and a metal content line that has no equivalent on the other page.</p>
+        <p>Neither absence is a problem on the right page. A copper line missing from a BPC-157 certificate is correct; missing from a GHK-Cu certificate it is a gap. Knowing which fields each compound requires is most of what reading a certificate consists of, and it is why a single generic template across a whole catalogue is itself informative.</p>
+
+        <h2>What this comparison is not</h2>
+        <p>It is not a recommendation and makes no claim about what either compound does. Both are sold here for laboratory research, and the comparison a seller can honestly make is between what is documented, not between outcomes.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Are BPC-157 and GHK-Cu alternatives to each other?",
+          "a": "They appear in overlapping literature but are chemically unrelated: one is a fifteen-residue peptide, the other a three-residue peptide bound to copper. Treating them as substitutes is reading a shared topic as a shared mechanism."
+        },
+        {
+          "q": "Why is a 99% purity figure worth more on BPC-157?",
+          "a": "Fifteen residues means fourteen coupling steps against two for a tripeptide, and every step is a chance for an incomplete reaction. The same percentage represents much more work on the longer chain, so purity figures are not comparable across lengths."
+        },
+        {
+          "q": "What extra thing does a GHK-Cu certificate have to state?",
+          "a": "Which species was analysed. The free tripeptide and the copper complex have different formulas, masses and CAS numbers, and a document about the wrong one looks entirely ordinary unless you know which figure to expect."
+        },
+        {
+          "q": "Do both have public records to check against?",
+          "a": "Yes. Both have PubChem entries and CAS numbers, so a measured mass can be compared against a published formula independently of the seller. That is the ordinary case; its absence would be the thing worth asking about."
+        },
+        {
+          "q": "Can a sequence calculator handle both?",
+          "a": "It handles BPC-157 directly from its fifteen letters. For GHK-Cu it returns the free tripeptide, because the copper is not part of a letter sequence and no calculator can infer it."
+        },
+        {
+          "q": "Does the published literature tell me what is in my vial?",
+          "a": "No. Published work describes compounds in general; a certificate of analysis describes one batch. They answer different questions and only the second is about the material you received."
+        }
+      ],
+      references: [
+        {
+          "text": "Harford, C., &amp; Sarkar, B. (1997). Amino terminal Cu(II)- and Ni(II)-binding motif of proteins and peptides. Accounts of Chemical Research, 30(3), 123-130.",
+          "url": "https://doi.org/10.1021/ar9501535"
+        },
+        {
+          "text": "Freedman, J.H., Pickart, L., Weinstein, B., Mims, W.B., &amp; Peisach, J. (1982). Structure of the glycyl-L-histidyl-L-lysine-copper(II) complex. Biochemistry, 21(19), 4540-4544.",
+          "url": "https://doi.org/10.1021/bi00262a004"
+        },
+        {
+          "text": "Sikiric, P., Petek, M., Rucman, R., Seiwerth, S., et al. (1993). A new gastric juice peptide, BPC. Journal of Physiology (Paris), 87(5), 313-327.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8298609/"
+        },
+        {
+          "text": "BPC-157 compound summary (CID 9941957). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/9941957"
+        },
+        {
+          "text": "Glycyl-L-histidyl-L-lysine compound summary (CID 73587). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/73587"
+        }
+      ],
+      cta: 'Each compound ships with its own batch certificate. <a href="verify/">Check a batch number</a> before ordering.',
+      related: ["peptide-length-terminology","what-are-copper-peptides","peptide-synthesis"],
+    },
+
+    {
+      slug: 'nad-plus-vs-mots-c',
+      title: 'NAD+ vs MOTS-c: A Coenzyme and a Peptide',
+      metaTitle: 'NAD+ vs MOTS-c: Why They Are Not the Same Category',
+      metaDescription: 'One is a coenzyme, the other a mitochondria-encoded peptide. What that difference does to their formulas, their certificates and how each one is verified.',
+      focusKeyword: 'NAD+ vs MOTS-c',
+      category: 'Peptide Research',
+      tags: ["NAD+","MOTS-c","mitochondria","comparison"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Both get filed under mitochondria. Only one of them is a peptide.',
+      imageAlt: 'A coenzyme and a mitochondria-encoded peptide, compared by category and paperwork.',
+      body: `
+        <p class="lead">These two end up in the same conversation because both are discussed in connection with mitochondria. That is where the resemblance stops. One is a coenzyme that every cell already makes; the other is a peptide encoded in mitochondrial DNA. Treating them as two options from one shelf is a category error, and it shows up immediately on their certificates.</p>
+
+        <h2>Two different kinds of molecule</h2>
+        <p>NAD+ is nicotinamide adenine dinucleotide, a coenzyme built from a nicotinamide, an adenine, two riboses and two phosphates. It is not a peptide and has no sequence. It is central to redox chemistry across metabolism and its turnover is a well-mapped subject. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Reference: Cantó et al., 2015)</a></p>
+        <p>MOTS-c is a peptide of sixteen residues, MRWQEMGYIFYPRKLR, and the notable thing about it is where its gene sits: in the mitochondrial genome and not the nuclear one, which was not where short peptides were expected to be found. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Reference: Lee et al., 2015)</a> Our note on <a href="article/what-is-mots-c/">MOTS-c</a> covers the discovery.</p>
+        <p>So one is a small-molecule cofactor and the other a short protein fragment. Almost nothing transfers between them analytically.</p>
+
+        <h2>What that does to the paperwork</h2>
+        <p>A peptide certificate and a small-molecule certificate are different documents that happen to share a name.</p>
+        <p>For MOTS-c the identity question is whether the chain is the intended chain, answered by comparing a measured mass against a mass calculated from the sequence. Our <a href="tools/peptide-molecular-weight/">calculator</a> returns C<sub>101</sub>H<sub>152</sub>N<sub>28</sub>O<sub>22</sub>S<sub>2</sub> for those sixteen letters, which matches its PubChem record, and the purity question is about <a href="article/peptide-synthesis/">synthesis</a> by-products such as deletion sequences.</p>
+        <p>For NAD+ there is no sequence to calculate from and no deletion sequences to look for. Identity rests on the compound matching a known reference, and the impurities of interest are the related species of its own chemistry, chiefly its reduced form and its degradation products. A certificate that applies peptide vocabulary to NAD+ has been produced from the wrong template.</p>
+
+        <h2>Two methionines, and why only one of them has them</h2>
+        <p>MOTS-c carries two methionine residues, and methionine oxidises. Each oxidation adds sixteen mass units, which is large enough to see on a mass spectrum and small enough to miss if nobody looks for it, so an oxidised fraction is a specific thing to ask about on this compound.</p>
+        <p>NAD+ has no methionine and no such route. Its stability question is different: it is sensitive to its own chemistry, not to side-chain oxidation. The general principle survives the difference, which is that both are dated on their certificates because a result belongs to a moment, and both degrade by routes that proceed with time and temperature. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the peptide side.</p>
+
+        <h2>Public records</h2>
+        <p>Both are well indexed. NAD+ is CAS 53-84-9 with PubChem CID 5892; MOTS-c is CAS 1627580-64-6 with its own record. Either number can be run through the <a href="tools/cas-number-check/">check digit validator</a> and then looked up to read back which substance it returns.</p>
+        <p>NAD+ is the older and more thoroughly documented of the two by a wide margin, which is what you would expect of a coenzyme described decades ago beside a peptide reported in 2015. Depth of literature is a property of a compound's history, not a measure of how carefully a particular batch was made.</p>
+
+        <h2>Different mass scales, different expectations</h2>
+        <p>NAD+ is about 663 g/mol; MOTS-c is around 2174. An order of magnitude apart changes what a mass measurement can resolve. On a molecule the size of NAD+, a mass spectrometer can distinguish species differing by a single atom with room to spare. On a peptide of sixteen residues the isotope cluster is wide enough that the distinction between monoisotopic and average mass has to be stated, or two correct figures will look like a disagreement.</p>
+        <p>This is the practical reason a certificate should name its method and report observed and theoretical values instead of a verdict. Our note on <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> covers the comparison.</p>
+
+        <h2>Solubility is a separate conversation for each</h2>
+        <p>A sixteen-residue peptide has a net charge that moves with pH, and solubility is usually at its lowest near the pH where that charge cancels out. Our <a href="tools/peptide-isoelectric-point/">isoelectric point calculator</a> returns that figure from the sequence, with the caveat that it is theoretical and names the pKa set it used.</p>
+        <p>NAD+ has ionisable phosphates and behaves quite differently, and none of the peptide reasoning carries across. Mentioning it here only to make the point that two compounds filed under one heading can require entirely separate handling, and that the heading is not what tells you.</p>
+
+        <h2>What a certificate should show for either</h2>
+        <p>Purity with a named method and its conditions, identity as a measurement and not as a word, a date, a named laboratory, and a batch number that matches the vial. Those are common to both. What differs is the vocabulary: net peptide content and deletion sequences are meaningful on MOTS-c and meaningless on NAD+, while NAD+ needs its own related-substance profile. Our <a href="article/certificate-of-analysis-glossary/">glossary</a> defines the fields.</p>
+
+        <h2>Why the pairing happens at all</h2>
+        <p>Both are discussed in connection with mitochondrial function, and that single shared word does a lot of work in how catalogues get organised. It is worth separating two senses of it. NAD+ participates directly in the redox chemistry that mitochondria run; its connection is chemical and immediate. MOTS-c is connected by origin, because the sequence is transcribed from mitochondrial DNA.</p>
+        <p>One molecule is part of the machinery and the other comes out of the blueprint. Neither relationship implies the other, and a shelf label that puts them together is organising by topic, not by mechanism. For reading that is harmless; for deciding what a certificate should contain it is the whole difference.</p>
+
+        <h2>What this comparison is not</h2>
+        <p>It is not a choice between two things that do the same job, because they are not in the same category. Both are sold here for laboratory research, and the only comparison on offer is of what can be documented about each.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Is NAD+ a peptide?",
+          "a": "No. It is a coenzyme built from a nicotinamide, an adenine, two riboses and two phosphates. It has no amino acid sequence, which is why peptide-specific certificate fields do not apply to it."
+        },
+        {
+          "q": "What makes MOTS-c unusual?",
+          "a": "Its gene sits in the mitochondrial genome and not the nuclear one. Short peptides were not expected to be encoded there, which is what made the 2015 report notable."
+        },
+        {
+          "q": "Why do their certificates look different?",
+          "a": "Because the questions differ. A peptide certificate asks whether the chain is the intended one and reports synthesis by-products such as deletion sequences. A small-molecule certificate reports related substances from that compound own chemistry. Peptide vocabulary applied to NAD+ means the wrong template was used."
+        },
+        {
+          "q": "Why do the two methionines in MOTS-c matter?",
+          "a": "Methionine oxidises, and each oxidation adds sixteen mass units. That is large enough to see on a mass spectrum and small enough to miss if nobody looks, so an oxidised fraction is a specific thing to ask about on this compound."
+        },
+        {
+          "q": "Does NAD+ having more literature mean it is better made?",
+          "a": "No. Depth of published work reflects a compound history, not the care taken over a particular batch. Only a batch certificate speaks to the second."
+        },
+        {
+          "q": "Can I use a sequence calculator for both?",
+          "a": "Only for MOTS-c. A sequence calculator works from amino acid letters, and NAD+ has none, so its formula and mass come from its chemical record instead."
+        }
+      ],
+      references: [
+        {
+          "text": "Cantó, C., Menzies, K.J., &amp; Auwerx, J. (2015). NAD+ metabolism and the control of energy homeostasis. Cell Metabolism, 22(1), 31-53.",
+          "url": "https://doi.org/10.1016/j.cmet.2015.05.023"
+        },
+        {
+          "text": "Lee, C., et al. (2015). The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis. Cell Metabolism, 21(3), 443-454.",
+          "url": "https://doi.org/10.1016/j.cmet.2015.02.009"
+        },
+        {
+          "text": "Belenky, P., Bogan, K.L., &amp; Brenner, C. (2007). NAD+ metabolism in health and disease. Trends in Biochemical Sciences, 32(1), 12-19.",
+          "url": "https://doi.org/10.1016/j.tibs.2006.11.006"
+        },
+        {
+          "text": "NAD+ compound summary (CID 5892). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/5892"
+        },
+        {
+          "text": "MOTS-c compound summary (CID 146675088). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/146675088"
+        }
+      ],
+      cta: 'Each compound ships with its own batch certificate. <a href="verify/">Check a batch number</a> before ordering.',
+      related: ["what-is-mots-c","what-is-nad-plus","certificate-of-analysis-glossary"],
+    },
+
+    {
+      slug: 'how-codex-verifies-a-batch',
+      title: 'How a Batch Gets Its Number and Its Paperwork',
+      metaTitle: 'How Codex Verifies a Batch: Numbering and Documents',
+      metaDescription: 'What the batch number on a Codex vial means, what the certificate for it contains, what the lookup confirms and the three things it cannot confirm.',
+      focusKeyword: 'batch verification process',
+      category: 'Buying Guide',
+      tags: ["verification","batch","certificate of analysis","traceability"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'What the number on the label is for, and the three things it does not prove.',
+      imageAlt: 'How a batch number is assigned and what its paperwork does and does not prove.',
+      body: `
+        <p class="lead">This describes our own process, which makes it the one page on the site where we are the subject and not the method. It is written to the same standard we ask of a certificate: everything stated here can be checked, and the limits are set out as plainly as the capabilities.</p>
+
+        <h2>The number on the label</h2>
+        <p>Every vial carries a batch number in the format CDX-NNNN, for example CDX-1017, printed under the compound name. The same number appears on the certificate of analysis for that batch.</p>
+        <p>That matching pair is the whole mechanism. A certificate describes one batch, so a document whose number does not match your label describes different material, and everything on it is beside the point. It is the first check on our <a href="article/verifying-a-peptide-supplier-checklist/">supplier checklist</a> for exactly that reason, and the reason applies to us as much as to anyone.</p>
+
+        <h2>Who runs the testing</h2>
+        <p>An independent laboratory, commissioned and paid by us, covering purity by HPLC and identity by mass spectrometry on each batch. We do not test our own material and then report on it.</p>
+        <p>The distinction is worth stating because "tested" and "comes with testing" are different claims, and the distance between them is where a good deal of imprecise marketing in this category lives. Buying the analysis instead of inheriting it is what puts a batch number on the document in place of a specimen label.</p>
+        <p>Independence is the point of the arrangement. A certificate is a claim made by whoever issued it, so a laboratory with no stake in the sale is what separates the party making the claim from the party being paid for the product. A batch without that documentation does not get listed.</p>
+
+        <h2>What the lookup does</h2>
+        <p>Entering a number at <a href="verify/">the lookup</a> confirms three things: that the number exists in our records, which compound and strength it corresponds to, and which analytical tests were run on that batch.</p>
+        <p>It is a traceability check. The underlying evidence is the certificate itself, which we send in full on request, including before you have ordered anything.</p>
+
+        <h2>Three things the lookup does not do</h2>
+        <p><b>It does not test your vial.</b> No lookup can. It tells you what the records say about a batch; whether the powder in front of you is from that batch is a question only an analysis of that powder answers. This is true of every supplier's verification page, including ours.</p>
+        <p><b>It does not prove the material is unchanged.</b> A certificate is dated because a result belongs to a moment. Peptides degrade by routes that proceed with time and temperature, and what happened between the analysis date and your bench is a matter of handling. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes.</p>
+        <p><b>It does not substitute for reading the certificate.</b> A summary says tests were run. The document says what they found, under which method, on which date. Those are different amounts of information, and our <a href="article/how-to-read-a-certificate-of-analysis/">guide to reading one</a> goes field by field.</p>
+
+        <h2>What the certificate should contain</h2>
+        <p>The same fields we tell you to demand from anyone. Purity by <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with its conditions, because the column and gradient change the number. Identity by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, with observed and theoretical mass shown instead of a verdict. A date. A named laboratory. The batch number.</p>
+        <p>Where a compound has a public record, there is an additional check available that does not involve us at all: take the formula from PubChem, calculate the mass with our <a href="tools/peptide-molecular-weight/">calculator</a> or any other, and compare it against the measured figure on the document. A seller who tells you to trust them instead of showing you how to check is asking for the wrong thing.</p>
+
+        <h2>Why we publish the checks that could be used against us</h2>
+        <p>The <a href="tools/coa-checklist/">checklist</a> and the <a href="tools/cas-number-check/">CAS validator</a> work on any supplier's paperwork, ours included. Generosity has nothing to do with it: that is the only version of this argument that holds together. A verification claim from a seller is worth what the buyer can confirm independently, so publishing the method is the claim.</p>
+        <p>It also sets a standard we then have to meet. If a document of ours fails a check on our own page, that is a real problem for us, which is the point of writing it down.</p>
+
+        <h2>What a batch number is not</h2>
+        <p>It is an identifier, not a grade. CDX-1017 says which production run a vial came from and nothing about how good that run was, in the same way a CAS number identifies a substance without describing a sample of it. Our note on <a href="article/cas-numbers-explained/">CAS numbers</a> makes the same distinction one level up.</p>
+        <p>Sequential numbering also carries no information about quality or age by itself. A lower number is an earlier batch, which is a fact about chronology. Whether an earlier batch is still at the figures on its certificate is a storage question, and the date on the document is what lets you ask it.</p>
+
+        <h2>Where the number has to appear</h2>
+        <p>Three places, and all three have to agree: the vial label, the certificate, and our records. Two out of three is not a pass. A label and a certificate that match each other but correspond to nothing in any record is the situation batch numbering exists to make visible, and it is why the lookup is a separate step and not a formality.</p>
+        <p>Our note on <a href="article/documents-that-accompany-a-peptide-batch/">the documents that come with a batch</a> sets out what each one establishes on its own.</p>
+
+        <h2>If a number does not resolve</h2>
+        <p>Check for typing first: the format is three letters, a hyphen and four digits. If it still does not come up, send a photograph of the label and we will trace it. A number absent from our records is not one of our batches, and we would rather know.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What format is a Codex batch number?",
+          "a": "CDX-NNNN, for example CDX-1017, printed on the vial label under the compound name. The same number appears on the certificate of analysis for that batch."
+        },
+        {
+          "q": "Who runs the testing on a Codex batch?",
+          "a": "An independent laboratory we commission and pay, covering purity by HPLC and identity by mass spectrometry on each batch. We do not test our own material and then report on it."
+        },
+        {
+          "q": "What does the batch lookup confirm?",
+          "a": "That the number exists in our records, which compound and strength it corresponds to, and which analytical tests were run on that batch. It is a traceability check; the evidence is the certificate itself."
+        },
+        {
+          "q": "Can I see the certificate before ordering?",
+          "a": "Yes. Ask with a batch number, or with the compound name if you have not ordered yet, and we send the full document."
+        },
+        {
+          "q": "Does a successful lookup prove my vial is genuine?",
+          "a": "It proves the number belongs to a real batch of ours and says what that batch was. Whether the powder in front of you came from that batch is a question only an analysis of that powder can answer, and that is true of every supplier verification page."
+        },
+        {
+          "q": "Why publish checks that could be used against Codex?",
+          "a": "Because a verification claim from a seller is worth only what a buyer can confirm independently. Publishing the method is the claim, and it sets a standard we then have to meet."
+        }
+      ],
+      references: [
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        }
+      ],
+      cta: '<a href="verify/">Look up a batch number</a>, or ask for the full certificate before you order.',
+      related: ["verifying-a-peptide-supplier-checklist","how-to-read-a-certificate-of-analysis","documents-that-accompany-a-peptide-batch"],
+    },
+
+    {
+      slug: 'why-peptide-prices-differ',
+      title: 'Why Two Vials of the Same Peptide Cost Different Amounts',
+      metaTitle: 'Why Research Peptide Prices Differ So Much',
+      metaDescription: 'Net peptide content, synthesis length, batch size and whether testing was paid for. What actually sits behind a price difference between two identical labels.',
+      focusKeyword: 'research peptide price differences',
+      category: 'Buying Guide',
+      tags: ["pricing","net peptide content","quality","buying"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Four real reasons, and why milligrams on a label are not the unit you are buying.',
+      imageAlt: 'What sits behind a price difference between two vials with identical labels.',
+      body: `
+        <p class="lead">Two listings, same compound, same stated milligrams, and a price gap of three or four times. Some of that gap is margin and some of it is real. These are the parts that are real, and they are worth knowing because they also tell you what to ask.</p>
+
+        <h2>Milligrams on a label are not milligrams of peptide</h2>
+        <p>This is the largest single factor and the least visible one. Material purified by reversed-phase chromatography is isolated as a salt, usually trifluoroacetate, and lyophilised powder also holds absorbed water. Both add weight without adding peptide.</p>
+        <p>So "10 mg" can mean ten milligrams of powder, of which the peptide fraction might be eighty-something percent, or ten milligrams of peptide with the salt on top. Those are different products at the same label. The figure that resolves it is net peptide content, which is a separate line from chromatographic purity: purity is about the detected peaks, net content is about the weighed mass. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest.</p>
+        <p>A vial that looks thirty percent cheaper and reports no net content may be the same price per milligram of actual peptide, or more. Without the line you cannot tell, which is the point.</p>
+
+        <h2>Length, and the cost of the last few percent</h2>
+        <p>Every residue in a <a href="article/peptide-synthesis/">synthesis</a> is a coupling step, and every step can fail to go to completion. The usual failure gives a deletion sequence, a chain missing one residue, which differs from the target by a single amino acid and leaves the column at almost the same time.</p>
+        <p>Separating those from the product is where purification cost lives, and it is not linear. Taking a crude mixture to 95 percent is routine; taking the same material from 95 to 99 can mean discarding a large share of what you made. So a long peptide at a high purity figure is expensive for reasons that have nothing to do with branding, and a short one at the same figure is not. Purity percentages are not comparable across lengths, which our note on <a href="article/peptide-length-terminology/">peptide length</a> puts in context.</p>
+
+        <h2>Somebody paid for the analysis</h2>
+        <p>HPLC and mass spectrometry are instrument time, and batch-specific testing means paying for it on each batch instead of once on a representative one. A generic certificate is cheaper to produce because it is produced once.</p>
+        <p>This shows up directly in price, and it is the difference you are looking at when one supplier can give you a document with your batch number on it and another gives you a specimen. Our note on <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers the distinction between a specification and a result.</p>
+
+        <h2>Batch size moves the number both ways</h2>
+        <p>Fixed costs per batch spread over more vials, so a larger run is cheaper per unit. That is ordinary manufacturing arithmetic and it works in a buyer's favour.</p>
+        <p>It also sets a limit on what small-batch material can cost, which is worth remembering when a price looks implausible and not merely low. A price well below what the chemistry plus the testing would cost is information, though the honest version of that observation is that it is a reason to ask what was skipped, not a conclusion about what was.</p>
+
+        <h2>Shipping and storage are part of the price</h2>
+        <p>Lyophilised peptides are shipped cold and stored cold, and both cost money that lands somewhere in the figure you see. A seller shipping from domestic stock has already paid to hold that stock under condition; one drop-shipping from abroad has not, and the difference shows up as a lower price and a longer, less controlled journey.</p>
+        <p>Neither arrangement is wrong, and the relevant question is which one you are buying. Degradation proceeds with time and temperature, so a cheaper vial that spent three weeks in transit at ambient temperature is a different product from the same vial held cold, even with identical certificates. The certificate is dated for this reason. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes.</p>
+
+        <h2>What is not a reason</h2>
+        <p>Three things get priced in that should not be.</p>
+        <p>A <b>CAS number</b> does not make a compound more expensive to make. It is an index entry, assigned when a substance is catalogued, and our <a href="tools/cas-number-check/">validator</a> plus a lookup is all it takes to check one.</p>
+        <p><b>Depth of published literature</b> is a property of a compound's history. A compound described decades ago and one reported recently can cost the same to synthesise.</p>
+        <p><b>Molecular weight</b> on its own says little. A heavy molecule is not automatically harder to make than a light one; the number of coupling steps and the difficulty of the purification are what matter, and those do not follow from mass.</p>
+
+        <h2>What this means for comparing two listings</h2>
+        <p>The comparable unit is milligrams of peptide, not milligrams of powder, and you cannot compute it without a net content figure. So the first question on a cheap listing is not "why so cheap" but "what is the net peptide content, and on which batch".</p>
+        <p>After that, ask whether the certificate carries your batch number, whether a method sits next to each figure, and whether identity is reported as well as purity. Our <a href="tools/coa-checklist/">checklist</a> is the same seven checks in a form you can tick off. A supplier who answers all of them and is still more expensive has told you where the money went.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Why do research peptide prices vary so much for the same compound?",
+          "a": "Mainly net peptide content, the length of the synthesis, whether batch-specific testing was paid for, and batch size. The first is the largest and the least visible, because milligrams on a label are milligrams of powder, not of peptide."
+        },
+        {
+          "q": "What is net peptide content and why does it affect price?",
+          "a": "The share of the weighed powder that is peptide, once counterion and absorbed water are set aside. A vial reporting no net content figure cannot be compared on price per milligram of peptide, which is the unit you are buying."
+        },
+        {
+          "q": "Why does peptide length change the cost?",
+          "a": "Every residue is a coupling step that can fail, producing deletion sequences that are hard to separate. Going from 95 to 99 percent purity can mean discarding much of what was made, and that cost rises with length."
+        },
+        {
+          "q": "Does batch-specific testing make a product more expensive?",
+          "a": "Yes. Testing each batch means paying for instrument time on each one instead of once on a representative run. That difference is visible as the gap between a certificate with your batch number and a specimen document."
+        },
+        {
+          "q": "Does having a CAS number make a compound cost more?",
+          "a": "No. A CAS number is an index entry assigned when a substance is catalogued. It says nothing about how difficult the compound is to synthesise or purify."
+        },
+        {
+          "q": "Is a very low price proof that something was skipped?",
+          "a": "It is a reason to ask, not a conclusion. The useful questions are what the net peptide content is and whether the certificate carries your batch number."
+        }
+      ],
+      references: [
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Merrifield, R.B. (1963). Solid phase peptide synthesis. I. The synthesis of a tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.",
+          "url": "https://doi.org/10.1021/ja00897a025"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        }
+      ],
+      cta: 'Ask for the net peptide content and the certificate of your batch before comparing prices. <a href="catalog/">See the catalog</a>.',
+      related: ["excipients-in-peptides","peptide-purity-hplc-explained","verifying-a-peptide-supplier-checklist"],
+    },
+
+    {
+      slug: 'buy-research-peptides-usa',
+      title: 'Buying Research Peptides in the United States',
+      metaTitle: 'Buying Research Peptides in the US: Stock, Payment, COA',
+      metaDescription: 'Domestic stock and shipping inside the US, card or crypto checkout with no messaging required, and how to check a batch certificate before you pay.',
+      focusKeyword: 'buy research peptides USA',
+      category: 'Buying Guide',
+      tags: ["United States","shipping","buying","verification"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Domestic stock, checkout without messaging, and what to check before paying.',
+      imageAlt: 'Buying research peptides in the United States: stock, payment and verification.',
+      body: `
+        <p class="lead">Buying inside the US raises three practical questions that have nothing to do with chemistry: where the material ships from, whether you have to talk to someone to place an order, and what you can check before paying. Here is how each one works here.</p>
+
+        <h2>Domestic stock, not a cross-border shipment</h2>
+        <p>We hold stock in the United States and ship domestically from it. That matters less for speed than for condition: a domestic parcel spends days in transit, not weeks, and it does not sit in a customs queue at whatever temperature the queue happens to be.</p>
+        <p>Lyophilised peptides degrade by routes that proceed with time and temperature, so transit is not a neutral period. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> A certificate is dated because a result belongs to a moment, and the journey between that date and your bench is part of what you are buying even though it appears on no document. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the chemistry.</p>
+        <p>The practical version: a listing that is cheaper because it drop-ships from abroad is selling a different logistics arrangement, not only a different price. Worth knowing which one you are looking at.</p>
+
+        <h2>You do not have to message anyone to order</h2>
+        <p>Checkout runs on this site, by card or by cryptocurrency, and no messaging step is required to buy. We mention this because asking buyers to move to a chat app before they can pay is common in this category, and it is worth being explicit that it is not how this works.</p>
+        <p>Support on WhatsApp exists and is one-to-one, for questions and for requesting a full certificate. It is a support channel, not a checkout.</p>
+
+        <h2>What to check before you pay</h2>
+        <p>Everything on our <a href="article/verifying-a-peptide-supplier-checklist/">supplier checklist</a> can be done before money moves, and none of it requires trusting us. The short version:</p>
+        <p>Ask for the certificate <b>for the batch you will receive</b>, not a sample document. Check that a method sits next to every number, that there is a date, and that identity is reported as well as purity. Check that net peptide content is stated separately from chromatographic purity, because that is the difference between milligrams of powder and milligrams of peptide.</p>
+        <p>You can also check without us. Take the CAS number, run it through the <a href="tools/cas-number-check/">check digit validator</a>, look it up and read back which substance it returns. Take the formula from the public record, calculate the mass with our <a href="tools/peptide-molecular-weight/">calculator</a>, and compare it against the figure on the certificate. The <a href="tools/coa-checklist/">interactive checklist</a> works on anyone's paperwork, ours included.</p>
+
+        <h2>Batch numbers and the lookup</h2>
+        <p>Every vial carries a number in the format CDX-NNNN under the compound name, and the same number appears on the certificate for that batch. The <a href="verify/">lookup</a> confirms the number exists in our records, which compound and strength it is, and which tests were run.</p>
+        <p>It is a traceability check and not a test of your vial, and <a href="article/how-codex-verifies-a-batch/">the page on our process</a> is explicit about what it does not establish.</p>
+
+        <h2>Price per milligram of peptide, not per vial</h2>
+        <p>The comparison that matters across US listings is price per milligram of <em>peptide</em>, and a vial label does not give you that. Powder purified by reversed-phase chromatography is isolated as a salt and lyophilised powder holds absorbed water, so part of the stated weight is neither.</p>
+        <p>Net peptide content is the line that resolves it, and it is separate from chromatographic purity: purity describes the detected peaks, net content describes the weighed mass. A listing thirty percent cheaper with no net content figure may be the same price per milligram of peptide or worse, and there is no way to know from the page. Our note on <a href="article/why-peptide-prices-differ/">why prices differ</a> goes through the four real reasons.</p>
+
+        <h2>Research use, and why the labels say so</h2>
+        <p>Everything sold here is for laboratory research and development. That is not a disclaimer bolted on at the end: it determines what this site will and will not publish. We do not give reconstitution volumes, dosing, administration guidance or anything else that would only make sense for use in a person, and no amount of asking changes that.</p>
+        <p>The flip side is that everything which <em>is</em> verifiable gets published in full, which is why the tools and the checklists are free and work on our competitors' documents too.</p>
+
+        <h2>Two markets, one standard</h2>
+        <p>We also ship in Panama, from stock held there, and the documentation is the same in both places: the same batch numbering, the same certificate fields, the same lookup. Our note on <a href="article/buy-research-peptides-panama/">buying in Panama</a> covers what differs, which is delivery timing and local payment, nothing about the material.</p>
+        <p>Worth saying because a supplier running different standards per market is a real pattern, and the way it usually shows is in the paperwork, not the product page: a batch-specific certificate in one country and a specimen document in the other. A buyer in either market can ask for the other market's document and compare.</p>
+
+        <h2>What ships, and what it looks like</h2>
+        <p>Vials are sealed and labelled with compound, strength and batch number, in protective packaging, tracked to delivery. The label is a document in its own right: it is the thing that ties a certificate to an object you can hold, and without a batch number on it the paperwork describes material in the abstract. Our note on <a href="article/documents-that-accompany-a-peptide-batch/">the documents that come with a batch</a> sets out what each one proves.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Do you ship research peptides within the United States?",
+          "a": "Yes, from domestic stock held in the US. That keeps transit to days instead of weeks and avoids a customs queue, which matters because degradation proceeds with time and temperature."
+        },
+        {
+          "q": "Do I have to message someone on WhatsApp to order?",
+          "a": "No. Checkout runs on the site with card or cryptocurrency and no messaging step is required. WhatsApp is a one-to-one support channel for questions and for requesting a full certificate."
+        },
+        {
+          "q": "Can I see the certificate of analysis before paying?",
+          "a": "Yes. Ask for the certificate for the batch you will receive, not a sample document, and we send the full thing."
+        },
+        {
+          "q": "How can I check a supplier without trusting them?",
+          "a": "Run the CAS number through a check digit validator and look it up. Take the formula from the public record, calculate the mass, and compare it against the certificate. Those checks involve nobody but you."
+        },
+        {
+          "q": "What does the batch number look like?",
+          "a": "CDX-NNNN, printed under the compound name on the vial label, and the same number appears on that batch certificate of analysis."
+        },
+        {
+          "q": "Why does this site not publish reconstitution or dosing guidance?",
+          "a": "Because everything sold here is for laboratory research and development. Reconstitution volumes and dosing guidance only make sense for use in a person, so they are not published regardless of who asks."
+        }
+      ],
+      references: [
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        }
+      ],
+      cta: 'Ask for the certificate of any batch before ordering, or <a href="catalog/">see what is in stock</a>.',
+      related: ["verifying-a-peptide-supplier-checklist","how-codex-verifies-a-batch","buy-research-peptides-panama"],
+    },
+
+    {
+      slug: 'research-peptide-cold-chain',
+      title: 'The Cold Chain, and the Gap No Certificate Covers',
+      metaTitle: 'Research Peptide Cold Chain: Shipping, Transit and Heat',
+      metaDescription: 'A certificate describes a batch on one date. What happens between that date and your bench is transit, and no document covers it. What to ask instead.',
+      focusKeyword: 'peptide cold chain shipping',
+      category: 'Buying Guide',
+      tags: ["cold chain","shipping","storage","stability"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'The one stretch of a vial’s life that no paperwork describes.',
+      imageAlt: 'The transit gap between the date on a certificate and the vial on your bench.',
+      body: `
+        <p class="lead">A certificate of analysis is dated, and that date is before the vial was packed. Everything after it, the warehouse, the courier, the customs queue and the doorstep, happens without documentation. It is the one stretch of a vial's life that no paperwork covers, and in a warm climate it is not a short one.</p>
+
+        <h2>Why time and temperature are the same variable</h2>
+        <p>Peptides degrade by known chemical routes, and the ones that matter are ordinary chemistry: hydrolysis of the backbone, oxidation of susceptible side chains, deamidation of asparagine and glutamine. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> All of them proceed faster when it is warmer, so a week at 30 °C is not equivalent to a week at 4 °C.</p>
+        <p>This is why a result belongs to a moment. A certificate reporting 99.2 percent describes a batch on the day it was measured, and it stays true about that day no matter what happens afterwards. The document is not wrong. It is about a measurement, not about transit. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes in more detail.</p>
+
+        <h2>Lyophilisation buys time, not immunity</h2>
+        <p>Freeze-drying removes most of the water, and water participates in several of the degradation routes, so a dry solid is substantially more stable than the same peptide in solution. That is the whole point of shipping powder.</p>
+        <p>What it does not do is stop the clock. A lyophilised cake is <a href="article/lyophilization-freeze-drying/">hygroscopic</a>, and it will pull moisture from humid air through any imperfect seal. In a climate that is warm and humid at once, those two factors compound: more water available and more energy to drive the reactions it enables.</p>
+
+        <h2>Where the gap opens</h2>
+        <p>Three places, in rough order of how much time they account for.</p>
+        <p><b>Long-haul transit.</b> A parcel crossing borders spends days to weeks moving, and most of that time it is not refrigerated regardless of what the label asks for. The difference between a domestic shipment and an international one is mostly duration, and duration is the variable.</p>
+        <p><b>Customs holding.</b> An unpredictable wait in conditions nobody controls or records. This is the part that makes a cross-border arrival hard to reason about: the length is not knowable in advance.</p>
+        <p><b>The last mile.</b> A parcel on a doorstep for an afternoon in the sun can see a higher temperature than anything earlier in the journey, and it is the stretch a seller has least control over and a buyer has most.</p>
+
+        <h2>What shipping from local stock changes</h2>
+        <p>It removes the first two. Material held in-country and shipped domestically arrives in days, without a customs queue, which means the undocumented stretch is short and reasonably predictable instead of long and unknowable.</p>
+        <p>It does not remove the third, and it does not make the material immune to anything. What it does is shrink the part of a vial's history that no document describes, which is a smaller claim than "guaranteed cold chain" and a more accurate one.</p>
+
+        <h2>What to ask, and what nobody can answer</h2>
+        <p>Answerable: where the stock ships from, how long domestic transit takes, whether the vial is sealed and protected, and what date is on the certificate. The last one is the most useful and the least requested. A document dated eighteen months ago describes the batch as it was eighteen months ago, whatever the cold chain did since.</p>
+        <p>Not answerable by anyone honestly: the temperature history of a specific parcel, unless it travelled with a logger. A seller claiming an unbroken cold chain across an international journey is claiming knowledge of conditions in a customs warehouse. The accurate statement is about how the material was held and how it was sent, which is a narrower thing to say.</p>
+
+        <h2>Why the problem is sharper in a warm climate</h2>
+        <p>Rate depends on temperature, so the same journey costs more in Panama than in a temperate country, and the two risky stretches are exactly the ones a tropical route lengthens: an unair-conditioned warehouse and an afternoon on a doorstep. Humidity adds the second factor, because a hygroscopic cake has more water available to pull in.</p>
+        <p>None of this is dramatic over days. It becomes material over weeks, which is the argument for caring where stock sits and not only what the certificate says. A document and a journey are two different things to ask about, and only one of them is printed.</p>
+
+        <h2>What you can do on arrival</h2>
+        <p>Get it to its storage condition promptly instead of leaving it on a bench, and keep the vial sealed until you need it, because the cake pulls water from the air once it is open.</p>
+        <p>Check the batch number on the label against the certificate for that batch first, since that check is about identity and not condition, and it is the one that can be done immediately. Our <a href="tools/coa-checklist/">checklist</a> covers the rest of the document, and the <a href="verify/">lookup</a> confirms the number belongs to a real batch.</p>
+
+        <h2>Why this page exists</h2>
+        <p>Because the honest answer to "is the cold chain guaranteed" is that no seller can guarantee the undocumented stretch, and the useful answer is how long that stretch is and what was done to keep it short. Our note on <a href="article/documents-that-accompany-a-peptide-batch/">the documents that come with a batch</a> makes the same point from the paperwork side: there is a question none of them answer.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Does a certificate of analysis cover shipping conditions?",
+          "a": "No. A certificate describes a batch on the date it was measured, which is before the vial was packed. Transit and storage after that date are not covered by any document."
+        },
+        {
+          "q": "Does lyophilisation make a peptide stable at room temperature?",
+          "a": "It removes most of the water and so slows the routes that depend on it, which is why powder is shipped and not solution. It slows the clock without stopping it, and the dry cake is hygroscopic."
+        },
+        {
+          "q": "Where does a shipment spend the most undocumented time?",
+          "a": "Long-haul transit and customs holding, which together can account for weeks on an international route. The last mile is shorter but can reach the highest temperature of the journey."
+        },
+        {
+          "q": "What does shipping from local stock change?",
+          "a": "It removes long-haul transit and the customs queue, so the undocumented stretch is days instead of weeks and is reasonably predictable. It does not make the material immune to anything."
+        },
+        {
+          "q": "Can a seller guarantee an unbroken cold chain?",
+          "a": "Not across an international journey, because that would mean claiming knowledge of conditions in a customs warehouse. What can be stated accurately is how the material was held and how it was sent."
+        },
+        {
+          "q": "What is the most useful question about a certificate here?",
+          "a": "Its date. A document dated eighteen months ago describes the batch as it was then, and that is true regardless of how well the material was handled since."
+        }
+      ],
+      references: [
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.",
+          "url": "https://doi.org/10.1016/s0378-5173(00)00423-3"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        }
+      ],
+      cta: 'Ask for the date on the certificate of your batch. <a href="verify/">Look up a batch number</a>.',
+      related: ["how-to-store-research-peptides","lyophilization-freeze-drying","documents-that-accompany-a-peptide-batch"],
+    },
   ];
 
   window.REA.POSTS = POSTS;
