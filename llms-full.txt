@@ -20,7 +20,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 
 # Catalog
 
-## GLP-2 (tirzepatide)
+## GLP2-T (tirzepatide)
 
 - URL: https://codexresearchlab.com/product/tirzepatide/
 - Strength: 20 mg per vial
@@ -34,13 +34,13 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 
 A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
 
-**What is GLP-2?** A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
+**What is GLP2-T?** A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
 
-**How much does GLP-2 cost?** Single vial: $149.00 USD. Pack · 3 vials: $411.24 USD. Prices are in USD.
+**How much does GLP2-T cost?** Single vial: $149.00 USD. Pack · 3 vials: $411.24 USD. Prices are in USD.
 
-**Is GLP-2 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP2-T tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
-## GLP-3 (retatrutide)
+## GLP3-R (retatrutide)
 
 - URL: https://codexresearchlab.com/product/retatrutide/
 - Strength: 10 mg per vial
@@ -52,13 +52,13 @@ A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, 
 
 A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
 
-**What is GLP-3?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
+**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
 
-**How much does GLP-3 cost?** Single vial: $150.00 USD. Pack · 3 vials: $414.00 USD. Prices are in USD.
+**How much does GLP3-R cost?** Single vial: $150.00 USD. Pack · 3 vials: $414.00 USD. Prices are in USD.
 
-**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
-## GLP-3 (retatrutide)
+## GLP3-R (retatrutide)
 
 - URL: https://codexresearchlab.com/product/retatrutide-20mg/
 - Strength: 20 mg per vial
@@ -70,13 +70,13 @@ A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic 
 
 A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
 
-**What is GLP-3?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
+**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
 
-**How much does GLP-3 cost?** Single vial: $194.00 USD. Pack · 3 vials: $535.44 USD. Prices are in USD. This presentation is currently out of stock.
+**How much does GLP3-R cost?** Single vial: $194.00 USD. Pack · 3 vials: $535.44 USD. Prices are in USD. This presentation is currently out of stock.
 
-**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
-## GLP-3 (retatrutide)
+## GLP3-R (retatrutide)
 
 - URL: https://codexresearchlab.com/product/retatrutide-30mg/
 - Strength: 30 mg per vial
@@ -88,11 +88,11 @@ A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic 
 
 A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
 
-**What is GLP-3?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 30 mg vial for laboratory research use only.
+**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 30 mg vial for laboratory research use only.
 
-**How much does GLP-3 cost?** Single vial: $214.00 USD. Pack · 3 vials: $590.64 USD. Prices are in USD. This presentation is currently out of stock.
+**How much does GLP3-R cost?** Single vial: $214.00 USD. Pack · 3 vials: $590.64 USD. Prices are in USD. This presentation is currently out of stock.
 
-**Is GLP-3 tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
 
 ## BPC-157
 

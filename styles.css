@@ -115,14 +115,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   height: 68px;
   gap: 2rem;
 }
-.logo { display: inline-flex; align-items: center; }
+.logo { display: inline-flex; align-items: center; flex-shrink: 0; }
 .logo .logo-full { height: 26px; width: auto; display: block; }
 .logo .logo-icon { height: 30px; width: auto; display: none; }
 .footer .logo .logo-full { height: 28px; }
 .nav { display: flex; gap: 1.75rem; font-size: .93rem; font-weight: 500; }
-.nav a { color: var(--muted); transition: color .15s; }
+.nav a { color: var(--muted); transition: color .15s; white-space: nowrap; }
 .nav a:hover, .nav a.active { color: var(--ink); }
-.header-actions { display: flex; align-items: center; gap: .9rem; }
+.header-actions { display: flex; align-items: center; gap: .9rem; flex-shrink: 0; }
+.header-actions .btn { white-space: nowrap; }
 .cart-btn {
   position: relative;
   width: 40px; height: 40px;
@@ -1206,6 +1207,16 @@ s.was, .pd-price-was {
 .pd-add:disabled:hover, #pdStickyAdd:disabled:hover { background: var(--border); transform: none; }
 
 /* ---------- Responsive ---------- */
+/* Header: en español los links son más largos. Bajo 1320 sobra el CTA (repite
+   "Productos"); bajo 1100 ni así caben país + cuenta + carrito, y pasa a menú. */
+@media (max-width: 1319px) {
+  .header-actions > .btn-primary { display: none; }
+  .nav { gap: 1.25rem; }
+}
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .menu-btn { display: grid; }
+}
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { min-height: 340px; }

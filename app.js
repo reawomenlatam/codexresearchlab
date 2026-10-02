@@ -79,7 +79,13 @@
   const grid = document.getElementById('productsGrid');
   if (grid) {
     const paintGrid = () => {
-      grid.innerHTML = PRODUCTS.slice(0, 8).map(window.REAui.productCard).join('');
+      // Escaparate: solo lo que se puede comprar en el país elegido, y una
+      // tarjeta por compuesto (los tamaños se eligen en la ficha).
+      const seen = new Set();
+      const featured = PRODUCTS.filter((p) => !p.outOfStock && !seen.has(p.name) && seen.add(p.name));
+      // Filas completas en el grid de 4: con 5 en stock (EE. UU.) quedaba una huérfana.
+      const n = featured.length >= 8 ? 8 : featured.length >= 4 ? 4 : featured.length;
+      grid.innerHTML = featured.slice(0, n).map(window.REAui.productCard).join('');
       window.REAui.wireAddButtons(grid);
     };
     paintGrid();
@@ -121,4 +127,16 @@
   }
   window.addEventListener('rea-country-change', updateMarqueeEta);
   updateMarqueeEta();
+
+  // Cifras de plazo de la portada: mismo origen que la cinta, para que la
+  // página no prometa dos tiempos distintos.
+  function updateEtaFigures() {
+    if (!window.REACountry) return;
+    const c = window.REA.COUNTRIES[window.REACountry.code()];
+    if (!c || !c.etaFigure) return;
+    document.querySelectorAll('[data-eta-figure]').forEach((el) => { el.textContent = c.etaFigure; });
+    document.querySelectorAll('[data-eta-label]').forEach((el) => { el.textContent = window.T(c.etaFigureLabel); });
+  }
+  window.addEventListener('rea-country-change', updateEtaFigures);
+  updateEtaFigures();
 })();

@@ -33,7 +33,9 @@
   // la entrada barata sigue siendo el vial suelto (compromiso pequeño primero).
   const savedValue = (s) => (refList(s) ? Math.max(0, refList(s) - s.price) : 0);
   const bestIdx = p.sizes.reduce((best, s, i) => (savedValue(s) > savedValue(p.sizes[best]) ? i : best), 0);
-  const related = PRODUCTS.filter((x) => x.slug !== p.slug).slice(0, 4);
+  // Sugerencias: con stock, sin otros tamaños del mismo compuesto y una por nombre.
+  const relSeen = new Set([p.name]);
+  const related = PRODUCTS.filter((x) => !x.outOfStock && !relSeen.has(x.name) && relSeen.add(x.name)).slice(0, 4);
   // Lote real en registro: la prueba se enseña ANTES de pagar, no después.
   // `purity`, `date` y `lab` son opcionales en data.js y solo se pintan si existen.
   const batch = (typeof batchFor === 'function' && batchFor(p.slug, p.mg)) || null;
@@ -181,7 +183,7 @@
             <div>
               <span class="pd-price" id="pdPrice">${money(p.sizes[0].price)}</span>
               <span class="pd-price-was" id="pdPriceWas">${refList(p.sizes[0]) ? money(refList(p.sizes[0])) : ''}</span>
-              <span class="pd-price-note"><span id="pdPriceUnit">${perVial(p.sizes[0])}</span>${T('One-time · ships today')}</span>
+              <span class="pd-price-note"><span id="pdPriceUnit">${perVial(p.sizes[0])}</span>${T('One-time payment')}</span>
             </div>
           </div>
 
@@ -291,9 +293,12 @@
           <div><dt>${T('Purity spec')}</dt><dd>${T('99% minimum')}</dd></div>
           ${batch && batch.purity ? `<div><dt>${T('Purity, this batch')}</dt><dd>${batch.purity}</dd></div>` : ''}
           ${batch && batch.date ? `<div><dt>${T('Analysis date')}</dt><dd>${batch.date}</dd></div>` : ''}
+          ${batch && batch.content ? `<div><dt>${T('Measured content')}</dt><dd>${batch.content}</dd></div>` : ''}
           ${batch && batch.lab ? `<div><dt>${T('Laboratory')}</dt><dd>${batch.lab}</dd></div>` : ''}
+          ${batch && batch.labKey ? `<div><dt>${T('Lab verification key')}</dt><dd><a href="https://www.janoshik.com/verify/" target="_blank" rel="noopener">${batch.labKey}</a></dd></div>` : ''}
           <div><dt>${T('The certificate reports')}</dt><dd>${T('Purity, identity and quantity')}</dd></div>
         </dl>
+        ${batch && batch.coa ? `<p class="coa-note"><a href="${batch.coa}" target="_blank" rel="noopener">${T('View the full lab report')}</a></p>` : ''}
         <p class="coa-note">${T('This is the batch currently in stock. Its full certificate is available on request, before you order if you want to see it first.')} <a href="verify/${batch ? '?batch=' + encodeURIComponent(batch.code) : ''}">${T('Check this batch number')}</a>.</p>
         <a class="btn btn-primary coa-cta" href="https://wa.me/${window.REA.WHATSAPP}?text=${encodeURIComponent(T('Hi, I’d like the COA for') + ' ' + p.name + (batch ? ' (' + T('batch') + ' ' + batch.code + ')' : ''))}" target="_blank" rel="noopener">${T('Ask for this batch COA')}</a>
       </div>

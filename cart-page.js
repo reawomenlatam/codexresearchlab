@@ -368,8 +368,8 @@
   const socialProof = `
     <div class="cart-social">
       <div><strong>HPLC + MS</strong><span>${T('third-party tested')}</span></div>
-      <div><strong class="count-up" data-from="92">100%</strong><span>${T('batches with COA')}</span></div>
-      <div><strong>24-48 h</strong><span>${T('dispatch')}</span></div>
+      <div><strong>100%</strong><span>${T('batches with COA')}</span></div>
+      <div><strong>${country().etaFigure}</strong><span>${T(country().etaFigureLabel)}</span></div>
     </div>`;
 
   function emptyState() {

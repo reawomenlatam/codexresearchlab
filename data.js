@@ -5,7 +5,7 @@
 
 const PRODUCTS = [
   {
-    slug: 'tirzepatide', name: 'GLP-2', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
+    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
     photo2: 'assets/products/tirzepatide-2.jpg',
@@ -18,7 +18,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
   },
   {
-    slug: 'retatrutide', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     photo2: 'assets/products/retatrutide-2.jpg',
@@ -31,7 +31,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {
-    slug: 'retatrutide-20mg', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-20mg-2.jpg',
@@ -44,7 +44,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {
-    slug: 'retatrutide-30mg', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-30mg-2.jpg',
@@ -399,6 +399,7 @@ const COUNTRIES = {
     code: 'US', label: 'United States', flag: '🇺🇸',
     shipping: { flat: 20, freeThreshold: 250 },
     eta: 'Delivery in 48-72 h', etaShort: '48-72 h',
+    etaFigure: '48-72 h', etaFigureLabel: 'Delivery in the U.S.',
     payments: [
       { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
@@ -408,6 +409,7 @@ const COUNTRIES = {
     code: 'PA', label: 'Panamá', flag: '🇵🇦',
     shipping: { flat: 4, freeThreshold: 100 },
     eta: 'Panama City: 1-2 h · Interior: next-day', etaShort: '1-2 h in Panama City',
+    etaFigure: '1-2 h', etaFigureLabel: 'Delivery in Panama City',
     payments: [
       { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
@@ -438,7 +440,17 @@ const BATCHES = {
   'CDX-2607-007': { product: 'Ipamorelin',  slug: 'ipamorelin',  mg: '10 mg' },
   'CDX-2607-008': { product: 'PT-141',      slug: 'pt-141',      mg: '10 mg' },
   'CDX-2607-009': { product: 'Retatrutide', slug: 'retatrutide', mg: '30 mg' },
-  'CDX-1017': null, // lote universal: aplica a todos los productos
+  // Lote universal: aplica a todos los productos. El COA en cambio es por
+  // compuesto, así que los resultados van por slug en `results` y la ficha solo
+  // pinta los del producto que los tiene; los demás siguen con la especificación.
+  'CDX-1017': {
+    results: {
+      retatrutide: {
+        purity: '99.777%', content: '10.33 mg', date: 'Oct 2, 2026', lab: 'Janoshik',
+        labKey: '9UIDR6QE68DG', coa: 'assets/coa/cdx-1017-retatrutide-10mg.webp',
+      },
+    },
+  },
 };
 
 /* Lote vigente que muestran TODAS las fichas. Los CDX-2607-* de arriba quedan
@@ -450,7 +462,10 @@ const CURRENT_BATCH = 'CDX-1017';
    visitante puede comprobar en /verify/ sin escribirle a nadie. Empareja por
    concentración cuando hay más de uno (retatrutide tiene 10 y 30 mg). */
 function batchFor(slug, mg) {
-  if (CURRENT_BATCH) return Object.assign({ code: CURRENT_BATCH }, BATCHES[CURRENT_BATCH] || {});
+  if (CURRENT_BATCH) {
+    const b = BATCHES[CURRENT_BATCH] || {};
+    return Object.assign({ code: CURRENT_BATCH }, (b.results && b.results[slug]) || {});
+  }
   const hits = Object.keys(BATCHES).filter((c) => BATCHES[c] && BATCHES[c].slug === slug);
   if (!hits.length) return null;
   const code = (mg && hits.find((c) => BATCHES[c].mg === mg)) || hits[0];

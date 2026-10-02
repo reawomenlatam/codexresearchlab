@@ -48,12 +48,10 @@
           <img class="logo-icon" src="assets/logo-mark.svg" alt="" width="641" height="558">
         </a>
         <nav class="nav">
-          ${link(HOME, T('Home'), 'inicio')}
           ${link(U('catalog/'), T('Products'), 'productos')}
           ${link(U('verify/'), T('Verify batch'), 'verify')}
           ${link(U('blog/'), T('Blog'), 'blog')}
           ${link(U('tools/'), T('Tools'), 'tools')}
-          ${link(HOME + '#proceso', T('Process'), 'proceso')}
           ${link(HOME + '#faq', T('FAQ'), 'faq')}
         </nav>
         <div class="header-actions">
@@ -139,7 +137,7 @@
           </div>
         </div>
         <div class="footer-legal">
-          <p class="copy">© Codex Research 2023. ${T('All rights reserved.')}</p>
+          <p class="copy">© Codex Research ${new Date().getFullYear()}. ${T('All rights reserved.')}</p>
           ${BIZ}
           <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
         </div>
