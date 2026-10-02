@@ -2451,7 +2451,7 @@
         <p>Every order ships in sealed protective packaging, and each vial is labelled with its compound, its strength and its batch number. If a seal arrives broken, do not accept the package.</p>
 
         <h2>Why local stock changes the material, not only the wait</h2>
-        <p>An international parcel spends weeks moving between warehouses and vehicles, and the relevant count is not the number of days but how many temperature and humidity cycles the package went through. A freeze-dried peptide is stable while it stays dry, and each warming and cooling is an opportunity for moisture to reach it.</p>
+        <p>An international parcel spends weeks moving between warehouses and vehicles, and the relevant count is how many temperature and humidity cycles the package went through, not how many days passed. Peptides degrade by routes that all proceed faster as temperature rises, so transit is not a neutral period.<a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> A freeze-dried peptide is stable while it stays dry, and each warming and cooling is an opportunity for moisture to reach it.</p>
         <p>Two hours in a city is a short, single trip. This is a property of the material and how it travels, which our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers in detail.</p>
 
         <h2>Paying in Panama</h2>
@@ -2467,7 +2467,7 @@
         <ul>
           <li>Enter the batch number on the <a href="verify/">batch verification page</a>. It tells you whether that batch exists and what document it corresponds to.</li>
           <li>Ask for the certificate of analysis for that batch. It can be requested before an order, not only after.</li>
-          <li>Read the certificate, not only the purity figure. Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> explains what each field means and which absences matter.</li>
+          <li>Read the certificate, not only the purity figure. A percentage quoted without the column, gradient and detection wavelength that produced it cannot be repeated by anyone else, which is why analytical procedures are reported with their conditions.<a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Reference: Swartz &amp; Krull, 2012)</a> Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> explains what each field means and which absences matter.</li>
         </ul>
         <p>The three questions a complete document answers are which batch this is, how pure it is, and whether it is the right molecule. A document that answers only one of them is incomplete, wherever it came from.</p>
 
@@ -2490,7 +2490,7 @@
         <p>Packaging is the same regardless of destination: sealed, protective, and labelled per vial. The additional day in transit is a single controlled leg and not a customs process, since the stock is already in the country.</p>
 
         <h2>When it arrives</h2>
-        <p>Freeze-dried material can look like very little: a thin film, a few flecks on the glass, sometimes nothing obvious at all. A vial that appears empty has usually not lost anything, which is a consequence of <a href="article/lyophilization-freeze-drying/">how freeze-drying works</a> and of whether a bulking agent was part of the formulation.</p>
+        <p>Freeze-dried material can look like very little: a thin film, a few flecks on the glass, sometimes nothing obvious at all. A vial that appears empty has usually not lost anything, which is a consequence of <a href="article/lyophilization-freeze-drying/">how freeze-drying works</a> and of whether a bulking agent was part of the formulation.<a class="cite" href="https://doi.org/10.1016/s0378-5173(00)00423-3" target="_blank" rel="noopener nofollow">(Reference: Wang, 2000)</a></p>
         <p>Let a cold vial reach room temperature before opening it, so condensation does not form inside. Keep the material dry, cool and out of direct light.</p>
 
         <h2>Prices and stock</h2>
@@ -2526,7 +2526,28 @@
           "a": "Usually not. At the masses typically supplied, freeze-dried material can be a thin film or a few flecks on the glass. Appearance depends on how the drying went and on whether a bulking agent was present, not on how much compound is there."
         }
       ],
-      references: [],
+      references: [
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Wang, W. (2000). Lyophilization and development of solid protein pharmaceuticals. International Journal of Pharmaceutics, 203(1-2), 1-60.",
+          "url": "https://doi.org/10.1016/s0378-5173(00)00423-3"
+        },
+        {
+          "text": "Swartz, M.E., &amp; Krull, I.S. (2012). Handbook of Analytical Validation. CRC Press.",
+          "url": "https://doi.org/10.1201/b12039"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        }
+      ],
       cta: 'Browse the <a href="catalog/">Codex Research catalog</a> or <a href="verify/">verify a batch number</a>. Orders in Panama are confirmed on WhatsApp before you pay.',
       related: ['verify-research-peptide-batch-coa-panama', 'high-performance-liquid-chromatography-hplc'],
     },
@@ -4510,6 +4531,749 @@
       ],
       cta: 'Ask for the date on the certificate of your batch. <a href="verify/">Look up a batch number</a>.',
       related: ["how-to-store-research-peptides","lyophilization-freeze-drying","documents-that-accompany-a-peptide-batch"],
+    },
+
+    {
+      slug: 'what-is-tesamorelin',
+      title: 'Tesamorelin: a GHRH Analogue With a Fatty Acid on the End',
+      metaTitle: 'What Is Tesamorelin? Structure, Mass and Verification',
+      metaDescription: 'Tesamorelin is a 44-residue GHRH analogue carrying a trans-3-hexenoyl group. Its formula, mass, CAS number and what its certificate of analysis should show.',
+      focusKeyword: 'what is tesamorelin',
+      category: 'Peptide Research',
+      tags: ["tesamorelin","GHRH","growth hormone","identity"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Forty-four residues plus a short fatty acid, and why that last part is the whole design.',
+      imageAlt: 'A 44-residue GHRH analogue with a fatty acid group, and what its certificate shows.',
+      body: `
+        <p class="lead">Tesamorelin is a synthetic analogue of growth hormone-releasing hormone, the hypothalamic signal that tells the pituitary to release growth hormone. The molecule is the natural 44-residue sequence with one addition: a short unsaturated fatty acid attached to the N-terminus. <a class="cite" href="https://doi.org/10.1517/13543780802707658" target="_blank" rel="noopener nofollow">(Reference: Wang &amp; Chanoine, 2009)</a></p>
+
+        <h2>What the fatty acid is for</h2>
+        <p>Native GHRH is cleared quickly. The first two residues are a known cleavage site for dipeptidyl peptidase IV, the same enzyme that limits how long the incretin hormones last in circulation. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Reference: Mentlein, 1999)</a></p>
+        <p>Attaching a trans-3-hexenoyl group to the N-terminus blocks that end. The design goal is a molecule that behaves like GHRH at its receptor while surviving longer than the native sequence. <a class="cite" href="https://doi.org/10.1345/aph.1q629" target="_blank" rel="noopener nofollow">(Reference: Spooner &amp; Olin, 2012)</a> Chemically this is the same strategy as a D-residue substitution or a backbone constraint: the peptide is modified where the enzyme cuts, not where the receptor binds.</p>
+
+        <h2>Which receptor family</h2>
+        <p>The GHRH receptor belongs to the secretin-like class of G protein-coupled receptors, the same structural family as the GIP, GLP-1 and glucagon receptors. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> Family membership is why selectivity within the group is a measurement and not an assumption, a point our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a> develops.</p>
+        <p>Tesamorelin acts on the receptor directly, which separates it from the growth hormone secretagogues that work through the ghrelin receptor instead. Two compounds described as raising growth hormone can therefore be doing it through different receptors, and our note on <a href="article/what-is-a-growth-hormone-secretagogue/">secretagogues</a> covers the distinction.</p>
+
+        <h2>Identity on paper</h2>
+        <p>Tesamorelin is C<sub>221</sub>H<sub>366</sub>N<sub>72</sub>O<sub>67</sub>S, 5135.9 g/mol, CAS 218949-48-5. The CAS number passes the check digit and resolves in PubChem to a record whose formula matches, which is the pair of checks worth doing on any compound: run the arithmetic with our <a href="tools/cas-number-check/">validator</a>, then look the number up and read back which substance it returns.</p>
+        <p>At forty-four residues this is a long peptide, and the single sulfur in the formula comes from its one methionine. That residue oxidises, and each oxidation adds sixteen mass units, which is a specific thing to look for on a mass spectrum.</p>
+        <p>A sequence calculator cannot handle this compound, and the reason is instructive. Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> works from the twenty standard amino acids, and the hexenoyl group is not one of them. The calculator would return the unmodified peptide, which is a different molecule. This is the same limit that stops it seeing a bound metal or an amidated terminus.</p>
+
+        <h2>"GHRH analogue" names a family, not a molecule</h2>
+        <p>Several compounds in catalogues are described this way, and they differ in how much of the natural sequence they keep and what was done to the ends. Tesamorelin keeps all forty-four residues and modifies the N-terminus. Others use the first twenty-nine residues, the shortest fragment that still acts at the receptor, with substitutions inside the chain.</p>
+        <p>Two products under the same description can therefore differ by fifteen residues and several substitutions, which changes the formula, the mass and what a certificate has to report. The label is a category; the sequence is the compound. Comparing two of them means comparing sequences, not descriptions.</p>
+
+        <h2>What a certificate should show</h2>
+        <p>Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with the column, gradient and detection wavelength written out. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, with observed and theoretical mass both given, because on a molecule of five thousand daltons a rounded figure cannot distinguish close relatives.</p>
+        <p>Length is the reason purity deserves attention here. Forty-four residues means forty-three coupling steps in <a href="article/peptide-synthesis/">synthesis</a>, each one a chance for an incomplete reaction, and the resulting deletion sequences differ from the target by a single residue and leave the column at nearly the same time. Long peptides are often assembled from fragments joined afterwards for this reason.</p>
+        <p>Net peptide content belongs on the document separately from chromatographic purity. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> explains the gap.</p>
+
+        <h2>Two vial strengths, one compound</h2>
+        <p>Tesamorelin is listed here at 10 mg and 20 mg per vial. That is a packaging difference and nothing else: same sequence, same formula, same CAS number, same certificate fields. The batch number is what distinguishes one lot from another, and a 20 mg vial carries its own batch number exactly as a 10 mg vial does.</p>
+        <p>Worth saying because a strength on a label is a quantity of powder, and the share of that powder which is peptide is a separate figure. Two vials of different stated strength and identical net content percentage hold proportionally different amounts of peptide; two vials of the same strength and different net content do not hold the same amount at all.</p>
+
+        <h2>The acylation is also an analytical question</h2>
+        <p>A modification at one end of a long chain is a small fraction of the total mass, so the difference between the acylated molecule and the unacylated one is about ninety-six daltons out of five thousand. That is well within what a mass spectrometer resolves, but only if the document reports the measured value instead of a verdict.</p>
+        <p>A certificate that says "conforms" has told you someone looked. One that gives the observed mass next to the theoretical mass has told you what they saw, and the second is checkable against the public record.</p>
+
+        <h2>Storage is a longer conversation on a long peptide</h2>
+        <p>Degradation routes that depend on chain length have more chain to work on here. Hydrolysis of the backbone, deamidation of asparagine and glutamine, and oxidation of the single methionine all proceed with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a></p>
+        <p>The acyl group adds one more site to think about, since an ester or amide linkage is itself hydrolysable. A certificate is dated because a result belongs to a moment, and what happens between that date and your bench is a matter of handling. Our note on <a href="article/how-to-store-research-peptides/">storage</a> sets out the routes.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is tesamorelin?",
+          "a": "A synthetic analogue of growth hormone-releasing hormone: the natural 44-residue sequence with a short unsaturated fatty acid, trans-3-hexenoyl, attached to the N-terminus."
+        },
+        {
+          "q": "Why does tesamorelin carry a fatty acid group?",
+          "a": "The first two residues of native GHRH are a cleavage site for dipeptidyl peptidase IV. Blocking that end with an acyl group is a design aimed at surviving longer than the native sequence while still acting at the receptor."
+        },
+        {
+          "q": "What is the formula and mass of tesamorelin?",
+          "a": "C221H366N72O67S, 5135.9 g/mol, CAS 218949-48-5. The CAS number passes the check digit and resolves in PubChem to a record with a matching formula."
+        },
+        {
+          "q": "Can a sequence calculator give the mass of tesamorelin?",
+          "a": "No. A calculator works from the twenty standard amino acids, and the hexenoyl group is not one of them, so it would return the unmodified peptide instead, which is a different molecule."
+        },
+        {
+          "q": "Does tesamorelin work through the same receptor as a secretagogue?",
+          "a": "No. It acts at the GHRH receptor, while growth hormone secretagogues act through the ghrelin receptor. Two compounds described as raising growth hormone can be doing it through different receptors."
+        },
+        {
+          "q": "Why does the length matter for purity?",
+          "a": "Forty-four residues means forty-three coupling steps, each a chance for an incomplete reaction. The resulting deletion sequences differ from the target by one residue and elute at nearly the same time, which is why long peptides are often assembled from fragments."
+        }
+      ],
+      references: [
+        {
+          "text": "Wang, Y., &amp; Chanoine, J.P. (2009). Tesamorelin, a human growth hormone releasing factor analogue. Expert Opinion on Investigational Drugs, 18(3), 303-310.",
+          "url": "https://doi.org/10.1517/13543780802707658"
+        },
+        {
+          "text": "Spooner, L.M., &amp; Olin, J.L. (2012). Tesamorelin: a growth hormone-releasing factor analogue. Annals of Pharmacotherapy, 46(2), 240-247.",
+          "url": "https://doi.org/10.1345/aph.1q629"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Mentlein, R. (1999). Dipeptidyl-peptidase IV (CD26): role in the inactivation of regulatory peptides. Regulatory Peptides, 85(1), 9-24.",
+          "url": "https://doi.org/10.1016/s0167-0115(99)00089-0"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Tesamorelin compound summary (CID 16137828). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16137828"
+        }
+      ],
+      cta: 'Every batch ships with its own certificate. <a href="verify/">Check a batch number</a> before ordering.',
+      related: ["what-is-a-growth-hormone-secretagogue","peptide-synthesis","mass-spectrometry-peptide-research"],
+    },
+
+    {
+      slug: 'what-is-cjc-1295-no-dac',
+      title: 'CJC-1295 Without DAC: What the Missing Part Is',
+      metaTitle: 'CJC-1295 no DAC: What DAC Means and Why It Is Absent',
+      metaDescription: 'A 29-residue GHRH fragment with four substitutions. What the DAC linker is, why the no-DAC form is a different molecule, and what its certificate must show.',
+      focusKeyword: 'CJC-1295 no DAC',
+      category: 'Peptide Research',
+      tags: ["CJC-1295","GHRH","identity","certificate of analysis"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'A product named after something it does not contain, and why that matters on a certificate.',
+      imageAlt: 'A 29-residue GHRH fragment named after a linker it does not carry.',
+      body: `
+        <p class="lead">This is the rare compound whose common name describes a part it does not have. Understanding what DAC is, and what its absence changes, is most of what you need to read a certificate for this product correctly.</p>
+
+        <h2>The underlying sequence</h2>
+        <p>The starting point is GHRH(1-29), the first twenty-nine residues of growth hormone-releasing hormone. That fragment is the shortest piece of the natural hormone that still acts at the receptor, which is why analogues are built from it instead of from the full forty-four.</p>
+        <p>CJC-1295 without DAC is that fragment with four substitutions, usually written as the tetrasubstituted analogue. Each substitution targets a known weakness: the position-two residue that dipeptidyl peptidase IV cleaves, and residues prone to oxidation or isomerisation. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Reference: Mentlein, 1999)</a> The pattern is the same one behind most peptide analogue design, which is to change the chain where it breaks and leave alone the part the receptor reads.</p>
+
+        <h2>What DAC is</h2>
+        <p>DAC stands for Drug Affinity Complex, a maleimide linker attached to the peptide so that it bonds covalently to albumin in circulation. The published work on CJC-1295 describes that construct, with the linker present. <a class="cite" href="https://doi.org/10.1210/jc.2006-1702" target="_blank" rel="noopener nofollow">(Reference: Ionescu &amp; Frohman, 2006)</a></p>
+        <p>Removing the linker leaves the modified GHRH(1-29) fragment on its own. So the no-DAC product is not a variant of the DAC compound in the sense of a different salt or a different strength: it is a shorter molecule with a different formula, a different mass and a different CAS number. A certificate for one does not describe the other.</p>
+
+        <h2>Identity on paper</h2>
+        <p>CJC-1295 without DAC is C<sub>152</sub>H<sub>252</sub>N<sub>44</sub>O<sub>42</sub>, 3367.9 g/mol, CAS 863288-34-0. The CAS number passes the check digit and resolves in PubChem to a record whose formula matches, which is the pair of checks to run: the arithmetic with our <a href="tools/cas-number-check/">validator</a>, then a lookup to read back which substance the number returns.</p>
+        <p>The formula carries no sulfur, which is itself a readable fact: this molecule has neither methionine nor cysteine, so the oxidation route that matters on methionine-containing peptides does not apply. That is the kind of thing a formula tells you for free.</p>
+        <p>A sequence calculator cannot produce this mass. Our <a href="tools/peptide-molecular-weight/">calculator</a> handles the twenty standard amino acids, and the substitutions here include residues outside that set. It would reject the sequence instead of inventing a mass, which is the correct behaviour and the reason the tool refuses instead of guessing.</p>
+
+        <h2>Why the naming is a verification problem</h2>
+        <p>A catalogue listing that says only "CJC-1295" is ambiguous between two molecules differing by a linker and roughly a thousand daltons. The way to resolve it is not to trust the product title but to read the certificate: the formula and the measured mass settle which compound is in the vial, and they settle it in a way a name cannot.</p>
+        <p>This is the general case of something our note on <a href="article/cas-numbers-explained/">CAS numbers</a> covers. A compound can have several names, and names drift; an identifier and a measured mass do not. When a product's common name is itself ambiguous, the document does the work the label cannot.</p>
+
+        <h2>What a certificate should show</h2>
+        <p>Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with its conditions, since the column and gradient change the number. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> with observed and theoretical mass shown, which is what distinguishes this compound from the DAC construct. Net peptide content stated separately, because twenty-nine residues purified by reversed-phase chromatography come out as a salt and the powder carries counterion and absorbed water.</p>
+        <p>Twenty-nine residues means twenty-eight coupling steps in <a href="article/peptide-synthesis/">synthesis</a>. That is long enough for deletion sequences to be a real part of the impurity profile, and they sit close to the main peak because they differ from the target by one residue. The chromatogram is worth asking for on a peptide this length.</p>
+
+        <h2>Why a fragment works at all</h2>
+        <p>That twenty-nine of forty-four residues are enough is a fact about where the receptor reads the molecule. The binding information sits in the N-terminal part of the sequence, so the rest can be removed without losing the interaction. Our note on <a href="article/peptide-length-terminology/">peptide length</a> covers why a shorter chain is not a weaker version of a longer one.</p>
+        <p>It also has a practical consequence for anyone buying. A shorter chain is cheaper to synthesise and easier to purify, so a high purity figure on a twenty-nine-mer represents less work than the same figure on a forty-four-mer. Purity percentages are not comparable across lengths, which our note on <a href="article/why-peptide-prices-differ/">why prices differ</a> develops.</p>
+
+        <h2>Storage</h2>
+        <p>The substitutions were chosen partly for stability in circulation, and that is a different question from stability in a vial. A modified residue that resists an enzyme does not resist hydrolysis, deamidation or the ordinary chemistry that proceeds with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes, and the date on a certificate is what lets you place a result in the material's life.</p>
+
+        <h2>Which receptor</h2>
+        <p>The GHRH receptor, a member of the secretin-like class of G protein-coupled receptors. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Reference: Mayo et al., 2003)</a> That places this compound in a different mechanism from the growth hormone secretagogues, which act at the ghrelin receptor. Our note on <a href="article/what-is-a-growth-hormone-secretagogue/">secretagogues</a> covers why two compounds associated with the same downstream hormone can act at unrelated receptors.</p>
+
+        <h2>What the four substitutions are not</h2>
+        <p>They are changes to the chain, not additions to it, so the molecule stays a 29-residue peptide. Nothing is bolted on, no metal is bound, no second chain is attached. That keeps the certificate simple: one sequence, one formula, one mass to compare.</p>
+        <p>It is worth contrasting with the acylated and linker-carrying analogues in the same family, where the added group is a separate thing to measure and a separate thing to get wrong. Here the whole molecule is amino acids, and the mass measurement covers all of it at once.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What does DAC mean in CJC-1295?",
+          "a": "Drug Affinity Complex, a maleimide linker attached to the peptide so it bonds covalently to albumin in circulation. The no-DAC product is the peptide without that linker."
+        },
+        {
+          "q": "Is CJC-1295 no DAC the same compound as CJC-1295?",
+          "a": "No. Removing the linker leaves a shorter molecule with a different formula, a different mass and a different CAS number. A certificate for one does not describe the other."
+        },
+        {
+          "q": "What is the formula and mass of CJC-1295 without DAC?",
+          "a": "C152H252N44O42, 3367.9 g/mol, CAS 863288-34-0. The CAS number passes the check digit and resolves in PubChem to a record with a matching formula."
+        },
+        {
+          "q": "What sequence is it based on?",
+          "a": "GHRH(1-29), the first twenty-nine residues of growth hormone-releasing hormone, with four substitutions. That fragment is the shortest piece of the natural hormone that still acts at the receptor."
+        },
+        {
+          "q": "Why does the absence of sulfur in the formula matter?",
+          "a": "It means the molecule has neither methionine nor cysteine, so the methionine oxidation route that adds sixteen mass units does not apply here. A formula tells you that without any further measurement."
+        },
+        {
+          "q": "Can a sequence calculator give its mass?",
+          "a": "No. The substitutions include residues outside the twenty standard amino acids, so a calculator rejects the sequence instead of inventing a mass for it."
+        }
+      ],
+      references: [
+        {
+          "text": "Ionescu, M., &amp; Frohman, L.A. (2006). Pulsatile secretion of growth hormone persists during continuous stimulation by CJC-1295, a long-acting GHRH analog. Journal of Clinical Endocrinology &amp; Metabolism, 91(12), 4792-4797.",
+          "url": "https://doi.org/10.1210/jc.2006-1702"
+        },
+        {
+          "text": "Mentlein, R. (1999). Dipeptidyl-peptidase IV (CD26): role in the inactivation of regulatory peptides. Regulatory Peptides, 85(1), 9-24.",
+          "url": "https://doi.org/10.1016/s0167-0115(99)00089-0"
+        },
+        {
+          "text": "Mayo, K.E., et al. (2003). International Union of Pharmacology. XXXV. The glucagon receptor family. Pharmacological Reviews, 55(1), 167-194.",
+          "url": "https://doi.org/10.1124/pr.55.1.6"
+        },
+        {
+          "text": "Modified GRF (1-29) compound summary (CID 56841945). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/56841945"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        }
+      ],
+      cta: 'Ask which compound a certificate describes before you order. <a href="verify/">Check a batch number</a>.',
+      related: ["what-is-a-growth-hormone-secretagogue","cas-numbers-explained","peptide-synthesis"],
+    },
+
+    {
+      slug: 'what-is-igf-1-lr3',
+      title: 'IGF-1 LR3: a Protein, Not a Peptide',
+      metaTitle: 'What Is IGF-1 LR3? Why It Is Documented Differently',
+      metaDescription: 'IGF-1 LR3 is an 83-residue recombinant protein analogue. Why it needs different analysis from a synthetic peptide, and why its CAS number does not check out.',
+      focusKeyword: 'what is IGF-1 LR3',
+      category: 'Peptide Research',
+      tags: ["IGF-1 LR3","recombinant protein","identity","verification"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Eighty-three residues made in cells, not on a resin, and everything that follows from that.',
+      imageAlt: 'An 83-residue recombinant protein analogue and why its paperwork differs.',
+      body: `
+        <p class="lead">Most of what this site says about certificates assumes a synthetic peptide: a chain built on a resin, purified by chromatography, checked by mass. IGF-1 LR3 breaks that assumption, and the ways it breaks it are the useful content of this page.</p>
+
+        <h2>What the name encodes</h2>
+        <p>Insulin-like growth factor 1 is a 70-residue protein. LR3 describes two changes to it: a 13-residue extension on the N-terminus, which is the "L" for Long, and an arginine substituted at position three, which is the "R3". The result is 83 residues.</p>
+        <p>The substitution is the point of the design. Native IGF-1 circulates bound to a family of binding proteins that control how much is free, and analogues with reduced affinity for those binding proteins behave differently in a culture system for that reason alone. <a class="cite" href="https://doi.org/10.1007/978-1-4684-5949-4_3" target="_blank" rel="noopener nofollow">(Reference: Cascieri et al., 1991)</a> Work on Long [R3] IGF-I specifically describes an analogue with reduced binding-protein affinity. <a class="cite" href="https://doi.org/10.1677/joe.0.1550559" target="_blank" rel="noopener nofollow">(Reference: Dunaiski et al., 1997)</a></p>
+
+        <h2>Why it is not made the way a peptide is</h2>
+        <p>At 83 residues this is beyond the comfortable range of stepwise <a href="article/peptide-synthesis/">solid-phase synthesis</a>. Every coupling step carries a chance of not finishing, and those chances compound, so a chain this long made residue by residue would arrive buried in deletion sequences.</p>
+        <p>It is produced recombinantly instead: the sequence is expressed in cells and purified from what they make. That changes the entire impurity picture. A synthetic peptide's impurities are chemical relatives of the target, mostly deletions and incomplete deprotections. A recombinant protein's impurities are host cell proteins, host DNA, and misfolded or truncated forms of the product.</p>
+
+        <h2>So the certificate asks different questions</h2>
+        <p>Purity by <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> still applies and still means the share of detected peak area that is the target. What it will not catch is a correctly sized chain folded wrongly, because folding is not something a reversed-phase column reports on.</p>
+        <p>Three fields matter here that are meaningless on a short synthetic peptide. <b>Host cell protein</b> and <b>residual DNA</b> are byproducts of the production system, and they have no equivalent in solid-phase synthesis. <b>Endotoxin</b> rises in importance because bacterial expression systems are a direct source of it, and endotoxin activates immune signalling at very low concentrations in cultured cells. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Reference: Raetz &amp; Whitfield, 2002)</a> Our note on <a href="article/endotoxins-in-research-peptides/">endotoxins</a> explains why ordinary sterilisation does not remove it.</p>
+        <p>A certificate that reports only HPLC purity and a mass for a recombinant protein is using a peptide template on something that is not a peptide.</p>
+
+        <h2>Where the boundary between peptide and protein sits</h2>
+        <p>There is no chemical line at which a chain stops being a peptide. The convention puts the change somewhere around fifty residues, and it is a rough marker for a real shift: short chains stay flexible in solution, longer ones have enough internal interactions to hold a stable fold. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers the distinction.</p>
+        <p>At 83 residues this molecule sits on the protein side of that convention, and the practical consequence is the one that matters: a folded structure can be right or wrong, and whether it is right is a question none of the usual peptide measurements answer. A short peptide has no fold to get wrong.</p>
+
+        <h2>A CAS number that does not survive a lookup</h2>
+        <p>This product was listed here with CAS 946870-92-4. That number passes the check digit, so our <a href="tools/cas-number-check/">validator</a> accepts the arithmetic. Looking it up is a different matter: in PubChem it resolves to an ionizable lipid with the formula C<sub>80</sub>H<sub>154</sub>N<sub>4</sub>O<sub>6</sub>S<sub>2</sub>, a compound unrelated to IGF-1 in every respect.</p>
+        <p>We removed it from the listing instead of leaving a number pointing at the wrong molecule. This is the exact failure our validator page warns about: the arithmetic never sees the compound name, so a real CAS number paired with the wrong substance passes every time. The second step, looking the number up and reading back what it returns, is the one that catches it.</p>
+        <p>Large recombinant proteins frequently lack a clean small-molecule registry entry, which is an ordinary fact about how those registries work, not a problem with the material. The honest position is to say there is no verified number instead of supplying one that resolves elsewhere.</p>
+
+        <h2>What that leaves for identity</h2>
+        <p>Without a public registry record, identity rests on what the certificate measures. For a protein this size that usually means a mass measurement with wider tolerance than a short peptide allows, since the isotope envelope of a nine-kilodalton molecule is broad, plus sequence confirmation by peptide mapping, where the protein is cut into fragments and those fragments are identified.</p>
+        <p>Our note on <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> covers the comparison of observed against theoretical mass. The principle carries over; the precision does not, and a tolerance quoted for a short peptide would be meaningless here.</p>
+
+        <h2>Storage, for a molecule that can unfold</h2>
+        <p>The degradation routes that affect peptides apply here too, and with 83 residues there is more chain for them to work on: hydrolysis of the backbone, deamidation, oxidation of susceptible side chains, all proceeding with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a></p>
+        <p>A folded protein adds a route a peptide does not have. It can lose its structure without losing a single atom, which means a mass measurement after the fact would look unchanged. That is the argument for treating handling as part of what you are buying, not as something the certificate covers, and our note on <a href="article/how-to-store-research-peptides/">storage</a> sets out the chemistry.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What does LR3 mean in IGF-1 LR3?",
+          "a": "Two modifications to insulin-like growth factor 1: a 13-residue extension on the N-terminus (Long) and an arginine substituted at position three (R3). The result is 83 residues against the native 70."
+        },
+        {
+          "q": "Is IGF-1 LR3 a peptide?",
+          "a": "At 83 residues it sits in protein territory, and it is produced recombinantly and not by stepwise synthesis. That changes what its certificate has to report."
+        },
+        {
+          "q": "Why does a recombinant product need different certificate fields?",
+          "a": "Its impurities come from the production system: host cell protein, residual DNA and misfolded or truncated forms. Those have no equivalent in solid-phase synthesis, where impurities are chemical relatives of the target."
+        },
+        {
+          "q": "Why does endotoxin matter more here?",
+          "a": "Bacterial expression systems are a direct source of it, and endotoxin activates immune signalling in cultured cells at very low concentrations. Ordinary sterilisation does not remove it."
+        },
+        {
+          "q": "Why was the CAS number removed from this listing?",
+          "a": "CAS 946870-92-4 passes the check digit but resolves in PubChem to an unrelated ionizable lipid. We removed it instead of leaving a number pointing at the wrong molecule."
+        },
+        {
+          "q": "Can HPLC purity confirm the protein is folded correctly?",
+          "a": "No. Reversed-phase chromatography reports the share of detected peak area that is the target. A correctly sized chain folded wrongly is not something that measurement addresses."
+        }
+      ],
+      references: [
+        {
+          "text": "Cascieri, M.A., et al. (1991). Characterization of the biological activity of IGF-I analogs with reduced affinity for IGF binding proteins. Advances in Experimental Medicine and Biology, 293, 23-30.",
+          "url": "https://doi.org/10.1007/978-1-4684-5949-4_3"
+        },
+        {
+          "text": "Dunaiski, V., Dunshea, F.R., Walton, P.E., &amp; Goddard, C. (1997). Long [R3] insulin-like growth factor-I reduces growth, plasma growth hormone and IGF binding protein-3 in rats. Journal of Endocrinology, 155(3), 559-565.",
+          "url": "https://doi.org/10.1677/joe.0.1550559"
+        },
+        {
+          "text": "Raetz, C.R.H., &amp; Whitfield, C. (2002). Lipopolysaccharide endotoxins. Annual Review of Biochemistry, 71, 635-700.",
+          "url": "https://doi.org/10.1146/annurev.biochem.71.110601.135414"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        }
+      ],
+      cta: 'Ask what a recombinant product certificate reports beyond purity. <a href="verify/">Check a batch number</a>.',
+      related: ["endotoxins-in-research-peptides","amino-acids-peptides-proteins-difference","peptide-synthesis"],
+    },
+
+    {
+      slug: 'what-is-tb-500',
+      title: 'TB-500: a Seven-Residue Fragment of a Larger Protein',
+      metaTitle: 'What Is TB-500? The Thymosin Beta-4 Fragment Explained',
+      metaDescription: 'TB-500 is a short fragment of thymosin beta-4, not the protein itself. What the fragment is, why the two are confused, and what its certificate must state.',
+      focusKeyword: 'what is TB-500',
+      category: 'Peptide Research',
+      tags: ["TB-500","thymosin beta-4","fragment","identity"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'Seven residues sold under the name of a 43-residue protein, and why that is the first thing to check.',
+      imageAlt: 'A seven-residue fragment sold under the name of the larger protein it came from.',
+      body: `
+        <p class="lead">TB-500 and thymosin beta-4 are routinely treated as the same thing. They are not. One is a 43-residue protein; the other is a short fragment taken from it. Which one is in a vial is a question the certificate answers and the product name does not.</p>
+
+        <h2>What thymosin beta-4 is</h2>
+        <p>A 43-residue protein found widely in cells, characterised as an actin-sequestering peptide: it binds monomeric actin and holds it in a pool that is not available for polymerisation. <a class="cite" href="https://doi.org/10.1016/s0021-9258(20)64278-8" target="_blank" rel="noopener nofollow">(Reference: Safer et al., 1991)</a> That function was established by work identifying it with a previously described actin-sequestering factor, and related family members were shown to share the property. <a class="cite" href="https://doi.org/10.1016/s0021-9258(18)54179-x" target="_blank" rel="noopener nofollow">(Reference: Yu et al., 1993)</a></p>
+
+        <h2>What TB-500 is</h2>
+        <p>A seven-residue fragment, usually given as the acetylated sequence Ac-LKKTETQ, corresponding to a region of thymosin beta-4 associated with actin binding. Fragments of the protein have been studied separately from the whole molecule. <a class="cite" href="https://doi.org/10.1007/s00109-007-0243-9" target="_blank" rel="noopener nofollow">(Reference: Rossdeutsch et al., 2007)</a></p>
+        <p>Seven residues against forty-three is not a small difference. Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> returns C<sub>36</sub>H<sub>66</sub>N<sub>10</sub>O<sub>13</sub> and about 847 g/mol for the free heptapeptide; acetylating the N-terminus adds C<sub>2</sub>H<sub>2</sub>O, giving roughly 889. The full protein is around 4,900. A mass measurement distinguishes them immediately, which is why a mass belongs on the certificate.</p>
+
+        <h2>Why a fragment is sold at all</h2>
+        <p>Short chains are cheaper to make and far easier to purify, which is the practical answer. A 43-residue protein made by stepwise <a href="article/peptide-synthesis/">synthesis</a> would arrive carrying a long tail of deletion sequences; seven residues does not have that problem.</p>
+        <p>The scientific answer is that fragments of a protein are a standard way to ask which part of it carries a property. That is a legitimate line of work, and it is also why a fragment and its parent should never be described interchangeably: the whole point of making the fragment is that it might behave differently.</p>
+
+        <h2>The naming problem is the verification problem</h2>
+        <p>Our listing carries no CAS number for this compound, and that is the accurate position, not an omission to apologise for. A number is assigned when a substance is indexed in the chemical literature, and a fragment sold under a trade-style name may not have one of its own. Supplying a number that belongs to the parent protein would be worse than supplying none, because it would pass a <a href="tools/cas-number-check/">check digit</a> and resolve to the wrong molecule.</p>
+        <p>That failure mode is real and we have seen it in our own catalogue: another product here carried a CAS number that passed the arithmetic and resolved in PubChem to an unrelated lipid. The arithmetic never sees the compound name. Looking the number up is the step that catches it, and having no number at all is more honest than having one that misleads.</p>
+
+        <h2>Reading the two names on a page</h2>
+        <p>Catalogues use "TB-500", "thymosin beta-4" and "TB4" in ways that do not map onto a single molecule. A listing titled with one name and a certificate reporting the other is not necessarily dishonest; it is often a template filled in carelessly. Either way the vial contains one of them and the measured mass says which.</p>
+        <p>The general rule our note on <a href="article/cas-numbers-explained/">CAS numbers</a> sets out applies here with force: a compound can carry several names and names drift, while an identifier and a measured mass do not. When the names in a market are this loose, the measurement is doing all the work.</p>
+
+        <h2>What a certificate has to state</h2>
+        <p>Which molecule was analysed, explicitly: the fragment or the protein. Then the sequence, including whether the N-terminus is acetylated, because that modification changes the mass by forty-two daltons and is invisible in a letter sequence.</p>
+        <p>Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with its conditions written out. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> with observed and theoretical mass both shown, which is the measurement that settles fragment against protein.</p>
+        <p>Net peptide content separately from purity. This matters more on short peptides than on long ones: counterion and absorbed water are a larger share of the weighed powder when the peptide itself is light. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers it.</p>
+
+        <h2>Why high purity is unremarkable here</h2>
+        <p>Seven residues means six coupling steps in <a href="article/peptide-synthesis/">synthesis</a>. Each step is an opportunity for an incomplete reaction, so a heptapeptide starts from a far better position than a chain of forty. A figure of 99 percent on this compound represents much less work than the same figure on a long peptide, and purity percentages are not comparable across lengths.</p>
+        <p>On a short peptide the number worth reading is the identity measurement, not the purity percentage. A document that gives you 99 percent and no mass has given you the easy half of the answer.</p>
+
+        <h2>Storage</h2>
+        <p>A short peptide has fewer sites to degrade than a long one, which helps, and it is still hygroscopic once the vial is open. The usual routes proceed with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> The threonine and glutamine residues in this sequence give deamidation somewhere to act, which is one reason the date on a certificate is worth reading. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the chemistry.</p>
+
+        <h2>What this page does not claim</h2>
+        <p>The actin-sequestering property described in the literature belongs to the full protein. Whether a seven-residue fragment reproduces it is a separate question, and one a catalogue page is in no position to settle. What a seller can state is the sequence, the mass and the batch, which is where this page stops.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "Is TB-500 the same as thymosin beta-4?",
+          "a": "No. Thymosin beta-4 is a 43-residue protein. TB-500 is a seven-residue fragment taken from it, usually the acetylated sequence Ac-LKKTETQ. Their masses differ by roughly a factor of five."
+        },
+        {
+          "q": "What is the mass of TB-500?",
+          "a": "The free heptapeptide LKKTETQ is C36H66N10O13, about 847 g/mol. Acetylating the N-terminus adds C2H2O, giving roughly 889. The full protein is around 4,900."
+        },
+        {
+          "q": "Why does this product have no CAS number?",
+          "a": "A number is assigned when a substance is indexed in the chemical literature, and a fragment sold under a trade-style name may not have one. Supplying the parent protein number would pass a check digit and resolve to the wrong molecule."
+        },
+        {
+          "q": "What must the certificate state that a name does not?",
+          "a": "Which molecule was analysed, the sequence, and whether the N-terminus is acetylated. Acetylation changes the mass by forty-two daltons and is invisible in a letter sequence."
+        },
+        {
+          "q": "Is 99 percent purity impressive on TB-500?",
+          "a": "Not particularly. Seven residues means six coupling steps, far fewer chances for incomplete reactions than a long chain. On short peptides the identity measurement is the number worth reading."
+        },
+        {
+          "q": "Does the fragment do what the protein does?",
+          "a": "The actin-sequestering property described in the literature belongs to the full protein. Whether a seven-residue fragment reproduces it is a separate question that a catalogue page cannot settle."
+        }
+      ],
+      references: [
+        {
+          "text": "Safer, D., Elzinga, M., &amp; Nachmias, V.T. (1991). Thymosin beta 4 and Fx, an actin-sequestering peptide, are indistinguishable. Journal of Biological Chemistry, 266(7), 4029-4032.",
+          "url": "https://doi.org/10.1016/s0021-9258(20)64278-8"
+        },
+        {
+          "text": "Yu, F.X., Lin, S.C., Morrison-Bogorad, M., Atkinson, M.A., &amp; Yin, H.L. (1993). Thymosin beta 10 and thymosin beta 4 are both actin monomer sequestering proteins. Journal of Biological Chemistry, 268(1), 502-509.",
+          "url": "https://doi.org/10.1016/s0021-9258(18)54179-x"
+        },
+        {
+          "text": "Rossdeutsch, A., Smart, N., &amp; Riley, P.R. (2007). Thymosin beta-4 and Ac-SDKP: tools to mend a broken heart. Journal of Molecular Medicine, 86(1), 29-35.",
+          "url": "https://doi.org/10.1007/s00109-007-0243-9"
+        },
+        {
+          "text": "Merrifield, R.B. (1963). Solid phase peptide synthesis. I. The synthesis of a tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.",
+          "url": "https://doi.org/10.1021/ja00897a025"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        }
+      ],
+      cta: 'Ask which molecule the certificate describes, the fragment or the protein. <a href="verify/">Check a batch number</a>.',
+      related: ["peptide-length-terminology","cas-numbers-explained","peptide-synthesis"],
+    },
+
+    {
+      slug: 'what-is-ss-31',
+      title: 'SS-31: Four Residues, Two of Them Not Standard',
+      metaTitle: 'What Is SS-31 (Elamipretide)? Structure and Verification',
+      metaDescription: 'SS-31, or elamipretide, is a four-residue peptide with a D-amino acid and a modified tyrosine. Its formula, mass, CAS number and what its COA must show.',
+      focusKeyword: 'what is SS-31',
+      category: 'Peptide Research',
+      tags: ["SS-31","elamipretide","D-amino acid","identity"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'A tetrapeptide where half the residues are outside the standard twenty.',
+      imageAlt: 'A four-residue peptide with a D-amino acid and a modified tyrosine.',
+      body: `
+        <p class="lead">SS-31 is four residues long, which sounds like the simplest compound in any catalogue. Two of those four are not standard amino acids, and that single fact decides how the molecule has to be documented.</p>
+
+        <h2>The sequence, and what is unusual in it</h2>
+        <p>The peptide is D-Arg-Dmt-Lys-Phe-NH<sub>2</sub>. Three things in that short line sit outside ordinary peptide notation.</p>
+        <p>The first residue is <b>D-arginine</b>, the mirror image of the usual L form. Position two is <b>Dmt</b>, 2',6'-dimethyltyrosine, a tyrosine carrying two extra methyl groups on the ring. The C-terminus is <b>amidated</b>, so the chain ends in an amide and not an acid.</p>
+        <p>The compound comes from work on mitochondria-targeted peptide antioxidants, a series described by Szeto and Schiller, which is where the SS designation comes from. <a class="cite" href="https://doi.org/10.1208/aapsj080362" target="_blank" rel="noopener nofollow">(Reference: Szeto, 2006)</a> It is also known as elamipretide, and PubChem indexes it under that name.</p>
+
+        <h2>Why that makes a sequence calculator useless here</h2>
+        <p>Our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> handles the twenty standard amino acids and nothing else. Dmt has no agreed single-letter code, so the calculator rejects the sequence instead of returning a number.</p>
+        <p>That refusal is the correct behaviour and worth dwelling on. A calculator that silently substituted plain tyrosine would return a mass twenty-eight daltons too low, and that wrong figure would then look like a disagreement with the certificate. A tool that declines to answer is more useful than one that answers approximately.</p>
+        <p>Chirality compounds the point. D-arginine and L-arginine have identical masses and identical formulas, so no mass measurement distinguishes them. A certificate claiming the D form is making a claim that mass spectrometry cannot check, and the method that can is chiral chromatography. Our note on <a href="article/what-is-ipamorelin/">ipamorelin</a> covers the same issue in a compound that also carries D residues.</p>
+
+        <h2>Identity on paper</h2>
+        <p>SS-31 is C<sub>32</sub>H<sub>49</sub>N<sub>9</sub>O<sub>5</sub>, 639.8 g/mol, CAS 736992-21-5. The number passes the check digit and resolves in PubChem to the elamipretide record, whose formula matches. Both steps matter: run the arithmetic with our <a href="tools/cas-number-check/">validator</a>, then look it up and read back the substance it returns.</p>
+        <p>At 639.8 this is a small molecule by peptide standards, light enough that a mass spectrometer resolves single-atom differences with room to spare. The isotope envelope is narrow, so the distinction between monoisotopic and average mass is smaller here than on a long peptide, though a certificate should still say which it reports.</p>
+
+        <h2>Two names, one compound</h2>
+        <p>SS-31 and elamipretide are the same molecule under a research designation and a drug name. That is an ordinary situation and not a trap, but it has a practical consequence: a search under one name may return nothing while the other returns a full record. PubChem indexes it as elamipretide.</p>
+        <p>Our note on <a href="article/cas-numbers-explained/">CAS numbers</a> covers why a registry identifier beats a name for exactly this reason. One compound can accumulate a code, a generic name, a brand name and several catalogue spellings; the number stays put.</p>
+
+        <h2>What a certificate should show</h2>
+        <p>The sequence written out with the modifications named, not a bare product code. Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with the conditions. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, observed against theoretical.</p>
+        <p>Then the one a short modified peptide needs and a plain one does not: evidence for the stereochemistry. If the document claims a D residue and offers only a mass, it has claimed something it has not measured.</p>
+        <p>Net peptide content separately from purity, as always, and it bites harder here. On a 640-dalton molecule the counterion from reversed-phase purification is a large share of the weighed powder. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the arithmetic.</p>
+
+        <h2>What the modifications have in common</h2>
+        <p>All three changes sit where an enzyme would otherwise cut or where the molecule would otherwise be read as ordinary. A D residue is not recognised by the proteases that act on L chains, an amidated terminus removes the free acid those enzymes look for, and a methylated ring changes the local chemistry of position two.</p>
+        <p>This is the standard grammar of peptide analogue design, the same one behind a D residue in ipamorelin or an acyl group on a GHRH analogue: modify the chain where it is attacked and leave the part that carries the information alone. Recognising the grammar helps when reading an unfamiliar sequence, because the unusual residues are rarely decorative.</p>
+
+        <h2>Why four residues is still not trivial to make</h2>
+        <p>Three coupling steps is nothing. The difficulty is elsewhere: a non-standard residue has to be sourced or made, a D-amino acid has to stay D through the <a href="article/peptide-synthesis/">synthesis</a>, and the amidation has to be complete. Each of those is a place where a batch can be partly wrong while looking entirely normal by purity.</p>
+        <p>The usual rule of thumb inverts here. On most short peptides purity is easy and identity is the number to read. Here identity is harder than usual too, and the document has to carry more than two figures to settle it.</p>
+
+        <h2>Storage</h2>
+        <p>A small peptide still degrades by the ordinary routes, which proceed with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> The amidated terminus is itself hydrolysable, and losing the amide would turn the molecule into the free acid: a change of about one dalton, which is small enough to miss and large enough to matter for identity.</p>
+        <p>That is a good argument for reading the date on a certificate and not only the figures. Our note on <a href="article/how-to-store-research-peptides/">storage</a> sets out the routes.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is SS-31?",
+          "a": "A four-residue peptide, D-Arg-Dmt-Lys-Phe-NH2, from a series of mitochondria-targeted peptides described by Szeto and Schiller. It is also known as elamipretide."
+        },
+        {
+          "q": "What does Dmt mean in the sequence?",
+          "a": "2',6'-dimethyltyrosine, a tyrosine carrying two extra methyl groups on the ring. It has no agreed single-letter code, which is why sequence calculators cannot handle this compound."
+        },
+        {
+          "q": "What is the formula and mass of SS-31?",
+          "a": "C32H49N9O5, 639.8 g/mol, CAS 736992-21-5. The CAS number passes the check digit and resolves in PubChem to the elamipretide record with a matching formula."
+        },
+        {
+          "q": "Can mass spectrometry confirm the D-arginine?",
+          "a": "No. D and L arginine have identical masses and formulas, so no mass measurement distinguishes them. Chiral chromatography is the method that can."
+        },
+        {
+          "q": "Why does a calculator refuse this sequence instead of estimating?",
+          "a": "Because substituting plain tyrosine for Dmt would return a mass about twenty-eight daltons too low, and that wrong figure would then look like a disagreement with the certificate. Declining is more useful than answering approximately."
+        },
+        {
+          "q": "Is a short peptide easier to make correctly?",
+          "a": "Fewer coupling steps, yes. But a non-standard residue has to be sourced, a D-amino acid has to stay D through synthesis, and the amidation has to be complete. Each is a place a batch can be partly wrong while looking normal by purity."
+        }
+      ],
+      references: [
+        {
+          "text": "Szeto, H.H. (2006). Mitochondria-targeted peptide antioxidants: novel neuroprotective agents. The AAPS Journal, 8(3), E521-E531.",
+          "url": "https://doi.org/10.1208/aapsj080362"
+        },
+        {
+          "text": "Elamipretide compound summary (CID 11764719). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/11764719"
+        },
+        {
+          "text": "Merrifield, R.B. (1963). Solid phase peptide synthesis. I. The synthesis of a tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.",
+          "url": "https://doi.org/10.1021/ja00897a025"
+        },
+        {
+          "text": "Fenn, J.B., Mann, M., Meng, C.K., Wong, S.F., &amp; Whitehouse, C.M. (1989). Electrospray ionization for mass spectrometry of large biomolecules. Science, 246(4926), 64-71.",
+          "url": "https://doi.org/10.1126/science.2675315"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        }
+      ],
+      cta: 'Ask for the stereochemistry evidence, not only the mass. <a href="verify/">Check a batch number</a>.',
+      related: ["what-is-ipamorelin","peptide-synthesis","mass-spectrometry-peptide-research"],
+    },
+
+    {
+      slug: 'what-is-epithalon',
+      title: 'Epithalon: Four Residues and a Thin Literature',
+      metaTitle: 'What Is Epithalon? Structure, Mass and What Is Documented',
+      metaDescription: 'Epithalon is the tetrapeptide Ala-Glu-Asp-Gly. Its formula and mass check out two independent ways. What the published record does and does not support.',
+      focusKeyword: 'what is epithalon',
+      category: 'Peptide Research',
+      tags: ["epithalon","tetrapeptide","identity","verification"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'The chemistry is easy to verify. The literature is the part worth being careful about.',
+      imageAlt: 'A four-residue peptide whose chemistry checks out and whose literature is thin.',
+      body: `
+        <p class="lead">Epithalon is among the simplest compounds in any peptide catalogue: four residues, all standard, no modifications. That makes its identity unusually easy to confirm, and it throws the harder question into relief, which is what the published work supports.</p>
+
+        <h2>The sequence</h2>
+        <p>Ala-Glu-Asp-Gly, written AEDG in one-letter code. Four of the twenty standard amino acids, a free N-terminus and a free C-terminus, nothing bound and nothing methylated.</p>
+        <p>That simplicity means you can check the catalogue figures yourself in two independent ways, which is rare. Put AEDG into our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> and it returns C<sub>14</sub>H<sub>22</sub>N<sub>4</sub>O<sub>9</sub> at 390.35 g/mol. Look up CAS 307297-39-8 and PubChem returns a record with the same formula and the same mass. Two routes that do not depend on each other, both agreeing with what the listing says.</p>
+        <p>The CAS number also passes the check digit, which you can confirm with our <a href="tools/cas-number-check/">validator</a>. Three checks on one compound, all of them available before anyone pays for anything.</p>
+
+        <h2>What the composition tells you</h2>
+        <p>Two of the four residues are acidic, glutamate and aspartate, and neither of the other two carries a charge. So this is a markedly acidic peptide, and our <a href="tools/peptide-isoelectric-point/">isoelectric point calculator</a> puts its pI low, which is where solubility is at its minimum.</p>
+        <p>The composition also says what cannot go wrong. No methionine or cysteine means no sulfur, so the oxidation route that adds sixteen mass units to methionine-containing peptides has nowhere to act here. A formula with no S in it tells you that for free.</p>
+        <p>Asparagine and glutamine are the residues most prone to deamidation, and this sequence has neither. It does have aspartate, which can isomerise, so the sequence is not inert, but the usual short list of degradation routes is shorter than normal.</p>
+
+        <h2>A compound you can check without the seller</h2>
+        <p>Most of this site argues that a buyer should be able to confirm a claim independently. Epithalon is the clearest case on the shelf, because every structural claim about it is reachable from public sources in under a minute.</p>
+        <p>The sequence gives the formula. The formula gives the mass. The CAS number gives a registry record that states both. If a certificate for this compound disagrees with any of that, the disagreement is about the document and not about what the molecule is. Few compounds let you draw that line so cleanly, and it is worth using where you can.</p>
+
+        <h2>Why high purity is expected, not impressive</h2>
+        <p>Three coupling steps. That is the entire <a href="article/peptide-synthesis/">synthesis</a>, and each step is the only kind of opportunity a peptide has to go wrong in assembly. A tetrapeptide of standard residues is about as easy as this chemistry gets, so a figure of 99 percent here represents very little work compared with the same figure on a long chain.</p>
+        <p>Purity percentages are not comparable across lengths, and on a compound this short the purity number is the easy half of the answer. The identity measurement is the one worth reading, and on this compound it is also easy to check against a public record.</p>
+
+        <h2>The part that deserves caution</h2>
+        <p>The chemistry is settled; the biology is not. Published work on this compound is thinner and more concentrated in a smaller set of groups than on compounds like the incretins or the copper peptides, and reviews of it are recent. <a class="cite" href="https://doi.org/10.3390/ijms26062691" target="_blank" rel="noopener nofollow">(Reference: Araj et al., 2025)</a></p>
+        <p>We are not going to summarise claims about what it does, for the same reason this site does not do so for anything else: a catalogue page is not where that question gets settled, and a thin literature is exactly the situation where a seller restating claims adds the least and risks the most.</p>
+        <p>A seller can state the sequence, the formula, the mass, the batch and the method. On this compound all five are checkable against sources that have nothing to do with us, which is a better thing to offer than a summary.</p>
+
+        <h2>Two names on the same molecule</h2>
+        <p>Catalogues write this compound as both epithalon and epitalon, and PubChem indexes it under the second. Neither spelling is wrong and nothing turns on which one a seller uses, but a search under one may return less than a search under the other.</p>
+        <p>This is the ordinary case our note on <a href="article/cas-numbers-explained/">CAS numbers</a> describes: names drift and multiply, while a registry number stays put. On a compound whose chemistry is this easy to confirm, going through the number instead of the name removes the last place ambiguity could hide.</p>
+
+        <h2>What a certificate should show</h2>
+        <p>Purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with the column, gradient and detection wavelength written out. Identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> with observed and theoretical mass both given, so you can compare the first against the PubChem formula yourself.</p>
+        <p>Net peptide content as a separate line. This matters more here than on a long peptide: at 390 daltons the molecule is light, so the trifluoroacetate counterion left by reversed-phase purification is a large share of the weighed powder. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> works through the arithmetic.</p>
+
+        <h2>Storage</h2>
+        <p>Four residues give the ordinary degradation routes little to work with, and the sequence lacks the two that usually cause trouble. Hydrolysis of the backbone still applies, and it proceeds with time and temperature like everything else. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a></p>
+        <p>The dry solid is hygroscopic once a vial is open, which is true of lyophilised material generally. A certificate is dated because a result belongs to a moment, and what happens afterwards is handling. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is epithalon?",
+          "a": "The tetrapeptide Ala-Glu-Asp-Gly, written AEDG, made of four standard amino acids with no modifications at either terminus."
+        },
+        {
+          "q": "What is the formula and mass of epithalon?",
+          "a": "C14H22N4O9, 390.35 g/mol, CAS 307297-39-8. A sequence calculator and the PubChem record agree on both figures, which is two independent confirmations."
+        },
+        {
+          "q": "Can I verify epithalon myself before buying?",
+          "a": "Yes, in three ways that do not involve the seller: calculate the formula from AEDG, look up the CAS number and compare, and run the check digit on that number."
+        },
+        {
+          "q": "Why is a high purity figure unremarkable on epithalon?",
+          "a": "Three coupling steps make up the whole synthesis, and all four residues are standard. A tetrapeptide is about as easy as this chemistry gets, so 99 percent here represents far less work than on a long chain."
+        },
+        {
+          "q": "What degradation routes does this sequence avoid?",
+          "a": "It has no methionine or cysteine, so there is no sulfur to oxidise, and no asparagine or glutamine, the residues most prone to deamidation. It does carry aspartate, which can isomerise."
+        },
+        {
+          "q": "How strong is the published literature on epithalon?",
+          "a": "Thinner and concentrated in a smaller set of groups than for compounds like the incretins or copper peptides, with recent review coverage. The chemistry is settled; the biology is not, which is why this page states the chemistry and stops."
+        }
+      ],
+      references: [
+        {
+          "text": "Araj, S.K., et al. (2025). Overview of epitalon, a highly bioactive pineal tetrapeptide. International Journal of Molecular Sciences, 26(6), 2691.",
+          "url": "https://doi.org/10.3390/ijms26062691"
+        },
+        {
+          "text": "Epitalon compound summary (CID 219042). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/219042"
+        },
+        {
+          "text": "Merrifield, R.B. (1963). Solid phase peptide synthesis. I. The synthesis of a tetrapeptide. Journal of the American Chemical Society, 85(14), 2149-2154.",
+          "url": "https://doi.org/10.1021/ja00897a025"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        }
+      ],
+      cta: 'This is a compound you can verify without us. <a href="tools/peptide-molecular-weight/">Calculate it from the sequence</a>, then compare the certificate.',
+      related: ["peptide-length-terminology","excipients-in-peptides","peptide-synthesis"],
+    },
+
+    {
+      slug: 'what-is-kisspeptin-10',
+      title: 'Kisspeptin-10: Named After a Tumour Suppressor Gene',
+      metaTitle: 'What Is Kisspeptin-10? Origin, Structure and Verification',
+      metaDescription: 'Kisspeptin-10 is an amidated decapeptide from the KiSS-1 gene product, ligand of GPR54. Its formula, mass, and why amidation is invisible to a calculator.',
+      focusKeyword: 'what is kisspeptin-10',
+      category: 'Peptide Research',
+      tags: ["kisspeptin","GPR54","amidation","identity"],
+      date: 'Oct 02, 2026', dateISO: '2026-10-02',
+      excerpt: 'A reproductive-axis peptide that arrived from cancer research, and one modification you cannot see.',
+      imageAlt: 'An amidated decapeptide, the ligand of GPR54, and how its mass is verified.',
+      body: `
+        <p class="lead">Kisspeptin was found twice, in two unrelated fields, before anyone connected the findings. The name comes from the first one and the use comes from the second, which is a good reminder that a compound's name encodes its history and not its function.</p>
+
+        <h2>Where the name comes from</h2>
+        <p>KiSS-1 was identified as a metastasis suppressor gene. The peptides its product is cut into were later shown to be the natural ligands of GPR54, an orphan G protein-coupled receptor at the time. <a class="cite" href="https://doi.org/10.1074/jbc.m104847200" target="_blank" rel="noopener nofollow">(Reference: Kotani et al., 2001)</a> That finding joined two separate literatures.</p>
+        <p>Later work placed the kisspeptin-GPR54 system in the neuroendocrine control of reproduction, where it is now described as an upstream regulator of the axis. <a class="cite" href="https://doi.org/10.1530/rep.1.00368" target="_blank" rel="noopener nofollow">(Reference: Smith et al., 2006)</a> Reviews of its role in the human axis followed. <a class="cite" href="https://doi.org/10.1159/000312689" target="_blank" rel="noopener nofollow">(Reference: Silveira et al., 2010)</a></p>
+
+        <h2>Why the number 10</h2>
+        <p>The gene product is processed into peptides of several lengths that share a C-terminal region. Kisspeptin-10 is the shortest of them, ten residues, and it is the fragment that carries the part the receptor reads.</p>
+        <p>The family works the way GHRH fragments do: a shorter chain retaining the active end. The practical consequence is identical, which is that "kisspeptin" on a label does not say which length is in the vial, and only a mass settles it.</p>
+
+        <h2>The modification you cannot see in the sequence</h2>
+        <p>The sequence is YNWNSFGLRF, and the C-terminus is amidated. That last detail is the interesting one for anyone checking a certificate.</p>
+        <p>Put YNWNSFGLRF into our <a href="tools/peptide-molecular-weight/">molecular weight calculator</a> and it returns C<sub>63</sub>H<sub>82</sub>N<sub>16</sub>O<sub>15</sub> at 1303.45 g/mol. The catalogue figure is C<sub>63</sub>H<sub>83</sub>N<sub>17</sub>O<sub>14</sub> at 1302.4, and the PubChem record agrees with the catalogue. Those two results differ by about one dalton and by one atom each of oxygen, nitrogen and hydrogen, which is exactly what amidation does: it replaces the terminal OH with NH<sub>2</sub>.</p>
+        <p>Neither figure is wrong. The calculator reports the free acid because a letter sequence contains no information about terminal modifications, a limit it shares with every sequence calculator. Knowing that is what stops a one-dalton difference from looking like a discrepancy, and it is why a certificate should say which species it measured.</p>
+
+        <h2>Why the one-dalton lesson generalises</h2>
+        <p>Terminal modifications are common in peptides built for research, and none of them appears in a letter sequence. Amidation at the C-terminus, acetylation at the N-terminus, a cyclising bond, a bound metal: each changes the mass and each is invisible to anything working from letters alone.</p>
+        <p>The practical rule that falls out is short. When a calculated mass and a certificate disagree by a small amount, check for a modification before concluding anything about the batch. When they disagree by a lot, the question is a different one. Our note on <a href="article/molecular-weight-of-peptides/">average versus monoisotopic mass</a> covers the other common source of apparent disagreement.</p>
+
+        <h2>Identity on paper</h2>
+        <p>Kisspeptin-10 is C<sub>63</sub>H<sub>83</sub>N<sub>17</sub>O<sub>14</sub>, 1302.4 g/mol, CAS 374675-21-5. The number passes the check digit, which you can confirm with our <a href="tools/cas-number-check/">validator</a>, and resolves in PubChem to a record with a matching formula. Both steps, because the arithmetic never sees the compound name.</p>
+        <p>The sequence contains tryptophan and two phenylalanines, which is worth noting for a practical reason: tryptophan absorbs strongly at 280 nm, so this peptide is visible at a wavelength where many are not. Most peptide chromatography is run at 214 nm, where the peptide bond itself absorbs. Our note on <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> covers why the detection wavelength belongs next to a purity figure.</p>
+
+        <h2>What a certificate should show</h2>
+        <p>Which length and which terminus. A document for this compound should state the ten-residue sequence and say the C-terminus is amidated, because without that the theoretical mass it reports cannot be checked against anything.</p>
+        <p>Then the usual: purity from <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> with conditions, identity from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> with observed and theoretical mass, net peptide content stated separately from purity.</p>
+        <p>One impurity is specific to amidated peptides and worth asking about: incomplete amidation leaves free acid in the batch, differing from the target by one dalton. On a 1300-dalton molecule that is resolvable, but only if someone looked.</p>
+
+        <h2>Ten residues, nine coupling steps</h2>
+        <p>Short enough that <a href="article/peptide-synthesis/">synthesis</a> is straightforward and deletion sequences are a smaller problem than on a long chain. That does not make the compound trivial, because the amidation is a separate step and the residue list includes one that complains. Tryptophan is the residue most likely to cause trouble, since its indole ring is sensitive to the acid conditions used in cleavage and deprotection, so a trace of modified tryptophan is a plausible impurity here in a way it is not on a sequence without it.</p>
+
+        <h2>Storage</h2>
+        <p>The usual routes apply and proceed with time and temperature. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> This sequence has two asparagines, the residue most prone to deamidation, and deamidation converts an amide to an acid with a mass change of about one dalton. That is the same size as the amidation difference, which is a good reason for a certificate to state what it measured and when.</p>
+        <p>Our note on <a href="article/how-to-store-research-peptides/">storage</a> sets out the chemistry. The date on the document is what lets you place a result in the material's life.</p>
+
+        <h2>Research use only</h2>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      `,
+      faq: [
+        {
+          "q": "What is kisspeptin-10?",
+          "a": "A ten-residue amidated peptide, sequence YNWNSFGLRF, derived from the KiSS-1 gene product. The kisspeptins were identified as the natural ligands of the receptor GPR54."
+        },
+        {
+          "q": "Why is it called kisspeptin?",
+          "a": "KiSS-1 was identified as a metastasis suppressor gene, and the peptides its product is cut into were later shown to be the ligands of GPR54. The name comes from the cancer literature; the use comes from reproductive neuroendocrinology."
+        },
+        {
+          "q": "Why does a calculator give a different mass from the catalogue?",
+          "a": "The calculator returns the free acid, C63H82N16O15 at 1303.45, because a letter sequence carries no information about terminal modifications. The amidated form is C63H83N17O14 at 1302.4, which is what the catalogue and PubChem report."
+        },
+        {
+          "q": "What does amidation change?",
+          "a": "It replaces the terminal OH with NH2, removing one oxygen and adding a nitrogen and a hydrogen. The mass difference is about one dalton, which is enough to look like a discrepancy if you do not know it is there."
+        },
+        {
+          "q": "What impurity is specific to amidated peptides?",
+          "a": "Incomplete amidation, which leaves free acid in the batch differing from the target by one dalton. On a 1300-dalton molecule that is resolvable, provided someone looked for it."
+        },
+        {
+          "q": "Why does the tryptophan matter?",
+          "a": "Two reasons. It absorbs strongly at 280 nm, so this peptide is visible at a wavelength where many are not, and its indole ring is sensitive to the acid conditions used in cleavage, making modified tryptophan a plausible impurity."
+        }
+      ],
+      references: [
+        {
+          "text": "Kotani, M., et al. (2001). The metastasis suppressor gene KiSS-1 encodes kisspeptins, the natural ligands of the orphan G protein-coupled receptor GPR54. Journal of Biological Chemistry, 276(37), 34631-34636.",
+          "url": "https://doi.org/10.1074/jbc.m104847200"
+        },
+        {
+          "text": "Smith, J.T., Clifton, D.K., &amp; Steiner, R.A. (2006). Regulation of the neuroendocrine reproductive axis by kisspeptin-GPR54 signaling. Reproduction, 131(4), 623-630.",
+          "url": "https://doi.org/10.1530/rep.1.00368"
+        },
+        {
+          "text": "Silveira, L.G., Latronico, A.C., &amp; Seminara, S.B. (2010). Kisspeptin and clinical disorders. Frontiers of Hormone Research, 39, 132-142.",
+          "url": "https://doi.org/10.1159/000312689"
+        },
+        {
+          "text": "Kisspeptin-10 compound summary (CID 25240297). PubChem, National Library of Medicine.",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/25240297"
+        },
+        {
+          "text": "Manning, M.C., Chou, D.K., Murphy, B.M., Payne, R.W., &amp; Katayama, D.S. (2010). Stability of protein pharmaceuticals: an update. Pharmaceutical Research, 27(4), 544-575.",
+          "url": "https://doi.org/10.1007/s11095-009-0045-6"
+        },
+        {
+          "text": "Dong, M.W. (2006). Modern HPLC for Practicing Scientists. Wiley.",
+          "url": "https://doi.org/10.1002/0471973106"
+        }
+      ],
+      cta: 'Ask whether the certificate states the amidation. <a href="verify/">Check a batch number</a>.',
+      related: ["high-performance-liquid-chromatography-hplc","mass-spectrometry-peptide-research","peptide-length-terminology"],
     },
   ];
 

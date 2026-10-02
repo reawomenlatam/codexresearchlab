@@ -44,7 +44,7 @@
         <p>Todo sale en empaque sellado y protegido, y cada vial va etiquetado con su compuesto, su concentración y su número de lote. Si el sello llega roto, no recibas el paquete.</p>
 
         <h2>Por qué el inventario local cambia el material, no solo la espera</h2>
-        <p>Un paquete internacional pasa semanas moviéndose entre bodegas y vehículos, y lo que cuenta son los ciclos de temperatura, no los días, y cuántos ciclos de temperatura y humedad atravesó. Un péptido liofilizado es estable mientras se mantenga seco, y cada calentamiento y enfriamiento es una oportunidad para que la humedad llegue hasta él.</p>
+        <p>Un paquete internacional pasa semanas moviéndose entre bodegas y vehículos, y lo que cuenta son los ciclos de temperatura y humedad que atravesó, no los días que pasaron. Los péptidos se degradan por rutas que avanzan más rápido cuanto más sube la temperatura, así que el tránsito no es un periodo neutro.<a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Un péptido liofilizado es estable mientras se mantenga seco, y cada calentamiento y enfriamiento es una oportunidad para que la humedad llegue hasta él.</p>
         <p>Dos horas dentro de una ciudad son un solo trayecto corto. Es una propiedad del material y de cómo viaja, y nuestra guía de <a href="article/how-to-store-research-peptides/">almacenamiento</a> lo explica en detalle.</p>
 
         <h2>Pagar desde Panamá</h2>
@@ -60,7 +60,7 @@
         <ul>
           <li>Escribe el número de lote en la <a href="verify/">página de verificación</a>. Te dice si ese lote existe y a qué documento corresponde.</li>
           <li>Pide el certificado de análisis de ese lote. Se puede pedir antes del pedido, no solo después.</li>
-          <li>Lee el certificado completo. Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> explica qué significa cada campo y qué ausencias importan.</li>
+          <li>Lee el certificado completo, no solo la cifra de pureza. Un porcentaje citado sin la columna, el gradiente y la longitud de onda que lo produjeron no lo puede repetir nadie más, y por eso los procedimientos analíticos se informan con sus condiciones.<a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Ref.: Swartz y Krull, 2012)</a> Nuestra guía sobre <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado</a> explica qué significa cada campo y qué ausencias importan.</li>
         </ul>
         <p>Las tres preguntas que responde un documento completo son qué lote es, qué tan puro está y si es la molécula correcta. Un documento que solo responde una está incompleto, venga de donde venga.</p>
 
@@ -78,7 +78,7 @@
         <p>El empaque es el mismo sin importar el destino: sellado, protegido y etiquetado por vial. El día adicional es un tramo controlado y no un trámite de aduana, porque el inventario ya está en el país.</p>
 
         <h2>Qué esperar al abrirlo</h2>
-        <p>El material liofilizado puede verse como muy poco: una película fina, unas escamas en el vidrio, a veces nada evidente. Un vial que parece vacío casi siempre no ha perdido nada, y es consecuencia de <a href="article/lyophilization-freeze-drying/">cómo funciona la liofilización</a> y de si la formulación llevaba un agente de relleno.</p>
+        <p>El material liofilizado puede verse como muy poco: una película fina, unas escamas en el vidrio, a veces nada evidente. Un vial que parece vacío casi siempre no ha perdido nada, y es consecuencia de <a href="article/lyophilization-freeze-drying/">cómo funciona la liofilización</a> y de si la formulación llevaba un agente de relleno.<a class="cite" href="https://doi.org/10.1016/s0378-5173(00)00423-3" target="_blank" rel="noopener nofollow">(Ref.: Wang, 2000)</a></p>
         <p>Deja que un vial frío llegue a temperatura ambiente antes de abrirlo, para que no se forme condensación por dentro. Guárdalo seco, fresco y lejos de la luz directa.</p>
 
         <h2>Precios e inventario</h2>
@@ -3493,6 +3493,543 @@
         }
       ],
       cta: 'Pregunta por la fecha del certificado de tu lote. <a href="verify/">Busca un número de lote</a>.',
+    },
+
+    'what-is-tesamorelin': {
+      title: 'Tesamorelina: un análogo de GHRH con un ácido graso al final',
+      metaTitle: 'Qué es la tesamorelina: estructura, masa y verificación',
+      metaDescription: 'La tesamorelina es un análogo de GHRH de 44 residuos con un grupo trans-3-hexenoilo. Su fórmula, masa, número CAS y qué debe mostrar su certificado.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Cuarenta y cuatro residuos más un ácido graso corto, y por qué esa última parte es todo el diseño.',
+      imageAlt: 'Un análogo de GHRH de 44 residuos con un grupo de ácido graso, y qué muestra su certificado.',
+      body: `
+        <p class="lead">La tesamorelina es un análogo sintético de la hormona liberadora de hormona de crecimiento, la señal hipotalámica que le dice a la hipófisis que libere hormona de crecimiento. La molécula es la secuencia natural de 44 residuos con una adición: un ácido graso corto e insaturado unido al extremo N. <a class="cite" href="https://doi.org/10.1517/13543780802707658" target="_blank" rel="noopener nofollow">(Ref.: Wang y Chanoine, 2009)</a></p>
+
+        <h2>Para qué sirve el ácido graso</h2>
+        <p>La GHRH nativa se elimina rápido. Sus dos primeros residuos son un punto de corte conocido para la dipeptidil peptidasa IV, la misma enzima que limita cuánto duran las incretinas en circulación. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Ref.: Mentlein, 1999)</a></p>
+        <p>Unir un grupo trans-3-hexenoilo al extremo N bloquea ese extremo. El objetivo de diseño es una molécula que se comporte como la GHRH en su receptor y sobreviva más que la secuencia nativa. <a class="cite" href="https://doi.org/10.1345/aph.1q629" target="_blank" rel="noopener nofollow">(Ref.: Spooner y Olin, 2012)</a> Químicamente es la misma estrategia que una sustitución por un residuo D o una restricción del esqueleto: se modifica el péptido donde corta la enzima, no donde se une el receptor.</p>
+
+        <h2>Qué familia de receptores</h2>
+        <p>El receptor de GHRH pertenece a la clase tipo secretina de receptores acoplados a proteína G, la misma familia estructural que los de GIP, GLP-1 y glucagón. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Ref.: Mayo et al., 2003)</a> Pertenecer a la familia es la razón de que la selectividad dentro del grupo sea una medición y no un supuesto, algo que desarrolla nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a>.</p>
+        <p>La tesamorelina actúa directamente sobre el receptor, lo que la separa de los secretagogos de hormona de crecimiento, que trabajan a través del receptor de grelina. Dos compuestos descritos como elevadores de hormona de crecimiento pueden estar haciéndolo por receptores distintos, y nuestra nota sobre <a href="article/what-is-a-growth-hormone-secretagogue/">secretagogos</a> cubre la distinción.</p>
+
+        <h2>«Análogo de GHRH» nombra una familia, no una molécula</h2>
+        <p>Varios compuestos de catálogo se describen así, y difieren en cuánta secuencia natural conservan y qué se hizo con los extremos. La tesamorelina conserva los cuarenta y cuatro residuos y modifica el extremo N. Otros usan los primeros veintinueve, el fragmento más corto que sigue actuando en el receptor, con sustituciones dentro de la cadena.</p>
+        <p>Dos productos con la misma descripción pueden entonces diferenciarse en quince residuos y varias sustituciones, lo que cambia la fórmula, la masa y lo que un certificado tiene que informar. La etiqueta es una categoría; la secuencia es el compuesto. Comparar dos de ellos es comparar secuencias, no descripciones.</p>
+
+        <h2>La identidad sobre el papel</h2>
+        <p>La tesamorelina es C<sub>221</sub>H<sub>366</sub>N<sub>72</sub>O<sub>67</sub>S, 5135,9 g/mol, CAS 218949-48-5. El número pasa el dígito de control y resuelve en PubChem a un registro cuya fórmula coincide, que es el par de comprobaciones que merece la pena hacer con cualquier compuesto: la aritmética con nuestro <a href="tools/cas-number-check/">validador</a>, y después buscar el número y leer qué sustancia devuelve.</p>
+        <p>Con cuarenta y cuatro residuos es un péptido largo, y el único azufre de la fórmula viene de su única metionina. Ese residuo se oxida, y cada oxidación añade dieciséis unidades de masa, que es algo concreto que buscar en un espectro.</p>
+        <p>Una calculadora de secuencia no puede con este compuesto, y la razón es instructiva. Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> trabaja con los veinte aminoácidos estándar, y el grupo hexenoilo no es uno de ellos. Devolvería el péptido sin modificar, que es otra molécula. Es el mismo límite que le impide ver un metal unido o un extremo amidado.</p>
+
+        <h2>Dos presentaciones, un compuesto</h2>
+        <p>La tesamorelina aparece aquí a 10 mg y a 20 mg por vial. Eso es una diferencia de envasado y nada más: misma secuencia, misma fórmula, mismo número CAS, mismos campos de certificado. Lo que distingue un lote de otro es el número de lote, y un vial de 20 mg lleva el suyo igual que uno de 10 mg.</p>
+        <p>Vale la pena decirlo porque un gramaje en una etiqueta es una cantidad de polvo, y qué proporción de ese polvo es péptido es una cifra aparte. Dos viales de gramaje distinto e idéntico porcentaje de contenido neto guardan cantidades proporcionalmente distintas de péptido; dos del mismo gramaje y distinto contenido neto no guardan la misma cantidad en absoluto.</p>
+
+        <h2>Qué debe mostrar un certificado</h2>
+        <p>Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con la columna, el gradiente y la longitud de onda escritos. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, con masa observada y teórica a la vista, porque en una molécula de cinco mil dalton una cifra redondeada no distingue parientes cercanos.</p>
+        <p>La longitud es la razón de que la pureza merezca atención aquí. Cuarenta y cuatro residuos son cuarenta y tres acoplamientos en la <a href="article/peptide-synthesis/">síntesis</a>, cada uno una ocasión de reacción incompleta, y las secuencias de deleción resultantes se diferencian del objetivo en un residuo y salen de la columna casi a la vez. Los péptidos largos se montan a menudo desde fragmentos unidos después por este motivo.</p>
+        <p>El contenido neto de péptido va en el documento aparte de la pureza cromatográfica. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> explica la distancia.</p>
+
+        <h2>La acilación también es una pregunta analítica</h2>
+        <p>Una modificación en un extremo de una cadena larga es una fracción pequeña de la masa total, así que la diferencia entre la molécula acilada y la no acilada son unos noventa y seis dalton sobre cinco mil. Eso cae de sobra dentro de lo que resuelve un espectrómetro, pero solo si el documento informa el valor medido y no un veredicto.</p>
+        <p>Un certificado que dice «conforme» te ha dicho que alguien miró. Uno que da la masa observada al lado de la teórica te ha dicho qué vio, y lo segundo se puede contrastar con el registro público.</p>
+
+        <h2>La conservación es una conversación más larga en un péptido largo</h2>
+        <p>Las rutas de degradación que dependen de la longitud tienen aquí más cadena sobre la que actuar. La hidrólisis del esqueleto, la desamidación de asparagina y glutamina y la oxidación de la única metionina avanzan todas con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a></p>
+        <p>El grupo acilo añade un sitio más en el que pensar, ya que un enlace éster o amida es hidrolizable de por sí. Un certificado lleva fecha porque un resultado pertenece a un momento, y lo que pasa entre esa fecha y tu mesa es cuestión de manejo. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> expone las rutas.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es la tesamorelina?",
+          "a": "Un análogo sintético de la hormona liberadora de hormona de crecimiento: la secuencia natural de 44 residuos con un ácido graso corto e insaturado, el trans-3-hexenoilo, unido al extremo N."
+        },
+        {
+          "q": "¿Por qué lleva la tesamorelina un grupo de ácido graso?",
+          "a": "Los dos primeros residuos de la GHRH nativa son un punto de corte para la dipeptidil peptidasa IV. Bloquear ese extremo con un grupo acilo es un diseño orientado a sobrevivir más que la secuencia nativa sin dejar de actuar en el receptor."
+        },
+        {
+          "q": "¿Cuál es la fórmula y la masa de la tesamorelina?",
+          "a": "C221H366N72O67S, 5135,9 g/mol, CAS 218949-48-5. El número pasa el dígito de control y resuelve en PubChem a un registro con fórmula coincidente."
+        },
+        {
+          "q": "¿Puede una calculadora de secuencia dar su masa?",
+          "a": "No. Una calculadora trabaja con los veinte aminoácidos estándar, y el grupo hexenoilo no es uno de ellos, así que devolvería el péptido sin modificar, que es otra molécula."
+        },
+        {
+          "q": "¿Actúa la tesamorelina por el mismo receptor que un secretagogo?",
+          "a": "No. Actúa en el receptor de GHRH, mientras que los secretagogos de hormona de crecimiento actúan por el receptor de grelina. Dos compuestos descritos como elevadores de hormona de crecimiento pueden hacerlo por receptores distintos."
+        },
+        {
+          "q": "¿Por qué importa la longitud para la pureza?",
+          "a": "Cuarenta y cuatro residuos son cuarenta y tres acoplamientos, cada uno una ocasión de reacción incompleta. Las secuencias de deleción resultantes se diferencian en un residuo y salen casi a la vez, y por eso los péptidos largos se montan a menudo desde fragmentos."
+        }
+      ],
+      cta: 'Cada lote se envía con su propio certificado. <a href="verify/">Comprueba un número de lote</a> antes de encargar.',
+    },
+
+    'what-is-cjc-1295-no-dac': {
+      title: 'CJC-1295 sin DAC: qué es la parte que falta',
+      metaTitle: 'CJC-1295 sin DAC: qué significa DAC y por qué no está',
+      metaDescription: 'Un fragmento de GHRH de 29 residuos con cuatro sustituciones. Qué es el enlazador DAC, por qué la forma sin DAC es otra molécula y qué exige su certificado.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Un producto que lleva en el nombre algo que no contiene, y por qué eso importa en un certificado.',
+      imageAlt: 'Un fragmento de GHRH de 29 residuos nombrado por un enlazador que no lleva.',
+      body: `
+        <p class="lead">Éste es el raro compuesto cuyo nombre común describe una parte que no tiene. Entender qué es el DAC, y qué cambia su ausencia, es la mayor parte de lo que hace falta para leer bien un certificado de este producto.</p>
+
+        <h2>La secuencia de partida</h2>
+        <p>El punto de partida es la GHRH(1-29), los primeros veintinueve residuos de la hormona liberadora de hormona de crecimiento. Ese fragmento es el trozo más corto de la hormona natural que sigue actuando en el receptor, y por eso los análogos se construyen desde él y no desde los cuarenta y cuatro completos.</p>
+        <p>El CJC-1295 sin DAC es ese fragmento con cuatro sustituciones, lo que suele escribirse como el análogo tetrasustituido. Cada sustitución apunta a una debilidad conocida: el residuo de la posición dos que corta la dipeptidil peptidasa IV, y residuos propensos a oxidarse o isomerizarse. <a class="cite" href="https://doi.org/10.1016/s0167-0115(99)00089-0" target="_blank" rel="noopener nofollow">(Ref.: Mentlein, 1999)</a> El patrón es el mismo que hay detrás de casi todo diseño de análogos peptídicos: cambiar la cadena donde se rompe y dejar en paz la parte que lee el receptor.</p>
+
+        <h2>Qué es el DAC</h2>
+        <p>DAC son las siglas de Drug Affinity Complex, un enlazador de maleimida unido al péptido para que se enlace de forma covalente a la albúmina en circulación. El trabajo publicado sobre el CJC-1295 describe ese constructo, con el enlazador presente. <a class="cite" href="https://doi.org/10.1210/jc.2006-1702" target="_blank" rel="noopener nofollow">(Ref.: Ionescu y Frohman, 2006)</a></p>
+        <p>Quitar el enlazador deja el fragmento modificado de GHRH(1-29) por su cuenta. Así que el producto sin DAC no es una variante del compuesto con DAC en el sentido de otra sal u otro gramaje: es una molécula más corta, con otra fórmula, otra masa y otro número CAS. Un certificado de uno no describe al otro.</p>
+
+        <h2>La identidad sobre el papel</h2>
+        <p>El CJC-1295 sin DAC es C<sub>152</sub>H<sub>252</sub>N<sub>44</sub>O<sub>42</sub>, 3367,9 g/mol, CAS 863288-34-0. El número pasa el dígito de control y resuelve en PubChem a un registro cuya fórmula coincide, que son las dos comprobaciones a hacer: la aritmética con nuestro <a href="tools/cas-number-check/">validador</a>, y después una búsqueda para leer qué sustancia devuelve el número.</p>
+        <p>La fórmula no lleva azufre, y eso es un dato legible de por sí: esta molécula no tiene ni metionina ni cisteína, así que la ruta de oxidación que importa en péptidos con metionina no se aplica. Es el tipo de cosa que una fórmula te dice gratis.</p>
+        <p>Una calculadora de secuencia no puede producir esta masa. Nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> maneja los veinte aminoácidos estándar, y las sustituciones de aquí incluyen residuos fuera de ese juego. Rechazaría la secuencia en lugar de inventar una masa, que es el comportamiento correcto y la razón de que la herramienta se niegue en vez de adivinar.</p>
+
+        <h2>Por qué el nombre es un problema de verificación</h2>
+        <p>Una ficha de catálogo que diga solo «CJC-1295» es ambigua entre dos moléculas que se diferencian en un enlazador y unos mil dalton. La forma de resolverlo es leer el certificado, no confiar en el título del producto: la fórmula y la masa medida deciden qué compuesto hay en el vial, y lo deciden de un modo que un nombre no puede.</p>
+        <p>Es el caso general de algo que cubre nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a>. Un compuesto puede tener varios nombres, y los nombres se mueven; un identificador y una masa medida, no. Cuando el nombre común de un producto es de por sí ambiguo, el documento hace el trabajo que la etiqueta no puede.</p>
+
+        <h2>Por qué un fragmento funciona siquiera</h2>
+        <p>Que veintinueve de cuarenta y cuatro residuos basten es un hecho sobre dónde lee el receptor la molécula. La información de unión está en la parte N-terminal de la secuencia, así que el resto se puede quitar sin perder la unión. Nuestra nota sobre <a href="article/peptide-length-terminology/">longitud de péptidos</a> cubre por qué una cadena más corta no es una versión débil de una larga.</p>
+        <p>También tiene una consecuencia práctica para quien compra. Una cadena más corta es más barata de sintetizar y más fácil de purificar, así que una cifra alta de pureza en un veintinuevemero representa menos trabajo que la misma cifra en un cuarenta y cuatromero. Los porcentajes de pureza no son comparables entre longitudes, algo que desarrolla nuestra nota sobre <a href="article/why-peptide-prices-differ/">por qué varían los precios</a>.</p>
+
+        <h2>Qué debe mostrar un certificado</h2>
+        <p>Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones, ya que la columna y el gradiente cambian el número. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> con masa observada y teórica a la vista, que es lo que distingue este compuesto del constructo con DAC. Contenido neto de péptido declarado aparte, porque veintinueve residuos purificados por fase reversa salen como sal y el polvo lleva contraión y agua absorbida.</p>
+        <p>Veintinueve residuos son veintiocho acoplamientos en la <a href="article/peptide-synthesis/">síntesis</a>. Es lo bastante largo para que las secuencias de deleción sean una parte real del perfil de impurezas, y salen pegadas al pico principal porque se diferencian del objetivo en un residuo. El cromatograma vale la pena pedirlo en un péptido de esta longitud.</p>
+
+        <h2>Qué no son las cuatro sustituciones</h2>
+        <p>Son cambios en la cadena, no añadidos, así que la molécula sigue siendo un péptido de 29 residuos. No se atornilla nada, no hay metal unido, no hay una segunda cadena. Eso deja el certificado simple: una secuencia, una fórmula, una masa que comparar.</p>
+        <p>Merece el contraste con los análogos acilados y los que llevan enlazador en la misma familia, donde el grupo añadido es algo aparte que medir y algo aparte en lo que equivocarse. Aquí toda la molécula son aminoácidos, y la medición de masa los cubre de una vez.</p>
+
+        <h2>Conservación</h2>
+        <p>Las sustituciones se eligieron en parte por estabilidad en circulación, y ésa es otra pregunta distinta de la estabilidad en un vial. Un residuo modificado que resiste una enzima no resiste la hidrólisis, la desamidación ni la química corriente que avanza con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas, y la fecha de un certificado es lo que te permite situar un resultado en la vida del material.</p>
+
+        <h2>Qué receptor</h2>
+        <p>El de GHRH, miembro de la clase tipo secretina de receptores acoplados a proteína G. <a class="cite" href="https://doi.org/10.1124/pr.55.1.6" target="_blank" rel="noopener nofollow">(Ref.: Mayo et al., 2003)</a> Eso sitúa a este compuesto en un mecanismo distinto del de los secretagogos de hormona de crecimiento, que actúan en el receptor de grelina. Nuestra nota sobre <a href="article/what-is-a-growth-hormone-secretagogue/">secretagogos</a> cubre por qué dos compuestos asociados a la misma hormona corriente abajo pueden actuar en receptores sin relación.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué significa DAC en CJC-1295?",
+          "a": "Drug Affinity Complex, un enlazador de maleimida unido al péptido para que se enlace de forma covalente a la albúmina en circulación. El producto sin DAC es el péptido sin ese enlazador."
+        },
+        {
+          "q": "¿Es el CJC-1295 sin DAC el mismo compuesto que el CJC-1295?",
+          "a": "No. Quitar el enlazador deja una molécula más corta con otra fórmula, otra masa y otro número CAS. Un certificado de uno no describe al otro."
+        },
+        {
+          "q": "¿Cuál es la fórmula y la masa del CJC-1295 sin DAC?",
+          "a": "C152H252N44O42, 3367,9 g/mol, CAS 863288-34-0. El número pasa el dígito de control y resuelve en PubChem a un registro con fórmula coincidente."
+        },
+        {
+          "q": "¿En qué secuencia se basa?",
+          "a": "En la GHRH(1-29), los primeros veintinueve residuos de la hormona liberadora de hormona de crecimiento, con cuatro sustituciones. Ese fragmento es el trozo más corto de la hormona natural que sigue actuando en el receptor."
+        },
+        {
+          "q": "¿Por qué importa que la fórmula no lleve azufre?",
+          "a": "Significa que la molécula no tiene ni metionina ni cisteína, así que la ruta de oxidación de la metionina, que añade dieciséis unidades de masa, no se aplica aquí. Una fórmula te lo dice sin ninguna medición más."
+        },
+        {
+          "q": "¿Puede una calculadora de secuencia dar su masa?",
+          "a": "No. Las sustituciones incluyen residuos fuera de los veinte aminoácidos estándar, así que una calculadora rechaza la secuencia en lugar de inventarle una masa."
+        }
+      ],
+      cta: 'Pregunta qué compuesto describe un certificado antes de encargar. <a href="verify/">Comprueba un número de lote</a>.',
+    },
+
+    'what-is-igf-1-lr3': {
+      title: 'IGF-1 LR3: una proteína, no un péptido',
+      metaTitle: 'Qué es el IGF-1 LR3 y por qué se documenta distinto',
+      metaDescription: 'El IGF-1 LR3 es un análogo recombinante de 83 residuos. Por qué exige otros análisis que un péptido sintético y por qué su CAS no resiste una búsqueda.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Ochenta y tres residuos hechos en células, no en una resina, y todo lo que se sigue de eso.',
+      imageAlt: 'Un análogo recombinante de 83 residuos y por qué su papelería es distinta.',
+      body: `
+        <p class="lead">Casi todo lo que este sitio dice sobre certificados da por supuesto un péptido sintético: una cadena montada sobre una resina, purificada por cromatografía, comprobada por masa. El IGF-1 LR3 rompe ese supuesto, y cómo lo rompe es el contenido útil de esta página.</p>
+
+        <h2>Qué codifica el nombre</h2>
+        <p>El factor de crecimiento similar a la insulina 1 es una proteína de 70 residuos. LR3 describe dos cambios: una extensión de 13 residuos en el extremo N, que es la «L» de Long, y una arginina sustituida en la posición tres, que es el «R3». El resultado son 83 residuos.</p>
+        <p>La sustitución es el objetivo del diseño. El IGF-1 nativo circula unido a una familia de proteínas de unión que controlan cuánto queda libre, y los análogos con afinidad reducida por esas proteínas se comportan distinto en un sistema de cultivo solo por eso. <a class="cite" href="https://doi.org/10.1007/978-1-4684-5949-4_3" target="_blank" rel="noopener nofollow">(Ref.: Cascieri et al., 1991)</a> El trabajo sobre el Long [R3] IGF-I describe específicamente un análogo con afinidad reducida por las proteínas de unión. <a class="cite" href="https://doi.org/10.1677/joe.0.1550559" target="_blank" rel="noopener nofollow">(Ref.: Dunaiski et al., 1997)</a></p>
+
+        <h2>Por qué no se hace como un péptido</h2>
+        <p>Con 83 residuos esto queda fuera del rango cómodo de la <a href="article/peptide-synthesis/">síntesis en fase sólida</a> paso a paso. Cada acoplamiento lleva una probabilidad de no completarse, y esas probabilidades se componen, así que una cadena así de larga hecha residuo a residuo llegaría enterrada en secuencias de deleción.</p>
+        <p>Se produce de forma recombinante: la secuencia se expresa en células y se purifica de lo que fabrican. Eso cambia el cuadro de impurezas entero. Las impurezas de un péptido sintético son parientes químicos del objetivo, sobre todo deleciones y desprotecciones incompletas. Las de una proteína recombinante son proteínas de la célula huésped, ADN del huésped y formas mal plegadas o truncadas del producto.</p>
+
+        <h2>Así que el certificado hace otras preguntas</h2>
+        <p>La pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> sigue aplicando y sigue significando la proporción del área detectada que es el objetivo. Lo que no va a cazar es una cadena del tamaño correcto mal plegada, porque el plegamiento no es algo sobre lo que informe una columna de fase reversa.</p>
+        <p>Aquí importan tres campos que en un péptido sintético corto no significan nada. La <b>proteína de célula huésped</b> y el <b>ADN residual</b> son subproductos del sistema de producción y no tienen equivalente en la síntesis en fase sólida. La <b>endotoxina</b> sube de importancia porque los sistemas de expresión bacterianos son una fuente directa, y la endotoxina activa la señalización inmunitaria a concentraciones muy bajas en células en cultivo. <a class="cite" href="https://doi.org/10.1146/annurev.biochem.71.110601.135414" target="_blank" rel="noopener nofollow">(Ref.: Raetz y Whitfield, 2002)</a> Nuestra nota sobre <a href="article/endotoxins-in-research-peptides/">endotoxinas</a> explica por qué una esterilización corriente no la quita.</p>
+        <p>Un certificado que informa solo pureza por HPLC y una masa para una proteína recombinante está usando una plantilla de péptido sobre algo que no es un péptido.</p>
+
+        <h2>Dónde está el límite entre péptido y proteína</h2>
+        <p>No hay una línea química en la que una cadena deje de ser un péptido. La convención sitúa el cambio alrededor de los cincuenta residuos, y es un marcador aproximado de un desplazamiento real: las cadenas cortas se quedan flexibles en disolución, las largas tienen interacciones internas suficientes para sostener un plegamiento estable. Nuestra nota sobre <a href="article/amino-acids-peptides-proteins-difference/">aminoácidos, péptidos y proteínas</a> cubre la distinción.</p>
+        <p>Con 83 residuos esta molécula cae del lado de la proteína, y la consecuencia práctica es la que importa: un plegamiento puede estar bien o mal, y si está bien es una pregunta que no responde ninguna de las mediciones habituales de péptidos. Un péptido corto no tiene plegamiento que estropear.</p>
+
+        <h2>Un número CAS que no sobrevive a una búsqueda</h2>
+        <p>Este producto estaba listado aquí con el CAS 946870-92-4. Ese número pasa el dígito de control, así que nuestro <a href="tools/cas-number-check/">validador</a> acepta la aritmética. Buscarlo es otra cosa: en PubChem resuelve a un lípido ionizable de fórmula C<sub>80</sub>H<sub>154</sub>N<sub>4</sub>O<sub>6</sub>S<sub>2</sub>, un compuesto sin relación con el IGF-1 en ningún aspecto.</p>
+        <p>Lo quitamos de la ficha en lugar de dejar un número apuntando a la molécula equivocada. Éste es el fallo exacto que advierte la página de nuestro validador: la aritmética nunca ve el nombre del compuesto, así que un CAS real emparejado con la sustancia equivocada pasa siempre. El segundo paso, buscar el número y leer qué devuelve, es el que lo caza.</p>
+        <p>A las proteínas recombinantes grandes les falta con frecuencia una entrada limpia en los registros de moléculas pequeñas, que es un hecho corriente sobre cómo funcionan esos registros y no un problema del material. La posición honesta es decir que no hay número verificado en vez de aportar uno que resuelve a otra cosa.</p>
+
+        <h2>Qué deja eso para la identidad</h2>
+        <p>Sin registro público, la identidad descansa en lo que mide el certificado. En una proteína de este tamaño eso suele significar una medición de masa con una tolerancia más ancha de la que admite un péptido corto, ya que la envolvente isotópica de una molécula de nueve kilodalton es amplia, más la confirmación de secuencia por mapeo peptídico, donde la proteína se corta en fragmentos y esos fragmentos se identifican.</p>
+        <p>Nuestra nota sobre <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> cubre la comparación de masa observada contra teórica. El principio se traslada; la precisión no, y una tolerancia citada para un péptido corto no significaría nada aquí.</p>
+
+        <h2>Conservación de una molécula que puede desplegarse</h2>
+        <p>Las rutas de degradación que afectan a los péptidos también aplican aquí, y con 83 residuos hay más cadena sobre la que actuar: hidrólisis del esqueleto, desamidación, oxidación de cadenas laterales susceptibles, todas avanzando con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a></p>
+        <p>Una proteína plegada añade una ruta que un péptido no tiene. Puede perder su estructura sin perder un solo átomo, lo que significa que una medición de masa posterior se vería sin cambios. Ése es el argumento para tratar el manejo como parte de lo que compras y no como algo que cubre el certificado, y nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> expone la química.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué significa LR3 en IGF-1 LR3?",
+          "a": "Dos modificaciones del factor de crecimiento similar a la insulina 1: una extensión de 13 residuos en el extremo N (Long) y una arginina sustituida en la posición tres (R3). El resultado son 83 residuos frente a los 70 nativos."
+        },
+        {
+          "q": "¿Es el IGF-1 LR3 un péptido?",
+          "a": "Con 83 residuos cae en territorio de proteína, y se produce de forma recombinante y no por síntesis paso a paso. Eso cambia lo que su certificado tiene que informar."
+        },
+        {
+          "q": "¿Por qué un producto recombinante necesita otros campos de certificado?",
+          "a": "Sus impurezas vienen del sistema de producción: proteína de célula huésped, ADN residual y formas mal plegadas o truncadas. Eso no tiene equivalente en la síntesis en fase sólida, donde las impurezas son parientes químicos del objetivo."
+        },
+        {
+          "q": "¿Por qué importa más la endotoxina aquí?",
+          "a": "Los sistemas de expresión bacterianos son una fuente directa, y la endotoxina activa la señalización inmunitaria en células en cultivo a concentraciones muy bajas. Una esterilización corriente no la quita."
+        },
+        {
+          "q": "¿Por qué se quitó el número CAS de esta ficha?",
+          "a": "El CAS 946870-92-4 pasa el dígito de control pero resuelve en PubChem a un lípido ionizable sin relación. Lo quitamos en lugar de dejar un número apuntando a la molécula equivocada."
+        },
+        {
+          "q": "¿Puede la pureza por HPLC confirmar que la proteína está bien plegada?",
+          "a": "No. La cromatografía de fase reversa informa la proporción del área detectada que es el objetivo. Una cadena del tamaño correcto mal plegada no es algo que trate esa medición."
+        }
+      ],
+      cta: 'Pregunta qué informa el certificado de un producto recombinante más allá de la pureza. <a href="verify/">Comprueba un número de lote</a>.',
+    },
+
+    'what-is-tb-500': {
+      title: 'TB-500: un fragmento de siete residuos de una proteína mayor',
+      metaTitle: 'Qué es el TB-500: el fragmento de la timosina beta-4',
+      metaDescription: 'El TB-500 es un fragmento corto de la timosina beta-4, no la proteína. Qué es el fragmento, por qué se confunden y qué tiene que declarar su certificado.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Siete residuos vendidos bajo el nombre de una proteína de 43, y por qué eso es lo primero que hay que comprobar.',
+      imageAlt: 'Un fragmento de siete residuos vendido bajo el nombre de la proteína mayor de la que salió.',
+      body: `
+        <p class="lead">El TB-500 y la timosina beta-4 se tratan de forma rutinaria como la misma cosa. No lo son. Una es una proteína de 43 residuos; el otro, un fragmento corto sacado de ella. Cuál de las dos hay en un vial lo responde el certificado y no el nombre del producto.</p>
+
+        <h2>Qué es la timosina beta-4</h2>
+        <p>Una proteína de 43 residuos presente de forma amplia en las células, caracterizada como un péptido secuestrador de actina: une actina monomérica y la mantiene en un depósito que no está disponible para polimerizar. <a class="cite" href="https://doi.org/10.1016/s0021-9258(20)64278-8" target="_blank" rel="noopener nofollow">(Ref.: Safer et al., 1991)</a> Esa función se estableció con trabajo que la identificó con un factor secuestrador de actina descrito antes, y se demostró que otros miembros de la familia comparten la propiedad. <a class="cite" href="https://doi.org/10.1016/s0021-9258(18)54179-x" target="_blank" rel="noopener nofollow">(Ref.: Yu et al., 1993)</a></p>
+
+        <h2>Qué es el TB-500</h2>
+        <p>Un fragmento de siete residuos, dado normalmente como la secuencia acetilada Ac-LKKTETQ, correspondiente a una región de la timosina beta-4 asociada a la unión con actina. Los fragmentos de la proteína se han estudiado aparte de la molécula entera. <a class="cite" href="https://doi.org/10.1007/s00109-007-0243-9" target="_blank" rel="noopener nofollow">(Ref.: Rossdeutsch et al., 2007)</a></p>
+        <p>Siete residuos frente a cuarenta y tres no es una diferencia pequeña. Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> devuelve C<sub>36</sub>H<sub>66</sub>N<sub>10</sub>O<sub>13</sub> y unos 847 g/mol para el heptapéptido libre; acetilar el extremo N añade C<sub>2</sub>H<sub>2</sub>O y deja unos 889. La proteína completa anda por los 4.900. Una medición de masa los distingue de inmediato, y por eso una masa pertenece al certificado.</p>
+
+        <h2>Por qué se vende un fragmento</h2>
+        <p>Las cadenas cortas son más baratas de hacer y bastante más fáciles de purificar, que es la respuesta práctica. Una proteína de 43 residuos hecha por <a href="article/peptide-synthesis/">síntesis</a> paso a paso llegaría cargando una cola larga de secuencias de deleción; siete residuos no tienen ese problema.</p>
+        <p>La respuesta científica es que los fragmentos de una proteína son una forma estándar de preguntar qué parte de ella lleva una propiedad. Es una línea de trabajo legítima, y es también por lo que un fragmento y su proteína madre no deberían describirse de forma intercambiable: toda la gracia de hacer el fragmento es que puede comportarse distinto.</p>
+
+        <h2>El problema del nombre es el problema de verificación</h2>
+        <p>Nuestra ficha no lleva número CAS para este compuesto, y ésa es la posición exacta, no una omisión por la que disculparse. Un número se asigna cuando una sustancia se indexa en la literatura química, y un fragmento vendido bajo un nombre de estilo comercial puede no tener el suyo. Aportar un número que pertenece a la proteína madre sería peor que no aportar ninguno, porque pasaría un <a href="tools/cas-number-check/">dígito de control</a> y resolvería a la molécula equivocada.</p>
+        <p>Ese modo de fallo es real y lo hemos visto en nuestro propio catálogo: otro producto de aquí llevaba un número CAS que pasaba la aritmética y resolvía en PubChem a un lípido sin relación. La aritmética nunca ve el nombre del compuesto. Buscar el número es el paso que lo caza, y no tener ninguno es más honesto que tener uno que despista.</p>
+
+        <h2>Leer los dos nombres en una página</h2>
+        <p>Los catálogos usan «TB-500», «timosina beta-4» y «TB4» de formas que no se corresponden con una sola molécula. Una ficha titulada con un nombre y un certificado que informa el otro no es necesariamente deshonesta; a menudo es una plantilla rellenada sin cuidado. En cualquier caso el vial contiene uno de los dos y la masa medida dice cuál.</p>
+        <p>La regla general que expone nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a> aplica aquí con fuerza: un compuesto puede llevar varios nombres y los nombres se mueven, mientras que un identificador y una masa medida no. Cuando los nombres de un mercado están así de sueltos, la medición hace todo el trabajo.</p>
+
+        <h2>Qué tiene que declarar un certificado</h2>
+        <p>Qué molécula se analizó, de forma explícita: el fragmento o la proteína. Después la secuencia, incluido si el extremo N está acetilado, porque esa modificación cambia la masa en cuarenta y dos dalton y es invisible en una secuencia de letras.</p>
+        <p>Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones escritas. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> con masa observada y teórica a la vista, que es la medición que decide entre fragmento y proteína.</p>
+        <p>Contenido neto de péptido aparte de la pureza. Esto importa más en péptidos cortos que en largos: el contraión y el agua absorbida son una porción mayor del polvo pesado cuando el péptido en sí es ligero. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> lo cubre.</p>
+
+        <h2>Por qué una pureza alta no llama la atención aquí</h2>
+        <p>Siete residuos son seis acoplamientos en la síntesis. Cada paso es una ocasión de reacción incompleta, así que un heptapéptido parte de una posición mucho mejor que una cadena de cuarenta. Una cifra del 99 % en este compuesto representa bastante menos trabajo que la misma cifra en un péptido largo, y los porcentajes de pureza no son comparables entre longitudes.</p>
+        <p>En un péptido corto el número que vale la pena leer es la medición de identidad, no el porcentaje de pureza. Un documento que te da el 99 % y ninguna masa te ha dado la mitad fácil de la respuesta.</p>
+
+        <h2>Conservación</h2>
+        <p>Un péptido corto tiene menos sitios donde degradarse que uno largo, lo que ayuda, y sigue siendo higroscópico en cuanto se abre el vial. Las rutas habituales avanzan con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> La treonina y la glutamina de esta secuencia le dan a la desamidación dónde actuar, que es una razón para leer la fecha de un certificado. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre la química.</p>
+
+        <h2>Lo que esta página no afirma</h2>
+        <p>La propiedad de secuestrar actina descrita en la literatura pertenece a la proteína completa. Si un fragmento de siete residuos la reproduce es otra pregunta, y una que una página de catálogo no está en posición de resolver. Lo que un vendedor puede declarar es la secuencia, la masa y el lote, que es donde esta página se detiene.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Es el TB-500 lo mismo que la timosina beta-4?",
+          "a": "No. La timosina beta-4 es una proteína de 43 residuos. El TB-500 es un fragmento de siete residuos sacado de ella, normalmente la secuencia acetilada Ac-LKKTETQ. Sus masas se diferencian en un factor de unos cinco."
+        },
+        {
+          "q": "¿Cuál es la masa del TB-500?",
+          "a": "El heptapéptido libre LKKTETQ es C36H66N10O13, unos 847 g/mol. Acetilar el extremo N añade C2H2O y deja unos 889. La proteína completa anda por los 4.900."
+        },
+        {
+          "q": "¿Por qué este producto no tiene número CAS?",
+          "a": "Un número se asigna cuando una sustancia se indexa en la literatura química, y un fragmento vendido bajo un nombre comercial puede no tenerlo. Aportar el de la proteína madre pasaría un dígito de control y resolvería a la molécula equivocada."
+        },
+        {
+          "q": "¿Qué tiene que declarar el certificado que el nombre no dice?",
+          "a": "Qué molécula se analizó, la secuencia, y si el extremo N está acetilado. La acetilación cambia la masa en cuarenta y dos dalton y es invisible en una secuencia de letras."
+        },
+        {
+          "q": "¿Es llamativo un 99 % de pureza en el TB-500?",
+          "a": "No especialmente. Siete residuos son seis acoplamientos, muchas menos ocasiones de reacción incompleta que una cadena larga. En péptidos cortos la medición de identidad es el número que vale la pena leer."
+        },
+        {
+          "q": "¿Hace el fragmento lo que hace la proteína?",
+          "a": "La propiedad de secuestrar actina descrita en la literatura pertenece a la proteína completa. Si un fragmento de siete residuos la reproduce es otra pregunta, que una página de catálogo no puede resolver."
+        }
+      ],
+      cta: 'Pregunta qué molécula describe el certificado, el fragmento o la proteína. <a href="verify/">Comprueba un número de lote</a>.',
+    },
+
+    'what-is-ss-31': {
+      title: 'SS-31: cuatro residuos, dos de ellos no estándar',
+      metaTitle: 'Qué es el SS-31 (elamipretida): estructura y verificación',
+      metaDescription: 'El SS-31, o elamipretida, es un péptido de cuatro residuos con un aminoácido D y una tirosina modificada. Fórmula, masa, CAS y qué debe mostrar su certificado.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Un tetrapéptido donde la mitad de los residuos está fuera de los veinte estándar.',
+      imageAlt: 'Un péptido de cuatro residuos con un aminoácido D y una tirosina modificada.',
+      body: `
+        <p class="lead">El SS-31 tiene cuatro residuos, lo que suena al compuesto más simple de cualquier catálogo. Dos de esos cuatro no son aminoácidos estándar, y ese solo hecho decide cómo hay que documentar la molécula.</p>
+
+        <h2>La secuencia y qué tiene de raro</h2>
+        <p>El péptido es D-Arg-Dmt-Lys-Phe-NH<sub>2</sub>. Tres cosas de esa línea corta quedan fuera de la notación peptídica corriente.</p>
+        <p>El primer residuo es <b>D-arginina</b>, la imagen especular de la forma L habitual. La posición dos es <b>Dmt</b>, 2',6'-dimetiltirosina, una tirosina con dos metilos extra en el anillo. El extremo C está <b>amidado</b>, así que la cadena termina en amida y no en ácido.</p>
+        <p>El compuesto viene del trabajo sobre péptidos antioxidantes dirigidos a la mitocondria, una serie descrita por Szeto y Schiller, de donde sale la designación SS. <a class="cite" href="https://doi.org/10.1208/aapsj080362" target="_blank" rel="noopener nofollow">(Ref.: Szeto, 2006)</a> También se conoce como elamipretida, y PubChem lo indexa con ese nombre.</p>
+
+        <h2>Por qué eso vuelve inútil aquí una calculadora de secuencia</h2>
+        <p>Nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> maneja los veinte aminoácidos estándar y nada más. La Dmt no tiene código acordado de una letra, así que la calculadora rechaza la secuencia en vez de devolver un número.</p>
+        <p>Ese rechazo es el comportamiento correcto y merece detenerse. Una calculadora que sustituyera en silencio por tirosina normal devolvería una masa veintiocho dalton más baja, y esa cifra equivocada parecería después una discrepancia con el certificado. Una herramienta que se niega a responder es más útil que una que responde a ojo.</p>
+        <p>La quiralidad agrava el punto. La D-arginina y la L-arginina tienen masas y fórmulas idénticas, así que ninguna medición de masa las distingue. Un certificado que afirma la forma D está afirmando algo que la espectrometría no puede comprobar, y el método que sí puede es la cromatografía quiral. Nuestra nota sobre <a href="article/what-is-ipamorelin/">ipamorelina</a> cubre el mismo asunto en un compuesto que también lleva residuos D.</p>
+
+        <h2>La identidad sobre el papel</h2>
+        <p>El SS-31 es C<sub>32</sub>H<sub>49</sub>N<sub>9</sub>O<sub>5</sub>, 639,8 g/mol, CAS 736992-21-5. El número pasa el dígito de control y resuelve en PubChem al registro de la elamipretida, cuya fórmula coincide. Los dos pasos importan: la aritmética con nuestro <a href="tools/cas-number-check/">validador</a>, y después la búsqueda para leer qué sustancia devuelve.</p>
+        <p>Con 639,8 ésta es una molécula pequeña para lo que es un péptido, lo bastante ligera como para que un espectrómetro resuelva diferencias de un átomo con holgura. La envolvente isotópica es estrecha, así que la distinción entre masa monoisotópica y media es menor aquí que en un péptido largo, aunque un certificado debería decir cuál informa.</p>
+
+        <h2>Dos nombres, un compuesto</h2>
+        <p>SS-31 y elamipretida son la misma molécula bajo una designación de investigación y un nombre de fármaco. Es una situación corriente y no una trampa, pero tiene una consecuencia práctica: una búsqueda con un nombre puede no devolver nada mientras la otra devuelve un registro completo. PubChem lo indexa como elamipretida.</p>
+        <p>Nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a> cubre por qué un identificador de registro gana a un nombre justo por esto. Un compuesto puede acumular un código, un nombre genérico, una marca y varias grafías de catálogo; el número se queda quieto.</p>
+
+        <h2>Qué debe mostrar un certificado</h2>
+        <p>La secuencia escrita con las modificaciones nombradas, no un código de producto a secas. Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con las condiciones. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, observada contra teórica.</p>
+        <p>Después, la que un péptido corto modificado necesita y uno simple no: evidencia de la estereoquímica. Si el documento afirma un residuo D y solo ofrece una masa, ha afirmado algo que no ha medido.</p>
+        <p>Contenido neto de péptido aparte de la pureza, como siempre, y aquí muerde más. En una molécula de 640 dalton el contraión de la purificación por fase reversa es una porción grande del polvo pesado. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> cubre la aritmética.</p>
+
+        <h2>Qué tienen en común las modificaciones</h2>
+        <p>Los tres cambios están donde una enzima cortaría o donde la molécula se leería como corriente. Un residuo D no lo reconocen las proteasas que actúan sobre cadenas L, un extremo amidado quita el ácido libre que esas enzimas buscan, y un anillo metilado cambia la química local de la posición dos.</p>
+        <p>Ésta es la gramática estándar del diseño de análogos peptídicos, la misma que hay detrás de un residuo D en la ipamorelina o de un grupo acilo en un análogo de GHRH: modificar la cadena donde la atacan y dejar en paz la parte que lleva la información. Reconocer la gramática ayuda al leer una secuencia desconocida, porque los residuos raros casi nunca son decorativos.</p>
+
+        <h2>Por qué cuatro residuos tampoco es trivial de hacer</h2>
+        <p>Tres acoplamientos no son nada. La dificultad está en otro sitio: un residuo no estándar hay que conseguirlo o fabricarlo, un aminoácido D tiene que seguir siendo D a lo largo de la <a href="article/peptide-synthesis/">síntesis</a>, y la amidación tiene que ser completa. Cada una de esas cosas es un sitio donde un lote puede estar parcialmente mal y parecer del todo normal por pureza.</p>
+        <p>La regla general se invierte aquí. En casi todo péptido corto la pureza es fácil y la identidad es el número a leer. Aquí la identidad también es más difícil de lo normal, y el documento tiene que llevar más de dos cifras para resolverla.</p>
+
+        <h2>Conservación</h2>
+        <p>Un péptido pequeño se degrada igual por las rutas corrientes, que avanzan con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> El extremo amidado es hidrolizable de por sí, y perder la amida convertiría la molécula en el ácido libre: un cambio de alrededor de un dalton, lo bastante pequeño para pasar desapercibido y lo bastante grande para importar en la identidad.</p>
+        <p>Es un buen argumento para leer la fecha de un certificado y no solo sus cifras. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> expone las rutas.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es el SS-31?",
+          "a": "Un péptido de cuatro residuos, D-Arg-Dmt-Lys-Phe-NH2, de una serie de péptidos dirigidos a la mitocondria descrita por Szeto y Schiller. También se conoce como elamipretida."
+        },
+        {
+          "q": "¿Qué significa Dmt en la secuencia?",
+          "a": "2',6'-dimetiltirosina, una tirosina con dos metilos extra en el anillo. No tiene código acordado de una letra, y por eso las calculadoras de secuencia no pueden con este compuesto."
+        },
+        {
+          "q": "¿Cuál es la fórmula y la masa del SS-31?",
+          "a": "C32H49N9O5, 639,8 g/mol, CAS 736992-21-5. El número pasa el dígito de control y resuelve en PubChem al registro de la elamipretida, con fórmula coincidente."
+        },
+        {
+          "q": "¿Puede la espectrometría de masas confirmar la D-arginina?",
+          "a": "No. La D y la L arginina tienen masas y fórmulas idénticas, así que ninguna medición de masa las distingue. La cromatografía quiral es el método que sí puede."
+        },
+        {
+          "q": "¿Por qué una calculadora rechaza esta secuencia en lugar de estimarla?",
+          "a": "Porque sustituir la Dmt por tirosina normal devolvería una masa unos veintiocho dalton más baja, y esa cifra equivocada parecería después una discrepancia con el certificado. Negarse es más útil que responder a ojo."
+        },
+        {
+          "q": "¿Es más fácil hacer bien un péptido corto?",
+          "a": "Menos acoplamientos, sí. Pero hay que conseguir un residuo no estándar, un aminoácido D tiene que seguir siendo D durante la síntesis, y la amidación tiene que ser completa. Cada una es un sitio donde un lote puede estar parcialmente mal y parecer normal por pureza."
+        }
+      ],
+      cta: 'Pide la evidencia de estereoquímica, no solo la masa. <a href="verify/">Comprueba un número de lote</a>.',
+    },
+
+    'what-is-epithalon': {
+      title: 'Epitalón: cuatro residuos y una literatura delgada',
+      metaTitle: 'Qué es el epitalón: estructura, masa y qué está documentado',
+      metaDescription: 'El epitalón es el tetrapéptido Ala-Glu-Asp-Gly. Su fórmula y su masa cuadran por dos vías independientes. Qué respalda el registro publicado y qué no.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'La química es fácil de verificar. La literatura es la parte con la que hay que tener cuidado.',
+      imageAlt: 'Un péptido de cuatro residuos cuya química cuadra y cuya literatura es delgada.',
+      body: `
+        <p class="lead">El epitalón está entre los compuestos más simples de cualquier catálogo de péptidos: cuatro residuos, todos estándar, sin modificaciones. Eso vuelve su identidad inusualmente fácil de confirmar, y deja en primer plano la pregunta difícil, que es qué respalda el trabajo publicado.</p>
+
+        <h2>La secuencia</h2>
+        <p>Ala-Glu-Asp-Gly, escrito AEDG en código de una letra. Cuatro de los veinte aminoácidos estándar, extremo N libre y extremo C libre, nada unido y nada metilado.</p>
+        <p>Esa simplicidad significa que puedes comprobar las cifras del catálogo por dos vías independientes, lo cual es raro. Mete AEDG en nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> y devuelve C<sub>14</sub>H<sub>22</sub>N<sub>4</sub>O<sub>9</sub> a 390,35 g/mol. Busca el CAS 307297-39-8 y PubChem devuelve un registro con la misma fórmula y la misma masa. Dos rutas que no dependen una de otra, las dos de acuerdo con lo que dice la ficha.</p>
+        <p>El número CAS pasa además el dígito de control, que puedes confirmar con nuestro <a href="tools/cas-number-check/">validador</a>. Tres comprobaciones sobre un compuesto, todas disponibles antes de que nadie pague nada.</p>
+
+        <h2>Qué te dice la composición</h2>
+        <p>Dos de los cuatro residuos son ácidos, el glutamato y el aspartato, y ninguno de los otros dos lleva carga. Así que éste es un péptido marcadamente ácido. Nuestra <a href="tools/peptide-isoelectric-point/">calculadora de punto isoeléctrico</a> sitúa su pI cerca de 3,6 con el juego de pKa de EMBOSS, y la solubilidad suele estar en su mínimo alrededor de ese pH, donde se anula la carga neta.</p>
+        <p>La composición dice también qué no puede salir mal. Sin metionina ni cisteína no hay azufre, así que la ruta de oxidación que añade dieciséis unidades de masa a los péptidos con metionina no tiene dónde actuar. Una fórmula sin S te lo dice gratis.</p>
+        <p>La asparagina y la glutamina son los residuos más propensos a desamidarse, y esta secuencia no tiene ninguno. Sí tiene aspartato, que puede isomerizarse, así que la secuencia no es inerte, pero la lista corta habitual de rutas de degradación es más corta de lo normal.</p>
+
+        <h2>Un compuesto que puedes comprobar sin el vendedor</h2>
+        <p>Casi todo este sitio defiende que un comprador debería poder confirmar una afirmación por su cuenta. El epitalón es el caso más claro del estante, porque toda afirmación estructural sobre él se alcanza desde fuentes públicas en menos de un minuto.</p>
+        <p>La secuencia da la fórmula. La fórmula da la masa. El número CAS da un registro que declara las dos. Si un certificado de este compuesto discrepa de algo de eso, la discrepancia es sobre el documento y no sobre qué es la molécula. Pocos compuestos dejan trazar esa línea con tanta limpieza, y donde se puede conviene usarla.</p>
+
+        <h2>Por qué una pureza alta se espera, no impresiona</h2>
+        <p>Tres acoplamientos. Ésa es la <a href="article/peptide-synthesis/">síntesis</a> entera, y cada paso es el único tipo de ocasión que tiene un péptido de salir mal al montarse. Un tetrapéptido de residuos estándar es más o menos lo más fácil que da esta química, así que una cifra del 99 % aquí representa muy poco trabajo comparado con la misma cifra en una cadena larga.</p>
+        <p>Los porcentajes de pureza no son comparables entre longitudes, y en un compuesto tan corto el número de pureza es la mitad fácil de la respuesta. La medición de identidad es la que vale la pena leer, y en este compuesto es además fácil de contrastar con un registro público.</p>
+
+        <h2>La parte que merece cautela</h2>
+        <p>La química está asentada; la biología no. El trabajo publicado sobre este compuesto es más delgado y está más concentrado en un conjunto menor de grupos que el de compuestos como las incretinas o los péptidos de cobre, y las revisiones son recientes. <a class="cite" href="https://doi.org/10.3390/ijms26062691" target="_blank" rel="noopener nofollow">(Ref.: Araj et al., 2025)</a></p>
+        <p>Aquí no se resumen afirmaciones sobre lo que hace, por la misma razón que este sitio no lo hace con nada: una página de catálogo no es donde se resuelve esa pregunta, y una literatura delgada es justo la situación donde un vendedor que repite afirmaciones aporta menos y arriesga más.</p>
+        <p>Un vendedor puede declarar la secuencia, la fórmula, la masa, el lote y el método. En este compuesto las cinco se pueden comprobar contra fuentes que no tienen nada que ver con nosotros, que es mejor cosa que ofrecer un resumen.</p>
+
+        <h2>Dos nombres para la misma molécula</h2>
+        <p>Los catálogos escriben este compuesto como epitalón y como epithalon, y PubChem lo indexa con la segunda grafía. Ninguna está mal y nada depende de cuál use un vendedor, pero una búsqueda con una puede devolver menos que con la otra.</p>
+        <p>Es el caso corriente que describe nuestra nota sobre <a href="article/cas-numbers-explained/">números CAS</a>: los nombres se mueven y se multiplican, mientras que un número de registro se queda quieto. En un compuesto cuya química es así de fácil de confirmar, ir por el número y no por el nombre quita el último sitio donde podría esconderse una ambigüedad.</p>
+
+        <h2>Qué debe mostrar un certificado</h2>
+        <p>Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con la columna, el gradiente y la longitud de onda escritos. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> con masa observada y teórica a la vista, para que puedas comparar la primera contra la fórmula de PubChem por tu cuenta.</p>
+        <p>Contenido neto de péptido como línea aparte. Esto importa aquí más que en un péptido largo: con 390 dalton la molécula es ligera, así que el contraión trifluoroacetato que deja la purificación por fase reversa es una porción grande del polvo pesado. Nuestra nota sobre <a href="article/excipients-in-peptides/">qué más hay en el vial</a> recorre la aritmética.</p>
+
+        <h2>Conservación</h2>
+        <p>Cuatro residuos le dan poco material a las rutas de degradación corrientes, y la secuencia no lleva las dos que suelen dar problemas. La hidrólisis del esqueleto sigue aplicando, y avanza con el tiempo y la temperatura como todo lo demás. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a></p>
+        <p>El sólido seco es higroscópico en cuanto se abre un vial, algo cierto del material liofilizado en general. Un certificado lleva fecha porque un resultado pertenece a un momento, y lo que pasa después es manejo. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre las rutas.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es el epitalón?",
+          "a": "El tetrapéptido Ala-Glu-Asp-Gly, escrito AEDG, formado por cuatro aminoácidos estándar sin modificaciones en ninguno de los dos extremos."
+        },
+        {
+          "q": "¿Cuál es la fórmula y la masa del epitalón?",
+          "a": "C14H22N4O9, 390,35 g/mol, CAS 307297-39-8. Una calculadora de secuencia y el registro de PubChem coinciden en las dos cifras, que son dos confirmaciones independientes."
+        },
+        {
+          "q": "¿Puedo verificar el epitalón yo mismo antes de comprar?",
+          "a": "Sí, de tres formas que no involucran al vendedor: calcular la fórmula desde AEDG, buscar el número CAS y comparar, y pasar el dígito de control a ese número."
+        },
+        {
+          "q": "¿Por qué no llama la atención una pureza alta en el epitalón?",
+          "a": "Tres acoplamientos componen la síntesis entera, y los cuatro residuos son estándar. Un tetrapéptido es más o menos lo más fácil que da esta química, así que un 99 % aquí representa mucho menos trabajo que en una cadena larga."
+        },
+        {
+          "q": "¿Qué rutas de degradación evita esta secuencia?",
+          "a": "No tiene metionina ni cisteína, así que no hay azufre que oxidar, ni asparagina ni glutamina, los residuos más propensos a desamidarse. Sí lleva aspartato, que puede isomerizarse."
+        },
+        {
+          "q": "¿Qué tan sólida es la literatura publicada sobre el epitalón?",
+          "a": "Más delgada y concentrada en un conjunto menor de grupos que la de compuestos como las incretinas o los péptidos de cobre, con revisiones recientes. La química está asentada; la biología no, y por eso esta página declara la química y se detiene."
+        }
+      ],
+      cta: 'Éste es un compuesto que puedes verificar sin nosotros. <a href="tools/peptide-molecular-weight/">Calcúlalo desde la secuencia</a> y compara el certificado.',
+    },
+
+    'what-is-kisspeptin-10': {
+      title: 'Kisspeptina-10: nombrada por un gen supresor de tumores',
+      metaTitle: 'Qué es la kisspeptina-10: origen, estructura y verificación',
+      metaDescription: 'La kisspeptina-10 es un decapéptido amidado del producto del gen KiSS-1, ligando de GPR54. Su fórmula, su masa y por qué la amidación no la ve una calculadora.',
+      category: 'Investigación con péptidos',
+      date: '02 oct 2026',
+      excerpt: 'Un péptido del eje reproductivo que llegó desde la investigación del cáncer, y una modificación que no se ve.',
+      imageAlt: 'Un decapéptido amidado, ligando de GPR54, y cómo se verifica su masa.',
+      body: `
+        <p class="lead">La kisspeptina se encontró dos veces, en dos campos sin relación, antes de que nadie conectara los hallazgos. El nombre viene del primero y el uso viene del segundo, que es un buen recordatorio de que el nombre de un compuesto codifica su historia y no su función.</p>
+
+        <h2>De dónde viene el nombre</h2>
+        <p>El KiSS-1 se identificó como un gen supresor de metástasis. Más tarde se demostró que los péptidos en los que se corta su producto son los ligandos naturales de GPR54, por entonces un receptor huérfano acoplado a proteína G. <a class="cite" href="https://doi.org/10.1074/jbc.m104847200" target="_blank" rel="noopener nofollow">(Ref.: Kotani et al., 2001)</a> Ese hallazgo unió dos literaturas separadas.</p>
+        <p>El trabajo posterior situó el sistema kisspeptina-GPR54 en el control neuroendocrino de la reproducción, donde hoy se describe como regulador corriente arriba del eje. <a class="cite" href="https://doi.org/10.1530/rep.1.00368" target="_blank" rel="noopener nofollow">(Ref.: Smith et al., 2006)</a> Después llegaron las revisiones sobre su papel en el eje humano. <a class="cite" href="https://doi.org/10.1159/000312689" target="_blank" rel="noopener nofollow">(Ref.: Silveira et al., 2010)</a></p>
+
+        <h2>Por qué el número 10</h2>
+        <p>El producto del gen se procesa en péptidos de varias longitudes que comparten una región C-terminal. La kisspeptina-10 es el más corto, diez residuos, y es el fragmento que lleva la parte que lee el receptor.</p>
+        <p>La familia funciona entonces como los fragmentos de GHRH: una cadena más corta que conserva el extremo activo. La consecuencia práctica es idéntica, y es que «kisspeptina» en una etiqueta no dice qué longitud hay en el vial, y solo una masa lo resuelve.</p>
+
+        <h2>La modificación que no se ve en la secuencia</h2>
+        <p>La secuencia es YNWNSFGLRF, y el extremo C está amidado. Ese último detalle es el interesante para quien comprueba un certificado.</p>
+        <p>Mete YNWNSFGLRF en nuestra <a href="tools/peptide-molecular-weight/">calculadora de peso molecular</a> y devuelve C<sub>63</sub>H<sub>82</sub>N<sub>16</sub>O<sub>15</sub> a 1303,45 g/mol. La cifra del catálogo es C<sub>63</sub>H<sub>83</sub>N<sub>17</sub>O<sub>14</sub> a 1302,4, y el registro de PubChem coincide con el catálogo. Esos dos resultados se diferencian en alrededor de un dalton y en un átomo de oxígeno, uno de nitrógeno y uno de hidrógeno, que es exactamente lo que hace la amidación: sustituye el OH terminal por NH<sub>2</sub>.</p>
+        <p>Ninguna de las dos cifras está mal. La calculadora informa el ácido libre porque una secuencia de letras no contiene información sobre modificaciones de los extremos, un límite que comparte con toda calculadora de secuencia. Saberlo es lo que impide que una diferencia de un dalton parezca una discrepancia, y es por lo que un certificado debería decir qué especie midió.</p>
+
+        <h2>Por qué la lección del dalton se generaliza</h2>
+        <p>Las modificaciones de los extremos son frecuentes en péptidos hechos para investigación, y ninguna aparece en una secuencia de letras. Amidación en el extremo C, acetilación en el N, un enlace que cierra un ciclo, un metal unido: cada una cambia la masa y cada una es invisible para cualquier cosa que trabaje solo con letras.</p>
+        <p>La regla práctica que sale de ahí es corta. Cuando una masa calculada y un certificado discrepan en poco, busca una modificación antes de concluir nada sobre el lote. Cuando discrepan en mucho, la pregunta es otra. Nuestra nota sobre <a href="article/molecular-weight-of-peptides/">masa media frente a monoisotópica</a> cubre la otra fuente habitual de discrepancia aparente.</p>
+
+        <h2>La identidad sobre el papel</h2>
+        <p>La kisspeptina-10 es C<sub>63</sub>H<sub>83</sub>N<sub>17</sub>O<sub>14</sub>, 1302,4 g/mol, CAS 374675-21-5. El número pasa el dígito de control, que puedes confirmar con nuestro <a href="tools/cas-number-check/">validador</a>, y resuelve en PubChem a un registro con fórmula coincidente. Los dos pasos, porque la aritmética nunca ve el nombre del compuesto.</p>
+        <p>La secuencia contiene triptófano y dos fenilalaninas, lo que conviene anotar por un motivo práctico: el triptófano absorbe fuerte a 280 nm, así que este péptido es visible a una longitud de onda donde muchos no lo son. Casi toda la cromatografía de péptidos corre a 214 nm, donde absorbe el propio enlace peptídico. Nuestra nota sobre <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> cubre por qué la longitud de onda de detección pertenece al lado de una cifra de pureza.</p>
+
+        <h2>Qué debe mostrar un certificado</h2>
+        <p>Qué longitud y qué extremo. Un documento de este compuesto debería declarar la secuencia de diez residuos y decir que el extremo C está amidado, porque sin eso la masa teórica que informe no se puede contrastar con nada.</p>
+        <p>Después lo de siempre: pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con condiciones, identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a> con masa observada y teórica, contenido neto de péptido declarado aparte de la pureza.</p>
+        <p>Una impureza es propia de los péptidos amidados y merece preguntarse: una amidación incompleta deja ácido libre en el lote, que se diferencia del objetivo en un dalton. En una molécula de 1300 dalton eso es resoluble, pero solo si alguien lo buscó.</p>
+
+        <h2>Diez residuos, nueve acoplamientos</h2>
+        <p>Lo bastante corto como para que la <a href="article/peptide-synthesis/">síntesis</a> sea directa y las secuencias de deleción sean menos problema que en una cadena larga. Eso no vuelve trivial el compuesto, porque la amidación es un paso aparte y la lista de residuos incluye uno que se queja. El triptófano es el más propenso a dar guerra, ya que su anillo indol es sensible a las condiciones ácidas de la escisión y la desprotección, así que una traza de triptófano modificado es una impureza plausible aquí de un modo que no lo sería en una secuencia sin él.</p>
+
+        <h2>Conservación</h2>
+        <p>Las rutas habituales aplican y avanzan con el tiempo y la temperatura. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Esta secuencia tiene dos asparaginas, el residuo más propenso a desamidarse, y la desamidación convierte una amida en un ácido con un cambio de masa de alrededor de un dalton. Es el mismo tamaño que la diferencia de la amidación, lo cual es una buena razón para que un certificado declare qué midió y cuándo.</p>
+        <p>Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> expone la química. La fecha del documento es lo que te permite situar un resultado en la vida del material.</p>
+
+        <h2>Solo para uso en investigación</h2>
+        <p>Todos los productos que vende Codex Research son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal, y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
+      `,
+      faq: [
+        {
+          "q": "¿Qué es la kisspeptina-10?",
+          "a": "Un péptido amidado de diez residuos, secuencia YNWNSFGLRF, derivado del producto del gen KiSS-1. Las kisspeptinas se identificaron como los ligandos naturales del receptor GPR54."
+        },
+        {
+          "q": "¿Por qué se llama kisspeptina?",
+          "a": "El KiSS-1 se identificó como un gen supresor de metástasis, y más tarde se demostró que los péptidos en los que se corta su producto son los ligandos de GPR54. El nombre viene de la literatura del cáncer; el uso, de la neuroendocrinología reproductiva."
+        },
+        {
+          "q": "¿Por qué una calculadora da otra masa que el catálogo?",
+          "a": "La calculadora devuelve el ácido libre, C63H82N16O15 a 1303,45, porque una secuencia de letras no lleva información sobre modificaciones de los extremos. La forma amidada es C63H83N17O14 a 1302,4, que es lo que informan el catálogo y PubChem."
+        },
+        {
+          "q": "¿Qué cambia la amidación?",
+          "a": "Sustituye el OH terminal por NH2, quitando un oxígeno y añadiendo un nitrógeno y un hidrógeno. La diferencia de masa es de alrededor de un dalton, suficiente para parecer una discrepancia si no sabes que está ahí."
+        },
+        {
+          "q": "¿Qué impureza es propia de los péptidos amidados?",
+          "a": "La amidación incompleta, que deja ácido libre en el lote y se diferencia del objetivo en un dalton. En una molécula de 1300 dalton eso es resoluble, siempre que alguien lo haya buscado."
+        },
+        {
+          "q": "¿Por qué importa el triptófano?",
+          "a": "Por dos motivos. Absorbe fuerte a 280 nm, así que este péptido es visible a una longitud de onda donde muchos no lo son, y su anillo indol es sensible a las condiciones ácidas de la escisión, lo que vuelve plausible una impureza de triptófano modificado."
+        }
+      ],
+      cta: 'Pregunta si el certificado declara la amidación. <a href="verify/">Comprueba un número de lote</a>.',
     },
   };
 
