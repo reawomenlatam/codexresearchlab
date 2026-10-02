@@ -16,6 +16,7 @@
   const ACC = window.REAAccount || {
     isIn: () => false, token: () => '', authHeaders: () => ({}), get: () => null,
     open: () => {}, require: (fn) => { fn(); return true; },
+    approved: () => true, showStatus: () => {},
   };
 
   const money = (n) => '$' + n.toFixed(2);
@@ -75,7 +76,6 @@
     let discount = 0;
     // Los descuentos NO se combinan: mientras la rebaja general esté activa,
     // los precios ya vienen rebajados y un código no aplica nada encima.
-    // El código sigue siendo válido para atribuir la venta al influencer.
     if (c && c.type === 'percent' && !SALE.active) discount = subtotal * (c.value / 100);
     const freeByThreshold = subtotal >= ship.freeThreshold;
     const freeByCoupon = !!(c && c.type === 'freeship');
@@ -209,7 +209,9 @@
           <span>${T('I confirm I am 21 or older and that I am purchasing these products for laboratory research use only. They are not for human or animal consumption.')} <a href="usage/" target="_blank" rel="noopener">${T('Read the usage notice')}</a></span>
         </label>
 
-        ${ACC.isIn() ? '' : `<p class="co-acc-hint">${T('Completing the order needs a researcher account. It takes a minute and happens right here, without leaving this page.')}</p>`}
+        ${!ACC.isIn()
+          ? `<p class="co-acc-hint">${T('Completing the order needs an approved researcher account. Codex Research sells only to research institutions and laboratories.')}</p>`
+          : (ACC.approved() ? '' : `<p class="co-acc-hint">${T('Orders need an approved researcher account. Yours is under review.')}</p>`)}
         <p class="co-msg" id="coMsg" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary sum-checkout" id="coSubmit">${c.icon}${c.btn}</button>
         <p class="sum-note" id="coNote">${c.note}</p>
@@ -514,7 +516,7 @@
     });
   };
 
-  // Registra el uso de un código (para el panel de influencers). Fire-and-forget:
+  // Registra el uso de un código (para el panel de cupones). Fire-and-forget:
   // no bloquea ni afecta al cliente aunque el contador esté caído.
   const TRACK_URL = 'https://hooks.codexresearchlab.com/track.php';
 
@@ -668,7 +670,9 @@
 
   async function placeOrder() {
     if (placing) return;
-    if (!ACC.isIn()) { ACC.require(() => placeOrder()); return; }
+    // Sin cuenta aprobada no se arma ni se guarda el pedido: require() pide
+    // entrar, o enseña que la cuenta sigue en revisión.
+    if (!ACC.isIn() || !ACC.approved()) { ACC.require(() => placeOrder()); return; }
     const s = compute();
     const msg = document.getElementById('coMsg');
     const btn = document.getElementById('coSubmit');
@@ -747,6 +751,14 @@
           ACC.require(() => placeOrder());
           return;
         }
+        // La revisaron entre medio (o la rechazaron): se refresca y se enseña.
+        if (b.error === 'cuenta_en_revision' || b.error === 'cuenta_rechazada') {
+          placing = false;
+          if (btn) { btn.disabled = false; btn.textContent = T('Pay by card'); }
+          if (ACC.refresh) await ACC.refresh();
+          ACC.showStatus();
+          return;
+        }
         if (!b.ok || !b.url) throw new Error(b.error || 'session_failed');
         // El servidor manda sobre el precio: si no coincide con lo que ve el
         // cliente, no se le manda a pagar un importe distinto al mostrado.
@@ -788,6 +800,12 @@
           if (ACC.expire) ACC.expire();
           restore();
           ACC.require(() => placeOrder());
+          return;
+        }
+        if (q.error === 'cuenta_en_revision' || q.error === 'cuenta_rechazada') {
+          restore();
+          if (ACC.refresh) await ACC.refresh();
+          ACC.showStatus();
           return;
         }
         if (!q.ok) throw new Error(q.error || 'quote_failed');

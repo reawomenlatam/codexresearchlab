@@ -426,7 +426,7 @@
       cta: 'Mira los <a href="catalog/">péptidos de investigación</a> verificados por HPLC con pureza superior al 98 por ciento.',
     },
 
-    'bacteriostatic-water-for-peptide-reconstitution': {
+    'bacteriostatic-water-usp-specification': {
       title: 'Agua bacteriostática: qué especifica la etiqueta',
       metaTitle: 'Agua bacteriostática: alcohol bencílico, pH y la norma USP',
       metaDescription: 'Qué contiene el agua bacteriostática: 0,9 por ciento de alcohol bencílico, pH 5,7, estéril y apirógena, y por qué el conservante no es un ingrediente inerte.',
@@ -841,7 +841,7 @@
       date: '03 ago 2025',
       excerpt: 'Por qué los péptidos se liofilizan para conservar su estructura y su estabilidad durante el almacenamiento.',
       imageAlt: 'Proceso de liofilización retirando agua de muestras de péptido congeladas',
-      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-for-peptide-reconstitution'],
+      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-usp-specification'],
       body: `
         <p class="lead">La liofilización, también llamada secado por congelación, es un proceso de deshidratación que retira el agua de una muestra congelada por sublimación a presión reducida. Conserva compuestos sensibles como péptidos, proteínas y vacunas manteniendo su estructura y su estabilidad para el almacenamiento prolongado.</p>
 
@@ -889,7 +889,7 @@
         <p>Esa frase es una designación de forma farmacéutica del etiquetado regulatorio. Identifica un medicamento estéril autorizado, fabricado y liberado bajo un registro sanitario, y arrastra un conjunto de obligaciones legales que no tienen nada que ver con el método de secado. Un compuesto de investigación suministrado liofilizado no es eso, por mucho que se parezca en el vial. Los dos comparten un estado físico y nada más, y conviene no confundirlos al comparar descripciones de catálogo.</p>
 
         <h2>Por qué los péptidos de investigación se suministran así</h2>
-        <p>Porque el estado seco es el estable. Los péptidos en disolución tienen una vida útil marcadamente más corta que el mismo material liofilizado, porque las vías de degradación que más pesan, la hidrólisis del esqueleto y la desamidación de cadenas laterales, necesitan agua para avanzar.${cite('Referencia: Shi y McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} El secado por congelación también hace que cantidades pequeñas sean prácticas de pesar, enviar a temperatura ambiente y guardar, y permite presentar el material como una masa definida en un vial sellado. Lo que viene después, disolver ese sólido en un volumen medido de disolvente para obtener una disolución de concentración conocida, se cubre aparte en nuestra nota sobre <a href="article/bacteriostatic-water-for-peptide-reconstitution/">reconstituir péptidos liofilizados</a>.</p>
+        <p>Porque el estado seco es el estable. Los péptidos en disolución tienen una vida útil marcadamente más corta que el mismo material liofilizado, porque las vías de degradación que más pesan, la hidrólisis del esqueleto y la desamidación de cadenas laterales, necesitan agua para avanzar.${cite('Referencia: Shi y McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} El secado por congelación también hace que cantidades pequeñas sean prácticas de pesar, enviar a temperatura ambiente y guardar, y permite presentar el material como una masa definida en un vial sellado. Lo que viene después, disolver ese sólido en un volumen medido de disolvente para obtener una disolución de concentración conocida, se cubre aparte en nuestra nota sobre <a href="article/bacteriostatic-water-usp-specification/">reconstituir péptidos liofilizados</a>.</p>
       `,
       faq: [
         { q: '¿Para qué se usa la liofilización?', a: 'La liofilización se usa para conservar compuestos que son inestables en forma líquida, como péptidos, proteínas y vacunas, retirando el agua sin alterar su estructura.' },
@@ -1772,7 +1772,7 @@
         <p>Un vial seco y bien sellado es genuinamente robusto y tolera un viaje razonable. Lo que tolera peor es calentarse y enfriarse repetidamente en aire húmedo con un sello que no es el que debería. Es una propiedad del material y no una afirmación sobre la logística de nadie: la química de arriba no distingue quién movió la caja, solo qué le pasó a la caja.</p>
 
         <h2>En disolución el reloj se acelera</h2>
-        <p>Disolver el material devuelve todo lo que el secado quitó. Una degradación que tardaba meses en el estado seco puede tardar días. El pH de la disolución influye directamente, porque las velocidades de desamidación dependen de él, y eso es parte de por qué el <a href="article/bacteriostatic-water-for-peptide-reconstitution/">agua bacteriostática</a> se sitúa donde se sitúa en la escala de pH.</p>
+        <p>Disolver el material devuelve todo lo que el secado quitó. Una degradación que tardaba meses en el estado seco puede tardar días. El pH de la disolución influye directamente, porque las velocidades de desamidación dependen de él, y eso es parte de por qué el <a href="article/bacteriostatic-water-usp-specification/">agua bacteriostática</a> se sitúa donde se sitúa en la escala de pH.</p>
         <p>Una disolución es además un envase que se ha abierto, así que la refrigeración y la protección de la luz dejan de ser opcionales. Anotar la fecha no es pulcritud: es la única forma de saber después con qué se está trabajando.</p>
         <p>Una cosa más conviene decirla con claridad, porque provoca alarmas innecesarias: a las masas que se suelen despachar, el material seco puede ser una película fina, unas escamas en el vidrio, o no ser visible en absoluto. Un vial que parece vacío normalmente no ha perdido nada. La apariencia es una propiedad de cómo salió el secado y de si había un <a href="article/excipients-in-peptides/">agente de relleno</a>, no una medida del contenido.</p>
 
@@ -1844,7 +1844,7 @@
 
         <h2>Evitarla es más fácil que quitarla</h2>
         <p>Retirar endotoxina de una preparación terminada es difícil, porque la molécula se pega a las superficies y no se parece a nada que una purificación de péptidos esté diseñada para separar. Controlarla aguas arriba es la vía práctica: agua libre de endotoxina, material de vidrio limpio, y un manejo que no introduzca bacterias de entrada.</p>
-        <p>La misma lógica aplica después de que el vial salga del proveedor. Un lote medido como bajo en el punto de fabricación puede recoger contaminación del agua con que se disuelva, que es una razón más para prestar atención a la calidad de ese agua. Nuestra nota sobre el <a href="article/bacteriostatic-water-for-peptide-reconstitution/">agua bacteriostática</a> cubre qué contiene el fluido.</p>
+        <p>La misma lógica aplica después de que el vial salga del proveedor. Un lote medido como bajo en el punto de fabricación puede recoger contaminación del agua con que se disuelva, que es una razón más para prestar atención a la calidad de ese agua. Nuestra nota sobre el <a href="article/bacteriostatic-water-usp-specification/">agua bacteriostática</a> cubre qué contiene el fluido.</p>
 
         <h2>Cuándo importa y cuándo no</h2>
         <p>La respuesta depende por completo del experimento. El trabajo con células cultivadas, y en particular con células inmunitarias, es el caso clásico: esas células responden a la endotoxina, así que un reactivo contaminado produce una respuesta que parece un efecto del compuesto en estudio. Un resultado aparente puede ser un artefacto del vial y no de la molécula.</p>

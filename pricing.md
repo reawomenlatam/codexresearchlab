@@ -164,7 +164,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - URL: https://codexresearchlab.com/product/tb-500/
 - CAS number: N/A
 - Purity: 99% (HPLC), certificate of analysis per batch
-- Availability: Out of stock
+- Availability: In stock
 - Single vial: $119.00 USD
 - Pack · 3 vials: $328.44 USD (8% off)
 

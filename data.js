@@ -217,7 +217,7 @@ const PRODUCTS = [
   {
     slug: 'tb-500', name: 'TB-500', cas: 'N/A', tag: 'Research use only',
     mg: '10 mg', from: 119, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
-    photo: 'assets/products/tb-500.jpg', outOfStock: true,
+    photo: 'assets/products/tb-500.jpg',
     photo2: 'assets/products/tb-500-2.jpg',
     sizes: [
       { label: 'Single vial', price: 119 },
@@ -267,28 +267,28 @@ const PRODUCTS = [
     research: ['KISS1R signaling', 'GnRH regulation', 'Neuroendocrine models'],
   },
   {
-    slug: 'bac-water', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Reconstitution supply · 3 ml',
+    slug: 'bac-water', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Laboratory diluent · 3 ml',
     mg: '3 ml', from: 10, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water.jpg',
     sizes: [
       { label: 'Single vial', price: 10 },
       { label: 'Pack · 3 vials', price: 27.60, save: '8%' },
     ],
-    overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique.',
-    overviewEs: 'El agua bacteriostática (agua estéril con alcohol bencílico al 0,9% como conservante) se usa para reconstituir péptidos liofilizados, permitiendo varias extracciones de un mismo vial a lo largo del tiempo con técnica aséptica.',
-    research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
+    overview: 'Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions.',
+    overviewEs: 'El agua bacteriostática es agua estéril y apirógena con alcohol bencílico al 0,9% como conservante, según la especificación USP. Se suministra como diluyente general de laboratorio; la etiqueta indica su composición, pH y condiciones de almacenamiento.',
+    research: ['Sterile diluent', '0.9% benzyl alcohol', 'USP specification'],
   },
   {
-    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Reconstitution supply · 10 ml',
+    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Laboratory diluent · 10 ml',
     mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water-10ml.jpg',
     sizes: [
       { label: 'Single vial', price: 17 },
       { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
     ],
-    overview: 'Bacteriostatic water (sterile water with 0.9% benzyl alcohol as a preservative) is used to reconstitute lyophilized peptides, allowing multiple draws from a single vial over time using aseptic technique. This 10 ml presentation is a larger multi-dose bottle.',
-    overviewEs: 'El agua bacteriostática (agua estéril con alcohol bencílico al 0,9% como conservante) se usa para reconstituir péptidos liofilizados, permitiendo varias extracciones de un mismo vial a lo largo del tiempo con técnica aséptica. Esta presentación de 10 ml es un frasco multidosis más grande.',
-    research: ['Sterile diluent', '0.9% benzyl alcohol', 'Multi-dose reconstitution'],
+    overview: 'Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This 10 ml presentation is a larger multi-dose bottle.',
+    overviewEs: 'El agua bacteriostática es agua estéril y apirógena con alcohol bencílico al 0,9% como conservante, según la especificación USP. Se suministra como diluyente general de laboratorio; la etiqueta indica su composición, pH y condiciones de almacenamiento. Esta presentación de 10 ml es un frasco multidosis más grande.',
+    research: ['Sterile diluent', '0.9% benzyl alcohol', 'USP specification'],
   },
 ];
 
@@ -297,9 +297,10 @@ const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request, before you order if you want to see it first.' },
   { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
+  { q: 'Who can buy from Codex Research?', a: 'Only researchers buying for a research institution or laboratory: universities, hospitals and clinical research centers, private labs, biotech and pharmaceutical companies, and CROs. To order you open an account that names your institution, your role and your research area. Every account is reviewed by hand before it can place an order, and we may ask for an institutional email or proof of affiliation. We do not sell for personal use.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
   { q: 'What payment methods do you accept?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site.' },
-  { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) after reconstitution. Every vial label shows its storage conditions.' },
+  { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) once in solution. Every vial label shows its storage conditions.' },
 ];
 
 // Mismo FAQ en español. Las dos listas tienen que decir lo mismo: el JSON-LD
@@ -308,9 +309,10 @@ const FAQS_ES = [
   { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. El número de lote de tu vial se puede comprobar en codexresearchlab.com/verify/, y el COA completo está disponible si lo pides, también antes de comprar.' },
   { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque sellado y protegido.' },
   { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
+  { q: '¿Quién puede comprar en Codex Research?', a: 'Solo investigadores que compran para una institución o laboratorio de investigación: universidades, hospitales y centros de investigación clínica, laboratorios privados, empresas biotecnológicas y farmacéuticas, y CRO. Para pedir se abre una cuenta que indica la institución, el cargo y el área de investigación. Cada cuenta se revisa a mano antes de poder hacer un pedido, y podemos pedir un correo institucional o una prueba de afiliación. No vendemos para uso personal.' },
   { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
   { q: '¿Qué métodos de pago aceptan?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). Pagas en nuestro propio checkout, tanto en Panamá como en Estados Unidos. Los datos de la tarjeta van directo a Stripe y nunca pasan por nuestro sitio.' },
-  { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez reconstituidos. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
+  { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez en disolución. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
 ];
 
 
@@ -325,8 +327,8 @@ const FAQS_ES = [
 // Con menos de 10 se muestra "Only N left" y la cantidad no puede pasar de
 // ahí. Con cero, el producto queda agotado para ese país.
 const STOCK_BY_COUNTRY = {
-  PA: { 'ahk-cu': 1, 'bac-water': 0, 'bac-water-10ml': 67, 'bpc-157': 6, 'ghk-cu': 23, 'ipamorelin': 17, 'mots-c': 13, 'nad-plus': 10, 'pt-141': 19, 'retatrutide': 35, 'tirzepatide': 10 },
-  US: { 'ahk-cu': 0, 'bac-water': 140, 'bac-water-10ml': 0, 'bpc-157': 20, 'ghk-cu': 30, 'ipamorelin': 0, 'mots-c': 30, 'nad-plus': 0, 'pt-141': 0, 'retatrutide': 80, 'tirzepatide': 0 },
+  PA: { 'ahk-cu': 1, 'bac-water': 0, 'bac-water-10ml': 67, 'bpc-157': 6, 'ghk-cu': 23, 'ipamorelin': 17, 'mots-c': 13, 'nad-plus': 10, 'pt-141': 19, 'retatrutide': 35, 'tb-500': 16, 'tirzepatide': 10 },
+  US: { 'ahk-cu': 0, 'bac-water': 140, 'bac-water-10ml': 0, 'bpc-157': 20, 'ghk-cu': 30, 'ipamorelin': 0, 'mots-c': 30, 'nad-plus': 0, 'pt-141': 0, 'retatrutide': 80, 'tb-500': 0, 'tirzepatide': 0 },
 };
 
 // Lo que el inventario todavía no controla sigue como antes, con 25: un
@@ -420,8 +422,6 @@ const COUNTRIES = {
 const COUPONS = {
   WELCOME10: { type: 'percent', value: 10, label: '10% off' },
   FREESHIP: { type: 'freeship', label: 'Free shipping' },
-  // Códigos de influencer (se rastrea su uso vía track.php). Agrega más aquí.
-  MORA10: { type: 'percent', value: 10, label: '10% off', influencer: 'andres mora' },
 };
 
 // Lotes válidos (/verify/). Clave = número de lote. Valor = datos del producto
@@ -505,7 +505,7 @@ function productFaq(p) {
          'vial\'s batch number can be checked at https://codexresearchlab.com/verify/.' },
     { q: `How is ${p.name} shipped and how long does delivery take?`, a: SHIPPING_LINE },
     { q: `How should ${p.name} be stored?`,
-      a: 'Lyophilized vials are kept cool and protected from light. Once reconstituted they are kept ' +
+      a: 'Lyophilized vials are kept cool and protected from light. Once in solution they are kept ' +
          'refrigerated at 2-8 degrees Celsius. Every vial label shows its storage conditions.' },
     { q: `Is ${p.name} intended for human use?`,
       a: `No. ${p.name} is sold strictly for laboratory research and development. It is not for human ` +
@@ -536,7 +536,7 @@ function productFaqEs(p) {
          'vial se puede comprobar en https://codexresearchlab.com/verify/.' },
     { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
     { q: `¿Cómo se debe almacenar ${p.name}?`,
-      a: 'Los viales liofilizados se mantienen frescos y protegidos de la luz. Una vez reconstituidos se ' +
+      a: 'Los viales liofilizados se mantienen frescos y protegidos de la luz. Una vez en disolución se ' +
          'guardan refrigerados entre 2 y 8 grados Celsius. La etiqueta de cada vial indica sus condiciones ' +
          'de almacenamiento.' },
     { q: `¿${p.name} es para uso humano?`,

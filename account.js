@@ -1,5 +1,9 @@
 /* Codex Research - cuentas de investigador.
-   Para comprar hay que tener cuenta y haber declarado 21+ y uso en laboratorio.
+   Para comprar hay que tener cuenta APROBADA. El alta pide la institución para la
+   que se compra (nombre, tipo, cargo, área de investigación) y la declaración de
+   21+ y uso en laboratorio; la cuenta nace pendiente y paga cuando alguien la
+   aprueba a mano en accounts.php. Es la medida que pidió Stripe el 2026-10-02:
+   que el producto no esté al alcance de quien no investiga.
    El catálogo y los precios siguen siendo públicos: el gate está en añadir al
    carrito y en pagar, que es donde importa y donde el servidor lo comprueba.
 
@@ -48,7 +52,23 @@
     credenciales_invalidas: 'Email or password is not correct.',
     demasiados_intentos: 'Too many attempts. Please wait a few minutes.',
     cuenta_requerida: 'Please create an account or sign in to continue.',
+    falta_institucion: 'Please enter the institution or company you are purchasing for.',
+    falta_tipo_institucion: 'Please choose the type of institution.',
+    falta_cargo: 'Please enter your role or position.',
+    falta_area: 'Please describe your research area in a sentence.',
+    web_invalida: 'Please check the website address.',
   };
+
+  // Las claves son las que acepta account.php (ACC_ORG_TYPES).
+  const ORG_TYPES = [
+    ['university', 'University or academic institute'],
+    ['hospital', 'Hospital or clinical research center'],
+    ['private_lab', 'Private research laboratory'],
+    ['biotech', 'Biotech or pharmaceutical company'],
+    ['cro', 'Contract research organization (CRO)'],
+    ['other', 'Other research organization'],
+  ];
+  const approved = () => !!(state && state.account && state.account.status === 'approved');
 
   /* ---------- Modal ---------- */
   let modal = null;
@@ -62,7 +82,7 @@
         <button class="acc-x" data-acc-close aria-label="${T('Close')}">✕</button>
         <h2 id="accTitle">${alta ? T('Create your researcher account') : T('Sign in')}</h2>
         <p class="acc-sub">${alta
-          ? T('Your research declaration is recorded once, and your details prefill at checkout from then on. Takes a minute.')
+          ? T('Codex Research sells only to research institutions and laboratories. Each new account is reviewed by hand before it can place an order.')
           : T('Welcome back. Sign in to continue with your order.')}</p>
         <form id="accForm" novalidate>
           ${alta ? `
@@ -74,8 +94,20 @@
             <input type="password" id="accPass" required minlength="8" maxlength="200"
                    autocomplete="${alta ? 'new-password' : 'current-password'}"></label>
           ${alta ? `
-          <label class="co-field"><span>${T('Organization or lab')} <em>${T('(optional)')}</em></span>
-            <input type="text" id="accOrg" maxlength="120" autocomplete="organization"></label>
+          <label class="co-field"><span>${T('Institution or company')}</span>
+            <input type="text" id="accOrg" required maxlength="120" autocomplete="organization"></label>
+          <label class="co-field"><span>${T('Type of institution')}</span>
+            <select id="accOrgType" required>
+              <option value="">${T('Choose one')}</option>
+              ${ORG_TYPES.map(([v, l]) => `<option value="${v}">${T(l)}</option>`).join('')}
+            </select></label>
+          <label class="co-field"><span>${T('Your role or position')}</span>
+            <input type="text" id="accRole" required maxlength="80" autocomplete="organization-title"></label>
+          <label class="co-field"><span>${T('Research area')}</span>
+            <textarea id="accArea" required maxlength="400" rows="3"
+                      placeholder="${T('e.g. peptide stability in solution, receptor binding assays')}"></textarea></label>
+          <label class="co-field"><span>${T('Institution website')} <em>${T('(optional)')}</em></span>
+            <input type="text" id="accWeb" maxlength="200" inputmode="url" autocomplete="url"></label>
           <label class="co-ack">
             <input type="checkbox" id="accDecl" required>
             <span>${T('I confirm I am 21 or older and that I am purchasing these products for laboratory research use only. They are not for human or animal consumption.')}
@@ -117,6 +149,34 @@
     modal.querySelector('#accForm').addEventListener('submit', (e) => { e.preventDefault(); submit(mode || 'register'); });
   }
 
+  /* Pantalla de estado: la ve quien tiene cuenta pero aún no puede pagar. El
+     carrito se conserva; sólo falta la revisión. */
+  function showStatus() {
+    close();
+    const a = (state && state.account) || {};
+    const rechazada = a.status === 'rejected';
+    modal = document.createElement('div');
+    modal.className = 'acc-wrap';
+    modal.innerHTML = `
+      <div class="acc-backdrop" data-acc-close></div>
+      <div class="acc-modal" role="dialog" aria-modal="true" aria-labelledby="accTitle">
+        <button class="acc-x" data-acc-close aria-label="${T('Close')}">✕</button>
+        <h2 id="accTitle">${rechazada ? T('We can’t approve this account') : T('Your account is under review')}</h2>
+        <p class="acc-sub">${rechazada
+          ? T('Based on the details provided, this account can’t place orders. If you think this is a mistake, write to us from your institutional email.')
+          : T('Codex Research sells only to research institutions and laboratories, so every new account is reviewed by hand before it can place an order. Your cart is saved. If we need more details we’ll write to {email}.', { email: esc(a.email || '') })}</p>
+        <button type="button" class="btn btn-primary acc-submit" data-acc-close>${T('Close')}</button>
+        <p class="acc-switch"><button type="button" data-acc-logout>${T('Sign out')}</button></p>
+      </div>`;
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    modal.querySelectorAll('[data-acc-close]').forEach((el) => el.addEventListener('click', close));
+    modal.querySelector('[data-acc-logout]').addEventListener('click', () => { close(); logout(); });
+    document.addEventListener('keydown', onEsc);
+    const b = modal.querySelector('.acc-submit');
+    if (b) b.focus();
+  }
+
   function onEsc(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', onEsc); } }
 
   async function submit(mode) {
@@ -126,13 +186,20 @@
     const err = (t) => { if (msg) { msg.className = 'co-msg err'; msg.hidden = false; msg.textContent = t; } };
 
     const alta = mode === 'register';
-    if (alta && !document.getElementById('accDecl').checked) return err(T(ERRORS.falta_declaracion));
+    if (alta) {
+      if (val('accOrg').length < 2) return err(T(ERRORS.falta_institucion));
+      if (!val('accOrgType')) return err(T(ERRORS.falta_tipo_institucion));
+      if (val('accRole').length < 2) return err(T(ERRORS.falta_cargo));
+      if (val('accArea').length < 15) return err(T(ERRORS.falta_area));
+      if (!document.getElementById('accDecl').checked) return err(T(ERRORS.falta_declaracion));
+    }
 
     btn.disabled = true;
     btn.textContent = T('One moment…');
     const payload = alta
       ? { action: 'register', email: val('accEmail'), password: val('accPass'), name: val('accName'),
-          org: val('accOrg'), country: (window.REACountry && window.REACountry.config().code) || '',
+          org: val('accOrg'), org_type: val('accOrgType'), role: val('accRole'),
+          research_area: val('accArea'), website: val('accWeb'), country: (window.REACountry && window.REACountry.config().code) || '',
           declaration: true, source_url: location.href }
       : { action: 'login', email: val('accEmail'), password: val('accPass') };
 
@@ -159,15 +226,27 @@
     ultimoCorreo = (b.account && b.account.email) || ultimoCorreo;
     const seguir = pending;
     close();
+    // Una cuenta recién creada (o una que sigue en revisión) no sigue al pago:
+    // ve su estado. Lo que quería hacer se retoma cuando esté aprobada.
+    if (!approved()) { showStatus(); return; }
     if (seguir) seguir();
   }
 
   /* ---------- API pública ---------- */
   const isIn = () => !!(state && state.token);
 
-  // Pide cuenta antes de seguir. Si ya la hay, ejecuta y punto.
+  // Pide cuenta APROBADA antes de seguir. Si la cuenta existe pero no está
+  // aprobada, se pregunta al servidor por si la aprobaron desde la última vez.
   function require(fn) {
-    if (isIn()) { fn(); return true; }
+    if (isIn() && approved()) { fn(); return true; }
+    if (isIn()) {
+      refresh().then(() => {
+        if (approved()) fn();
+        else if (isIn()) showStatus();
+        else require(fn);                        // la sesión había muerto
+      });
+      return false;
+    }
     pending = fn;
     // Si ya había comprado aquí, lo suyo es entrar, no crear otra cuenta.
     open(ultimoCorreo ? 'login' : 'register');
@@ -199,6 +278,8 @@
 
   window.REAAccount = {
     isIn,
+    approved,
+    showStatus,
     expire,
     require,
     open,

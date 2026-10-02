@@ -206,7 +206,7 @@
           </ul>
 
           <div class="pd-note">
-            <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')}
+            <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')} ${T('Sold only to approved research accounts: each account is reviewed by hand before its first order.')}
           </div>
 
           <div class="pd-coa">

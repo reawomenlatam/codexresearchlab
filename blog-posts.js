@@ -52,7 +52,7 @@
 
         <h2>Keeping it out is easier than taking it out</h2>
         <p>Removing endotoxin from a finished preparation is difficult, because the molecule sticks to surfaces and resembles nothing that a peptide purification is designed to separate. Controlling it upstream is the practical route: endotoxin-free water, clean glassware, and handling that does not introduce bacteria in the first place.</p>
-        <p>The same logic applies after the vial leaves the supplier. A batch measured as low at the point of manufacture can pick up contamination from the water used to dissolve it, which is one more reason the quality of that water is worth attention. Our note on <a href="article/bacteriostatic-water-for-peptide-reconstitution/">bacteriostatic water</a> covers what the fluid contains.</p>
+        <p>The same logic applies after the vial leaves the supplier. A batch measured as low at the point of manufacture can pick up contamination from the water used to dissolve it, which is one more reason the quality of that water is worth attention. Our note on <a href="article/bacteriostatic-water-usp-specification/">bacteriostatic water</a> covers what the fluid contains.</p>
 
         <h2>When it matters and when it does not</h2>
         <p>The answer depends entirely on the experiment. Work with cultured cells, particularly immune cells, is the classic case: these cells respond to endotoxin, so a contaminated reagent produces a response that looks like an effect of the compound under study. An apparent result can be an artefact of the vial, not an effect of the molecule.</p>
@@ -261,7 +261,7 @@
         <p>Light drives oxidation, particularly of the aromatic residues. Amber vials and a closed box are enough; nothing elaborate is required. It is the variable most often ignored because its effect is invisible until an analysis reveals it.</p>
 
         <h2>Once it is in solution the clock speeds up</h2>
-        <p>Dissolving the material restores everything that drying removed. Degradation that took months in the dry state can take days. The pH of the solution matters directly, because deamidation rates depend on it, which is part of why <a href="article/bacteriostatic-water-for-peptide-reconstitution/">bacteriostatic water</a> sits where it does on the pH scale.</p>
+        <p>Dissolving the material restores everything that drying removed. Degradation that took months in the dry state can take days. The pH of the solution matters directly, because deamidation rates depend on it, which is part of why <a href="article/bacteriostatic-water-usp-specification/">bacteriostatic water</a> sits where it does on the pH scale.</p>
         <p>A solution is also a container that has been opened, so refrigeration and protection from light stop being optional. Labelling it with the date is not tidiness; it is the only way to know later what you are working with.</p>
 
         <h2>Habits that protect a batch</h2>
@@ -331,7 +331,7 @@
         }
       ],
       cta: 'Browse <a href="catalog/">research peptides</a> at Codex Research, each batch-verified with its certificate of analysis, or <a href="verify/">check a batch number</a>.',
-      related: ['lyophilization-freeze-drying', 'how-to-read-a-certificate-of-analysis', 'bacteriostatic-water-for-peptide-reconstitution'],
+      related: ['lyophilization-freeze-drying', 'how-to-read-a-certificate-of-analysis', 'bacteriostatic-water-usp-specification'],
     },
     {
       slug: 'cyclic-vs-linear-peptides',
@@ -1578,13 +1578,13 @@
       related: ['what-is-ghk-cu', 'amino-acids-peptides-proteins-difference', 'what-are-copper-peptides'],
     },
     {
-      slug: 'bacteriostatic-water-for-peptide-reconstitution',
+      slug: 'bacteriostatic-water-usp-specification',
       title: 'Bacteriostatic Water: What the Label Specifies',
       metaTitle: 'Bacteriostatic Water: Benzyl Alcohol, pH and the USP Spec',
       metaDescription: 'What bacteriostatic water contains: 0.9 percent benzyl alcohol, pH 5.7, sterile and nonpyrogenic, and why the preservative is not an inert ingredient.',
-      focusKeyword: 'bacteriostatic water for peptides',
+      focusKeyword: 'bacteriostatic water USP',
       category: 'Peptide Research',
-      tags: ['bacteriostatic water', 'reconstitution', 'diluent', 'research peptides'],
+      tags: ['bacteriostatic water', 'USP', 'diluent', 'research supplies'],
       date: 'Aug 03, 2026', dateISO: '2026-08-03',
       excerpt: 'What sets it apart from plain sterile water, and what the preservative does to molecules dissolved in it.',
       imageAlt: 'What the USP label specifies, and why the preservative is not inert.',
@@ -3027,7 +3027,7 @@
         <p>That phrase is a dosage-form designation from pharmaceutical labelling. It identifies a licensed, sterile drug product manufactured and released under a regulatory filing, and it carries a set of legal obligations that have nothing to do with the drying method itself. A research compound supplied lyophilized is not that, regardless of how it looks in the vial. The two share a physical state and nothing else, and the distinction is worth keeping straight when comparing catalogue descriptions.</p>
 
         <h2>Why research peptides are supplied this way</h2>
-        <p>Because the dry state is the stable one. Peptides in solution have a markedly shorter usable life than the same material as a lyophilizate, since the degradation routes that matter most, hydrolysis of the backbone and deamidation of side chains, need water to proceed.${cite('Reference: Shi and McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} Freeze-drying also makes small quantities practical to weigh, ship at ambient temperature and store, and it lets the material be presented as a defined mass in a sealed vial. What happens next, dissolving that solid in a measured volume of solvent to obtain a solution of known concentration, is covered separately in our note on <a href="article/bacteriostatic-water-for-peptide-reconstitution/">reconstituting lyophilized peptides</a>.</p>
+        <p>Because the dry state is the stable one. Peptides in solution have a markedly shorter usable life than the same material as a lyophilizate, since the degradation routes that matter most, hydrolysis of the backbone and deamidation of side chains, need water to proceed.${cite('Reference: Shi and McHugh, 2023', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/')} Freeze-drying also makes small quantities practical to weigh, ship at ambient temperature and store, and it lets the material be presented as a defined mass in a sealed vial. What happens next, dissolving that solid in a measured volume of solvent to obtain a solution of known concentration, is covered separately in our note on <a href="article/bacteriostatic-water-usp-specification/">reconstituting lyophilized peptides</a>.</p>
       `,
       faq: [
         { q: 'What is lyophilization used for?', a: 'Lyophilization is used to preserve compounds that are unstable in liquid form, such as peptides, proteins, and vaccines, by removing water while keeping their structure intact.' },
@@ -3048,7 +3048,7 @@
         { text: 'Shi M, McHugh KJ. Strategies for overcoming protein and peptide instability in biodegradable drug delivery systems. Advanced Drug Delivery Reviews, 2023;199:114904.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/' },
       ],
       cta: 'Our <a href="catalog/">research peptides</a> are supplied lyophilized for maximum stability and shelf life.',
-      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-for-peptide-reconstitution'],
+      related: ['excipients-in-peptides', 'high-performance-liquid-chromatography-hplc', 'peptide-synthesis', 'bacteriostatic-water-usp-specification'],
     },
 
     {

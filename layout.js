@@ -307,7 +307,9 @@
   if (accBtn) {
     accBtn.addEventListener('click', () => {
       if (!window.REAAccount) return;
-      if (window.REAAccount.isIn()) {
+      if (window.REAAccount.isIn() && window.REAAccount.approved && !window.REAAccount.approved()) {
+        window.REAAccount.showStatus();          // en revisión: estado + salir
+      } else if (window.REAAccount.isIn()) {
         if (confirm(T('Sign out of your account?'))) window.REAAccount.logout();
       } else {
         window.REAAccount.open('login');
