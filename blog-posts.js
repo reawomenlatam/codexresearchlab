@@ -47,7 +47,7 @@
 
 
         <h2>Why it survives so much</h2>
-        <p>The robustness has a structural explanation. Lipopolysaccharide is not a protein, so it has no folded structure to denature, and the bonds holding it together are the ordinary bonds of a lipid and a sugar chain. Heat that unfolds and destroys a protein leaves it largely intact, and it takes considerably harsher treatment, sustained dry heat rather than the usual sterilisation conditions, to break it down.</p>
+        <p>The robustness has a structural explanation. Lipopolysaccharide is not a protein, so it has no folded structure to denature, and the bonds holding it together are the ordinary bonds of a lipid and a sugar chain. Heat that unfolds and destroys a protein leaves it largely intact, and it takes considerably harsher treatment, sustained dry heat well beyond the usual sterilisation conditions, to break it down.</p>
         <p>It also aggregates in water, forming assemblies instead of dissolving as single molecules. That behaviour affects how readily it is removed by filtration and why a filter that retains bacteria does not reliably retain what they left behind.</p>
 
         <h2>Keeping it out is easier than taking it out</h2>
@@ -600,7 +600,7 @@
 
         <h2>What a CAS number does not establish</h2>
         <p>It says a substance with that identity has been registered. It says nothing about the vial: not the purity, not whether the material is that substance, not which batch it came from.</p>
-        <p>Those questions are answered by measurement. A purity figure from <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity result from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> tied to a batch number you can <a href="verify/">check</a>, are what connect a registry entry to the powder in front of you.</p>
+        <p>Those questions are answered by measurement. A purity figure from <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity result from <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> whose batch number matches your vial and which you can <a href="verify/">look up</a>, are what connect a registry entry to the powder in front of you.</p>
       `,
       faq: [
         {
@@ -673,7 +673,7 @@
         <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, and separately that it is pure.</p>
 
         <h2>Analysis date and methods</h2>
-        <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced rather than asking you to take them on faith.</p>
+        <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced instead of asking you to take them on faith.</p>
 
         <h2>Putting it together</h2>
         <p>Read as a whole, a good COA answers three questions: which batch is this, how pure is it, and is it the right molecule. If a document only answers one of those, it is incomplete. At Codex Research the full COA is available on request before you pay, and any vial can be checked by its batch number.</p>
@@ -703,7 +703,7 @@
         <p>HPLC separates and quantifies; it does not name. Two different compounds can elute at a similar time under the same conditions, and a UV detector reports both as peaks without opinion. Mass spectrometry answers what chromatography leaves open by measuring mass directly, so the observed value can be compared with the mass calculated from the sequence, and tandem approaches fragment the molecule to support the sequence itself. That is why purity without an identity method is half a document.</p>
 
         <h2>Who signs it, and why that matters</h2>
-        <p>A certificate is a claim by whoever issued it, so independent testing matters because it separates the party making the claim from the party selling the material. Laboratories working to a recognised competence standard are assessed against defined criteria for competence and impartiality, and accreditation covers a specific list of methods rather than testing in general. The useful question is who produced the number, and under which method.</p>
+        <p>A certificate is a claim by whoever issued it, so independent testing matters because it separates the party making the claim from the party selling the material. Laboratories working to a recognised competence standard are assessed against defined criteria for competence and impartiality, and accreditation covers a specific list of methods, not testing in general. The useful question is who produced the number, and under which method.</p>
 
         <h2>Red flags on a certificate</h2>
         <ul>
@@ -890,7 +890,7 @@
         <p>The same caution applies to the word potent. Potency and selectivity are separate measurements, and a compound can be strong at a receptor while being poor at telling that receptor apart from its neighbours.</p>
 
         <h2>What none of this tells you about a vial</h2>
-        <p>Receptor pharmacology describes a molecule. It says nothing about the material in front of you: whether this batch contains that molecule, and how much of it does. Those come from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> tied to a batch you can <a href="verify/">check</a>.</p>
+        <p>Receptor pharmacology describes a molecule. It says nothing about the material in front of you: whether this batch contains that molecule, and how much of it does. Those come from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> bearing the batch number on your label, which you can <a href="verify/">look up</a>.</p>
 
         <h2>Research use only</h2>
         <p>This article is background pharmacology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -964,7 +964,7 @@
         <p>An agonist binds and activates. But activation is not all-or-nothing.</p>
         <ul>
           <li><b>A full agonist</b> produces the maximum response the system can give.</li>
-          <li><b>A partial agonist</b> produces a submaximal response even when every receptor is occupied. Adding more does not close the gap, because the ceiling is a property of the compound rather than of the dose.</li>
+          <li><b>A partial agonist</b> produces a submaximal response even when every receptor is occupied. Adding more does not close the gap, because the ceiling belongs to the compound and not to the dose.</li>
         </ul>
         <p>A partial agonist in the presence of a full one therefore behaves partly like a blocker, since it occupies sites that would otherwise give a full response. The categories are not as clean as the vocabulary suggests.</p>
 
@@ -982,7 +982,7 @@
         <p>The practical consequence is historical as much as technical. Compounds catalogued as neutral antagonists before constitutive activity was widely recognised were later re-examined, and a number of them turned out to be inverse agonists. The classification depends on what the assay was able to see.</p>
 
         <h2>Two agonists at one receptor are not necessarily equivalent</h2>
-        <p>A receptor usually has more than one downstream route available. A compound can engage a receptor and favour one of those routes over another, so two agonists at the same target can produce different patterns of activity rather than more or less of the same thing. This is called biased agonism or functional selectivity. <a class="cite" href="https://doi.org/10.1124/jpet.110.173948" target="_blank" rel="noopener nofollow">(Reference: Kenakin, 2011)</a></p>
+        <p>A receptor usually has more than one downstream route available. A compound can engage a receptor and favour one of those routes over another, so two agonists at the same target can produce different patterns of activity instead of more or less of the same thing. This is called biased agonism or functional selectivity. <a class="cite" href="https://doi.org/10.1124/jpet.110.173948" target="_blank" rel="noopener nofollow">(Reference: Kenakin, 2011)</a></p>
         <p>It is not an exotic edge case. <a href="article/what-is-tirzepatide/">Tirzepatide</a> has been characterised in exactly those terms: it engages two receptors, and it engages them unevenly. Calling it a dual agonist is accurate and tells you nothing about the balance.</p>
 
 
@@ -1098,7 +1098,7 @@
 
         <h2>What the label says about a vial</h2>
         <p>Nothing. It places a molecule in a category based on published work about its target. The category is drawn from published pharmacology, not from anything measured in the vial. Whether a batch contains that molecule, and what share of the powder it represents, comes from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>.</p>
-        <p>For short peptides in this class the identity question carries a specific wrinkle: several contain D-configured residues, and a D residue has exactly the same mass as its L counterpart. Mass alone cannot catch that substitution, which is one more reason purity and identity are reported together on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> tied to a batch you can <a href="verify/">check</a>.</p>
+        <p>For short peptides in this class the identity question carries a specific wrinkle: several contain D-configured residues, and a D residue has exactly the same mass as its L counterpart. Mass alone cannot catch that substitution, which is one more reason purity and identity are reported together on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> that names your batch, and you can <a href="verify/">look that number up</a>.</p>
 
         <p>Where a specification names a D residue explicitly, it is naming something the supplier has to have controlled during synthesis, since the correct isomer has to be used at that position in the first place.</p>
 
@@ -1200,7 +1200,7 @@
         <p>A compound can engage two receptors unevenly, and it can favour one downstream route over another at the same receptor. One dual agonist has been characterised in exactly those terms. <a class="cite" href="https://doi.org/10.1172/jci.insight.140532" target="_blank" rel="noopener nofollow">(Reference: Willard et al., 2020)</a> The vocabulary for this sits in our note on <a href="article/agonist-vs-antagonist/">agonists and antagonists</a>, and the short version is that "dual" is a label, not a measurement.</p>
 
         <h2>What the comparison does not settle</h2>
-        <p>Knowing how the two hormones differ tells you what a compound is designed to do. It tells you nothing about the material in a vial. Whether a given batch contains the intended molecule, and how much of it is that molecule, comes from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, reported on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> tied to a batch you can <a href="verify/">check</a>.</p>
+        <p>Knowing how the two hormones differ tells you what a compound is designed to do. It tells you nothing about the material in a vial. Whether a given batch contains the intended molecule, and how much of it is that molecule, comes from a purity measurement by <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> and an identity measurement by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>, both printed on a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> under the batch number you can <a href="verify/">look up</a>.</p>
 
         <h2>Research use only</h2>
         <p>This article is background biology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1593,7 +1593,7 @@
         <p class="lead">Bacteriostatic water is sterile water with one thing added. That single ingredient is the whole difference between it and water for injection, and it accounts for both what the fluid is good for and the ways it is not neutral.</p>
 
         <h2>What it is</h2>
-        <p>Bacteriostatic water is sterile water containing a small amount of benzyl alcohol as a preservative. The word bacteriostatic describes what that preservative does: it slows or stops bacterial growth rather than killing everything outright. A bacteriostatic agent holds a population in check; a bactericidal one destroys it. The distinction is not pedantry, because it sets what the fluid can and cannot be relied on to do.</p>
+        <p>Bacteriostatic water is sterile water containing a small amount of benzyl alcohol as a preservative. The word bacteriostatic describes what that preservative does: it slows or stops bacterial growth without killing everything outright. A bacteriostatic agent holds a population in check; a bactericidal one destroys it. The distinction is not pedantry, because it sets what the fluid can and cannot be relied on to do.</p>
 
         <h2>The specification, in numbers</h2>
         <p>The USP product label is specific about what the fluid contains:</p>
@@ -1604,12 +1604,12 @@
           <tr><td>Presentation</td><td>Sterile, nonpyrogenic, multiple-dose container</td></tr>
           <tr><td>Other additives</td><td>None</td></tr>
         </table>
-        <p>Four lines, and none of them is a description a supplier wrote. Each is checkable against a public source rather than a supplier's description. <a class="cite" href="https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8" target="_blank" rel="noopener nofollow">(Reference: DailyMed, USP labeling)</a></p>
+        <p>Four lines, and none of them is a description a supplier wrote. Each is checkable against a public source, not against a supplier's description. <a class="cite" href="https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=69485218-9343-952d-e053-2a91aa0ad4e8" target="_blank" rel="noopener nofollow">(Reference: DailyMed, USP labeling)</a></p>
 
 
         <h2>Where the preservative came from</h2>
         <p>Benzyl alcohol has been used as a pharmaceutical preservative for a long time, and it persists because it does several jobs at once: it is effective against a broad range of organisms, it is soluble in water at the concentrations needed, and it is stable enough that a sealed container keeps its stated content over a normal shelf life.</p>
-        <p>Alternatives exist and each trades something. Phenol and m-cresol are more aggressive toward dissolved proteins, by the same comparison cited above. Chlorobutanol is gentler but less broadly effective and less stable. The 0.9 percent figure on the label is the outcome of that balance rather than a round number chosen for convenience.</p>
+        <p>Alternatives exist and each trades something. Phenol and m-cresol are more aggressive toward dissolved proteins, by the same comparison cited above. Chlorobutanol is gentler but less broadly effective and less stable. The 0.9 percent figure on the label is the outcome of that balance, not a round number chosen for convenience.</p>
 
         <h2>What the concentration is doing</h2>
         <p>Nine milligrams per millilitre is enough to hold a population in check and low enough to stay below the point where the preservative dominates the solution's behaviour. Both halves of that sentence matter. Too little and the container cannot be called multi-dose; too much and the effects described below stop being a secondary consideration.</p>
@@ -1620,14 +1620,14 @@
 
         <h2>How it differs from sterile water</h2>
         <p>Sterile water for injection is water with nothing added, intended for single use. Once the container is opened it has no preservative holding back contamination. Bacteriostatic water, because of the benzyl alcohol, tolerates being entered more than once over a period, which is why it is supplied in a multiple-dose container while plain sterile water is not.</p>
-        <p>The container format follows from the chemistry rather than from marketing. A fluid with no preservative cannot be sold as multi-dose.</p>
+        <p>The container format follows from the chemistry, not from marketing. A fluid with no preservative cannot be sold as multi-dose.</p>
 
         <h2>Why the pH is on the label</h2>
         <p>At 5.7 the fluid is mildly acidic, and that figure is worth more attention than it usually gets. Deamidation, the most common degradation route for peptides in water, depends strongly on pH: it runs fastest at neutral and alkaline pH and slowest in roughly the pH 3 to 6 band. The stated value sits inside the slower band.</p>
         <p>That is a property of the liquid, not a promise about any particular molecule. Our note on <a href="article/how-to-store-research-peptides/">what degrades a peptide</a> covers the routes in more detail.</p>
 
         <h2>The preservative is not inert</h2>
-        <p>Benzyl alcohol is the most widely used antimicrobial preservative in multi-dose protein formulations, and its effect on dissolved molecules has been studied directly rather than assumed. Preservatives of this class promote partial unfolding, and partial unfolding is what triggers aggregation. In a published comparison the tendency to induce aggregation ran m-cresol, then phenol, then benzyl alcohol, then phenoxyethanol, then chlorobutanol. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3990441/" target="_blank" rel="noopener nofollow">(Reference: Hutchings et al., 2013)</a></p>
+        <p>Benzyl alcohol is the most widely used antimicrobial preservative in multi-dose protein formulations, and its effect on dissolved molecules has been studied directly instead of assumed. Preservatives of this class promote partial unfolding, and partial unfolding is what triggers aggregation. In a published comparison the tendency to induce aggregation ran m-cresol, then phenol, then benzyl alcohol, then phenoxyethanol, then chlorobutanol. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3990441/" target="_blank" rel="noopener nofollow">(Reference: Hutchings et al., 2013)</a></p>
         <p>Benzyl alcohol therefore sits in the middle of that range rather than at the harmless end. Where aggregation or an accurate physical characterisation is the object of the work, plain sterile water or a defined buffer is a different choice with different properties, and whichever fluid is present forms part of the experimental condition. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10526705/" target="_blank" rel="noopener nofollow">(Reference: Shi &amp; McHugh, 2023)</a></p>
 
         <h2>It counts as an excipient</h2>
@@ -2346,7 +2346,7 @@
         <p>BPC-157 is a pentadecapeptide, which means a peptide made of 15 amino acids. The name stands for "Body Protection Compound," and the sequence is derived from a larger protein present in the stomach. It is produced synthetically for research through <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a> rather than extracted from tissue. Its CAS number is 137525-51-0 and its molecular formula is C62H98N16O22, with a molecular weight near 1419 g/mol. If the difference between a short peptide like this and a full protein is unclear, our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides, and proteins</a> covers it.</p>
 
         <h2>Where does the sequence come from?</h2>
-        <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis rather than by its source.</p>
+        <p>The BPC-157 sequence corresponds to a fragment of a protective protein identified in gastric juice. That origin is part of why it draws attention in research: peptides that stay intact in an acidic environment are interesting to study, and much of the early literature looked at BPC-157 in exactly that context. The version used in labs today is fully synthetic and characterized by its certificate of analysis, not by its source.</p>
 
         <h2>The BPC-157 amino acid sequence</h2>
         <p>A pentadecapeptide has fifteen residues. In BPC-157 they run, N-terminus to C-terminus, in three-letter code:</p>
@@ -2393,7 +2393,7 @@
           <li><b>Nitric oxide signaling:</b> its interaction with a pathway involved in vascular tone and tissue response.</li>
           <li><b>Tissue and connective structures:</b> models looking at tendon, muscle, and gastrointestinal tissue.</li>
         </ul>
-        <p>It is worth being precise here. These are observations from laboratory models, not conclusions about people or animals. BPC-157 is a research compound, and the honest summary is that it remains an active area of preclinical study rather than a settled one.</p>
+        <p>It is worth being precise here. These are observations from laboratory models, not conclusions about people or animals. BPC-157 is a research compound, and the honest summary is that it remains an active area of preclinical study and not a settled one.</p>
 
         <h2>How BPC-157 is made</h2>
         <p>Nothing is extracted from tissue. Research-grade BPC-157 is assembled residue by residue using <a href="article/peptide-synthesis/">solid-phase peptide synthesis</a>, which builds the chain on an insoluble polymeric support; the Diagen patent documents credit Sikiric and Rucman with the synthetic route and reference preparation on solid polymeric carriers. The starting materials are protected amino acid derivatives, not biological material. After assembly the chain is cleaved from the support, purified by reversed-phase <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a>, confirmed by mass spectrometry and freeze-dried. Because reversed-phase purification isolates peptides as salts, the dried solid carries a counterion such as trifluoroacetate plus residual water, so the weighed mass is not one hundred percent peptide; our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate of analysis</a> explains how that is reported.</p>
@@ -2545,7 +2545,7 @@
         <p class="lead">A certificate of analysis (COA) is how you confirm that a research peptide is what the label says. This guide explains what a COA shows, how HPLC and mass spectrometry are used to test each batch, and how to verify your specific vial by its batch number. All products are for laboratory research use only.</p>
 
         <h2>What is a certificate of analysis?</h2>
-        <p>A COA is a document produced by an analytical laboratory that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides, a credible COA is based on independent testing rather than a supplier's own claim, and it is tied to the batch number printed on the vial.</p>
+        <p>A COA is a document produced by an analytical laboratory that reports the identity, purity, and quantity of a compound for a specific batch. For research peptides, a credible COA rests on independent testing, not on a supplier's own claim, and it is tied to the batch number printed on the vial.</p>
 
         <h2>What a COA shows</h2>
         <ul>
@@ -2564,22 +2564,22 @@
         <p>Verification runs in one direction: from the vial in your hand back to the paperwork. Every Codex Research vial carries a batch number in the format CDX-NNNN (for example, CDX-1017), and that string is the key to everything else. Read it off the label first, then check that the same string appears on the certificate you were sent. A COA that does not name your batch is a document about some other material, however impressive the numbers on it look.</p>
 
         <h2>Ask for the certificate before you pay, not after</h2>
-        <p>The full COA is available on request before payment, which changes what you are able to do with it. Before an order is placed you can ask which batch you would receive, ask for that batch's certificate rather than a sample document, and read it while you still have the option to walk away. After payment the same certificate is only a record. The sequence matters more than the document.</p>
+        <p>The full COA is available on request before payment, which changes what you are able to do with it. Before an order is placed you can ask which batch you would receive, ask for that batch's certificate and not a sample document, and read it while you still have the option to walk away. After payment the same certificate is only a record. The sequence matters more than the document.</p>
         <p>Three questions cover most of it: which batch does this certificate belong to, which methods produced these numbers, and who ran them. A supplier that can answer all three in writing is operating differently from one that sends a screenshot.</p>
 
         <h2>A one-minute check before you order</h2>
         <ul>
           <li><b>Batch match:</b> the number on the certificate is character-for-character the number on the label.</li>
           <li><b>A date:</b> the certificate says when the analysis was performed, not merely when the file was created.</li>
-          <li><b>Named methods:</b> HPLC and mass spectrometry are identified as the procedures behind the figures, with numeric results rather than the word "pass".</li>
+          <li><b>Named methods:</b> HPLC and mass spectrometry are identified as the procedures behind the figures, with numeric results in place of the word "pass".</li>
           <li><b>An author:</b> the testing laboratory is identified and the document is signed or otherwise attributable.</li>
-          <li><b>Legibility:</b> you can read the header and the chromatogram, rather than a compressed image of them.</li>
+          <li><b>Legibility:</b> you can read the header and the chromatogram, not a compressed image of them.</li>
           <li><b>One batch, one document:</b> the certificate is specific to that lot, not a single file reused across a catalogue.</li>
         </ul>
         <p>Our note covers each of those fields, and the difference between chromatographic purity and net peptide content, in <a href="article/how-to-read-a-certificate-of-analysis/">how to read a certificate of analysis</a>. This guide is about confirming that the certificate in front of you belongs to the vial in front of you.</p>
 
         <h2>What makes testing independent</h2>
-        <p>Third-party testing means the laboratory reporting the result is not the party selling the material. That separation is the entire value of the arrangement, and it is why the laboratory's identity belongs on the certificate rather than being described in the abstract. Recognised competence standards for testing laboratories are built around exactly these two ideas, competence and impartiality, and where a laboratory holds accreditation it applies to a defined list of methods rather than to testing in general. At Codex Research, every batch is tested by an independent laboratory using HPLC and mass spectrometry.</p>
+        <p>Third-party testing means the laboratory reporting the result is not the party selling the material. That separation is the entire value of the arrangement, and it is why the laboratory's identity belongs on the certificate, named, not described in the abstract. Recognised competence standards for testing laboratories are built around exactly these two ideas, competence and impartiality, and where a laboratory holds accreditation it applies to a defined list of methods and not to testing in general. At Codex Research, every batch is tested by an independent laboratory using HPLC and mass spectrometry.</p>
 
         <h2>Verifying a batch in Panama</h2>
         <p>Local delivery in Panama City makes one step easier than it is anywhere else: you can compare the printed label against the certificate at the moment of handover, with the vial in your hand rather than in a photograph. In practice the useful order is to request the COA before ordering, read it, place the order, and then confirm the label at delivery. The verification is the same everywhere; the difference is that here the last step happens face to face instead of after a customs queue.</p>
@@ -2665,7 +2665,7 @@
         </ul>
 
         <h2>Where it fits in a batch record</h2>
-        <p>For a synthetic peptide the routine sequence is straightforward. The material is made, it is purified, a chromatographic run establishes how much of it is the target, and a mass measurement establishes that the target is the intended molecule. Both results, tied to a batch number, are what turns a label into something checkable. You can look up the batch on a vial at our <a href="verify/">batch verification page</a>. <a class="cite" href="https://doi.org/10.1038/nature19949" target="_blank" rel="noopener nofollow">(Reference: Aebersold &amp; Mann, 2016)</a></p>
+        <p>For a synthetic peptide the routine sequence is straightforward. The material is made, it is purified, a chromatographic run establishes how much of it is the target, and a mass measurement establishes that the target is the intended molecule. Put a batch number on both results and the label becomes something you can check. You can look up the batch on a vial at our <a href="verify/">batch verification page</a>. <a class="cite" href="https://doi.org/10.1038/nature19949" target="_blank" rel="noopener nofollow">(Reference: Aebersold &amp; Mann, 2016)</a></p>
       `,
       faq: [
         {
@@ -2784,7 +2784,7 @@
           <li><b>Things can hide under the peak.</b> An impurity that elutes at the same time as the target is counted as target. Deletion sequences, which differ from the intended peptide by a single residue, are the usual candidates.</li>
           <li><b>Response is not uniform.</b> Two compounds at the same concentration do not necessarily give peaks of the same area.</li>
         </ul>
-        <p>Used for what it is good at, it remains the standard way to establish how much of a batch is the thing it claims to be, and the number it produces is one of the two results you should expect to see tied to a batch on any <a href="verify/">vial you can check</a>.</p>
+        <p>Used for what it is good at, it remains the standard way to establish how much of a batch is the thing it claims to be, and the number it produces is one of the two results that should carry a batch number on any <a href="verify/">vial you can check</a>.</p>
       `,
       faq: [
         {
@@ -2851,7 +2851,7 @@
       excerpt: 'A short guide to the hierarchy of biological molecules, from single residues to folded proteins.',
       imageAlt: 'Diagram comparing amino acids, peptides, and proteins by size and structure',
       body: `
-        <p class="lead">Amino acid, peptide and protein describe the same kind of molecule at three scales. An amino acid is a single unit. A peptide is a short chain of them. A protein is a long chain that folds into a defined shape. The boundaries between the three are conventions rather than laws of chemistry, which is worth knowing before treating any of them as a hard cutoff.</p>
+        <p class="lead">Amino acid, peptide and protein describe the same kind of molecule at three scales. An amino acid is a single unit. A peptide is a short chain of them. A protein is a long chain that folds into a defined shape. The boundaries between the three are conventions, not laws of chemistry, which is worth knowing before treating any of them as a hard cutoff.</p>
 
         <h2>The amino acid</h2>
         <p>Every standard amino acid is built the same way: a central carbon carrying an amino group, a carboxyl group, a hydrogen, and a side chain. Only the side chain changes, and that is where all the variety comes from. Some side chains are charged, some are polar, some are oily and avoid water, and two contain rings that absorb ultraviolet light, which is the property that makes a peptide visible to a detector at 280 nm.</p>
@@ -2961,7 +2961,7 @@
         <p class="lead">Lyophilization, also called freeze-drying, is a dehydration process that removes water from a frozen sample through sublimation under reduced pressure. It preserves sensitive compounds such as peptides, proteins, and vaccines by maintaining their structure and stability for long-term storage.</p>
 
         <h2>What "lyophilized powder" means</h2>
-        <p>The phrase describes the physical state of the material, not a grade or a formulation. What is left in the vial after freeze-drying is a porous solid that occupies roughly the same shape and volume the frozen solution did, which is why it is usually called a cake rather than a powder. The ice sublimes away and the solid matrix it was holding stays behind. Some cakes are dense and uniform, some are flaky or crumble at the edges, and at the small masses typical of research peptides the cake can be a thin film or a few flecks on the wall of the vial, or look like nothing at all. A vial that appears empty has not necessarily lost its contents.</p>
+        <p>The phrase describes the physical state of the material, not a grade or a formulation. What is left in the vial after freeze-drying is a porous solid that occupies roughly the same shape and volume the frozen solution did, which is why it is usually called a cake and not a powder. The ice sublimes away and the solid matrix it was holding stays behind. Some cakes are dense and uniform, some are flaky or crumble at the edges, and at the small masses typical of research peptides the cake can be a thin film or a few flecks on the wall of the vial, or look like nothing at all. A vial that appears empty has not necessarily lost its contents.</p>
 
 
         <h2>What is lyophilization?</h2>
@@ -2981,7 +2981,7 @@
         <p>Cooling rate matters for the same reason. Rapid cooling gives small ice crystals, useful when a structure has to be preserved for microscopy, but it leaves narrow channels in the matrix and makes the sample slower to dry. Slower cooling gives larger crystals and less restrictive channels for vapour to escape through. Either way, the product has to be frozen below its eutectic or glass transition temperature before drying begins, because pockets of unfrozen material will expand under vacuum and compromise the structure of the finished cake.</p>
 
         <h2>Collapse temperature, and what a bad cake tells you</h2>
-        <p>There is a temperature above which the macroscopic structure of the drying product gives way; it is called the collapse temperature, and it generally sits about two degrees above the glass transition temperature of the formulation in its frozen state.${cite('Reference: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} Drying has to be run below it. Push the product temperature too high to save time and the matrix slumps, which is visible afterwards as a shrunken, glassy or melted-back cake. A collapsed cake is not only a cosmetic problem: it is associated with higher residual moisture and slower redissolution, so appearance is a genuine quality indicator rather than a preference.</p>
+        <p>There is a temperature above which the macroscopic structure of the drying product gives way; it is called the collapse temperature, and it generally sits about two degrees above the glass transition temperature of the formulation in its frozen state.${cite('Reference: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} Drying has to be run below it. Push the product temperature too high to save time and the matrix slumps, which is visible afterwards as a shrunken, glassy or melted-back cake. A collapsed cake is not only a cosmetic problem: it holds more residual moisture and redissolves more slowly, so appearance is a genuine quality indicator, not a preference.</p>
 
         <h2>Residual moisture</h2>
         <p>Sublimation does not remove all the water. Depending on the formulation and the cycle, the product leaving primary drying may still hold something in the region of five to twenty percent water by weight, bound to the solid rather than present as ice.${cite('Reference: Chen et al., 2021', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8107147/')} That is what secondary drying is for, and it is normally continued until residual water is down to roughly one to two percent. The reason to care is that water acts as a plasticiser: the more of it that remains in an amorphous solid, the lower the glass transition temperature of the finished cake and the more molecular mobility there is at any given storage temperature. Residual moisture is measured by Karl Fischer titration and is one of the attributes a complete <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> can report.</p>
@@ -3014,7 +3014,7 @@
         { q: 'Why are peptides freeze-dried?', a: 'Freeze-drying minimizes peptide degradation, makes storage and transport easier, and allows precise reconstitution before experiments.' },
         { q: 'What does "lyophilized powder" mean?', a: 'It describes the physical state of the material after freeze-drying, not a grade or a formulation. What remains in the vial is a porous solid, usually called a cake, that keeps roughly the shape and volume the frozen solution had once the ice has sublimed away.' },
         { q: 'Why does a vial of lyophilized peptide sometimes look empty?', a: 'At the small masses typical of research peptides, the cake can be a thin film or a few flecks on the wall of the vial rather than a visible volume of powder. A vial that looks empty has not necessarily lost its contents; the labelled mass and the certificate of analysis are what define what is in it.' },
-        { q: 'What is the collapse temperature in freeze-drying?', a: 'It is the temperature above which the macroscopic structure of the drying product gives way, and it generally sits about two degrees above the glass transition temperature of the frozen formulation. Drying above it produces a shrunken or melted-back cake, which is associated with higher residual moisture and slower redissolution.' },
+        { q: 'What is the collapse temperature in freeze-drying?', a: 'It is the temperature above which the macroscopic structure of the drying product gives way, and it generally sits about two degrees above the glass transition temperature of the frozen formulation. Drying above it produces a shrunken or melted-back cake, which holds more residual moisture and slower redissolution.' },
         { q: 'How much water is left after freeze-drying?', a: 'Product leaving primary drying can still hold roughly five to twenty percent water by weight. Secondary drying removes the bound water, typically down to about one to two percent, which is measured by Karl Fischer titration.' },
       ],
       references: [
@@ -3053,7 +3053,7 @@
 
         <h2>Mannitol: the one that builds the cake</h2>
         <p>Mannitol does a different job. It is a bulking agent: at the milligram quantities typical of research peptides there is not enough material to form a solid <a href="article/lyophilization-freeze-drying/">cake</a> at all, and mannitol provides the structure that holds its shape after the ice is gone.</p>
-        <p>It also behaves differently from the glass formers. Mannitol tends to crystallise rather than stay amorphous, which is good for a firm cake and less good for protecting a molecule that relies on being locked in a glass. Formulations often use both, one for structure and one for stabilisation.</p>
+        <p>It also behaves differently from the glass formers. Mannitol tends to crystallise instead of staying amorphous, which is good for a firm cake and less good for protecting a molecule that relies on being locked in a glass. Formulations often use both, one for structure and one for stabilisation.</p>
 
         <h2>Buffers, and the trap inside them</h2>
         <p>Peptides degrade at rates that depend strongly on pH, so a buffer holds the solution where degradation is slowest. The complication is what happens on the way down: as a solution freezes, pure ice separates out and everything else concentrates into the shrinking liquid fraction. If one component of a buffer pair crystallises before the other, the pH of that fraction shifts, sometimes by units, precisely when the material is most vulnerable.</p>
@@ -3065,7 +3065,7 @@
 
         <h2>Amino acids as excipients</h2>
         <p>Glycine is used as a bulking agent in the same role as mannitol. Arginine is used for a different reason: it suppresses aggregation and improves solubility, which matters for sequences that are reluctant to redissolve. Histidine is both buffer and stabiliser. <a class="cite" href="https://doi.org/10.1007/978-1-4615-0557-0_5" target="_blank" rel="noopener nofollow">(Reference: Carpenter et al., 2002)</a></p>
-        <p>These are free amino acids rather than residues in a chain, and they do not appear in the sequence of the compound. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers that distinction.</p>
+        <p>These are free amino acids, not residues in a chain, and they do not appear in the sequence of the compound. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers that distinction.</p>
 
 
         <h2>Some vials contain nothing but the compound</h2>
@@ -3185,7 +3185,7 @@
         <p>Beyond a certain length, stepwise synthesis stops being practical at all. The usual answer is to build two shorter fragments and join them chemically, an approach that made fully synthetic proteins possible. <a class="cite" href="https://doi.org/10.1126/science.7973629" target="_blank" rel="noopener nofollow">(Reference: Dawson et al., 1994)</a></p>
 
         <h2>What comes off the resin is not the finished product</h2>
-        <p>Crude material contains the target, deletion sequences, incompletely deprotected chains and the remains of the cleavage cocktail. It is purified, normally by reversed-phase chromatography, and only then is it characterised: a chromatographic run establishes how much of it is the target, and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> establishes that the target is the intended molecule. Those two results, tied to a batch number, are what a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> reports, and what you can check against a <a href="verify/">vial in your hand</a>.</p>
+        <p>Crude material contains the target, deletion sequences, incompletely deprotected chains and the remains of the cleavage cocktail. It is purified, normally by reversed-phase chromatography, and only then is it characterised: a chromatographic run establishes how much of it is the target, and <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a> establishes that the target is the intended molecule. Those two results, carrying a batch number, are what a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> reports, and what you can check against a <a href="verify/">vial in your hand</a>.</p>
       `,
       faq: [
         {
@@ -3206,7 +3206,7 @@
         },
         {
           "q": "Why does a synthetic peptide contain trifluoroacetate?",
-          "a": "Trifluoroacetic acid is used to cleave the peptide from the resin and again as an additive during reversed-phase purification. Some of it remains associated with the material, so the peptide is usually isolated as a salt and part of the weighed powder is counterion."
+          "a": "Trifluoroacetic acid is used to cleave the peptide from the resin and again as an additive during reversed-phase purification. Some of it stays bound to the material, so the peptide is usually isolated as a salt and part of the weighed powder is counterion."
         },
         {
           "q": "Why are some peptides harder to synthesise than others?",
@@ -3263,7 +3263,7 @@
       excerpt: 'A mitochondrial-derived peptide and the areas of metabolism and aging research it appears in.',
       imageAlt: 'MOTS-c mitochondrial-derived peptide studied in metabolism and aging research',
       body: `
-        <p class="lead">Almost every peptide in a research catalogue is encoded in nuclear DNA. MOTS-c is not. It comes from a short open reading frame inside the mitochondrial genome, which is unusual enough that its discovery opened a category rather than adding to one.</p>
+        <p class="lead">Almost every peptide in a research catalogue is encoded in nuclear DNA. MOTS-c is not. It comes from a short open reading frame inside the mitochondrial genome, which is unusual enough that its discovery opened a category instead of adding to one.</p>
 
         <h2>Identity</h2>
         <ul>
@@ -3305,7 +3305,7 @@
 
         <h2>What verification establishes</h2>
         <p>Purity from <a href="article/high-performance-liquid-chromatography-hplc/">chromatography</a> reports what share of the detected material is the target. Identity from mass spectrometry compares the measured mass against the mass calculated from the sequence, and at about 2,175 daltons the difference between monoisotopic and average mass is small but not zero, so the convention used belongs on the document.</p>
-        <p>Both figures, tied to a batch number, are what a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> reports and what can be <a href="verify/">checked</a> against a vial.</p>
+        <p>Both figures, under a batch number, are what a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> reports and what can be <a href="verify/">checked</a> against a vial.</p>
 
         <h2>Reading a specification for this one</h2>
         <p>Two details are worth checking against any listing. The formula should account for both sulfur atoms, since a sequence quoted with one methionine describes a different peptide. And the mass should be quoted with its convention, because at this size the monoisotopic and average values differ by under a dalton, which is small enough to be mistaken for measurement error when it is a difference of definition.</p>

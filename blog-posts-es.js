@@ -44,7 +44,7 @@
         <p>Todo sale en empaque sellado y protegido, y cada vial va etiquetado con su compuesto, su concentración y su número de lote. Si el sello llega roto, no recibas el paquete.</p>
 
         <h2>Por qué el inventario local cambia el material, no solo la espera</h2>
-        <p>Un paquete internacional pasa semanas moviéndose entre bodegas y vehículos, y lo que cuenta no son los días sino cuántos ciclos de temperatura y humedad atravesó. Un péptido liofilizado es estable mientras se mantenga seco, y cada calentamiento y enfriamiento es una oportunidad para que la humedad llegue hasta él.</p>
+        <p>Un paquete internacional pasa semanas moviéndose entre bodegas y vehículos, y lo que cuenta son los ciclos de temperatura, no los días, y cuántos ciclos de temperatura y humedad atravesó. Un péptido liofilizado es estable mientras se mantenga seco, y cada calentamiento y enfriamiento es una oportunidad para que la humedad llegue hasta él.</p>
         <p>Dos horas dentro de una ciudad son un solo trayecto corto. Es una propiedad del material y de cómo viaja, y nuestra guía de <a href="article/how-to-store-research-peptides/">almacenamiento</a> lo explica en detalle.</p>
 
         <h2>Pagar desde Panamá</h2>
@@ -147,7 +147,7 @@
         <p>La verificación va en una sola dirección: del vial que tienes en la mano hacia el papel. Cada vial de Codex Research lleva un número de lote con el formato CDX-NNNN (por ejemplo, CDX-1017), y esa cadena es la llave de todo lo demás. Léela primero en la etiqueta y después comprueba que esa misma cadena aparece en el certificado que te enviaron. Un COA que no nombra tu lote es un documento sobre otro material, por buenos que se vean los números.</p>
 
         <h2>Pide el certificado antes de pagar, no después</h2>
-        <p>El COA completo está disponible a solicitud antes del pago, y eso cambia lo que puedes hacer con él. Antes de ordenar puedes preguntar qué lote recibirías, pedir el certificado de ese lote en vez de un documento de muestra, y leerlo mientras todavía tienes la opción de no comprar. Después de pagar, ese mismo certificado es solo un registro. El orden importa más que el documento.</p>
+        <p>El COA completo está disponible a solicitud antes del pago, y eso cambia lo que puedes hacer con él. Antes de ordenar puedes preguntar qué lote recibirías, pedir el certificado de ese lote y no un documento de muestra, y leerlo mientras todavía tienes la opción de no comprar. Después de pagar, ese mismo certificado es solo un registro. El orden importa más que el documento.</p>
         <p>Tres preguntas cubren casi todo: a qué lote pertenece este certificado, con qué métodos se obtuvieron estos números y quién los hizo. Un proveedor que responde las tres por escrito opera distinto de uno que manda una captura de pantalla.</p>
 
         <h2>Una revisión de un minuto antes de pedir</h2>
@@ -162,7 +162,7 @@
         <p>Qué significa cada uno de esos campos, y la diferencia entre pureza cromatográfica y contenido neto de péptido, está en detalle en <a href="article/how-to-read-a-certificate-of-analysis/">cómo leer un certificado de análisis</a>. Esta guía trata de confirmar que el certificado que tienes delante pertenece al vial que tienes delante.</p>
 
         <h2>Qué hace que un análisis sea independiente</h2>
-        <p>Análisis de terceros significa que el laboratorio que reporta el resultado no es quien vende el material. Esa separación es todo el valor del arreglo, y por eso la identidad del laboratorio pertenece al certificado en vez de describirse en abstracto. Las normas de competencia reconocidas para laboratorios de ensayo están construidas justo sobre esas dos ideas, competencia e imparcialidad, y cuando un laboratorio tiene acreditación, esta aplica a una lista definida de métodos y no a los análisis en general. En Codex Research, cada lote lo analiza un laboratorio independiente por HPLC y espectrometría de masas.</p>
+        <p>Análisis de terceros significa que el laboratorio que reporta el resultado no es quien vende el material. Esa separación es todo el valor del arreglo, y por eso la identidad del laboratorio pertenece al certificado, con nombre, no descrita en abstracto. Las normas de competencia reconocidas para laboratorios de ensayo están construidas justo sobre esas dos ideas, competencia e imparcialidad, y cuando un laboratorio tiene acreditación, esta aplica a una lista definida de métodos y no a los análisis en general. En Codex Research, cada lote lo analiza un laboratorio independiente por HPLC y espectrometría de masas.</p>
 
         <h2>Verificar un lote en Panamá</h2>
         <p>La entrega local en la ciudad de Panamá hace más fácil un paso que en otros lados no lo es: puedes comparar la etiqueta impresa contra el certificado en el momento de la entrega, con el vial en la mano y no en una foto. En la práctica el orden útil es pedir el COA antes de ordenar, leerlo, hacer el pedido y confirmar la etiqueta en la entrega. La verificación es la misma en todas partes; la diferencia es que aquí el último paso ocurre cara a cara en vez de después de una cola en aduana.</p>
@@ -439,7 +439,7 @@
         <p class="lead">El agua bacteriostática es agua estéril con una sola cosa añadida. Ese único ingrediente es toda la diferencia con el agua para inyección, y explica tanto para qué sirve el fluido como las formas en que no es neutro.</p>
 
         <h2>Qué es</h2>
-        <p>Agua estéril que contiene una pequeña cantidad de alcohol bencílico como conservante. La palabra bacteriostático describe lo que hace ese conservante: frena o detiene el crecimiento bacteriano en vez de matarlo todo. Un agente bacteriostático mantiene a raya una población; uno bactericida la destruye. La distinción no es pedantería, porque fija con qué se puede contar y con qué no.</p>
+        <p>Agua estéril que contiene una pequeña cantidad de alcohol bencílico como conservante. La palabra bacteriostático describe lo que hace ese conservante: frena o detiene el crecimiento bacteriano sin matarlo todo. Un agente bacteriostático mantiene a raya una población; uno bactericida la destruye. La distinción no es pedantería, porque fija con qué se puede contar y con qué no.</p>
 
         <h2>La especificación, en números</h2>
         <p>La etiqueta del producto USP es precisa sobre lo que contiene el fluido:</p>
@@ -1236,7 +1236,7 @@
       excerpt: 'Cinco residuos, tres de ellos inusuales, y por qué eso complica verificarla.',
       imageAlt: 'La secuencia, los residuos fuera del set estándar y qué no puede confirmar la masa.',
       body: `
-        <p class="lead">La ipamorelina es un pentapéptido, lo que suena sencillo. No lo es. Tres de sus cinco residuos son cosas que ningún organismo construye, dos están en configuración especular, y la cadena termina en amida en vez de en ácido. Cada una de esas elecciones es deliberada, y juntas explican tanto por qué la molécula se comporta como lo hace como por qué confirmar un lote exige más que una medición de masa.</p>
+        <p class="lead">La ipamorelina es un pentapéptido, lo que suena sencillo. No lo es. Tres de sus cinco residuos son cosas que ningún organismo construye, dos están en configuración especular, y la cadena termina en amida y no en ácido. Cada una de esas elecciones es deliberada, y juntas explican tanto por qué la molécula se comporta como lo hace como por qué confirmar un lote exige más que una medición de masa.</p>
 
         <h2>La identidad, en datos</h2>
         <ul>
@@ -1271,7 +1271,7 @@
         <p>Lo que sí los distingue es el comportamiento en columna. Las impurezas diastereoméricas, cadenas que difieren solo en la configuración de un residuo, suelen eluir a un tiempo ligeramente distinto, así que aparecen en la <a href="article/high-performance-liquid-chromatography-hplc/">corrida cromatográfica</a> como un pico cercano al principal. Es un buen ejemplo de por qué pureza e identidad son dos preguntas y por qué un <a href="article/how-to-read-a-certificate-of-analysis/">certificado</a> que responde solo una está incompleto.</p>
 
         <h2>Manejo y verificación</h2>
-        <p>Se despacha <a href="article/lyophilization-freeze-drying/">liofilizada</a>, que es la forma estable. Mantenerla seca y fresca, y dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro; nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre el caso general. Un punto propio de los péptidos pequeños: a las masas que se suelen despachar, el material liofilizado puede ser una película fina o unas escamas en el vidrio en vez de un polvo visible. Un vial que parece vacío normalmente no ha perdido nada. Cada lote se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
+        <p>Se despacha <a href="article/lyophilization-freeze-drying/">liofilizada</a>, que es la forma estable. Mantenerla seca y fresca, y dejar que un vial frío alcance la temperatura ambiente antes de abrirlo para que no se forme condensación por dentro; nuestra guía de <a href="article/how-to-store-research-peptides/">conservación</a> cubre el caso general. Un punto propio de los péptidos pequeños: a las masas que se suelen despachar, el material liofilizado puede ser una película fina o unas escamas en el vidrio, y no un polvo visible. Un vial que parece vacío normalmente no ha perdido nada. Cada lote se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
 
         <h2>Solo para uso en investigación</h2>
         <p>Todos los productos que vende Codex Research, incluida la ipamorelina, son estrictamente para investigación y desarrollo de laboratorio. No son para consumo humano ni animal y no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</p>
@@ -1513,7 +1513,7 @@
         <p>De una forma u otra el paso tiene un rendimiento, y lo que no ciclara correctamente sigue en la mezcla cuando empieza la purificación.</p>
 
         <h2>Fabricarlo</h2>
-        <p>La cadena se ensambla por <a href="article/peptide-synthesis/">síntesis en fase sólida</a> como cualquier otra secuencia, y la ciclación es un paso adicional con su propio rendimiento. Corrida a concentración alta, las cadenas tienden a reaccionar entre sí en vez de consigo mismas, produciendo dímeros y especies mayores en vez del anillo pretendido. Esos subproductos son parte de lo que un método de pureza tiene que separar, y por eso un péptido cíclico es más que un péptido lineal con un paso extra.</p>
+        <p>La cadena se ensambla por <a href="article/peptide-synthesis/">síntesis en fase sólida</a> como cualquier otra secuencia, y la ciclación es un paso adicional con su propio rendimiento. Corrida a concentración alta, las cadenas tienden a reaccionar entre sí y no consigo mismas, produciendo dímeros y especies mayores en vez del anillo pretendido. Esos subproductos son parte de lo que un método de pureza tiene que separar, y por eso un péptido cíclico es más que un péptido lineal con un paso extra.</p>
 
         <h2>Manejo y verificación</h2>
         <p>El material se despacha <a href="article/lyophilization-freeze-drying/">liofilizado</a>, que es la forma estable. Seco, fresco y lejos de la luz, dejando que un vial frío alcance la temperatura ambiente antes de abrirlo. La pureza se establece por <a href="article/high-performance-liquid-chromatography-hplc/">HPLC</a> y la identidad por espectrometría de masas, y cualquier vial se contrasta con su documentación por <a href="verify/">número de lote</a>.</p>
@@ -2003,7 +2003,7 @@
 
         <h2>Parcialmente cíclico es una categoría real</h2>
         <p>Una molécula puede llevar un anillo y conservar extremos libres, que es lo que produce un puente de cadena lateral. Las descripciones a veces llaman a esto cíclico sin matizar, y la diferencia importa: un ciclo de cabeza a cola no tiene extremo del que tirar para una enzima, mientras que un puente de cadena lateral deja los dos expuestos.</p>
-        <p>Leyendo una especificación, la pregunta útil no es si aparece la palabra cíclico sino qué átomos se unieron.</p>
+        <p>Leyendo una especificación, la pregunta útil es qué enlace cierra el anillo, no si aparece la palabra cíclico sino qué átomos se unieron.</p>
 
         <h2>La naturaleza también lo hace</h2>
         <p>Los péptidos cíclicos no son solo un truco de laboratorio. Las plantas fabrican péptidos cíclicos de cabeza a cola con disulfuros internos que resisten de forma inusual al calor y a las enzimas, y esos productos naturales se estudian en parte como evidencia de cuánta estabilidad puede aportar la topología. <a class="cite" href="https://doi.org/10.1016/s0041-0101(01)00129-5" target="_blank" rel="noopener nofollow">(Referencia: Craik et al., 2001)</a></p>
@@ -2071,7 +2071,7 @@
         <p>Los elementos existen como mezclas de isótopos, y los pesos atómicos estándar son promedios sobre esas mezclas. <a class="cite" href="https://doi.org/10.1351/pac200678112051" target="_blank" rel="noopener nofollow">(Referencia: Wieser, 2006)</a> Eso da dos maneras de sumar una fórmula.</p>
         <ul>
           <li><b>La masa promedio</b> usa esos valores ponderados. Es la cifra a citar cuando se pesa material, porque un miligramo de polvo contiene la mezcla isotópica natural.</li>
-          <li><b>La masa monoisotópica</b> usa el isótopo más ligero y abundante de cada elemento: carbono-12, hidrógeno-1, nitrógeno-14, oxígeno-16. Es la cifra que reporta un espectrómetro para un pico resuelto, porque el instrumento separa los isótopos en vez de promediarlos.</li>
+          <li><b>La masa monoisotópica</b> usa el isótopo más ligero y abundante de cada elemento: carbono-12, hidrógeno-1, nitrógeno-14, oxígeno-16. Es la cifra que reporta un espectrómetro para un pico resuelto, porque el instrumento separa los isótopos y no los promedia.</li>
         </ul>
         <p>Para un péptido corto las dos difieren en una fracción de dalton. La brecha se abre con el tamaño, porque una molécula mayor tiene más átomos de carbono capaces de llevar un isótopo pesado, y por encima de unos pocos miles de daltons supera un dalton. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Referencia: Senko et al., 1995)</a></p>
 
@@ -2150,10 +2150,10 @@
 
         <h2>El núcleo compartido de los ligandos</h2>
         <p>Los péptidos de melanocortina se solapan en un tramo corto de secuencia que carga con la mayor parte del reconocimiento. Un puñado de residuos de ese tramo hace el trabajo esencial, y por eso análogos sintéticos muy cortos pueden activar estos receptores mientras que fragmentos mucho más largos del precursor no hacen falta. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
-        <p>Ese motivo compacto de reconocimiento es cómodo para un químico e incómodo para la selectividad. Un conjunto pequeño de residuos da menos posiciones que variar, así que las diferencias que separan un subtipo de otro hay que encontrarlas en un espacio estrecho. Es además por lo que restringir el esqueleto, en vez de alargar la secuencia, se convirtió en la estrategia principal de diseño de esta familia.</p>
+        <p>Ese motivo compacto de reconocimiento es cómodo para un químico e incómodo para la selectividad. Un conjunto pequeño de residuos da menos posiciones que variar, así que las diferencias que separan un subtipo de otro hay que encontrarlas en un espacio estrecho. Es además por lo que restringir el esqueleto, y no alargar la secuencia, se convirtió en la estrategia principal de diseño de esta familia.</p>
 
         <h2>Una familia con antagonistas naturales</h2>
-        <p>La mayoría de los sistemas de receptores se estudia con agonistas que existen en la naturaleza y antagonistas que construyen los químicos. La familia de melanocortina tiene además antagonistas endógenos: proteínas que se unen a estos receptores y los bloquean en vez de encenderlos. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
+        <p>La mayoría de los sistemas de receptores se estudia con agonistas que existen en la naturaleza y antagonistas que construyen los químicos. La familia de melanocortina tiene además antagonistas endógenos: proteínas que se unen a estos receptores y los bloquean sin encenderlos. <a class="cite" href="https://doi.org/10.1210/er.2006-0034" target="_blank" rel="noopener nofollow">(Referencia: Cone, 2006)</a></p>
         <p>La existencia de un bloqueador natural importa al leer resultados, porque el estado basal del receptor en un tejido lo fija el equilibrio entre dos señales opuestas. Nuestra nota sobre <a href="article/agonist-vs-antagonist/">agonistas y antagonistas</a> cubre el vocabulario, incluido por qué un receptor puede llevar actividad sin nada unido.</p>
 
         <h2>Con qué se asocian los subtipos</h2>
@@ -3206,7 +3206,7 @@
 
         <h2>Quién hace los análisis</h2>
         <p>Un laboratorio independiente, contratado y pagado por nosotros, que cubre pureza por HPLC e identidad por espectrometría de masas en cada lote. No analizamos nuestro propio material para luego informar sobre él.</p>
-        <p>La distinción merece decirse porque «analizado» y «viene con análisis» son afirmaciones distintas, y en la distancia entre las dos vive buena parte del marketing impreciso de este sector. Pagar el análisis en vez de heredarlo es lo que pone un número de lote en el documento y no una etiqueta de muestra.</p>
+        <p>La distinción merece decirse porque «analizado» y «viene con análisis» son afirmaciones distintas, y en la distancia entre las dos vive buena parte del marketing impreciso de este sector. Pagar el análisis, y no heredarlo, es lo que pone un número de lote en el documento y no una etiqueta de muestra.</p>
         <p>La independencia es el sentido del montaje. Un certificado es una afirmación de quien lo emite, así que un laboratorio sin interés en la venta es lo que separa a quien hace la afirmación de quien cobra por el producto. Un lote sin esa documentación no se lista.</p>
 
         <h2>Qué hace la búsqueda</h2>
@@ -3220,7 +3220,7 @@
 
         <h2>Qué debe contener el certificado</h2>
         <p>Los mismos campos que te decimos que le exijas a cualquiera. Pureza por <a href="article/peptide-purity-hplc-explained/">RP-HPLC</a> con sus condiciones, porque la columna y el gradiente cambian el número. Identidad por <a href="article/mass-spectrometry-peptide-research/">espectrometría de masas</a>, con masa observada y teórica a la vista en lugar de un veredicto. Una fecha. Un laboratorio nombrado. El número de lote.</p>
-        <p>Cuando un compuesto tiene registro público hay además una comprobación que no nos involucra en absoluto: coge la fórmula de PubChem, calcula la masa con nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> o con cualquier otra, y compárala contra la cifra medida del documento. Un vendedor que te pide que confíes en él en vez de enseñarte cómo comprobar está pidiendo lo que no toca.</p>
+        <p>Cuando un compuesto tiene registro público hay además una comprobación que no nos involucra en absoluto: coge la fórmula de PubChem, calcula la masa con nuestra <a href="tools/peptide-molecular-weight/">calculadora</a> o con cualquier otra, y compárala contra la cifra medida del documento. Un vendedor que te pide que confíes en él y no te enseña cómo comprobar está pidiendo lo que no toca.</p>
 
         <h2>Por qué publicamos comprobaciones que se pueden usar contra nosotros</h2>
         <p>La <a href="tools/coa-checklist/">lista</a> y el <a href="tools/cas-number-check/">validador de CAS</a> funcionan sobre la papelería de cualquier proveedor, la nuestra incluida. La generosidad no tiene nada que ver: ésa es la única versión de este argumento que se sostiene. Una afirmación de verificación hecha por un vendedor vale lo que el comprador pueda confirmar por su cuenta, así que publicar el método es la afirmación.</p>
@@ -3308,7 +3308,7 @@
         <p>El <b>peso molecular</b> por sí solo dice poco. Una molécula pesada no es automáticamente más difícil de hacer que una ligera; lo que pesa es el número de acoplamientos y la dificultad de la purificación, y eso no se sigue de la masa.</p>
 
         <h2>Qué significa esto al comparar dos fichas</h2>
-        <p>La unidad comparable son miligramos de péptido, no de polvo, y no se puede calcular sin una cifra de contenido neto. Así que la primera pregunta ante una ficha barata no es «por qué tan barato» sino «cuál es el contenido neto de péptido, y de qué lote».</p>
+        <p>La unidad comparable son miligramos de péptido, no de polvo, y no se puede calcular sin una cifra de contenido neto. Así que la primera pregunta ante una ficha barata es «cuál es el contenido neto de péptido, y de qué lote».</p>
         <p>Después, pregunta si el certificado lleva tu número de lote, si hay un método al lado de cada cifra y si informa identidad además de pureza. Nuestra <a href="tools/coa-checklist/">lista</a> son esas siete comprobaciones en un formato que puedes ir marcando. Un proveedor que responde a todas y aun así es más caro te ha dicho adónde se fue el dinero.</p>
 
         <h2>Solo para uso en investigación</h2>
