@@ -327,8 +327,8 @@ const FAQS_ES = [
 // Con menos de 10 se muestra "Only N left" y la cantidad no puede pasar de
 // ahí. Con cero, el producto queda agotado para ese país.
 const STOCK_BY_COUNTRY = {
-  PA: { 'ahk-cu': 1, 'bac-water': 0, 'bac-water-10ml': 67, 'bpc-157': 6, 'ghk-cu': 23, 'ipamorelin': 17, 'mots-c': 13, 'nad-plus': 10, 'pt-141': 19, 'retatrutide': 35, 'tb-500': 16, 'tirzepatide': 10 },
-  US: { 'ahk-cu': 0, 'bac-water': 140, 'bac-water-10ml': 0, 'bpc-157': 20, 'ghk-cu': 30, 'ipamorelin': 0, 'mots-c': 30, 'nad-plus': 0, 'pt-141': 0, 'retatrutide': 80, 'tb-500': 0, 'tirzepatide': 0 },
+  PA: { 'ahk-cu': 1, 'bac-water': 5, 'bac-water-10ml': 59, 'bpc-157': 0, 'ghk-cu': 21, 'ipamorelin': 11, 'mots-c': 13, 'nad-plus': 9, 'pt-141': 19, 'retatrutide': 5, 'tb-500': 17, 'tirzepatide': 0 },
+  US: { 'ahk-cu': 0, 'bac-water': 140, 'bac-water-10ml': 0, 'bpc-157': 20, 'ghk-cu': 30, 'ipamorelin': 0, 'mots-c': 30, 'nad-plus': 0, 'pt-141': 0, 'retatrutide': 80, 'retatrutide-30mg': 0, 'tb-500': 0, 'tirzepatide': 0 },
 };
 
 // Lo que el inventario todavía no controla sigue como antes, con 25: un
@@ -360,6 +360,22 @@ function applyStock(code) {
     p.stock = n != null ? n : STOCK_DEFAULT;
     p.outOfStock = p.catalogOut || p.stock === 0;
   });
+}
+
+/* Reemplaza la tabla de existencias con la que manda el servidor.
+   La de arriba es una foto del día en que se publicó el sitio; esta es la de
+   ahora. Solo entra si trae las dos bodegas: media tabla haría desaparecer
+   productos que sí hay. El país lo vuelve a aplicar quien llama. */
+function setStock(tabla) {
+  if (!tabla || !tabla.PA || !tabla.US) return false;
+  STOCK_BY_COUNTRY.PA = tabla.PA;
+  STOCK_BY_COUNTRY.US = tabla.US;
+  STOCK_BY_COUNTRY.ANY = PRODUCTS.reduce((acc, p) => {
+    const pa = tabla.PA[p.slug], us = tabla.US[p.slug];
+    if (pa != null || us != null) acc[p.slug] = Math.max(pa || 0, us || 0);
+    return acc;
+  }, {});
+  return true;
 }
 
 // Base hasta que country.js diga cuál es el país: el mejor caso, para que una
@@ -562,6 +578,6 @@ const BUSINESS = {
 };
 
 window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
-  STOCK_BY_COUNTRY, applyStock,
+  STOCK_BY_COUNTRY, applyStock, setStock,
   WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

@@ -20,7 +20,7 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 - CAS number: 2023788-19-2
 - PubChem CID: 156588324
 - Purity: 99% (HPLC), certificate of analysis per batch
-- Availability: In stock
+- Availability: Out of stock
 - Single vial: $149.00 USD
 - Pack · 3 vials: $411.24 USD (8% off)
 

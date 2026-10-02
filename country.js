@@ -51,5 +51,23 @@
   // así que cuando ellas repintan, el stock ya está actualizado.
   window.addEventListener('rea-country-change', syncStock);
 
+  /* Existencias de ahora, no las del día en que se publicó el sitio.
+     data.js trae una foto del stock; el servidor sabe lo que queda. Se pide
+     una vez al cargar y, si contesta, se repinta con el evento que las vistas
+     ya escuchan para el cambio de país — el efecto es el mismo: recalcular
+     qué se puede comprar.
+
+     Si falla (sin red, sin conteo, servidor caído) no se hace nada y queda la
+     tabla publicada. Prefiere ofrecer de más a romper la tienda: quien impide
+     cobrar lo agotado es el servidor al crear el pago, no esto. */
+  fetch('https://hooks.codexresearchlab.com/stock.php')
+    .then((r) => (r.ok ? r.json() : null))
+    .then((j) => {
+      if (!j || !j.ok || !window.REA.setStock(j.stock)) return;
+      syncStock();
+      window.dispatchEvent(new CustomEvent('rea-country-change'));
+    })
+    .catch(() => {});
+
   window.REACountry = { get, code, config, set, detect };
 })();
