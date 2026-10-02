@@ -137,6 +137,11 @@
         <!-- Gallery -->
         <div class="pd-media">
           <div class="pd-media-main">${ui.media(p, p.sizes[0].label)}</div>
+          ${p.photo2 ? `<div class="pd-thumbs" id="pdThumbs">
+            ${[p.photo, p.photo2].map((src, i) => `<button type="button" class="pd-thumb${i === 0 ? ' active' : ''}" data-src="${src}" aria-label="${T('Photo')} ${i + 1}">
+              <img src="${src}" alt="" width="1400" height="933" loading="lazy">
+            </button>`).join('')}
+          </div>` : ''}
           <div class="pd-badges">
             ${oos ? `<span class="pd-badge oos">${T('Out of stock')}</span>` : ''}
             <span class="pd-badge"><span class="dot"></span> ${T('99% purity (HPLC)')}</span>
@@ -324,6 +329,16 @@
     selectedSize = p.sizes.find((s) => s.label === label) || selectedSize;
     document.querySelectorAll('#pdSizes .pd-opt').forEach((b) => b.classList.toggle('active', b === btn));
     refreshPrice();
+  });
+
+  // Segunda foto: las miniaturas cambian la imagen principal.
+  const thumbs = document.getElementById('pdThumbs');
+  if (thumbs) thumbs.addEventListener('click', (e) => {
+    const btn = e.target.closest('.pd-thumb');
+    if (!btn) return;
+    const main = document.querySelector('.pd-media-main .product-photo');
+    if (main) main.src = btn.dataset.src;
+    thumbs.querySelectorAll('.pd-thumb').forEach((b) => b.classList.toggle('active', b === btn));
   });
 
   document.getElementById('pdQty').addEventListener('click', (e) => {

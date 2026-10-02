@@ -154,7 +154,6 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 ### IGF-1 LR3 · 1 mg per vial
 
 - URL: https://codexresearchlab.com/product/igf-1-lr3/
-- CAS number: 946870-92-4
 - Purity: 99% (HPLC), certificate of analysis per batch
 - Availability: Out of stock
 - Single vial: $159.00 USD

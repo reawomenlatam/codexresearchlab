@@ -311,7 +311,6 @@ CJC-1295 without DAC (modified GRF 1-29) is a tetrasubstituted analog of the fir
 
 - URL: https://codexresearchlab.com/product/igf-1-lr3/
 - Strength: 1 mg per vial
-- CAS number: 946870-92-4
 - Molecular formula: N/A
 - Molecular weight: 9111 g/mol
 - Research areas: IGF-1 receptor, Cell proliferation, Cell culture

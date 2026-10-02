@@ -8,6 +8,7 @@ const PRODUCTS = [
     slug: 'tirzepatide', name: 'GLP-2', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
+    photo2: 'assets/products/tirzepatide-2.jpg',
     sizes: [
       { label: 'Single vial', price: 149 },
       { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
@@ -20,6 +21,7 @@ const PRODUCTS = [
     slug: 'retatrutide', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
+    photo2: 'assets/products/retatrutide-2.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
@@ -32,6 +34,7 @@ const PRODUCTS = [
     slug: 'retatrutide-20mg', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-20mg-2.jpg',
     sizes: [
       { label: 'Single vial', price: 194 },
       { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
@@ -44,6 +47,7 @@ const PRODUCTS = [
     slug: 'retatrutide-30mg', name: 'GLP-3', alias: 'retatrutide', cas: '', tag: 'Research use only',
     mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-30mg-2.jpg',
     sizes: [
       { label: 'Single vial', price: 214 },
       { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
@@ -56,6 +60,7 @@ const PRODUCTS = [
     slug: 'bpc-157', name: 'BPC-157', cas: '137525-51-0', tag: 'CAS # 137525-51-0',
     mg: '10 mg', from: 79, formula: 'C62H98N16O22', weight: '1419.53 g/mol', pubchem: '9941957',
     photo: 'assets/products/bpc-157.jpg',
+    photo2: 'assets/products/bpc-157-2.jpg',
     sizes: [
       { label: 'Single vial', price: 79 },
       { label: 'Pack · 3 vials', price: 218.04, save: '8%' },
@@ -68,6 +73,7 @@ const PRODUCTS = [
     slug: 'mots-c', name: 'MOTS-c', cas: '1627580-64-6', tag: 'CAS # 1627580-64-6',
     mg: '10 mg', from: 85, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
     photo: 'assets/products/mots-c.jpg',
+    photo2: 'assets/products/mots-c-2.jpg',
     sizes: [
       { label: 'Single vial', price: 85 },
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
@@ -80,6 +86,7 @@ const PRODUCTS = [
     slug: 'ipamorelin', name: 'Ipamorelin', cas: '170851-70-4', tag: 'CAS # 170851-70-4',
     mg: '10 mg', from: 135, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
     photo: 'assets/products/ipamorelin.jpg',
+    photo2: 'assets/products/ipamorelin-2.jpg',
     sizes: [
       { label: 'Single vial', price: 135 },
       { label: 'Pack · 3 vials', price: 372.60, save: '8%' },
@@ -92,6 +99,7 @@ const PRODUCTS = [
     slug: 'ghk-cu', name: 'GHK-Cu', cas: '89030-95-5', tag: 'CAS # 89030-95-5',
     mg: '100 mg', from: 95, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ghk-cu.jpg',
+    photo2: 'assets/products/ghk-cu-2.jpg',
     sizes: [
       { label: 'Single vial', price: 95 },
       { label: 'Pack · 3 vials', price: 262.20, save: '8%' },
@@ -104,6 +112,7 @@ const PRODUCTS = [
     slug: 'ghk-cu-50mg', name: 'GHK-Cu', cas: '89030-95-5', tag: 'CAS # 89030-95-5',
     mg: '50 mg', from: 64, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ghk-cu-50mg.jpg', outOfStock: true,
+    photo2: 'assets/products/ghk-cu-50mg-2.jpg',
     sizes: [
       { label: 'Single vial', price: 64 },
       { label: 'Pack · 3 vials', price: 176.64, save: '8%' },
@@ -116,6 +125,7 @@ const PRODUCTS = [
     slug: 'pt-141', name: 'PT-141', cas: '189691-06-3', tag: 'CAS # 189691-06-3',
     mg: '10 mg', from: 85, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
     photo: 'assets/products/pt-141.jpg',
+    photo2: 'assets/products/pt-141-2.jpg',
     sizes: [
       { label: 'Single vial', price: 85 },
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
@@ -140,6 +150,7 @@ const PRODUCTS = [
     slug: 'ahk-cu', name: 'AHK-Cu', cas: '682809-81-0', tag: 'CAS # 682809-81-0',
     mg: '50 mg', from: 120, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/ahk-cu.jpg',
+    photo2: 'assets/products/ahk-cu-2.jpg',
     sizes: [
       { label: 'Single vial', price: 120 },
     ],
@@ -151,6 +162,7 @@ const PRODUCTS = [
     slug: 'tesamorelin', name: 'Tesamorelin', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
     mg: '10 mg', from: 164, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin.jpg', outOfStock: true,
+    photo2: 'assets/products/tesamorelin-2.jpg',
     sizes: [
       { label: 'Single vial', price: 164 },
       { label: 'Pack · 3 vials', price: 452.64, save: '8%' },
@@ -163,6 +175,7 @@ const PRODUCTS = [
     slug: 'tesamorelin-20mg', name: 'Tesamorelin', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
     mg: '20 mg', from: 279, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin-20mg.jpg', outOfStock: true,
+    photo2: 'assets/products/tesamorelin-20mg-2.jpg',
     sizes: [
       { label: 'Single vial', price: 279 },
       { label: 'Pack · 3 vials', price: 770.04, save: '8%' },
@@ -175,6 +188,7 @@ const PRODUCTS = [
     slug: 'cjc-1295-no-dac', name: 'CJC-1295 no DAC', cas: '863288-34-0', tag: 'CAS # 863288-34-0',
     mg: '10 mg', from: 129, formula: 'C152H252N44O42', weight: '3367.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/cjc-1295-no-dac.jpg', outOfStock: true,
+    photo2: 'assets/products/cjc-1295-no-dac-2.jpg',
     sizes: [
       { label: 'Single vial', price: 129 },
       { label: 'Pack · 3 vials', price: 356.04, save: '8%' },
@@ -184,9 +198,14 @@ const PRODUCTS = [
     research: ['GHRH receptor', 'GH secretagogues', 'Endocrine regulation'],
   },
   {
-    slug: 'igf-1-lr3', name: 'IGF-1 LR3', cas: '946870-92-4', tag: 'CAS # 946870-92-4',
+    // El CAS 946870-92-4 que figuraba aquí resuelve en PubChem (CID 168009904) a un
+    // lípido ionizable sin relación con IGF-1. Pasa el dígito de control, que es
+    // justo lo que /tools/cas-number-check/ advierte: la comprobación nunca ve el
+    // nombre. Se retira hasta tener uno verificable. [REVISAR HUMANO]
+    slug: 'igf-1-lr3', name: 'IGF-1 LR3', cas: '', tag: 'Research use only',
     mg: '1 mg', from: 159, formula: 'N/A', weight: '9111 g/mol', pubchem: 'N/A',
     photo: 'assets/products/igf-1-lr3.jpg', outOfStock: true,
+    photo2: 'assets/products/igf-1-lr3-2.jpg',
     sizes: [
       { label: 'Single vial', price: 159 },
       { label: 'Pack · 3 vials', price: 438.84, save: '8%' },
@@ -199,6 +218,7 @@ const PRODUCTS = [
     slug: 'tb-500', name: 'TB-500', cas: 'N/A', tag: 'Research use only',
     mg: '10 mg', from: 119, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/tb-500.jpg', outOfStock: true,
+    photo2: 'assets/products/tb-500-2.jpg',
     sizes: [
       { label: 'Single vial', price: 119 },
       { label: 'Pack · 3 vials', price: 328.44, save: '8%' },
@@ -211,6 +231,7 @@ const PRODUCTS = [
     slug: 'ss-31', name: 'SS-31', cas: '736992-21-5', tag: 'CAS # 736992-21-5',
     mg: '10 mg', from: 99, formula: 'C32H49N9O5', weight: '639.8 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ss-31.jpg', outOfStock: true,
+    photo2: 'assets/products/ss-31-2.jpg',
     sizes: [
       { label: 'Single vial', price: 99 },
       { label: 'Pack · 3 vials', price: 273.24, save: '8%' },
@@ -223,6 +244,7 @@ const PRODUCTS = [
     slug: 'epithalon', name: 'Epithalon', cas: '307297-39-8', tag: 'CAS # 307297-39-8',
     mg: '10 mg', from: 74, formula: 'C14H22N4O9', weight: '390.35 g/mol', pubchem: 'N/A',
     photo: 'assets/products/epithalon.jpg', outOfStock: true,
+    photo2: 'assets/products/epithalon-2.jpg',
     sizes: [
       { label: 'Single vial', price: 74 },
       { label: 'Pack · 3 vials', price: 204.24, save: '8%' },
@@ -235,6 +257,7 @@ const PRODUCTS = [
     slug: 'kisspeptin', name: 'Kisspeptin-10', cas: '374675-21-5', tag: 'CAS # 374675-21-5',
     mg: '10 mg', from: 94, formula: 'C63H83N17O14', weight: '1302.4 g/mol', pubchem: 'N/A',
     photo: 'assets/products/kisspeptin.jpg', outOfStock: true,
+    photo2: 'assets/products/kisspeptin-2.jpg',
     sizes: [
       { label: 'Single vial', price: 94 },
       { label: 'Pack · 3 vials', price: 259.44, save: '8%' },

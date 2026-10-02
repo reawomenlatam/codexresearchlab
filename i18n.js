@@ -79,6 +79,7 @@
     'View product': 'Ver producto',
     'from': 'desde',
     'Out of stock': 'Agotado',
+    'Photo': 'Foto',
     // Aviso cuando cambiar de país deja una línea del carrito sin bodega.
     'is not available for shipping to': 'no está disponible para envío a',
     'so it was removed from your cart.': 'así que se quitó de tu carrito.',
