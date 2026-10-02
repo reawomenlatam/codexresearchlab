@@ -56,7 +56,7 @@
 
         <h2>When it matters and when it does not</h2>
         <p>The answer depends entirely on the experiment. Work with cultured cells, particularly immune cells, is the classic case: these cells respond to endotoxin, so a contaminated reagent produces a response that looks like an effect of the compound under study. An apparent result can be an artefact of the vial, not an effect of the molecule.</p>
-        <p>For an analytical comparison, a binding measurement in a cell-free system, or a chemistry experiment, endotoxin is usually irrelevant. This is why the line appears on some certificates and not others, and why its absence from a document is not automatically a gap.</p>
+        <p>For an analytical comparison, a binding measurement in a cell-free system, or a chemistry experiment, endotoxin is usually irrelevant. The line appears on some certificates and not others for that reason, and its absence from a document is not automatically a gap.</p>
 
         <h2>Where it comes from</h2>
         <p>A synthetic peptide made by <a href="article/peptide-synthesis/">solid-phase synthesis</a> has no bacterial step, so the compound itself is not a source. Contamination arrives from everything around it: water, buffers, glassware, resins and handling. Water is the most common route, since bacteria grow in it readily and leave their membranes behind when they die.</p>
@@ -137,7 +137,7 @@
 
         <h2>Where peptide ends and protein begins</h2>
         <p>The usual convention puts the line around fifty residues. Nothing chemical happens there. The same bond links residue fifty-one as linked residue two, and a chain does not acquire a new property by crossing a count.</p>
-        <p>What changes across that range is behaviour. Short chains tend to stay flexible in solution, while longer ones have enough internal interactions to hold a stable fold. The convention is a rough marker for that shift, and it is applied inconsistently: the same molecule is called a peptide in one paper and a small protein in the next. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers the underlying distinction.</p>
+        <p>Behaviour changes across that range. Short chains tend to stay flexible in solution, while longer ones have enough internal interactions to hold a stable fold. The convention is a rough marker for that shift, and it is applied inconsistently: the same molecule is called a peptide in one paper and a small protein in the next. Our note on <a href="article/amino-acids-peptides-proteins-difference/">amino acids, peptides and proteins</a> covers the underlying distinction.</p>
 
         <h2>Direction and numbering</h2>
         <p>A sequence is written and numbered from the amino terminus to the carboxyl terminus. Residue 1 is the N-terminal one. This is not arbitrary decoration: reading a sequence backwards produces a different molecule that, in most cases, has exactly the same mass, so direction is part of the identity and a mass measurement will not catch the error.</p>
@@ -670,7 +670,7 @@
         <p>Purity is usually reported as a percentage from <a href="article/peptide-purity-hplc-explained/">HPLC</a>, often near 99 percent. It tells you how much of the sample is the target peptide versus everything else the method detected. A high figure with a clean result is a good sign, but remember that purity alone does not confirm what the peptide is.</p>
 
         <h2>Identity</h2>
-        <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, not just that it is pure.</p>
+        <p>Identity is the other half of the picture, and it is usually confirmed by <a href="article/mass-spectrometry-peptide-research/">mass spectrometry</a>. The COA reports the measured mass and compares it with the expected mass for that peptide. When the two match, you have evidence that the compound is what it claims to be, and separately that it is pure.</p>
 
         <h2>Analysis date and methods</h2>
         <p>A COA should say when the testing was done and which methods were used, typically HPLC and mass spectrometry. The date matters because it ties the results to a moment in that batch's life. The methods matter because they tell you how the numbers were produced rather than asking you to take them on faith.</p>
@@ -694,10 +694,10 @@
 
         <h2>Chromatographic purity is not net peptide content</h2>
         <p>This is the most common misreading of a peptide COA. Chromatographic purity asks a question about the peaks: of everything the method detected, what share was the target peptide? Net peptide content asks a question about the powder: of the material you weighed out, what share is peptide at all?</p>
-        <p>The gap between them is real. Peptides purified by reversed-phase HPLC are typically isolated as salts, so part of the powder is counterion and part is absorbed water. A batch can be 99 percent pure by HPLC and still be well under 99 percent peptide by mass, with no contradiction between the two figures. They measure different things, and a certificate reporting only one is not wrong, just incomplete.</p>
+        <p>The gap between them is real. Peptides purified by reversed-phase HPLC are typically isolated as salts, so part of the powder is counterion and part is absorbed water. A batch can be 99 percent pure by HPLC and still be well under 99 percent peptide by mass, with no contradiction between the two figures. They measure different things, and a certificate reporting only one leaves a gap, and a gap is not an error.</p>
 
         <h2>Reading the chromatogram itself</h2>
-        <p>If the COA includes the chromatogram and not only the percentage, look at the trace and not just the number beside it. One tall, symmetrical peak on a flat baseline is the picture you want. Small peaks near the main one are common in peptide synthesis and usually correspond to closely related species, such as truncated or modified sequences the column separates only narrowly. A secondary peak sitting very close to the main one tells you the method had to work to resolve it, which is why the method conditions belong on the certificate.</p>
+        <p>If the COA includes the chromatogram and not only the percentage, look at the trace and not the number beside it alone. One tall, symmetrical peak on a flat baseline is the picture you want. Small peaks near the main one are common in peptide synthesis and usually correspond to closely related species, such as truncated or modified sequences the column separates only narrowly. A secondary peak sitting very close to the main one tells you the method had to work to resolve it, which is why the method conditions belong on the certificate.</p>
 
         <h2>What mass spectrometry adds that HPLC cannot</h2>
         <p>HPLC separates and quantifies; it does not name. Two different compounds can elute at a similar time under the same conditions, and a UV detector reports both as peaks without opinion. Mass spectrometry answers what chromatography leaves open by measuring mass directly, so the observed value can be compared with the mass calculated from the sequence, and tandem approaches fragment the molecule to support the sequence itself. That is why purity without an identity method is half a document.</p>
@@ -753,7 +753,7 @@
 
         <h2>What the number is</h2>
         <p>The sample is pushed through a column that separates its components, a detector records each one as it leaves, and the result is a chromatogram: a trace with peaks. The target peptide is the main peak. Purity is the area under that peak divided by the total area of all the peaks the detector saw, expressed as a percentage.</p>
-        <p>So 99 percent says the target accounted for about 99 percent of what this method detected under these conditions. Every part of that sentence is doing work.</p>
+        <p>A figure of 99 percent says the target accounted for about 99 percent of what this method detected under these conditions. Every part of that sentence is doing work.</p>
 
         <h2>Area is not mass</h2>
         <p>This is the misreading that matters most. Area percent answers a question about the peaks. It does not answer what share of the powder in the vial is peptide.</p>
@@ -774,7 +774,7 @@
 
         <h2>A percentage has a precision</h2>
         <p>Integration is not exact. Where the software places the start and end of a peak, how it draws the baseline under a drifting trace, and whether it groups a shoulder with the main peak or separates it all move the result. Two analysts integrating the same chromatogram can differ in the first decimal place.</p>
-        <p>This is why the difference between 99.1 and 99.4 percent usually carries less information than it appears to, while the difference between 95 and 99 is real.</p>
+        <p>The difference between 99.1 and 99.4 percent usually carries less information than it appears to, while the difference between 95 and 99 is real.</p>
 
         <h2>What hides inside the main peak</h2>
         <p>An impurity that leaves the column at the same time as the target is counted as target. The usual candidates are the ones <a href="article/peptide-synthesis/">synthesis</a> produces: deletion sequences missing a single residue, or chains that kept a protecting group. They resemble the target closely enough that resolving them is exactly what the method has to do well.</p>
@@ -988,7 +988,7 @@
 
         <h2>Where selectivity fits</h2>
         <p>Few receptors exist alone. Most belong to families whose members share enough structure that a compound shaped for one will often touch its relatives, and selectivity is the word for how cleanly it avoids doing so. It is a comparison, never an absolute: a compound is selective for one subtype over another by some factor, under some conditions.</p>
-        <p>This is why <a href="article/what-is-ipamorelin/">ipamorelin</a> is described as selective, and why the recurring question for any melanocortin agonist such as <a href="article/what-is-pt-141/">PT-141</a> is which of the <a href="article/what-are-melanocortin-receptors/">receptor subtypes</a> it engages and how strongly. For a research tool, selectivity is what makes an observation attributable: the cleaner the profile, the fewer alternative explanations for what was measured.</p>
+        <p><a href="article/what-is-ipamorelin/">Ipamorelin</a> is described as selective for that reason, and the recurring question for any melanocortin agonist such as <a href="article/what-is-pt-141/">PT-141</a> is which of the <a href="article/what-are-melanocortin-receptors/">receptor subtypes</a> it engages and how strongly. For a research tool, selectivity is what makes an observation attributable: the cleaner the profile, the fewer alternative explanations for what was measured.</p>
 
         <h2>The label is partly a property of the experiment</h2>
         <p>Most explanations leave this out. Whether a compound looks like a full agonist or a partial one depends on the compound and on the system it is measured in: how many receptors are present, how strongly the readout amplifies the signal, and which downstream event is being observed. Frameworks exist precisely to separate what belongs to the molecule from what belongs to the assay. <a class="cite" href="https://doi.org/10.1098/rspb.1983.0093" target="_blank" rel="noopener nofollow">(Reference: Black &amp; Leff, 1983)</a> <a class="cite" href="https://doi.org/10.1016/j.tips.2004.02.012" target="_blank" rel="noopener nofollow">(Reference: Kenakin, 2004)</a></p>
@@ -996,7 +996,7 @@
 
         <h2>What the word tells you about a vial, and what it does not</h2>
         <p>Almost every compound in this catalogue is described as a receptor agonist. <a href="article/what-is-ipamorelin/">Ipamorelin</a> at the ghrelin receptor, <a href="article/what-is-pt-141/">PT-141</a> at melanocortin receptors, <a href="article/what-is-tirzepatide/">tirzepatide</a> at the incretin receptors. The term describes what the molecule is understood to do at its target, drawn from published work.</p>
-        <p>What it does not describe is the material in front of you. "Agonist" is a statement about a structure; it says nothing about whether this batch contains that structure, how pure it is, or whether the right molecule is in the vial. Those questions are answered by a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> and by checking a <a href="verify/">batch number</a>, not by a word in a description.</p>
+        <p>It does not describe the material in front of you. "Agonist" is a statement about a structure; it says nothing about whether this batch contains that structure, how pure it is, or whether the right molecule is in the vial. Those questions are answered by a <a href="article/how-to-read-a-certificate-of-analysis/">certificate of analysis</a> and by checking a <a href="verify/">batch number</a>, not by a word in a description.</p>
 
         <h2>Research use only</h2>
         <p>This article is background pharmacology for laboratory context. All products sold by Codex Research are strictly for research and development, are not for human or animal consumption, and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -1081,7 +1081,7 @@
 
         <h2>Upstream is doing work in that sentence</h2>
         <p>Describing a receptor as sitting upstream of a pathway says the signal passes through several steps before anything measurable happens at the other end. Each of those steps is a place where something else can intervene, and where the state of the system decides how much of the signal gets through.</p>
-        <p>This is why observations from these compounds depend heavily on the model they were made in. A result from cultured cells and a result from an intact animal are answering related but different questions, and neither transfers automatically to the other.</p>
+        <p>Observations from these compounds depend on the model they were made in. A result from cultured cells and a result from an intact animal are answering related but different questions, and neither transfers automatically to the other.</p>
 
         <h2>The class is chemically mixed</h2>
         <p>Membership is defined by the target, not by structure, so the compounds grouped under this label have little in common as molecules. Some are short peptides, some are peptide-like, and some are not peptides. Our note on <a href="article/what-is-ipamorelin/">ipamorelin</a> covers a pentapeptide in the class whose five residues include units no organism builds.</p>
@@ -1612,7 +1612,7 @@
         <p>Alternatives exist and each trades something. Phenol and m-cresol are more aggressive toward dissolved proteins, by the same comparison cited above. Chlorobutanol is gentler but less broadly effective and less stable. The 0.9 percent figure on the label is the outcome of that balance rather than a round number chosen for convenience.</p>
 
         <h2>What the concentration is doing</h2>
-        <p>Nine milligrams per millilitre is enough to hold a population in check and low enough to stay below the point where the preservative dominates the solution's behaviour. Both halves of that sentence matter. Too little and the container cannot honestly be called multi-dose; too much and the effects described below stop being a secondary consideration.</p>
+        <p>Nine milligrams per millilitre is enough to hold a population in check and low enough to stay below the point where the preservative dominates the solution's behaviour. Both halves of that sentence matter. Too little and the container cannot be called multi-dose; too much and the effects described below stop being a secondary consideration.</p>
 
         <h2>Sterile and nonpyrogenic are two claims</h2>
         <p>Sterile means no viable organisms. Nonpyrogenic means free of the bacterial fragments that provoke a fever response, principally endotoxin, which survives conditions that kill the bacterium that produced it.</p>
@@ -1620,7 +1620,7 @@
 
         <h2>How it differs from sterile water</h2>
         <p>Sterile water for injection is water with nothing added, intended for single use. Once the container is opened it has no preservative holding back contamination. Bacteriostatic water, because of the benzyl alcohol, tolerates being entered more than once over a period, which is why it is supplied in a multiple-dose container while plain sterile water is not.</p>
-        <p>The container format follows from the chemistry rather than from marketing. A fluid with no preservative cannot honestly be sold as multi-dose.</p>
+        <p>The container format follows from the chemistry rather than from marketing. A fluid with no preservative cannot be sold as multi-dose.</p>
 
         <h2>Why the pH is on the label</h2>
         <p>At 5.7 the fluid is mildly acidic, and that figure is worth more attention than it usually gets. Deamidation, the most common degradation route for peptides in water, depends strongly on pH: it runs fastest at neutral and alkaline pH and slowest in roughly the pH 3 to 6 band. The stated value sits inside the slower band.</p>
@@ -1953,7 +1953,7 @@
 
         <h2>Why a mass measurement is not enough here</h2>
         <p>This is where the unusual residues come back. A D-amino acid and its L counterpart have the same formula and the same mass. Nothing in a standard <a href="article/mass-spectrometry-peptide-research/">mass spectrum</a> separates them, so a batch in which a D residue was accidentally supplied as the L form would return the expected mass and the expected formula while being a different molecule.</p>
-        <p>What does distinguish them is behaviour on a column. Diastereomeric impurities, chains that differ only in the configuration of one residue, generally elute at a slightly different time, so they appear in the <a href="article/high-performance-liquid-chromatography-hplc/">chromatographic run</a> as a peak close to the main one. It is a good illustration of why purity and identity are two separate questions and why a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> that answers only one is incomplete.</p>
+        <p>They differ in how they behave on a column. Diastereomeric impurities, chains that differ only in the configuration of one residue, generally elute at a slightly different time, so they appear in the <a href="article/high-performance-liquid-chromatography-hplc/">chromatographic run</a> as a peak close to the main one. It is a good illustration of why purity and identity are two separate questions and why a <a href="article/how-to-read-a-certificate-of-analysis/">certificate</a> that answers only one is incomplete.</p>
 
         <h2>Handling and verification</h2>
         <p>Ipamorelin ships <a href="article/lyophilization-freeze-drying/">lyophilized</a>, which is the stable form. Keep it dry and cool, and let a cold vial reach room temperature before opening so condensation does not form inside; our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers the general case. Each batch can be checked against its paperwork by <a href="verify/">batch number</a> before the vial is opened.</p>
@@ -2052,7 +2052,7 @@
 
         <h2>Why purity alone tells you less here</h2>
         <p>A purity percentage from <a href="article/high-performance-liquid-chromatography-hplc/">reversed-phase chromatography</a> answers a question about the peptide: what share of the detected material was the target sequence. It does not, on its own, tell you how much copper is present or whether it is bound in the intended one-to-one ratio.</p>
-        <p>There is also a methodological trap. Reversed-phase methods for peptides normally run at low pH with an acidic additive, and acidic conditions can shift a labile metal complex toward its dissociated form. A run that reports a clean peak may be reporting a clean peak of the free tripeptide. This is why, for a metal complex, the conditions of the analysis are part of the result in a way that goes beyond the usual, and why copper content is worth reporting as its own figure rather than inferred from peptide purity. Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers what a complete document carries.</p>
+        <p>There is also a methodological trap. Reversed-phase methods for peptides normally run at low pH with an acidic additive, and acidic conditions can shift a labile metal complex toward its dissociated form. A run that reports a clean peak may be reporting a clean peak of the free tripeptide. For a metal complex, then, the conditions of the analysis are part of the result in a way that goes beyond the usual, and copper content is worth reporting as its own figure rather than inferred from peptide purity. Our guide to <a href="article/how-to-read-a-certificate-of-analysis/">reading a certificate</a> covers what a complete document carries.</p>
 
         <h2>Where the sequence comes from</h2>
         <p>Unlike engineered agonists, GHK is a sequence that occurs naturally in human plasma. The research-grade material is made synthetically by <a href="article/peptide-synthesis/">solid-phase synthesis</a> and then complexed with copper under controlled conditions, so the ratio and the purity are defined rather than inherited. Natural origin is part of the story; it is not a substitute for a batch record.</p>
@@ -2498,7 +2498,7 @@
         <p>The pack of three follows the catalogue formula, a unit price multiplied by three with a discount applied, so the saving is visible in dollars on the product page instead of being described in the abstract.</p>
 
         <h2>Research use only</h2>
-        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. No guidance on use is given, before or after an order.</p>
+        <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease. We give no guidance on use, before or after an order.</p>
       `,
       faq: [
         {
@@ -2576,7 +2576,7 @@
           <li><b>Legibility:</b> you can read the header and the chromatogram, rather than a compressed image of them.</li>
           <li><b>One batch, one document:</b> the certificate is specific to that lot, not a single file reused across a catalogue.</li>
         </ul>
-        <p>What each of those fields means, and the difference between chromatographic purity and net peptide content, is covered in detail in <a href="article/how-to-read-a-certificate-of-analysis/">how to read a certificate of analysis</a>. This guide is about confirming that the certificate in front of you belongs to the vial in front of you.</p>
+        <p>Our note covers each of those fields, and the difference between chromatographic purity and net peptide content, in <a href="article/how-to-read-a-certificate-of-analysis/">how to read a certificate of analysis</a>. This guide is about confirming that the certificate in front of you belongs to the vial in front of you.</p>
 
         <h2>What makes testing independent</h2>
         <p>Third-party testing means the laboratory reporting the result is not the party selling the material. That separation is the entire value of the arrangement, and it is why the laboratory's identity belongs on the certificate rather than being described in the abstract. Recognised competence standards for testing laboratories are built around exactly these two ideas, competence and impartiality, and where a laboratory holds accreditation it applies to a defined list of methods rather than to testing in general. At Codex Research, every batch is tested by an independent laboratory using HPLC and mass spectrometry.</p>
@@ -2636,7 +2636,7 @@
         <h2>Monoisotopic mass and average mass</h2>
         <p>A certificate that reports an observed mass is reporting one of two different numbers, and they are not interchangeable.</p>
         <p><b>Monoisotopic mass</b> is calculated using the lightest and most abundant isotope of every element in the formula: carbon-12, hydrogen-1, nitrogen-14, oxygen-16. <b>Average mass</b> weights every element by the natural abundance of all its isotopes. For a small peptide the two figures differ by well under a dalton. As the molecule gets larger the gap widens, because there are more carbon atoms available to carry a heavier isotope. <a class="cite" href="https://doi.org/10.1016/1044-0305(95)00017-8" target="_blank" rel="noopener nofollow">(Reference: Senko et al., 1995)</a></p>
-        <p>This is why an observed mass that sits a dalton away from what you expected is not automatically a problem. It may be the same molecule reported on the other convention. It is also why a good certificate says which mass it is quoting.</p>
+        <p>An observed mass a dalton away from what you expected is not automatically a problem. It may be the same molecule reported on the other convention. It is also why a good certificate says which mass it is quoting.</p>
 
         <h2>Tandem mass spectrometry and the sequence</h2>
         <p>Measuring the whole molecule confirms its mass. It does not confirm the order of the residues, and two different sequences built from the same amino acids weigh exactly the same. Tandem mass spectrometry closes that gap by selecting one ion, breaking it apart, and measuring the pieces.</p>
@@ -2766,7 +2766,7 @@
 
         <h2>Gradient and isocratic runs</h2>
         <p>An isocratic method holds the mobile phase composition constant for the whole run. A gradient method changes it, usually raising the organic proportion steadily over time. Peptides are almost always run as gradients, because a single fixed composition that releases one sequence promptly will hold another on the column far too long, or wash both off together with no separation at all.</p>
-        <p>The shape of that gradient is a real variable. A shallow gradient spreads peaks out and resolves species that a steep one merges into a single peak. Two laboratories can analyse the same batch, both report honestly, and arrive at different purity figures because one gave the separation more room than the other. It is another reason the conditions belong next to the number.</p>
+        <p>The shape of that gradient is a real variable. A shallow gradient spreads peaks out and resolves species that a steep one merges into a single peak. Two laboratories can analyse the same batch, both report in good faith, and arrive at different purity figures because one gave the separation more room than the other. It is another reason the conditions belong next to the number.</p>
 
         <h2>What the trace shows</h2>
         <p>If a certificate includes the trace, look at it. One tall, symmetrical peak on a flat baseline is the picture you want. Small peaks close to the main one are common in synthesis and usually correspond to closely related species, such as truncated or modified sequences. A shoulder on the main peak means the method resolved it with little margin, which is exactly why the method conditions belong on the document. <a class="cite" href="https://doi.org/10.1002/0470087951" target="_blank" rel="noopener nofollow">(Reference: Kazakevich &amp; LoBrutto, 2006)</a></p>
@@ -2977,7 +2977,7 @@
         <p>${cite('Reference: Franks, 1998', 'https://doi.org/10.1016/S0939-6411(98)00004-6').trim()}</p>
 
         <h2>Why the freezing step decides most of the outcome</h2>
-        <p>Freezing is not just cooling. As the temperature falls, water separates out as ice and the remaining solutes are pushed into progressively more concentrated pockets, which freeze at lower temperatures than the surrounding water. Most samples behave as eutectics, a mixture of solutes and solvent that is only properly frozen once the entire eutectic mixture has solidified. Others never crystallise at all: the suspension grows more viscous as it cools until it sets as a vitreous solid at the glass transition point, and this second type is considerably harder to freeze-dry.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
+        <p>Freezing does more than cool. As the temperature falls, water separates out as ice and the remaining solutes are pushed into progressively more concentrated pockets, which freeze at lower temperatures than the surrounding water. Most samples behave as eutectics, a mixture of solutes and solvent that is only properly frozen once the entire eutectic mixture has solidified. Others never crystallise at all: the suspension grows more viscous as it cools until it sets as a vitreous solid at the glass transition point, and this second type is considerably harder to freeze-dry.${cite('Reference: Labconco, A Guide to Freeze Drying for the Laboratory', 'https://documents.thermofisher.com/TFS-Assets/ANZ/brochures/labconco-guide-fd.pdf')}</p>
         <p>Cooling rate matters for the same reason. Rapid cooling gives small ice crystals, useful when a structure has to be preserved for microscopy, but it leaves narrow channels in the matrix and makes the sample slower to dry. Slower cooling gives larger crystals and less restrictive channels for vapour to escape through. Either way, the product has to be frozen below its eutectic or glass transition temperature before drying begins, because pockets of unfrozen material will expand under vacuum and compromise the structure of the finished cake.</p>
 
         <h2>Collapse temperature, and what a bad cake tells you</h2>
@@ -3057,7 +3057,7 @@
 
         <h2>Buffers, and the trap inside them</h2>
         <p>Peptides degrade at rates that depend strongly on pH, so a buffer holds the solution where degradation is slowest. The complication is what happens on the way down: as a solution freezes, pure ice separates out and everything else concentrates into the shrinking liquid fraction. If one component of a buffer pair crystallises before the other, the pH of that fraction shifts, sometimes by units, precisely when the material is most vulnerable.</p>
-        <p>This is why the choice of buffer for a freeze-dried product is not interchangeable with the choice for a solution.</p>
+        <p>The choice of buffer for a freeze-dried product is not interchangeable with the choice for a solution. A buffer that holds pH well in water can shift during freezing, as one of its components crystallises out before the other and leaves the remaining liquid more acidic or more basic than the label suggests.</p>
 
         <h2>Surfactants: protecting the surfaces</h2>
         <p>Polysorbate 20 and polysorbate 80 appear at very low concentrations, and their job is the interfaces: air-liquid, liquid-solid, the wall of the vial. Peptides and proteins accumulate at surfaces and can unfold or aggregate there, and a surfactant occupies those interfaces first.</p>
@@ -3393,7 +3393,7 @@
 
         <h2>4. Who signed it, and do they sell the material?</h2>
         <p>A certificate is a claim made by whoever issued it. Independent testing matters because it separates the party making the claim from the party being paid, and laboratories working to recognised competence standards are assessed against defined criteria for competence and impartiality.</p>
-        <p>What the number says is one question. Who produced it, and under which method, is the other. A document with no laboratory named and no signature leaves nobody answerable for it.</p>
+        <p>The number says one thing. Who produced it, and under which method, is a separate question. A document with no laboratory named and no signature leaves nobody answerable for it.</p>
 
         <h2>5. Does it report identity as well as purity?</h2>
         <p>These answer different questions and a document with only one is half a document. Purity from <a href="article/high-performance-liquid-chromatography-hplc/">chromatography</a> reports what share of the detected material is one main component. It has no opinion about what that component is.</p>
@@ -3634,7 +3634,7 @@
         <p>The raw trace behind the purity figure: detector response against time, with the target as the large peak and everything else the method detected as smaller ones.</p>
         <p>A certificate can report 99.2 percent without showing you where the other 0.8 percent sits. The trace shows it. A shoulder on the main peak means the method barely separated something; several small peaks spread across the run are a different picture from one peak sitting right beside the target, which in synthetic peptides often corresponds to a <a href="article/peptide-synthesis/">deletion sequence</a> differing by a single residue.</p>
         <p>The axes are part of the evidence. A trace with no scale on the time axis cannot be compared against anything, and an image too low in resolution to read the labels is a picture of a chromatogram, not a chromatogram.</p>
-        <p>What it cannot tell you is what any of those peaks are. Chromatography sorts by how strongly things stick to a column, not by identity. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Reference: Dong, 2006)</a> It also cannot show you anything the detector did not see: at 214 nm a peptide bond absorbs, but salts and water pass through invisibly.</p>
+        <p>It cannot tell you what any of those peaks are. Chromatography sorts by how strongly things stick to a column, not by identity. <a class="cite" href="https://doi.org/10.1002/0471973106" target="_blank" rel="noopener nofollow">(Reference: Dong, 2006)</a> It also cannot show you anything the detector did not see: at 214 nm a peptide bond absorbs, but salts and water pass through invisibly.</p>
 
         <h2>The mass spectrum</h2>
         <p>The identity evidence. The instrument measures mass-to-charge ratios, and the measured mass is compared against the mass calculated from the intended sequence. <a class="cite" href="https://doi.org/10.1126/science.2675315" target="_blank" rel="noopener nofollow">(Reference: Fenn et al., 1989)</a></p>
@@ -3850,7 +3850,7 @@
 
         <h2>Short peptides are easier to make cleanly</h2>
         <p>Three residues means two coupling steps. Each step is an opportunity for an incomplete reaction, so a tripeptide starts from a much better position than a fifteen-mer, and high purity figures on compounds this short are unremarkable. Our note on <a href="article/peptide-synthesis/">synthesis</a> explains where the impurities come from.</p>
-        <p>What that means in practice: on a short peptide, purity is the easy number and identity is the one worth reading. A document that gives you 99 percent and no mass has told you the easy half.</p>
+        <p>In practice, on a short peptide purity is the easy number and identity is the one worth reading. A document that gives you 99 percent and no mass has told you the easy half.</p>
 
         <h2>What the methyl group does not settle</h2>
         <p>A one-residue difference reads like a small difference in everything, and that inference does not hold in either direction. A single substitution next to a metal binding site can change how tightly the metal is held, how the complex behaves at a given pH, and how the molecule sits in a solvent, without changing anything you can see in a formula.</p>
@@ -3861,7 +3861,7 @@
         <p>A pair of certificates that differ in more than that is worth a question. Two documents from the same supplier for two closely related compounds, produced on different templates with different fields, usually means they came from different places. No accusation is intended: it is an observation anyone can make with both pages open, and it is the sort of thing only a pair makes visible.</p>
 
         <h2>What this comparison is not</h2>
-        <p>It is not a claim that one is better, and it says nothing about what either does in an organism. The comparison that belongs here is between what can be documented about each, which is the only one a seller can make honestly.</p>
+        <p>It is not a claim that one is better, and it says nothing about what either does in an organism. The comparison that belongs here is between what can be documented about each, which is the only honest comparison a seller can make.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -3956,7 +3956,7 @@
         <p>Neither absence is a problem on the right page. A copper line missing from a BPC-157 certificate is correct; missing from a GHK-Cu certificate it is a gap. Knowing which fields each compound requires is most of what reading a certificate consists of, and it is why a single generic template across a whole catalogue is itself informative.</p>
 
         <h2>What this comparison is not</h2>
-        <p>It is not a recommendation and makes no claim about what either compound does. Both are sold here for laboratory research, and the comparison a seller can honestly make is between what is documented, not between outcomes.</p>
+        <p>It is not a recommendation and makes no claim about what either compound does. Both are sold here for laboratory research, and the honest comparison a seller can make is between what is documented, not between outcomes.</p>
 
         <h2>Research use only</h2>
         <p>All products sold by Codex Research are strictly for laboratory research and development. They are not for human or animal consumption and are not intended to diagnose, treat, cure, or prevent any disease.</p>
@@ -4030,7 +4030,7 @@
         <h2>Two different kinds of molecule</h2>
         <p>NAD+ is nicotinamide adenine dinucleotide, a coenzyme built from a nicotinamide, an adenine, two riboses and two phosphates. It is not a peptide and has no sequence. It is central to redox chemistry across metabolism and its turnover is a well-mapped subject. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Reference: Cantó et al., 2015)</a></p>
         <p>MOTS-c is a peptide of sixteen residues, MRWQEMGYIFYPRKLR, and the notable thing about it is where its gene sits: in the mitochondrial genome and not the nuclear one, which was not where short peptides were expected to be found. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Reference: Lee et al., 2015)</a> Our note on <a href="article/what-is-mots-c/">MOTS-c</a> covers the discovery.</p>
-        <p>So one is a small-molecule cofactor and the other a short protein fragment. Almost nothing transfers between them analytically.</p>
+        <p>One is a small-molecule cofactor, the other a short protein fragment. Almost nothing transfers between them analytically.</p>
 
         <h2>What that does to the paperwork</h2>
         <p>A peptide certificate and a small-molecule certificate are different documents that happen to share a name.</p>
@@ -4224,7 +4224,7 @@
       slug: 'why-peptide-prices-differ',
       title: 'Why Two Vials of the Same Peptide Cost Different Amounts',
       metaTitle: 'Why Research Peptide Prices Differ So Much',
-      metaDescription: 'Net peptide content, synthesis length, batch size and whether testing was paid for. What actually sits behind a price difference between two identical labels.',
+      metaDescription: 'Net peptide content, synthesis length, batch size and whether testing was paid for. What sits behind a price difference between two identical labels.',
       focusKeyword: 'research peptide price differences',
       category: 'Buying Guide',
       tags: ["pricing","net peptide content","quality","buying"],
@@ -4236,7 +4236,7 @@
 
         <h2>Milligrams on a label are not milligrams of peptide</h2>
         <p>This is the largest single factor and the least visible one. Material purified by reversed-phase chromatography is isolated as a salt, usually trifluoroacetate, and lyophilised powder also holds absorbed water. Both add weight without adding peptide.</p>
-        <p>So "10 mg" can mean ten milligrams of powder, of which the peptide fraction might be eighty-something percent, or ten milligrams of peptide with the salt on top. Those are different products at the same label. The figure that resolves it is net peptide content, which is a separate line from chromatographic purity: purity is about the detected peaks, net content is about the weighed mass. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest.</p>
+        <p>A label reading "10 mg" can mean ten milligrams of powder, of which the peptide fraction might be eighty-something percent, or ten milligrams of peptide with the salt on top. Those are different products at the same label. The figure that resolves it is net peptide content, which is a separate line from chromatographic purity: purity is about the detected peaks, net content is about the weighed mass. Our note on <a href="article/excipients-in-peptides/">what else is in the vial</a> covers the rest.</p>
         <p>A vial that looks thirty percent cheaper and reports no net content may be the same price per milligram of actual peptide, or more. Without the line you cannot tell, which is the point.</p>
 
         <h2>Length, and the cost of the last few percent</h2>
@@ -4430,11 +4430,11 @@
 
         <h2>Why time and temperature are the same variable</h2>
         <p>Peptides degrade by known chemical routes, and the ones that matter are ordinary chemistry: hydrolysis of the backbone, oxidation of susceptible side chains, deamidation of asparagine and glutamine. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> All of them proceed faster when it is warmer, so a week at 30 °C is not equivalent to a week at 4 °C.</p>
-        <p>This is why a result belongs to a moment. A certificate reporting 99.2 percent describes a batch on the day it was measured, and it stays true about that day no matter what happens afterwards. The document is not wrong. It is about a measurement, not about transit. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes in more detail.</p>
+        <p>A result belongs to a moment for that reason. A certificate reporting 99.2 percent describes a batch on the day it was measured, and it stays true about that day no matter what happens afterwards. The document is not wrong. It is about a measurement, not about transit. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the routes in more detail.</p>
 
         <h2>Lyophilisation buys time, not immunity</h2>
         <p>Freeze-drying removes most of the water, and water participates in several of the degradation routes, so a dry solid is substantially more stable than the same peptide in solution. That is the whole point of shipping powder.</p>
-        <p>What it does not do is stop the clock. A lyophilised cake is <a href="article/lyophilization-freeze-drying/">hygroscopic</a>, and it will pull moisture from humid air through any imperfect seal. In a climate that is warm and humid at once, those two factors compound: more water available and more energy to drive the reactions it enables.</p>
+        <p>It does not stop the clock. A lyophilised cake is <a href="article/lyophilization-freeze-drying/">hygroscopic</a>, and it will pull moisture from humid air through any imperfect seal. In a climate that is warm and humid at once, those two factors compound: more water available and more energy to drive the reactions it enables.</p>
 
         <h2>Where the gap opens</h2>
         <p>Three places, in rough order of how much time they account for.</p>
@@ -4448,7 +4448,7 @@
 
         <h2>What to ask, and what nobody can answer</h2>
         <p>Answerable: where the stock ships from, how long domestic transit takes, whether the vial is sealed and protected, and what date is on the certificate. The last one is the most useful and the least requested. A document dated eighteen months ago describes the batch as it was eighteen months ago, whatever the cold chain did since.</p>
-        <p>Not answerable by anyone honestly: the temperature history of a specific parcel, unless it travelled with a logger. A seller claiming an unbroken cold chain across an international journey is claiming knowledge of conditions in a customs warehouse. The accurate statement is about how the material was held and how it was sent, which is a narrower thing to say.</p>
+        <p>Not answerable by anyone: the temperature history of a specific parcel, unless it travelled with a logger. A seller claiming an unbroken cold chain across an international journey is claiming knowledge of conditions in a customs warehouse. The accurate statement is about how the material was held and how it was sent, which is a narrower thing to say.</p>
 
         <h2>Why the problem is sharper in a warm climate</h2>
         <p>Rate depends on temperature, so the same journey costs more in Panama than in a temperate country, and the two risky stretches are exactly the ones a tropical route lengthens: an unair-conditioned warehouse and an afternoon on a doorstep. Humidity adds the second factor, because a hygroscopic cake has more water available to pull in.</p>

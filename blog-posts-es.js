@@ -235,7 +235,7 @@
         <p>La HPLC separa y cuantifica; no nombra. Dos compuestos distintos pueden eluir a tiempos parecidos bajo las mismas condiciones, y un detector UV reporta los dos como picos sin opinar. La espectrometría de masas responde lo que la cromatografía deja abierto midiendo la masa directamente, de modo que el valor observado se puede comparar con el calculado a partir de la secuencia, y los enfoques en tándem fragmentan la molécula para respaldar la secuencia misma. Por eso una pureza sin método de identidad es medio documento.</p>
 
         <h2>Quién lo firma, y por qué importa</h2>
-        <p>Un certificado es una afirmación de quien lo emite, así que el análisis independiente importa porque separa a quien hace la afirmación de quien vende el material. Los laboratorios que trabajan bajo una norma de competencia reconocida se evalúan contra criterios definidos de competencia e imparcialidad, y la acreditación cubre una lista específica de métodos, no los análisis en general. La pregunta útil no es solo qué dice el número, sino quién lo produjo y con qué método.</p>
+        <p>Un certificado es una afirmación de quien lo emite, así que el análisis independiente importa porque separa a quien hace la afirmación de quien vende el material. Los laboratorios que trabajan bajo una norma de competencia reconocida se evalúan contra criterios definidos de competencia e imparcialidad, y la acreditación cubre una lista específica de métodos, no los análisis en general. El número dice una cosa. Quién lo produjo, y con qué método, es una pregunta aparte.</p>
 
         <h2>Señales de alarma en un certificado</h2>
         <ul>
@@ -387,7 +387,7 @@
         <p>No responde qué proporción del polvo es péptido. El contraión, el agua absorbida y cualquier cosa sin cromóforo a la longitud de onda elegida no entran en ese cálculo. Un lote puede ser 99 por ciento puro por área y estar bastante por debajo de 99 por ciento de péptido en masa, sin contradicción entre las dos cifras. Miden cosas distintas, y por eso un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo reporta ambas.</p>
 
         <h2>Las condiciones son parte del resultado</h2>
-        <p>Una cifra de pureza sin método detrás es una afirmación, no una medición. La columna, el gradiente, el flujo, la longitud de onda y la duración cambian el número que sale. Reportadas juntas, permiten que otra persona repita el análisis. Reportado solo, el porcentaje pide que se le crea. Las guías sobre validación de procedimientos analíticos existen precisamente porque un resultado es inseparable del procedimiento que lo produjo. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Referencia: Swartz y Krull, 2012)</a></p>
+        <p>Una cifra de pureza sin método detrás es una afirmación, no una medición. La columna, el gradiente, el flujo, la longitud de onda y la duración cambian el número que sale. Reportadas juntas, permiten que otra persona repita el análisis. Reportado solo, el porcentaje pide que se le crea. Las guías sobre validación de procedimientos analíticos existen porque un resultado es inseparable del procedimiento que lo produjo. <a class="cite" href="https://doi.org/10.1201/b12039" target="_blank" rel="noopener nofollow">(Referencia: Swartz y Krull, 2012)</a></p>
 
         <h2>Qué no puede hacer la HPLC</h2>
         <ul>
@@ -465,7 +465,7 @@
 
         <h2>En qué se diferencia del agua estéril</h2>
         <p>El agua estéril para inyección es agua sin nada añadido, pensada para un solo uso. Una vez abierto el envase no tiene conservante que contenga la contaminación. El agua bacteriostática, por el alcohol bencílico, tolera que se entre en ella más de una vez a lo largo de un tiempo, y por eso se suministra en envase multidosis mientras que el agua estéril común no.</p>
-        <p>El formato del envase se deriva de la química, no del marketing. Un fluido sin conservante no puede venderse honestamente como multidosis.</p>
+        <p>El formato del envase se deriva de la química, no del marketing. Un fluido sin conservante no puede venderse como multidosis.</p>
 
         <h2>Por qué el pH está en la etiqueta</h2>
         <p>A 5,7 el fluido es ligeramente ácido, y esa cifra merece más atención de la que suele recibir. La desamidación, la vía de degradación más común de los péptidos en agua, depende mucho del pH: es más rápida a pH neutro y alcalino y más lenta en la banda aproximada de pH 3 a 6. El valor declarado cae dentro de la banda lenta.</p>
@@ -794,7 +794,7 @@
 
         <h2>Algunos viales no llevan más que el compuesto</h2>
         <p>Nada de esto significa que todo péptido de investigación esté formulado. Muchos se despachan como el compuesto purificado y su contraión y nada más, sobre todo cuando la cantidad basta para formar un cake por sí sola y la secuencia no es propensa a agregarse.</p>
-        <p>Los proveedores lo eligen a propósito, y en algunos contextos de laboratorio es lo preferible: un excipiente que estabiliza un vial también puede interferir en un ensayo, aportar fondo a un método analítico, o ser una variable más que controlar. La pregunta no es si hay excipientes sino si lo sabes.</p>
+        <p>Los proveedores lo eligen a propósito, y en algunos contextos de laboratorio es lo preferible: un excipiente que estabiliza un vial también puede interferir en un ensayo, aportar fondo a un método analítico, o ser una variable más que controlar. Excipientes hay siempre; lo que cambia es si lo sabes.</p>
 
         <h2>Por qué importa al pesar el polvo</h2>
         <p>Los excipientes forman parte de la masa del vial. También el contraión que queda de la purificación, y también el agua absorbida.</p>
@@ -1000,7 +1000,7 @@
       excerpt: 'Qué mide un porcentaje de pureza, y qué no, cuando lo lees en un COA.',
       imageAlt: 'El porcentaje de área, las condiciones que lo producen y las preguntas que deja abiertas.',
       body: `
-        <p class="lead">Noventa y nueve por ciento por HPLC es la cifra más citada del sector y la menos examinada. Es una medición real con un significado preciso, y ese significado es más estrecho de lo que casi todo el mundo supone.</p>
+        <p class="lead">Noventa y nueve por ciento por HPLC es la cifra más citada del sector y la menos examinada. Es una medición real con un significado preciso, y ese significado es más estrecho de lo que la mayoría supone.</p>
 
         <h2>Qué es la cifra</h2>
         <p>La muestra se empuja por una columna que separa sus componentes, un detector registra cada uno al salir, y el resultado es un cromatograma: una traza con picos. El péptido buscado es el pico principal. La pureza es el área bajo ese pico dividida entre el área total de todos los picos que vio el detector, en porcentaje.</p>
@@ -1743,7 +1743,7 @@
 
         <h2>Por qué la forma seca es la estable</h2>
         <p>El agua no es un espectador neutro. Participa en las reacciones que descomponen un péptido, y da a las moléculas la movilidad necesaria para alcanzarse y reaccionar. Retirarla por <a href="article/lyophilization-freeze-drying/">liofilización</a> retira las dos cosas.</p>
-        <p>La parte de la movilidad es la que se pasa por alto. Una formulación bien secada es un sólido amorfo, y por debajo de cierta temperatura ese sólido se comporta como un vidrio en el que el movimiento molecular está prácticamente detenido. El agua absorbida baja la temperatura a la que ese vidrio se ablanda, así que un polvo que ha tomado humedad no está simplemente más húmedo: se ha convertido en un sistema donde las cosas pueden moverse y por tanto reaccionar. <a class="cite" href="https://doi.org/10.1023/A:1018941810744" target="_blank" rel="noopener nofollow">(Referencia: Hancock y Zografi, 1994)</a></p>
+        <p>La parte de la movilidad es la que se pasa por alto. Una formulación bien secada es un sólido amorfo, y por debajo de cierta temperatura ese sólido se comporta como un vidrio en el que el movimiento molecular está prácticamente detenido. El agua absorbida baja la temperatura a la que ese vidrio se ablanda, así que un polvo que ha tomado humedad no está más húmedo y ya: se ha convertido en un sistema donde las cosas pueden moverse y por tanto reaccionar. <a class="cite" href="https://doi.org/10.1023/A:1018941810744" target="_blank" rel="noopener nofollow">(Referencia: Hancock y Zografi, 1994)</a></p>
         <p>Esa es la razón de fondo de que la humedad sea el enemigo principal, y de que el contenido de agua aparezca como cifra en un <a href="article/how-to-read-a-certificate-of-analysis/">certificado de análisis</a> completo.</p>
 
         <h2>Qué se degrada</h2>
@@ -1768,7 +1768,7 @@
         <p>La luz impulsa la oxidación, sobre todo la de los residuos aromáticos. Basta con viales ámbar y una caja cerrada; no hace falta nada elaborado. Es la variable que más se ignora porque su efecto es invisible hasta que lo revela un análisis.</p>
 
         <h2>Qué hace y qué no hace el tránsito</h2>
-        <p>Un material que ha pasado semanas moviéndose entre bodegas y vehículos no simplemente ha envejecido. Ha atravesado una serie de oscilaciones de temperatura y humedad. La cuenta que importa es cuántos de esos ciclos atravesó y de qué amplitud fue cada uno.</p>
+        <p>Un material que ha pasado semanas moviéndose entre bodegas y vehículos no ha envejecido sin más. Ha atravesado una serie de oscilaciones de temperatura y humedad. La cuenta que importa es cuántos de esos ciclos atravesó y de qué amplitud fue cada uno.</p>
         <p>Un vial seco y bien sellado es genuinamente robusto y tolera un viaje razonable. Lo que tolera peor es calentarse y enfriarse repetidamente en aire húmedo con un sello que no es el que debería. Es una propiedad del material y no una afirmación sobre la logística de nadie: la química de arriba no distingue quién movió la caja, solo qué le pasó a la caja.</p>
 
         <h2>En disolución el reloj se acelera</h2>
@@ -2250,7 +2250,7 @@
         <p>Por eso la <a href="article/what-is-ipamorelin/">ipamorelina</a> se describe como selectiva, y por eso la pregunta recurrente para cualquier agonista de melanocortina como el <a href="article/what-is-pt-141/">PT-141</a> es qué <a href="article/what-are-melanocortin-receptors/">subtipos</a> alcanza y con qué fuerza. Para una herramienta de investigación, la selectividad es lo que hace atribuible una observación: cuanto más limpio el perfil, menos explicaciones alternativas de lo que se midió.</p>
 
         <h2>La etiqueta es en parte una propiedad del experimento</h2>
-        <p>Aquí está lo que la mayoría de explicaciones omite. Que un compuesto parezca agonista pleno o parcial depende del compuesto y del sistema en que se mide: cuántos receptores hay presentes, con qué fuerza amplifica la lectura, y qué evento descendente se observa. Existen marcos formales precisamente para separar lo que pertenece a la molécula de lo que pertenece al ensayo. <a class="cite" href="https://doi.org/10.1098/rspb.1983.0093" target="_blank" rel="noopener nofollow">(Referencia: Black y Leff, 1983)</a> <a class="cite" href="https://doi.org/10.1016/j.tips.2004.02.012" target="_blank" rel="noopener nofollow">(Referencia: Kenakin, 2004)</a></p>
+        <p>Aquí está lo que la mayoría de explicaciones omite. Que un compuesto parezca agonista pleno o parcial depende del compuesto y del sistema en que se mide: cuántos receptores hay presentes, con qué fuerza amplifica la lectura, y qué evento descendente se observa. Existen marcos formales para separar lo que pertenece a la molécula de lo que pertenece al ensayo. <a class="cite" href="https://doi.org/10.1098/rspb.1983.0093" target="_blank" rel="noopener nofollow">(Referencia: Black y Leff, 1983)</a> <a class="cite" href="https://doi.org/10.1016/j.tips.2004.02.012" target="_blank" rel="noopener nofollow">(Referencia: Kenakin, 2004)</a></p>
         <p>La lectura práctica: un compuesto descrito como agonista en un artículo y como agonista parcial en otro puede no ser una contradicción. Pueden ser dos sistemas.</p>
 
         <h2>Qué dice la palabra sobre un vial, y qué no</h2>
@@ -3124,7 +3124,7 @@
         <h2>Dos clases distintas de molécula</h2>
         <p>NAD+ es nicotinamida adenina dinucleótido, una coenzima construida con una nicotinamida, una adenina, dos ribosas y dos fosfatos. No es un péptido y no tiene secuencia. Es central en la química redox de todo el metabolismo y su recambio es un asunto bien cartografiado. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.05.023" target="_blank" rel="noopener nofollow">(Ref.: Cantó et al., 2015)</a></p>
         <p>MOTS-c es un péptido de dieciséis residuos, MRWQEMGYIFYPRKLR, y lo llamativo es dónde está su gen: en el genoma mitocondrial y no en el nuclear, que no era donde se esperaba encontrar péptidos cortos. <a class="cite" href="https://doi.org/10.1016/j.cmet.2015.02.009" target="_blank" rel="noopener nofollow">(Ref.: Lee et al., 2015)</a> Nuestra nota sobre <a href="article/what-is-mots-c/">MOTS-c</a> cuenta el descubrimiento.</p>
-        <p>Así que una es un cofactor de molécula pequeña y el otro un fragmento proteico corto. Casi nada se traslada de uno a otro en lo analítico.</p>
+        <p>Una es un cofactor de molécula pequeña y el otro un fragmento proteico corto. Casi nada se traslada de uno a otro en lo analítico.</p>
 
         <h2>Lo que eso le hace a la papelería</h2>
         <p>Un certificado de péptido y uno de molécula pequeña son documentos distintos que comparten nombre.</p>
