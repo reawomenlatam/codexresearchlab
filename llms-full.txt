@@ -20,80 +20,6 @@ Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC o
 
 # Catalog
 
-## GLP2-T (tirzepatide)
-
-- URL: https://codexresearchlab.com/product/tirzepatide/
-- Strength: 20 mg per vial
-- CAS number: 2023788-19-2
-- Molecular formula: C225H348N48O68
-- Molecular weight: 4813.45 g/mol
-- PubChem: https://pubchem.ncbi.nlm.nih.gov/compound/156588324
-- Research areas: GIP signaling, GLP-1 signaling, Glucose regulation, Metabolism
-- Single vial: $149.00 USD
-- Pack · 3 vials: $411.24 USD
-
-A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
-
-**What is GLP2-T?** A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
-
-**How much does GLP2-T cost?** Single vial: $149.00 USD. Pack · 3 vials: $411.24 USD. Prices are in USD. This presentation is currently out of stock.
-
-**Is GLP2-T tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
-
-## GLP3-R (retatrutide)
-
-- URL: https://codexresearchlab.com/product/retatrutide/
-- Strength: 10 mg per vial
-- Molecular formula: C228H350N48O66
-- Molecular weight: 4894.58 g/mol
-- Research areas: GIP signaling, GLP-1 signaling, Glucagon signaling, Metabolism
-- Single vial: $150.00 USD
-- Pack · 3 vials: $414.00 USD
-
-A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
-
-**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 10 mg vial for laboratory research use only.
-
-**How much does GLP3-R cost?** Single vial: $150.00 USD. Pack · 3 vials: $414.00 USD. Prices are in USD.
-
-**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
-
-## GLP3-R (retatrutide)
-
-- URL: https://codexresearchlab.com/product/retatrutide-20mg/
-- Strength: 20 mg per vial
-- Molecular formula: C228H350N48O66
-- Molecular weight: 4894.58 g/mol
-- Research areas: GIP signaling, GLP-1 signaling, Glucagon signaling, Metabolism
-- Single vial: $194.00 USD
-- Pack · 3 vials: $535.44 USD
-
-A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
-
-**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 20 mg vial for laboratory research use only.
-
-**How much does GLP3-R cost?** Single vial: $194.00 USD. Pack · 3 vials: $535.44 USD. Prices are in USD. This presentation is currently out of stock.
-
-**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
-
-## GLP3-R (retatrutide)
-
-- URL: https://codexresearchlab.com/product/retatrutide-30mg/
-- Strength: 30 mg per vial
-- Molecular formula: C228H350N48O66
-- Molecular weight: 4894.58 g/mol
-- Research areas: GIP signaling, GLP-1 signaling, Glucagon signaling, Metabolism
-- Single vial: $214.00 USD
-- Pack · 3 vials: $590.64 USD
-
-A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.
-
-**What is GLP3-R?** A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance. It is supplied as a lyophilized 30 mg vial for laboratory research use only.
-
-**How much does GLP3-R cost?** Single vial: $214.00 USD. Pack · 3 vials: $590.64 USD. Prices are in USD. This presentation is currently out of stock.
-
-**Is GLP3-R tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
-
 ## BPC-157
 
 - URL: https://codexresearchlab.com/product/bpc-157/
@@ -414,11 +340,11 @@ Kisspeptin-10 is the C-terminal decapeptide of kisspeptin and an agonist of the 
 
 Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions.
 
-**What is Bacteriostatic Water?** Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. It is supplied as a lyophilized 3 ml vial for laboratory research use only.
+**What is Bacteriostatic Water?** Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. It is sold in a sealed 3 ml container for laboratory use only.
 
 **How much does Bacteriostatic Water cost?** Single vial: $10.00 USD. Pack · 3 vials: $27.60 USD. Prices are in USD.
 
-**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**How is Bacteriostatic Water shipped and how long does delivery take?** Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
 ## Bacteriostatic Water
 
@@ -431,13 +357,13 @@ Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol add
 - Single vial: $17.00 USD
 - Pack · 3 vials: $46.92 USD
 
-Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This 10 ml presentation is a larger multi-dose bottle.
+Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This is the 10 ml presentation.
 
-**What is Bacteriostatic Water?** Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This 10 ml presentation is a larger multi-dose bottle. It is supplied as a lyophilized 10 ml vial for laboratory research use only.
+**What is Bacteriostatic Water?** Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This is the 10 ml presentation. It is sold in a sealed 10 ml container for laboratory use only.
 
 **How much does Bacteriostatic Water cost?** Single vial: $17.00 USD. Pack · 3 vials: $46.92 USD. Prices are in USD.
 
-**Is Bacteriostatic Water tested, and do you provide a certificate of analysis?** Yes. Every batch is tested at 99% purity by HPLC and mass spectrometry. The certificate of analysis is available on request, before you order if you want to see it first, and any vial's batch number can be checked at https://codexresearchlab.com/verify/.
+**How is Bacteriostatic Water shipped and how long does delivery take?** Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
 # General questions
 

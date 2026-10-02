@@ -5,58 +5,6 @@
 
 const PRODUCTS = [
   {
-    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
-    mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
-    photo: 'assets/products/tirzepatide.jpg',
-    photo2: 'assets/products/tirzepatide-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 149 },
-      { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
-    ],
-    overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide.jpg',
-    photo2: 'assets/products/retatrutide-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 150 },
-      { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
-    photo2: 'assets/products/retatrutide-20mg-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 194 },
-      { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
-    photo2: 'assets/products/retatrutide-30mg-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 214 },
-      { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-  {
     slug: 'bpc-157', name: 'BPC-157', cas: '137525-51-0', tag: 'CAS # 137525-51-0',
     mg: '10 mg', from: 79, formula: 'C62H98N16O22', weight: '1419.53 g/mol', pubchem: '9941957',
     photo: 'assets/products/bpc-157.jpg',
@@ -286,8 +234,8 @@ const PRODUCTS = [
       { label: 'Single vial', price: 17 },
       { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
     ],
-    overview: 'Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This 10 ml presentation is a larger multi-dose bottle.',
-    overviewEs: 'El agua bacteriostática es agua estéril y apirógena con alcohol bencílico al 0,9% como conservante, según la especificación USP. Se suministra como diluyente general de laboratorio; la etiqueta indica su composición, pH y condiciones de almacenamiento. Esta presentación de 10 ml es un frasco multidosis más grande.',
+    overview: 'Bacteriostatic water is sterile, nonpyrogenic water with 0.9% benzyl alcohol added as a preservative, to USP specification. It is supplied as a general laboratory diluent; the label states its composition, pH and storage conditions. This is the 10 ml presentation.',
+    overviewEs: 'El agua bacteriostática es agua estéril y apirógena con alcohol bencílico al 0,9% como conservante, según la especificación USP. Se suministra como diluyente general de laboratorio; la etiqueta indica su composición, pH y condiciones de almacenamiento. Es la presentación de 10 ml.',
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'USP specification'],
   },
 ];
@@ -507,9 +455,32 @@ const PAYMENT_LINE = 'Card (Visa, Mastercard, American Express) processed by Str
    versiones digan lo mismo — un FAQPage que declara preguntas que la página no
    muestra es justo lo que Google penaliza (ya pasó con el FAQ de la portada).
    Solo datos de tienda y de ficha: nada clínico ni de dosis. */
+/* El agua bacteriostática no es un péptido: no es liofilizada ni se analiza por
+   HPLC. Antes heredaba las respuestas de los péptidos y la ficha afirmaba las dos
+   cosas (2026-10-02). */
+const isDiluent = (p) => /^bac-water/.test(p.slug);
+
 function productFaq(p) {
   if (esLang()) return productFaqEs(p);
   const list = p.sizes.map((z) => `${z.label}: $${z.price.toFixed(2)} USD`).join('. ');
+  const who = { q: `Who can buy ${p.name}?`,
+    a: 'Only researchers buying for a research institution or laboratory, through an approved researcher ' +
+       'account. Each account names the institution, the buyer\'s role and research area, and we review it ' +
+       'by hand before its first order. We do not sell for personal use.' };
+  if (isDiluent(p)) {
+    return [
+      { q: `What is ${p.name}?`,
+        a: `${p.overview} It is sold in a sealed ${p.mg} container for laboratory use only.` },
+      { q: `How much does ${p.name} cost?`,
+        a: `${list}. Prices are in USD${p.outOfStock ? '. This presentation is currently out of stock' : ''}.` },
+      { q: `How is ${p.name} shipped and how long does delivery take?`, a: SHIPPING_LINE },
+      { q: `How should ${p.name} be stored?`, a: 'As stated on its label. Keep the container closed when not in use.' },
+      { q: `Is ${p.name} intended for human use?`,
+        a: `No. ${p.name} is sold as a laboratory diluent for research and development. It is not for human ` +
+           'or animal use.' },
+      who,
+    ];
+  }
   return [
     { q: `What is ${p.name}?`,
       a: `${p.overview} It is supplied as a lyophilized ${p.mg} vial for laboratory research use only.` },
@@ -526,6 +497,7 @@ function productFaq(p) {
     { q: `Is ${p.name} intended for human use?`,
       a: `No. ${p.name} is sold strictly for laboratory research and development. It is not for human ` +
          'or animal consumption and is not intended to diagnose, treat, cure or prevent any disease.' },
+    who,
   ];
 }
 
@@ -541,6 +513,24 @@ const SIZE_ES = { 'Single vial': 'Vial individual', 'Pack · 3 vials': 'Pack · 
 
 function productFaqEs(p) {
   const list = p.sizes.map((z) => `${SIZE_ES[z.label] || z.label}: $${z.price.toFixed(2)} USD`).join('. ');
+  const who = { q: `¿Quién puede comprar ${p.name}?`,
+    a: 'Solo investigadores que compran para una institución o laboratorio de investigación, con una cuenta ' +
+       'de investigador aprobada. Cada cuenta indica la institución, el cargo y el área de investigación, y la ' +
+       'revisamos a mano antes del primer pedido. No vendemos para uso personal.' };
+  if (isDiluent(p)) {
+    return [
+      { q: `¿Qué es ${p.name}?`,
+        a: `${p.overviewEs || p.overview} Se vende en un envase sellado de ${p.mg}, solo para uso de laboratorio.` },
+      { q: `¿Cuánto cuesta ${p.name}?`,
+        a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
+      { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
+      { q: `¿Cómo se debe almacenar ${p.name}?`, a: 'Como indica su etiqueta. Mantén el envase cerrado mientras no se usa.' },
+      { q: `¿${p.name} es para uso humano?`,
+        a: `No. ${p.name} se vende como diluyente de laboratorio para investigación y desarrollo. No es para ` +
+           'uso humano ni animal.' },
+      who,
+    ];
+  }
   return [
     { q: `¿Qué es ${p.name}?`,
       a: `${p.overviewEs || p.overview} Se suministra como vial liofilizado de ${p.mg}, solo para uso en investigación de laboratorio.` },
@@ -558,6 +548,7 @@ function productFaqEs(p) {
     { q: `¿${p.name} es para uso humano?`,
       a: `No. ${p.name} se vende estrictamente para investigación y desarrollo de laboratorio. No es para ` +
          'consumo humano ni animal, y no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.' },
+    who,
   ];
 }
 
@@ -577,7 +568,67 @@ const BUSINESS = {
   phone: '+507 6335-4625',
 };
 
-window.REA = { PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
+/* Retirados del catálogo el 2026-10-02 (revisión de Stripe): tirzepatide y
+   retatrutide son los activos de fármacos para bajar de peso que citan las cartas
+   de la FDA. No se venden, no salen en catálogo, sitemap ni prices.json, y sus
+   URLs redirigen al catálogo (RETIRED_PRODUCTS en build-seo.js). Para volver a
+   venderlos basta con devolverlos a PRODUCTS. */
+const RETIRED_PRODUCTS = [
+  {
+    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
+    mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
+    photo: 'assets/products/tirzepatide.jpg',
+    photo2: 'assets/products/tirzepatide-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 149 },
+      { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
+    ],
+    overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide.jpg',
+    photo2: 'assets/products/retatrutide-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 150 },
+      { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-20mg-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 194 },
+      { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-30mg-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 214 },
+      { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+];
+
+window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
   STOCK_BY_COUNTRY, applyStock, setStock,
   WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

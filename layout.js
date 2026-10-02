@@ -140,6 +140,7 @@
           <p class="copy">© Codex Research ${new Date().getFullYear()}. ${T('All rights reserved.')}</p>
           ${BIZ}
           <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
+          <p>${T('We sell only to researchers buying for a research institution or laboratory. Every order needs an approved researcher account, and we review each account by hand before its first order.')}</p>
         </div>
       </div>
     </footer>`;
@@ -155,7 +156,7 @@
           <button class="sn-ok" id="snOk">${T('Got it')}</button>
         </div>
         <p class="sn-legal">
-          ${T('Research use only \u00b7 by continuing you confirm you are 21 or older \u00b7')}
+          ${T('Research use only \u00b7 sold only to approved research accounts \u00b7 by continuing you confirm you are 21 or older \u00b7')}
           <a href="terms/">${T('Terms')}</a>
         </p>
       </div>
@@ -272,18 +273,11 @@
     const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
     const ann = document.getElementById('announceContact');
     if (ann) {
-      // Con la rebaja general activa, la barra anuncia la oferta. Al apagarla
-      // (SALE.active = false en data.js) vuelve sola al código de bienvenida.
-      const SALE = window.REA.SALE || {};
-      // Fecha de fin en formato legible ("August 20"). Se parsea a mediodía UTC
-      // para que la zona horaria del visitante no la corra un día.
-      const saleEnds = SALE.until
-        ? new Date(SALE.until + 'T12:00:00Z').toLocaleDateString(LANG === 'es' ? 'es-PA' : 'en-US',
-            { month: 'long', day: 'numeric', timeZone: 'UTC' })
-        : '';
-      const promo = SALE.active
-        ? `<b>${SALE.percent}% ${T('OFF on everything')}</b>${saleEnds ? ` · ${T('through')} ${saleEnds}` : ` · ${T('limited time')}`}`
-        : `<b>10% ${T('off your first order')}</b> · ${T('code')} <b>WELCOME10</b>`;
+      // La barra de todas las páginas dice a quién se vende (2026-10-02, revisión
+      // de Stripe). Antes anunciaba WELCOME10 o la rebaja general: un descuento de
+      // bienvenida en cada página se lee como tienda de consumo. El cupón sigue
+      // valiendo en el carrito; sólo dejó de anunciarse aquí.
+      const promo = `<b>${T('For research institutions and laboratories only')}</b> · ${T('approved researcher account required')}`;
       ann.innerHTML = isPA
         ? `${promo}<span class="ann-contact"> · ${waLink}</span>`
         : `${promo}<span class="ann-contact"> · ${mailLink}</span>`;

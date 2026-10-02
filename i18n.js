@@ -67,6 +67,12 @@
     'All rights reserved.': 'Todos los derechos reservados.',
     'All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.': 'Todos los productos de este sitio se venden únicamente para uso en investigación y desarrollo, y no están destinados al consumo humano de ningún tipo. Las afirmaciones de este sitio no han sido evaluadas por ninguna autoridad sanitaria, y los productos no pretenden diagnosticar, tratar, curar ni prevenir ninguna enfermedad.',
     'off your first order': 'de descuento en tu primer pedido',
+    'For research institutions and laboratories only': 'Solo para instituciones y laboratorios de investigación',
+    'approved researcher account required': 'requiere cuenta de investigador aprobada',
+    'We sell only to researchers buying for a research institution or laboratory. Every order needs an approved researcher account, and we review each account by hand before its first order.':
+      'Vendemos solo a investigadores que compran para una institución o laboratorio de investigación. Cada pedido requiere una cuenta de investigador aprobada, y revisamos cada cuenta a mano antes del primer pedido.',
+    'Research use only \u00b7 sold only to approved research accounts \u00b7 by continuing you confirm you are 21 or older \u00b7':
+      'Solo para investigación \u00b7 solo para cuentas de investigación aprobadas \u00b7 al continuar confirmas que tienes 21 años o más \u00b7',
     'code': 'código',
     'OFF on everything': 'OFF en todo',
     'through': 'hasta el',
