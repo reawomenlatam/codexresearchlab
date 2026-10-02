@@ -105,7 +105,7 @@
         <h2>How the check digit works</h2>
         <p>The last digit is a checksum over the rest, not part of the identifier itself. Take all the digits before the final hyphen, number them from right to left starting at one, multiply each by its position, add the products, and the remainder when you divide by ten is the check digit.</p>
         <p>For 7732-18-5, which is water: reading right to left from the digit before the check digit, 8×1 + 1×2 + 2×3 + 3×4 + 7×5 + 7×6 comes to 105, and 105 leaves a remainder of 5. The number ends in 5, so it is consistent.</p>
-        <p>The arithmetic is public and the test takes a second, which is the whole point. A single mistyped digit will almost always break it.</p>
+        <p>The arithmetic is public and the test takes a second, which is the whole point. A single mistyped digit breaks it in almost every case.</p>
 
         <h2>What a pass does not prove</h2>
         <p>Three things, and they matter more than the pass itself.</p>
