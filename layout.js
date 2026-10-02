@@ -116,11 +116,11 @@
         <div class="footer-top">
           <div class="footer-brand">
             <a href="${HOME}" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research" width="914" height="108"></a>
-            <p>${T('Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.')}</p>
+            <p>${T('Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.').replace('1-to-1', '1\u2011to\u20111')}</p>
             <div class="footer-contact" id="footerContact"></div>
           </div>
           <div class="footer-col">
-            <h4>${T('Shop')}</h4>
+            <h4>${T('Explore')}</h4>
             <a href="${U('catalog/')}">${T('Catalog')}</a>
             <a href="${U('verify/')}">${T('Verify a batch')}</a>
             <a href="${HOME}#proceso">${T('Our process')}</a>
@@ -285,8 +285,8 @@
         ? `<b>${SALE.percent}% ${T('OFF on everything')}</b>${saleEnds ? ` · ${T('through')} ${saleEnds}` : ` · ${T('limited time')}`}`
         : `<b>10% ${T('off your first order')}</b> · ${T('code')} <b>WELCOME10</b>`;
       ann.innerHTML = isPA
-        ? `${promo} · ${waLink}`
-        : `${promo} · ${mailLink}`;
+        ? `${promo}<span class="ann-contact"> · ${waLink}</span>`
+        : `${promo}<span class="ann-contact"> · ${mailLink}</span>`;
     }
     const foot = document.getElementById('footerContact');
     if (foot) foot.innerHTML = isPA ? waLink : mailLink;

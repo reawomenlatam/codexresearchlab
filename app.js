@@ -30,6 +30,18 @@
   const saleBadge = (p) => (SALE.active && !p.outOfStock && p.listFrom)
     ? `<span class="sale-badge">−${SALE.percent}%</span>` : '';
 
+  // Varios tamaños del mismo compuesto son tarjetas aparte; sin el tamaño en el
+  // título se veían tres "GLP3-R" idénticos seguidos.
+  const nameCount = window.REA.PRODUCTS.reduce((m, x) => m.set(x.name, (m.get(x.name) || 0) + 1), new Map());
+  const cardTitle = (p) => (nameCount.get(p.name) > 1 ? `${p.name} <span class="pc-size">${p.mg}</span>` : p.name);
+
+  // El número CAS no se parte por sus guiones en tarjetas estrechas; el resto
+  // del tag sí puede pasar a otra línea.
+  const cardTag = (p) => {
+    const t = window.T(p.tag);
+    return p.cas && t.includes(p.cas) ? t.replace(p.cas, `<span class="nowrap">${p.cas}</span>`) : t;
+  };
+
   window.REAui.productCard = (p) => `
     <article class="product-card${p.outOfStock ? ' out' : ''}">
       <a class="product-media" href="${window.U('product/' + p.slug + '/')}" aria-label="${p.name}">
@@ -37,9 +49,9 @@
         ${p.outOfStock ? `<span class="oos-badge">${window.T('Out of stock')}</span>` : saleBadge(p)}
       </a>
       <div class="product-info">
-        <span class="mono-tag">${window.T(p.tag)}</span>
-        <h3><a href="${window.U('product/' + p.slug + '/')}">${p.name}</a></h3>
-        <span class="product-price">${p.mg} · ${p.outOfStock ? `<b>${window.T('Out of stock')}</b>`
+        <span class="mono-tag">${cardTag(p)}</span>
+        <h3><a href="${window.U('product/' + p.slug + '/')}">${cardTitle(p)}</a></h3>
+        <span class="product-price">${nameCount.get(p.name) > 1 ? '' : `${p.mg} · `}${p.outOfStock ? `<b>${window.T('Out of stock')}</b>`
           : `${window.T('from')} <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
         <div class="product-cta">
           <a class="link" href="${window.U('product/' + p.slug + '/')}">${window.T('View product')} →</a>

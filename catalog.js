@@ -20,10 +20,23 @@
 
   let state = { cat: 'all', q: '', sort: 'name' };
 
-  listEl.innerHTML = CATEGORIES.map((c) => {
+  // Solo se ofrece un filtro si cambia algo: "Blends 0" era un callejón sin
+  // salida y "Compounds 22" repetía a "All 22". Si no queda ninguno, fuera el bloque.
+  const total = PRODUCTS.length;
+  const useful = CATEGORIES.filter((c) => {
     const n = PRODUCTS.filter(c.test).length;
-    return `<li><button data-cat="${c.key}" class="${c.key === 'all' ? 'active' : ''}">${c.label} <span>${n}</span></button></li>`;
-  }).join('');
+    return c.key === 'all' || (n > 0 && n < total);
+  });
+  if (useful.length > 1) {
+    listEl.innerHTML = useful.map((c) => {
+      const n = PRODUCTS.filter(c.test).length;
+      return `<li><button data-cat="${c.key}" class="${c.key === 'all' ? 'active' : ''}">${c.label} <span>${n}</span></button></li>`;
+    }).join('');
+  } else {
+    listEl.hidden = true;
+    const head = listEl.previousElementSibling;
+    if (head) head.hidden = true;
+  }
 
   function apply() {
     const cat = CATEGORIES.find((c) => c.key === state.cat);
@@ -37,10 +50,14 @@
         || (p.cas || '').toLowerCase().includes(q)
         || (p.alias || '').toLowerCase().includes(q));
     }
+    // Lo agotado va al final en cualquier orden; a igual nombre se respeta el
+    // orden de data.js, que va de menor a mayor tamaño.
+    const idx = (p) => PRODUCTS.indexOf(p);
     rows.sort((a, b) => {
+      if (!!a.outOfStock !== !!b.outOfStock) return a.outOfStock ? 1 : -1;
       if (state.sort === 'price-asc') return a.from - b.from;
       if (state.sort === 'price-desc') return b.from - a.from;
-      return a.name.localeCompare(b.name);
+      return a.name.localeCompare(b.name) || idx(a) - idx(b);
     });
 
     grid.innerHTML = rows.map(ui.productCard).join('');

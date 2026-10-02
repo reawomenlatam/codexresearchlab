@@ -97,7 +97,7 @@
       </div></div>
     </section>
     <section class="section" style="padding-top:0;">
-      <div class="container" style="max-width:760px;">
+      <div class="container"><div class="tool-prose">
         
         <h2>How this is calculated</h2>
         <p>A peptide bond forms by removing a molecule of water between two amino acids. So the calculator adds up the atoms of each residue, the amino acid minus that water, then adds one water back for the two free ends: the N-terminus keeps an H and the C-terminus an OH.</p>
@@ -115,7 +115,7 @@
         <p>The quickest sanity check is a compound whose formula is published. BPC-157 is GEPPPGKPADDAGLV, and the calculator returns C<sub>62</sub>H<sub>98</sub>N<sub>16</sub>O<sub>22</sub>, which is the formula on its PubChem record. If a calculator disagrees with a published formula for a sequence you trust, the calculator is what is wrong.</p>
       
         <h2>Frequently asked questions</h2><div class="faq-item"><h3>What is the difference between average and monoisotopic mass?</h3><p>Average mass uses standard atomic weights, which are weighted means over natural isotopes. Monoisotopic mass uses only the lightest isotope of each element. A mass spectrometer reports the monoisotopic value for the first peak of the isotope cluster; a catalogue usually quotes the average.</p></div><div class="faq-item"><h3>Why does the calculator reject my sequence?</h3><p>It handles only the twenty standard amino acids. Synthetic residues such as Aib, Nle or D-2-Nal have no agreed single letter, so instead of inventing a mass for them the calculator refuses the sequence.</p></div><div class="faq-item"><h3>Does this account for the salt form?</h3><p>No. The result is the mass of the free peptide. Material purified by reversed-phase chromatography is isolated as a salt, commonly trifluoroacetate, and lyophilised powder also carries absorbed water, so a vial weighs more per mole than this figure.</p></div><div class="faq-item"><h3>Can it calculate GHK-Cu?</h3><p>It calculates GHK, the tripeptide. The copper is not part of the letter sequence, so the complex has a different formula and mass that this tool cannot derive from three letters.</p></div><div class="faq-item"><h3>Does it accept three-letter code?</h3><p>Yes. Gly-His-Lys and GHK give the same result. Any non-letter character is treated as a separator.</p></div><div class="faq-item"><h3>Is anything sent to a server?</h3><p>No. The calculation runs in your browser from a script on this page. Nothing you type leaves the device.</p></div>
-      </div>
+      </div></div>
     </section>
   </main>
 

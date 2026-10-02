@@ -55,6 +55,7 @@
     'Terms': 'Términos',
     'Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.': 'Compuestos verificados, listos para enviar. Atención humana 1 a 1 por WhatsApp.',
     'Shop': 'Tienda',
+    'Explore': 'Explorar',
     'Catalog': 'Catálogo',
     'Verify a batch': 'Verificar un lote',
     'Our process': 'Nuestro proceso',
