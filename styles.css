@@ -4,6 +4,11 @@
    Acento gris #525863, tinta grafito #23262d
    ============================================================ */
 
+/* Nekst (Serebryakov Foundry) es comercial: requiere licencia web antes de publicar. */
+@font-face { font-family: 'Nekst'; src: url(assets/fonts/nekst-light.woff2) format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Nekst'; src: url(assets/fonts/nekst-regular.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Nekst'; src: url(assets/fonts/nekst-bold.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+
 :root {
   --accent: #525863;
   --accent-hover: #3c414b;
@@ -19,8 +24,8 @@
   --danger: #e5484d;
   --radius: 16px;
   --radius-sm: 10px;
-  --font-sans: 'DM Sans', 'Inter', -apple-system, sans-serif;
-  --font-mono: 'Fragment Mono', 'SF Mono', monospace;
+  --font-sans: 'Nekst', 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'Martian Mono', 'SF Mono', monospace;
   --shadow-card: 0 1px 2px rgba(41, 46, 76, .04), 0 8px 24px rgba(41, 46, 76, .06);
   --shadow-pop: 0 12px 40px rgba(41, 46, 76, .16);
 
