@@ -125,6 +125,17 @@
   });
 
   // ---------- Imágenes: fade-in / skeleton ----------
+  /* Las vistas repintan sus tarjetas con innerHTML cuando llega el stock en
+     vivo (country.js dispara rea-country-change en cada carga), y esas <img>
+     nuevas nacen en opacity:0. Escuchar load/error en captura a nivel de
+     documento las alcanza a todas, sin depender de que cada vista avise. */
+  const markLoaded = (e) => {
+    const t = e.target;
+    if (t && t.classList && t.classList.contains('product-photo')) t.classList.add('loaded');
+  };
+  document.addEventListener('load', markLoaded, true);
+  document.addEventListener('error', markLoaded, true);
+
   function setupImages() {
     document.querySelectorAll('.product-photo').forEach((img) => {
       const done = () => img.classList.add('loaded');
