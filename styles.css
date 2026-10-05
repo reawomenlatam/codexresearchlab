@@ -1581,13 +1581,19 @@ a, button, input, select, textarea, label, summary,
    se distinguían de un párrafo normal. */
 .pd-related-reading { margin-top: 1.4rem; }
 .pd-related-reading h3 { margin-bottom: .35rem; }
+/* Bloque «Entrega y pago en Panamá» de las fichas /es/. */
+.pd-panama { margin-top: 2rem; }
+.pd-panama h2 { margin-bottom: .6rem; }
+.pd-panama p + p { margin-top: .7rem; }
 .pd-related-reading a,
+.pd-panama a,
 .article-product a {
   color: var(--cta);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 .pd-related-reading a:hover,
+.pd-panama a:hover,
 .article-product a:hover { text-decoration-thickness: 2px; }
 .article-product {
   margin: 1.8rem 0;

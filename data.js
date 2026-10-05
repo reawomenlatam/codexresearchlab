@@ -31,7 +31,7 @@ const PRODUCTS = [
     research: ['Metabolic homeostasis', 'Mitochondrial function', 'Cell signaling'],
   },
   {
-    slug: 'ipamorelin', name: 'Ipamorelin', cas: '170851-70-4', tag: 'CAS # 170851-70-4',
+    slug: 'ipamorelin', name: 'Ipamorelin', nameEs: 'Ipamorelina', cas: '170851-70-4', tag: 'CAS # 170851-70-4',
     mg: '10 mg', from: 135, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
     photo: 'assets/products/ipamorelin.jpg',
     photo2: 'assets/products/ipamorelin-2.jpg',
@@ -107,7 +107,7 @@ const PRODUCTS = [
     research: ['Dermal proliferation', 'Collagen deposition', 'Hair follicle biology', 'Tissue repair'],
   },
   {
-    slug: 'tesamorelin', name: 'Tesamorelin', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
+    slug: 'tesamorelin', name: 'Tesamorelin', nameEs: 'Tesamorelina', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
     mg: '10 mg', from: 164, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin.jpg', outOfStock: true,
     photo2: 'assets/products/tesamorelin-2.jpg',
@@ -120,7 +120,7 @@ const PRODUCTS = [
     research: ['GHRH receptor', 'GH regulation', 'Endocrine regulation'],
   },
   {
-    slug: 'tesamorelin-20mg', name: 'Tesamorelin', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
+    slug: 'tesamorelin-20mg', name: 'Tesamorelin', nameEs: 'Tesamorelina', cas: '218949-48-5', tag: 'CAS # 218949-48-5',
     mg: '20 mg', from: 279, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin-20mg.jpg', outOfStock: true,
     photo2: 'assets/products/tesamorelin-20mg-2.jpg',
@@ -133,7 +133,7 @@ const PRODUCTS = [
     research: ['GHRH receptor', 'GH regulation', 'Endocrine regulation'],
   },
   {
-    slug: 'cjc-1295-no-dac', name: 'CJC-1295 no DAC', cas: '863288-34-0', tag: 'CAS # 863288-34-0',
+    slug: 'cjc-1295-no-dac', name: 'CJC-1295 no DAC', nameEs: 'CJC-1295 sin DAC', cas: '863288-34-0', tag: 'CAS # 863288-34-0',
     mg: '10 mg', from: 129, formula: 'C152H252N44O42', weight: '3367.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/cjc-1295-no-dac.jpg', outOfStock: true,
     photo2: 'assets/products/cjc-1295-no-dac-2.jpg',
@@ -189,7 +189,7 @@ const PRODUCTS = [
     research: ['Mitochondrial function', 'Cardiolipin', 'Oxidative stress'],
   },
   {
-    slug: 'epithalon', name: 'Epithalon', cas: '307297-39-8', tag: 'CAS # 307297-39-8',
+    slug: 'epithalon', name: 'Epithalon', nameEs: 'Epitalón', cas: '307297-39-8', tag: 'CAS # 307297-39-8',
     mg: '10 mg', from: 74, formula: 'C14H22N4O9', weight: '390.35 g/mol', pubchem: 'N/A',
     photo: 'assets/products/epithalon.jpg', outOfStock: true,
     photo2: 'assets/products/epithalon-2.jpg',
@@ -202,7 +202,7 @@ const PRODUCTS = [
     research: ['Telomerase', 'Pineal biology', 'Cellular aging'],
   },
   {
-    slug: 'kisspeptin', name: 'Kisspeptin-10', cas: '374675-21-5', tag: 'CAS # 374675-21-5',
+    slug: 'kisspeptin', name: 'Kisspeptin-10', nameEs: 'Kisspeptina-10', cas: '374675-21-5', tag: 'CAS # 374675-21-5',
     mg: '10 mg', from: 94, formula: 'C63H83N17O14', weight: '1302.4 g/mol', pubchem: 'N/A',
     photo: 'assets/products/kisspeptin.jpg', outOfStock: true,
     photo2: 'assets/products/kisspeptin-2.jpg',
@@ -215,7 +215,7 @@ const PRODUCTS = [
     research: ['KISS1R signaling', 'GnRH regulation', 'Neuroendocrine models'],
   },
   {
-    slug: 'bac-water', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Laboratory diluent · 3 ml',
+    slug: 'bac-water', name: 'Bacteriostatic Water', nameEs: 'Agua bacteriostática', cas: 'N/A', tag: 'Laboratory diluent · 3 ml',
     mg: '3 ml', from: 10, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water.jpg',
     sizes: [
@@ -227,7 +227,7 @@ const PRODUCTS = [
     research: ['Sterile diluent', '0.9% benzyl alcohol', 'USP specification'],
   },
   {
-    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', cas: 'N/A', tag: 'Laboratory diluent · 10 ml',
+    slug: 'bac-water-10ml', name: 'Bacteriostatic Water', nameEs: 'Agua bacteriostática', cas: 'N/A', tag: 'Laboratory diluent · 10 ml',
     mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water-10ml.jpg',
     sizes: [
@@ -441,6 +441,29 @@ const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panam�
   'Estados Unidos: $20 desde nuestro stock en EE.UU., 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). ' +
   'Siempre en empaque sellado y protegido, con cada vial etiquetado con su compuesto, concentración y número de lote.';
 
+/* Bloque «[Producto] en Panamá» de la ficha en español. Lo hornea build-seo.js y
+   lo repinta product.js al hidratar: un solo texto para los dos, o Google vería
+   uno distinto en el HTML crudo y en la página renderizada. Solo datos que ya
+   están en este archivo (envío, pago, lote), nada que no se pueda comprobar. */
+const nameEs = (p) => p.nameEs || p.name;
+function panamaBlockEs(p) {
+  const n = nameEs(p);
+  const from = Math.min(...p.sizes.map((z) => z.price)).toFixed(2);
+  const water = /^bac-water/.test(p.slug);
+  const batch = !water && batchFor(p.slug, p.mg);
+  return `<h2>Entrega y pago en Panamá</h2>
+<p>Los pedidos de ${n} ${p.mg} en Panamá salen de nuestro inventario local. En Ciudad de Panamá
+la entrega tarda de 1 a 2 horas; en el interior (David, Chitré, Colón y otras ciudades), llega
+el siguiente día hábil por transporte Fergunson. El envío cuesta $4 y es gratis en pedidos sobre
+$100. El precio es el mismo en todo el país, desde $${from} USD, y se paga en el sitio con
+tarjeta o con cripto.</p>
+<p>${batch ? `Cada vial lleva impreso su número de lote (el vigente es ${batch.code}) y se puede
+comprobar en la <a href="es/verify/">página de verificación</a>, con el certificado de análisis
+de un laboratorio independiente disponible antes de comprar. ` : ''}Solo se vende a cuentas de
+investigación aprobadas. Más detalles en <a href="es/comprar-peptidos-panama/">cómo comprar
+péptidos de investigación en Panamá</a>.</p>`;
+}
+
 /* Envío y pagos: un solo origen para el FAQ de producto, pricing.md y llms-full.txt. */
 const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities ' +
   '(David, Chitre, Colon and more): next business day via Fergunson transport. United States: ' +
@@ -512,41 +535,45 @@ function esLang() {
 const SIZE_ES = { 'Single vial': 'Vial individual', 'Pack · 3 vials': 'Pack · 3 viales' };
 
 function productFaqEs(p) {
+  const name = nameEs(p);
+  // El agua lleva artículo («¿Qué es el agua bacteriostática?»); un péptido no.
+  const the = isDiluent(p) ? `el ${name.toLowerCase()}` : name;
+  const The = isDiluent(p) ? `El ${name.toLowerCase()}` : name;
   const list = p.sizes.map((z) => `${SIZE_ES[z.label] || z.label}: $${z.price.toFixed(2)} USD`).join('. ');
-  const who = { q: `¿Quién puede comprar ${p.name}?`,
+  const who = { q: `¿Quién puede comprar ${the}?`,
     a: 'Solo investigadores que compran para una institución o laboratorio de investigación, con una cuenta ' +
        'de investigador aprobada. Cada cuenta indica la institución, el cargo y el área de investigación, y la ' +
        'revisamos a mano antes del primer pedido. No vendemos para uso personal.' };
   if (isDiluent(p)) {
     return [
-      { q: `¿Qué es ${p.name}?`,
+      { q: `¿Qué es ${the}?`,
         a: `${p.overviewEs || p.overview} Se vende en un envase sellado de ${p.mg}, solo para uso de laboratorio.` },
-      { q: `¿Cuánto cuesta ${p.name}?`,
+      { q: `¿Cuánto cuesta ${the} en Panamá?`,
         a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
-      { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
-      { q: `¿Cómo se debe almacenar ${p.name}?`, a: 'Como indica su etiqueta. Mantén el envase cerrado mientras no se usa.' },
-      { q: `¿${p.name} es para uso humano?`,
-        a: `No. ${p.name} se vende como diluyente de laboratorio para investigación y desarrollo. No es para ` +
+      { q: `¿Cómo se envía ${the} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
+      { q: `¿Cómo se debe almacenar ${the}?`, a: 'Como indica su etiqueta. Mantén el envase cerrado mientras no se usa.' },
+      { q: `¿${The} es para uso humano?`,
+        a: `No. ${The} se vende como diluyente de laboratorio para investigación y desarrollo. No es para ` +
            'uso humano ni animal.' },
       who,
     ];
   }
   return [
-    { q: `¿Qué es ${p.name}?`,
+    { q: `¿Qué es ${name}?`,
       a: `${p.overviewEs || p.overview} Se suministra como vial liofilizado de ${p.mg}, solo para uso en investigación de laboratorio.` },
-    { q: `¿Cuánto cuesta ${p.name}?`,
+    { q: `¿Cuánto cuesta ${name} en Panamá?`,
       a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
-    { q: `¿${p.name} está analizado? ¿Entregan certificado de análisis?`,
+    { q: `¿${name} tiene análisis de laboratorio? ¿Entregan certificado?`,
       a: 'Sí. Cada lote se analiza al 99% de pureza por HPLC y espectrometría de masas. El certificado de ' +
          'análisis está disponible si lo pides, también antes de comprar, y el número de lote de cualquier ' +
          'vial se puede comprobar en https://codexresearchlab.com/verify/.' },
-    { q: `¿Cómo se envía ${p.name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
-    { q: `¿Cómo se debe almacenar ${p.name}?`,
+    { q: `¿Cómo se envía ${name} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
+    { q: `¿Cómo se debe almacenar ${name}?`,
       a: 'Los viales liofilizados se mantienen frescos y protegidos de la luz. Una vez en disolución se ' +
          'guardan refrigerados entre 2 y 8 grados Celsius. La etiqueta de cada vial indica sus condiciones ' +
          'de almacenamiento.' },
-    { q: `¿${p.name} es para uso humano?`,
-      a: `No. ${p.name} se vende estrictamente para investigación y desarrollo de laboratorio. No es para ` +
+    { q: `¿${name} es para uso humano?`,
+      a: `No. ${name} se vende estrictamente para investigación y desarrollo de laboratorio. No es para ` +
          'consumo humano ni animal, y no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.' },
     who,
   ];
@@ -630,5 +657,5 @@ const RETIRED_PRODUCTS = [
 
 window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
   STOCK_BY_COUNTRY, applyStock, setStock,
-  WHATSAPP: '50763354625', productFaq, productFaqEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
+  WHATSAPP: '50763354625', productFaq, productFaqEs, nameEs, panamaBlockEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

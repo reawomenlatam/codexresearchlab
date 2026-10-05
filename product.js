@@ -60,8 +60,11 @@
   const url = `${SITE}/product/${p.slug}/`;
   const img = `${SITE}/${p.photo || 'assets/og-default.png'}`;
   const esPage = window.REAi18n.lang === 'es';
+  // Mismo nombre y H1 que hornea build-seo.js: si al hidratar se pintara otro,
+  // Google (que renderiza JS) vería una ficha distinta de la del HTML crudo.
+  const pName = esPage ? window.REA.nameEs(p) : p.name;
   const metaTitle = esPage
-    ? `${p.name} para investigación, ${p.mg}/vial | Codex Research`
+    ? `${pName} en Panamá: ${p.mg} y COA | Codex`
     : `${p.name} for research, ${p.mg}/vial | Codex Research`;
   const metaDesc = window.REA.overview(p);
   // Las fichas generadas ya traen su title/description/canonical horneados por
@@ -130,7 +133,7 @@
       <nav class="breadcrumb">
         <a href="${window.REAi18n.lang === 'es' ? '/es/' : '/'}">${T('Home')}</a> <span>/</span>
         <a href="${U('catalog/')}">${T('Catalog')}</a> <span>/</span>
-        <span>${p.name}</span>
+        <span>${pName}</span>
       </nav>
     </div>
 
@@ -154,7 +157,7 @@
         <!-- Buy -->
         <div class="pd-buy">
           <span class="mono-tag">${T(p.tag)}</span>
-          <h1>${p.name}</h1>
+          <h1>${esPage ? `${pName} en Panamá` : p.name}</h1>
           <p class="pd-strength">${p.mg} ${T('per vial')}</p>
 
           <div class="pd-field">
@@ -231,6 +234,7 @@
           <ul class="pd-research">
             ${p.research.map((r) => `<li>${T(r)}</li>`).join('')}
           </ul>
+          ${esPage ? `<div class="pd-panama">${window.REA.panamaBlockEs(p)}</div>` : ''}
         </div>
         <aside class="pd-info-side">
           <h4>${T('Structure')}</h4>
