@@ -429,7 +429,7 @@
     'bacteriostatic-water-usp-specification': {
       title: 'Agua bacteriostática: qué especifica la etiqueta',
       metaTitle: 'Agua bacteriostática: alcohol bencílico, pH y la norma USP',
-      metaDescription: 'Qué contiene el agua bacteriostática: 0,9 por ciento de alcohol bencílico, pH 5,7, estéril y apirógena, y por qué el conservante no es un ingrediente inerte.',
+      metaDescription: 'Qué contiene el agua bacteriostática: 0,9 % de alcohol bencílico, pH 5,7, estéril y apirógena, y por qué el conservante no es un ingrediente inerte.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Qué la separa del agua estéril común, y qué le hace el conservante a las moléculas disueltas en ella.',
@@ -1155,7 +1155,7 @@
     'what-is-retatrutide': {
       title: 'Retatrutida: el agonista triple de GIP, GLP-1 y glucagón',
       metaTitle: 'Retatrutida: agonista triple y qué se puede verificar',
-      metaDescription: 'Retatrutida: qué identificadores públicos existen, por qué tres receptores complican la interpretación y qué tiene que establecer el certificado de un lote.',
+      metaDescription: 'Retatrutida: qué identificadores públicos existen, por qué tres receptores complican la interpretación y qué debe establecer el certificado del lote.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Un péptido con tres dianas, y un registro químico público más delgado de lo habitual.',
@@ -1732,7 +1732,7 @@
 
     'how-to-store-research-peptides': {
       title: 'Conservar péptidos de investigación: vial seco frente a disolución',
-      metaTitle: 'Conservar péptidos: por qué el seco aguanta y la disolución no',
+      metaTitle: 'Conservar péptidos: el polvo seco aguanta, la disolución no',
       metaDescription: 'Por qué el estado seco es el estable, las cuatro rutas que degradan un péptido, y por qué los ciclos de temperatura pesan más que los días transcurridos.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
@@ -1889,8 +1889,8 @@
 
     'peptide-length-terminology': {
       title: 'Di, tri, oligo, poli: cómo se nombra la longitud de un péptido',
-      metaTitle: 'Longitud de un péptido: residuos, prefijos y dónde está la raya',
-      metaDescription: 'Residuo no es aminoácido, los prefijos de conteo, dónde acaba un péptido y empieza una proteína, y por qué la dirección de una secuencia es parte de su identidad.',
+      metaTitle: 'Longitud de un péptido: residuos, prefijos y el límite',
+      metaDescription: 'Residuo no es aminoácido: prefijos, dónde acaba un péptido y empieza una proteína, y por qué la dirección de la secuencia es parte de su identidad.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Un vocabulario que parece una clasificación y funciona como un conjunto de costumbres.',
@@ -2051,7 +2051,7 @@
     'molecular-weight-of-peptides': {
       title: 'Peso molecular de un péptido: masa promedio y monoisotópica',
       metaTitle: 'Peso molecular de un péptido: dos masas, ambas correctas',
-      metaDescription: 'Cómo se calcula desde la secuencia, por qué hay dos masas legítimas, y por qué una masa observada puede quedar al lado de la esperada sin que haya problema.',
+      metaDescription: 'Cómo se calcula desde la secuencia, por qué hay dos masas legítimas y por qué una masa observada puede quedar junto a la esperada sin que haya problema.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'La cifra contra la que se contrasta la identidad, y por qué no es una sola.',
@@ -2131,7 +2131,7 @@
 
     'what-are-melanocortin-receptors': {
       title: 'Receptores de melanocortina: la familia MC1R a MC5R',
-      metaTitle: 'Receptores de melanocortina: cinco subtipos y la selectividad',
+      metaTitle: 'Receptores de melanocortina: 5 subtipos y su selectividad',
       metaDescription: 'Cinco receptores de una familia, un precursor que da varias señales, y por qué la selectividad se mide como proporción y nunca como absoluto.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
@@ -2208,8 +2208,8 @@
 
     'agonist-vs-antagonist': {
       title: 'Agonista y antagonista: un receptor, dos resultados',
-      metaTitle: 'Agonista y antagonista: afinidad, eficacia y agonismo sesgado',
-      metaDescription: 'Afinidad y eficacia son propiedades independientes: agonistas parciales, antagonistas competitivos, agonistas inversos y por qué la etiqueta depende del ensayo.',
+      metaTitle: 'Agonista y antagonista: afinidad, eficacia, agonismo sesgado',
+      metaDescription: 'Afinidad y eficacia son independientes: agonistas parciales, antagonistas competitivos, agonistas inversos y por qué la etiqueta depende del ensayo.',
       category: 'Investigación con péptidos',
       date: '03 ago 2026',
       excerpt: 'Las dos palabras que aparecen en toda descripción de compuesto, y lo que suelen omitir.',
@@ -2608,7 +2608,7 @@
 
     'verifying-a-peptide-supplier-checklist': {
       title: 'Verificar a un proveedor de péptidos: la lista',
-      metaTitle: 'Verificar a un proveedor de péptidos: qué pedir antes de pagar',
+      metaTitle: 'Verificar a un proveedor de péptidos antes de pagar',
       metaDescription: 'Siete comprobaciones antes de pagar: número de lote, método declarado, fecha, quién firma, el cromatograma, contenido neto y lo que el papel omite.',
       category: 'Investigación con péptidos',
       date: '28 sep 2026',
@@ -2690,7 +2690,7 @@
 
     'certificate-of-analysis-glossary': {
       title: 'Certificado de análisis: glosario de términos',
-      metaTitle: 'Glosario del certificado de análisis: qué significa cada término',
+      metaTitle: 'Certificado de análisis: glosario de cada término',
       metaDescription: 'Definiciones claras de lo que aparece en un certificado: RP-HPLC, ESI-MS, contenido neto de péptido, TFA, LAL, especificación, normalización de área y más.',
       category: 'Investigación con péptidos',
       date: '28 sep 2026',
@@ -2962,7 +2962,7 @@
     'ghk-cu-vs-ahk-cu': {
       title: 'GHK-Cu y AHK-Cu: un residuo de diferencia',
       metaTitle: 'GHK-Cu vs AHK-Cu: qué cambia un solo residuo',
-      metaDescription: 'Dos tripéptidos de cobre que se diferencian en una posición. Qué cambia eso en el sitio de unión del metal, en la masa y en lo que un certificado debe mostrar.',
+      metaDescription: 'Dos tripéptidos de cobre que difieren en una posición. Qué cambia eso en el sitio de unión del metal, en la masa y en lo que debe mostrar el certificado.',
       category: 'Investigación con péptidos',
       date: '02 oct 2026',
       excerpt: 'Glicina o alanina en la primera posición, y todo lo que se sigue de ahí.',
@@ -3040,7 +3040,7 @@
     'bpc-157-vs-ghk-cu': {
       title: 'BPC-157 y GHK-Cu: dos clases de evidencia',
       metaTitle: 'BPC-157 vs GHK-Cu: estructura, registros y documentación',
-      metaDescription: 'Un péptido de quince residuos y un tripéptido de cobre comparados por lo documentable: longitud, metal unido, registros públicos y qué exige cada certificado.',
+      metaDescription: 'Un péptido de 15 residuos y un tripéptido de cobre comparados por lo documentable: longitud, metal unido, registros públicos y qué exige el certificado.',
       category: 'Investigación con péptidos',
       date: '02 oct 2026',
       excerpt: 'Un quincemero y un tripéptido de cobre, y por qué sus papeles no se parecen en nada.',
@@ -3346,7 +3346,7 @@
     'buy-research-peptides-usa': {
       title: 'Comprar péptidos de investigación en Estados Unidos',
       metaTitle: 'Comprar péptidos de investigación en EE. UU.: stock y COA',
-      metaDescription: 'Stock y envío domésticos dentro de EE. UU., checkout con tarjeta o cripto sin pasar por mensajería, y cómo comprobar el certificado del lote antes de pagar.',
+      metaDescription: 'Stock y envío dentro de EE. UU., checkout con tarjeta o cripto sin pasar por mensajería, y cómo comprobar el certificado del lote antes de pagar.',
       category: 'Guía de compra',
       date: '02 oct 2026',
       excerpt: 'Stock doméstico, checkout sin mensajería y qué comprobar antes de pagar.',
@@ -3575,7 +3575,7 @@
     'what-is-cjc-1295-no-dac': {
       title: 'CJC-1295 sin DAC: qué es la parte que falta',
       metaTitle: 'CJC-1295 sin DAC: qué significa DAC y por qué no está',
-      metaDescription: 'Un fragmento de GHRH de 29 residuos con cuatro sustituciones. Qué es el enlazador DAC, por qué la forma sin DAC es otra molécula y qué exige su certificado.',
+      metaDescription: 'Fragmento de GHRH de 29 residuos con cuatro sustituciones. Qué es el enlazador DAC, por qué la forma sin DAC es otra molécula y qué exige su certificado.',
       category: 'Investigación con péptidos',
       date: '02 oct 2026',
       excerpt: 'Un producto que lleva en el nombre algo que no contiene, y por qué eso importa en un certificado.',
@@ -3803,7 +3803,7 @@
     'what-is-ss-31': {
       title: 'SS-31: cuatro residuos, dos de ellos no estándar',
       metaTitle: 'Qué es el SS-31 (elamipretida): estructura y verificación',
-      metaDescription: 'El SS-31, o elamipretida, es un péptido de cuatro residuos con un aminoácido D y una tirosina modificada. Fórmula, masa, CAS y qué debe mostrar su certificado.',
+      metaDescription: 'El SS-31 (elamipretida) tiene cuatro residuos, uno es un aminoácido D, y una tirosina modificada. Fórmula, masa, CAS y qué debe mostrar su certificado.',
       category: 'Investigación con péptidos',
       date: '02 oct 2026',
       excerpt: 'Un tetrapéptido donde la mitad de los residuos está fuera de los veinte estándar.',
@@ -3959,7 +3959,7 @@
     'what-is-kisspeptin-10': {
       title: 'Kisspeptina-10: nombrada por un gen supresor de tumores',
       metaTitle: 'Qué es la kisspeptina-10: origen, estructura y verificación',
-      metaDescription: 'La kisspeptina-10 es un decapéptido amidado del producto del gen KiSS-1, ligando de GPR54. Su fórmula, su masa y por qué la amidación no la ve una calculadora.',
+      metaDescription: 'La kisspeptina-10 es un decapéptido amidado del gen KiSS-1 y ligando de GPR54. Su fórmula, su masa y por qué una calculadora no ve la amidación.',
       category: 'Investigación con péptidos',
       date: '02 oct 2026',
       excerpt: 'Un péptido del eje reproductivo que llegó desde la investigación del cáncer, y una modificación que no se ve.',

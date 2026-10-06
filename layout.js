@@ -266,7 +266,9 @@
   updateChip();
 
   // ---------- Contacto por país: Panamá → WhatsApp · EE.UU. → correo ----------
-  const EMAIL = 'sales@codexresearchlab.com';
+  // EE. UU. escribe al Gmail del negocio (pedido 2026-10-05). El resto del sitio
+  // (políticas, BUSINESS en data.js, llms.txt) sigue con sales@.
+  const EMAIL = 'codexresearchlab@gmail.com';
   function updateContact() {
     const isPA = window.REACountry.code() === 'PA';
     const waLink = `<a href="https://wa.me/${WA}" target="_blank" rel="noopener">+507 6335-4625</a>`;
