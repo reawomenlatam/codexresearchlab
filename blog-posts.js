@@ -4357,8 +4357,8 @@
         <p>The practical version: a listing that is cheaper because it drop-ships from abroad is selling a different logistics arrangement, not only a different price. Worth knowing which one you are looking at.</p>
 
         <h2>You place the order on the site</h2>
-        <p>The order is placed on this site, with no chat step before it. Crypto (USDC or USDT on Ethereum) is paid right at checkout from your own wallet. With Zelle, you place the order, send the payment and share the receipt on WhatsApp, and the order ships once the payment is confirmed.</p>
-        <p>Support on WhatsApp is one-to-one, for questions, for requesting a full certificate and for Zelle receipts.</p>
+        <p>The order is placed on this site, with no chat step before it. Crypto (USDC or USDT on Ethereum) is paid right at checkout from your own wallet. With Zelle, you place the order, we email you the payment details, and the order ships once the payment is confirmed.</p>
+        <p>Support is one-to-one, by email or WhatsApp, for questions and for requesting a full certificate.</p>
 
         <h2>What to check before you pay</h2>
         <p>Everything on our <a href="article/verifying-a-peptide-supplier-checklist/">supplier checklist</a> can be done before money moves, and none of it requires trusting us. The short version:</p>
@@ -4394,7 +4394,7 @@
         },
         {
           "q": "Do I have to message someone on WhatsApp to order?",
-          "a": "No. The order is placed on the site. Crypto is paid at checkout; with Zelle you send the payment after ordering and share the receipt on WhatsApp so it can be confirmed."
+          "a": "No. The order is placed on the site. Crypto is paid at checkout; with Zelle we email you the payment details after you order, and the order ships once the payment is confirmed."
         },
         {
           "q": "Can I see the certificate of analysis before paying?",

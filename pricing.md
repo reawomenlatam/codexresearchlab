@@ -10,7 +10,7 @@ Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Ch
 
 ## Payment methods
 
-Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site, the payment details are sent on WhatsApp, and the order ships once the payment is confirmed.
+Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site and the payment details are sent afterwards (Yappy on WhatsApp, Zelle by email); the order ships once the payment is confirmed.
 
 ## Catalog
 

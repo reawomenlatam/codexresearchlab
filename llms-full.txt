@@ -4,7 +4,7 @@
 > batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
 > Same-day delivery in Panama City (1-2 hours) and shipping across Panama and
 > the United States. Orders are placed on the site and paid with crypto (USDC/USDT),
-> Zelle (United States) or Yappy (Panama); the Zelle or Yappy receipt is sent on WhatsApp.
+> Zelle (United States) or Yappy (Panama); Zelle and Yappy are confirmed by hand before shipping.
 
 Last updated: 2026-10-17. Machine-readable pricing: https://codexresearchlab.com/pricing.md
 
@@ -16,7 +16,7 @@ disease. Dosage and clinical questions are outside what this catalog documents.
 
 Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
-Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site, the payment details are sent on WhatsApp, and the order ships once the payment is confirmed.
+Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site and the payment details are sent afterwards (Yappy on WhatsApp, Zelle by email); the order ships once the payment is confirmed.
 
 # Catalog
 
@@ -389,7 +389,7 @@ Message us on WhatsApp with your destination country and we’ll confirm coverag
 
 ### What payment methods do you accept?
 
-Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site, we send you the payment details on WhatsApp, and the order ships once the payment is confirmed.
+Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site and we send you the payment details (Yappy on WhatsApp, Zelle by email); the order ships once the payment is confirmed.
 
 ### How should I store the products?
 

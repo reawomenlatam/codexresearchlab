@@ -247,7 +247,7 @@ const FAQS = [
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
   { q: 'Who can buy from Codex Research?', a: 'Adults 21 or older buying for laboratory research. At checkout you confirm that the order is for research use only and not for human or animal consumption. We do not sell for personal use, and we cancel any order that refers to human use, dosing or administration.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
-  { q: 'What payment methods do you accept?', a: 'Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site, we send you the payment details on WhatsApp, and the order ships once the payment is confirmed.' },
+  { q: 'What payment methods do you accept?', a: 'Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site and we send you the payment details (Yappy on WhatsApp, Zelle by email); the order ships once the payment is confirmed.' },
   { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) once in solution. Every vial label shows its storage conditions.' },
 ];
 
@@ -259,7 +259,7 @@ const FAQS_ES = [
   { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
   { q: '¿Quién puede comprar en Codex Research?', a: 'Mayores de 21 años que compran para investigación de laboratorio. Al finalizar la compra confirmas que el pedido es solo para uso en investigación y no para consumo humano ni animal. No vendemos para uso personal y cancelamos cualquier pedido que hable de uso humano, dosis o administración.' },
   { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
-  { q: '¿Qué métodos de pago aceptan?', a: 'Panamá: Yappy o cripto (USDC o USDT en Ethereum). Estados Unidos: Zelle o cripto. La cripto se paga en nuestro propio checkout desde tu wallet. Con Yappy o Zelle haces el pedido en el sitio, te mandamos los datos de pago por WhatsApp y el pedido sale en cuanto se confirma el pago.' },
+  { q: '¿Qué métodos de pago aceptan?', a: 'Panamá: Yappy o cripto (USDC o USDT en Ethereum). Estados Unidos: Zelle o cripto. La cripto se paga en nuestro propio checkout desde tu wallet. Con Yappy o Zelle haces el pedido en el sitio y te mandamos los datos de pago (Yappy por WhatsApp, Zelle por correo); el pedido sale en cuanto se confirma el pago.' },
   { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez en disolución. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
 ];
 
@@ -386,7 +386,7 @@ const COUNTRIES = {
 /* Datos para pagar con Zelle (US) o Yappy (PA). Son pagos manuales: el pedido
    se registra en el sitio y se confirma a mano al ver el dinero. Si se rellenan,
    la confirmación del pedido los enseña; vacíos, dice que se mandan por
-   WhatsApp. No hay procesador de tarjeta desde el 2026-10-17 (Stripe bloqueó la
+   WhatsApp (Yappy) o por correo (Zelle). No hay procesador de tarjeta desde el 2026-10-17 (Stripe bloqueó la
    cuenta). */
 const MANUAL_PAY = {
   zelle: { to: '', name: '' },   // correo o teléfono de Zelle, y a nombre de quién
@@ -481,8 +481,8 @@ const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Int
   'Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.';
 const PAYMENT_LINE = 'Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or ' +
   'crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is ' +
-  'placed on the site, the payment details are sent on WhatsApp, and the order ships once the ' +
-  'payment is confirmed.';
+  'placed on the site and the payment details are sent afterwards (Yappy on WhatsApp, Zelle by ' +
+  'email); the order ships once the payment is confirmed.';
 
 /* FAQ por producto, derivado del propio producto: build-seo.js lo hornea en el HTML
    y en el JSON-LD, y product.js lo pinta al hidratar. Vive aquí para que las dos

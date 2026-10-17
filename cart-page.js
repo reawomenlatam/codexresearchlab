@@ -141,6 +141,10 @@
   // 2026-10-17 (Stripe bloqueó la cuenta).
   const isManual = (payId) => payId === 'zelle' || payId === 'yappy';
   const manualName = (payId) => (payId === 'zelle' ? 'Zelle' : 'Yappy');
+  // Yappy (PA) sigue por WhatsApp; con Zelle (US) el dueño ve el pedido en
+  // orders.php y le escribe al cliente por correo con los datos de pago.
+  // Mismo correo de contacto de EE. UU. que la cabecera (layout.js).
+  const US_EMAIL = 'codexresearchlab@gmail.com';
 
   // Texto del botón / nota según el método. Crypto cobra de verdad en este
   // paso; Zelle y Yappy no, y la nota lo tiene que decir.
@@ -148,6 +152,10 @@
     if (payId === 'crypto') {
       return { btn: T('Pay with crypto'), icon: '',
         note: T('You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm. Network fees are paid by you.') };
+    }
+    if (payId === 'zelle') {
+      return { btn: T('Place order'), icon: '',
+        note: T('No charge happens here. We’ll email you the Zelle payment details, and your order ships once the payment is confirmed.') };
     }
     return { btn: T('Place order'), icon: '',
       note: T('No charge happens here. After you place the order you’ll see how to pay with {method}, and it ships once the payment is confirmed.', { method: manualName(payId) }) };
@@ -259,6 +267,19 @@
     // cómo pagar y lleva a WhatsApp con el pedido escrito, que es por donde se
     // manda el comprobante.
     const pay = MANUAL_PAY[c.method] || {};
+    // Zelle sin datos publicados: el dueño escribe por correo. Sin botón de
+    // WhatsApp, que es el número de Panamá.
+    if (c.method === 'zelle' && !pay.to) {
+      return `
+      <div class="order-success">
+        <div class="order-success-mark" aria-hidden="true">✓</div>
+        <h2>${T('Order received')}</h2>
+        <p>${T('Thanks! Your order')} <b>${esc(c.id)}</b> ${T('is registered. It ships once the payment is confirmed.')}</p>
+        <p>${T('We’ll email you at {email} with the Zelle payment details. The total is {total}.', { email: '<b>' + esc(c.email) + '</b>', total: '<b>' + esc(c.total) + '</b>' })}</p>
+        <p class="order-success-sub">${T('Reply to that email with your payment receipt. Questions? Write to')} <a href="mailto:${US_EMAIL}">${US_EMAIL}</a>.</p>
+        <a class="btn btn-primary" href="${U('catalog/')}">${T('Continue shopping')}</a>
+      </div>`;
+    }
     const how = pay.to
       ? `<p>${T('Send {total} by {method} to', { total: '<b>' + esc(c.total) + '</b>', method: esc(c.methodName) })}
           <b>${esc(pay.to)}</b>${pay.name ? ` (${esc(pay.name)})` : ''}${T(', with the order number')} <b>${esc(c.id)}</b> ${T('in the note.')}</p>`

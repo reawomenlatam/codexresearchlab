@@ -3360,8 +3360,8 @@
         <p>La versión práctica: una ficha más barata porque hace envío directo desde el extranjero vende otro montaje logístico, no solo otro precio. Conviene saber cuál estás mirando.</p>
 
         <h2>El pedido se hace en el sitio</h2>
-        <p>El pedido se hace en este sitio, sin pasar antes por un chat. La cripto (USDC o USDT en Ethereum) se paga en el mismo checkout desde tu propia wallet. Con Zelle haces el pedido, envías el pago y mandas el comprobante por WhatsApp, y el pedido sale en cuanto se confirma el pago.</p>
-        <p>El soporte por WhatsApp es 1 a 1, para preguntas, para pedir un certificado completo y para los comprobantes de Zelle.</p>
+        <p>El pedido se hace en este sitio, sin pasar antes por un chat. La cripto (USDC o USDT en Ethereum) se paga en el mismo checkout desde tu propia wallet. Con Zelle haces el pedido, te mandamos por correo los datos de pago y el pedido sale en cuanto se confirma el pago.</p>
+        <p>El soporte es 1 a 1, por correo o WhatsApp, para preguntas y para pedir un certificado completo.</p>
 
         <h2>Qué comprobar antes de pagar</h2>
         <p>Todo lo de nuestra <a href="article/verifying-a-peptide-supplier-checklist/">lista de verificación de proveedor</a> se puede hacer antes de mover dinero, y nada de ello exige confiar en nosotros. La versión corta:</p>
@@ -3397,7 +3397,7 @@
         },
         {
           "q": "¿Tengo que escribir por WhatsApp para encargar?",
-          "a": "No. El pedido se hace en el sitio. La cripto se paga en el checkout; con Zelle envías el pago después de pedir y mandas el comprobante por WhatsApp para confirmarlo."
+          "a": "No. El pedido se hace en el sitio. La cripto se paga en el checkout; con Zelle te mandamos por correo los datos de pago después de pedir, y el pedido sale en cuanto se confirma el pago."
         },
         {
           "q": "¿Puedo ver el certificado de análisis antes de pagar?",
