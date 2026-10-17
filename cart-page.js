@@ -3,7 +3,7 @@
    order"), discount codes, trust badges + guarantee, scarcity, social proof,
    sticky order summary with a single prominent checkout CTA. */
 (function () {
-  const { PRODUCTS, COUPONS, WHATSAPP, BUSINESS = {}, SALE = {} } = window.REA;
+  const { PRODUCTS, COUPONS, WHATSAPP, SALE = {}, MANUAL_PAY = {} } = window.REA;
   const cart = window.REACart;
   const ui = window.REAui;
   const T = window.T;
@@ -136,15 +136,21 @@
       </div>`;
   }
 
-  // Texto del botón / nota según el método. Los dos cobran de verdad en este
-  // paso, así que ninguno puede prometer "no charge happens here".
+  // Zelle (US) y Yappy (PA) son pagos manuales: el pedido se registra aquí y el
+  // dinero se manda fuera del sitio. Sin procesador de tarjeta desde el
+  // 2026-10-17 (Stripe bloqueó la cuenta).
+  const isManual = (payId) => payId === 'zelle' || payId === 'yappy';
+  const manualName = (payId) => (payId === 'zelle' ? 'Zelle' : 'Yappy');
+
+  // Texto del botón / nota según el método. Crypto cobra de verdad en este
+  // paso; Zelle y Yappy no, y la nota lo tiene que decir.
   const checkoutLabel = (cfg, payId) => {
     if (payId === 'crypto') {
       return { btn: T('Pay with crypto'), icon: '',
         note: T('You’ll pay now from your own wallet. The amount is transferred on-chain when you confirm. Network fees are paid by you.') };
     }
-    return { btn: T('Pay by card'), icon: '',
-      note: T('You’ll finish payment on Stripe’s secure checkout and come straight back. Your card details never touch our site.') };
+    return { btn: T('Place order'), icon: '',
+      note: T('No charge happens here. After you place the order you’ll see how to pay with {method}, and it ships once the payment is confirmed.', { method: manualName(payId) }) };
   };
 
   // Formulario único de checkout (US y Panamá, todos los métodos):
@@ -209,9 +215,6 @@
           <span>${T('I confirm I am 21 or older and that I am purchasing these products for laboratory research use only. They are not for human or animal consumption.')} <a href="usage/" target="_blank" rel="noopener">${T('Read the usage notice')}</a></span>
         </label>
 
-        ${!ACC.isIn()
-          ? `<p class="co-acc-hint">${T('Completing the order needs an approved researcher account. Codex Research sells only to research institutions and laboratories.')}</p>`
-          : (ACC.approved() ? '' : `<p class="co-acc-hint">${T('Orders need an approved researcher account. Yours is under review.')}</p>`)}
         <p class="co-msg" id="coMsg" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary sum-checkout" id="coSubmit">${c.icon}${c.btn}</button>
         <p class="sum-note" id="coNote">${c.note}</p>
@@ -252,15 +255,23 @@
           <a class="btn" href="${U('catalog/')}">${T('Continue shopping')}</a>
         </div>`;
     }
-    // Tarjeta: el cobro ya pasó por Stripe y el recibo lo manda Stripe.
+    // Zelle / Yappy: el pedido está registrado pero NO pagado. La pantalla dice
+    // cómo pagar y lleva a WhatsApp con el pedido escrito, que es por donde se
+    // manda el comprobante.
+    const pay = MANUAL_PAY[c.method] || {};
+    const how = pay.to
+      ? `<p>${T('Send {total} by {method} to', { total: '<b>' + esc(c.total) + '</b>', method: esc(c.methodName) })}
+          <b>${esc(pay.to)}</b>${pay.name ? ` (${esc(pay.name)})` : ''}${T(', with the order number')} <b>${esc(c.id)}</b> ${T('in the note.')}</p>`
+      : `<p>${T('We’ll send you the {method} payment details on WhatsApp. The total is {total}.', { method: esc(c.methodName), total: '<b>' + esc(c.total) + '</b>' })}</p>`;
     return `
       <div class="order-success">
         <div class="order-success-mark" aria-hidden="true">✓</div>
-        <h2>${T('Payment received')}</h2>
-        <p>${T('Thanks! We received your payment for order')} <b>${esc(c.id)}</b>. ${T('Stripe sent your receipt to')}
-        <b>${esc(c.email)}</b>${T(', and we’re preparing your shipment. We’ll be in touch with the tracking details.')}</p>
-        <p class="order-success-sub">${T('Any question about your order, write to us at')} ${esc(BUSINESS.email || '')}.</p>
-        <a class="btn btn-primary" href="${U('catalog/')}">${T('Continue shopping')}</a>
+        <h2>${T('Order received')}</h2>
+        <p>${T('Thanks! Your order')} <b>${esc(c.id)}</b> ${T('is registered. It ships once the payment is confirmed.')}</p>
+        ${how}
+        <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(c.waText)}" target="_blank" rel="noopener">${WA_ICON}${T('Send the order on WhatsApp')}</a>
+        <p class="order-success-sub">${T('Send us the payment receipt in that chat and we’ll confirm your shipment there.')}</p>
+        <a class="btn" href="${U('catalog/')}">${T('Continue shopping')}</a>
       </div>`;
   }
 
@@ -298,7 +309,7 @@
           ${checkoutForm(s, cfg, payId)}
 
           <ul class="sum-trust">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> <span><b>${T('Card payments secured by Stripe')}</b></span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> <span><b>${esc(cfg.payments.map((p) => (p.id === 'crypto' ? T('crypto') : p.label)).join(' · '))}</b></span></li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>${T('Secure & private')}</span></li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>${T('Sealed packaging')}</span></li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>${T('Batch-verified with COA')}</span></li>
@@ -639,23 +650,6 @@
     throw new Error('confirmation_timeout');
   }
 
-  // ---------- Pago con tarjeta (Stripe Checkout hospedado) ----------
-  // El servidor crea la sesión con SU precio y devuelve la URL; aquí sólo se
-  // salta a Stripe y, al volver, se pregunta si quedó pagada.
-  const STRIPE_API = 'https://hooks.codexresearchlab.com/stripe-pay.php';
-  const PENDING_KEY = 'rea-stripe-pending-v1';
-
-  const STRIPE_ERRORS = {
-    cuenta_requerida: T('Please create an account or sign in to continue.'),
-    stripe_no_configurado: T('Card payments are not available right now. You can pay with crypto, or write to us.'),
-    stripe_no_disponible: T('The payment provider didn’t respond. Please try again in a moment.'),
-    price_mismatch: T('The order total changed. Please review your cart and try again.'),
-    producto_agotado: T('One of the items just went out of stock.'),
-    correo_invalido: T('Please enter a valid email address.'),
-    falta_confirmacion_uso: T('Please confirm the research-use statement before placing your order.'),
-    demasiadas_peticiones: T('Too many attempts. Please wait a minute and try again.'),
-  };
-
   const CRYPTO_ERRORS = {
     cuenta_requerida: T('Please create an account or sign in to continue.'),
     sdk_load_failed: T('We couldn’t load the payment module. Check your connection and try again.'),
@@ -670,9 +664,8 @@
 
   async function placeOrder() {
     if (placing) return;
-    // Sin cuenta aprobada no se arma ni se guarda el pedido: require() pide
-    // entrar, o enseña que la cuenta sigue en revisión.
-    if (!ACC.isIn() || !ACC.approved()) { ACC.require(() => placeOrder()); return; }
+    // Desde el 2026-10-17 no hace falta cuenta para pedir: el gate de
+    // investigador aprobado se pidió para Stripe, y sin Stripe se quitó.
     const s = compute();
     const msg = document.getElementById('coMsg');
     const btn = document.getElementById('coSubmit');
@@ -710,68 +703,37 @@
       .map((x) => clean(x)).filter(Boolean).join('\n');
     const itemsText = s.lines.map((l) => `${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n');
 
-    // ---- Ruta tarjeta (Stripe Checkout): el cobro ocurre en Stripe ----
-    if (payId === 'stripe') {
+    // ---- Ruta Zelle / Yappy: se registra el pedido y se paga fuera del sitio ----
+    if (isManual(payId)) {
       placing = true;
-      if (msg) msg.hidden = true;
-      if (btn) { btn.disabled = true; btn.textContent = T('Opening secure checkout…'); }
+      const methodName = manualName(payId);
+      const waText =
+        'Hi Codex Research, I placed this order and will pay with ' + methodName + ':\n' +
+        s.lines.map((l) => `• ${l.name} (${l.size}) x${l.qty} - ${money(l.subtotal)}`).join('\n') +
+        `\n\nOrder: ${id}` +
+        `\nName: ${clean(buyer.name)}` +
+        `\nEmail: ${clean(buyer.email)}` +
+        `\nPhone: ${clean(buyer.phone)}` +
+        `\nShipping address:\n${addressText}` +
+        (buyer.notes ? `\nNotes: ${clean(buyer.notes)}` : '') +
+        `\n\nSubtotal: ${money(s.subtotal)}` +
+        (s.discount > 0 ? `\nDiscount (${clean(coupon)}): -${money(s.discount)}` : '') +
+        `\nShipping: ${s.shipping === 0 ? 'Free' : money(s.shipping)}` +
+        `\nTotal: ${money(s.total)}`;
 
-      // Se registra antes del salto: si abandona la pasarela, el pedido existe
-      // igual y se le puede dar seguimiento.
-      saveOrder(s, id, cfg, 'Card (Stripe)', 'pending');
       fireLead(s);
+      trackCoupon(s, id, cfg, methodName);
       stageForCapi(s, id, cfg);
-
-      try {
-        const r = await fetch(STRIPE_API, {
-          method: 'POST',
-          // El servidor no cotiza sin cuenta: el token va en cada llamada.
-          headers: Object.assign({ 'Content-Type': 'application/json' }, ACC.authHeaders()),
-          body: JSON.stringify({
-            action: 'session', order_id: id, country: cfg.code, coupon: coupon || '',
-            account_token: ACC.token(),
-            // Para que Stripe devuelva al carrito en el idioma en que se compró.
-            lang: (window.REAi18n && window.REAi18n.lang) || 'en',
-            research_use_ack: true,
-            // Cookies de atribución de Meta: sólo existen en el navegador y el
-            // Purchase de servidor las necesita para emparejar la compra.
-            fbp: cookie('_fbp'), fbc: fbcValue(), source_url: location.href,
-            items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
-            buyer,
-          }),
-        });
-        let b = {};
-        try { b = await r.json(); } catch (e) { /* respuesta no-JSON */ }
-        // La sesión caducó entre que llenó el formulario y le dio a pagar: se
-        // limpia y se le pide entrar, en vez de dejarlo con un error a secas.
-        if (r.status === 401 || b.error === 'cuenta_requerida') {
-          if (ACC.expire) ACC.expire();
-          placing = false;
-          if (btn) { btn.disabled = false; btn.textContent = T('Pay by card'); }
-          ACC.require(() => placeOrder());
-          return;
-        }
-        // La revisaron entre medio (o la rechazaron): se refresca y se enseña.
-        if (b.error === 'cuenta_en_revision' || b.error === 'cuenta_rechazada') {
-          placing = false;
-          if (btn) { btn.disabled = false; btn.textContent = T('Pay by card'); }
-          if (ACC.refresh) await ACC.refresh();
-          ACC.showStatus();
-          return;
-        }
-        if (!b.ok || !b.url) throw new Error(b.error || 'session_failed');
-        // El servidor manda sobre el precio: si no coincide con lo que ve el
-        // cliente, no se le manda a pagar un importe distinto al mostrado.
-        if (Math.abs(Number(b.amount) - s.total) > 0.01) throw new Error('price_mismatch');
-
-        sessionStorage.setItem(PENDING_KEY, JSON.stringify({ id: b.order_id, email: buyer.email }));
-        window.location.href = b.url;   // adiós: el resto ocurre en Stripe
-      } catch (err) {
-        placing = false;
-        if (btn) { btn.disabled = false; btn.textContent = T('Pay by card'); }
-        const code = String(err && err.message ? err.message : err);
-        setErr(STRIPE_ERRORS[code] || T('We couldn’t open the secure checkout. Please try again or contact us.'));
-      }
+      saveOrder(s, id, cfg, methodName, 'pending');
+      confirmation = {
+        manual: true, method: payId, methodName, id,
+        email: clean(buyer.email), total: money(s.total), waText,
+      };
+      resetBuyer();
+      placing = false;
+      cart.detailed().forEach((l) => cart.remove(l.id)); // vacía el carrito → render()
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
@@ -795,7 +757,8 @@
           action: 'quote', country: cfg.code, coupon: coupon || '',
           items: s.lines.map((l) => ({ slug: l.slug, size: l.size, qty: l.qty })),
         });
-        // Misma cortesía que en tarjeta: si la sesión murió, se pide entrar.
+        // Sólo pasa si el servidor sigue con el gate encendido
+        // (`accounts.required` en config.php): entonces se pide entrar.
         if (q.error === 'cuenta_requerida') {
           if (ACC.expire) ACC.expire();
           restore();
@@ -874,87 +837,14 @@
 
     // Ningún otro método cobra en este sitio: si llegara aquí, es un estado
     // imposible (país mal configurado) y es mejor decirlo que fingir un pedido.
-    setErr(T('That payment method is no longer available. Please choose card or crypto.'));
-  }
-
-  /* ---------- Vuelta desde Stripe ----------
-     Stripe devuelve al cliente con ?paid=<session_id>. Ese parámetro NO prueba
-     nada por sí solo: se le pregunta al servidor, que a su vez se lo pregunta a
-     Stripe. El cobro se cierra igual por webhook aunque aquí falle la consulta. */
-  async function handleStripeReturn() {
-    const qs = new URLSearchParams(location.search);
-    const sid = qs.get('paid');
-    const canceled = qs.get('canceled');
-    if (!sid && !canceled) return false;
-
-    // La URL se limpia siempre: recargar no debe repetir nada.
-    history.replaceState(null, '', location.pathname);
-
-    if (canceled) {
-      // El aviso va ENCIMA del carrito, no en su lugar: quien cancela quiere
-      // volver a su pedido, no quedarse mirando un mensaje suelto.
-      render();
-      const note = document.createElement('p');
-      note.className = 'co-msg cart-notice';
-      note.textContent = T('Payment cancelled. Your cart is untouched.');
-      root.prepend(note);
-      return true;
-    }
-
-    let pending = {};
-    try { pending = JSON.parse(sessionStorage.getItem(PENDING_KEY) || '{}'); } catch (e) { /* vacío */ }
-    sessionStorage.removeItem(PENDING_KEY);
-
-    root.innerHTML = `<div class="order-success"><p>${T('Confirming your payment…')}</p></div>`;
-    const s = compute();
-
-    let b = {};
-    try {
-      const r = await fetch(STRIPE_API, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'status', session_id: sid }),
-      });
-      b = await r.json();
-    } catch (e) { /* sin red: se trata como no confirmado */ }
-
-    if (!b.ok) {
-      // El dinero puede estar cobrado aunque esta consulta falle: nunca se le
-      // dice al cliente que no pagó, se le da un canal directo.
-      const waMsg = T('Hi Codex Research, I paid order {id} by card but the site could not confirm it.',
-        { id: (b.order_id || pending.id || '') });
-      root.innerHTML = `
-        <div class="order-success">
-          <h2>${T('We’re still confirming your payment')}</h2>
-          <p>${T('If your card was charged, your order is safe: we receive the confirmation directly from Stripe. Write to us and we’ll check it right away.')}</p>
-          <a class="btn btn-primary" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener">${WA_ICON}${T('Message us on WhatsApp')}</a>
-        </div>`;
-      return true;
-    }
-
-    const orderId = b.order_id || pending.id || '';
-    if (s.lines.length) {
-      if (typeof fbq === 'function') fbq('track', 'Purchase',
-        { value: Number(b.amount), currency: 'USD', content_ids: s.lines.map((l) => l.slug) },
-        { eventID: orderId });
-      if (typeof gtag === 'function') gtag('event', 'purchase', {
-        transaction_id: orderId, value: Number(b.amount), currency: 'USD',
-        items: s.lines.map((l) => ({ item_id: l.slug, item_name: l.name, price: l.unit, quantity: l.qty })),
-      });
-      trackCoupon(s, orderId, country(), 'Card (Stripe)');
-    }
-
-    confirmation = { id: orderId, email: b.email || pending.email || '' };
-    cart.detailed().forEach((l) => cart.remove(l.id)); // vacía el carrito → render()
-    render();
-    return true;
+    setErr(T('That payment method is no longer available. Please choose another one.'));
   }
 
   // Re-render cuando cambia el carrito (drawer, otra pestaña, quick-add)
   window.addEventListener('rea-cart-change', render);
   // Re-render al cambiar de país: actualiza envío, métodos de pago y campos obligatorios.
   window.addEventListener('rea-country-change', render);
-  handleStripeReturn().then((handled) => { if (!handled) render(); });
+  render();
 
   // ---------- Meta Pixel: eventos de conversión ----------
   // InitiateCheckout: al llegar a la página de carrito con productos (una vez).
@@ -972,6 +862,6 @@
       });
     }
   }
-  // Lead se dispara dentro de placeOrder(); Purchase, al volver pagado de Stripe
-  // o al verificarse el cobro en cadena.
+  // Lead se dispara dentro de placeOrder(); Purchase, al verificarse el cobro en
+  // cadena. Zelle y Yappy no disparan Purchase: el pago se confirma a mano.
 })();

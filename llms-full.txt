@@ -3,10 +3,10 @@
 > Codex Research (codexresearchlab.com) supplies laboratory-grade research peptides,
 > batch-verified with a third-party certificate of analysis (COA) and 99% HPLC purity.
 > Same-day delivery in Panama City (1-2 hours) and shipping across Panama and
-> the United States. Orders are placed and paid on the site, by card (Stripe) or
-> crypto (USDC/USDT); WhatsApp is support, not a required step to buy.
+> the United States. Orders are placed on the site and paid with crypto (USDC/USDT),
+> Zelle (United States) or Yappy (Panama); the Zelle or Yappy receipt is sent on WhatsApp.
 
-Last updated: 2026-10-06. Machine-readable pricing: https://codexresearchlab.com/pricing.md
+Last updated: 2026-10-17. Machine-readable pricing: https://codexresearchlab.com/pricing.md
 
 All products are sold strictly for laboratory research and development. They are not for
 human or animal consumption and are not intended to diagnose, treat, cure or prevent any
@@ -16,7 +16,7 @@ disease. Dosage and clinical questions are outside what this catalog documents.
 
 Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Chitre, Colon and more): next business day via Fergunson transport. United States: $20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.
 
-Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the United States. Card details go straight to Stripe and never touch our site.
+Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site, the payment details are sent on WhatsApp, and the order ships once the payment is confirmed.
 
 # Catalog
 
@@ -381,7 +381,7 @@ No. All products are sold strictly for research and development purposes and are
 
 ### Who can buy from Codex Research?
 
-Only researchers buying for a research institution or laboratory: universities, hospitals and clinical research centers, private labs, biotech and pharmaceutical companies, and CROs. To order you open an account that names your institution, your role and your research area. Every account is reviewed by hand before it can place an order, and we may ask for an institutional email or proof of affiliation. We do not sell for personal use.
+Adults 21 or older buying for laboratory research. At checkout you confirm that the order is for research use only and not for human or animal consumption. We do not sell for personal use, and we cancel any order that refers to human use, dosing or administration.
 
 ### Do you ship internationally?
 
@@ -389,7 +389,7 @@ Message us on WhatsApp with your destination country and we’ll confirm coverag
 
 ### What payment methods do you accept?
 
-Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site.
+Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site, we send you the payment details on WhatsApp, and the order ships once the payment is confirmed.
 
 ### How should I store the products?
 

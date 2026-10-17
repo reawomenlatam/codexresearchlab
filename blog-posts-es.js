@@ -48,9 +48,9 @@
         <p>Dos horas dentro de una ciudad son un solo trayecto corto. Es una propiedad del material y de cómo viaja, y nuestra guía de <a href="article/how-to-store-research-peptides/">almacenamiento</a> lo explica en detalle.</p>
 
         <h2>Pagar desde Panamá</h2>
-        <p>El pago ocurre en el checkout del sitio, con dos métodos disponibles.</p>
+        <p>El pedido se hace en el checkout del sitio, con dos métodos de pago disponibles.</p>
         <ul>
-          <li><b>Tarjeta:</b> Visa, Mastercard y American Express, procesadas por Stripe. El pago termina en el checkout seguro de Stripe, así que los datos de la tarjeta nunca pasan por este sitio.</li>
+          <li><b>Yappy:</b> haces el pedido, envías el pago por Yappy y mandas el comprobante por WhatsApp. El pedido sale en cuanto se confirma el pago.</li>
           <li><b>Cripto:</b> USDC o USDT en Ethereum, enviados desde tu propia billetera y verificados en cadena antes de liberar el pedido.</li>
         </ul>
         <p>Los precios se muestran en dólares estadounidenses, la moneda de curso en Panamá, así que no hay conversión al momento de pagar.</p>
@@ -94,7 +94,7 @@
         },
         {
           "q": "¿Cómo se paga?",
-          "a": "En el checkout del sitio. Las tarjetas Visa, Mastercard y American Express las procesa Stripe y el pago termina en su checkout seguro, así que los datos de la tarjeta nunca pasan por este sitio. También se acepta cripto en USDC o USDT sobre Ethereum, verificada en cadena antes de liberar el pedido."
+          "a": "El pedido se hace en el checkout del sitio. Puedes pagar por Yappy, mandando el comprobante por WhatsApp después de pedir, o con cripto en USDC o USDT sobre Ethereum, verificada en cadena antes de liberar el pedido."
         },
         {
           "q": "¿Tengo que pedir por WhatsApp?",
@@ -141,7 +141,7 @@
         <p>En Codex Research, cada lote se analiza en un laboratorio independiente por HPLC y espectrometría de masas, y el COA completo está disponible a solicitud antes de pagar. Para confirmar que un vial es auténtico, ingresa su número de lote en la <a href="verify/">página de verificación</a>: un número válido devuelve el producto y confirma que está registrado. Si un número no aparece, puedes enviarlo al equipo para que lo revise.</p>
 
         <h2>Comprar en Panamá</h2>
-        <p>En Panamá puedes pedir el COA antes de ordenar, pagar con tarjeta o cripto al finalizar la compra, y recibir tu pedido en 1 a 2 horas dentro de la ciudad. La guía completa de <a href="article/buy-research-peptides-panama/">cómo comprar péptidos de investigación en Panamá</a> cubre el envío y el pago en detalle.</p>
+        <p>En Panamá puedes pedir el COA antes de ordenar, pagar con Yappy o cripto, y recibir tu pedido en 1 a 2 horas dentro de la ciudad. La guía completa de <a href="article/buy-research-peptides-panama/">cómo comprar péptidos de investigación en Panamá</a> cubre el envío y el pago en detalle.</p>
 
         <h2>Empieza por la etiqueta, no por el anuncio</h2>
         <p>La verificación va en una sola dirección: del vial que tienes en la mano hacia el papel. Cada vial de Codex Research lleva un número de lote con el formato CDX-NNNN (por ejemplo, CDX-1017), y esa cadena es la llave de todo lo demás. Léela primero en la etiqueta y después comprueba que esa misma cadena aparece en el certificado que te enviaron. Un COA que no nombra tu lote es un documento sobre otro material, por buenos que se vean los números.</p>
@@ -3346,10 +3346,10 @@
     'buy-research-peptides-usa': {
       title: 'Comprar péptidos de investigación en Estados Unidos',
       metaTitle: 'Comprar péptidos de investigación en EE. UU.: stock y COA',
-      metaDescription: 'Stock y envío dentro de EE. UU., checkout con tarjeta o cripto sin pasar por mensajería, y cómo comprobar el certificado del lote antes de pagar.',
+      metaDescription: 'Stock y envío dentro de EE. UU., pago con cripto o Zelle, y cómo comprobar el certificado del lote antes de pagar.',
       category: 'Guía de compra',
       date: '02 oct 2026',
-      excerpt: 'Stock doméstico, checkout sin mensajería y qué comprobar antes de pagar.',
+      excerpt: 'Stock doméstico, pago con cripto o Zelle y qué comprobar antes de pagar.',
       imageAlt: 'Comprar péptidos de investigación en Estados Unidos: stock, pago y verificación.',
       body: `
         <p class="lead">Comprar dentro de EE. UU. plantea tres preguntas prácticas que nada tienen que ver con la química: desde dónde sale el material, si hay que hablar con alguien para encargar, y qué puedes comprobar antes de pagar. Así funciona cada una aquí.</p>
@@ -3359,9 +3359,9 @@
         <p>Los péptidos liofilizados se degradan por rutas que avanzan con el tiempo y la temperatura, así que el tránsito no es un periodo neutro. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Ref.: Manning et al., 2010)</a> Un certificado lleva fecha porque un resultado pertenece a un momento, y el viaje entre esa fecha y tu mesa es parte de lo que compras aunque no figure en ningún documento. Nuestra nota sobre <a href="article/how-to-store-research-peptides/">conservación</a> cubre la química.</p>
         <p>La versión práctica: una ficha más barata porque hace envío directo desde el extranjero vende otro montaje logístico, no solo otro precio. Conviene saber cuál estás mirando.</p>
 
-        <h2>No hace falta escribirle a nadie para encargar</h2>
-        <p>El checkout corre en este sitio, con tarjeta o con criptomoneda, y no hay ningún paso de mensajería obligatorio para comprar. Lo mencionamos porque pedirle al comprador que se mueva a una aplicación de chat antes de poder pagar es frecuente en esta categoría, y vale la pena decir explícitamente que aquí no funciona así.</p>
-        <p>El soporte por WhatsApp existe y es 1 a 1, para preguntas y para pedir un certificado completo. Es un canal de soporte, no un checkout.</p>
+        <h2>El pedido se hace en el sitio</h2>
+        <p>El pedido se hace en este sitio, sin pasar antes por un chat. La cripto (USDC o USDT en Ethereum) se paga en el mismo checkout desde tu propia wallet. Con Zelle haces el pedido, envías el pago y mandas el comprobante por WhatsApp, y el pedido sale en cuanto se confirma el pago.</p>
+        <p>El soporte por WhatsApp es 1 a 1, para preguntas, para pedir un certificado completo y para los comprobantes de Zelle.</p>
 
         <h2>Qué comprobar antes de pagar</h2>
         <p>Todo lo de nuestra <a href="article/verifying-a-peptide-supplier-checklist/">lista de verificación de proveedor</a> se puede hacer antes de mover dinero, y nada de ello exige confiar en nosotros. La versión corta:</p>
@@ -3397,7 +3397,7 @@
         },
         {
           "q": "¿Tengo que escribir por WhatsApp para encargar?",
-          "a": "No. El checkout corre en el sitio con tarjeta o criptomoneda y no hay paso de mensajería obligatorio. WhatsApp es un canal de soporte 1 a 1 para preguntas y para pedir un certificado completo."
+          "a": "No. El pedido se hace en el sitio. La cripto se paga en el checkout; con Zelle envías el pago después de pedir y mandas el comprobante por WhatsApp para confirmarlo."
         },
         {
           "q": "¿Puedo ver el certificado de análisis antes de pagar?",

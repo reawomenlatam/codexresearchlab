@@ -14,10 +14,10 @@ prevent any disease.
 - Same-day delivery in Panama City: 1-2 hours, $4 flat shipping.
 - Interior cities (David, Chitré, Colón and more): next business day via Fergunson transport.
 - Free shipping on orders over $100.
-- Payment methods: card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on the site's own checkout.
+- Payment methods: Yappy or crypto (USDC or USDT on Ethereum) in Panama; Zelle or crypto in the United States. Orders are placed on the site's own checkout; crypto is paid there, and Yappy or Zelle payments are confirmed by hand before the order ships.
 - Questions before or after an order are answered by a specialist on WhatsApp: +507 6335-4625.
 - Prices are in USD.
-- Sold only to researchers buying for a research institution or laboratory. Ordering needs a researcher account (institution, role, research area) that is reviewed by hand before its first order. No sales for personal use.
+- Sold for laboratory research use only, to buyers 21 or older. No sales for personal use.
 
 ## Products
 

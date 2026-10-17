@@ -199,7 +199,7 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              ${T('Secure checkout · card or crypto, paid on this site')}
+              ${T('Pay with crypto, Zelle (U.S.) or Yappy (Panama)')}
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -209,7 +209,7 @@
           </ul>
 
           <div class="pd-note">
-            <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')} ${T('Sold only to approved research accounts: each account is reviewed by hand before its first order.')}
+            <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')} ${T('Sold only to adults 21 or older.')}
           </div>
 
           <div class="pd-coa">

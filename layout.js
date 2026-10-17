@@ -67,9 +67,9 @@
                 </button>`).join('')}
             </div>
           </div>
-          <button class="acc-btn" id="accBtn" aria-label="${T('Account')}">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </button>
+          ${/* Botón de cuenta (#accBtn) retirado el 2026-10-17: ya no hace falta
+               cuenta para pedir. El código que lo maneja abajo sigue y no hace
+               nada si el botón no existe. */ ''}
           <button class="cart-btn" aria-label="${T('Open cart')}" data-cart-open>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             <span class="cart-count" data-cart-count>0</span>
@@ -140,7 +140,7 @@
           <p class="copy">© Codex Research ${new Date().getFullYear()}. ${T('All rights reserved.')}</p>
           ${BIZ}
           <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
-          <p>${T('We sell only to researchers buying for a research institution or laboratory. Every order needs an approved researcher account, and we review each account by hand before its first order.')}</p>
+          <p>${T('Sold only to adults 21 or older for laboratory research. We cancel any order that refers to human use, dosing or administration.')}</p>
         </div>
       </div>
     </footer>`;
@@ -156,7 +156,7 @@
           <button class="sn-ok" id="snOk">${T('Got it')}</button>
         </div>
         <p class="sn-legal">
-          ${T('Research use only \u00b7 sold only to approved research accounts \u00b7 by continuing you confirm you are 21 or older \u00b7')}
+          ${T('Research use only \u00b7 by continuing you confirm you are 21 or older \u00b7')}
           <a href="terms/">${T('Terms')}</a>
         </p>
       </div>
@@ -275,11 +275,10 @@
     const mailLink = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
     const ann = document.getElementById('announceContact');
     if (ann) {
-      // La barra de todas las páginas dice a quién se vende (2026-10-02, revisión
-      // de Stripe). Antes anunciaba WELCOME10 o la rebaja general: un descuento de
-      // bienvenida en cada página se lee como tienda de consumo. El cupón sigue
-      // valiendo en el carrito; sólo dejó de anunciarse aquí.
-      const promo = `<b>${T('For research institutions and laboratories only')}</b> · ${T('approved researcher account required')}`;
+      // La barra decía "solo instituciones · cuenta aprobada" desde la revisión
+      // de Stripe (2026-10-02). Sin Stripe (2026-10-17) se quitó el gate y la
+      // barra dice cómo se paga en el país del visitante.
+      const promo = `<b>${T('For laboratory research use only')}</b> · ${isPA ? T('Pay with Yappy or crypto') : T('Pay with Zelle or crypto')}`;
       ann.innerHTML = isPA
         ? `${promo}<span class="ann-contact"> · ${waLink}</span>`
         : `${promo}<span class="ann-contact"> · ${mailLink}</span>`;

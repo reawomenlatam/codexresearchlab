@@ -2455,9 +2455,9 @@
         <p>Two hours in a city is a short, single trip. This is a property of the material and how it travels, which our guide to <a href="article/how-to-store-research-peptides/">storing research peptides</a> covers in detail.</p>
 
         <h2>Paying in Panama</h2>
-        <p>Payment happens at checkout on the site, with two methods available.</p>
+        <p>The order is placed at checkout on the site, with two payment methods available.</p>
         <ul>
-          <li><b>Card:</b> Visa, Mastercard and American Express, processed by Stripe. The payment is completed on Stripe's own secure checkout, so card details never touch this site.</li>
+          <li><b>Yappy:</b> you place the order, send the payment by Yappy and share the receipt on WhatsApp. The order ships once the payment is confirmed.</li>
           <li><b>Crypto:</b> USDC or USDT on Ethereum, sent from your own wallet and verified on-chain before the order is released.</li>
         </ul>
         <p>Prices are shown in U.S. dollars, the currency used in Panama, so there is no conversion at the point of payment.</p>
@@ -2507,7 +2507,7 @@
         },
         {
           "q": "How is payment handled?",
-          "a": "At checkout on the site. Card payments with Visa, Mastercard or American Express are processed by Stripe and completed on Stripe’s own secure checkout, so card details never touch this site. Crypto is accepted as USDC or USDT on Ethereum, verified on-chain before the order is released."
+          "a": "The order is placed at checkout on the site. You can pay by Yappy, sending the receipt on WhatsApp after ordering, or with crypto as USDC or USDT on Ethereum, verified on-chain before the order is released."
         },
         {
           "q": "Do I have to order through WhatsApp?",
@@ -2579,7 +2579,7 @@
         <p>At Codex Research, every batch is third-party tested with HPLC and mass spectrometry, and the full COA is available on request before you pay. To confirm a vial is genuine, enter its batch number on the <a href="verify/">batch verification page</a>: a valid number returns the product and confirms it is on record. If a number does not match, you can send it to the team to check.</p>
 
         <h2>Buying in Panama</h2>
-        <p>In Panama, you can ask for the COA before you order, pay by card or crypto at checkout, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
+        <p>In Panama, you can ask for the COA before you order, pay with Yappy or crypto, and receive your order in 1-2 hours in Panama City. See the full guide to <a href="article/buy-research-peptides-panama/">buying research peptides in Panama</a> for shipping and payment details.</p>
 
         <h2>Start from the label, not from the listing</h2>
         <p>Verification runs in one direction: from the vial in your hand back to the paperwork. Every Codex Research vial carries a batch number in the format CDX-NNNN (for example, CDX-1017), and that string is the key to everything else. Read it off the label first, then check that the same string appears on the certificate you were sent. A COA that does not name your batch is a document about some other material, however impressive the numbers on it look.</p>
@@ -4341,12 +4341,12 @@
       slug: 'buy-research-peptides-usa',
       title: 'Buying Research Peptides in the United States',
       metaTitle: 'Buying Research Peptides in the US: Stock, Payment, COA',
-      metaDescription: 'Domestic stock and shipping inside the US, card or crypto checkout with no messaging required, and how to check a batch certificate before you pay.',
+      metaDescription: 'Domestic stock and shipping inside the US, crypto or Zelle payment, and how to check a batch certificate before you pay.',
       focusKeyword: 'buy research peptides USA',
       category: 'Buying Guide',
       tags: ["United States","shipping","buying","verification"],
       date: 'Oct 02, 2026', dateISO: '2026-10-02',
-      excerpt: 'Domestic stock, checkout without messaging, and what to check before paying.',
+      excerpt: 'Domestic stock, crypto or Zelle payment, and what to check before paying.',
       imageAlt: 'Buying research peptides in the United States: stock, payment and verification.',
       body: `
         <p class="lead">Buying inside the US raises three practical questions that have nothing to do with chemistry: where the material ships from, whether you have to talk to someone to place an order, and what you can check before paying. Here is how each one works here.</p>
@@ -4356,9 +4356,9 @@
         <p>Lyophilised peptides degrade by routes that proceed with time and temperature, so transit is not a neutral period. <a class="cite" href="https://doi.org/10.1007/s11095-009-0045-6" target="_blank" rel="noopener nofollow">(Reference: Manning et al., 2010)</a> A certificate is dated because a result belongs to a moment, and the journey between that date and your bench is part of what you are buying even though it appears on no document. Our note on <a href="article/how-to-store-research-peptides/">storage</a> covers the chemistry.</p>
         <p>The practical version: a listing that is cheaper because it drop-ships from abroad is selling a different logistics arrangement, not only a different price. Worth knowing which one you are looking at.</p>
 
-        <h2>You do not have to message anyone to order</h2>
-        <p>Checkout runs on this site, by card or by cryptocurrency, and no messaging step is required to buy. We mention this because asking buyers to move to a chat app before they can pay is common in this category, and it is worth being explicit that it is not how this works.</p>
-        <p>Support on WhatsApp exists and is one-to-one, for questions and for requesting a full certificate. It is a support channel, not a checkout.</p>
+        <h2>You place the order on the site</h2>
+        <p>The order is placed on this site, with no chat step before it. Crypto (USDC or USDT on Ethereum) is paid right at checkout from your own wallet. With Zelle, you place the order, send the payment and share the receipt on WhatsApp, and the order ships once the payment is confirmed.</p>
+        <p>Support on WhatsApp is one-to-one, for questions, for requesting a full certificate and for Zelle receipts.</p>
 
         <h2>What to check before you pay</h2>
         <p>Everything on our <a href="article/verifying-a-peptide-supplier-checklist/">supplier checklist</a> can be done before money moves, and none of it requires trusting us. The short version:</p>
@@ -4394,7 +4394,7 @@
         },
         {
           "q": "Do I have to message someone on WhatsApp to order?",
-          "a": "No. Checkout runs on the site with card or cryptocurrency and no messaging step is required. WhatsApp is a one-to-one support channel for questions and for requesting a full certificate."
+          "a": "No. The order is placed on the site. Crypto is paid at checkout; with Zelle you send the payment after ordering and share the receipt on WhatsApp so it can be confirmed."
         },
         {
           "q": "Can I see the certificate of analysis before paying?",

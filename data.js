@@ -245,9 +245,9 @@ const FAQS = [
   { q: 'Are your products verified?', a: 'Yes. Every batch comes with a certificate of analysis (COA) from an independent lab, with HPLC and mass spectrometry testing. Your vial’s batch number can be checked at codexresearchlab.com/verify/, and the full COA is available on request, before you order if you want to see it first.' },
   { q: 'Where do you ship from and how long does it take?', a: 'Orders ship from local stock in each country. Panamá: $4 shipping, delivered in 1-2 hours in Panama City (interior cities like David, Chitré and Colón: next business day via Fergunson transport). United States: $20 shipping from our U.S. stock, delivered in 48-72 hours. Free shipping over $100 (Panamá) or $250 (U.S.). Always in sealed, protective packaging.' },
   { q: 'Are these products for human consumption?', a: 'No. All products are sold strictly for research and development purposes and are not intended for human or animal consumption.' },
-  { q: 'Who can buy from Codex Research?', a: 'Only researchers buying for a research institution or laboratory: universities, hospitals and clinical research centers, private labs, biotech and pharmaceutical companies, and CROs. To order you open an account that names your institution, your role and your research area. Every account is reviewed by hand before it can place an order, and we may ask for an institutional email or proof of affiliation. We do not sell for personal use.' },
+  { q: 'Who can buy from Codex Research?', a: 'Adults 21 or older buying for laboratory research. At checkout you confirm that the order is for research use only and not for human or animal consumption. We do not sell for personal use, and we cancel any order that refers to human use, dosing or administration.' },
   { q: 'Do you ship internationally?', a: 'Message us on WhatsApp with your destination country and we’ll confirm coverage, timing and cost before you pay.' },
-  { q: 'What payment methods do you accept?', a: 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). You pay on our own checkout, in both Panamá and the United States. Card details go straight to Stripe and never touch our site.' },
+  { q: 'What payment methods do you accept?', a: 'Panamá: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle you place the order on the site, we send you the payment details on WhatsApp, and the order ships once the payment is confirmed.' },
   { q: 'How should I store the products?', a: 'Lyophilized vials are stored cool and protected from light, and kept refrigerated (2-8 °C) once in solution. Every vial label shows its storage conditions.' },
 ];
 
@@ -257,9 +257,9 @@ const FAQS_ES = [
   { q: '¿Sus productos están verificados?', a: 'Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. El número de lote de tu vial se puede comprobar en codexresearchlab.com/verify/, y el COA completo está disponible si lo pides, también antes de comprar.' },
   { q: '¿Desde dónde envían y cuánto tarda?', a: 'Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque sellado y protegido.' },
   { q: '¿Estos productos son para consumo humano?', a: 'No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal.' },
-  { q: '¿Quién puede comprar en Codex Research?', a: 'Solo investigadores que compran para una institución o laboratorio de investigación: universidades, hospitales y centros de investigación clínica, laboratorios privados, empresas biotecnológicas y farmacéuticas, y CRO. Para pedir se abre una cuenta que indica la institución, el cargo y el área de investigación. Cada cuenta se revisa a mano antes de poder hacer un pedido, y podemos pedir un correo institucional o una prueba de afiliación. No vendemos para uso personal.' },
+  { q: '¿Quién puede comprar en Codex Research?', a: 'Mayores de 21 años que compran para investigación de laboratorio. Al finalizar la compra confirmas que el pedido es solo para uso en investigación y no para consumo humano ni animal. No vendemos para uso personal y cancelamos cualquier pedido que hable de uso humano, dosis o administración.' },
   { q: '¿Hacen envíos internacionales?', a: 'Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues.' },
-  { q: '¿Qué métodos de pago aceptan?', a: 'Tarjeta (Visa, Mastercard, American Express) procesada por Stripe, o cripto (USDC o USDT en Ethereum). Pagas en nuestro propio checkout, tanto en Panamá como en Estados Unidos. Los datos de la tarjeta van directo a Stripe y nunca pasan por nuestro sitio.' },
+  { q: '¿Qué métodos de pago aceptan?', a: 'Panamá: Yappy o cripto (USDC o USDT en Ethereum). Estados Unidos: Zelle o cripto. La cripto se paga en nuestro propio checkout desde tu wallet. Con Yappy o Zelle haces el pedido en el sitio, te mandamos los datos de pago por WhatsApp y el pedido sale en cuanto se confirma el pago.' },
   { q: '¿Cómo debo almacenar los productos?', a: 'Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez en disolución. La etiqueta de cada vial indica sus condiciones de almacenamiento.' },
 ];
 
@@ -367,7 +367,7 @@ const COUNTRIES = {
     eta: 'Delivery in 48-72 h', etaShort: '48-72 h',
     etaFigure: '48-72 h', etaFigureLabel: 'Delivery in the U.S.',
     payments: [
-      { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
+      { id: 'zelle', label: 'Zelle' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
     ],
   },
@@ -377,10 +377,20 @@ const COUNTRIES = {
     eta: 'Panama City: 1-2 h · Interior: next-day', etaShort: '1-2 h in Panama City',
     etaFigure: '1-2 h', etaFigureLabel: 'Delivery in Panama City',
     payments: [
-      { id: 'stripe', label: 'Card · Visa, Mastercard, Amex' },
+      { id: 'yappy', label: 'Yappy' },
       { id: 'crypto', label: 'Crypto · USDC or USDT (Ethereum)' },
     ],
   },
+};
+
+/* Datos para pagar con Zelle (US) o Yappy (PA). Son pagos manuales: el pedido
+   se registra en el sitio y se confirma a mano al ver el dinero. Si se rellenan,
+   la confirmación del pedido los enseña; vacíos, dice que se mandan por
+   WhatsApp. No hay procesador de tarjeta desde el 2026-10-17 (Stripe bloqueó la
+   cuenta). */
+const MANUAL_PAY = {
+  zelle: { to: '', name: '' },   // correo o teléfono de Zelle, y a nombre de quién
+  yappy: { to: '', name: '' },   // número de Yappy (o @directorio), y a nombre de quién
 };
 
 const COUPONS = {
@@ -455,12 +465,12 @@ function panamaBlockEs(p) {
 <p>Los pedidos de ${n} ${p.mg} en Panamá salen de nuestro inventario local. En Ciudad de Panamá
 la entrega tarda de 1 a 2 horas; en el interior (David, Chitré, Colón y otras ciudades), llega
 el siguiente día hábil por transporte Fergunson. El envío cuesta $4 y es gratis en pedidos sobre
-$100. El precio es el mismo en todo el país, desde $${from} USD, y se paga en el sitio con
-tarjeta o con cripto.</p>
+$100. El precio es el mismo en todo el país, desde $${from} USD, y se paga con Yappy o con
+cripto.</p>
 <p>${batch ? `Cada vial lleva impreso su número de lote (el vigente es ${batch.code}) y se puede
 comprobar en la <a href="es/verify/">página de verificación</a>, con el certificado de análisis
-de un laboratorio independiente disponible antes de comprar. ` : ''}Solo se vende a cuentas de
-investigación aprobadas. Más detalles en <a href="es/comprar-peptidos-panama/">cómo comprar
+de un laboratorio independiente disponible antes de comprar. ` : ''}Solo para uso de
+investigación en laboratorio. Más detalles en <a href="es/comprar-peptidos-panama/">cómo comprar
 péptidos de investigación en Panamá</a>.</p>`;
 }
 
@@ -469,9 +479,10 @@ const SHIPPING_LINE = 'Panama City: same-day delivery in 1-2 hours, $4 flat. Int
   '(David, Chitre, Colon and more): next business day via Fergunson transport. United States: ' +
   '$20 from U.S. stock, 48-72 hours. Free shipping over $100 (Panama) or $250 (U.S.). ' +
   'Always in sealed, protective packaging, with each vial labeled with its compound, strength and batch number.';
-const PAYMENT_LINE = 'Card (Visa, Mastercard, American Express) processed by Stripe, or crypto ' +
-  '(USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the ' +
-  'United States. Card details go straight to Stripe and never touch our site.';
+const PAYMENT_LINE = 'Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or ' +
+  'crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is ' +
+  'placed on the site, the payment details are sent on WhatsApp, and the order ships once the ' +
+  'payment is confirmed.';
 
 /* FAQ por producto, derivado del propio producto: build-seo.js lo hornea en el HTML
    y en el JSON-LD, y product.js lo pinta al hidratar. Vive aquí para que las dos
@@ -487,9 +498,8 @@ function productFaq(p) {
   if (esLang()) return productFaqEs(p);
   const list = p.sizes.map((z) => `${z.label}: $${z.price.toFixed(2)} USD`).join('. ');
   const who = { q: `Who can buy ${p.name}?`,
-    a: 'Only researchers buying for a research institution or laboratory, through an approved researcher ' +
-       'account. Each account names the institution, the buyer\'s role and research area, and we review it ' +
-       'by hand before its first order. We do not sell for personal use.' };
+    a: 'Adults 21 or older buying for laboratory research. At checkout the buyer confirms the order is ' +
+       'for research use only and not for human or animal consumption. We do not sell for personal use.' };
   if (isDiluent(p)) {
     return [
       { q: `What is ${p.name}?`,
@@ -541,9 +551,9 @@ function productFaqEs(p) {
   const The = isDiluent(p) ? `El ${name.toLowerCase()}` : name;
   const list = p.sizes.map((z) => `${SIZE_ES[z.label] || z.label}: $${z.price.toFixed(2)} USD`).join('. ');
   const who = { q: `¿Quién puede comprar ${the}?`,
-    a: 'Solo investigadores que compran para una institución o laboratorio de investigación, con una cuenta ' +
-       'de investigador aprobada. Cada cuenta indica la institución, el cargo y el área de investigación, y la ' +
-       'revisamos a mano antes del primer pedido. No vendemos para uso personal.' };
+    a: 'Mayores de 21 años que compran para investigación de laboratorio. Al finalizar la compra se confirma ' +
+       'que el pedido es solo para uso en investigación y no para consumo humano ni animal. No vendemos para ' +
+       'uso personal.' };
   if (isDiluent(p)) {
     return [
       { q: `¿Qué es ${the}?`,
@@ -655,7 +665,7 @@ const RETIRED_PRODUCTS = [
   },
 ];
 
-window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, COUPONS, BATCHES, batchFor, SALE,
+window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, MANUAL_PAY, COUPONS, BATCHES, batchFor, SALE,
   STOCK_BY_COUNTRY, applyStock, setStock,
   WHATSAPP: '50763354625', productFaq, productFaqEs, nameEs, panamaBlockEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };

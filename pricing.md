@@ -1,6 +1,6 @@
 # Pricing · Codex Research (codexresearchlab.com)
 
-All prices in USD. Last updated: 2026-10-06.
+All prices in USD. Last updated: 2026-10-17.
 Research peptides sold strictly for laboratory research and development, not for
 human or animal consumption.
 
@@ -10,7 +10,7 @@ Panama City: same-day delivery in 1-2 hours, $4 flat. Interior cities (David, Ch
 
 ## Payment methods
 
-Card (Visa, Mastercard, American Express) processed by Stripe, or crypto (USDC or USDT on Ethereum). Payment is completed on our own checkout, in both Panama and the United States. Card details go straight to Stripe and never touch our site.
+Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or crypto. Crypto is paid on our own checkout from your wallet. With Yappy or Zelle the order is placed on the site, the payment details are sent on WhatsApp, and the order ships once the payment is confirmed.
 
 ## Catalog
 
