@@ -479,25 +479,66 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .faq-a { display: none; padding: 0 1.4rem 1.2rem; color: var(--muted); font-size: .92rem; }
 .faq-item.open .faq-a { display: block; }
 
-/* ---------- Footer ---------- */
-.footer { background: var(--ink); color: #fff; padding: 4rem 0 2rem; margin-top: 5rem; }
+/* ---------- Footer ----------
+   Bloque oscuro con esquinas superiores redondeadas y separado de los bordes,
+   a la manera de elixalabs.com.au. Los grises sobre #0e0f12 están medidos:
+   .62 = 6.4:1 y .72 = 8.6:1, ambos por encima de AA. */
+.footer {
+  background: #0e0f12; color: #fff;
+  margin: 5rem 12px 0; padding: 4.5rem 0 1.6rem;
+  border-radius: 28px 28px 0 0;
+}
 .footer-top {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,.12);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4rem;
+  padding-bottom: 3.5rem;
 }
-.footer h4 { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.5); margin-bottom: 1rem; }
-.footer-col a { display: block; color: rgba(255,255,255,.8); font-size: .92rem; padding: .28rem 0; }
-.footer-col a:hover { color: #fff; }
-.footer-brand p { color: rgba(255,255,255,.55); font-size: .9rem; margin-top: .8rem; max-width: 320px; }
-.footer-contact { margin-top: 1.2rem; }
-.footer-contact a { color: #c9ccd2; font-weight: 600; font-size: .95rem; display: block; padding: .15rem 0; }
-.footer-legal { padding-top: 1.6rem; }
-.footer-legal p { color: rgba(255,255,255,.55); /* .4 daba 3.67:1 sobre --ink; .55 = 5.58:1 (WCAG AA) */ font-size: .76rem; margin-top: .6rem; line-height: 1.6; }
-.footer-legal .copy { color: rgba(255,255,255,.6); font-size: .82rem; }
-.footer-biz { color: rgba(255,255,255,.55); font-size: .76rem; }
+.footer-mark { display: inline-block; color: #fff; }
+.footer-mark img { width: 64px; height: auto; filter: invert(1); }
+.footer-lede {
+  color: #fff; font-size: 1.3rem; line-height: 1.45; font-weight: 500;
+  letter-spacing: -.01em; max-width: 30ch; margin-top: 2rem;
+}
+.footer-talk { margin-top: 2.4rem; }
+.footer-talk-h { color: rgba(255,255,255,.62); font-size: 1.05rem; }
+.footer-talk-sub { color: rgba(255,255,255,.72); font-size: .88rem; margin-top: .35rem; max-width: 46ch; }
+.footer-contact { margin-top: 1rem; }
+.footer-contact a {
+  display: inline-flex; align-items: center; min-height: 48px;
+  padding: .35rem .35rem .35rem 1.3rem; gap: 1rem;
+  border: 1px solid rgba(255,255,255,.28); border-radius: 999px;
+  color: #fff; font-weight: 500; font-size: .92rem;
+  transition: border-color .2s;
+}
+.footer-contact a::after {
+  content: "→"; display: grid; place-items: center;
+  height: 38px; padding: 0 1.1rem; border-radius: 999px;
+  background: #fff; color: #0e0f12; font-weight: 700;
+}
+.footer-contact a:hover { border-color: rgba(255,255,255,.6); }
+.footer-ruo {
+  margin-top: 2rem; max-width: 520px;
+  border: 1px solid rgba(255,255,255,.28); border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+.footer-ruo-h { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+.footer-ruo p:not(.footer-ruo-h) { color: rgba(255,255,255,.72); font-size: .78rem; line-height: 1.6; margin-top: .55rem; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; align-content: start; }
+.footer h4 { font-size: .85rem; font-weight: 500; color: rgba(255,255,255,.62); margin-bottom: 1rem; }
+.footer-col a { display: block; color: #fff; font-size: .95rem; padding: .32rem 0; }
+.footer-col a:hover { color: rgba(255,255,255,.72); }
+.footer-bottom {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.14); padding-top: 1.4rem;
+}
+.footer-legal p, .footer-note { color: rgba(255,255,255,.62); font-size: .76rem; line-height: 1.6; }
+.footer-note { text-align: right; }
+.footer-pay { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; list-style: none; margin: 0; padding: 0; }
+.footer-pay li {
+  font-family: var(--font-mono); font-size: .72rem; color: #fff;
+  border: 1px solid rgba(255,255,255,.28); border-radius: 6px; padding: .3rem .6rem;
+}
 .footer-biz a { color: inherit; text-decoration: underline; }
 
 /* ---------- Barra de aviso (país + uso) ---------- */
@@ -1230,7 +1271,11 @@ s.was, .pd-price-was {
   .hero-visual { min-height: 340px; }
   .trust-grid, .process-grid { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 3rem; }
+  .footer { margin-inline: 6px; padding-top: 3.5rem; border-radius: 22px 22px 0 0; }
+  .footer-bottom { grid-template-columns: 1fr; justify-items: start; }
+  .footer-pay { justify-content: flex-start; }
+  .footer-note { text-align: left; }
   .process { padding: 3rem 1.8rem; }
   .nav { display: none; }
   .hide-sm { display: none; }
@@ -1249,6 +1294,10 @@ s.was, .pd-price-was {
   .cart-sticky:not([hidden]) { display: flex; }
   .cartpage-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .cartpage-aside { position: static; }
+}
+@media (max-width: 520px) {
+  .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-lede { font-size: 1.15rem; }
 }
 @media (max-width: 540px) {
   .blog-grid { grid-template-columns: 1fr; }

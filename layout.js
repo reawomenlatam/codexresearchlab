@@ -110,37 +110,57 @@
     ? `<p class="footer-biz">${[bizBits, bizContact].filter(Boolean).join(' · ')}</p>`
     : '';
 
+  // Footer inspirado en elixalabs.com.au (2026-10-18): bloque oscuro con
+  // esquinas redondeadas, frase de marca, contacto, caja de uso en
+  // investigación, tres columnas de enlaces y barra final con los medios de
+  // pago reales (no hay tarjeta desde que se cayó Stripe).
   const footerHTML = `
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="${HOME}" class="logo" aria-label="Codex Research"><img class="logo-full" src="assets/logo-horizontal-light.png" alt="Codex Research" width="914" height="108"></a>
-            <p>${T('Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.').replace('1-to-1', '1\u2011to\u20111')}</p>
-            <div class="footer-contact" id="footerContact"></div>
+            <a href="${HOME}" class="footer-mark" aria-label="Codex Research"><img src="assets/logo-mark.svg" alt="" width="641" height="558"></a>
+            <p class="footer-lede">${T('Research compounds with a third-party COA for every batch, and a person on the other end when you write.')}</p>
+            <div class="footer-talk">
+              <p class="footer-talk-h">${T('Questions before you order?')}</p>
+              <p class="footer-talk-sub">${T('Verified compounds, ready to ship. Human 1-to-1 support on WhatsApp.').replace('1-to-1', '1\u2011to\u20111')}</p>
+              <div class="footer-contact" id="footerContact"></div>
+            </div>
+            <div class="footer-ruo">
+              <p class="footer-ruo-h">${T('Research use only')}</p>
+              <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
+              <p>${T('Sold only to adults 21 or older for laboratory research. We cancel any order that refers to human use, dosing or administration.')}</p>
+            </div>
           </div>
-          <div class="footer-col">
-            <h4>${T('Explore')}</h4>
-            <a href="${U('catalog/')}">${T('Catalog')}</a>
-            <a href="${U('verify/')}">${T('Verify a batch')}</a>
-            <a href="${HOME}#proceso">${T('Our process')}</a>
-            <a href="${HOME}#faq">${T('FAQ')}</a>
-            <a href="${U('blog/')}">${T('Blog')}</a>
-            <a href="${U('tools/')}">${T('Free tools')}</a>
-          </div>
-          <div class="footer-col">
-            <h4>${T('Legal')}</h4>
-            <a href="privacy/">${T('Privacy Policy')}</a>
-            <a href="terms/">${T('Terms of Service')}</a>
-            <a href="usage/">${T('Usage notice')}</a>
-            <a href="shipping/">${T('Shipping &amp; refunds')}</a>
-          </div>
+          <nav class="footer-cols" aria-label="${T('Footer')}">
+            <div class="footer-col">
+              <h4>${T('Shop')}</h4>
+              <a href="${U('catalog/')}">${T('Catalog')}</a>
+              <a href="${U('verify/')}">${T('Verify a batch')}</a>
+              <a href="${U('tools/')}">${T('Free tools')}</a>
+            </div>
+            <div class="footer-col">
+              <h4>${T('Company')}</h4>
+              <a href="${HOME}#proceso">${T('Our process')}</a>
+              <a href="${HOME}#faq">${T('FAQ')}</a>
+              <a href="${U('blog/')}">${T('Blog')}</a>
+            </div>
+            <div class="footer-col">
+              <h4>${T('Legal')}</h4>
+              <a href="privacy/">${T('Privacy Policy')}</a>
+              <a href="terms/">${T('Terms of Service')}</a>
+              <a href="usage/">${T('Usage notice')}</a>
+              <a href="shipping/">${T('Shipping &amp; refunds')}</a>
+            </div>
+          </nav>
         </div>
-        <div class="footer-legal">
-          <p class="copy">© Codex Research ${new Date().getFullYear()}. ${T('All rights reserved.')}</p>
-          ${BIZ}
-          <p>${T('All products on this site are sold solely for research and development use, and are not intended for human consumption of any kind. The statements on this site have not been evaluated by any health authority, and the products are not intended to diagnose, treat, cure or prevent any disease.')}</p>
-          <p>${T('Sold only to adults 21 or older for laboratory research. We cancel any order that refers to human use, dosing or administration.')}</p>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p class="copy">© ${new Date().getFullYear()} Codex Research. ${T('All rights reserved.')}</p>
+            ${BIZ}
+          </div>
+          <ul class="footer-pay" id="footerPay" aria-label="${T('Payment methods')}"></ul>
+          <p class="footer-note">${T('Research use only. Not for human consumption.')}</p>
         </div>
       </div>
     </footer>`;
@@ -285,6 +305,10 @@
     }
     const foot = document.getElementById('footerContact');
     if (foot) foot.innerHTML = isPA ? waLink : mailLink;
+    // Medios de pago según el país: los mismos que anuncia la barra superior.
+    const pay = document.getElementById('footerPay');
+    if (pay) pay.innerHTML = [isPA ? 'Yappy' : 'Zelle', 'USDC', 'USDT']
+      .map(m => `<li>${m}</li>`).join('');
   }
   window.addEventListener('rea-country-change', updateContact);
   updateContact();
