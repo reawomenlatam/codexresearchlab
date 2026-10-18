@@ -594,6 +594,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .product-media:has(.product-photo) { padding: 0; aspect-ratio: 1 / 1; overflow: hidden; }
 /* Ficha de producto */
 .pd-media-main:has(.product-photo) { padding: 0; overflow: hidden; }
+/* Video de producto (4:5): llena el cuadro sin la altura mínima de la foto */
+.pd-media-main:has(.pd-video) { padding: 0; overflow: hidden; min-height: 0; }
+.pd-video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: #8a8c8e; }
+/* La miniatura del video lleva un triángulo de play encima del póster */
+.pd-thumb-video { position: relative; }
+.pd-thumb-video::after { content: ''; position: absolute; inset: 0; margin: auto; width: 0; height: 0;
+  border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent #fff;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.45)); }
 /* Miniaturas de carrito (drawer y página): la foto llena el thumb */
 .cart-line-thumb:has(.product-photo), .ci-thumb:has(.product-photo) { padding: 0; }
 .cart-line-thumb .product-photo, .ci-thumb .product-photo { border-radius: inherit; }

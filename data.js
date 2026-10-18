@@ -100,6 +100,8 @@ const PRODUCTS = [
     mg: '100 mg', from: 95, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ghk-cu.jpg',
     photo2: 'assets/products/ghk-cu-2.jpg',
+    // Video 3D del vial (4:5, 6 s, sin audio). Va primero en la galería de la ficha.
+    video: 'assets/products/ghk-cu.mp4', videoPoster: 'assets/products/ghk-cu-video.jpg',
     sizes: [
       { label: 'Single vial', price: 95 },
       { label: 'Pack · 3 vials', price: 262.20, save: '8%' },

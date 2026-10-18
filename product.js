@@ -12,6 +12,12 @@
 
   const money = (n) => '$' + n.toFixed(2);
   const oos = !!p.outOfStock;
+  // Video de producto: en bucle y sin sonido, como un GIF. Quien pidió menos
+  // movimiento en su sistema ve el póster quieto y lo reproduce si quiere.
+  const quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const videoTag = () => `<video class="pd-video" src="${p.video}" poster="${p.videoPoster}" width="864" height="1080"
+    muted loop playsinline preload="metadata"${quieto ? ' controls' : ' autoplay'}
+    aria-label="${T('Video')}: ${p.name} ${p.mg}"></video>`;
   // Anclaje del pack: la referencia honesta es lo que costaría comprar esos
   // mismos vials sueltos. Si hay rebaja general, manda su `list` (precio previo).
   const packUnits = (label) => { const m = /(\d+)\s*vial/i.exec(label); return m ? parseInt(m[1], 10) : 1; };
@@ -141,9 +147,12 @@
       <div class="container pd-grid">
         <!-- Gallery -->
         <div class="pd-media">
-          <div class="pd-media-main">${ui.media(p, p.sizes[0].label)}</div>
-          ${p.photo2 ? `<div class="pd-thumbs" id="pdThumbs">
-            ${[p.photo, p.photo2].map((src, i) => `<button type="button" class="pd-thumb${i === 0 ? ' active' : ''}" data-src="${src}" aria-label="${T('Photo')} ${i + 1}">
+          <div class="pd-media-main">${p.video ? videoTag() : ui.media(p, p.sizes[0].label)}</div>
+          ${p.photo2 || p.video ? `<div class="pd-thumbs" id="pdThumbs">
+            ${p.video ? `<button type="button" class="pd-thumb pd-thumb-video active" data-video aria-label="${T('Video')}">
+              <img src="${p.videoPoster}" alt="" width="864" height="1080" loading="lazy">
+            </button>` : ''}
+            ${[p.photo, p.photo2].filter(Boolean).map((src, i) => `<button type="button" class="pd-thumb${i === 0 && !p.video ? ' active' : ''}" data-src="${src}" aria-label="${T('Photo')} ${i + 1}">
               <img src="${src}" alt="" width="1400" height="933" loading="lazy">
             </button>`).join('')}
           </div>` : ''}
@@ -340,13 +349,19 @@
     refreshPrice();
   });
 
-  // Segunda foto: las miniaturas cambian la imagen principal.
+  // Miniaturas: cambian lo que se ve en grande. Con video, el cuadro principal
+  // alterna entre el <video> y la foto, así que se repinta en vez de cambiar el src.
   const thumbs = document.getElementById('pdThumbs');
   if (thumbs) thumbs.addEventListener('click', (e) => {
     const btn = e.target.closest('.pd-thumb');
     if (!btn) return;
-    const main = document.querySelector('.pd-media-main .product-photo');
-    if (main) main.src = btn.dataset.src;
+    const box = document.querySelector('.pd-media-main');
+    if (btn.hasAttribute('data-video')) box.innerHTML = videoTag();
+    else if (p.video) box.innerHTML = ui.media({ ...p, photo: btn.dataset.src });
+    else {
+      const img = box.querySelector('.product-photo');
+      if (img) img.src = btn.dataset.src;
+    }
     thumbs.querySelectorAll('.pd-thumb').forEach((b) => b.classList.toggle('active', b === btn));
   });
 
