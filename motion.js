@@ -25,13 +25,29 @@
     v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
     v.setAttribute('aria-hidden', 'true');
     v.preload = 'auto';
+    // MP4 (H.264) primero: lo decodifica cualquier teléfono por hardware. Con
+    // el WebM delante, un Safari de iPhone que lo acepte pero no lo decodifique
+    // se queda sin video: <video> no pasa a la siguiente <source> si falla la
+    // decodificación (2026-10-18, «no se mueve en mi celular»).
     v.innerHTML =
-      `<source src="assets/hero-molecule${tall}.webm" type="video/webm">` +
-      `<source src="assets/hero-molecule${tall}.mp4" type="video/mp4">`;
+      `<source src="assets/hero-molecule${tall}.mp4" type="video/mp4">` +
+      `<source src="assets/hero-molecule${tall}.webm" type="video/webm">`;
     v.addEventListener('playing', () => v.classList.add('is-on'), { once: true });
+    // Si falla también la última fuente no hay video posible: queda la foto.
+    v.lastElementChild.addEventListener('error', () => v.remove());
     bg.insertAdjacentElement('afterend', v);
+    // iPhone en modo de bajo consumo (y algunos Android) bloquean el autoplay:
+    // en vez de quitar el video, se reintenta con el primer toque o scroll.
+    const kick = () => {
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {});
+    };
     const p = v.play();
-    if (p && p.catch) p.catch(() => v.remove());   // autoplay bloqueado: queda la foto
+    if (p && p.catch) p.catch(() => {
+      const evs = ['touchstart', 'pointerdown', 'scroll', 'keydown'];
+      const once = () => { evs.forEach((e) => removeEventListener(e, once, true)); kick(); };
+      evs.forEach((e) => addEventListener(e, once, { capture: true, passive: true }));
+    });
   })();
 
   // ---------- Scroll reveal (fade-up, con stagger) ----------
