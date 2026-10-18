@@ -12,12 +12,25 @@
 
   const money = (n) => '$' + n.toFixed(2);
   const oos = !!p.outOfStock;
-  // Video de producto: en bucle y sin sonido, como un GIF. Quien pidió menos
-  // movimiento en su sistema ve el póster quieto y lo reproduce si quiere.
-  const quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Video de producto: en bucle y sin sonido, como un GIF, y siempre en
+  // automático (decisión del dueño, también con "reducir movimiento").
   const videoTag = () => `<video class="pd-video" src="${p.video}" poster="${p.videoPoster}" width="864" height="1080"
-    muted loop playsinline preload="metadata"${quieto ? ' controls' : ' autoplay'}
+    muted autoplay loop playsinline preload="auto"
     aria-label="${T('Video')}: ${p.name} ${p.mg}"></video>`;
+  // El atributo autoplay no basta en un <video> insertado por innerHTML: Safari
+  // y Chrome a veces no lo arrancan. Se pide play() a mano, y si el navegador lo
+  // bloquea (modo de bajo consumo del iPhone, ahorro de datos) arranca con el
+  // primer toque, clic o desplazamiento.
+  const playVideo = () => {
+    const v = document.querySelector('.pd-media-main .pd-video');
+    if (!v) return;
+    v.muted = true;
+    const p2 = v.play();
+    if (p2 && p2.catch) p2.catch(() => {
+      const go = () => { v.play().catch(() => {}); ['touchstart', 'click', 'scroll'].forEach((ev) => window.removeEventListener(ev, go)); };
+      ['touchstart', 'click', 'scroll'].forEach((ev) => window.addEventListener(ev, go, { passive: true }));
+    });
+  };
   // Anclaje del pack: la referencia honesta es lo que costaría comprar esos
   // mismos vials sueltos. Si hay rebaja general, manda su `list` (precio previo).
   const packUnits = (label) => { const m = /(\d+)\s*vial/i.exec(label); return m ? parseInt(m[1], 10) : 1; };
@@ -351,12 +364,17 @@
 
   // Miniaturas: cambian lo que se ve en grande. Con video, el cuadro principal
   // alterna entre el <video> y la foto, así que se repinta en vez de cambiar el src.
+  if (p.video) {
+    playVideo();
+    // Abierta en otra pestaña, arranca cuando la persona llega a verla.
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) playVideo(); });
+  }
   const thumbs = document.getElementById('pdThumbs');
   if (thumbs) thumbs.addEventListener('click', (e) => {
     const btn = e.target.closest('.pd-thumb');
     if (!btn) return;
     const box = document.querySelector('.pd-media-main');
-    if (btn.hasAttribute('data-video')) box.innerHTML = videoTag();
+    if (btn.hasAttribute('data-video')) { box.innerHTML = videoTag(); playVideo(); }
     else if (p.video) box.innerHTML = ui.media({ ...p, photo: btn.dataset.src });
     else {
       const img = box.querySelector('.product-photo');
