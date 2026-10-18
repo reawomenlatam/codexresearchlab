@@ -1,0 +1,290 @@
+{
+  "_comment": "GENERADO por crypto-build/export-prices.js — no editar a mano. Fuente: ecommerce-template/data.js",
+  "products": {
+    "tirzepatide": {
+      "name": "GLP2-T",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 149,
+        "Pack · 3 vials": 411.24
+      }
+    },
+    "retatrutide": {
+      "name": "GLP3-R",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 150,
+        "Pack · 3 vials": 414
+      }
+    },
+    "retatrutide-20mg": {
+      "name": "GLP3-R",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 194,
+        "Pack · 3 vials": 535.44
+      }
+    },
+    "retatrutide-30mg": {
+      "name": "GLP3-R",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 214,
+        "Pack · 3 vials": 590.64
+      }
+    },
+    "bpc-157": {
+      "name": "BPC-157",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 79,
+        "Pack · 3 vials": 218.04
+      }
+    },
+    "mots-c": {
+      "name": "MOTS-c",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 85,
+        "Pack · 3 vials": 234.6
+      }
+    },
+    "ipamorelin": {
+      "name": "Ipamorelin",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 135,
+        "Pack · 3 vials": 372.6
+      }
+    },
+    "ghk-cu": {
+      "name": "GHK-Cu",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 95,
+        "Pack · 3 vials": 262.2
+      }
+    },
+    "ghk-cu-50mg": {
+      "name": "GHK-Cu",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 64,
+        "Pack · 3 vials": 176.64
+      }
+    },
+    "pt-141": {
+      "name": "PT-141",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 85,
+        "Pack · 3 vials": 234.6
+      }
+    },
+    "nad-plus": {
+      "name": "NAD+",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 130,
+        "Pack · 3 vials": 358.8
+      }
+    },
+    "ahk-cu": {
+      "name": "AHK-Cu",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 120
+      }
+    },
+    "tesamorelin": {
+      "name": "Tesamorelin",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 164,
+        "Pack · 3 vials": 452.64
+      }
+    },
+    "tesamorelin-20mg": {
+      "name": "Tesamorelin",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 279,
+        "Pack · 3 vials": 770.04
+      }
+    },
+    "cjc-1295-no-dac": {
+      "name": "CJC-1295 no DAC",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 129,
+        "Pack · 3 vials": 356.04
+      }
+    },
+    "igf-1-lr3": {
+      "name": "IGF-1 LR3",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 159,
+        "Pack · 3 vials": 438.84
+      }
+    },
+    "tb-500": {
+      "name": "TB-500",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 119,
+        "Pack · 3 vials": 328.44
+      }
+    },
+    "ss-31": {
+      "name": "SS-31",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 99,
+        "Pack · 3 vials": 273.24
+      }
+    },
+    "epithalon": {
+      "name": "Epithalon",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 74,
+        "Pack · 3 vials": 204.24
+      }
+    },
+    "kisspeptin": {
+      "name": "Kisspeptin-10",
+      "outOfStock": true,
+      "sizes": {
+        "Single vial": 94,
+        "Pack · 3 vials": 259.44
+      }
+    },
+    "bac-water": {
+      "name": "Bacteriostatic Water",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 10,
+        "Pack · 3 vials": 27.6
+      }
+    },
+    "bac-water-10ml": {
+      "name": "Bacteriostatic Water",
+      "outOfStock": false,
+      "sizes": {
+        "Single vial": 17,
+        "Pack · 3 vials": 46.92
+      }
+    }
+  },
+  "countries": {
+    "US": {
+      "flat": 20,
+      "freeThreshold": 250
+    },
+    "PA": {
+      "flat": 4,
+      "freeThreshold": 100
+    }
+  },
+  "retail_list": {
+    "tirzepatide": {
+      "Single vial": 149,
+      "Pack · 3 vials": 411.24
+    },
+    "retatrutide": {
+      "Single vial": 150,
+      "Pack · 3 vials": 414
+    },
+    "retatrutide-20mg": {
+      "Single vial": 194,
+      "Pack · 3 vials": 535.44
+    },
+    "retatrutide-30mg": {
+      "Single vial": 214,
+      "Pack · 3 vials": 590.64
+    },
+    "bpc-157": {
+      "Single vial": 79,
+      "Pack · 3 vials": 218.04
+    },
+    "mots-c": {
+      "Single vial": 85,
+      "Pack · 3 vials": 234.6
+    },
+    "ipamorelin": {
+      "Single vial": 135,
+      "Pack · 3 vials": 372.6
+    },
+    "ghk-cu": {
+      "Single vial": 95,
+      "Pack · 3 vials": 262.2
+    },
+    "ghk-cu-50mg": {
+      "Single vial": 64,
+      "Pack · 3 vials": 176.64
+    },
+    "pt-141": {
+      "Single vial": 85,
+      "Pack · 3 vials": 234.6
+    },
+    "nad-plus": {
+      "Single vial": 130,
+      "Pack · 3 vials": 358.8
+    },
+    "ahk-cu": {
+      "Single vial": 120
+    },
+    "tesamorelin": {
+      "Single vial": 164,
+      "Pack · 3 vials": 452.64
+    },
+    "tesamorelin-20mg": {
+      "Single vial": 279,
+      "Pack · 3 vials": 770.04
+    },
+    "cjc-1295-no-dac": {
+      "Single vial": 129,
+      "Pack · 3 vials": 356.04
+    },
+    "igf-1-lr3": {
+      "Single vial": 159,
+      "Pack · 3 vials": 438.84
+    },
+    "tb-500": {
+      "Single vial": 119,
+      "Pack · 3 vials": 328.44
+    },
+    "ss-31": {
+      "Single vial": 99,
+      "Pack · 3 vials": 273.24
+    },
+    "epithalon": {
+      "Single vial": 74,
+      "Pack · 3 vials": 204.24
+    },
+    "kisspeptin": {
+      "Single vial": 94,
+      "Pack · 3 vials": 259.44
+    },
+    "bac-water": {
+      "Single vial": 10,
+      "Pack · 3 vials": 27.6
+    },
+    "bac-water-10ml": {
+      "Single vial": 17,
+      "Pack · 3 vials": 46.92
+    }
+  },
+  "coupons": {
+    "WELCOME10": {
+      "type": "percent",
+      "value": 10,
+      "label": "10% off"
+    },
+    "FREESHIP": {
+      "type": "freeship",
+      "label": "Free shipping"
+    }
+  }
+}
