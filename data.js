@@ -5,7 +5,7 @@
 
 const PRODUCTS = [
   {
-    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
+    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', nameEs: 'Tirzepatida', altEs: ['Tirzepatide', 'GLP2-T'], cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
     mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
     photo2: 'assets/products/tirzepatide-2.jpg',
@@ -18,7 +18,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
   },
   {
-    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', nameEs: 'Retatrutide', altEs: ['Retatrutida', 'GLP3-R'], cas: '', tag: 'Research use only',
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     photo2: 'assets/products/retatrutide-2.jpg',
@@ -31,7 +31,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {
-    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', nameEs: 'Retatrutide', altEs: ['Retatrutida', 'GLP3-R'], cas: '', tag: 'Research use only',
     mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-20mg-2.jpg',
@@ -44,7 +44,7 @@ const PRODUCTS = [
     research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
   },
   {
-    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', nameEs: 'Retatrutide', altEs: ['Retatrutida', 'GLP3-R'], cas: '', tag: 'Research use only',
     mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-30mg-2.jpg',
@@ -509,9 +509,10 @@ const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panam�
    están en este archivo (envío, pago, lote), nada que no se pueda comprobar. */
 const nameEs = (p) => p.nameEs || p.name;
 // La otra grafía con la que también se busca el compuesto («ipamorelin» además de
-// «ipamorelina»). Solo variantes de escritura del mismo nombre: el `alias` no entra,
-// porque nombrar o no el compuesto científico de un producto es otra decisión.
-const altNamesEs = (p) => (p.nameEs && p.nameEs !== p.name && !/^bac-water/.test(p.slug) ? [p.name] : []);
+// «ipamorelina»). `altEs` la fija a mano cuando hay más de una: los GLP se buscan en
+// Panamá por el compuesto («tirzepatida», «retatrutide») y la tienda los vende como
+// GLP2-T / GLP3-R; nombrarlos en la ficha ES lo decidió el dueño el 2026-10-18.
+const altNamesEs = (p) => p.altEs || (p.nameEs && p.nameEs !== p.name && !/^bac-water/.test(p.slug) ? [p.name] : []);
 function panamaBlockEs(p) {
   const n = nameEs(p);
   const from = Math.min(...p.sizes.map((z) => z.price)).toFixed(2);
