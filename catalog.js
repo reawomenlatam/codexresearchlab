@@ -1,15 +1,13 @@
 /* REA Store - catálogo: búsqueda, categorías, orden. */
 (function () {
-  const { PRODUCTS } = window.REA;
+  const { PRODUCTS, AREAS } = window.REA;
   const ui = window.REAui;
 
-  // Deriva categorías simples desde el tag (Blend vs. CAS)
+  // Las categorías son las áreas de investigación de data.js, las mismas de
+  // las tarjetas de la portada, que enlazan aquí con ?area=<key>.
   const T = window.T;
-  const CATEGORIES = [
-    { key: 'all', label: T('All'), test: () => true },
-    { key: 'single', label: T('Compounds'), test: (p) => p.cas !== 'Blend' },
-    { key: 'blend', label: T('Blends'), test: (p) => p.cas === 'Blend' },
-  ];
+  const CATEGORIES = [{ key: 'all', label: T('All'), test: () => true }]
+    .concat((AREAS || []).map((a) => ({ key: a.key, label: T(a.label), test: (p) => a.slugs.indexOf(p.slug) >= 0 })));
 
   const grid = document.getElementById('catGrid');
   const listEl = document.getElementById('catList');
@@ -18,7 +16,8 @@
   const countEl = document.getElementById('catCount');
   const emptyEl = document.getElementById('catEmpty');
 
-  let state = { cat: 'all', q: '', sort: 'name' };
+  const fromUrl = new URLSearchParams(location.search).get('area');
+  let state = { cat: CATEGORIES.some((c) => c.key === fromUrl) ? fromUrl : 'all', q: '', sort: 'name' };
 
   // Solo se ofrece un filtro si cambia algo: "Blends 0" era un callejón sin
   // salida y "Compounds 22" repetía a "All 22". Si no queda ninguno, fuera el bloque.
@@ -30,7 +29,7 @@
   if (useful.length > 1) {
     listEl.innerHTML = useful.map((c) => {
       const n = PRODUCTS.filter(c.test).length;
-      return `<li><button data-cat="${c.key}" class="${c.key === 'all' ? 'active' : ''}">${c.label} <span>${n}</span></button></li>`;
+      return `<li><button data-cat="${c.key}" class="${c.key === state.cat ? 'active' : ''}">${c.label} <span>${n}</span></button></li>`;
     }).join('');
   } else {
     listEl.hidden = true;
@@ -72,6 +71,10 @@
     if (!btn) return;
     state.cat = btn.getAttribute('data-cat');
     listEl.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b === btn));
+    // La URL refleja el filtro, para poder compartirla o volver atrás a ella.
+    const url = new URL(location.href);
+    if (state.cat === 'all') url.searchParams.delete('area'); else url.searchParams.set('area', state.cat);
+    history.replaceState(null, '', url);
     apply();
   });
   searchEl.addEventListener('input', () => { state.q = searchEl.value.trim(); apply(); });

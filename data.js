@@ -680,7 +680,22 @@ const BUSINESS = {
    cuando volvieron a PRODUCTS. */
 const RETIRED_PRODUCTS = [];
 
-window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, MANUAL_PAY, COUPONS, BATCHES, batchFor, SALE,
+/* Áreas de investigación: las tarjetas de la portada y las categorías del
+   catálogo (catalog/?area=<key>). Un producto va en una sola área, para que
+   los contadores sumen el catálogo. Sólo nombran el campo de estudio; nada de
+   efectos ni usos (ver la regla de compliance). Producto nuevo = añadir su slug
+   aquí, o sólo saldrá en «All». */
+const AREAS = [
+  { key: 'metabolic', label: 'Metabolic', slugs: ['tirzepatide', 'retatrutide', 'retatrutide-20mg', 'retatrutide-30mg', 'mots-c'] },
+  { key: 'tissue', label: 'Tissue models', slugs: ['bpc-157', 'tb-500'] },
+  { key: 'copper', label: 'Copper peptides', slugs: ['ghk-cu', 'ghk-cu-50mg', 'ahk-cu'] },
+  { key: 'gh-axis', label: 'GH axis', slugs: ['ipamorelin', 'cjc-1295-no-dac', 'tesamorelin', 'tesamorelin-20mg', 'igf-1-lr3'] },
+  { key: 'mitochondrial', label: 'Mitochondrial', slugs: ['nad-plus', 'ss-31'] },
+  { key: 'neuroendocrine', label: 'Neuroendocrine', slugs: ['kisspeptin', 'pt-141', 'epithalon'] },
+  { key: 'supplies', label: 'Laboratory supplies', slugs: ['bac-water', 'bac-water-10ml'] },
+];
+
+window.REA = { PRODUCTS, RETIRED_PRODUCTS, AREAS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, MANUAL_PAY, COUPONS, BATCHES, batchFor, SALE,
   STOCK_BY_COUNTRY, applyStock, setStock,
   WHATSAPP: '50763354625', productFaq, productFaqEs, nameEs, altNamesEs, panamaBlockEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };
