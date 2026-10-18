@@ -174,6 +174,57 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 /* ---------- Hero ---------- */
 .hero { padding: 5rem 0 3.5rem; overflow: hidden; position: relative; }
 
+/* Hero con imagen a lo ancho (2026-10-18), a la manera de elixalabs.com.au:
+   panel redondeado separado de los bordes (igual que el footer), foto que lo
+   llena y el texto centrado abajo, donde la imagen deja el hueco claro. Sin
+   degradado oscuro: la foto es clara y el texto va en tinta. El halo blanco
+   detrás del texto sólo sube el contraste donde una esfera se acerque. */
+.hero:has(.hero-bg) {
+  margin: 12px 12px 0; padding: 0;
+  border-radius: 28px;
+  min-height: clamp(560px, calc(100svh - 140px), 860px);
+  display: flex; align-items: flex-end;
+  background: #eef1f2;
+}
+.hero-bg, .hero-bg img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+.hero-bg img { object-fit: cover; object-position: center top; }
+/* Movimiento de la molécula: la imagen entra con un zoom suave y encima se
+   funde un video en bucle (Veo 3.1, 7,5 s; motion.js lo crea sólo si el
+   visitante no pidió menos animación ni ahorro de datos). La imagen se queda
+   debajo como respaldo mientras el video carga o si no puede reproducirse. */
+.js-motion .hero-bg { animation: hero-in 1.8s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes hero-in { from { transform: scale(1.1); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.hero-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  opacity: 0; transition: opacity 1.2s ease;
+  pointer-events: none;
+}
+.hero-video.is-on { opacity: 1; }
+.hero-inner {
+  position: relative; z-index: 1;
+  text-align: center; padding-top: 8rem; padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  display: flex; flex-direction: column; align-items: center;
+}
+.hero-inner::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  left: 50%; bottom: 0; width: min(1100px, 120%); height: 115%;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(244,246,247,.92), rgba(244,246,247,.72) 55%, rgba(244,246,247,0));
+}
+.hero-inner h1 { font-size: clamp(2.8rem, 6.4vw, 5.6rem); line-height: .98; }
+.hero-inner .hero-sub { margin-inline: auto; max-width: 560px; color: #4f545c; /* 6.9:1 sobre el fondo claro */ }
+.hero-inner .hero-ctas { justify-content: center; margin-top: .9rem; }
+.hero-inner .hero-eyebrow { background: rgba(255,255,255,.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+@media (max-width: 720px) {
+  .hero:has(.hero-bg) { margin: 6px 6px 0; border-radius: 22px; min-height: calc(100svh - 120px); }
+  .hero-inner { padding-top: 12rem; }
+  .hero-inner h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
+  .hero-inner .hero-sub { font-size: 1rem; }
+}
+
 /* --- Fondo de fluido del hero -------------------------------------------
    El simulador es aditivo (tinta clara sobre base oscura), así que aquí se da
    vuelta: invert(1) convierte su casi-negro en casi-blanco y su tinta clara en

@@ -9,6 +9,31 @@
     '.blog-feature,.faq-item,.section-head,.tsm-proof,.cart-social,.pd-info-main,' +
     '.pd-info-side,.guarantee-card,.summary-card,.ship-progress,.cartpage-items,.disclaimer-band';
 
+  // ---------- Video de la molécula del hero ----------
+  // La portada pinta la imagen fija; aquí se le pone encima el video en bucle
+  // cuando de verdad empieza a reproducirse. No se crea con reduced-motion ni
+  // con ahorro de datos (pesa ~0,4-0,9 MB), y se elige la versión vertical en
+  // móvil al crearlo (<video> no respeta media en <source>).
+  (function heroVideo() {
+    const bg = document.querySelector('.hero-bg');
+    if (reduce || !bg) return;
+    if (navigator.connection && navigator.connection.saveData) return;
+    const tall = matchMedia('(max-width: 720px)').matches ? '-tall' : '';
+    const v = document.createElement('video');
+    v.className = 'hero-video';
+    v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    v.setAttribute('aria-hidden', 'true');
+    v.preload = 'auto';
+    v.innerHTML =
+      `<source src="assets/hero-molecule${tall}.webm" type="video/webm">` +
+      `<source src="assets/hero-molecule${tall}.mp4" type="video/mp4">`;
+    v.addEventListener('playing', () => v.classList.add('is-on'), { once: true });
+    bg.insertAdjacentElement('afterend', v);
+    const p = v.play();
+    if (p && p.catch) p.catch(() => v.remove());   // autoplay bloqueado: queda la foto
+  })();
+
   // ---------- Scroll reveal (fade-up, con stagger) ----------
   function setupReveal() {
     if (reduce || !('IntersectionObserver' in window)) return;

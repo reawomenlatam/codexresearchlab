@@ -49,7 +49,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Sus productos están verificados?","acceptedAnswer":{"@type":"Answer","text":"Sí. Cada lote viene con un certificado de análisis (COA) de un laboratorio independiente, con pruebas de HPLC y espectrometría de masas. El número de lote de tu vial se puede comprobar en codexresearchlab.com/verify/, y el COA completo está disponible si lo pides, también antes de comprar."}},{"@type":"Question","name":"¿Desde dónde envían y cuánto tarda?","acceptedAnswer":{"@type":"Answer","text":"Los pedidos salen de stock local en cada país. Panamá: $4 de envío, entrega en 1-2 horas en Ciudad de Panamá (interior como David, Chitré y Colón: siguiente día hábil por transporte Fergunson). Estados Unidos: $20 de envío desde nuestro stock en EE.UU., entrega en 48-72 horas. Envío gratis sobre $100 (Panamá) o $250 (EE.UU.). Siempre en empaque sellado y protegido."}},{"@type":"Question","name":"¿Estos productos son para consumo humano?","acceptedAnswer":{"@type":"Answer","text":"No. Todos los productos se venden estrictamente para fines de investigación y desarrollo, y no están destinados al consumo humano ni animal."}},{"@type":"Question","name":"¿Quién puede comprar en Codex Research?","acceptedAnswer":{"@type":"Answer","text":"Mayores de 21 años que compran para investigación de laboratorio. Al finalizar la compra confirmas que el pedido es solo para uso en investigación y no para consumo humano ni animal. No vendemos para uso personal y cancelamos cualquier pedido que hable de uso humano, dosis o administración."}},{"@type":"Question","name":"¿Hacen envíos internacionales?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos por WhatsApp con tu país de destino y te confirmamos cobertura, tiempo y costo antes de que pagues."}},{"@type":"Question","name":"¿Qué métodos de pago aceptan?","acceptedAnswer":{"@type":"Answer","text":"Panamá: Yappy o cripto (USDC o USDT en Ethereum). Estados Unidos: Zelle o cripto. La cripto se paga en nuestro propio checkout desde tu wallet. Con Yappy o Zelle haces el pedido en el sitio y te mandamos los datos de pago (Yappy por WhatsApp, Zelle por correo); el pedido sale en cuanto se confirma el pago."}},{"@type":"Question","name":"¿Cómo debo almacenar los productos?","acceptedAnswer":{"@type":"Answer","text":"Los viales liofilizados se guardan en un lugar fresco y protegidos de la luz, y refrigerados (2-8 °C) una vez en disolución. La etiqueta de cada vial indica sus condiciones de almacenamiento."}}]}</script>
   <!-- FAQ-LD:END -->
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/products/bpc-157.jpg" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/hero-molecule.webp" media="(min-width: 721px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/hero-molecule-tall.webp" media="(max-width: 720px)" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fragment+Mono&display=swap" rel="stylesheet">
@@ -82,36 +83,25 @@
 
   <!-- ============ Hero ============ -->
   <section class="hero">
-    <canvas class="hero-fluid" aria-hidden="true"></canvas>
-    <div class="container hero-grid">
-      <div>
-        <span class="hero-eyebrow">● Verificado por lote</span>
-        <h1>Péptidos <em>de laboratorio</em>,<br>trazables hasta el lote.</h1>
-        <p class="hero-sub">
+    <!-- Hero a lo ancho con imagen (2026-10-18), a la manera de elixalabs.com.au.
+         Sustituye al vial de BPC-157 en tarjeta y al fondo de fluido. La imagen
+         es decorativa (alt vacío): el titular ya dice de qué va la página.
+         Original 2K en imagenes-burbujas-2026-10-17/hero/. -->
+    <picture class="hero-bg">
+      <source media="(max-width: 720px)" type="image/webp" srcset="assets/hero-molecule-tall.webp">
+      <source media="(max-width: 720px)" srcset="assets/hero-molecule-tall.jpg">
+      <source type="image/webp" srcset="assets/hero-molecule.webp">
+      <img src="assets/hero-molecule.jpg" alt="" width="2400" height="1340" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="container hero-inner">
+      <h1>Péptidos <em>de laboratorio</em>,<br>trazables hasta el lote.</h1>
+      <p class="hero-sub">
           Cada lote lleva su certificado de análisis, y cada vial un número que puedes
           comprobar antes de abrirlo. Compra en el sitio y paga con Yappy o cripto.
         </p>
-        <p class="hero-deliver" id="heroDeliver"></p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="es/catalog/">Ver el catálogo</a>
-          <a class="btn btn-ghost" href="#proceso">Cómo trabajamos</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <figure class="vial-card">
-          <a href="es/product/bpc-157/"><img class="hero-photo product-photo" src="assets/products/bpc-157.jpg" alt="BPC-157 vial" width="1400" height="933" fetchpriority="high" decoding="async"></a>
-          <figcaption>
-            <b>BPC-157 · 10 mg</b>
-            <!-- Este lote está horneado a mano porque la portada es HTML estático.
-                 DEBE existir en BATCHES de data.js: si se retira de /verify/, la
-                 portada estaría enseñando un número que no verifica — justo lo
-                 contrario de lo que esta sección promete. Al rotar stock, revisar. -->
-            <span class="mono-tag">CDX-1017 · verificable</span>
-          </figcaption>
-        </figure>
-        <div class="badge-float badge-a"><span class="dot"></span> Pureza verificada por HPLC</div>
-        <div class="badge-float badge-b">Empaque sellado</div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="es/catalog/">Ver el catálogo</a>
+        <a class="btn btn-ghost" href="#proceso">Cómo trabajamos</a>
       </div>
     </div>
   </section>
@@ -407,6 +397,5 @@
   <script src="layout.js"></script>
   <script src="app.js"></script>
   <script src="motion.js"></script>
-  <script src="fluid.js"></script>
 </body>
 </html>
