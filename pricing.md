@@ -1,6 +1,6 @@
 # Pricing · Codex Research (codexresearchlab.com)
 
-All prices in USD. Last updated: 2026-10-17.
+All prices in USD. Last updated: 2026-10-18.
 Research peptides sold strictly for laboratory research and development, not for
 human or animal consumption.
 
