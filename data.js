@@ -61,6 +61,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 79, formula: 'C62H98N16O22', weight: '1419.53 g/mol', pubchem: '9941957',
     photo: 'assets/products/bpc-157.jpg',
     photo2: 'assets/products/bpc-157-2.jpg',
+    video: 'assets/products/bpc-157.mp4', videoPoster: 'assets/products/bpc-157-video.jpg',
     sizes: [
       { label: 'Single vial', price: 79 },
       { label: 'Pack · 3 vials', price: 218.04, save: '8%' },
