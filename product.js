@@ -158,7 +158,7 @@
         <div class="pd-buy">
           <span class="mono-tag">${T(p.tag)}</span>
           <h1>${esPage ? `${pName} en Panamá` : p.name}</h1>
-          <p class="pd-strength">${p.mg} ${T('per vial')}</p>
+          <p class="pd-strength">${p.mg} ${T('per vial')}${esPage && window.REA.altNamesEs(p).length ? ` · también como ${window.REA.altNamesEs(p).join(', ')}` : ''}</p>
 
           <div class="pd-field">
             <label>${T('Pack')}</label>

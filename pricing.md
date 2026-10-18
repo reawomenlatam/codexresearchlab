@@ -14,6 +14,40 @@ Panama: Yappy or crypto (USDC or USDT on Ethereum). United States: Zelle or cryp
 
 ## Catalog
 
+### GLP2-T (tirzepatide) · 20 mg per vial
+
+- URL: https://codexresearchlab.com/product/tirzepatide/
+- CAS number: 2023788-19-2
+- PubChem CID: 156588324
+- Purity: 99% (HPLC), certificate of analysis per batch
+- Availability: Out of stock
+- Single vial: $149.00 USD
+- Pack · 3 vials: $411.24 USD (8% off)
+
+### GLP3-R (retatrutide) · 10 mg per vial
+
+- URL: https://codexresearchlab.com/product/retatrutide/
+- Purity: 99% (HPLC), certificate of analysis per batch
+- Availability: In stock
+- Single vial: $150.00 USD
+- Pack · 3 vials: $414.00 USD (8% off)
+
+### GLP3-R (retatrutide) · 20 mg per vial
+
+- URL: https://codexresearchlab.com/product/retatrutide-20mg/
+- Purity: 99% (HPLC), certificate of analysis per batch
+- Availability: Out of stock
+- Single vial: $194.00 USD
+- Pack · 3 vials: $535.44 USD (8% off)
+
+### GLP3-R (retatrutide) · 30 mg per vial
+
+- URL: https://codexresearchlab.com/product/retatrutide-30mg/
+- Purity: 99% (HPLC), certificate of analysis per batch
+- Availability: Out of stock
+- Single vial: $214.00 USD
+- Pack · 3 vials: $590.64 USD (8% off)
+
 ### BPC-157 · 10 mg per vial
 
 - URL: https://codexresearchlab.com/product/bpc-157/

@@ -5,6 +5,58 @@
 
 const PRODUCTS = [
   {
+    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
+    mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
+    photo: 'assets/products/tirzepatide.jpg',
+    photo2: 'assets/products/tirzepatide-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 149 },
+      { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
+    ],
+    overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide.jpg',
+    photo2: 'assets/products/retatrutide-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 150 },
+      { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-20mg-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 194 },
+      { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+  {
+    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
+    mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
+    photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
+    photo2: 'assets/products/retatrutide-30mg-2.jpg',
+    sizes: [
+      { label: 'Single vial', price: 214 },
+      { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
+    ],
+    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
+    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
+    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
+  },
+  {
     slug: 'bpc-157', name: 'BPC-157', cas: '137525-51-0', tag: 'CAS # 137525-51-0',
     mg: '10 mg', from: 79, formula: 'C62H98N16O22', weight: '1419.53 g/mol', pubchem: '9941957',
     photo: 'assets/products/bpc-157.jpg',
@@ -456,6 +508,10 @@ const SHIPPING_LINE_ES = 'Los pedidos salen de stock local en cada país. Panam�
    uno distinto en el HTML crudo y en la página renderizada. Solo datos que ya
    están en este archivo (envío, pago, lote), nada que no se pueda comprobar. */
 const nameEs = (p) => p.nameEs || p.name;
+// La otra grafía con la que también se busca el compuesto («ipamorelin» además de
+// «ipamorelina»). Solo variantes de escritura del mismo nombre: el `alias` no entra,
+// porque nombrar o no el compuesto científico de un producto es otra decisión.
+const altNamesEs = (p) => (p.nameEs && p.nameEs !== p.name && !/^bac-water/.test(p.slug) ? [p.name] : []);
 function panamaBlockEs(p) {
   const n = nameEs(p);
   const from = Math.min(...p.sizes.map((z) => z.price)).toFixed(2);
@@ -549,6 +605,13 @@ function productFaqEs(p) {
   // El agua lleva artículo («¿Qué es el agua bacteriostática?»); un péptido no.
   const the = isDiluent(p) ? `el ${name.toLowerCase()}` : name;
   const The = isDiluent(p) ? `El ${name.toLowerCase()}` : name;
+  const alt = altNamesEs(p);
+  // Responde a «comprar [producto] panamá» con lo que de verdad pasa al comprar.
+  const where = { q: `¿Dónde comprar ${the} en Panamá?`,
+    a: `En Codex Research (codexresearchlab.com). ${The} se agrega al carrito en el sitio y se paga con ` +
+       'Yappy o con cripto. El pedido sale del inventario local: en Ciudad de Panamá llega en 1 a 2 horas y ' +
+       'al interior (David, Chitré, Colón) al día hábil siguiente.' +
+       (isDiluent(p) ? '' : ' Cada vial lleva su número de lote, que se puede comprobar antes de abrirlo.') };
   const list = p.sizes.map((z) => `${SIZE_ES[z.label] || z.label}: $${z.price.toFixed(2)} USD`).join('. ');
   const who = { q: `¿Quién puede comprar ${the}?`,
     a: 'Mayores de 21 años que compran para investigación de laboratorio. Al finalizar la compra se confirma ' +
@@ -560,6 +623,7 @@ function productFaqEs(p) {
         a: `${p.overviewEs || p.overview} Se vende en un envase sellado de ${p.mg}, solo para uso de laboratorio.` },
       { q: `¿Cuánto cuesta ${the} en Panamá?`,
         a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
+      where,
       { q: `¿Cómo se envía ${the} y cuánto tarda la entrega?`, a: SHIPPING_LINE_ES },
       { q: `¿Cómo se debe almacenar ${the}?`, a: 'Como indica su etiqueta. Mantén el envase cerrado mientras no se usa.' },
       { q: `¿${The} es para uso humano?`,
@@ -570,9 +634,11 @@ function productFaqEs(p) {
   }
   return [
     { q: `¿Qué es ${name}?`,
-      a: `${p.overviewEs || p.overview} Se suministra como vial liofilizado de ${p.mg}, solo para uso en investigación de laboratorio.` },
+      a: `${p.overviewEs || p.overview} Se suministra como vial liofilizado de ${p.mg}, solo para uso en investigación de laboratorio.` +
+         (alt.length ? ` También se escribe ${alt.join(' o ')}.` : '') },
     { q: `¿Cuánto cuesta ${name} en Panamá?`,
       a: `${list}. Precios en dólares${p.outOfStock ? '. Esta presentación está agotada por ahora' : ''}.` },
+    where,
     { q: `¿${name} tiene análisis de laboratorio? ¿Entregan certificado?`,
       a: 'Sí. Cada lote se analiza al 99% de pureza por HPLC y espectrometría de masas. El certificado de ' +
          'análisis está disponible si lo pides, también antes de comprar, y el número de lote de cualquier ' +
@@ -605,67 +671,13 @@ const BUSINESS = {
   phone: '+507 6335-4625',
 };
 
-/* Retirados del catálogo el 2026-10-02 (revisión de Stripe): tirzepatide y
-   retatrutide son los activos de fármacos para bajar de peso que citan las cartas
-   de la FDA. No se venden, no salen en catálogo, sitemap ni prices.json, y sus
-   URLs redirigen al catálogo (RETIRED_PRODUCTS en build-seo.js). Para volver a
-   venderlos basta con devolverlos a PRODUCTS. */
-const RETIRED_PRODUCTS = [
-  {
-    slug: 'tirzepatide', name: 'GLP2-T', alias: 'tirzepatide', cas: '2023788-19-2', tag: 'CAS # 2023788-19-2',
-    mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
-    photo: 'assets/products/tirzepatide.jpg',
-    photo2: 'assets/products/tirzepatide-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 149 },
-      { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
-    ],
-    overview: 'A dual GIP and GLP-1 receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista dual de los receptores GIP y GLP-1, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucose regulation', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide.jpg',
-    photo2: 'assets/products/retatrutide-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 150 },
-      { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide-20mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
-    photo2: 'assets/products/retatrutide-20mg-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 194 },
-      { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-  {
-    slug: 'retatrutide-30mg', name: 'GLP3-R', alias: 'retatrutide', cas: '', tag: 'Research use only',
-    mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
-    photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
-    photo2: 'assets/products/retatrutide-30mg-2.jpg',
-    sizes: [
-      { label: 'Single vial', price: 214 },
-      { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
-    ],
-    overview: 'A triple GIP / GLP-1 / glucagon receptor agonist studied in models of metabolic signaling, glucose regulation and energy balance.',
-    overviewEs: 'Agonista triple de los receptores GIP / GLP-1 / glucagón, estudiado en modelos de señalización metabólica, regulación de la glucosa y balance energético.',
-    research: ['GIP signaling', 'GLP-1 signaling', 'Glucagon signaling', 'Metabolism'],
-  },
-];
+/* Productos retirados del catálogo: no se venden, no salen en catálogo, sitemap
+   ni prices.json, y sus URLs redirigen al catálogo (build-seo.js). Tirzepatide y
+   retatrutide estuvieron aquí del 2026-10-02 (revisión de Stripe) al 2026-10-18,
+   cuando volvieron a PRODUCTS. */
+const RETIRED_PRODUCTS = [];
 
 window.REA = { PRODUCTS, RETIRED_PRODUCTS, FAQS, FAQS_ES, BUSINESS, COUNTRIES, MANUAL_PAY, COUPONS, BATCHES, batchFor, SALE,
   STOCK_BY_COUNTRY, applyStock, setStock,
-  WHATSAPP: '50763354625', productFaq, productFaqEs, nameEs, panamaBlockEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
+  WHATSAPP: '50763354625', productFaq, productFaqEs, nameEs, altNamesEs, panamaBlockEs, SHIPPING_LINE, SHIPPING_LINE_ES, PAYMENT_LINE,
   faqs, overview };
