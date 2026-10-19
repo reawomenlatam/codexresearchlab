@@ -593,42 +593,65 @@ html.js #articleMain:not(.is-ready) { visibility: hidden; animation: cdx-show 0s
 }
 .footer-biz a { color: inherit; text-decoration: underline; }
 
-/* ---------- Barra de aviso (país + uso) ---------- */
-/* Reemplaza al modal de edad: informa sin tapar la tienda. Se descarta con
-   "Got it" o con el primer scroll largo, y no vuelve (localStorage). */
-.site-notice {
-  position: fixed; z-index: 61;
-  left: 1rem; right: 1rem; bottom: 1rem;
-  display: flex; justify-content: center;
-  pointer-events: none;
-  opacity: 0; transform: translateY(12px);
-  transition: opacity .28s ease, transform .28s ease;
+/* ---------- Gate de investigador (entrada) ---------- */
+/* Tapa la tienda hasta que el visitante declara ser investigador y 21+.
+   Vuelve a pedirse cada 30 días (localStorage, ver layout.js). */
+html.rgate-open, html.rgate-open body { overflow: hidden; }
+.rgate {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-items: center;
+  padding: 16px;
+  background: rgba(29,32,38,.55);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  overflow-y: auto;
 }
-.site-notice.show { opacity: 1; transform: translateY(0); }
-/* Ficha y carrito tienen barra fija de compra abajo: el aviso se sube. */
-.site-notice.sn-raised { bottom: 5.6rem; }
-.site-notice[hidden] { display: none; }
-.site-notice-card {
-  pointer-events: auto;
-  width: 100%; max-width: 560px;
-  display: grid; gap: .35rem;
-  padding: .8rem .9rem;
-  padding-bottom: max(.95rem, env(safe-area-inset-bottom));
-  border: 1px solid var(--border); border-radius: 16px;
-  /* Fondo sólido a propósito: el vidrio de las otras barras deja leer el
-     contenido de atrás y aquí se cruzaba con los botones del hero. */
-  background: var(--card);
-  box-shadow: 0 -1px 0 rgba(20,22,28,.05), 0 14px 40px rgba(29,32,38,.18);
+.rgate[hidden] { display: none; }
+.rgate-card {
+  width: 100%; max-width: 480px;
+  background: var(--card); color: var(--ink);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.8rem 1.6rem 1.4rem;
+  box-shadow: 0 24px 60px rgba(29,32,38,.28);
 }
-.sn-row { display: flex; align-items: center; gap: .9rem; justify-content: space-between; }
-.sn-ship { font-size: .88rem; color: var(--ink); line-height: 1.4; }
-.sn-legal { font-size: .72rem; color: var(--muted); line-height: 1.45; }
-.sn-legal a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
-.sn-change {
+.rgate-kicker {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: .6rem;
+}
+.rgate-title { font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 .7rem; }
+.rgate-text { font-size: .95rem; color: var(--muted); line-height: 1.5; margin: 0 0 1rem; }
+.rgate-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: .45rem; }
+.rgate-list li {
+  position: relative; padding-left: 1.4rem;
+  font-size: .92rem; line-height: 1.45;
+}
+.rgate-list li::before {
+  content: ''; position: absolute; left: .2rem; top: .55em;
+  width: .45rem; height: .45rem; border-radius: 50%; background: var(--ink);
+}
+.rgate-ship {
+  font-size: .82rem; color: var(--muted); line-height: 1.5;
+  padding: .7rem .8rem; border-radius: var(--radius-sm); background: var(--accent-soft);
+  margin: 0 0 1.2rem;
+}
+.rgate-ship b { color: var(--ink); }
+.rgate-country {
   background: none; border: 0; padding: 0; cursor: pointer;
-  font: inherit; color: var(--muted); text-decoration: underline; text-underline-offset: 2px;
+  font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 2px;
 }
-.sn-change:hover { color: var(--ink); }
+.rgate-actions { display: grid; gap: .6rem; }
+.rgate-actions .btn { width: 100%; justify-content: center; }
+.rgate-no {
+  background: none; border: 0; padding: .5rem; cursor: pointer;
+  font: inherit; font-size: .88rem; color: var(--muted); text-align: center;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.rgate-no:hover { color: var(--ink); }
+.rgate-legal { font-size: .74rem; color: var(--muted); text-align: center; margin: .8rem 0 0; }
+.rgate-legal a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 420px) {
+  .rgate-card { padding: 1.4rem 1.2rem 1.1rem; }
+  .rgate-title { font-size: 1.3rem; }
+}
 /* Cambio de idioma: discreto, al lado del CTA de la cabecera. */
 .lang-switch {
   font-size: .82rem; font-weight: 700; color: var(--muted); padding: 0 .5rem;
@@ -637,16 +660,6 @@ html.js #articleMain:not(.is-ready) { visibility: hidden; animation: cdx-show 0s
 .lang-switch:hover { color: var(--ink); }
 .mobile-nav-lang { font-weight: 700; color: var(--muted); }
 @media (max-width: 900px) { .lang-switch { display: none; } }
-.sn-ok {
-  flex: none; cursor: pointer;
-  border: 1px solid var(--border); border-radius: 999px; background: var(--ink); color: #fff;
-  padding: .45rem 1.1rem; font: inherit; font-weight: 700; font-size: .82rem;
-  transition: opacity .15s;
-}
-.sn-ok:hover { opacity: .88; }
-@media (prefers-reduced-motion: reduce) {
-  .site-notice { transition: none; }
-}
 
 /* Selector de país en el header */
 .country-wrap { position: relative; }
@@ -1730,7 +1743,7 @@ a, button, input, select, textarea, label, summary,
 
   /* Respuesta al toque: se hunde un pelo mientras el dedo está encima. */
   .product-card:active, .blog-card:active { transform: scale(.985); }
-  .btn:active, .add-btn:active, .sn-ok:active { transform: scale(.97); }
+  .btn:active, .add-btn:active { transform: scale(.97); }
   .product-card, .blog-card, .btn, .add-btn { transition: transform .12s ease; }
 }
 

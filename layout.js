@@ -1,4 +1,4 @@
-/* REA Store - layout compartido: header, footer y barra de aviso.
+/* REA Store - layout compartido: header, footer y gate de investigador.
    Cada página monta esto con <div data-header></div> / <div data-footer></div>.
    `active` se marca con <body data-nav="productos"> etc. */
 (function () {
@@ -165,20 +165,27 @@
       </div>
     </footer>`;
 
-  // Aviso de entrega + uso (no bloquea). Antes esto era un modal que tapaba la
-  // tienda hasta elegir país: el país ahora se detecta solo (country.js) y este
-  // aviso solo confirma a dónde enviamos y deja cambiarlo.
-  const noticeHTML = `
-    <div class="site-notice" id="siteNotice" hidden>
-      <div class="site-notice-card">
-        <div class="sn-row">
-          <p class="sn-ship" id="snShip"></p>
-          <button class="sn-ok" id="snOk">${T('Got it')}</button>
+  // Gate de entrada: el visitante declara que es investigador y mayor de 21
+  // antes de ver la tienda (pedido del dueño, 2026-10-19). Sustituye a la barra
+  // de aviso, que informaba sin bloquear. El país sigue detectándose solo
+  // (country.js); aquí sólo se confirma y se deja cambiar.
+  const gateHTML = `
+    <div class="rgate" id="researchGate" hidden>
+      <div class="rgate-card" role="dialog" aria-modal="true" aria-labelledby="rgateTitle" aria-describedby="rgateText">
+        <p class="rgate-kicker">${T('Research use only')}</p>
+        <h2 class="rgate-title" id="rgateTitle">${T('Are you a researcher?')}</h2>
+        <p class="rgate-text" id="rgateText">${T('Our compounds are sold for laboratory research only. They are not for human or veterinary use, and are not drugs, food or cosmetics.')}</p>
+        <ul class="rgate-list">
+          <li>${T('I am a researcher or I buy for a research laboratory.')}</li>
+          <li>${T('I am 21 or older.')}</li>
+          <li>${T('I will not use these products on people or animals.')}</li>
+        </ul>
+        <p class="rgate-ship" id="rgateShip"></p>
+        <div class="rgate-actions">
+          <button type="button" class="btn btn-primary rgate-yes" id="rgateYes">${T('I confirm, enter')}</button>
+          <button type="button" class="rgate-no" id="rgateNo">${T('I am not a researcher')}</button>
         </div>
-        <p class="sn-legal">
-          ${T('Research use only \u00b7 by continuing you confirm you are 21 or older \u00b7')}
-          <a href="terms/">${T('Terms')}</a>
-        </p>
+        <p class="rgate-legal">${T('By entering you accept our')} <a href="terms/">${T('Terms')}</a>.</p>
       </div>
     </div>`;
 
@@ -211,57 +218,68 @@
     }
   }
   mount('[data-footer]', footerHTML);
-  document.body.insertAdjacentHTML('beforeend', noticeHTML);
+  document.body.insertAdjacentHTML('beforeend', gateHTML);
 
-  // ---------- Barra de aviso (una vez por visitante) ----------
-  const notice = document.getElementById('siteNotice');
-  const NOTICE_KEY = 'rea-notice-v1';
-  function noticeShipLine() {
+  // ---------- Gate de investigador (cada 30 días por visitante) ----------
+  const gate = document.getElementById('researchGate');
+  const GATE_KEY = 'rea-research-ok-v1';
+  const GATE_DAYS = 30;
+  function gateAccepted() {
+    try {
+      const t = Number(localStorage.getItem(GATE_KEY));
+      return t > 0 && Date.now() - t < GATE_DAYS * 864e5;
+    } catch (e) { return false; }
+  }
+  function gateShipLine() {
     const cfg = window.REACountry.config();
+    const others = Object.values(window.REA.COUNTRIES).filter((c) => c.code !== cfg.code);
     return `${cfg.flag} ${T('Shipping to')} <b>${cfg.label}</b> \u00b7 $${cfg.shipping.flat} \u00b7 ${T(cfg.etaShort)}. ` +
-      `<button type="button" class="sn-change" id="snChange">${T('Not your country?')}</button>`;
+      others.map((c) => `<button type="button" class="rgate-country" data-country="${c.code}">${T('Ship to')} ${c.label}</button>`).join(' ');
   }
-  function closeNotice() {
-    if (!notice || notice.hidden) return;
-    notice.classList.remove('show');
-    notice.hidden = true;
-    try { localStorage.setItem(NOTICE_KEY, '1'); } catch (e) { /* modo privado */ }
-    window.removeEventListener('scroll', onNoticeScroll);
+  // Mientras el gate está abierto el foco no sale de él: lo de atrás está tapado.
+  function trapFocus(e) {
+    if (gate.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); return; }
+    if (e.key !== 'Tab') return;
+    const f = [...gate.querySelectorAll('button, [href]')].filter((el) => el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
-  // Un scroll largo ya es señal de que el visitante siguió adelante; además
-  // evita que la barra choque con las barras fijas de producto y carrito.
-  function onNoticeScroll() { if (window.scrollY > 400) closeNotice(); }
-
-  if (notice) {
-    let seen = false;
-    try { seen = !!localStorage.getItem(NOTICE_KEY); } catch (e) { seen = false; }
-    if (!seen) {
-      const ship = document.getElementById('snShip');
-      const paint = () => { if (ship) ship.innerHTML = noticeShipLine(); };
-      paint();
-      window.addEventListener('rea-country-change', paint);
-      notice.hidden = false;
-      requestAnimationFrame(() => notice.classList.add('show'));
-      // En ficha y carrito hay una barra fija abajo con el botón de compra:
-      // el aviso se sube para no taparla. Esas barras las pintan product.js y
-      // cart-page.js después de este script, de ahí la espera.
-      setTimeout(() => {
-        if (!notice.hidden && document.querySelector('.pd-sticky, .cart-sticky')) {
-          notice.classList.add('sn-raised');
-        }
-      }, 400);
-      window.addEventListener('scroll', onNoticeScroll, { passive: true });
-      notice.addEventListener('click', (e) => {
-        if (e.target.closest('#snOk')) closeNotice();
-        if (e.target.closest('#snChange')) {
-          closeNotice();
-          const c = document.getElementById('countryChip');
-          // En el mismo tick, este click seguiría burbujeando hasta el document,
-          // cuyo handler cierra el menú que acabamos de abrir.
-          if (c) setTimeout(() => c.click(), 0);
-        }
-      });
-    }
+  function closeGate() {
+    try { localStorage.setItem(GATE_KEY, String(Date.now())); } catch (e) { /* modo privado */ }
+    gate.hidden = true;
+    document.documentElement.classList.remove('rgate-open');
+    document.removeEventListener('keydown', trapFocus);
+  }
+  if (gate && !gateAccepted()) {
+    const ship = document.getElementById('rgateShip');
+    const paint = () => { if (ship) ship.innerHTML = gateShipLine(); };
+    paint();
+    window.addEventListener('rea-country-change', paint);
+    gate.hidden = false;
+    document.documentElement.classList.add('rgate-open');
+    document.addEventListener('keydown', trapFocus);
+    setTimeout(() => { const y = document.getElementById('rgateYes'); if (y) y.focus(); }, 60);
+    gate.addEventListener('click', (e) => {
+      const c = e.target.closest('.rgate-country');
+      if (c) { window.REACountry.set(c.getAttribute('data-country')); return; }
+      if (e.target.closest('#rgateYes')) { closeGate(); return; }
+      if (e.target.closest('#rgateNo')) {
+        // Salida cordial: no se entra, pero se puede corregir si fue un error.
+        gate.querySelector('.rgate-card').innerHTML = `
+          <p class="rgate-kicker">${T('Research use only')}</p>
+          <h2 class="rgate-title" id="rgateTitle">${T('Thanks for visiting')}</h2>
+          <p class="rgate-text">${T('This store sells only to researchers aged 21 or older. If you got here by mistake, you can close this tab.')}</p>
+          <div class="rgate-actions">
+            <button type="button" class="btn btn-primary" id="rgateBack">${T('Go back')}</button>
+            <a class="rgate-no" href="https://www.google.com">${T('Leave site')}</a>
+          </div>`;
+        const back = document.getElementById('rgateBack');
+        if (back) { back.addEventListener('click', () => location.reload()); back.focus(); }
+      }
+    });
   }
 
   // ---------- Selector de país (header) ----------
