@@ -58,6 +58,7 @@
   // Lote real en registro: la prueba se enseña ANTES de pagar, no después.
   // `purity`, `date` y `lab` son opcionales en data.js y solo se pintan si existen.
   const batch = (typeof batchFor === 'function' && batchFor(p.slug, p.mg)) || null;
+  const chev = '<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
 
   // Meta Pixel: evento ViewContent al ver la ficha de producto
   if (typeof fbq === 'function') {
@@ -209,17 +210,32 @@
 
           <button class="btn btn-primary pd-add" id="pdAdd"${oos ? ' disabled' : ''}>${oos ? T('Out of stock') : T('Add to cart')}</button>
 
-          <!-- Datos de compra como hoja de especificaciones (2026-10-18): antes eran
-               iconos de línea, una fila de pastillas bajo la foto y una caja
-               aparte del COA; el certificado salía tres veces. Ahora una sola
-               tabla con líneas finas, a la manera de elixalabs.com.au. -->
-          <dl class="pd-facts">
-            <div><dt>${T('Delivery')}</dt><dd id="pdEtaText"></dd></div>
-            <div><dt>${T('Payment')}</dt><dd>${T('Crypto, Zelle (U.S.) or Yappy (Panama)')}</dd></div>
-            <div><dt>${T('Purity')}</dt><dd>${T('99% minimum')} (HPLC)</dd></div>
-            <div><dt>${T('Batch')}</dt><dd>${batch ? T('{n} · third-party COA', { n: batch.code }) : T('Batch-verified with third-party COA')}
-              <button type="button" class="pd-facts-link" data-coa>${T('View certificate')}</button></dd></div>
-          </dl>
+          <!-- Las tres dudas de compra (¿es real?, ¿llega?, ¿cómo pago?) se
+               responden aquí, pegadas al botón, y no más abajo en el FAQ
+               (2026-10-19). Sustituye a la tabla .pd-facts del 18-oct: sus filas
+               de entrega, pago y lote son ahora la línea del lote y las dos
+               primeras preguntas, para no decir lo mismo dos veces seguidas. -->
+          <div class="pd-assure">
+            <p class="pd-assure-batch">
+              <span class="pd-assure-code">${T('Batch')} ${batch ? batch.code : ''}</span>
+              ${batch && batch.labKey
+                ? `${T('Verified by {lab}', { lab: batch.lab || 'Janoshik' })}${batch.purity ? ` · ${batch.purity}` : ''} · ${T('key')} <a href="https://www.janoshik.com/verify/" target="_blank" rel="noopener">${batch.labKey}</a>`
+                : `${T('99% minimum')} (HPLC) · <a href="${U('verify/')}${batch ? '?batch=' + encodeURIComponent(batch.code) : ''}">${T('Check this batch number')}</a>`}
+              · <button type="button" class="pd-facts-link" data-coa>${T('View certificate')}</button>
+            </p>
+            <details class="pd-assure-q">
+              <summary>${T('When will it arrive?')}${chev}</summary>
+              <p id="pdEtaText"></p>
+            </details>
+            <details class="pd-assure-q">
+              <summary>${T('How do I pay?')}${chev}</summary>
+              <p id="pdPayText"></p>
+            </details>
+            <details class="pd-assure-q">
+              <summary>${T('Is it for human use?')}${chev}</summary>
+              <p>${T('No. These are research materials for laboratory use only, and we don’t give guidance on dosing or on use in people or animals.')}</p>
+            </details>
+          </div>
 
           <p class="pd-note">
             <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')} ${T('Sold only to adults 21 or older.')}
@@ -382,10 +398,23 @@
   document.getElementById('pdAdd').addEventListener('click', addToCart);
   document.getElementById('pdStickyAdd').addEventListener('click', addToCart);
 
-  // Entrega según el país seleccionado (se actualiza si cambia)
+  // Entrega y pago según el país seleccionado (se actualiza si cambia). El
+  // plazo sale de COUNTRIES[].eta y los métodos de COUNTRIES[].payments: si
+  // cambia un país en data.js, la respuesta cambia sola. Lo que se dice de
+  // Zelle/Yappy es lo mismo que la pantalla de pedido de cart-page.js.
+  const payLine = (id) => {
+    const pay = (window.REA.MANUAL_PAY || {})[id] || {};
+    if (id === 'crypto') return T('Crypto (USDC or USDT on Ethereum): you pay from your own wallet at checkout.');
+    if (id === 'zelle') return pay.to ? T('Zelle: the order confirmation shows where to send the payment.') : T('Zelle: after you place the order we email you the payment details.');
+    if (id === 'yappy') return pay.to ? T('Yappy: the order confirmation shows where to send the payment.') : T('Yappy: after you place the order we send you the payment details on WhatsApp.');
+    return '';
+  };
   function setEta() {
     const cfg = window.REACountry.config();
-    document.getElementById('pdEtaText').textContent = `${T(cfg.eta)} · ${T('sealed packaging')}`;
+    document.getElementById('pdEtaText').textContent = `${T(cfg.eta)} · ${T('sealed packaging')}.`;
+    const manual = cfg.payments.find((m) => m.id === 'zelle' || m.id === 'yappy');
+    document.getElementById('pdPayText').textContent = cfg.payments.map((m) => payLine(m.id)).filter(Boolean).join(' ')
+      + (manual ? ' ' + T('With {method}, the order ships once the payment is confirmed.', { method: manual.label }) : '');
   }
   setEta();
   window.addEventListener('rea-country-change', setEta);

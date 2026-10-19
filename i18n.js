@@ -135,6 +135,20 @@
     'Crypto, Zelle (U.S.) or Yappy (Panama)': 'Cripto, Zelle (EE. UU.) o Yappy (Panamá)',
     '{n} · third-party COA': '{n} · COA de terceros',
     'View certificate': 'Ver certificado',
+    // --- Dudas de compra bajo el botón de la ficha (product.js, 2026-10-19) ---
+    'Verified by {lab}': 'Verificado por {lab}',
+    'key': 'clave',
+    'When will it arrive?': '¿Cuándo llega?',
+    'How do I pay?': '¿Cómo se paga?',
+    'Is it for human use?': '¿Es para uso humano?',
+    'No. These are research materials for laboratory use only, and we don’t give guidance on dosing or on use in people or animals.':
+      'No. Son materiales de investigación, solo para uso en laboratorio, y no damos orientación sobre dosis ni sobre su uso en personas o animales.',
+    'Crypto (USDC or USDT on Ethereum): you pay from your own wallet at checkout.': 'Cripto (USDC o USDT en Ethereum): pagas desde tu propia wallet al finalizar la compra.',
+    'Zelle: after you place the order we email you the payment details.': 'Zelle: al hacer el pedido te mandamos por correo los datos para pagar.',
+    'Yappy: after you place the order we send you the payment details on WhatsApp.': 'Yappy: al hacer el pedido te mandamos por WhatsApp los datos para pagar.',
+    'Zelle: the order confirmation shows where to send the payment.': 'Zelle: la confirmación del pedido indica a dónde enviar el pago.',
+    'Yappy: the order confirmation shows where to send the payment.': 'Yappy: la confirmación del pedido indica a dónde enviar el pago.',
+    'With {method}, the order ships once the payment is confirmed.': 'Con {method}, el pedido sale en cuanto se confirma el pago.',
     'For research use only.': 'Solo para investigación.',
     'Sold only to approved research accounts: each account is reviewed by hand before its first order.':
       'Solo se venden a cuentas de investigación aprobadas: cada cuenta se revisa a mano antes del primer pedido.',

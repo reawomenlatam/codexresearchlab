@@ -971,6 +971,24 @@ s.was, .pd-price-was {
   text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .pd-facts-link:hover { color: var(--accent); }
 
+/* Dudas de compra pegadas al botón (2026-10-19): la línea del lote y tres
+   preguntas desplegables, con las mismas líneas finas que .pd-facts. Sin
+   caja, sin iconos salvo el chevrón que ya usa el FAQ. */
+.pd-assure { margin-top: 1rem; }
+.pd-assure-batch { font-size: .84rem; line-height: 1.55; color: var(--muted); padding-bottom: .9rem; border-bottom: 1px solid var(--border); }
+.pd-assure-batch a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.pd-assure-batch a:hover { color: var(--accent); }
+.pd-assure-batch .pd-facts-link { margin-left: 0; }
+.pd-assure-code { font-family: var(--font-mono); font-size: .76rem; color: var(--ink); margin-right: .2rem; }
+.pd-assure-q { border-bottom: 1px solid var(--border); }
+.pd-assure-q summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .75rem 0; font-size: .88rem; font-weight: 500; color: var(--ink); cursor: pointer; }
+.pd-assure-q summary::-webkit-details-marker { display: none; }
+.pd-assure-q summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pd-assure-q .chev { color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+.pd-assure-q[open] .chev { transform: rotate(180deg); }
+.pd-assure-q p { font-size: .84rem; line-height: 1.6; color: var(--muted); padding: 0 1.5rem .85rem 0; }
+
 /* Barra fija de compra (móvil) */
 .pd-sticky {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
