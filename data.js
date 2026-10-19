@@ -90,6 +90,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 135, formula: 'C38H49N9O5', weight: '711.86 g/mol', pubchem: '9831659',
     photo: 'assets/products/ipamorelin.jpg',
     photo2: 'assets/products/ipamorelin-2.jpg',
+    video: 'assets/products/ipamorelin.mp4', videoPoster: 'assets/products/ipamorelin-video.jpg',
     sizes: [
       { label: 'Single vial', price: 135 },
       { label: 'Pack · 3 vials', price: 372.60, save: '8%' },
