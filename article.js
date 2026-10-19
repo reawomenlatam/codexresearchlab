@@ -21,6 +21,7 @@
         <p style="color:var(--muted);margin:.6rem 0 1.4rem;">${T('This article doesn’t exist or was moved.')}</p>
         <a class="btn btn-primary" href="${U('blog/')}">${T('Back to the blog')}</a>
       </div></section>`;
+    main.classList.add('is-ready');
     return;
   }
 
@@ -182,6 +183,7 @@
       </div>` : ''}
     </article>
   `;
+  main.classList.add('is-ready');
 
   // FAQ accordion (reuse shared component: renders + wires toggle)
   ui.faqAccordion(document.getElementById('articleFaq'), p.faq);

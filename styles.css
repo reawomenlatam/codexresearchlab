@@ -54,6 +54,20 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .container { width: min(1200px, 92%); margin-inline: auto; }
 
+/* ---------- Salto de carga (2026-10-18) ----------
+   Fichas y artículos traen en el HTML una versión simple para Google (foto de
+   320 px y texto corrido) que product.js / article.js reemplazan al cargar: se
+   veía un segundo una página «pequeña o mal puesta» antes de la real. Con JS
+   (html.js, lo pone un script en el <head>) esa versión queda invisible hasta
+   que el script marca .is-ready; si el script fallara, a los 2,5 s se muestra
+   igual. Google sigue leyendo el HTML: visibility no lo quita del documento. */
+html.js #productMain:not(.is-ready),
+html.js #articleMain:not(.is-ready) { visibility: hidden; animation: cdx-show 0s 2.5s forwards; }
+@keyframes cdx-show { to { visibility: visible; } }
+/* La cabecera la monta layout.js: se reserva su alto (aviso 38 + barra 69)
+   para que el contenido no baje de golpe cuando aparece. */
+[data-header]:empty { min-height: 107px; }
+
 /* ---------- Utilidades ---------- */
 .mono-tag {
   font-family: var(--font-mono);

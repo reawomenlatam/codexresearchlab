@@ -313,6 +313,8 @@
       </div>
     </div>
   `;
+  // La vista real ya está: se muestra (ver «Salto de carga» en styles.css).
+  main.classList.add('is-ready');
 
   // ---------- Estado de compra ----------
   let selectedSize = p.sizes[0];
