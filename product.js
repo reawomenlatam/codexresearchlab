@@ -169,11 +169,6 @@
               <img src="${src}" alt="" width="1400" height="933" loading="lazy">
             </button>`).join('')}
           </div>` : ''}
-          <div class="pd-badges">
-            ${oos ? `<span class="pd-badge oos">${T('Out of stock')}</span>` : ''}
-            <span class="pd-badge"><span class="dot"></span> ${T('99% purity (HPLC)')}</span>
-            <button type="button" class="pd-badge pd-badge-btn" data-coa>${T('COA per batch')}</button>
-          </div>
         </div>
 
         <!-- Buy -->
@@ -214,33 +209,21 @@
 
           <button class="btn btn-primary pd-add" id="pdAdd"${oos ? ' disabled' : ''}>${oos ? T('Out of stock') : T('Add to cart')}</button>
 
-          <ul class="pd-trust">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-              <span id="pdEtaText"></span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              ${T('Pay with crypto, Zelle (U.S.) or Yappy (Panama)')}
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>${batch ? T('Batch {n} · third-party COA', { n: batch.code }) : T('Batch-verified with third-party COA')} \u00b7
-                <button type="button" class="pd-trust-link" data-coa>${T('see the certificate')}</button></span>
-            </li>
-          </ul>
+          <!-- Datos de compra como hoja de especificaciones (2026-10-18): antes eran
+               iconos de línea, una fila de pastillas bajo la foto y una caja
+               aparte del COA; el certificado salía tres veces. Ahora una sola
+               tabla con líneas finas, a la manera de elixalabs.com.au. -->
+          <dl class="pd-facts">
+            <div><dt>${T('Delivery')}</dt><dd id="pdEtaText"></dd></div>
+            <div><dt>${T('Payment')}</dt><dd>${T('Crypto, Zelle (U.S.) or Yappy (Panama)')}</dd></div>
+            <div><dt>${T('Purity')}</dt><dd>${T('99% minimum')} (HPLC)</dd></div>
+            <div><dt>${T('Batch')}</dt><dd>${batch ? T('{n} · third-party COA', { n: batch.code }) : T('Batch-verified with third-party COA')}
+              <button type="button" class="pd-facts-link" data-coa>${T('View certificate')}</button></dd></div>
+          </dl>
 
-          <div class="pd-note">
+          <p class="pd-note">
             <b>${T('For research use only.')}</b> ${T('All products are intended solely for laboratory research and not for human or animal consumption. By purchasing, you agree to use them in compliance with applicable law.')} ${T('Sold only to adults 21 or older.')}
-          </div>
-
-          <div class="pd-coa">
-            <div>
-              <span class="mono-tag">${T('Certificate of analysis')}</span>
-              <b>${T('Third-party verified: purity, identity and quantity.')}</b>
-            </div>
-            <button class="btn btn-ghost" id="pdCoa">${T('View COA')}</button>
-          </div>
+          </p>
         </div>
       </div>
     </section>
@@ -400,7 +383,7 @@
   // Entrega según el país seleccionado (se actualiza si cambia)
   function setEta() {
     const cfg = window.REACountry.config();
-    document.getElementById('pdEtaText').textContent = `${cfg.flag} ${T(cfg.eta)} · ${T('sealed packaging')}`;
+    document.getElementById('pdEtaText').textContent = `${T(cfg.eta)} · ${T('sealed packaging')}`;
   }
   setEta();
   window.addEventListener('rea-country-change', setEta);
@@ -428,7 +411,6 @@
   const coaBackdrop = document.getElementById('coaBackdrop');
   const openCoa = () => { coaModal.hidden = false; coaBackdrop.hidden = false; document.body.style.overflow = 'hidden'; };
   const closeCoa = () => { coaModal.hidden = true; coaBackdrop.hidden = true; document.body.style.overflow = ''; };
-  document.getElementById('pdCoa').addEventListener('click', openCoa);
   // Otros disparadores del mismo modal (badge de la galería, línea de confianza).
   document.addEventListener('click', (e) => { if (e.target.closest('[data-coa]')) openCoa(); });
   document.getElementById('coaClose').addEventListener('click', closeCoa);

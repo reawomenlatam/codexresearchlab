@@ -53,10 +53,9 @@
         <h3><a href="${window.U('product/' + p.slug + '/')}">${cardTitle(p)}</a></h3>
         <span class="product-price">${nameCount.get(p.name) > 1 ? '' : `${p.mg} · `}${p.outOfStock ? `<b>${window.T('Out of stock')}</b>`
           : `${window.T('from')} <b>$${amt(p.from)}</b>${p.listFrom ? ` <s class="was">$${amt(p.listFrom)}</s>` : ''}`}</span>
-        <div class="product-cta">
-          <a class="link" href="${window.U('product/' + p.slug + '/')}">${window.T('View product')} →</a>
-          ${p.outOfStock ? '' : `<button class="add-btn" data-add="${p.slug}" aria-label="Add ${p.name} to cart">+</button>`}
-        </div>
+        ${p.outOfStock ? '' : `<div class="product-cta">
+          <button class="add-btn" data-add="${p.slug}" aria-label="${window.T('Add to cart')} · ${p.name}">${window.T('Add to cart')}</button>
+        </div>`}
       </div>
     </article>`;
 

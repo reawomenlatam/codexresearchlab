@@ -193,7 +193,7 @@
     const shipHint = remaining > 0
       ? `<div class="cart-ship-hint">${window.T('Add <b>{n}</b> more for <b>free shipping</b>', { n: money(remaining) })}
            <span class="cart-ship-track"><i style="width:${Math.min(100, (total() / ship.freeThreshold) * 100)}%"></i></span></div>`
-      : `<div class="cart-ship-hint ok">✓ ${window.T('You’ve unlocked <b>free shipping</b>')}
+      : `<div class="cart-ship-hint ok">${window.T('You’ve unlocked <b>free shipping</b>')}
            <span class="cart-ship-track"><i style="width:100%"></i></span></div>`;
 
     footEl.innerHTML = `

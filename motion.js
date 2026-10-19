@@ -140,7 +140,7 @@
     btn.dataset.busy = '1';
     const orig = btn.innerHTML;
     btn.classList.add('added');
-    btn.textContent = btn.classList.contains('add-btn') ? '✓' : '✓ Added';
+    btn.textContent = window.T ? window.T('Added') : 'Added';
     setTimeout(() => {
       btn.innerHTML = orig; btn.classList.remove('added'); delete btn.dataset.busy;
     }, 1000);

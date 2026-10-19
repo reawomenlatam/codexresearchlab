@@ -90,7 +90,7 @@
     const ship = country().shipping;
     if (subtotal >= ship.freeThreshold) {
       return `<div class="ship-progress ok">
-        <div class="ship-progress-txt">✓ ${T('You’ve unlocked <b>free shipping</b>')}</div>
+        <div class="ship-progress-txt">${T('You’ve unlocked <b>free shipping</b>')}</div>
         <div class="ship-track"><i style="width:100%"></i></div>
       </div>`;
     }
@@ -115,7 +115,7 @@
           <div class="ci-head">
             <div>
               <a class="ci-name" href="${U('product/' + l.slug + '/')}">${l.name}</a>
-              <div class="ci-meta"><span class="mono-tag">${T(l.size)}</span> · ${stockNote(l.stock)}</div>
+              <div class="ci-meta">${T(l.size)} · ${stockNote(l.stock)}</div>
             </div>
             <button class="ci-rm" data-act="rm" data-id="${l.id}" aria-label="${T('Remove')} ${l.name}">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
@@ -199,7 +199,7 @@
         </div>
 
         <fieldset class="co-section pay-methods">
-          <legend class="co-title">${T('Payment method')} · ${cfg.flag} ${esc(cfg.label)}</legend>
+          <legend class="co-title">${T('Payment method')} · ${esc(cfg.label)}</legend>
           ${cfg.payments.map((p) => `
             <label class="pay-opt">
               <input type="radio" name="payMethod" value="${esc(p.id)}" ${p.id === payId ? 'checked' : ''}>
@@ -302,8 +302,8 @@
     const couponMsg = coupon
       ? (validCoupon(coupon)
           ? (SALE.active && COUPONS[coupon].type === 'percent'
-              ? `<div class="coupon-msg ok">✓ ${T('Code')} <b>${esc(coupon)}</b> ${T('registered · the')} <b>${SALE.percent}% OFF</b> ${T('already applied is a better deal, and discounts don’t stack')} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`
-              : `<div class="coupon-msg ok">✓ ${T('Code')} <b>${esc(coupon)}</b> ${T('applied')} · ${esc(T(COUPONS[coupon].label))} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`)
+              ? `<div class="coupon-msg ok">${T('Code')} <b>${esc(coupon)}</b> ${T('registered · the')} <b>${SALE.percent}% OFF</b> ${T('already applied is a better deal, and discounts don’t stack')} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`
+              : `<div class="coupon-msg ok">${T('Code')} <b>${esc(coupon)}</b> ${T('applied')} · ${esc(T(COUPONS[coupon].label))} <button data-coupon-remove aria-label="${T('Remove code')}">✕</button></div>`)
           : `<div class="coupon-msg err">${T('Code')} “${esc(coupon)}” ${T('is not valid.')}</div>`)
       : '';
 
@@ -323,27 +323,17 @@
             <div class="sum-row"><span>${T('Subtotal')}</span><span>${money(s.subtotal)}</span></div>
             ${s.discount > 0 ? `<div class="sum-row disc"><span>${T('Discount')}</span><span>−${money(s.discount)}</span></div>` : ''}
             <div class="sum-row"><span>${T('Shipping')}</span><span>${s.shipping === 0 ? `<b class="free">${T('Free')}</b>` : money(s.shipping)}</span></div>
-            <p class="sum-eta">${cfg.flag} ${T(cfg.eta)}</p>
+            <p class="sum-eta">${T(cfg.eta)}</p>
             <div class="sum-row total"><span>${T('Total')}</span><b>${money(s.total)}</b></div>
           </div>
 
           ${checkoutForm(s, cfg, payId)}
 
-          <ul class="sum-trust">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> <span><b>${esc(cfg.payments.map((p) => (p.id === 'crypto' ? T('crypto') : p.label)).join(' · '))}</b></span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>${T('Secure & private')}</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>${T('Sealed packaging')}</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>${T('Batch-verified with COA')}</span></li>
-          </ul>
+          <!-- Antes: cuatro sellos con icono y una tarjeta «Codex Guarantee» con
+               su emblema. Ahora una nota de texto (2026-10-18). -->
+          <p class="sum-trust">${T('Sealed packaging')} · ${T('Batch-verified with COA')}. ${T('Every batch is third-party tested. If your COA doesn’t match, we make it right.')}</p>
         </div>
 
-        <div class="guarantee-card">
-          <span class="guarantee-mark" aria-hidden="true"></span>
-          <div>
-            <b>${T('Codex Guarantee')}</b>
-            <p>${T('Every batch is third-party tested. If your COA doesn’t match, we make it right.')}</p>
-          </div>
-        </div>
       </aside>`;
   }
 
@@ -399,12 +389,6 @@
       </section>`;
   }
 
-  const socialProof = `
-    <div class="cart-social">
-      <div><strong>HPLC + MS</strong><span>${T('third-party tested')}</span></div>
-      <div><strong>100%</strong><span>${T('batches with COA')}</span></div>
-      <div><strong>${country().etaFigure}</strong><span>${T(country().etaFigureLabel)}</span></div>
-    </div>`;
 
   function emptyState() {
     const popular = PRODUCTS.slice(0, 4);
@@ -421,7 +405,7 @@
           ${popular.map(ui.productCard).join('')}
         </div>
       </section>
-      ${socialProof}`;
+      `;
   }
 
   // ---------- Render principal ----------
@@ -442,7 +426,6 @@
           ${summary(s)}
         </div>
         ${crossSell(s)}
-        ${socialProof}
         <div class="cart-sticky" id="cartSticky" hidden>
           <div class="cart-sticky-total"><span>${T('Total')}</span><b>${money(s.total)}</b></div>
           <button class="btn btn-primary" id="cartStickyGo">${T('Checkout')}</button>
