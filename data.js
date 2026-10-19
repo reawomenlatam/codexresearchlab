@@ -132,6 +132,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 85, formula: 'C50H68N14O10', weight: '1025.16 g/mol', pubchem: '9941379',
     photo: 'assets/products/pt-141.jpg',
     photo2: 'assets/products/pt-141-2.jpg',
+    video: 'assets/products/pt-141.mp4', videoPoster: 'assets/products/pt-141-video.jpg',
     sizes: [
       { label: 'Single vial', price: 85 },
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
