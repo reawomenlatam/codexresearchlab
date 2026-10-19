@@ -222,6 +222,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 119, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/tb-500.jpg',
     photo2: 'assets/products/tb-500-2.jpg',
+    video: 'assets/products/tb-500.mp4', videoPoster: 'assets/products/tb-500-video.jpg',
     sizes: [
       { label: 'Single vial', price: 119 },
       { label: 'Pack · 3 vials', price: 328.44, save: '8%' },
