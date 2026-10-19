@@ -145,6 +145,7 @@ const PRODUCTS = [
     slug: 'nad-plus', name: 'NAD+', cas: '53-84-9', tag: 'CAS # 53-84-9',
     mg: '1000 mg', from: 130, formula: 'C21H27N7O14P2', weight: '663.43 g/mol', pubchem: '5892',
     photo: 'assets/products/nad-plus.jpg',
+    video: 'assets/products/nad-plus.mp4', videoPoster: 'assets/products/nad-plus-video.jpg',
     sizes: [
       { label: 'Single vial', price: 130 },
       { label: 'Pack · 3 vials', price: 358.80, save: '8%' },
