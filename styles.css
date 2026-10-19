@@ -786,15 +786,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
    «Peptide Library» de Elixa (foto de fondo + recuadros esmerilados) y del
    recuadro translúcido sobre foto de feelpeptides.com. El vidrio sí tiene algo
    detrás que desenfocar (la foto del área), así que cumple la regla de los
-   tokens --glass-*. Columnas CSS para que las cajas de distinto alto encajen. */
-.cat-index-list { columns: 2; column-gap: 1rem; }
+   tokens --glass-*. Rejilla de dos columnas, no `columns`: backdrop-filter
+   dentro de un multicolumna parpadeaba y perdía el desenfoque en escritorio
+   (2026-10-18). Las cajas llegan ordenadas de más a menos productos, así cada
+   fila es pareja; la última, si queda sola, ocupa las dos columnas. */
+.cat-index-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .ci-group {
-  position: relative; break-inside: avoid; margin-bottom: 1rem;
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end;
   border-radius: 20px; overflow: hidden; background: var(--bg-soft);
   padding: 6.5rem .7rem .7rem; isolation: isolate;
 }
-.ci-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
-.ci-group:hover .ci-bg { transform: scale(1.04); }
+.ci-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.ci-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
 .ci-panel {
   background: var(--glass-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-edge); border-radius: 14px; padding: .95rem 1.05rem .25rem;
@@ -826,7 +829,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
    siete cajas apiladas eran casi tres pantallas de scroll. */
 @media (max-width: 560px) {
   .cat-index-list {
-    columns: auto; display: flex; gap: .8rem; align-items: flex-start;
+    display: flex; gap: .8rem; align-items: stretch;
     overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
     margin: 0 -4vw; padding: 0 4vw .4rem; scroll-padding-inline: 4vw;
   }
