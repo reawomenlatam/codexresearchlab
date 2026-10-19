@@ -76,6 +76,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 85, formula: 'C101H152N28O22S2', weight: '2174.6 g/mol', pubchem: '85718457',
     photo: 'assets/products/mots-c.jpg',
     photo2: 'assets/products/mots-c-2.jpg',
+    video: 'assets/products/mots-c.mp4', videoPoster: 'assets/products/mots-c-video.jpg',
     sizes: [
       { label: 'Single vial', price: 85 },
       { label: 'Pack · 3 vials', price: 234.60, save: '8%' },
