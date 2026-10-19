@@ -293,6 +293,7 @@ const PRODUCTS = [
     slug: 'bac-water-10ml', name: 'Bacteriostatic Water', nameEs: 'Agua bacteriostática', cas: 'N/A', tag: 'Laboratory diluent · 10 ml',
     mg: '10 ml', from: 17, formula: 'Water + 0.9% benzyl alcohol', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/bac-water-10ml.jpg',
+    video: 'assets/products/bac-water-10ml.mp4', videoPoster: 'assets/products/bac-water-10ml-video.jpg',
     sizes: [
       { label: 'Single vial', price: 17 },
       { label: 'Pack · 3 vials', price: 46.92, save: '8%' },
