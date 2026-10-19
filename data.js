@@ -159,6 +159,7 @@ const PRODUCTS = [
     mg: '50 mg', from: 120, formula: 'N/A', weight: 'N/A', pubchem: 'N/A',
     photo: 'assets/products/ahk-cu.jpg',
     photo2: 'assets/products/ahk-cu-2.jpg',
+    video: 'assets/products/ahk-cu.mp4', videoPoster: 'assets/products/ahk-cu-video.jpg',
     sizes: [
       { label: 'Single vial', price: 120 },
     ],
