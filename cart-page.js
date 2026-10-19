@@ -591,6 +591,8 @@
         subtotal: s.subtotal.toFixed(2), discount: s.discount.toFixed(2), coupon: coupon || '',
         shipping: s.shipping.toFixed(2), total: s.total.toFixed(2),
         source_url: location.href,
+        // Para el Purchase que sale al marcar el pedido pagado en orders.php.
+        fbp: cookie('_fbp'), fbc: fbcValue(),
       });
       if (navigator.sendBeacon) navigator.sendBeacon(ORDER_URL, data);
       else fetch(ORDER_URL, { method: 'POST', body: data, keepalive: true, mode: 'no-cors' });
