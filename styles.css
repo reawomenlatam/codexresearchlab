@@ -750,6 +750,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 /* ---------- Catálogo ---------- */
 .catalog-layout { display: grid; grid-template-columns: 240px 1fr; gap: 2.4rem; align-items: start; }
+/* Sin esto la fila deslizable de categorías (móvil) ensancha la columna. */
+.catalog-layout > * { min-width: 0; }
 .catalog-sidebar { position: sticky; top: 90px; }
 .catalog-sidebar h4 { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .7rem; }
 .cat-search {
@@ -762,7 +764,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: .45rem;
   padding: .55rem .8rem; border-radius: 8px; font-size: .92rem; color: var(--muted); text-align: left;
 }
-.cat-list button span { font-family: var(--font-mono); font-size: .72rem; opacity: .7; }
+.cat-list .cat-n { font-family: var(--font-mono); font-size: .72rem; opacity: .7; }
+.cat-list .cat-thumb { display: none; }
 .cat-list button:hover { background: var(--bg-soft); color: var(--ink); }
 .cat-list button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .catalog-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
@@ -1302,7 +1305,32 @@ s.was, .pd-price-was {
   .menu-btn { display: grid; }
   .catalog-layout { grid-template-columns: 1fr; }
   .catalog-sidebar { position: static; }
-  .cat-list { flex-direction: row; flex-wrap: wrap; }
+  /* Categorías en móvil (2026-10-18): fila deslizable de miniaturas con foto,
+     a la manera de las pestañas de feelpeptides.com, en vez de un muro de
+     botones de texto que ocupaba media pantalla. La fila sale del contenedor
+     hasta el borde para que se note que se desliza. */
+  .catalog-sidebar .sidebar-title:nth-of-type(2) { display: none; }
+  .cat-list {
+    flex-direction: row; flex-wrap: nowrap; gap: .85rem;
+    overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+    margin: 1rem -4vw 0; padding: .5rem 4vw .4rem; scroll-padding-inline: 4vw;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cat-list::-webkit-scrollbar { display: none; }
+  .cat-list li { flex: 0 0 auto; scroll-snap-align: start; }
+  .cat-list button {
+    width: 84px; flex-direction: column; align-items: center; justify-content: flex-start; gap: .4rem;
+    padding: 0; border-radius: 0; background: none !important; text-align: center;
+    font-size: .76rem; line-height: 1.25; color: var(--muted);
+  }
+  .cat-list .cat-thumb {
+    display: block; width: 72px; height: 72px; object-fit: cover; border-radius: 18px;
+    background: var(--bg-soft); outline: 1px solid var(--border); outline-offset: 0;
+    transition: outline-color .15s, outline-offset .15s;
+  }
+  .cat-list .cat-n { display: none; }
+  .cat-list button.active { color: var(--ink); font-weight: 600; }
+  .cat-list button.active .cat-thumb { outline: 2px solid var(--ink); outline-offset: 3px; }
   .catalog-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-feature-link { grid-template-columns: 1fr; }
@@ -1340,8 +1368,6 @@ s.was, .pd-price-was {
   .header .logo .logo-icon { display: block; }
   /* Badges flotantes: en móvil se anclan sobre la imagen para no tapar el
      figcaption ("BPC-157 · 10 mg") del vial-card. */
-  /* Objetivo táctil más cómodo para el pulgar en el quick-add. */
-  .add-btn { width: 40px; height: 40px; }
 }
 
 /* ---------- Confirmación de pedido ---------- */

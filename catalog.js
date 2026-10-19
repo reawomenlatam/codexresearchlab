@@ -26,10 +26,18 @@
     const n = PRODUCTS.filter(c.test).length;
     return c.key === 'all' || (n > 0 && n < total);
   });
+  // Miniatura de cada categoría: en móvil la lista es una fila deslizable de
+  // fotos (las mismas de las tarjetas de áreas de la portada); en escritorio
+  // la barra lateral la oculta y sigue siendo una lista de texto.
+  const thumb = (key) => key === 'all' ? 'assets/hero-molecule-tall.webp'
+    : key === 'supplies' ? 'assets/products/bac-water.jpg'
+    : `assets/areas/${key}.webp`;
   if (useful.length > 1) {
     listEl.innerHTML = useful.map((c) => {
       const n = PRODUCTS.filter(c.test).length;
-      return `<li><button data-cat="${c.key}" class="${c.key === state.cat ? 'active' : ''}">${c.label} <span>${n}</span></button></li>`;
+      return `<li><button data-cat="${c.key}" class="${c.key === state.cat ? 'active' : ''}"${c.key === state.cat ? ' aria-pressed="true"' : ' aria-pressed="false"'}>`
+        + `<img class="cat-thumb" src="${thumb(c.key)}" alt="" width="72" height="72" loading="lazy" decoding="async">`
+        + `<span class="cat-name">${c.label}</span> <span class="cat-n">${n}</span></button></li>`;
     }).join('');
   } else {
     listEl.hidden = true;
@@ -70,7 +78,10 @@
     const btn = e.target.closest('[data-cat]');
     if (!btn) return;
     state.cat = btn.getAttribute('data-cat');
-    listEl.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b === btn));
+    listEl.querySelectorAll('button').forEach((b) => {
+      b.classList.toggle('active', b === btn);
+      b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+    });
     // La URL refleja el filtro, para poder compartirla o volver atrás a ella.
     const url = new URL(location.href);
     if (state.cat === 'all') url.searchParams.delete('area'); else url.searchParams.set('area', state.cat);
