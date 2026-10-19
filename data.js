@@ -22,6 +22,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 150, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide.jpg',
     photo2: 'assets/products/retatrutide-2.jpg',
+    video: 'assets/products/retatrutide.mp4', videoPoster: 'assets/products/retatrutide-video.jpg',
     sizes: [
       { label: 'Single vial', price: 150 },
       { label: 'Pack · 3 vials', price: 414.00, save: '8%' },
