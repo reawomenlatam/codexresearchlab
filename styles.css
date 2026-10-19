@@ -771,6 +771,22 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .catalog-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
 .cat-sort { padding: .55rem .8rem; font: inherit; font-size: .88rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--ink); }
 .catalog-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* Índice de productos al pie del catálogo (enlaces rastreables para SEO).
+   Era texto corrido con todos los nombres seguidos; ahora filas en columnas,
+   nombre a la izquierda y dosis a la derecha, con línea fina entre filas. */
+.cat-index { border-top: 1px solid var(--border); margin-top: 1rem; padding: 2.4rem 0 1rem; }
+.cat-index h2 { font-size: 1.05rem; margin: 0 0 1rem; }
+.cat-index-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2.4rem; border-top: 1px solid var(--border); }
+.cat-index-list a {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: .7rem 0; border-bottom: 1px solid var(--border);
+  font-size: .9rem; color: var(--ink);
+}
+.cat-index-list a:hover { color: var(--accent); }
+.cat-index-list .ci-mg { font-family: var(--font-mono); font-size: .76rem; color: var(--muted); white-space: nowrap; }
+@media (max-width: 900px) { .cat-index-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.6rem; } }
+@media (max-width: 520px) { .cat-index-list { grid-template-columns: 1fr; } }
 .cat-empty { color: var(--muted); padding: 3rem 0; text-align: center; }
 
 /* ---------- Blog ---------- */
