@@ -6,7 +6,7 @@
 > the United States. Orders are placed on the site and paid with crypto (USDC/USDT),
 > Zelle (United States) or Yappy (Panama); Zelle and Yappy are confirmed by hand before shipping.
 
-Last updated: 2026-10-19. Machine-readable pricing: https://codexresearchlab.com/pricing.md
+Last updated: 2026-10-20. Machine-readable pricing: https://codexresearchlab.com/pricing.md
 
 All products are sold strictly for laboratory research and development. They are not for
 human or animal consumption and are not intended to diagnose, treat, cure or prevent any

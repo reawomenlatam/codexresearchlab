@@ -9,6 +9,7 @@ const PRODUCTS = [
     mg: '20 mg', from: 149, formula: 'C225H348N48O68', weight: '4813.45 g/mol', pubchem: '156588324',
     photo: 'assets/products/tirzepatide.jpg',
     photo2: 'assets/products/tirzepatide-2.jpg',
+    video: 'assets/products/tirzepatide.mp4', videoPoster: 'assets/products/tirzepatide-video.jpg',
     sizes: [
       { label: 'Single vial', price: 149 },
       { label: 'Pack · 3 vials', price: 411.24, save: '8%' },
@@ -36,6 +37,7 @@ const PRODUCTS = [
     mg: '20 mg', from: 194, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-20mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-20mg-2.jpg',
+    video: 'assets/products/retatrutide-20mg.mp4', videoPoster: 'assets/products/retatrutide-20mg-video.jpg',
     sizes: [
       { label: 'Single vial', price: 194 },
       { label: 'Pack · 3 vials', price: 535.44, save: '8%' },
@@ -49,6 +51,7 @@ const PRODUCTS = [
     mg: '30 mg', from: 214, formula: 'C228H350N48O66', weight: '4894.58 g/mol', pubchem: 'N/A',
     photo: 'assets/products/retatrutide-30mg.jpg', outOfStock: true,
     photo2: 'assets/products/retatrutide-30mg-2.jpg',
+    video: 'assets/products/retatrutide-30mg.mp4', videoPoster: 'assets/products/retatrutide-30mg-video.jpg',
     sizes: [
       { label: 'Single vial', price: 214 },
       { label: 'Pack · 3 vials', price: 590.64, save: '8%' },
@@ -119,6 +122,7 @@ const PRODUCTS = [
     mg: '50 mg', from: 64, formula: 'C14H24CuN6O4', weight: '403.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ghk-cu-50mg.jpg', outOfStock: true,
     photo2: 'assets/products/ghk-cu-50mg-2.jpg',
+    video: 'assets/products/ghk-cu-50mg.mp4', videoPoster: 'assets/products/ghk-cu-50mg-video.jpg',
     sizes: [
       { label: 'Single vial', price: 64 },
       { label: 'Pack · 3 vials', price: 176.64, save: '8%' },
@@ -172,6 +176,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 164, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin.jpg', outOfStock: true,
     photo2: 'assets/products/tesamorelin-2.jpg',
+    video: 'assets/products/tesamorelin.mp4', videoPoster: 'assets/products/tesamorelin-video.jpg',
     sizes: [
       { label: 'Single vial', price: 164 },
       { label: 'Pack · 3 vials', price: 452.64, save: '8%' },
@@ -185,6 +190,7 @@ const PRODUCTS = [
     mg: '20 mg', from: 279, formula: 'C221H366N72O67S', weight: '5135.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/tesamorelin-20mg.jpg', outOfStock: true,
     photo2: 'assets/products/tesamorelin-20mg-2.jpg',
+    video: 'assets/products/tesamorelin-20mg.mp4', videoPoster: 'assets/products/tesamorelin-20mg-video.jpg',
     sizes: [
       { label: 'Single vial', price: 279 },
       { label: 'Pack · 3 vials', price: 770.04, save: '8%' },
@@ -198,6 +204,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 129, formula: 'C152H252N44O42', weight: '3367.9 g/mol', pubchem: 'N/A',
     photo: 'assets/products/cjc-1295-no-dac.jpg', outOfStock: true,
     photo2: 'assets/products/cjc-1295-no-dac-2.jpg',
+    video: 'assets/products/cjc-1295-no-dac.mp4', videoPoster: 'assets/products/cjc-1295-no-dac-video.jpg',
     sizes: [
       { label: 'Single vial', price: 129 },
       { label: 'Pack · 3 vials', price: 356.04, save: '8%' },
