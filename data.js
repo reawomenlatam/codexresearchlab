@@ -222,6 +222,7 @@ const PRODUCTS = [
     mg: '1 mg', from: 159, formula: 'N/A', weight: '9111 g/mol', pubchem: 'N/A',
     photo: 'assets/products/igf-1-lr3.jpg', outOfStock: true,
     photo2: 'assets/products/igf-1-lr3-2.jpg',
+    video: 'assets/products/igf-1-lr3.mp4', videoPoster: 'assets/products/igf-1-lr3-video.jpg',
     sizes: [
       { label: 'Single vial', price: 159 },
       { label: 'Pack · 3 vials', price: 438.84, save: '8%' },
@@ -249,6 +250,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 99, formula: 'C32H49N9O5', weight: '639.8 g/mol', pubchem: 'N/A',
     photo: 'assets/products/ss-31.jpg', outOfStock: true,
     photo2: 'assets/products/ss-31-2.jpg',
+    video: 'assets/products/ss-31.mp4', videoPoster: 'assets/products/ss-31-video.jpg',
     sizes: [
       { label: 'Single vial', price: 99 },
       { label: 'Pack · 3 vials', price: 273.24, save: '8%' },
@@ -262,6 +264,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 74, formula: 'C14H22N4O9', weight: '390.35 g/mol', pubchem: 'N/A',
     photo: 'assets/products/epithalon.jpg', outOfStock: true,
     photo2: 'assets/products/epithalon-2.jpg',
+    video: 'assets/products/epithalon.mp4', videoPoster: 'assets/products/epithalon-video.jpg',
     sizes: [
       { label: 'Single vial', price: 74 },
       { label: 'Pack · 3 vials', price: 204.24, save: '8%' },
