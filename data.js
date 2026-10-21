@@ -278,6 +278,7 @@ const PRODUCTS = [
     mg: '10 mg', from: 94, formula: 'C63H83N17O14', weight: '1302.4 g/mol', pubchem: 'N/A',
     photo: 'assets/products/kisspeptin.jpg', outOfStock: true,
     photo2: 'assets/products/kisspeptin-2.jpg',
+    video: 'assets/products/kisspeptin.mp4', videoPoster: 'assets/products/kisspeptin-video.jpg',
     sizes: [
       { label: 'Single vial', price: 94 },
       { label: 'Pack · 3 vials', price: 259.44, save: '8%' },
